@@ -1,17 +1,12 @@
-import anthropic
 import json
-import os
-from dotenv import load_dotenv
+from langchain_ollama import ChatOllama
 from src.schemas.agent_state import PreNegotiationStatement, DisputeScenario, AgentRole
 from src.prompts.ca_prompt import CA_SYSTEM_PROMPT
-
-load_dotenv()
 
 class ContractingAuthorityAgent:
     
     def __init__(self):
-        self.client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
-        self.model = "claude-sonnet-4-6"
+        self.llm = ChatOllama(model="llama3.1", temperature=0.3)
         self.role = AgentRole.CONTRACTING_AUTHORITY
 
     def build_scenario_context(self, scenario: DisputeScenario) -> str:
@@ -30,9 +25,6 @@ DISPUTE DESCRIPTION:
 """
 
     def get_pre_negotiation_statement(self, scenario: DisputeScenario) -> PreNegotiationStatement:
-        """
-        Agent articulates its interests, goals, and BATNA before negotiation starts.
-        """
         scenario_context = self.build_scenario_context(scenario)
         
         user_message = f"""
@@ -42,22 +34,21 @@ You are now entering pre-negotiation. Based on this dispute, provide your
 pre-negotiation statement as a JSON object. Be specific to this scenario — 
 reference the scoring challenge, the £{scenario.contract_value_gbp:,.0f} contract, 
 and your legal position under the Procurement Act 2023.
-        """
+
+Respond ONLY with valid JSON, no other text before or after.
+"""
         
-        response = self.client.messages.create(
-            model=self.model,
-            max_tokens=1500,
-            system=CA_SYSTEM_PROMPT,
-            messages=[{"role": "user", "content": user_message}]
-        )
+        messages = [
+            ("system", CA_SYSTEM_PROMPT),
+            ("user", user_message)
+        ]
         
-        raw_text = response.content[0].text.strip()
+        response = self.llm.invoke(messages)
+        raw_text = response.content.strip()
         
-        # Parse JSON response
         try:
             data = json.loads(raw_text)
         except json.JSONDecodeError:
-            # If model adds any preamble, extract JSON block
             start = raw_text.find('{')
             end = raw_text.rfind('}') + 1
             data = json.loads(raw_text[start:end])
@@ -65,22 +56,13 @@ and your legal position under the Procurement Act 2023.
         return PreNegotiationStatement(**data)
 
     def respond_to_round(self, scenario: DisputeScenario, conversation_history: list, round_number: int) -> str:
-        """
-        Agent responds during a negotiation round.
-        """
         scenario_context = self.build_scenario_context(scenario)
         
-        messages = [{"role": "user", "content": f"{scenario_context}\n\nNegotiation Round {round_number}. Respond to the most recent message from the bidder. Keep your response concise (2-3 paragraphs), legally grounded, and focused on finding resolution."}]
+        messages = [("system", CA_SYSTEM_PROMPT)]
+        messages.append(("user", f"{scenario_context}\n\nNegotiation Round {round_number}. Respond to the most recent message from the bidder. Keep your response concise (2-3 paragraphs), legally grounded, and focused on finding resolution."))
         
-        # Add conversation history
-        for msg in conversation_history:
-            messages.append(msg)
+        for role, content in conversation_history:
+            messages.append((role, content))
         
-        response = self.client.messages.create(
-            model=self.model,
-            max_tokens=800,
-            system=CA_SYSTEM_PROMPT,
-            messages=messages
-        )
-        
-        return response.content[0].text.strip()
+        response = self.llm.invoke(messages)
+        return response.content.strip()
