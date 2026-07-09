@@ -1,0 +1,140 @@
+{
+  "scenario": {
+    "dispute_id": "F21-001",
+    "title": "Scoring Methodology Challenge \u2014 Construction Framework",
+    "description": "BuildRight Ltd submitted a bid for a \u00a32m construction framework. They were ranked second and excluded from the framework. They are challenging the scoring methodology, alleging that the quality scoring criteria were applied inconsistently and that the winning bidder received unjustifiably high marks in the 'social value' category despite providing less detailed evidence.",
+    "contract_value_gbp": 2000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "standstill",
+    "contracting_authority_name": "Fusion21",
+    "bidder_name": "BuildRight Ltd"
+  },
+  "round_number": 0,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Legal defensibility",
+      "Service continuity",
+      "Reputational protection",
+      "Cost efficiency",
+      "Public value"
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Maintain transparency and fairness in evaluation process"
+    ],
+    "batna": "Defending the procurement decision in the Technology and Construction Court (TCC) at a cost of \u00a350k+ legal fees",
+    "opening_position": "We acknowledge BuildRight Ltd's concerns regarding the scoring methodology, but we stand by our evaluation process which was conducted in accordance with the published evaluation criteria. We are willing to provide additional feedback and transparency to address their concerns.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Regulation 86(1) - standstill period"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Winning the contract or securing a fair re-evaluation",
+      "Transparency \u2014 understanding exactly why you scored as you did"
+    ],
+    "goals": [
+      "Secure a re-evaluation of our bid with a focus on the quality scoring criteria and social value category",
+      "Obtain detailed, credible feedback to address concerns"
+    ],
+    "batna": "Pursue a damages claim or formal proceedings in the Technology and Construction Court (TCC) if no agreement is reached",
+    "opening_position": "We request a re-evaluation of our bid with a specific focus on the quality scoring criteria and social value category, and we seek detailed feedback to address our concerns regarding inconsistent application of these criteria.",
+    "legal_basis": [
+      "EU Procurement Directive (2014/24/EU)",
+      "Public Contracts Regulations 2015"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "{\n  \"response\": {\n    \"acknowledgement\": \"Fusion21 acknowledges receipt of BuildRight Ltd's challenge and appreciates their concerns regarding the scoring methodology.\",\n    \"clarification_request\": \"To ensure a thorough understanding of the issue, could you please specify which particular quality scoring criteria were allegedly applied inconsistently?\",\n    \"evaluation_criteria_reference\": \"Please note that our evaluation was conducted in accordance with the published Construction Framework Evaluation Criteria (Section 3.2.1), which clearly outlines the weightings and assessment methods for each category.\"\n  }\n}",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "{\n  \"response\": {\n    \"acknowledgement\": \"BuildRight Ltd acknowledges Fusion21's clarification request.\",\n    \"clarification_response\": \"We specifically refer to Quality Criterion Q4: 'Health and Safety Management'. Our analysis of the tender submissions reveals that the winning bidder, XYZ Ltd, received a score of 95/100 despite providing only 2 pages of documentation, whereas our submission provided a comprehensive 10-page document with supporting evidence. This inconsistency undermines the fairness of the evaluation process.\",\n    \"evaluation_criteria_reference\": \"We note Fusion21's reference to Section 3.2.1. However, we believe that the evaluation team failed to apply the criteria consistently, as evident from the disparate treatment of our submissions in this category.\"\n  }\n}",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "{\n  \"response\": {\n    \"acknowledgement\": \"Fusion21 acknowledges BuildRight Ltd's clarification response and notes their concerns regarding the scoring of Quality Criterion Q4: 'Health and Safety Management'.\",\n    \"evaluation_team_inquiry\": \"To ensure a thorough investigation, Fusion21 will conduct an internal review to verify the scores awarded in this category. We will also re-examine our evaluation records to determine whether any manifest errors were made.\",\n    \"clarification_request\": \"Could you please provide specific details about the supporting evidence included in your 10-page document that you believe was not adequately considered by the evaluation team?\"\n  }\n}",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "{\n  \"response\": {\n    \"acknowledgement\": \"BuildRight Ltd acknowledges Fusion21's internal review and notes their commitment to verifying scores.\",\n    \"evaluation_team_inquiry_response\": \"Regarding our supporting evidence, we provided a comprehensive Health and Safety Policy document (Appendix A) that detailed our procedures for managing risk, conducting site inspections, and ensuring compliance with relevant regulations. We also included a Site Safety Management Plan (Appendix B) that outlined our approach to managing health and safety on-site.\",\n    \"clarification_request\": \"We request that Fusion21 provides us with the evaluation team's scoring records for Quality Criterion Q4, including any notes or comments made during the evaluation process. This will enable us to understand the reasoning behind the scores awarded and identify any potential inconsistencies.\"\n  }\n}",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "{\n  \"response\": {\n    \"acknowledgement\": \"Fusion21 acknowledges BuildRight Ltd's response and notes their request for evaluation team scoring records.\",\n    \"evaluation_team_records_disclosure\": \"In line with our commitment to transparency, Fusion21 will disclose the evaluation team's scoring records for Quality Criterion Q4, including any notes or comments made during the evaluation process. However, please note that these records are subject to confidentiality and commercial sensitivity considerations.\",\n    \"standstill_extension_offer\": \"To facilitate a more detailed review of the evaluation process, Fusion21 offers a voluntary standstill extension of 5 working days to allow for further discussion and clarification.\"\n  }\n}",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "{\n  \"response\": {\n    \"acknowledgement\": \"BuildRight Ltd acknowledges Fusion21's offer of a standstill extension.\",\n    \"evaluation_team_records_disclosure_response\": \"We appreciate Fusion21's commitment to transparency and accept the disclosure of evaluation team scoring records. However, we request that these records be disclosed in a redacted form to protect any commercially sensitive information.\",\n    \"standstill_extension_acceptance\": \"We agree to the 5-working-day standstill extension to facilitate further discussion and clarification.\"\n  }\n}",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12(1) Procurement Act 2023 - Value for Money",
+        "Regulation 84(2) Public Contracts Regulations 2015 - Evaluation Criteria"
+      ],
+      "reasoning": "The Contracting Authority has provided a clear reference to the published evaluation criteria, which outlines the weightings and assessment methods for each category. The aggreived bidder's challenge focuses on an alleged inconsistency in scoring Quality Criterion Q4: 'Health and Safety Management'. However, at this stage, it is unclear whether the evaluation team applied the criteria inconsistently or if there was a genuine difference in interpretation.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12(1) Procurement Act 2023: Value for Money",
+        "Regulation 84, Public Contracts Regulations 2015: Scoring and Evaluation"
+      ],
+      "reasoning": "The Contracting Authority has acknowledged the Aggrieved Bidder's concerns and committed to an internal review of the scores awarded in Quality Criterion Q4. This demonstrates a willingness to investigate and potentially correct any errors. The Aggrieved Bidder has also provided specific details about their supporting evidence, which should aid in the evaluation team's inquiry.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 3,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Transparency",
+        "Commercial Sensitivity"
+      ],
+      "reasoning": "Fusion21 has disclosed the evaluation team's scoring records for Quality Criterion Q4, as requested by BuildRight Ltd. The records will be disclosed in a redacted form to protect commercially sensitive information.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    }
+  ],
+  "resolved": false,
+  "resolution_outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+  "adjudicated": false,
+  "ca_win_statement": null,
+  "bidder_win_statement": null
+}
