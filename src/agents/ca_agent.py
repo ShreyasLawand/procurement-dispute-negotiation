@@ -1,7 +1,8 @@
 import json
 from langchain_ollama import ChatOllama
-from src.schemas.agent_state import PreNegotiationStatement, DisputeScenario, AgentRole
+from src.schemas.agent_state import PreNegotiationStatement, DisputeScenario, AgentRole, RoundResponse
 from src.prompts.ca_prompt import CA_SYSTEM_PROMPT
+from src.schemas.agent_state import PreNegotiationStatement, DisputeScenario, AgentRole, RoundResponse
 
 class ContractingAuthorityAgent:
     
@@ -55,14 +56,35 @@ Respond ONLY with valid JSON, no other text before or after.
         
         return PreNegotiationStatement(**data)
 
-    def respond_to_round(self, scenario: DisputeScenario, conversation_history: list, round_number: int) -> str:
+    def respond_to_round(self, scenario: DisputeScenario, conversation_history: list, round_number: int) -> RoundResponse:
         scenario_context = self.build_scenario_context(scenario)
-        
-        messages = [("system", CA_SYSTEM_PROMPT)]
-        messages.append(("user", f"{scenario_context}\n\nNegotiation Round {round_number}. Respond to the most recent message from the bidder. Keep your response concise (2-3 paragraphs), legally grounded, and focused on finding resolution."))
-        
-        for role, content in conversation_history:
-            messages.append((role, content))
-        
-        response = self.llm.invoke(messages)
-        return response.content.strip()
+
+        instruction = f"""
+        {scenario_context}
+
+        Negotiation Round {round_number}. Respond to the most recent message from the bidder.
+
+        Respond ONLY with valid JSON matching this exact flat structure — no nesting, no extra keys:
+        {{
+            "message": "your 2-3 paragraph response here as a single string",
+            "proposal": "specific proposal if you are making one, or null",
+            "concession_made": "any concession you are offering, or null"
+        }}
+        """
+
+        # Use the actual role from each tuple — do NOT infer from index position
+        messages = [(role, content) for role, content in conversation_history]
+        messages.append(("user", instruction))
+
+        json_llm = ChatOllama(model="llama3.1", temperature=0.3, format="json")
+        response = json_llm.invoke([("system", CA_SYSTEM_PROMPT)] + messages)
+
+        raw_text = response.content.strip()
+        try:
+            data = json.loads(raw_text)
+        except json.JSONDecodeError:
+            start = raw_text.find('{')
+            end = raw_text.rfind('}') + 1
+            data = json.loads(raw_text[start:end])
+
+        return RoundResponse(**data)

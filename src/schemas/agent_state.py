@@ -59,3 +59,9 @@ class NegotiationState(BaseModel):
 
     class Config:
         arbitrary_types_allowed = True
+        
+class RoundResponse(BaseModel):
+    """Structured response for a single negotiation round message"""
+    message: str = Field(description="The agent's negotiation message this round, in plain prose")
+    proposal: Optional[str] = Field(default=None, description="Specific proposal being made, if any")
+    concession_made: Optional[str] = Field(default=None, description="Any concession offered this round, if any")

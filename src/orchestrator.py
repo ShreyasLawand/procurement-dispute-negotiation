@@ -32,19 +32,34 @@ class NegotiationOrchestrator:
         for round_num in range(1, self.max_rounds + 1):
             print(f"\n--- ROUND {round_num} ---\n")
 
-            ca_msg = self.ca_agent.respond_to_round(scenario, ca_history, round_num)
-            print(f"[CA]: {ca_msg}\n")
+            ca_response = self.ca_agent.respond_to_round(scenario, ca_history, round_num)
+            ca_msg = ca_response.message
+            print(f"[CA]: {ca_msg}")
+            if ca_response.concession_made:
+                print(f"  -> Concession: {ca_response.concession_made}")
+            print()
+
             ca_history.append(("assistant", ca_msg))
             bidder_history.append(("user", f"Contracting Authority says: {ca_msg}"))
-            state.messages.append(NegotiationMessage(round_number=round_num, sender_role=AgentRole.CONTRACTING_AUTHORITY, message=ca_msg))
+            state.messages.append(NegotiationMessage(
+                round_number=round_num, sender_role=AgentRole.CONTRACTING_AUTHORITY,
+                message=ca_msg, proposal=ca_response.proposal, concession_made=ca_response.concession_made
+            ))
 
-            bidder_msg = self.bidder_agent.respond_to_round(scenario, bidder_history, round_num)
-            print(f"[BIDDER]: {bidder_msg}\n")
+            bidder_response = self.bidder_agent.respond_to_round(scenario, bidder_history, round_num)
+            bidder_msg = bidder_response.message
+            print(f"[BIDDER]: {bidder_msg}")
+            if bidder_response.concession_made:
+                print(f"  -> Concession: {bidder_response.concession_made}")
+            print()
+
             bidder_history.append(("assistant", bidder_msg))
             ca_history.append(("user", f"Aggrieved Bidder says: {bidder_msg}"))
-            state.messages.append(NegotiationMessage(round_number=round_num, sender_role=AgentRole.AGGRIEVED_BIDDER, message=bidder_msg))
+            state.messages.append(NegotiationMessage(
+                round_number=round_num, sender_role=AgentRole.AGGRIEVED_BIDDER,
+                message=bidder_msg, proposal=bidder_response.proposal, concession_made=bidder_response.concession_made
+                ))
 
-            # Court compliance check every round
             assessment = self.court_agent.assess_round(scenario, ca_msg, bidder_msg, round_num)
             state.compliance_checks.append(assessment)
             print(f"[COURT] Process followed: {assessment.process_followed} | Manifest error: {assessment.manifest_error_found} | Recommended: {assessment.recommended_action}\n")

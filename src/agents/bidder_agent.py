@@ -1,7 +1,10 @@
 import json
+from pyexpat.errors import messages
+from urllib import response
 from langchain_ollama import ChatOllama
-from src.schemas.agent_state import PreNegotiationStatement, DisputeScenario, AgentRole
+from src.schemas.agent_state import PreNegotiationStatement, DisputeScenario, AgentRole, RoundResponse
 from src.prompts.bidder_prompt import BIDDER_SYSTEM_PROMPT
+
 
 class AggrievedBidderAgent:
 
@@ -53,16 +56,34 @@ Respond ONLY with valid JSON, no other text.
 
         return PreNegotiationStatement(**data)
 
-    def respond_to_round(self, scenario: DisputeScenario, conversation_history: list, round_number: int) -> str:
+    def respond_to_round(self, scenario: DisputeScenario, conversation_history: list, round_number: int) -> RoundResponse:
         scenario_context = self.build_scenario_context(scenario)
 
-        messages = [("system", BIDDER_SYSTEM_PROMPT)]
-        messages.append(("user", f"{scenario_context}\n\nNegotiation Round {round_number}. Respond to the Contracting Authority's most recent message. Keep it concise (2-3 paragraphs), assertive but professional, citing specific evidence."))
+        instruction = f"""
+        {scenario_context}
 
-        for role, content in conversation_history:
-            messages.append((role, content))
+        Negotiation Round {round_number}. Respond to the Contracting Authority's most recent message.
 
-        # Use non-JSON mode for free-text negotiation responses
-        free_llm = ChatOllama(model="llama3.1", temperature=0.4)
-        response = free_llm.invoke(messages)
-        return response.content.strip()
+        Respond ONLY with valid JSON matching this exact flat structure — no nesting, no extra keys:
+        {{
+            "message": "your 2-3 paragraph response here as a single string",
+            "proposal": "specific proposal if you are making one, or null",
+            "concession_made": "any concession you are offering, or null"
+        }}
+        """
+
+        messages = [(role, content) for role, content in conversation_history]
+        messages.append(("user", instruction))
+
+        json_llm = ChatOllama(model="llama3.1", temperature=0.4, format="json")
+        response = json_llm.invoke([("system", BIDDER_SYSTEM_PROMPT)] + messages)
+
+        raw_text = response.content.strip()
+        try:
+            data = json.loads(raw_text)
+        except json.JSONDecodeError:
+            start = raw_text.find('{')
+            end = raw_text.rfind('}') + 1
+            data = json.loads(raw_text[start:end])
+
+        return RoundResponse(**data)
