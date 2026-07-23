@@ -1,8 +1,10 @@
 from src.agents.ca_agent import ContractingAuthorityAgent
 from src.agents.bidder_agent import AggrievedBidderAgent
 from src.agents.court_agent import CourtAgent
+from src.agents.summary_agent import SummaryAgent
 from src.schemas.agent_state import DisputeScenario, NegotiationState, NegotiationMessage, AgentRole
 import json
+
 
 class NegotiationOrchestrator:
 
@@ -10,6 +12,7 @@ class NegotiationOrchestrator:
         self.ca_agent = ContractingAuthorityAgent()
         self.bidder_agent = AggrievedBidderAgent()
         self.court_agent = CourtAgent()
+        self.summary_agent = SummaryAgent()
         self.max_rounds = max_rounds
 
     def run(self, scenario: DisputeScenario) -> NegotiationState:
@@ -30,13 +33,16 @@ class NegotiationOrchestrator:
         bidder_history = []
 
         for round_num in range(1, self.max_rounds + 1):
-            print(f"\n--- ROUND {round_num} ---\n")
+            print(f"\n{'─'*70}")
+            print(f"  ROUND {round_num}")
+            print(f"{'─'*70}\n")
 
-            ca_response = self.ca_agent.respond_to_round(scenario, ca_history, round_num)
+            ca_response = self.ca_agent.respond_to_round(scenario, ca_history, round_num, max_rounds=self.max_rounds)
             ca_msg = ca_response.message
-            print(f"[CA]: {ca_msg}")
+            print(f"CONTRACTING AUTHORITY:")
+            print(f"   {ca_msg}")
             if ca_response.concession_made:
-                print(f"  -> Concession: {ca_response.concession_made}")
+                print(f"   [Concession offered]: {ca_response.concession_made}")
             print()
 
             ca_history.append(("assistant", ca_msg))
@@ -46,11 +52,12 @@ class NegotiationOrchestrator:
                 message=ca_msg, proposal=ca_response.proposal, concession_made=ca_response.concession_made
             ))
 
-            bidder_response = self.bidder_agent.respond_to_round(scenario, bidder_history, round_num)
+            bidder_response = self.bidder_agent.respond_to_round(scenario, bidder_history, round_num, max_rounds=self.max_rounds)
             bidder_msg = bidder_response.message
-            print(f"[BIDDER]: {bidder_msg}")
+            print(f"AGGRIEVED BIDDER:")
+            print(f"   {bidder_msg}")
             if bidder_response.concession_made:
-                print(f"  -> Concession: {bidder_response.concession_made}")
+                print(f"   [Concession offered]: {bidder_response.concession_made}")
             print()
 
             bidder_history.append(("assistant", bidder_msg))
@@ -58,11 +65,14 @@ class NegotiationOrchestrator:
             state.messages.append(NegotiationMessage(
                 round_number=round_num, sender_role=AgentRole.AGGRIEVED_BIDDER,
                 message=bidder_msg, proposal=bidder_response.proposal, concession_made=bidder_response.concession_made
-                ))
+            ))
 
             assessment = self.court_agent.assess_round(scenario, ca_msg, bidder_msg, round_num)
             state.compliance_checks.append(assessment)
-            print(f"[COURT] Process followed: {assessment.process_followed} | Manifest error: {assessment.manifest_error_found} | Recommended: {assessment.recommended_action}\n")
+            print(f"COURT ASSESSMENT:")
+            print(f"   Process followed: {assessment.process_followed} | Manifest error: {assessment.manifest_error_found}")
+            print(f"   Recommended: {assessment.recommended_action}")
+            print(f"   Reasoning: {assessment.reasoning}\n")
 
             if assessment.recommended_action != "continue negotiation":
                 state.resolved = True
@@ -74,6 +84,30 @@ class NegotiationOrchestrator:
         if not state.resolved:
             state.resolution_outcome = "deadlock - max rounds reached, escalate to formal proceedings"
             print(f"\n>> DEADLOCK after {self.max_rounds} rounds\n")
+
+        # --- Post-negotiation summary ---
+        print(f"\n{'='*70}")
+        print("  GENERATING NEGOTIATION SUMMARY")
+        print(f"{'='*70}\n")
+
+        state.summary = self.summary_agent.summarize(state)
+
+        print(f"PLAIN ENGLISH SUMMARY:")
+        print(f"   {state.summary.plain_english_summary}\n")
+
+        print(f"KEY STICKING POINTS:")
+        for point in state.summary.key_sticking_points:
+            print(f"   - {point}")
+        print()
+
+        print(f"CONCESSIONS:")
+        print(f"   {state.summary.concessions_summary}\n")
+
+        print(f"COURT REASONING:")
+        print(f"   {state.summary.court_reasoning_summary}\n")
+
+        print(f"LIKELY NEXT STEPS:")
+        print(f"   {state.summary.likely_next_steps}\n")
 
         return state
 

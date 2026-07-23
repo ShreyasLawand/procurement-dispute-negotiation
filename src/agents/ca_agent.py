@@ -2,10 +2,11 @@ import json
 from langchain_ollama import ChatOllama
 from src.schemas.agent_state import PreNegotiationStatement, DisputeScenario, AgentRole, RoundResponse
 from src.prompts.ca_prompt import CA_SYSTEM_PROMPT
-from src.schemas.agent_state import PreNegotiationStatement, DisputeScenario, AgentRole, RoundResponse
+from src.utils.negotiation_helpers import is_repetitive, format_previous_statements, get_round_stage_instruction
+
 
 class ContractingAuthorityAgent:
-    
+
     def __init__(self):
         self.llm = ChatOllama(model="llama3.1", temperature=0.3)
         self.role = AgentRole.CONTRACTING_AUTHORITY
@@ -27,64 +28,100 @@ DISPUTE DESCRIPTION:
 
     def get_pre_negotiation_statement(self, scenario: DisputeScenario) -> PreNegotiationStatement:
         scenario_context = self.build_scenario_context(scenario)
-        
+
         user_message = f"""
 {scenario_context}
 
-You are now entering pre-negotiation. Based on this dispute, provide your 
-pre-negotiation statement as a JSON object. Be specific to this scenario — 
-reference the scoring challenge, the £{scenario.contract_value_gbp:,.0f} contract, 
+You are now entering pre-negotiation. Based on this dispute, provide your
+pre-negotiation statement as a JSON object. Be specific to this scenario —
+reference the scoring challenge, the £{scenario.contract_value_gbp:,.0f} contract,
 and your legal position under the Procurement Act 2023.
 
 Respond ONLY with valid JSON, no other text before or after.
 """
-        
+
         messages = [
             ("system", CA_SYSTEM_PROMPT),
             ("user", user_message)
         ]
-        
+
         response = self.llm.invoke(messages)
         raw_text = response.content.strip()
-        
+
         try:
             data = json.loads(raw_text)
         except json.JSONDecodeError:
             start = raw_text.find('{')
             end = raw_text.rfind('}') + 1
             data = json.loads(raw_text[start:end])
-        
+
         return PreNegotiationStatement(**data)
 
-    def respond_to_round(self, scenario: DisputeScenario, conversation_history: list, round_number: int) -> RoundResponse:
+    def respond_to_round(self, scenario: DisputeScenario, conversation_history: list,
+                          round_number: int, max_rounds: int = 3) -> RoundResponse:
         scenario_context = self.build_scenario_context(scenario)
 
-        instruction = f"""
-        {scenario_context}
+        # Extract this agent's own previous statements from history, so it can see
+        # exactly what it already said and be explicitly told not to repeat it.
+        own_previous = [content for role, content in conversation_history if role == "assistant"]
 
-        Negotiation Round {round_number}. Respond to the most recent message from the bidder.
+        stage_instruction = get_round_stage_instruction(round_number, max_rounds)
 
-        Respond ONLY with valid JSON matching this exact flat structure — no nesting, no extra keys:
-        {{
-            "message": "your 2-3 paragraph response here as a single string",
-            "proposal": "specific proposal if you are making one, or null",
-            "concession_made": "any concession you are offering, or null"
-        }}
-        """
+        base_instruction = f"""
+{scenario_context}
 
-        # Use the actual role from each tuple — do NOT infer from index position
+NEGOTIATION ROUND {round_number} of {max_rounds}.
+
+{stage_instruction}
+
+YOUR OWN PREVIOUS STATEMENTS IN THIS NEGOTIATION (do not repeat these):
+{format_previous_statements(own_previous)}
+
+Respond ONLY with valid JSON matching this exact flat structure — no nesting, no extra keys:
+{{
+  "message": "your 2-3 paragraph response here as a single string",
+  "proposal": "specific proposal if you are making one, or null",
+  "concession_made": "any concession you are offering, or null"
+}}
+"""
+
         messages = [(role, content) for role, content in conversation_history]
-        messages.append(("user", instruction))
 
-        json_llm = ChatOllama(model="llama3.1", temperature=0.3, format="json")
-        response = json_llm.invoke([("system", CA_SYSTEM_PROMPT)] + messages)
+        max_attempts = 3
+        temperature = 0.3
+        result = None
 
-        raw_text = response.content.strip()
-        try:
-            data = json.loads(raw_text)
-        except json.JSONDecodeError:
-            start = raw_text.find('{')
-            end = raw_text.rfind('}') + 1
-            data = json.loads(raw_text[start:end])
+        for attempt in range(max_attempts):
+            instruction = base_instruction
+            if attempt > 0:
+                instruction += (
+                    "\n\nWARNING: Your previous attempt was too similar to a statement "
+                    "you already made. You MUST provide substantively different content "
+                    "this time — a genuinely new argument, question, or concession."
+                )
+                temperature = min(0.3 + attempt * 0.2, 0.8)
 
-        return RoundResponse(**data)
+            json_llm = ChatOllama(model="llama3.1", temperature=temperature, format="json")
+            response = json_llm.invoke(
+                [("system", CA_SYSTEM_PROMPT)] + messages + [("user", instruction)]
+            )
+
+            raw_text = response.content.strip()
+            try:
+                data = json.loads(raw_text)
+            except json.JSONDecodeError:
+                start = raw_text.find('{')
+                end = raw_text.rfind('}') + 1
+                data = json.loads(raw_text[start:end])
+
+            result = RoundResponse(**data)
+
+            if not is_repetitive(result.message, own_previous):
+                return result
+
+            print(f"   [CA response attempt {attempt + 1} too similar to a prior statement — regenerating]")
+
+        # If still repetitive after all retries, return the last attempt anyway
+        # rather than crashing — better to have a slightly repetitive message
+        # than no message at all.
+        return result

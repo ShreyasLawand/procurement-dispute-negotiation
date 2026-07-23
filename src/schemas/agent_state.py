@@ -1,6 +1,7 @@
-from pydantic import BaseModel, Field
-from typing import Optional, List
+from pydantic import BaseModel, Field, field_validator
+from typing import Optional, List, Any
 from enum import Enum
+import json
 
 class AgentRole(str, Enum):
     CONTRACTING_AUTHORITY = "contracting_authority"
@@ -56,6 +57,7 @@ class NegotiationState(BaseModel):
     adjudicated: bool = False
     ca_win_statement: Optional[str] = None
     bidder_win_statement: Optional[str] = None
+    summary: Optional["NegotiationSummary"] = None
 
     class Config:
         arbitrary_types_allowed = True
@@ -65,3 +67,41 @@ class RoundResponse(BaseModel):
     message: str = Field(description="The agent's negotiation message this round, in plain prose")
     proposal: Optional[str] = Field(default=None, description="Specific proposal being made, if any")
     concession_made: Optional[str] = Field(default=None, description="Any concession offered this round, if any")
+
+    @field_validator("proposal", "concession_made", mode="before")
+    @classmethod
+    def coerce_to_string(cls, v: Any) -> Optional[str]:
+        """
+        Llama 3.1 sometimes returns a dict or bool here instead of a plain
+        string, despite instructions. Normalise anything non-string into a
+        readable string rather than crashing validation.
+        """
+        if v is None:
+            return None
+        if isinstance(v, str):
+            return v
+        if isinstance(v, dict):
+            # Convert dict into a readable "key: value" string
+            return "; ".join(f"{k}: {val}" for k, val in v.items())
+        if isinstance(v, bool):
+            return "Yes" if v else None
+        # Fallback for any other type (list, number, etc.)
+        return str(v)
+
+    @field_validator("message", mode="before")
+    @classmethod
+    def coerce_message_to_string(cls, v: Any) -> str:
+        """Same safety net for the message field itself, just in case."""
+        if isinstance(v, str):
+            return v
+        if isinstance(v, dict):
+            return json.dumps(v)
+        return str(v)
+    
+class NegotiationSummary(BaseModel):
+    """Post-negotiation reasoning summary — explains the 'why' behind the outcome"""
+    key_sticking_points: List[str] = Field(description="The core disagreements that drove the negotiation")
+    concessions_summary: str = Field(description="Plain-English summary of what each side offered")
+    court_reasoning_summary: str = Field(description="Why the Court reached its final recommendation")
+    likely_next_steps: str = Field(description="What would realistically happen next if this were a real dispute")
+    plain_english_summary: str = Field(description="A 3-4 sentence summary a non-lawyer could understand")
