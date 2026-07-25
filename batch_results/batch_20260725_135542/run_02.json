@@ -1,0 +1,229 @@
+{
+  "scenario": {
+    "dispute_id": "F21-001",
+    "title": "Scoring Methodology Challenge \u2014 Construction Framework",
+    "description": "BuildRight Ltd submitted a bid for a \u00a32m construction framework and was ranked second, narrowly missing the framework by 1.2 points overall. \n\nDISPUTED CRITERION: Quality Criterion Q4 - 'Social Value: Community Benefit'\n- BuildRight Ltd's submission: 14 pages, including a detailed local employment plan, 3 named subcontractor partnerships, and a 5-year community investment schedule. Score awarded: 62/100.\n- Winning bidder (Ironclad Construction): 4 pages, general commitments to 'support local employment' with no named partnerships or schedule. Score awarded: 88/100.\n\nBuildRight Ltd alleges this scoring gap is a manifest error, since the published evaluation criteria (Framework Document, Section 4.3) state that Social Value scoring should be based on 'specificity, evidence, and named commitments.' BuildRight Ltd has formally requested the evaluator's scoring notes for Q4 for both bids.",
+    "contract_value_gbp": 2000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "standstill",
+    "contracting_authority_name": "Fusion21",
+    "bidder_name": "BuildRight Ltd"
+  },
+  "round_number": 5,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Legal defensibility",
+      "Service continuity",
+      "Reputational protection",
+      "Cost efficiency",
+      "Public value"
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Maintain transparency and fairness"
+    ],
+    "batna": "TCC litigation with potential \u00a350k+ legal fees, 6-12 months duration",
+    "opening_position": "We acknowledge BuildRight Ltd's concerns regarding scoring methodology for Q4. However, we assert that our evaluation was conducted in accordance with the published Framework Document, Section 4.3. We have provided BuildRight Ltd with access to their bid submission and evaluator's scoring notes, as per our standard practice.",
+    "legal_basis": [
+      "Procurement Act 2023, s12(1)(a) - Value for money",
+      "Procurement Act 2023, s12(1)(b) - Maximising public benefit"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Winning the contract or securing a fair re-evaluation",
+      "Transparency \u2014 understanding exactly why you scored as you did"
+    ],
+    "goals": [
+      "Re-evaluate Q4 scoring for BuildRight Ltd's bid",
+      "Request detailed feedback on evaluation process"
+    ],
+    "batna": "Pursue damages claim or formal proceedings in the Technology and Construction Court (TCC) if no agreement is reached",
+    "opening_position": "Request immediate re-evaluation of Q4 scores, with a view to awarding BuildRight Ltd's bid the framework contract",
+    "legal_basis": [
+      "EU Public Procurement Directive 2014/24/EU",
+      "Public Contracts Regulations 2015"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "BuildRight Ltd's assertion that the scoring gap for Q4 is a manifest error requires clarification. Can you specify which aspects of our evaluation process you believe deviated from the published criteria? Additionally, we would like to request sight of your detailed local employment plan and subcontractor partnerships mentioned in your submission, as these are key components of the Social Value criterion.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate the opportunity to clarify our concerns regarding the scoring gap for Q4. However, we would like to request clarification on why the winning bidder's submission was awarded a significantly higher score despite lacking specific evidence and named commitments as required by Section 4.3 of the Framework Document. Specifically, can you provide details on how the evaluator determined that Ironclad Construction's general commitments to 'support local employment' met the criteria for specificity and evidence? Additionally, we would like to request sight of the scoring notes for Q4 for both bids, as previously requested.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge BuildRight Ltd's concerns regarding the scoring gap for Q4 and appreciate their detailed submission. Upon reviewing our evaluation process, we note that Ironclad Construction's bid did not meet the specific requirements outlined in Section 4.3 of the Framework Document. However, we can provide additional context on how we interpreted the 'general commitments' as meeting the Social Value criterion. We also acknowledge that this may have been an overly lenient interpretation and are willing to revisit our scoring notes for Q4 with a view to providing more transparency. In light of this, we propose extending the standstill period by 5 working days to allow for further engagement and clarification on our evaluation process.",
+      "proposal": null,
+      "concession_made": "extension of standstill period"
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate the Contracting Authority's willingness to revisit their scoring notes for Q4 and provide additional context on how they interpreted Ironclad Construction's general commitments as meeting the Social Value criterion. However, we would like to request that this process be expedited and made more transparent by providing a detailed timeline of when and how the evaluation team will review and revise the scores. We also propose that the scoring notes for Q4 be shared with us in advance of any further discussions or revisions. Furthermore, we reiterate our request for sight of the evaluator's scoring notes for Q4 for both bids, as previously requested.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "We agree to expedite the review of our scoring notes for Q4 and provide a detailed timeline for this process. We will share the scoring notes for both bids with BuildRight Ltd in advance of any further discussions or revisions. To address their concerns, we propose revisiting the Social Value criterion and re-scoring Ironclad Construction's bid based on the published evaluation criteria. This revised score will be recalculated using a weighted average to ensure consistency across all bidders.",
+      "proposal": null,
+      "concession_made": "We are willing to revise our scoring notes for Q4 and provide BuildRight Ltd with sight of both bids' scores in advance, as requested."
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate the Contracting Authority's willingness to revisit their scoring notes for Q4 and re-score Ironclad Construction's bid based on the published evaluation criteria. However, we would like to request that the revised score be recalculated using a weighted average that reflects the relative importance of each criterion, as specified in Section 2.1 of the Framework Document. This will ensure that the revised score accurately reflects the winner's overall performance and is not unduly influenced by any single criterion. We also propose that we receive an updated scoring matrix showing the recalculated scores for all bidders, including ourselves.",
+      "proposal": "revised_scoring_methodology: True; recalculate_weighted_average: True",
+      "concession_made": null
+    },
+    {
+      "round_number": 4,
+      "sender_role": "contracting_authority",
+      "message": "We agree to recalibrate the weighted average used for scoring Q4 to reflect the relative importance of each criterion as specified in Section 2.1 of the Framework Document. This will ensure that the revised score accurately reflects the winner's overall performance and is not unduly influenced by any single criterion. We also propose sharing an updated scoring matrix showing the recalculated scores for all bidders, including BuildRight Ltd, to provide greater transparency throughout this process.",
+      "proposal": null,
+      "concession_made": "revised_weighted_average: True; updated_scoring_matrix: True"
+    },
+    {
+      "round_number": 4,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate the Contracting Authority's willingness to revise the scoring process and recalculate the scores using a weighted average that reflects the relative importance of each criterion. However, we would like to request that the revised scoring matrix also include a detailed breakdown of how the Social Value criterion was scored for both bids. Specifically, we would like to see a clear explanation of why Ironclad Construction's general commitments were awarded 88/100 when our submission included specific evidence and named commitments. Furthermore, we propose that this breakdown be shared with us in advance of any further discussions or revisions.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 5,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge that the scoring gap for Q4 has been a significant point of contention throughout this negotiation. In light of our previous concessions and the BuildRight Ltd's persistence in highlighting the discrepancies in scoring, we propose revisiting the Social Value criterion with fresh eyes. We are willing to re-score Ironclad Construction's bid using an even more stringent interpretation of Section 4.3 of the Framework Document, ensuring that only specific evidence and named commitments are considered. This revised score will be recalculated using a weighted average that accurately reflects the relative importance of each criterion.",
+      "proposal": null,
+      "concession_made": "We are willing to re-score Ironclad Construction's bid using an even more stringent interpretation of Section 4.3 of the Framework Document"
+    },
+    {
+      "round_number": 5,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate the Contracting Authority's willingness to revisit their scoring notes for Q4 and re-score Ironclad Construction's bid based on the published evaluation criteria. However, we believe that a more transparent and comprehensive solution is needed to address our concerns regarding the scoring gap for Q4. Therefore, we propose that the Contracting Authority conduct an independent review of the Social Value criterion, using a third-party expert to re-score both bids based on the published evaluation criteria. This will provide a clear and impartial assessment of our submissions and help to rebuild trust in the evaluation process. We believe that this proposal is fair, reasonable, and necessary to ensure a transparent and competitive procurement process.",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Section 4.3 of the Framework Document",
+        "Social Value criterion"
+      ],
+      "reasoning": "The Contracting Authority has requested clarification on BuildRight Ltd's assertion, which indicates a willingness to engage with the challenge and provide evidence. However, the Aggrieved Bidder's request for scoring notes and evaluator details raises concerns about transparency.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Section 4.3 of the Framework Document",
+        "Social Value criterion"
+      ],
+      "reasoning": "The Contracting Authority has acknowledged BuildRight Ltd's concerns and is willing to revisit their scoring notes for Q4, providing additional context on their interpretation. This demonstrates a willingness to engage with the evaluation process and provide transparency.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 3,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12(1) Procurement Act 2023 - value for money",
+        "s12(2) Procurement Act 2023 - public benefit"
+      ],
+      "reasoning": "The Contracting Authority has agreed to revisit their scoring notes and re-score Ironclad Construction's bid based on the published evaluation criteria. This demonstrates a willingness to correct any potential errors and ensure compliance with the procurement process.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 4,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Section 2.1 of the Framework Document",
+        "Transparency principle"
+      ],
+      "reasoning": "The Contracting Authority has agreed to recalibrate the weighted average and share an updated scoring matrix, demonstrating a willingness to address the aggreived bidder's concerns.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 5,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12(1) Procurement Act 2023 - Value for Money",
+        "Framework Document, Section 4.3 - Social Value"
+      ],
+      "reasoning": "The Contracting Authority has proposed revisiting the scoring methodology and re-scoring Ironclad Construction's bid using a more stringent interpretation of Section 4.3. This demonstrates an effort to address the bidder's concerns and follow a lawful process.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    }
+  ],
+  "resolved": false,
+  "resolution_outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+  "adjudicated": false,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "We were able to negotiate a resolution without escalating the dispute to formal proceedings, which would have incurred significant costs (\u00a350k+ and 6-12 months). This outcome is acceptable as it avoids these risks.",
+    "win_statement": "While we did not achieve our desired outcome of resolving the scoring gap in favour of BuildRight Ltd, we were able to revise our evaluation process and provide greater transparency throughout the negotiation. We also avoided the costs and risks associated with formal proceedings.",
+    "what_was_achieved": [
+      "Revised our evaluation process to ensure consistency with published criteria",
+      "Provided additional context on how we interpreted Ironclad Construction's general commitments as meeting the Social Value criterion",
+      "Shared scoring notes for Q4 with BuildRight Ltd in advance of any further discussions or revisions"
+    ],
+    "what_was_conceded": [
+      "Re-scoring of Ironclad Construction's bid based on published evaluation criteria",
+      "Recalibration of weighted average used for scoring Q4 to reflect relative importance of each criterion",
+      "Conducting an independent review of the Social Value criterion, using a third-party expert"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The negotiation outcome was somewhat favourable compared to our BATNA (pursuing damages or formal TCC proceedings), which would have been costly, slow, and uncertain. We were able to highlight the discrepancies in scoring and secure some concessions from the Contracting Authority, including revisiting their scoring notes for Q4 and recalculating the scores using a weighted average that reflects the relative importance of each criterion.",
+    "win_statement": "We successfully negotiated a revised scoring process for the Social Value criterion, which will provide greater transparency and accuracy in evaluating bids. This outcome demonstrates our persistence and commitment to ensuring a fair and competitive procurement process.",
+    "what_was_achieved": [
+      "Revised scoring notes for Q4 were shared with us in advance of any further discussions or revisions",
+      "The Contracting Authority agreed to recalculate the scores using a weighted average that reflects the relative importance of each criterion"
+    ],
+    "what_was_conceded": [
+      "The Contracting Authority acknowledged that their initial interpretation of Ironclad Construction's general commitments was overly lenient and may have deviated from the published evaluation criteria",
+      "The Contracting Authority agreed to revisit their scoring notes for Q4 with a view to providing more transparency"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Scoring gap for Q4 between BuildRight Ltd and Ironclad Construction",
+      "Interpretation of Section 4.3 of the Framework Document regarding Social Value criterion",
+      "Transparency in evaluation process, including scoring notes and evaluator details"
+    ],
+    "concessions_summary": "The Contracting Authority made several concessions throughout the negotiation, including: (1) extending the standstill period by 5 working days to allow for further engagement and clarification on their evaluation process; (2) revisiting their scoring notes for Q4 and providing a detailed timeline for this process; (3) sharing the scoring notes for both bids with BuildRight Ltd in advance of any further discussions or revisions; (4) recalibrating the weighted average used for scoring Q4 to reflect the relative importance of each criterion; and (5) revisiting the Social Value criterion with fresh eyes and re-scoring Ironclad Construction's bid using an even more stringent interpretation of Section 4.3.",
+    "court_reasoning_summary": "The Court assessed each round, finding that the Contracting Authority demonstrated a willingness to engage with BuildRight Ltd's concerns and provide transparency throughout the process. However, the Court also noted that some requests from BuildRight Ltd raised concerns about transparency, such as their request for evaluator details. Despite these concessions and efforts by the Contracting Authority, the negotiation reached a deadlock after Round 5.",
+    "likely_next_steps": "Given the deadlock reached in Round 5, it is likely that the dispute will proceed to formal proceedings. The Court's assessments suggest that both parties have demonstrated a willingness to engage with each other's concerns and provide transparency, but the Contracting Authority has not fully addressed BuildRight Ltd's concerns regarding the scoring gap for Q4.",
+    "plain_english_summary": "The negotiation between the Contracting Authority and BuildRight Ltd centered around the scoring methodology used in the evaluation process. The Contracting Authority made several concessions to address BuildRight Ltd's concerns, but ultimately, the parties were unable to reach an agreement. As a result, the dispute is likely to proceed to formal proceedings."
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "scenario": {
+    "dispute_id": "F21-001",
+    "title": "Scoring Methodology Challenge \u2014 Construction Framework",
+    "description": "BuildRight Ltd submitted a bid for a \u00a32m construction framework and was ranked second, narrowly missing the framework by 1.2 points overall. \n\nDISPUTED CRITERION: Quality Criterion Q4 - 'Social Value: Community Benefit'\n- BuildRight Ltd's submission: 14 pages, including a detailed local employment plan, 3 named subcontractor partnerships, and a 5-year community investment schedule. Score awarded: 62/100.\n- Winning bidder (Ironclad Construction): 4 pages, general commitments to 'support local employment' with no named partnerships or schedule. Score awarded: 88/100.\n\nBuildRight Ltd alleges this scoring gap is a manifest error, since the published evaluation criteria (Framework Document, Section 4.3) state that Social Value scoring should be based on 'specificity, evidence, and named commitments.' BuildRight Ltd has formally requested the evaluator's scoring notes for Q4 for both bids.",
+    "contract_value_gbp": 2000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "standstill",
+    "contracting_authority_name": "Fusion21",
+    "bidder_name": "BuildRight Ltd"
+  },
+  "round_number": 2,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Legal defensibility",
+      "Service continuity",
+      "Reputational protection",
+      "Cost efficiency",
+      "Public value"
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Maintain transparency and fairness"
+    ],
+    "batna": "Defending the procurement decision in the Technology and Construction Court (TCC) at a cost of \u00a350k+ legal fees, taking 6-12 months",
+    "opening_position": "We acknowledge BuildRight Ltd's concerns regarding the scoring methodology for Quality Criterion Q4 - 'Social Value: Community Benefit', but we stand by our evaluation process as outlined in the Framework Document. We are willing to provide additional feedback and transparency regarding the scoring notes, while ensuring commercial confidentiality.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Regulation 86(1) - The procurement procedure must be transparent, proportionate and non-discriminatory"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Winning the contract or securing a fair re-evaluation",
+      "Transparency \u2014 understanding exactly why you scored as you did",
+      "Protecting your reputation and standing for future bids"
+    ],
+    "goals": [
+      "Re-evaluation of Q4 scoring, detailed feedback on evaluator's notes",
+      "Resolution to be based on evidence and published evaluation criteria"
+    ],
+    "batna": "Pursuing a damages claim or formal proceedings in the Technology and Construction Court (TCC) if no agreement is reached",
+    "opening_position": "Requesting immediate re-evaluation of Q4 scoring, provision of evaluator's notes for both bids, and explanation for the significant discrepancy between scores awarded to BuildRight Ltd and Ironclad Construction",
+    "legal_basis": [
+      "EU Procurement Directive 2014/24/EU",
+      "Public Contracts Regulations 2015 (SI 2015/115"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "BuildRight Ltd, I appreciate your detailed submission for the Social Value: Community Benefit criterion. However, I'd like to clarify that your assertion of a manifest error in scoring is based on the Framework Document's evaluation criteria. Can you specify which particular aspect of our scoring methodology you believe deviates from these published guidelines?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your clarification on the scoring methodology, but I'd like to ask: what specific aspect of our submission for Social Value: Community Benefit criterion was deemed to meet only 62% of the available points? Was it the lack of named partnerships in the winning bidder's proposal that justified such a high score?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge BuildRight Ltd's concern that the scoring for Social Value: Community Benefit criterion may not accurately reflect the published evaluation criteria. Specifically, regarding their question about the lack of named partnerships in the winning bidder's proposal, I can confirm that our evaluator did consider this aspect when awarding scores. However, we also took into account the level of specificity and evidence provided by Ironclad Construction, which included a detailed commitment to support local employment through a community investment program. This was deemed to meet 88% of the available points for Social Value: Community Benefit criterion. I am willing to provide additional feedback on both bids' submissions to clarify our evaluation process.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your willingness to provide additional feedback on both bids' submissions. However, I'd like to clarify that our submission for Social Value: Community Benefit criterion was deemed to meet only 62% of the available points due to a discrepancy in scoring specific evidence and named commitments. Specifically, we included a detailed local employment plan, 3 named subcontractor partnerships, and a 5-year community investment schedule, whereas Ironclad Construction's proposal lacked these specifics. I'd like to request that you provide a clear explanation for why the winning bidder's general commitments were deemed more worthy of an 88% score than our submission. Furthermore, I'd appreciate it if you could explain how this scoring decision aligns with the published evaluation criteria in Section 4.3 of the Framework Document.",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12(1)(a) Procurement Act 2023 - Value for Money"
+      ],
+      "reasoning": "The Contracting Authority has provided a clear explanation of the scoring methodology, and the Aggrieved Bidder's challenge appears to be based on an interpretation of the Framework Document. However, there is no evidence that the published evaluation criteria were not followed.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Section 4.3 of the Framework Document",
+        "Procurement Act 2023 s12"
+      ],
+      "reasoning": "The Contracting Authority's scoring decision for Social Value: Community Benefit criterion appears to be inconsistent with the published evaluation criteria, as they awarded a higher score to Ironclad Construction's general commitments compared to BuildRight Ltd's detailed and specific evidence. This discrepancy suggests a manifest error in scoring.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome is more favorable than our BATNA, as we avoided a lengthy and costly dispute in TCC court (estimated \u00a350k+ and 6-12 months). Although the re-evaluation did not result in a full win for BuildRight Ltd, it allowed us to maintain the original framework award without significant concessions.",
+    "win_statement": "We successfully defended our evaluation process and maintained the integrity of the framework award. The re-evaluation provided an opportunity for transparency and clarification on the scoring methodology, which ultimately reinforced the validity of our initial assessment.",
+    "what_was_achieved": [
+      "Re-evaluation of the Social Value: Community Benefit criterion",
+      "Provided additional feedback to clarify the evaluation process"
+    ],
+    "what_was_conceded": [
+      "Some concessions on transparency and clarity in scoring methodology",
+      "Agreed to re-score the Social Value: Community Benefit criterion"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is slightly favourable compared to my BATNA (pursuing damages or formal TCC proceedings) as we were able to have the scoring re-evaluated and received additional feedback on both bids' submissions. However, I am not entirely satisfied with the result as the winning bidder's score for Social Value: Community Benefit criterion was still awarded 88%, which I believe is inconsistent with the published evaluation criteria.",
+    "win_statement": "We were able to get a re-evaluation of the scoring and received additional feedback on both bids' submissions, which provides some clarity on the evaluation process. However, we did not achieve our desired outcome of having the winning bidder's score reduced or the contract awarded to us.",
+    "what_was_achieved": [
+      "A re-evaluation of the scoring for Social Value: Community Benefit criterion",
+      "Additional feedback on both bids' submissions"
+    ],
+    "what_was_conceded": [
+      "The winning bidder's high score for Social Value: Community Benefit criterion (88%) was not reduced",
+      "The contract was not awarded to BuildRight Ltd"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Scoring methodology for Social Value: Community Benefit criterion",
+      "Discrepancy between BuildRight Ltd's submission and Ironclad Construction's proposal"
+    ],
+    "concessions_summary": "The Contracting Authority provided additional feedback on both bids' submissions, but did not concede any significant points or alter their initial scoring decision.",
+    "court_reasoning_summary": "The Court concluded that the Contracting Authority's scoring decision for Social Value: Community Benefit criterion was inconsistent with the published evaluation criteria, indicating a manifest error in scoring. This discrepancy led to the recommendation of re-evaluation.",
+    "likely_next_steps": "Re-evaluation of both bids' submissions will likely occur, with a focus on ensuring that the scoring methodology aligns with the published evaluation criteria. The Contracting Authority may need to revisit their initial scoring decision and provide a revised assessment.",
+    "plain_english_summary": "The dispute centered around how the Contracting Authority scored two bidders' proposals for Social Value: Community Benefit criterion. The Aggrieved Bidder, BuildRight Ltd, challenged the scoring methodology and argued that their detailed submission was unfairly penalized compared to Ironclad Construction's general commitments. The Court agreed with BuildRight Ltd's concerns, concluding that there was a manifest error in scoring, and recommended re-evaluation of both bids."
+  }
+}
