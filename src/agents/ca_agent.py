@@ -1,9 +1,8 @@
 import json
 from langchain_ollama import ChatOllama
-from src.schemas.agent_state import PreNegotiationStatement, DisputeScenario, AgentRole, RoundResponse
-from src.prompts.ca_prompt import CA_SYSTEM_PROMPT
 from src.utils.negotiation_helpers import is_repetitive, format_previous_statements, get_round_stage_instruction
-
+from src.prompts.ca_prompt import CA_SYSTEM_PROMPT, CA_WIN_STATEMENT_PROMPT
+from src.schemas.agent_state import PreNegotiationStatement, DisputeScenario, AgentRole, RoundResponse, WinStatement
 
 class ContractingAuthorityAgent:
 
@@ -125,3 +124,32 @@ Respond ONLY with valid JSON matching this exact flat structure — no nesting, 
         # rather than crashing — better to have a slightly repetitive message
         # than no message at all.
         return result
+
+    def get_win_statement(self, scenario: DisputeScenario, resolution_outcome: str, transcript_summary: str) -> WinStatement:
+        scenario_context = self.build_scenario_context(scenario)
+
+        user_message = f"""
+{scenario_context}
+
+FINAL OUTCOME: {resolution_outcome}
+
+NEGOTIATION SUMMARY:
+{transcript_summary}
+
+Provide your post-negotiation win statement as JSON.
+"""
+
+        response = self.llm.invoke([
+            ("system", CA_WIN_STATEMENT_PROMPT),
+            ("user", user_message)
+        ])
+
+        raw_text = response.content.strip()
+        try:
+            data = json.loads(raw_text)
+        except json.JSONDecodeError:
+            start = raw_text.find('{')
+            end = raw_text.rfind('}') + 1
+            data = json.loads(raw_text[start:end])
+
+        return WinStatement(**data)

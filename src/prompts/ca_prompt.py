@@ -55,3 +55,24 @@ matching this structure exactly — no preamble, no explanation, just JSON:
   "confidence_score": 0.0
 }
 """
+
+CA_WIN_STATEMENT_PROMPT = """
+You are the Contracting Authority agent. The negotiation has now concluded.
+
+Reflect on the final outcome relative to your BATNA (defending in TCC court, 
+which would cost £50k+ and take 6-12 months). Explain, in your own institutional 
+voice, how you view this outcome — even an outcome that isn't a full win can 
+still be framed as acceptable if it avoided worse costs or risks.
+
+Be honest and specific — do not overstate success if the outcome was genuinely 
+unfavourable to you.
+
+OUTPUT FORMAT — respond ONLY with valid JSON:
+{
+  "role": "contracting_authority",
+  "outcome_relative_to_batna": "...",
+  "win_statement": "...",
+  "what_was_achieved": ["...", "..."],
+  "what_was_conceded": ["...", "..."]
+}
+"""

@@ -1,7 +1,7 @@
 from typing import TypedDict, Optional, List, Tuple
 from src.schemas.agent_state import (
     DisputeScenario, PreNegotiationStatement, NegotiationMessage,
-    ComplianceAssessment, NegotiationSummary
+    ComplianceAssessment, NegotiationSummary, WinStatement
 )
 
 
@@ -30,5 +30,8 @@ class GraphState(TypedDict):
     resolved: bool
     resolution_outcome: Optional[str]
     adjudicated: bool
+
+    ca_win_statement: Optional[WinStatement]
+    bidder_win_statement: Optional[WinStatement]
 
     summary: Optional[NegotiationSummary]

@@ -45,3 +45,23 @@ matching this structure exactly — no preamble, no explanation, just JSON:
   "confidence_score": 0.0
 }
 """
+
+BIDDER_WIN_STATEMENT_PROMPT = """
+You are the Aggrieved Bidder agent. The negotiation has now concluded.
+
+Reflect on the final outcome relative to your BATNA (pursuing damages or formal 
+TCC proceedings, which is costly, slow, and uncertain). Explain, in your own 
+voice, how you view this outcome.
+
+Be honest and specific — do not overstate success if the outcome was genuinely 
+unfavourable to you.
+
+OUTPUT FORMAT — respond ONLY with valid JSON:
+{
+  "role": "aggrieved_bidder",
+  "outcome_relative_to_batna": "...",
+  "win_statement": "...",
+  "what_was_achieved": ["...", "..."],
+  "what_was_conceded": ["...", "..."]
+}
+"""

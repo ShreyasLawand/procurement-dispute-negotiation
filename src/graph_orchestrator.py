@@ -143,10 +143,37 @@ def court_check_node(state: GraphState) -> dict:
     return updates
 
 
+def win_statements_node(state: GraphState) -> dict:
+    """Each agent reflects on the outcome relative to its own BATNA."""
+    scenario = state["scenario"]
+    outcome = state["resolution_outcome"]
+
+    # Build a short transcript summary to give agents context for their reflection
+    transcript_lines = [f"[Round {m.round_number}] {m.sender_role.value}: {m.message}" for m in state["messages"]]
+    transcript_summary = "\n".join(transcript_lines)
+
+    print(f"\n{'='*70}")
+    print("  POST-NEGOTIATION: WIN STATEMENTS")
+    print(f"{'='*70}\n")
+
+    ca_win = ca_agent.get_win_statement(scenario, outcome, transcript_summary)
+    print(f"CONTRACTING AUTHORITY WIN STATEMENT:")
+    print(f"   {ca_win.win_statement}\n")
+
+    bidder_win = bidder_agent.get_win_statement(scenario, outcome, transcript_summary)
+    print(f"AGGRIEVED BIDDER WIN STATEMENT:")
+    print(f"   {bidder_win.win_statement}\n")
+
+    return {
+        "ca_win_statement": ca_win,
+        "bidder_win_statement": bidder_win,
+    }
+
+
 def route_after_court(state: GraphState) -> str:
     """
     Conditional edge: decide whether to loop back for another round,
-    or move on to the summary.
+    or move on to the post-negotiation reflection and summary.
     """
     if state.get("resolved") or (state["round_number"] >= state["max_rounds"]):
         return "summary"
@@ -200,6 +227,7 @@ def build_negotiation_graph():
     graph.add_node("ca_round", ca_round_node)
     graph.add_node("bidder_round", bidder_round_node)
     graph.add_node("court_check", court_check_node)
+    graph.add_node("win_statements", win_statements_node)
     graph.add_node("summary", summary_node)
 
     graph.set_entry_point("pre_negotiation")
@@ -213,10 +241,11 @@ def build_negotiation_graph():
         route_after_court,
         {
             "continue": "ca_round",
-            "summary": "summary",
+            "summary": "win_statements",
         }
     )
 
+    graph.add_edge("win_statements", "summary")
     graph.add_edge("summary", END)
 
     return graph.compile()
@@ -249,6 +278,8 @@ class GraphNegotiationOrchestrator:
             "resolved": False,
             "resolution_outcome": None,
             "adjudicated": False,
+            "ca_win_statement": None,
+            "bidder_win_statement": None,
             "summary": None,
         }
 
@@ -269,6 +300,8 @@ class GraphNegotiationOrchestrator:
             resolved=final_state["resolved"],
             resolution_outcome=final_state["resolution_outcome"],
             adjudicated=final_state["adjudicated"],
+            ca_win_statement=final_state["ca_win_statement"],
+            bidder_win_statement=final_state["bidder_win_statement"],
             summary=final_state["summary"],
         )
         with open(filepath, "w") as f:

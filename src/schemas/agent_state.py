@@ -55,8 +55,8 @@ class NegotiationState(BaseModel):
     resolved: bool = False
     resolution_outcome: Optional[str] = None
     adjudicated: bool = False
-    ca_win_statement: Optional[str] = None
-    bidder_win_statement: Optional[str] = None
+    ca_win_statement: Optional["WinStatement"] = None
+    bidder_win_statement: Optional["WinStatement"] = None
     summary: Optional["NegotiationSummary"] = None
 
     class Config:
@@ -105,3 +105,11 @@ class NegotiationSummary(BaseModel):
     court_reasoning_summary: str = Field(description="Why the Court reached its final recommendation")
     likely_next_steps: str = Field(description="What would realistically happen next if this were a real dispute")
     plain_english_summary: str = Field(description="A 3-4 sentence summary a non-lawyer could understand")
+    
+class WinStatement(BaseModel):
+    """Post-negotiation reflection — how this agent frames its outcome as a 'win'"""
+    role: AgentRole
+    outcome_relative_to_batna: str = Field(description="Did this outcome beat, match, or fall short of the agent's BATNA?")
+    win_statement: str = Field(description="How this agent frames the outcome as a win, in its own voice")
+    what_was_achieved: List[str] = Field(description="Specific interests or goals that were satisfied")
+    what_was_conceded: List[str] = Field(description="What this agent had to give up or compromise on")
