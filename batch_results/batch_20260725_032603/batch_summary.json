@@ -1,0 +1,79 @@
+{
+  "scenario_id": "F21-001",
+  "scenario_title": "Scoring Methodology Challenge \u2014 Construction Framework",
+  "n_runs_requested": 5,
+  "n_runs_successful": 5,
+  "n_runs_failed": 0,
+  "max_rounds": 3,
+  "timestamp": "20260725_032603",
+  "metrics": {
+    "agreement_rate": 0.2,
+    "deadlock_rate": 0.8,
+    "manifest_error_detection_rate": 0.2,
+    "average_rounds_to_conclusion": 2.6,
+    "average_duration_seconds": 774.1,
+    "outcome_distribution": {
+      "deadlock - max rounds reached, escalate to formal proceedings": 4,
+      "re-evaluation": 1
+    }
+  },
+  "individual_runs": [
+    {
+      "run_number": 1,
+      "resolved": false,
+      "outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+      "rounds_taken": 3,
+      "manifest_error_found_any_round": false,
+      "manifest_error_rounds": [],
+      "process_not_followed_any_round": false,
+      "duration_seconds": 953.2,
+      "error": null
+    },
+    {
+      "run_number": 2,
+      "resolved": false,
+      "outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+      "rounds_taken": 3,
+      "manifest_error_found_any_round": false,
+      "manifest_error_rounds": [],
+      "process_not_followed_any_round": false,
+      "duration_seconds": 803.4,
+      "error": null
+    },
+    {
+      "run_number": 3,
+      "resolved": true,
+      "outcome": "re-evaluation",
+      "rounds_taken": 1,
+      "manifest_error_found_any_round": true,
+      "manifest_error_rounds": [
+        1
+      ],
+      "process_not_followed_any_round": true,
+      "duration_seconds": 370.8,
+      "error": null
+    },
+    {
+      "run_number": 4,
+      "resolved": false,
+      "outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+      "rounds_taken": 3,
+      "manifest_error_found_any_round": false,
+      "manifest_error_rounds": [],
+      "process_not_followed_any_round": false,
+      "duration_seconds": 900.7,
+      "error": null
+    },
+    {
+      "run_number": 5,
+      "resolved": false,
+      "outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+      "rounds_taken": 3,
+      "manifest_error_found_any_round": false,
+      "manifest_error_rounds": [],
+      "process_not_followed_any_round": false,
+      "duration_seconds": 842.2,
+      "error": null
+    }
+  ]
+}

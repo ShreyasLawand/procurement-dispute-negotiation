@@ -1,0 +1,177 @@
+{
+  "scenario": {
+    "dispute_id": "F21-001",
+    "title": "Scoring Methodology Challenge \u2014 Construction Framework",
+    "description": "BuildRight Ltd submitted a bid for a \u00a32m construction framework and was ranked second, narrowly missing the framework by 1.2 points overall. \n\nDISPUTED CRITERION: Quality Criterion Q4 - 'Social Value: Community Benefit'\n- BuildRight Ltd's submission: 14 pages, including a detailed local employment plan, 3 named subcontractor partnerships, and a 5-year community investment schedule. Score awarded: 62/100.\n- Winning bidder (Ironclad Construction): 4 pages, general commitments to 'support local employment' with no named partnerships or schedule. Score awarded: 88/100.\n\nBuildRight Ltd alleges this scoring gap is a manifest error, since the published evaluation criteria (Framework Document, Section 4.3) state that Social Value scoring should be based on 'specificity, evidence, and named commitments.' BuildRight Ltd has formally requested the evaluator's scoring notes for Q4 for both bids.",
+    "contract_value_gbp": 2000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "standstill",
+    "contracting_authority_name": "Fusion21",
+    "bidder_name": "BuildRight Ltd"
+  },
+  "round_number": 3,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Legal defensibility",
+      "Service continuity",
+      "Reputational protection",
+      "Cost efficiency",
+      "Public value"
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Maintain transparency and fairness in evaluation process"
+    ],
+    "batna": "Technology and Construction Court (TCC) litigation, with associated costs (\u00a350k+ legal fees) and potential contract suspension",
+    "opening_position": "Fusion21 stands by its evaluation process and scoring methodology, which were applied consistently across all bids. The evaluator's notes for Q4 will be shared with BuildRight Ltd to provide transparency.",
+    "legal_basis": [
+      "Procurement Act 2023, s12(1)(a) - Value for money",
+      "Procurement Act 2023, s12(1)(b) - Maximising public benefit"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Winning the contract or securing a fair re-evaluation",
+      "Transparency \u2014 understanding exactly why you scored as you did",
+      "Protecting your reputation and standing for future bids"
+    ],
+    "goals": [
+      "Re-evaluate Q4 scoring based on Framework Document criteria",
+      "Request detailed feedback on scoring methodology",
+      "Secure a fair outcome that reflects the evaluation criteria"
+    ],
+    "batna": "Pursue damages claim or formal proceedings in the Technology and Construction Court (TCC) if no agreement is reached",
+    "opening_position": "The scoring gap for Q4 is a manifest error, as BuildRight Ltd's submission meets the Framework Document's specific requirements while Ironclad Construction's bid does not.",
+    "legal_basis": [
+      "Framework Document, Section 4.3",
+      "EU Public Procurement Directive (2014/24/EU), Article 84"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We appreciate BuildRight Ltd's concerns regarding the scoring of Quality Criterion Q4. To clarify, can you specify what you believe is a manifest error in our evaluation process and how it relates to the published criteria? Additionally, we would like to offer transparency by providing the evaluator's scoring notes for both bids, excluding any commercially sensitive information.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate the Contracting Authority's willingness to provide transparency by sharing the evaluator's scoring notes. However, we would like clarification on how the winning bidder's submission met the published evaluation criteria for Social Value (Section 4.3). Specifically, can you explain why the lack of named subcontractor partnerships and a community investment schedule did not result in a lower score? Furthermore, we request that the scoring notes for both bids be provided in a format that allows us to clearly understand the reasoning behind each score.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge BuildRight Ltd's request for clarification on the scoring of Social Value (Section 4.3). To address their concerns, we propose to provide a detailed explanation of how the winning bidder's submission met the published evaluation criteria, specifically highlighting the aspects that contributed to its higher score. We will also provide the evaluator's scoring notes in a format that clearly outlines the reasoning behind each score, as requested. Furthermore, we would like to offer an additional concession: we are willing to consider revisiting the Social Value criterion and re-scoring it, if BuildRight Ltd can provide specific evidence of how their submission better meets the published criteria.",
+      "proposal": null,
+      "concession_made": "revisiting and re-scoring the Social Value criterion"
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate the Contracting Authority's willingness to revisit the Social Value criterion and re-score it. However, we would like to request that this process be conducted in a transparent manner, with clear explanations for any changes made to the original scores. We also propose that the re-scoring process be facilitated by an independent third-party expert, who can provide an objective assessment of our submission against the published evaluation criteria. This will help ensure that the outcome is fair and unbiased.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge the need for transparency and fairness in this procurement process. We propose to re-score the Social Value criterion (Q4) using an independent third-party expert as requested by BuildRight Ltd. This expert will assess both bids against the published evaluation criteria, providing a clear explanation of their reasoning behind each score. We believe this approach will ensure that the outcome is fair and unbiased, addressing BuildRight Ltd's concerns regarding the original scoring.",
+      "proposal": null,
+      "concession_made": "We are willing to accept the independent third-party expert's re-scored result as final, without further appeal or challenge."
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate the Contracting Authority's willingness to re-score the Social Value criterion with an independent third-party expert. We believe this approach will ensure a fair and unbiased outcome. However, in light of the significant scoring gap between our submissions, we propose that the re-scoring process be conducted in a way that allows for a full re-evaluation of both bids against all published evaluation criteria, rather than just the Social Value criterion. This would provide a more comprehensive assessment of our submission and help to address any concerns regarding the original scoring. Furthermore, we request that the Contracting Authority commit to accepting the expert's findings in full, without reservation or appeal, to ensure that the outcome is final and binding.",
+      "proposal": "re-scoring_process: full re-evaluation of both bids against all published evaluation criteria; expert_findings: binding and final",
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "published evaluation methodology",
+        "transparency"
+      ],
+      "reasoning": "The Contracting Authority has offered transparency by providing the evaluator's scoring notes, which aligns with the published criteria. However, the bidder's concerns regarding the Social Value criterion and the lack of named subcontractor partnerships and community investment schedule are valid questions that require further clarification.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12(1) Procurement Act 2023: Value for Money",
+        "Regulation 86, Public Contracts Regulations 2015: Transparency"
+      ],
+      "reasoning": "The Contracting Authority has provided a detailed explanation of the winning bidder's submission and offered to revisit the Social Value criterion. They have also proposed providing evaluator's scoring notes in a clear format. This demonstrates transparency and an effort to address BuildRight Ltd's concerns.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 3,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12(1) Procurement Act 2023 - Value for Money",
+        "Regulation 84 EU Procurement Directive (2014/24/EU) - Award Criteria"
+      ],
+      "reasoning": "The Contracting Authority has proposed to re-score the Social Value criterion using an independent third-party expert, which addresses BuildRight Ltd's concerns regarding transparency and fairness. This approach is in line with the published evaluation criteria and does not indicate a manifest error.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    }
+  ],
+  "resolved": false,
+  "resolution_outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+  "adjudicated": false,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiation has concluded with a deadlock, which means we will have to escalate the dispute to formal proceedings. This outcome is not ideal, but it's better than defending in TCC court, which would cost \u00a350k+ and take 6-12 months.",
+    "win_statement": "We successfully navigated the dispute process without conceding too much ground, and our willingness to revisit the scoring and provide transparency has maintained a positive reputation for Fusion21. However, we did not achieve a full win in terms of resolving the dispute in our favor.",
+    "what_was_achieved": [
+      "Provided detailed explanations of how the winning bidder's submission met the published evaluation criteria",
+      "Offered to revisit and re-score the Social Value criterion with an independent third-party expert"
+    ],
+    "what_was_conceded": [
+      "Agreed to provide transparency by sharing evaluator's scoring notes for both bids, excluding commercially sensitive information",
+      "Committed to accepting the expert's findings in full, without reservation or appeal, if the re-scoring process is conducted with an independent third-party expert"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The negotiation did not result in a satisfactory resolution for BuildRight Ltd. The Contracting Authority's willingness to re-score the Social Value criterion with an independent third-party expert was a positive step, but ultimately, the dispute reached a deadlock and will be escalated to formal proceedings.",
+    "win_statement": "We successfully pushed for transparency and fairness in the procurement process, ensuring that an independent third-party expert is involved in the re-scoring of the Social Value criterion. However, we did not achieve our desired outcome of being awarded the contract or having the original scores revised in our favor.",
+    "what_was_achieved": [
+      "The Contracting Authority agreed to provide transparency by sharing the evaluator's scoring notes for both bids",
+      "An independent third-party expert will be involved in re-scoring the Social Value criterion"
+    ],
+    "what_was_conceded": [
+      "The dispute reached a deadlock and will be escalated to formal proceedings, which may result in additional costs and uncertainty for BuildRight Ltd",
+      "We did not achieve our desired outcome of being awarded the contract or having the original scores revised in our favor"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Scoring methodology for Quality Criterion Q4",
+      "Social Value (Section 4.3) criterion scoring",
+      "Transparency in evaluator's scoring notes"
+    ],
+    "concessions_summary": "The Contracting Authority made several concessions throughout the negotiation, including: providing transparency by sharing evaluator's scoring notes; offering a detailed explanation of the winning bidder's submission; revisiting and re-scoring the Social Value criterion; and accepting an independent third-party expert's re-scored result as final.",
+    "court_reasoning_summary": "The Court assessed each round and recommended continuing negotiation. The reasoning was that the Contracting Authority demonstrated transparency, addressed BuildRight Ltd's concerns, and proposed solutions to resolve the dispute. However, a manifest error was not identified in any of the rounds.",
+    "likely_next_steps": "Given that the maximum number of rounds has been reached, the dispute will likely escalate to formal proceedings, such as arbitration or litigation, where an independent third-party expert will make a binding decision on the matter.",
+    "plain_english_summary": "The negotiation between the Contracting Authority and BuildRight Ltd focused on resolving concerns regarding the scoring methodology for Quality Criterion Q4 and Social Value criterion. Despite concessions made by the Contracting Authority, including revisiting and re-scoring the Social Value criterion with an independent expert, a resolution could not be reached within the negotiated rounds. The dispute will now proceed to formal proceedings."
+  }
+}
