@@ -150,4 +150,4 @@ if __name__ == "__main__":
     N_RUNS = 8
     MAX_ROUNDS = 5      # adjust as needed — start smaller (e.g. 3) to test the script works, then scale up
 
-    run_batch(scoring_challenge, n_runs=N_RUNS, max_rounds=MAX_ROUNDS)
+    run_batch(mathematical_scoring_error, n_runs=N_RUNS, max_rounds=MAX_ROUNDS)
