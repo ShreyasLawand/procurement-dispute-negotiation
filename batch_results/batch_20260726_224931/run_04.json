@@ -1,0 +1,123 @@
+{
+  "scenario": {
+    "dispute_id": "F21-002",
+    "title": "Mathematical Scoring Error \u2014 Facilities Management Contract",
+    "description": "GreenServe Ltd submitted a bid for a \u00a33.5m facilities management contract and was ranked third, narrowly missing the award by 0.4 points overall.\n\nDISPUTED ISSUE: Arithmetic error in the published scoring calculation.\n\nThe Framework Document (Section 5.1) states that the final score for each bidder is calculated as: (Quality Score x 0.6) + (Price Score x 0.4).\n\nGreenServe Ltd's individually published sub-scores were:\n- Quality Score: 85/100\n- Price Score: 78/100\n- Correct final score per the published formula: (85 x 0.6) + (78 x 0.4) = 51.0 + 31.2 = 82.2/100\n\nHowever, the final scorecard issued to GreenServe Ltd by Fusion21 shows a final score of 78.6/100 \u2014 a 3.6 point discrepancy from the correct arithmetic result. This 3.6 point gap is larger than the 0.4 point margin by which GreenServe Ltd missed the award.\n\nGreenServe Ltd has independently re-calculated the score using the published formula and the published sub-scores (both of which are publicly available in the tender documentation) and formally alleges a manifest arithmetic error in the final score calculation, requesting immediate correction and re-ranking.",
+    "contract_value_gbp": 3500000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "standstill",
+    "contracting_authority_name": "Fusion21",
+    "bidder_name": "GreenServe Ltd"
+  },
+  "round_number": 1,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Legal defensibility",
+      "Service continuity",
+      "Reputational protection",
+      "Cost efficiency",
+      "Public value"
+    ],
+    "goals": [
+      "Defend the procurement decision without admitting liability",
+      "Maintain transparency and fairness in the evaluation process"
+    ],
+    "batna": "Defending the procurement decision in the Technology and Construction Court (TCC) if no agreement is reached",
+    "opening_position": "We acknowledge the scoring challenge, but our preliminary review indicates that the discrepancy may be due to a clerical error rather than an arithmetic one. We are willing to provide additional feedback and transparency to address GreenServe Ltd's concerns.",
+    "legal_basis": [
+      "Procurement Act 2023, s12(1)(a) - Value for money",
+      "Procurement Act 2023, s12(1)(b) - Maximising public benefit"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Winning the contract or securing a fair re-evaluation",
+      "Transparency \u2014 understanding exactly why you scored as you did",
+      "Protecting your reputation and standing for future bids"
+    ],
+    "goals": [
+      "Correct the manifest arithmetic error in the final score calculation",
+      "Re-evaluate GreenServe Ltd's bid with correct scores",
+      "Ensure transparency and accountability from Fusion21"
+    ],
+    "batna": "Pursue a damages claim or formal proceedings in the Technology and Construction Court (TCC) if no agreement is reached",
+    "opening_position": "Fusion21 must acknowledge and rectify the arithmetic error, re-calculate GreenServe Ltd's final score using the published formula, and provide transparent explanations for any discrepancies.",
+    "legal_basis": [
+      "Framework Document Section 5.1",
+      "EU Procurement Directive (2014/24/EU) Article 41"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "GreenServe Ltd's allegation of an arithmetic error in the final score calculation is taken seriously. However, I would like to clarify whether GreenServe Ltd has considered that the discrepancy may be due to a minor formatting issue with the published sub-scores rather than a manifest error. Could you provide further evidence or justification for your re-calculation method? Additionally, I propose providing an additional breakdown of the scoring calculation to ensure transparency and accuracy.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate the Contracting Authority's willingness to engage with our allegation. However, I must clarify that a minor formatting issue does not justify the 3.6 point discrepancy in the final score. Can you provide evidence of any formatting issues with the published sub-scores? We have independently re-calculated the score using the published formula and sub-scores, and our result matches the correct arithmetic outcome.",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Section 5.1 of the Framework Document"
+      ],
+      "reasoning": "I have independently re-calculated the final score using the published formula and sub-scores: (85 x 0.6) + (78 x 0.4) = 51.0 + 31.2 = 82.2/100. This result matches GreenServe Ltd's re-calculation, which is 3.6 points higher than the final scorecard issued by Fusion21 (78.6/100). Given this discrepancy, I conclude that a manifest error has been made in the final score calculation.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome of a re-evaluation is more favorable than defending in TCC court, which would have cost \u00a350k+ and taken 6-12 months. This outcome avoids significant legal costs and reputational damage.",
+    "win_statement": "We were able to negotiate a re-evaluation, which resulted in a revised score that did not change the original ranking. While this is not a full win for us, it is an acceptable outcome given the circumstances.",
+    "what_was_achieved": [
+      "A re-evaluation of the scores was conducted",
+      "The discrepancy in the final score was confirmed to be due to a minor arithmetic error"
+    ],
+    "what_was_conceded": [
+      "We acknowledged GreenServe Ltd's allegation and took it seriously",
+      "We provided an additional breakdown of the scoring calculation to ensure transparency and accuracy"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome of a re-evaluation is more favorable than pursuing damages or formal TCC proceedings, which would have been costly, slow, and uncertain. However, the outcome does not fully address our initial allegation of an arithmetic error, and we were unable to achieve full correction of the scoring discrepancy.",
+    "win_statement": "We successfully secured a re-evaluation of the final scores, which led to a revised ranking that is more reflective of our true bid value. Although we did not achieve a complete reversal of the original outcome, this result is still an improvement over our initial position and demonstrates the importance of careful scrutiny in the evaluation process.",
+    "what_was_achieved": [
+      "Re-evaluation of the final scores",
+      "A revised ranking that reflects our true bid value"
+    ],
+    "what_was_conceded": [
+      "The Contracting Authority's assertion that a minor formatting issue may have contributed to the discrepancy",
+      "The full correction of the scoring discrepancy was not achieved"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Mathematical Scoring Error",
+      "Manifest Error vs Minor Formatting Issue"
+    ],
+    "concessions_summary": "Neither party made significant concessions during the negotiation. The Contracting Authority offered to provide an additional breakdown of the scoring calculation, but this was not accepted by the Aggrieved Bidder as sufficient.",
+    "court_reasoning_summary": "The Court concluded that a manifest error had been made in the final score calculation due to the discrepancy between the published formula and sub-scores, and the actual final score issued. The Court's independent re-calculation supported the Aggrieved Bidder's claim.",
+    "likely_next_steps": "Re-evaluation of the bid scores is recommended by the Court. This means that the Contracting Authority will need to re-score the bids using the correct formula and sub-scores, which may lead to a revised shortlist or award decision.",
+    "plain_english_summary": "The dispute centred on a mathematical error in the final score calculation for a \u00a33.5m contract. The Court agreed with the Aggrieved Bidder that an error had been made and recommended re-evaluation of the bid scores to ensure accuracy and fairness."
+  }
+}

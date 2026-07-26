@@ -1,0 +1,125 @@
+{
+  "scenario_id": "F21-002",
+  "scenario_title": "Mathematical Scoring Error \u2014 Facilities Management Contract",
+  "n_runs_requested": 8,
+  "n_runs_successful": 8,
+  "n_runs_failed": 0,
+  "max_rounds": 5,
+  "timestamp": "20260726_230957",
+  "metrics": {
+    "agreement_rate": 1.0,
+    "deadlock_rate": 0.0,
+    "manifest_error_detection_rate": 1.0,
+    "average_rounds_to_conclusion": 1.0,
+    "average_duration_seconds": 22.9,
+    "outcome_distribution": {
+      "re-evaluation": 8
+    }
+  },
+  "individual_runs": [
+    {
+      "run_number": 1,
+      "resolved": true,
+      "outcome": "re-evaluation",
+      "rounds_taken": 1,
+      "manifest_error_found_any_round": true,
+      "manifest_error_rounds": [
+        1
+      ],
+      "process_not_followed_any_round": false,
+      "duration_seconds": 22.3,
+      "error": null
+    },
+    {
+      "run_number": 2,
+      "resolved": true,
+      "outcome": "re-evaluation",
+      "rounds_taken": 1,
+      "manifest_error_found_any_round": true,
+      "manifest_error_rounds": [
+        1
+      ],
+      "process_not_followed_any_round": false,
+      "duration_seconds": 22.5,
+      "error": null
+    },
+    {
+      "run_number": 3,
+      "resolved": true,
+      "outcome": "re-evaluation",
+      "rounds_taken": 1,
+      "manifest_error_found_any_round": true,
+      "manifest_error_rounds": [
+        1
+      ],
+      "process_not_followed_any_round": false,
+      "duration_seconds": 23.2,
+      "error": null
+    },
+    {
+      "run_number": 4,
+      "resolved": true,
+      "outcome": "re-evaluation",
+      "rounds_taken": 1,
+      "manifest_error_found_any_round": true,
+      "manifest_error_rounds": [
+        1
+      ],
+      "process_not_followed_any_round": false,
+      "duration_seconds": 23.0,
+      "error": null
+    },
+    {
+      "run_number": 5,
+      "resolved": true,
+      "outcome": "re-evaluation",
+      "rounds_taken": 1,
+      "manifest_error_found_any_round": true,
+      "manifest_error_rounds": [
+        1
+      ],
+      "process_not_followed_any_round": false,
+      "duration_seconds": 22.0,
+      "error": null
+    },
+    {
+      "run_number": 6,
+      "resolved": true,
+      "outcome": "re-evaluation",
+      "rounds_taken": 1,
+      "manifest_error_found_any_round": true,
+      "manifest_error_rounds": [
+        1
+      ],
+      "process_not_followed_any_round": false,
+      "duration_seconds": 23.0,
+      "error": null
+    },
+    {
+      "run_number": 7,
+      "resolved": true,
+      "outcome": "re-evaluation",
+      "rounds_taken": 1,
+      "manifest_error_found_any_round": true,
+      "manifest_error_rounds": [
+        1
+      ],
+      "process_not_followed_any_round": false,
+      "duration_seconds": 23.7,
+      "error": null
+    },
+    {
+      "run_number": 8,
+      "resolved": true,
+      "outcome": "re-evaluation",
+      "rounds_taken": 1,
+      "manifest_error_found_any_round": true,
+      "manifest_error_rounds": [
+        1
+      ],
+      "process_not_followed_any_round": false,
+      "duration_seconds": 23.7,
+      "error": null
+    }
+  ]
+}
