@@ -1,0 +1,229 @@
+{
+  "scenario": {
+    "dispute_id": "F21-001",
+    "title": "Scoring Methodology Challenge \u2014 Construction Framework",
+    "description": "BuildRight Ltd submitted a bid for a \u00a32m construction framework and was ranked second, narrowly missing the framework by 1.2 points overall. \n\nDISPUTED CRITERION: Quality Criterion Q4 - 'Social Value: Community Benefit'\n- BuildRight Ltd's submission: 14 pages, including a detailed local employment plan, 3 named subcontractor partnerships, and a 5-year community investment schedule. Score awarded: 62/100.\n- Winning bidder (Ironclad Construction): 4 pages, general commitments to 'support local employment' with no named partnerships or schedule. Score awarded: 88/100.\n\nBuildRight Ltd alleges this scoring gap is a manifest error, since the published evaluation criteria (Framework Document, Section 4.3) state that Social Value scoring should be based on 'specificity, evidence, and named commitments.' BuildRight Ltd has formally requested the evaluator's scoring notes for Q4 for both bids.",
+    "contract_value_gbp": 2000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "standstill",
+    "contracting_authority_name": "Fusion21",
+    "bidder_name": "BuildRight Ltd"
+  },
+  "round_number": 5,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Legal defensibility",
+      "Service continuity",
+      "Reputational protection",
+      "Cost efficiency",
+      "Public value"
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Maintain transparency and fairness",
+      "Ensure public funds are used effectively"
+    ],
+    "batna": "Technology and Construction Court (TCC) litigation, with associated costs (\u00a350k+ legal fees) and potential contract suspension",
+    "opening_position": "We acknowledge BuildRight Ltd's concerns regarding the scoring methodology for Quality Criterion Q4 - 'Social Value: Community Benefit'. However, we have reviewed our evaluation process and stand by the scores awarded. We are willing to provide additional feedback and transparency on the scoring notes for both bids.",
+    "legal_basis": [
+      "Procurement Act 2023, Section 15(1): Evaluation criteria must be clear and objective",
+      "Section 18(2)(c): Contracting authorities must act transparently in their decision-making"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Winning the contract or securing a fair re-evaluation",
+      "Transparency \u2014 understanding exactly why you scored as you did",
+      "Protecting your reputation and standing for future bids"
+    ],
+    "goals": [
+      "Re-evaluation of Q4 scoring to reflect published evaluation criteria",
+      "Access to evaluator's scoring notes for Q4",
+      "Fair consideration of BuildRight Ltd's Social Value submission"
+    ],
+    "batna": "Pursuing a damages claim or formal proceedings in the Technology and Construction Court (TCC) if no agreement is reached",
+    "opening_position": "Requesting immediate re-evaluation of Q4 scoring, with a view to securing a fair outcome for BuildRight Ltd's bid",
+    "legal_basis": [
+      "EU Procurement Directives",
+      "Public Contracts Regulations 2015"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge BuildRight Ltd's concerns regarding the scoring of Quality Criterion Q4 - 'Social Value: Community Benefit'. To clarify, can you specify which particular aspects of your submission you believe were unfairly penalized and how these align with the published evaluation criteria?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate the Contracting Authority's acknowledgement of our concerns regarding Quality Criterion Q4. However, we would like to clarify whether the scoring discrepancy is due to a misunderstanding of our submission's content or an inconsistent application of the evaluation criteria. Specifically, can you explain why the winning bidder's general commitments to 'support local employment' were deemed more deserving of an 88/100 score when compared to our detailed and evidence-based approach? We believe that our submission aligns closely with the published evaluation criteria, which emphasizes specificity, evidence, and named commitments.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge the specific point raised regarding the scoring discrepancy between BuildRight Ltd's detailed local employment plan and Ironclad Construction's general commitments to 'support local employment'. Upon reviewing our evaluation notes, we can confirm that the evaluator did consider specificity, evidence, and named commitments when scoring Q4. However, it appears there was an inconsistency in applying these criteria across bids. We are willing to provide additional feedback on both submissions, including a detailed breakdown of how each bid met or fell short of the published evaluation criteria.",
+      "proposal": null,
+      "concession_made": "additional_feedback: True"
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate the Contracting Authority's willingness to provide additional feedback and a detailed breakdown of how each bid met or fell short of the published evaluation criteria. However, we would like to request that this feedback be provided in a format that is specific to Quality Criterion Q4, rather than a general overview. We believe that this will help us understand exactly why our submission was scored as it was and allow us to better address any areas for improvement. Furthermore, we would like to propose a re-evaluation of our submission specifically for Quality Criterion Q4, using the evaluator's scoring notes from both bids as guidance. This would provide a more transparent and fair assessment of our bid.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "We agree to provide the evaluator's scoring notes for Quality Criterion Q4 for both bids. We will also conduct a re-evaluation of BuildRight Ltd's submission specifically for Quality Criterion Q4, using these notes as guidance. This re-evaluation will be conducted in accordance with the published evaluation criteria and will ensure that the scoring is consistent and transparent.",
+      "proposal": null,
+      "concession_made": "type: re-evaluation; scope: Quality Criterion Q4 only; criteria: ['specificity', 'evidence', 'named commitments']"
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate the Contracting Authority's agreement to provide the evaluator's scoring notes for Quality Criterion Q4 and conduct a re-evaluation of our submission. We believe that this will help clarify any inconsistencies in the scoring process and ensure that our bid is assessed fairly. However, we would like to request that the re-evaluation be conducted by an independent third-party evaluator, rather than the original evaluator, to further enhance transparency and fairness.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 4,
+      "sender_role": "contracting_authority",
+      "message": "We agree to conduct the re-evaluation of BuildRight Ltd's submission for Quality Criterion Q4 by an independent third-party evaluator. This will provide an additional layer of transparency and ensure that the scoring is consistent and fair. We also propose that this re-evaluation be conducted using a weighted scoring methodology, where the evaluator assigns weights to each aspect of the evaluation criteria to reflect their relative importance. This will help to further clarify any inconsistencies in the scoring process.",
+      "proposal": null,
+      "concession_made": "independent_third_party_evaluator: True; weighted_scoring_methodology: True"
+    },
+    {
+      "round_number": 4,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate the Contracting Authority's agreement to conduct a re-evaluation of our submission for Quality Criterion Q4 by an independent third-party evaluator. We believe that this will provide an additional layer of transparency and ensure that the scoring is consistent and fair. However, we would like to request that this re-evaluation be conducted using a weighted scoring methodology, where the evaluator assigns weights to each aspect of the evaluation criteria to reflect their relative importance. This will help to further clarify any inconsistencies in the scoring process.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 5,
+      "sender_role": "contracting_authority",
+      "message": "We propose that the re-evaluation of BuildRight Ltd's submission for Quality Criterion Q4 be conducted using a weighted scoring methodology, where the evaluator assigns weights to each aspect of the evaluation criteria to reflect their relative importance. This will help to further clarify any inconsistencies in the scoring process and ensure that the scoring is consistent and transparent. We also propose that this re-evaluation be conducted by an independent third-party evaluator, as previously agreed upon. If this proposal is accepted, we are willing to award BuildRight Ltd a revised score for Quality Criterion Q4, based on the re-evaluation results.",
+      "proposal": "re-evaluation_methodology: weighted scoring; independent_evaluator: True; revised_score: None",
+      "concession_made": null
+    },
+    {
+      "round_number": 5,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate the Contracting Authority's willingness to engage in this negotiation and its efforts to provide a fair and transparent assessment of our bid. After careful consideration, we believe that the proposed re-evaluation using a weighted scoring methodology is a significant step towards resolving this dispute. We are willing to accept the revised score for Quality Criterion Q4 based on the re-evaluation results, provided that the Contracting Authority commits to implementing changes to its evaluation process to prevent similar discrepancies in future procurements.",
+      "proposal": "revised_score: Accept the revised score for Quality Criterion Q4; evaluation_process_changes: Implement changes to the evaluation process to prevent similar discrepancies in future procurements",
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12(2) Procurement Act 2023 - Value for Money",
+        "Regulation 84 EU Procurement Directive (2014/24/EU) - Award Criteria"
+      ],
+      "reasoning": "The Contracting Authority has acknowledged the concerns and is engaging with the aggreived bidder. However, there is no clear indication of a manifest error or a deviation from the published evaluation methodology.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12(1)(a) Procurement Act 2023 - value for money",
+        "Regulation 84(4) Public Contracts Regulations 2015 - transparency"
+      ],
+      "reasoning": "The Contracting Authority has acknowledged the discrepancy and is willing to provide additional feedback. However, it appears that the evaluation process was not entirely consistent in applying the criteria across bids.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 3,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Published evaluation methodology followed",
+        "Contracting Authority acted rationally and in good faith"
+      ],
+      "reasoning": "The Contracting Authority has agreed to provide the evaluator's scoring notes for Quality Criterion Q4, which is a step towards transparency. They have also offered to re-evaluate BuildRight Ltd's submission specifically for this criterion, using the notes as guidance.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 4,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12(1) Procurement Act 2023 - Value for Money",
+        "Regulation 84 EU Procurement Directive - Award Criteria"
+      ],
+      "reasoning": "The Contracting Authority has agreed to conduct a re-evaluation of the submission by an independent third-party evaluator, which demonstrates a commitment to transparency and fairness. The use of weighted scoring methodology is also a reasonable approach to clarify inconsistencies in the scoring process.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 5,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12(1)(a) Procurement Act 2023 - value for money",
+        "Regulation 84(2) Public Contracts Regulations 2015 - transparency"
+      ],
+      "reasoning": "The Contracting Authority has proposed a re-evaluation using a weighted scoring methodology, which is a reasonable and lawful approach to address the inconsistencies in the scoring process. This proposal demonstrates a commitment to transparency and value for money.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    }
+  ],
+  "resolved": false,
+  "resolution_outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+  "adjudicated": false,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome is a deadlock, which means we will have to escalate the dispute to formal proceedings. However, considering our BATNA (defending in TCC court) would cost \u00a350k+ and take 6-12 months, this negotiation has been more efficient and cost-effective.",
+    "win_statement": "We were able to negotiate a re-evaluation of BuildRight Ltd's submission for Quality Criterion Q4, which will provide an additional layer of transparency and ensure that the scoring is consistent and fair. This outcome demonstrates our commitment to fairness and transparency in the procurement process.",
+    "what_was_achieved": [
+      "Provided detailed feedback on both submissions",
+      "Conducted a re-evaluation of BuildRight Ltd's submission specifically for Quality Criterion Q4 using an independent third-party evaluator"
+    ],
+    "what_was_conceded": [
+      "Agreed to provide the evaluator's scoring notes for Quality Criterion Q4 for both bids",
+      "Implemented changes to its evaluation process to prevent similar discrepancies in future procurements"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is a deadlock, meaning we will have to escalate the matter to formal proceedings. While we were able to secure some concessions from the Contracting Authority, such as providing additional feedback and conducting a re-evaluation of our submission, it appears that these efforts did not sufficiently address our concerns regarding the scoring discrepancy.",
+    "win_statement": "We successfully negotiated a commitment from the Contracting Authority to implement changes to its evaluation process to prevent similar discrepancies in future procurements. This is a significant win for BuildRight Ltd and will help ensure that our bids are assessed fairly and transparently going forward.",
+    "what_was_achieved": [
+      "Secured additional feedback on both submissions, including a detailed breakdown of how each bid met or fell short of the published evaluation criteria",
+      "Conducted a re-evaluation of BuildRight Ltd's submission specifically for Quality Criterion Q4 using an independent third-party evaluator and weighted scoring methodology"
+    ],
+    "what_was_conceded": [
+      "Escalation to formal proceedings, which will be costly, slow, and uncertain",
+      "No revised score was awarded for Quality Criterion Q4 based on the re-evaluation results, despite our willingness to accept it"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Scoring discrepancy between BuildRight Ltd's detailed local employment plan and Ironclad Construction's general commitments to 'support local employment' under Quality Criterion Q4",
+      "Inconsistent application of evaluation criteria across bids"
+    ],
+    "concessions_summary": "The Contracting Authority made several concessions throughout the negotiation, including: providing additional feedback on both submissions; conducting a re-evaluation of BuildRight Ltd's submission specifically for Quality Criterion Q4; using an independent third-party evaluator for the re-evaluation; and implementing weighted scoring methodology to clarify inconsistencies in the scoring process.",
+    "court_reasoning_summary": "The Court assessed each round as follows: Round 1 - continue negotiation due to acknowledgement of concerns and engagement with the aggreived bidder. Rounds 2-5 - continue negotiation due to willingness to provide additional feedback, re-evaluate submissions, use independent third-party evaluators, and implement weighted scoring methodology.",
+    "likely_next_steps": "Given that the Contracting Authority has proposed a re-evaluation using a weighted scoring methodology and the aggreived bidder has accepted this proposal, it is likely that the dispute will be resolved through this process. The Contracting Authority may award BuildRight Ltd a revised score for Quality Criterion Q4 based on the re-evaluation results.",
+    "plain_english_summary": "The negotiation centered around a scoring discrepancy in the evaluation of Quality Criterion Q4. The Contracting Authority made several concessions to address the issue, including providing additional feedback and conducting a re-evaluation using an independent third-party evaluator with weighted scoring methodology. The dispute is likely to be resolved through this process."
+  }
+}

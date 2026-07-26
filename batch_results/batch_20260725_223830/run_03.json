@@ -1,0 +1,125 @@
+{
+  "scenario": {
+    "dispute_id": "F21-001",
+    "title": "Scoring Methodology Challenge \u2014 Construction Framework",
+    "description": "BuildRight Ltd submitted a bid for a \u00a32m construction framework and was ranked second, narrowly missing the framework by 1.2 points overall. \n\nDISPUTED CRITERION: Quality Criterion Q4 - 'Social Value: Community Benefit'\n- BuildRight Ltd's submission: 14 pages, including a detailed local employment plan, 3 named subcontractor partnerships, and a 5-year community investment schedule. Score awarded: 62/100.\n- Winning bidder (Ironclad Construction): 4 pages, general commitments to 'support local employment' with no named partnerships or schedule. Score awarded: 88/100.\n\nBuildRight Ltd alleges this scoring gap is a manifest error, since the published evaluation criteria (Framework Document, Section 4.3) state that Social Value scoring should be based on 'specificity, evidence, and named commitments.' BuildRight Ltd has formally requested the evaluator's scoring notes for Q4 for both bids.",
+    "contract_value_gbp": 2000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "standstill",
+    "contracting_authority_name": "Fusion21",
+    "bidder_name": "BuildRight Ltd"
+  },
+  "round_number": 1,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Legal defensibility",
+      "Service continuity",
+      "Reputational protection",
+      "Cost efficiency",
+      "Public value"
+    ],
+    "goals": [
+      "Defend the procurement decision within the law",
+      "Ensure contract award proceeds without undue delay",
+      "Maintain Fusion21's standing as a trusted contracting authority"
+    ],
+    "batna": "Defending the procurement decision in the Technology and Construction Court (TCC) at an estimated cost of \u00a350k+ in legal fees, with potential for 6-12 months' delay",
+    "opening_position": "Fusion21 stands by its evaluation process and scoring methodology as outlined in the Framework Document. We will provide BuildRight Ltd with access to evaluator's scoring notes for Q4, subject to redaction of commercially sensitive information.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Regulation 86(1) - Standstill Period"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Winning the contract or securing a fair re-evaluation",
+      "Transparency \u2014 understanding exactly why you scored as you did",
+      "Protecting your reputation and standing for future bids"
+    ],
+    "goals": [
+      "Re-evaluate Q4 scoring to reflect correct application of Framework Document, Section 4.3",
+      "Request evaluator's scoring notes for Q4 for both bids",
+      "Fair consideration of BuildRight Ltd's detailed Social Value submission"
+    ],
+    "batna": "Pursue damages claim or formal proceedings in the Technology and Construction Court (TCC) if no agreement is reached",
+    "opening_position": "We believe a manifest error occurred in scoring Criterion Q4, as our submission met the published evaluation criteria while the winning bidder's did not. We request re-evaluation to ensure fairness.",
+    "legal_basis": [
+      "Framework Document, Section 4.3",
+      "EU Procurement Directive (2014/24/EU), Article 84"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge BuildRight Ltd's concerns regarding the scoring of Criterion Q4. However, we must clarify that the published evaluation criteria (Framework Document, Section 4.3) do not explicitly state that Social Value scoring should be based solely on 'specificity, evidence, and named commitments.' While these factors are indeed considered, other aspects such as 'commitment to social value' and 'potential for community benefit' are also taken into account. We would like to request clarification from BuildRight Ltd regarding their interpretation of the evaluation criteria.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate the Contracting Authority's acknowledgement of our concerns regarding Criterion Q4. However, we must clarify that the published evaluation criteria (Framework Document, Section 4.3) explicitly state that Social Value scoring should be based solely on 'specificity, evidence, and named commitments.' We would like to request clarification on how other aspects such as 'commitment to social value' and 'potential for community benefit' were taken into account in the evaluation of our bid. Can you provide more detail on these additional factors and how they influenced the scoring?",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "s12(2) Procurement Act 2023 - published evaluation criteria must be followed"
+      ],
+      "reasoning": "The Contracting Authority's scoring methodology for Criterion Q4 deviates from the published evaluation criteria, which explicitly state that Social Value scoring should be based solely on 'specificity, evidence, and named commitments.' The inclusion of other aspects such as 'commitment to social value' and 'potential for community benefit' in the evaluation process constitutes a manifest error.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "This outcome is a compromise that avoids the significant costs and risks associated with defending in TCC court. While we did not achieve our desired outcome, we were able to negotiate a re-evaluation of Criterion Q4 without conceding on the fundamental evaluation criteria.",
+    "win_statement": "We successfully negotiated a re-evaluation of Criterion Q4, which has resulted in a revised score for BuildRight Ltd's bid. Although this does not change the overall ranking, it provides a more accurate reflection of their submission.",
+    "what_was_achieved": [
+      "A re-evaluation of Criterion Q4 was agreed upon",
+      "BuildRight Ltd's revised score for Criterion Q4 is now 75/100"
+    ],
+    "what_was_conceded": [
+      "The Contracting Authority did not achieve its desired outcome of confirming the original scores",
+      "The revised score for BuildRight Ltd's bid does not change their overall ranking"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is slightly better than pursuing damages or formal TCC proceedings, which would have been costly, slow, and uncertain. However, the re-evaluation did not result in a significant change to the original scores, and our bid still narrowly missed the framework.",
+    "win_statement": "We achieved a partial victory by having the Contracting Authority acknowledge our concerns regarding Criterion Q4 and agreeing to a re-evaluation. Although the re-evaluation did not alter the outcome significantly, it is a step towards transparency and accountability in the evaluation process.",
+    "what_was_achieved": [
+      "The Contracting Authority acknowledged our concerns and agreed to a re-evaluation of Criterion Q4",
+      "We obtained clarification on how other aspects were taken into account in the evaluation"
+    ],
+    "what_was_conceded": [
+      "Our bid still narrowly missed the framework, with only a slight adjustment to the scores",
+      "The Contracting Authority maintained that their scoring was reasonable and in line with the published evaluation criteria"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Scoring methodology for Criterion Q4",
+      "Interpretation of published evaluation criteria (Framework Document, Section 4.3)",
+      "Inclusion of additional factors in Social Value scoring"
+    ],
+    "concessions_summary": "Neither party made any concessions during the negotiation. The Contracting Authority acknowledged BuildRight Ltd's concerns but maintained that their scoring methodology was consistent with the Framework Document.",
+    "court_reasoning_summary": "The Court found a manifest error in the Contracting Authority's scoring methodology for Criterion Q4, as it deviated from the published evaluation criteria. This led to the recommendation of re-evaluation.",
+    "likely_next_steps": "Re-evaluation of BuildRight Ltd's bid will take place, with the Contracting Authority reassessing their scores based on the correct interpretation and application of the published evaluation criteria.",
+    "plain_english_summary": "The dispute centered around how the Contracting Authority scored one aspect of the bids. The Court agreed with the Aggrieved Bidder that the scoring was incorrect and recommended re-evaluation to ensure fairness."
+  }
+}
