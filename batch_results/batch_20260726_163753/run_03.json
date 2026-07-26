@@ -1,0 +1,227 @@
+{
+  "scenario": {
+    "dispute_id": "F21-002",
+    "title": "Mathematical Scoring Error \u2014 Facilities Management Contract",
+    "description": "GreenServe Ltd submitted a bid for a \u00a33.5m facilities management contract and was ranked third, narrowly missing the award by 0.4 points overall.\n\nDISPUTED ISSUE: Arithmetic error in the published scoring calculation.\n\nThe Framework Document (Section 5.1) states that the final score for each bidder is calculated as: (Quality Score x 0.6) + (Price Score x 0.4).\n\nGreenServe Ltd's individually published sub-scores were:\n- Quality Score: 85/100\n- Price Score: 78/100\n- Correct final score per the published formula: (85 x 0.6) + (78 x 0.4) = 51.0 + 31.2 = 82.2/100\n\nHowever, the final scorecard issued to GreenServe Ltd by Fusion21 shows a final score of 78.6/100 \u2014 a 3.6 point discrepancy from the correct arithmetic result. This 3.6 point gap is larger than the 0.4 point margin by which GreenServe Ltd missed the award.\n\nGreenServe Ltd has independently re-calculated the score using the published formula and the published sub-scores (both of which are publicly available in the tender documentation) and formally alleges a manifest arithmetic error in the final score calculation, requesting immediate correction and re-ranking.",
+    "contract_value_gbp": 3500000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "standstill",
+    "contracting_authority_name": "Fusion21",
+    "bidder_name": "GreenServe Ltd"
+  },
+  "round_number": 5,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Legal defensibility",
+      "Service continuity",
+      "Reputational protection",
+      "Cost efficiency",
+      "Public value"
+    ],
+    "goals": [
+      "To resolve the dispute through negotiation without compromising Fusion21's legal position or service delivery",
+      "To maintain transparency and fairness in the procurement process"
+    ],
+    "batna": "Defending the procurement decision in the Technology and Construction Court (TCC) if no agreement is reached",
+    "opening_position": "Fusion21 acknowledges GreenServe Ltd's concern regarding the final score calculation, but maintains that the discrepancy was due to an administrative error rather than a manifest arithmetic error. Fusion21 is willing to provide additional transparency and feedback on the scoring process.",
+    "legal_basis": [
+      "The Procurement Act 2023, Section 15: Evaluation of tenders",
+      "The Public Contracts Regulations 2015, Regulation 74: Standstill period"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Winning the contract or securing a fair re-evaluation",
+      "Transparency \u2014 understanding exactly why you scored as you did",
+      "Protecting your reputation and standing for future bids"
+    ],
+    "goals": [
+      "Corrected final score calculation, immediate re-ranking, and transparent feedback on scoring methodology"
+    ],
+    "batna": "Pursuing a damages claim or formal proceedings in the Technology and Construction Court (TCC) if no agreement is reached",
+    "opening_position": "Fusion21 must correct the arithmetic error, provide clear explanations for the discrepancy, and offer re-evaluation or re-ranking to ensure a fair outcome",
+    "legal_basis": [
+      "Framework Document Section 5.1",
+      "EU Procurement Directives (2014/24/EU)"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge receipt of GreenServe Ltd's dispute and appreciate the opportunity to engage in this negotiation. I would like to clarify whether GreenServe Ltd has identified any specific instance where the arithmetic error occurred, such as a miscalculation during the scoring process or an incorrect application of the formula. This will help me understand the nature of the alleged error and inform our discussion.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your clarification request. However, I must emphasize that the discrepancy is not about a 'miscalculation' but an arithmetic error in the final score calculation as published by Fusion21. The Framework Document clearly outlines the formula for calculating the final score, and we have re-calculated it independently using the same sub-scores provided to us. Our question is: Can you explain why your system produced a 3.6 point discrepancy from the correct result, and what steps you took to verify the accuracy of the final scores before issuing them to bidders?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "I understand GreenServe Ltd's concerns regarding the arithmetic error in the final score calculation. Upon reviewing the Framework Document and the published sub-scores, I can confirm that the correct formula was applied. However, I would like to request access to the independently re-calculated scores provided by GreenServe Ltd, as this will allow me to better understand their methodology and assess whether there is a discrepancy in the calculations.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate Fusion21's willingness to investigate the discrepancy. However, I must reiterate that an arithmetic error of 3.6 points is not a minor miscalculation but a significant deviation from the correct result. The Framework Document clearly outlines the formula for calculating the final score, and we have independently re-calculated it using the same sub-scores provided to us. I would like to request clarification on why Fusion21's system produced such a large discrepancy and what steps were taken to verify the accuracy of the final scores before issuing them to bidders. Furthermore, I propose that we conduct an independent review of the scoring process and provide transparent feedback to all bidders involved in this contract.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge the significant discrepancy in the final score calculation and appreciate GreenServe Ltd's independent re-calculation. I must clarify that Fusion21's system does not produce scores directly; instead, it relies on manual calculations performed by our evaluation team. To address the issue, I propose an immediate review of the scoring process, led by a neutral third-party expert, to ensure transparency and accuracy. This review will focus on verifying the arithmetic calculation and provide feedback to all bidders involved in this contract.",
+      "proposal": null,
+      "concession_made": "additional_transparency: True; independent_review: True"
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate Fusion21's willingness to investigate the discrepancy and propose an independent review of the scoring process. However, I must emphasize that a review led by a neutral third-party expert is necessary to ensure transparency and accuracy. Furthermore, I would like to request that this review be conducted as soon as possible, ideally within the next 7-10 business days, to minimize the impact on the contract award process.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 4,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge the urgency of resolving this dispute and appreciate GreenServe Ltd's request for an expedited review. To address their concerns, I propose that we conduct a thorough investigation into the scoring process, led by a neutral third-party expert, within the next 7-10 business days as requested. This review will focus on verifying the arithmetic calculation and provide feedback to all bidders involved in this contract. Furthermore, I am willing to offer additional transparency by providing GreenServe Ltd with access to our evaluation team's working papers and calculations used during the scoring process.",
+      "proposal": null,
+      "concession_made": "additional_transparency: True"
+    },
+    {
+      "round_number": 4,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate Fusion21's willingness to offer additional transparency by providing us with access to their evaluation team's working papers and calculations. However, I must reiterate that an independent review of the scoring process is still necessary to ensure transparency and accuracy. Furthermore, I would like to request clarification on why no action was taken to correct the arithmetic error in the final score calculation before issuing it to bidders. In light of this new information, I propose that we narrow the disagreement by focusing solely on the independent review of the scoring process, led by a neutral third-party expert, and provide transparent feedback to all bidders involved in this contract.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 5,
+      "sender_role": "contracting_authority",
+      "message": "I am willing to offer an independent review of the scoring process, led by a neutral third-party expert, within the next 7-10 business days as requested. This review will focus on verifying the arithmetic calculation and provide feedback to all bidders involved in this contract. Furthermore, I acknowledge that the discrepancy in the final score calculation is significant and may have impacted the outcome of the procurement process. To address GreenServe Ltd's concerns, I propose that we re-run the scoring process using the correct formula and publish the revised scores for all bidders.",
+      "proposal": "review_leader: Independent Review Panel; review_duration: 7-10 business days; re-scoring_process: Re-run the scoring process using the correct formula",
+      "concession_made": null
+    },
+    {
+      "round_number": 5,
+      "sender_role": "aggrieved_bidder",
+      "message": "I am pleased to see that Fusion21 is willing to re-run the scoring process using the correct formula and publish the revised scores for all bidders. This is a significant step towards resolving this dispute and ensuring transparency in the procurement process. I propose that we accept this proposal and proceed with the re-scoring process, led by a neutral third-party expert, as soon as possible. In addition, I would like to request that Fusion21 provide us with access to their evaluation team's working papers and calculations used during the scoring process, as previously agreed.",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12(1) Procurement Act 2023: Value for Money",
+        "Regulation 84, Public Contracts Regulations 2015: Award of Contract"
+      ],
+      "reasoning": "The Contracting Authority has acknowledged receipt of the dispute and is engaging in discussion. However, there is no clear indication that a manifest error occurred or that the process was not followed.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12(1) Procurement Act 2023 - Value for Money",
+        "Regulation 84 EU Procurement Directive (2014/24/EU) - Award Criteria"
+      ],
+      "reasoning": "The Contracting Authority has acknowledged the arithmetic error and is willing to investigate further. However, there is no clear indication that a manifest error occurred or that the published evaluation methodology was not followed.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 3,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12(1)(a) - value for money",
+        "s12(1)(b) - public benefit"
+      ],
+      "reasoning": "The Contracting Authority has acknowledged the discrepancy and proposed an immediate review of the scoring process, which demonstrates a commitment to transparency and accuracy. This action aligns with the principles of s12 of the Procurement Act 2023.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 4,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12(1)(a) - value for money",
+        "s12(1)(c) - transparency"
+      ],
+      "reasoning": "The Contracting Authority has proposed a thorough investigation into the scoring process, led by a neutral third-party expert, which addresses GreenServe Ltd's concerns. This demonstrates a commitment to transparency and accuracy.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 5,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12(1) Procurement Act 2023 - Value for Money",
+        "Regulation 86 EU Procurement Directive (2014/24/EU) - Award Criteria"
+      ],
+      "reasoning": "The Contracting Authority has acknowledged the discrepancy in the final score calculation and is willing to re-run the scoring process using the correct formula. This demonstrates a willingness to rectify the issue and ensure transparency.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    }
+  ],
+  "resolved": false,
+  "resolution_outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+  "adjudicated": false,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome is a deadlock, which means we will have to escalate the dispute to formal proceedings. This was not our preferred outcome, but it could have been worse if we had not been able to negotiate some concessions from GreenServe Ltd.",
+    "win_statement": "We were able to avoid having to defend in TCC court, which would have cost \u00a350k+ and taken 6-12 months. We also managed to limit the scope of the dispute by focusing on an independent review of the scoring process, rather than a full re-run of the procurement.",
+    "what_was_achieved": [
+      "Agreed to an independent review of the scoring process, led by a neutral third-party expert",
+      "Offered additional transparency by providing GreenServe Ltd with access to our evaluation team's working papers and calculations used during the scoring process"
+    ],
+    "what_was_conceded": [
+      "Agreed to re-run the scoring process using the correct formula and publish the revised scores for all bidders",
+      "Limited scope of dispute to an independent review, rather than a full re-run of the procurement"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "Unfavorable. We were unable to achieve a resolution that would have changed the outcome of the procurement process and secured the contract for GreenServe Ltd.",
+    "win_statement": "We successfully negotiated an independent review of the scoring process, led by a neutral third-party expert, which will verify the arithmetic calculation and provide feedback to all bidders involved in this contract. Additionally, Fusion21 has agreed to re-run the scoring process using the correct formula and publish the revised scores for all bidders.",
+    "what_was_achieved": [
+      "Independent review of the scoring process led by a neutral third-party expert",
+      "Re-scoring process using the correct formula and publication of revised scores for all bidders"
+    ],
+    "what_was_conceded": [
+      "No change to the contract award outcome in favor of GreenServe Ltd",
+      "Potential reputational damage to Fusion21 due to the arithmetic error in the final score calculation"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Arithmetic error in the final score calculation",
+      "Lack of transparency in the scoring process",
+      "Need for an independent review of the scoring process"
+    ],
+    "concessions_summary": "The Contracting Authority made several concessions throughout the negotiation, including offering additional transparency by providing access to their evaluation team's working papers and calculations (Round 4), conducting a thorough investigation into the scoring process led by a neutral third-party expert (Rounds 3 and 4), and re-running the scoring process using the correct formula (Round 5).",
+    "court_reasoning_summary": "The Court assessed each round, concluding that the Contracting Authority followed the proper process throughout the negotiation. The Court also noted that there was no manifest error in the evaluation methodology or scores published by Fusion21. However, the Court recommended continuing the negotiation to resolve the dispute.",
+    "likely_next_steps": "Given the deadlock reached after Round 5, it is likely that the matter will proceed to formal proceedings, such as a judicial review or an appeal to a higher authority. The Contracting Authority may also be required to re-run the scoring process using the correct formula and publish revised scores for all bidders.",
+    "plain_english_summary": "The negotiation between the Contracting Authority and GreenServe Ltd focused on resolving a significant arithmetic error in the final score calculation of a \u00a33,500,000 facilities management contract. Despite concessions made by the Contracting Authority, including an independent review of the scoring process and re-running the scoring process using the correct formula, the parties were unable to reach agreement. The matter is now likely to proceed to formal proceedings."
+  }
+}

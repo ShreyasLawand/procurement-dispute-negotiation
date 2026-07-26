@@ -1,0 +1,231 @@
+{
+  "scenario": {
+    "dispute_id": "F21-002",
+    "title": "Mathematical Scoring Error \u2014 Facilities Management Contract",
+    "description": "GreenServe Ltd submitted a bid for a \u00a33.5m facilities management contract and was ranked third, narrowly missing the award by 0.4 points overall.\n\nDISPUTED ISSUE: Arithmetic error in the published scoring calculation.\n\nThe Framework Document (Section 5.1) states that the final score for each bidder is calculated as: (Quality Score x 0.6) + (Price Score x 0.4).\n\nGreenServe Ltd's individually published sub-scores were:\n- Quality Score: 85/100\n- Price Score: 78/100\n- Correct final score per the published formula: (85 x 0.6) + (78 x 0.4) = 51.0 + 31.2 = 82.2/100\n\nHowever, the final scorecard issued to GreenServe Ltd by Fusion21 shows a final score of 78.6/100 \u2014 a 3.6 point discrepancy from the correct arithmetic result. This 3.6 point gap is larger than the 0.4 point margin by which GreenServe Ltd missed the award.\n\nGreenServe Ltd has independently re-calculated the score using the published formula and the published sub-scores (both of which are publicly available in the tender documentation) and formally alleges a manifest arithmetic error in the final score calculation, requesting immediate correction and re-ranking.",
+    "contract_value_gbp": 3500000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "standstill",
+    "contracting_authority_name": "Fusion21",
+    "bidder_name": "GreenServe Ltd"
+  },
+  "round_number": 5,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Legal defensibility \u2014 the decision must withstand legal scrutiny",
+      "Service continuity \u2014 the procurement must proceed without undue delay",
+      "Reputational protection \u2014 Fusion21's standing as a trusted contracting authority",
+      "Cost efficiency \u2014 avoiding expensive litigation and re-runs",
+      "Public value \u2014 ensuring the best outcome for the public purse"
+    ],
+    "goals": [
+      "To resolve the dispute through negotiation, if possible",
+      "To maintain transparency and fairness throughout the process"
+    ],
+    "batna": "Defending the procurement decision in the Technology and Construction Court (TCC) at a cost of \u00a350k+ in legal fees and potential contract suspension",
+    "opening_position": "Fusion21 acknowledges receipt of GreenServe Ltd's scoring challenge, but maintains that the final scorecard issued was an honest error. We are willing to re-calculate the scores using the published formula and provide additional feedback.",
+    "legal_basis": [
+      "Section 15(1) Procurement Act 2023 \u2014 duty to act lawfully",
+      "Regulation 86(1) Public Contracts Regulations 2015 \u2014 duty to act fairly"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Winning the contract or securing a fair re-evaluation",
+      "Transparency \u2014 understanding exactly why we scored as we did",
+      "Protecting our reputation and standing for future bids"
+    ],
+    "goals": [
+      "Correct the manifest arithmetic error in the final score calculation",
+      "Re-evaluate GreenServe Ltd's bid with accurate scores",
+      "Ensure transparency and fairness throughout the process"
+    ],
+    "batna": "Pursuing a damages claim or formal proceedings in the Technology and Construction Court (TCC) if no agreement is reached",
+    "opening_position": "We request immediate correction of the final score calculation, re-ranking, and a thorough investigation into the source of the arithmetic error.",
+    "legal_basis": [
+      "Framework Document Section 5.1",
+      "EU Procurement Directive Article 42(3)",
+      "Public Contract Regulations 2015 Regulation 87"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "GreenServe Ltd, I acknowledge receipt of your dispute and understand the alleged arithmetic error in the final score calculation. To clarify, can you confirm that you have recalculated the scores using the publicly available tender documentation and the published formula, and if so, please provide a detailed breakdown of these calculations to support your claim?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate the Contracting Authority's prompt acknowledgment of our dispute and willingness to clarify the scoring calculation. However, I must express concern that the question seems to be asking us to re-verify a calculation we've already independently recalculated multiple times. Can you confirm whether Fusion21 has also recalculated the scores using the published formula and sub-scores, or is there another explanation for the discrepancy? Furthermore, can you provide more information on what specific steps will be taken to rectify this error and ensure that our bid is fairly re-evaluated?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "I appreciate your clarification on the recalculated scores. To address your concerns, I can confirm that Fusion21 has also re-calculated the scores using the published formula and sub-scores. Upon reviewing our internal records, we found an isolated error in the final score calculation, which was not a result of any manipulation or bias. We acknowledge that this discrepancy is significant and could have impacted the outcome. To rectify this situation, I propose providing additional feedback to all bidders on their scores, including the recalculated values, to ensure transparency and fairness.",
+      "proposal": null,
+      "concession_made": "type: transparency; description: Fusion21 will provide additional feedback to all bidders on their recalculated scores"
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "While we appreciate the Contracting Authority's acknowledgment of the arithmetic error and willingness to provide additional feedback on sub-scores, we still have concerns about the transparency and fairness of the evaluation process. We would like to request a more detailed explanation for the isolated error in the final score calculation, as well as confirmation that all bidders will receive an identical re-evaluation based on the corrected scores. Furthermore, we believe it is essential to clarify whether any other errors or discrepancies were identified during the review of internal records. To ensure fairness and prevent similar issues in the future, we propose a thorough review of the evaluation process and scoring methodology, including recommendations for improvements.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge the request for a thorough review of the evaluation process and scoring methodology. To address your concerns, we propose conducting an independent audit of our scoring procedures to identify any potential weaknesses or areas for improvement. This audit will be led by a third-party expert and will provide recommendations for enhancements to ensure the accuracy and fairness of our evaluation processes in the future.",
+      "proposal": null,
+      "concession_made": "action: conduct an independent audit; scope: evaluation process and scoring methodology; lead: third-party expert"
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate the Contracting Authority's willingness to conduct an independent audit of their scoring procedures. However, we would like to request that this audit be expedited and completed within a specific timeframe, say 6-8 weeks, to ensure that any necessary changes are implemented before the next tender opportunity. Furthermore, we propose that the audit report be made publicly available to maintain transparency and accountability in the evaluation process. Additionally, we suggest that the Contracting Authority provide regular updates on the progress of the audit and any resulting recommendations for improvements.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 4,
+      "sender_role": "contracting_authority",
+      "message": "We agree to expedite the independent audit of our scoring procedures and commit to completing it within 6-8 weeks as requested. We also confirm that the audit report will be made publicly available upon completion to maintain transparency and accountability in the evaluation process. Furthermore, we propose providing regular updates on the progress of the audit and any resulting recommendations for improvements.",
+      "proposal": null,
+      "concession_made": "audit_expedition: True; public_report: True; regular_updates: True"
+    },
+    {
+      "round_number": 4,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate the Contracting Authority's agreement to expedite the independent audit of their scoring procedures. However, we would like to request that the audit report be made publicly available not only upon completion but also during the review process to ensure transparency and accountability in real-time. This will enable all bidders, including ourselves, to monitor progress and provide feedback on any emerging issues or concerns. Furthermore, we suggest that the Contracting Authority commit to implementing any recommended changes within a specific timeframe, say 3-4 weeks after the audit report is finalized.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 5,
+      "sender_role": "contracting_authority",
+      "message": "We propose that the Contracting Authority immediately correct the final score calculation and re-rank all bidders based on the corrected scores. This will ensure transparency and fairness in the evaluation process. Furthermore, we suggest that the Contracting Authority provide a detailed breakdown of the recalculated scores to all bidders, including the sub-scores and the final score per the published formula.",
+      "proposal": "correct_final_score_calculation: True; re_rank_all_bidders: True; provide_breakdown_of_rec_calculated_scores: True",
+      "concession_made": null
+    },
+    {
+      "round_number": 5,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate the Contracting Authority's proposal to correct the final score calculation and re-rank all bidders based on the corrected scores. This is a significant step towards transparency and fairness in the evaluation process. However, we still have concerns about the isolated error in the final score calculation and its impact on our bid. We would like to request that the Contracting Authority provide a detailed explanation for this error and confirm that all bidders will receive an identical re-evaluation based on the corrected scores. Furthermore, we propose that the Contracting Authority commit to implementing any necessary changes to their scoring procedures within a specific timeframe, say 3-4 weeks after the audit report is finalized.",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12(1) Procurement Act 2023: Value for Money",
+        "Regulation 86 Public Contracts Regulations 2015: Award of Contract"
+      ],
+      "reasoning": "The Contracting Authority has acknowledged the dispute and is seeking clarification on the scoring calculation. This indicates a willingness to engage with the issue, but it does not necessarily imply a manifest error or a failure to follow process.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12(1)(a) - value for money",
+        "s12(1)(b) - public benefit"
+      ],
+      "reasoning": "The Contracting Authority has acknowledged the isolated error in the final score calculation and is willing to provide additional feedback on sub-scores. This indicates a willingness to rectify the situation and maintain transparency.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 3,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12(1)(a) - value for money",
+        "s12(1)(c) - transparency"
+      ],
+      "reasoning": "The Contracting Authority has proposed an independent audit of their scoring procedures, which is a reasonable step to address the concerns raised. This action demonstrates a willingness to ensure the accuracy and fairness of the evaluation process.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 4,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Transparency",
+        "Accountability"
+      ],
+      "reasoning": "The Contracting Authority has agreed to expedite the independent audit of their scoring procedures and commit to making the report publicly available upon completion. This demonstrates a commitment to transparency and accountability.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 5,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12(1) Procurement Act 2023: Value for Money",
+        "Regulation 84, Public Contracts Regulations 2015: Correctness of scoring"
+      ],
+      "reasoning": "The Contracting Authority has proposed to correct the final score calculation and re-rank all bidders based on the corrected scores. This indicates a willingness to follow the published evaluation methodology and address any errors in the process.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    }
+  ],
+  "resolved": false,
+  "resolution_outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+  "adjudicated": false,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiation outcome was acceptable and avoided the costs and risks associated with defending in TCC court (\u00a350k+ and 6-12 months). While we did not achieve a full win, we were able to address the disputed issue, correct the arithmetic error, and provide additional feedback to all bidders on their scores.",
+    "win_statement": "We successfully navigated a complex dispute, acknowledged the arithmetic error, and took steps to rectify it. We also committed to an independent audit of our scoring procedures, which will enhance transparency and fairness in our evaluation processes.",
+    "what_was_achieved": [
+      "Corrected the final score calculation and re-ranked all bidders based on corrected scores",
+      "Conducted an independent audit of scoring procedures to identify areas for improvement"
+    ],
+    "what_was_conceded": [
+      "Providing additional feedback to all bidders on their sub-scores, including recalculated values",
+      "Making the audit report publicly available upon completion and during review process"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The negotiation outcome is somewhat favourable relative to our BATNA. While we did not achieve a complete reversal of the original contract award, the Contracting Authority has agreed to correct the final score calculation and re-rank all bidders based on the corrected scores.",
+    "win_statement": "We successfully negotiated with Fusion21 to acknowledge an arithmetic error in the final score calculation, which led to a significant discrepancy in our bid's ranking. The Contracting Authority has committed to correcting this error, providing additional feedback to all bidders, and conducting an independent audit of their scoring procedures.",
+    "what_was_achieved": [
+      "Fusion21 acknowledged an arithmetic error in the final score calculation",
+      "Corrected scores will be used for re-ranking all bidders",
+      "Independent audit of Fusion21's scoring procedures will be conducted"
+    ],
+    "what_was_conceded": [
+      "We did not achieve a complete reversal of the original contract award",
+      "The negotiation process was protracted, reaching a deadlock after five rounds"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Mathematical Scoring Error",
+      "Transparency and Fairness of Evaluation Process",
+      "Independent Audit of Scoring Procedures"
+    ],
+    "concessions_summary": "The Contracting Authority made several concessions throughout the negotiation, including: (1) providing additional feedback to all bidders on their recalculated scores; (2) conducting an independent audit of their scoring procedures; (3) expediting the audit and committing to making the report publicly available upon completion; and (4) correcting the final score calculation and re-ranking all bidders based on the corrected scores.",
+    "court_reasoning_summary": "The Court assessed each round as follows: process followed, manifest error not established, and recommended continuing negotiation. The Court's reasoning was that the Contracting Authority demonstrated a willingness to engage with the issue, rectify the situation, and ensure transparency and accountability throughout the negotiation.",
+    "likely_next_steps": "Given the deadlock reached in the negotiation, the case will likely proceed to formal proceedings. The Aggrieved Bidder may seek judicial review of the Contracting Authority's decision-making process, while the Contracting Authority may defend its actions and decisions.",
+    "plain_english_summary": "The negotiation between the Contracting Authority (GreenServe Ltd) and the Aggrieved Bidder (Fusion21) centered on a mathematical scoring error in the evaluation of their bids for a \u00a33.5 million Facilities Management Contract. Despite concessions made by the Contracting Authority, including an independent audit of their scoring procedures, the parties were unable to reach agreement, leading to a deadlock and the likely progression to formal proceedings."
+  }
+}

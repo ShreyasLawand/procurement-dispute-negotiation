@@ -1,0 +1,120 @@
+{
+  "scenario_id": "F21-002",
+  "scenario_title": "Mathematical Scoring Error \u2014 Facilities Management Contract",
+  "n_runs_requested": 8,
+  "n_runs_successful": 8,
+  "n_runs_failed": 0,
+  "max_rounds": 5,
+  "timestamp": "20260726_163753",
+  "metrics": {
+    "agreement_rate": 0.625,
+    "deadlock_rate": 0.375,
+    "manifest_error_detection_rate": 0.625,
+    "average_rounds_to_conclusion": 2.88,
+    "average_duration_seconds": 38.1,
+    "outcome_distribution": {
+      "deadlock - max rounds reached, escalate to formal proceedings": 3,
+      "re-evaluation": 5
+    }
+  },
+  "individual_runs": [
+    {
+      "run_number": 1,
+      "resolved": false,
+      "outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+      "rounds_taken": 5,
+      "manifest_error_found_any_round": false,
+      "manifest_error_rounds": [],
+      "process_not_followed_any_round": false,
+      "duration_seconds": 58.2,
+      "error": null
+    },
+    {
+      "run_number": 2,
+      "resolved": true,
+      "outcome": "re-evaluation",
+      "rounds_taken": 1,
+      "manifest_error_found_any_round": true,
+      "manifest_error_rounds": [
+        1
+      ],
+      "process_not_followed_any_round": true,
+      "duration_seconds": 22.7,
+      "error": null
+    },
+    {
+      "run_number": 3,
+      "resolved": false,
+      "outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+      "rounds_taken": 5,
+      "manifest_error_found_any_round": false,
+      "manifest_error_rounds": [],
+      "process_not_followed_any_round": false,
+      "duration_seconds": 54.0,
+      "error": null
+    },
+    {
+      "run_number": 4,
+      "resolved": true,
+      "outcome": "re-evaluation",
+      "rounds_taken": 2,
+      "manifest_error_found_any_round": true,
+      "manifest_error_rounds": [
+        2
+      ],
+      "process_not_followed_any_round": false,
+      "duration_seconds": 31.5,
+      "error": null
+    },
+    {
+      "run_number": 5,
+      "resolved": true,
+      "outcome": "re-evaluation",
+      "rounds_taken": 2,
+      "manifest_error_found_any_round": true,
+      "manifest_error_rounds": [
+        2
+      ],
+      "process_not_followed_any_round": false,
+      "duration_seconds": 29.4,
+      "error": null
+    },
+    {
+      "run_number": 6,
+      "resolved": true,
+      "outcome": "re-evaluation",
+      "rounds_taken": 1,
+      "manifest_error_found_any_round": true,
+      "manifest_error_rounds": [
+        1
+      ],
+      "process_not_followed_any_round": true,
+      "duration_seconds": 21.4,
+      "error": null
+    },
+    {
+      "run_number": 7,
+      "resolved": false,
+      "outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+      "rounds_taken": 5,
+      "manifest_error_found_any_round": false,
+      "manifest_error_rounds": [],
+      "process_not_followed_any_round": false,
+      "duration_seconds": 57.9,
+      "error": null
+    },
+    {
+      "run_number": 8,
+      "resolved": true,
+      "outcome": "re-evaluation",
+      "rounds_taken": 2,
+      "manifest_error_found_any_round": true,
+      "manifest_error_rounds": [
+        2
+      ],
+      "process_not_followed_any_round": false,
+      "duration_seconds": 29.6,
+      "error": null
+    }
+  ]
+}

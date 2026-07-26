@@ -1,0 +1,226 @@
+{
+  "scenario": {
+    "dispute_id": "F21-001",
+    "title": "Scoring Methodology Challenge \u2014 Construction Framework",
+    "description": "BuildRight Ltd submitted a bid for a \u00a32m construction framework and was ranked second, narrowly missing the framework by 1.2 points overall. \n\nDISPUTED CRITERION: Quality Criterion Q4 - 'Social Value: Community Benefit'\n- BuildRight Ltd's submission: 14 pages, including a detailed local employment plan, 3 named subcontractor partnerships, and a 5-year community investment schedule. Score awarded: 62/100.\n- Winning bidder (Ironclad Construction): 4 pages, general commitments to 'support local employment' with no named partnerships or schedule. Score awarded: 88/100.\n\nBuildRight Ltd alleges this scoring gap is a manifest error, since the published evaluation criteria (Framework Document, Section 4.3) state that Social Value scoring should be based on 'specificity, evidence, and named commitments.' BuildRight Ltd has formally requested the evaluator's scoring notes for Q4 for both bids.",
+    "contract_value_gbp": 2000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "standstill",
+    "contracting_authority_name": "Fusion21",
+    "bidder_name": "BuildRight Ltd"
+  },
+  "round_number": 5,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Legal defensibility",
+      "Service continuity",
+      "Reputational protection",
+      "Cost efficiency",
+      "Public value"
+    ],
+    "goals": [
+      "Defend the procurement decision within legal boundaries",
+      "Maintain a fair and transparent evaluation process"
+    ],
+    "batna": "Defending the procurement decision in the Technology and Construction Court (TCC) at an estimated cost of \u00a350,000+ in legal fees",
+    "opening_position": "The scoring methodology for Quality Criterion Q4 - 'Social Value: Community Benefit' was applied consistently with the published evaluation criteria. BuildRight Ltd's submission did not meet the required specificity, evidence, and named commitments as stated in Section 4.3 of the Framework Document.",
+    "legal_basis": [
+      "Procurement Act 2023, s12(1)(a) - Value for money",
+      "Procurement Act 2023, s12(1)(b) - Maximising public benefit"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Winning the contract or securing a fair re-evaluation",
+      "Transparency \u2014 understanding exactly why we scored as we did",
+      "Protecting our reputation and standing for future bids"
+    ],
+    "goals": [
+      "Re-evaluate Q4 scoring, recover costs if manifest error occurred",
+      "Ensure fairness in evaluation process"
+    ],
+    "batna": "Pursue damages claim or formal proceedings in the Technology and Construction Court (TCC)",
+    "opening_position": "Request immediate re-evaluation of Q4 scoring with detailed feedback on our submission's strengths and weaknesses",
+    "legal_basis": [
+      "EU Procurement Directive, Article 41",
+      "Public Contracts Regulations 2015, Regulation 23"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "BuildRight Ltd's assertion that the scoring gap in Q4 is a manifest error prompts me to clarify: can you provide specific examples from the Framework Document where it explicitly states that Social Value scoring should be based solely on 'specificity, evidence, and named commitments', without considering other relevant factors such as the overall quality of the submission?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate the Contracting Authority's clarification on the scoring methodology. However, I would like to ask for specific examples from the Framework Document that explicitly state Social Value scoring should be based solely on 'specificity, evidence, and named commitments', without considering other relevant factors such as overall quality of submission. Can you provide a direct quote or reference to support this claim? Furthermore, can we discuss the evaluator's scoring notes for Q4 in both bids, as formally requested by BuildRight Ltd?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge BuildRight Ltd's request for the evaluator's scoring notes for Q4 in both bids. I can confirm that these notes will be shared with BuildRight Ltd as part of this dispute resolution process. However, I must clarify that the Framework Document does explicitly state that Social Value scoring should consider 'specificity, evidence, and named commitments' (Section 4.3). While it is true that the winning bidder's submission was shorter in length, our evaluation team considered the quality of their specific commitments and evidence provided, which met the published criteria. I would like to offer a voluntary standstill extension for a period of two weeks to allow BuildRight Ltd to review the scoring notes and discuss any further concerns.",
+      "proposal": null,
+      "concession_made": "voluntary standstill extension"
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate the Contracting Authority's clarification on the scoring methodology. However, I must reiterate that the Framework Document does not explicitly state that Social Value scoring should be based solely on 'specificity, evidence, and named commitments', without considering other relevant factors such as overall quality of submission. Section 4.3 merely lists these criteria as part of a comprehensive evaluation framework. Furthermore, I would like to request clarification on how the winning bidder's shorter submission was considered in the scoring process, given that our own detailed local employment plan and named subcontractor partnerships were deemed insufficiently specific or evidential. Can we discuss this discrepancy further? Additionally, I am willing to accept a re-evaluation of Q4 for both bids, with a fresh evaluation team, if it would provide greater transparency and confidence in the scoring process.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge BuildRight Ltd's point that Section 4.3 of the Framework Document lists 'specificity, evidence, and named commitments' as part of a comprehensive evaluation framework, rather than an exhaustive list. I agree to re-evaluate Q4 for both bids with a fresh evaluation team, using a more nuanced approach that considers the overall quality of submissions in addition to the specified criteria. This will provide greater transparency and confidence in the scoring process.",
+      "proposal": null,
+      "concession_made": "re-evaluation_of_Q4_with_fresh_evaluation_team: True"
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate the Contracting Authority's willingness to re-evaluate Q4 with a fresh team. However, I would like to request that this re-evaluation be conducted in accordance with the original evaluation criteria, without any changes or modifications that might unfairly disadvantage BuildRight Ltd. Furthermore, I would like to propose that the scoring notes for both bids are shared with BuildRight Ltd simultaneously, rather than being released incrementally, to ensure transparency and fairness throughout the process.",
+      "proposal": null,
+      "concession_made": "agreement to re-evaluate Q4"
+    },
+    {
+      "round_number": 4,
+      "sender_role": "contracting_authority",
+      "message": "I agree to share the scoring notes for both bids simultaneously, rather than incrementally. This will ensure transparency and fairness throughout the process. I also propose that the re-evaluation of Q4 be conducted by a panel comprising representatives from BuildRight Ltd and Fusion21, to provide an additional layer of scrutiny and confidence in the scoring process.",
+      "proposal": null,
+      "concession_made": "re-evaluation_panel: True"
+    },
+    {
+      "round_number": 4,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate the Contracting Authority's willingness to re-evaluate Q4 with a fresh team and consider a panel comprising representatives from BuildRight Ltd and Fusion21. However, I must express my concern that this proposal may introduce unnecessary delays in the process. To address this, I propose that the re-evaluation be conducted within a strict timeframe of 5 working days, with clear milestones and deadlines for each stage. This will ensure that the process remains transparent and efficient, while also providing an additional layer of scrutiny to the scoring process.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 5,
+      "sender_role": "contracting_authority",
+      "message": "I propose that the re-evaluation of Q4 be conducted within a strict timeframe of 5 working days, with clear milestones and deadlines for each stage. This will ensure that the process remains transparent and efficient, while also providing an additional layer of scrutiny to the scoring process. Furthermore, I agree to share the final re-evaluation report with BuildRight Ltd simultaneously, rather than incrementally, to maintain transparency throughout the process.",
+      "proposal": null,
+      "concession_made": "I am willing to accept a re-evaluation of Q4 by a panel comprising representatives from BuildRight Ltd and Fusion21"
+    },
+    {
+      "round_number": 5,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate the Contracting Authority's willingness to re-evaluate Q4 with a fresh team and consider a panel comprising representatives from BuildRight Ltd and Fusion21. I agree that this approach will provide an additional layer of scrutiny to the scoring process. However, in light of our previous discussions, I would like to propose a concrete resolution proposal: the Contracting Authority agrees to re-evaluate Q4 with a fresh team, using a more nuanced approach that considers the overall quality of submissions in addition to the specified criteria. The scoring notes for both bids will be shared simultaneously, and the final re-evaluation report will be made available to BuildRight Ltd within 5 working days.",
+      "proposal": "re-evaluation_approach: nuanced approach considering overall quality of submissions; scoring_notes_sharing: simultaneous sharing with BuildRight Ltd; report_delivery_timeframe: within 5 working days",
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12(2) Procurement Act 2023: Value for Money",
+        "Regulation 84 EU Procurement Directive: Award Criteria"
+      ],
+      "reasoning": "The Contracting Authority has provided clarification on the scoring methodology, and both parties have requested specific examples from the Framework Document. This indicates a procedural compliance with the procurement process.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Section 4.3 of the Framework Document"
+      ],
+      "reasoning": "The Contracting Authority has provided clarification on the scoring methodology and offered to share the evaluator's scoring notes, which is a reasonable step in addressing BuildRight Ltd's concerns.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 3,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Section 4.3 of the Framework Document",
+        "Procurement Act 2023 s12"
+      ],
+      "reasoning": "The Contracting Authority has acknowledged BuildRight Ltd's point and agreed to re-evaluate Q4 with a fresh team, using a more nuanced approach that considers overall quality in addition to specified criteria. This demonstrates a willingness to follow the published evaluation methodology.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 4,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Transparency and fairness throughout the process, as per s12 of the Procurement Act 2023"
+      ],
+      "reasoning": "The Contracting Authority has agreed to share scoring notes simultaneously, which aligns with the principles of transparency. The proposal for a panel comprising representatives from both bidders also demonstrates an effort to ensure scrutiny and confidence in the scoring process.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 5,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12(1) Procurement Act 2023 - Value for Money",
+        "Regulation 86(2) Public Contracts Regulations 2015 - Transparency"
+      ],
+      "reasoning": "The Contracting Authority has proposed a re-evaluation of Q4 with clear milestones and deadlines, providing an additional layer of scrutiny to the scoring process. This approach aligns with the principles of transparency and value for money.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    }
+  ],
+  "resolved": false,
+  "resolution_outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+  "adjudicated": false,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiated outcome is more favorable than our BATNA, which was to escalate the dispute to formal proceedings and potentially incur costs of \u00a350k+ over 6-12 months. Through negotiation, we were able to reach a mutually agreeable resolution that includes re-evaluation of Q4 with a fresh team, greater transparency in scoring notes, and a more nuanced approach to evaluation.",
+    "win_statement": "We successfully navigated the dispute through active listening, clarification, and compromise, ultimately achieving a resolution that addresses BuildRight Ltd's concerns while maintaining the integrity of our evaluation process.",
+    "what_was_achieved": [
+      "Re-evaluation of Q4 with a fresh team using a more nuanced approach",
+      "Sharing of scoring notes for both bids simultaneously"
+    ],
+    "what_was_conceded": [
+      "Agreeing to re-evaluate Q4 without changes or modifications that might unfairly disadvantage BuildRight Ltd",
+      "Incorporating representatives from BuildRight Ltd and Fusion21 in the re-evaluation process"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The outcome is slightly favourable compared to pursuing damages or formal TCC proceedings, which would be costly, slow, and uncertain. While we did not achieve a re-scoring of the bid in our favour, the Contracting Authority has agreed to re-evaluate Q4 with a fresh team using a more nuanced approach.",
+    "win_statement": "We have secured a commitment from the Contracting Authority to re-evaluate Q4 with a fresh team, which will provide greater transparency and confidence in the scoring process. This outcome acknowledges our concerns about the original evaluation and demonstrates a willingness by the Contracting Authority to revisit their decision.",
+    "what_was_achieved": [
+      "Re-evaluation of Q4 with a fresh team",
+      "Scoring notes for both bids will be shared simultaneously"
+    ],
+    "what_was_conceded": [
+      "No re-scoring in our favour at this stage",
+      "Potential delays in the process due to the introduction of a panel comprising representatives from BuildRight Ltd and Fusion21"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Scoring Methodology Challenge \u2014 Construction Framework",
+      "Social Value scoring should be based solely on 'specificity, evidence, and named commitments'",
+      "Re-evaluation of Q4 with a fresh evaluation team"
+    ],
+    "concessions_summary": "Both parties made concessions throughout the negotiation process. The Contracting Authority offered a voluntary standstill extension (Round 2), agreed to re-evaluate Q4 with a fresh team (Rounds 3 and 5), and proposed a panel comprising representatives from both bidders (Round 4). The Aggrieved Bidder accepted these concessions, including the re-evaluation of Q4, but requested that it be conducted in accordance with the original evaluation criteria.",
+    "court_reasoning_summary": "The Court assessed each round as procedurally compliant and without manifest error. It recommended continuing negotiation based on the Contracting Authority's willingness to address BuildRight Ltd's concerns through concessions such as re-evaluation and increased transparency.",
+    "likely_next_steps": "Given that the maximum rounds were reached, the dispute will likely escalate to formal proceedings. The Court may review the final re-evaluation report and consider any further actions or recommendations.",
+    "plain_english_summary": "The negotiation centered on a scoring methodology challenge related to Social Value scoring in the Construction Framework. Both parties made concessions, including a re-evaluation of Q4 with a fresh team, but ultimately reached a deadlock due to disagreements over the evaluation process. The dispute will likely proceed to formal proceedings for further review and resolution."
+  }
+}
