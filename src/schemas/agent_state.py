@@ -39,7 +39,7 @@ class ComplianceAssessment(BaseModel):
     round_number: int
     process_followed: bool
     manifest_error_found: bool
-    applicable_provisions: List[str]
+    applicable_provisions: List[str] = Field(default_factory=list)
     reasoning: str
     recommended_action: str  # e.g. "continue negotiation", "re-evaluation", "no remedy - decision stands", "damages"
     deadlock: bool = False
