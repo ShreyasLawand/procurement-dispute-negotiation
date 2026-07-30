@@ -50,8 +50,8 @@ class NegotiationState(BaseModel):
     max_rounds: int = 5
     ca_pre_negotiation: Optional[PreNegotiationStatement] = None
     bidder_pre_negotiation: Optional[PreNegotiationStatement] = None
-    messages: List[NegotiationMessage] = []
-    compliance_checks: List[ComplianceAssessment] = []
+    messages: List[NegotiationMessage] = Field(default_factory=list)
+    compliance_checks: List[ComplianceAssessment] = Field(default_factory=list)
     resolved: bool = False
     resolution_outcome: Optional[str] = None
     adjudicated: bool = False
@@ -59,8 +59,7 @@ class NegotiationState(BaseModel):
     bidder_win_statement: Optional["WinStatement"] = None
     summary: Optional["NegotiationSummary"] = None
 
-    class Config:
-        arbitrary_types_allowed = True
+    model_config = {"arbitrary_types_allowed": True}
         
 class RoundResponse(BaseModel):
     """Structured response for a single negotiation round message"""
@@ -113,3 +112,5 @@ class WinStatement(BaseModel):
     win_statement: str = Field(description="How this agent frames the outcome as a win, in its own voice")
     what_was_achieved: List[str] = Field(description="Specific interests or goals that were satisfied")
     what_was_conceded: List[str] = Field(description="What this agent had to give up or compromise on")
+    
+NegotiationState.model_rebuild()
