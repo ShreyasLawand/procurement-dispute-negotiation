@@ -145,9 +145,9 @@ def run_batch(scenario, n_runs: int = 10, max_rounds: int = 3, output_dir: str =
 
 
 if __name__ == "__main__":
-    from src.scenarios.scenario_002 import mathematical_scoring_error
+    from src.scenarios.scenario_001 import scoring_challenge
     
     N_RUNS = 8
     MAX_ROUNDS = 5      # adjust as needed — start smaller (e.g. 3) to test the script works, then scale up
 
-    run_batch(mathematical_scoring_error, n_runs=N_RUNS, max_rounds=MAX_ROUNDS)
+    run_batch(scoring_challenge, n_runs=N_RUNS, max_rounds=MAX_ROUNDS)
