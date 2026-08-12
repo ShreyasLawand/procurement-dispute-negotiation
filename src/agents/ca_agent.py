@@ -3,6 +3,7 @@ from langchain_ollama import ChatOllama
 from src.utils.negotiation_helpers import is_repetitive, format_previous_statements, get_round_stage_instruction
 from src.prompts.ca_prompt import CA_SYSTEM_PROMPT, CA_WIN_STATEMENT_PROMPT
 from src.schemas.agent_state import PreNegotiationStatement, DisputeScenario, AgentRole, RoundResponse, WinStatement
+from src.utils.event_stream import emit_status
 
 class ContractingAuthorityAgent:
 
@@ -82,6 +83,11 @@ Respond ONLY with valid JSON matching this exact flat structure — no nesting, 
   "proposal": "specific proposal if you are making one, or null",
   "concession_made": "any concession you are offering, or null"
 }}
+
+"proposal" and "concession_made" MUST each be a single plain-English string
+(or null) — NEVER a nested JSON object.
+WRONG: "proposal": {{"partial_award": true, "percentage_of_contract_value": 0.5}}
+RIGHT: "proposal": "A partial award covering 50% of the contract value"
 """
 
         messages = [(role, content) for role, content in conversation_history]
@@ -118,7 +124,9 @@ Respond ONLY with valid JSON matching this exact flat structure — no nesting, 
             if not is_repetitive(result.message, own_previous):
                 return result
 
+            msg = f"Regenerating Contracting Authority response (attempt {attempt + 2} of {max_attempts})…"
             print(f"   [CA response attempt {attempt + 1} too similar to a prior statement — regenerating]")
+            emit_status(msg, role=self.role.value, round_number=round_number, attempt=attempt + 2)
 
         # If still repetitive after all retries, return the last attempt anyway
         # rather than crashing — better to have a slightly repetitive message

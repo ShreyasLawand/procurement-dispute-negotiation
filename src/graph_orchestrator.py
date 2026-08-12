@@ -7,6 +7,7 @@ from src.agents.summary_agent import SummaryAgent
 from src.schemas.agent_state import (
     DisputeScenario, NegotiationState, NegotiationMessage, AgentRole
 )
+from src.utils.event_stream import emit_status
 import json
 
 
@@ -23,6 +24,7 @@ def pre_negotiation_node(state: GraphState) -> dict:
 
     print(f"\n{'='*70}\nDISPUTE: {scenario.title}\n{'='*70}\n")
     print(">> Pre-Negotiation Phase\n")
+    emit_status("Both parties are preparing their opening positions…", phase="pre_negotiation")
 
     ca_pre = ca_agent.get_pre_negotiation_statement(scenario)
     print(f"[CA] Opening position: {ca_pre.opening_position}\n")
@@ -52,6 +54,8 @@ def ca_round_node(state: GraphState) -> dict:
     print(f"\n{'─'*70}")
     print(f"  ROUND {round_num}")
     print(f"{'─'*70}\n")
+    emit_status(f"Contracting Authority is drafting its round {round_num} response…",
+                phase="ca_round", round_number=round_num)
 
     ca_response = ca_agent.respond_to_round(
         scenario, state["ca_history"], round_num, max_rounds=max_rounds
@@ -86,6 +90,8 @@ def bidder_round_node(state: GraphState) -> dict:
     scenario = state["scenario"]
     round_num = state["round_number"]
     max_rounds = state["max_rounds"]
+    emit_status(f"Aggrieved Bidder is drafting its round {round_num} response…",
+                phase="bidder_round", round_number=round_num)
 
     bidder_response = bidder_agent.respond_to_round(
         scenario, state["bidder_history"], round_num, max_rounds=max_rounds
@@ -118,6 +124,8 @@ def court_check_node(state: GraphState) -> dict:
     """Court agent assesses legal compliance for the round just completed."""
     scenario = state["scenario"]
     round_num = state["round_number"]
+    emit_status(f"Court is reviewing round {round_num} for compliance…",
+                phase="court_check", round_number=round_num)
 
     assessment = court_agent.assess_round(
         scenario, state["last_ca_msg"], state["last_bidder_msg"], round_num
@@ -155,6 +163,7 @@ def win_statements_node(state: GraphState) -> dict:
     print(f"\n{'='*70}")
     print("  POST-NEGOTIATION: WIN STATEMENTS")
     print(f"{'='*70}\n")
+    emit_status("Both parties are reflecting on the final outcome…", phase="win_statements")
 
     ca_win = ca_agent.get_win_statement(scenario, outcome, transcript_summary)
     print(f"CONTRACTING AUTHORITY WIN STATEMENT:")
@@ -185,6 +194,7 @@ def summary_node(state: GraphState) -> dict:
     print(f"\n{'='*70}")
     print("  GENERATING NEGOTIATION SUMMARY")
     print(f"{'='*70}\n")
+    emit_status("Preparing a plain-English summary of the negotiation…", phase="summary")
 
     # Build a temporary NegotiationState (Pydantic) for the summary agent,
     # which expects that shape.
@@ -262,8 +272,8 @@ class GraphNegotiationOrchestrator:
         self.max_rounds = max_rounds
         self.app = build_negotiation_graph()
 
-    def run(self, scenario: DisputeScenario) -> dict:
-        initial_state: GraphState = {
+    def _build_initial_state(self, scenario: DisputeScenario) -> GraphState:
+        return {
             "scenario": scenario,
             "round_number": 0,
             "max_rounds": self.max_rounds,
@@ -283,8 +293,18 @@ class GraphNegotiationOrchestrator:
             "summary": None,
         }
 
-        final_state = self.app.invoke(initial_state)
+    def run(self, scenario: DisputeScenario) -> dict:
+        final_state = self.app.invoke(self._build_initial_state(scenario))
         return final_state
+
+    def stream(self, scenario: DisputeScenario):
+        """
+        Yields one {node_name: partial_state_update} dict per graph
+        super-step. Used by the live-negotiation API (api/sessions.py) to
+        push SSE events as each node completes; run()/save_log() above are
+        untouched and remain the path used by batch scripts and tests.
+        """
+        yield from self.app.stream(self._build_initial_state(scenario), stream_mode="updates")
 
     def save_log(self, final_state: dict, filepath: str):
         # Convert dict-shaped final state to the Pydantic NegotiationState for

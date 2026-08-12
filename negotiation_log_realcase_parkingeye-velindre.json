@@ -1,0 +1,125 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-PARKINGEYE-2026",
+    "title": "Parkingeye Ltd v Velindre University NHS Trust & Cardiff and Vale University Health Board",
+    "description": "The contracting authorities awarded a 5-year car park management services contract to National Parking Control Group (NPCG) despite Parkingeye Ltd's higher score. Parkingeye challenged the award, alleging transparency failure due to an understated contract value (\u00a3100,000 vs \u00a310-20 million actual), inconsistent evaluation methodology, and unequal treatment of bidders during clarification exchanges.",
+    "contract_value_gbp": 15000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "standstill",
+    "contracting_authority_name": "Velindre University NHS Trust / Cardiff and Vale University Health Board",
+    "bidder_name": "Parkingeye Ltd"
+  },
+  "round_number": 1,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Legal defensibility",
+      "Service continuity",
+      "Reputational protection",
+      "Cost efficiency",
+      "Public value"
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Maintain transparency and fairness"
+    ],
+    "batna": "Defending the procurement decision in the Technology and Construction Court (TCC) if no agreement is reached",
+    "opening_position": "The contract award to National Parking Control Group was made following a thorough evaluation process, and we are confident that our scoring methodology was applied consistently and fairly.",
+    "legal_basis": [
+      "Procurement Act 2023 s15(1)(a) - the procurement decision must be taken in accordance with the principles of transparency, equal treatment, and non-discrimination",
+      "Regulation 86 of the Public Contracts Regulations 2015 - the contracting authority's evaluation process was conducted in accordance with the published criteria"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Winning the contract or securing a fair re-evaluation",
+      "Transparency \u2014 understanding exactly why NPCG scored as they did",
+      "Protecting our reputation and standing for future bids"
+    ],
+    "goals": [
+      "Re-evaluation based on corrected contract value (\u00a310-20 million)",
+      "Clear explanation of scoring discrepancies with NPCG",
+      "Potential damages claim if procedural errors are confirmed"
+    ],
+    "batna": "Pursuing a damages claim or formal proceedings in the Technology and Construction Court (TCC) if no agreement is reached",
+    "opening_position": "Requesting immediate re-evaluation based on corrected contract value, with transparent scoring methodology and clear feedback on our submission",
+    "legal_basis": [
+      "EU Procurement Directive 2014/24/EU Article 41(3)",
+      "Public Contracts Regulations 2015 (SI 2015/102)"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We appreciate Parkingeye Ltd's concerns regarding transparency and evaluation methodology. To clarify, can you specify which particular clarification exchanges you believe were unequal in treatment? Additionally, we'd like to offer a voluntary standstill extension for engagement to provide further information on our evaluation process.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to engage in further clarification on our evaluation process. However, we must express concern that a voluntary standstill extension may be seen as an admission of wrongdoing and could potentially prejudice our ability to defend against future claims. Can you clarify whether this extension is conditional upon us providing specific information or assurances regarding the evaluation methodology?",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Transparency",
+        "Evaluation Methodology"
+      ],
+      "reasoning": "This scenario does not contain an explicit formula or numbers. However, it mentions a score and ranking. I will assess the qualitative rational-basis check (Step 2B). The Contracting Authority's evaluation methodology is inconsistent as they awarded the contract to NPCG despite Parkingeye Ltd's higher score. This inconsistency raises questions about the rational basis of their decision-making process. Furthermore, the understated contract value (\u00a3100,000 vs \u00a310-20 million actual) suggests a lack of transparency.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome of re-evaluation, while not a full win for our organisation, is more favourable than defending in TCC court, which would have cost \u00a350k+ and taken 6-12 months. We avoided the significant financial and reputational risks associated with litigation.",
+    "win_statement": "We successfully negotiated a re-evaluation of the contract award, which ultimately led to a revised scoring that still favours our preferred bidder, National Parking Control Group (NPCG).",
+    "what_was_achieved": [
+      "A re-evaluation of the contract award was agreed upon, providing an opportunity for a more transparent and consistent evaluation process.",
+      "The contracting authorities were able to clarify their evaluation methodology and provide further information on their decision-making process."
+    ],
+    "what_was_conceded": [
+      "We conceded to re-evaluate the contract award in response to Parkingeye Ltd's allegations of transparency failure and unequal treatment during clarification exchanges.",
+      "We also agreed to provide additional information on our evaluation process, which may have set a precedent for future challenges"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome, requiring re-evaluation, can be seen as a partial success compared to pursuing damages or formal TCC proceedings. While the contracting authority's willingness to revisit their evaluation is a positive step, it does not guarantee a more favorable outcome for us.",
+    "win_statement": "We successfully pushed for a re-evaluation of the contract award, highlighting concerns around transparency and evaluation methodology. This achievement demonstrates our ability to effectively advocate for ourselves in complex disputes.",
+    "what_was_achieved": [
+      "A re-evaluation of the contract award",
+      "Further clarification on the contracting authority's evaluation process"
+    ],
+    "what_was_conceded": [
+      "The original contract value was understated, potentially affecting our score",
+      "Inconsistent evaluation methodology may have impacted our chances of winning the contract"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Transparency in evaluation methodology",
+      "Inconsistent treatment of bidders (higher score but lower ranking)",
+      "Understated contract value (\u00a3100,000 vs \u00a315,000,000 actual)"
+    ],
+    "concessions_summary": "The Contracting Authority offered a voluntary standstill extension for further clarification on their evaluation process. However, the Aggrieved Bidder declined this offer due to concerns about potential prejudice in future claims.",
+    "court_reasoning_summary": "The Court assessed the scenario and found that the Contracting Authority's evaluation methodology was inconsistent, raising questions about the rational basis of their decision-making process. The understated contract value also suggested a lack of transparency.",
+    "likely_next_steps": "Re-evaluation of the contract by the Contracting Authority to ensure compliance with procurement regulations and transparency in the evaluation process.",
+    "plain_english_summary": "The dispute centered around concerns about how the Contracting Authority evaluated bids. The Court found that their methodology was inconsistent, which raised questions about fairness and transparency. As a result, the Contracting Authority will re-evaluate the contract to ensure everything is done correctly."
+  }
+}

@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Lato", "Tahoma", sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Consolas, monospace;
+
+  /* Fusion21 brand chrome — captured from fusion21.co.uk (Playwright
+     screenshot + computed-style extraction): primary green rgb(0,128,74)
+     used on both their filled and outline CTA buttons, near-black navy ink
+     rgb(30,33,43), Lato throughout, pill-shaped buttons. Chrome-only: the
+     categorical/status tokens below are dataviz-validated and untouched. */
+  --color-brand: #00804a;
+  --color-brand-dark: #00693c;
+  --color-brand-soft: #d9ead3;
+
+  /* Role colors — categorical slots 1/2/3 from the validated palette
+     (dataviz skill, references/palette.md), assigned in fixed order to the
+     three negotiating identities. Passes all-pairs CVD + normal-vision
+     floors together (validate_palette.js: worst CVD ΔE 9.2, normal-vision
+     ΔE 24.0). Court takes slot 3 (aqua) rather than 1/2 so it reads as
+     neither party — a deliberately neutral arbiter. */
+  --color-ca: #2a78d6;
+  --color-ca-soft: #eaf1fb;
+  --color-bidder: #eb6834;
+  --color-bidder-soft: #fdece3;
+  --color-court: #1baf7a;
+  --color-court-soft: #e6f7f0;
+
+  /* Fixed status colors (dataviz skill palette.md) — reserved meaning,
+     never reused for series identity. Always paired with icon + label,
+     never color alone (warning/serious sit below 3:1 on light by design). */
+  --color-good: #0ca30c;
+  --color-good-soft: #e6f7e6;
+  --color-warning: #fab219;
+  --color-warning-soft: #fdf3de;
+  --color-serious: #ec835a;
+  --color-serious-soft: #fdece3;
+  --color-critical: #d03b3b;
+  --color-critical-soft: #fbe7e7;
+  --color-good-text: #006300; /* delta/success text token, WCAG-safe on light */
+
+  /* Neutral chrome (dataviz skill palette.md chart chrome & ink), except
+     --color-ink which is overridden to Fusion21's navy-black below. */
+  --color-surface: #fcfcfb;
+  --color-page: #f9f9f7;
+  --color-ink: #1e212b;
+  --color-ink-secondary: #52514e;
+  --color-ink-muted: #898781;
+  --color-hairline: #e1e0d9;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-page);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  #root {
+    min-height: 100svh;
+  }
+
+  ::selection {
+    background: var(--color-ca-soft);
+  }
+}
+
+@layer utilities {
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
