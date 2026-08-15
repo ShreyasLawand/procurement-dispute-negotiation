@@ -1,0 +1,224 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-FARADAY-2018",
+    "title": "Faraday Development Ltd v West Berkshire Council",
+    "description": "West Berkshire Council entered into a development agreement with St Modwen Developments Ltd for approximately \u00a3125 million, structured as a conditional land agreement. Faraday Development Ltd challenged the arrangement, alleging that it was in substance a public works contract that should have been competitively procured under the Public Contracts Regulations. The High Court initially dismissed the claim, but the Court of Appeal reversed this decision, holding that the agreement was indeed a public works contract and declaring its ineffectiveness.",
+    "contract_value_gbp": 125000000.0,
+    "dispute_type": "process_avoidance",
+    "procedural_stage": "appeal",
+    "contracting_authority_name": "West Berkshire Council",
+    "bidder_name": "Faraday Development Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 5,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: \u00a3125 million contract value requires timely and cost-effective resolution to avoid service delivery gaps.",
+      "Continuity of Service / Delivery: Critical infrastructure development for West Berkshire Council's residents, with significant operational consequences if delayed or re-run.",
+      "Reputation & Public Accountability: Maintain public confidence in the procurement process and protect our reputation as a competent buyer."
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Maintain transparency and fairness throughout the dispute resolution process"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We are willing to engage in constructive dialogue to address Faraday Development Ltd's concerns, but we must defend our lawful and procedurally correct evaluation process.",
+    "legal_basis": [
+      "Public Contracts Regulations",
+      "Procurement Act 2023"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a3125 million contract value at stake if agreement is declared ineffective",
+      "Fairness & Transparency: Concern that West Berkshire Council's decision-making process was flawed and led to an unfair outcome"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "Award the contract to Faraday Development Ltd"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "Request that West Berkshire Council re-evaluate the agreement to ensure fairness and transparency",
+    "legal_basis": [
+      "Public Contracts Regulations",
+      "Court of Appeal's decision"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "Faraday Development Ltd's claim that our development agreement with St Modwen Developments Ltd was a public works contract and should have been competitively procured under the Public Contracts Regulations is a complex issue. I would like to clarify whether Faraday Development Ltd is suggesting that we re-evaluate the entire procurement process, including the evaluation criteria and scoring, or if they are only contesting the specific arrangement with St Modwen Developments Ltd. Could you provide more detail on their proposed remedy?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "Thank you for your clarification request. I'd like to clarify that our proposed remedy is indeed focused on the specific arrangement with St Modwen Developments Ltd, and we believe that a re-evaluation of the procurement process would be necessary to ensure compliance with the Public Contracts Regulations. We are not seeking to contest the entire evaluation criteria and scoring, but rather to address the particular issue at hand. Specifically, we propose that West Berkshire Council provide detailed feedback on their evaluation methodology and scoring, as well as any relevant documentation or communication related to the agreement with St Modwen Developments Ltd.",
+      "proposal": "A joint review of the procurement process, focusing on the arrangement with St Modwen Developments Ltd",
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "Faraday Development Ltd's request for detailed feedback on our evaluation methodology and scoring is reasonable. We are willing to provide additional information, including documentation related to the agreement with St Modwen Developments Ltd. However, we must balance this transparency with the need to protect commercially sensitive information. To address your concerns, we propose a redacted version of the evaluation report, which would exclude any confidential or proprietary information. This way, we can maintain the integrity of our procurement process while still providing sufficient insight into our decision-making.",
+      "proposal": "A redacted version of the evaluation report",
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to provide additional information and documentation related to the agreement with St Modwen Developments Ltd. However, we are concerned that a redacted version of the evaluation report may not be sufficient for us to understand the full context of the procurement process. We would like to request access to all unredacted documents, including any internal emails or memoranda that discuss the evaluation criteria and scoring. This will allow us to better assess whether the procurement process was indeed compliant with the Public Contracts Regulations.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "We understand Faraday Development Ltd's concerns about accessing unredacted documents to better assess the procurement process. However, we must balance transparency with the need to protect commercially sensitive information. To address your concerns, we propose a compromise: we will provide access to all unredacted documents, excluding only those that are explicitly marked as confidential or proprietary by St Modwen Developments Ltd. We will also appoint an independent reviewer to verify that our redactions are reasonable and do not compromise the integrity of our procurement process.",
+      "proposal": "Conditional access to unredacted documents with independent review",
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your proposal to provide access to all unredacted documents, excluding only those that are explicitly marked as confidential or proprietary by St Modwen Developments Ltd. However, we remain concerned about the potential for redactions to obscure critical information. To address this concern, we propose that an independent reviewer be appointed to not only verify the reasonableness of any redactions but also to review and provide feedback on the evaluation methodology and scoring in its entirety. This will ensure that our concerns are fully addressed and that we have a clear understanding of the procurement process.",
+      "proposal": "An independent reviewer be appointed to review and provide feedback on the evaluation methodology and scoring",
+      "concession_made": null
+    },
+    {
+      "round_number": 4,
+      "sender_role": "contracting_authority",
+      "message": "We understand your concerns about the potential for redactions to obscure critical information and appreciate your proposal for an independent reviewer to review and provide feedback on the evaluation methodology and scoring in its entirety. We agree that this would be a valuable step towards resolving this dispute. To address your concerns, we propose appointing an independent reviewer who will have full access to all unredacted documents, including internal emails and memoranda, and will be able to provide feedback on our evaluation process. This reviewer will also be responsible for verifying the reasonableness of any redactions made by us.",
+      "proposal": "Appointment of an independent reviewer with full access to all unredacted documents",
+      "concession_made": null
+    },
+    {
+      "round_number": 4,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your proposal to appoint an independent reviewer to review and provide feedback on our evaluation methodology and scoring in its entirety. However, we would like to request that this independent reviewer be given full authority to make recommendations for any necessary changes or improvements to the procurement process, including the possibility of re-evaluating the entire procurement process if deemed necessary. We also propose that the independent reviewer have access to all relevant documentation, including internal emails and memoranda, without any redactions. This will ensure a thorough and transparent review of our evaluation process.",
+      "proposal": "The independent reviewer should have full authority to make recommendations for changes or improvements to the procurement process",
+      "concession_made": null
+    },
+    {
+      "round_number": 5,
+      "sender_role": "contracting_authority",
+      "message": "We propose that an independent reviewer be appointed to review and provide feedback on our evaluation methodology and scoring in its entirety. This reviewer will have full access to all unredacted documents, including internal emails and memoranda, without any redactions. They will also have the authority to make recommendations for any necessary changes or improvements to the procurement process, including the possibility of re-evaluating the entire procurement process if deemed necessary.",
+      "proposal": "Appointment of an independent reviewer with full access to all unredacted documents and authority to make recommendations",
+      "concession_made": null
+    },
+    {
+      "round_number": 5,
+      "sender_role": "aggrieved_bidder",
+      "message": "We are pleased to accept your proposal to appoint an independent reviewer to review and provide feedback on West Berkshire Council's evaluation methodology and scoring in its entirety. We believe that this will provide a thorough and transparent review of the procurement process and address our concerns regarding the potential for redactions to obscure critical information. In light of this, we are willing to withdraw our claim and allow the independent reviewer to make recommendations for any necessary changes or improvements to the procurement process.",
+      "proposal": null,
+      "concession_made": "Withdrawal of our claim"
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Public Contracts Regulations"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a complex issue of whether the development agreement with St Modwen Developments Ltd was a public works contract. There are no explicit formulas or numerical scores mentioned in the scenario. The parties' positions focus on clarifying their proposed remedy and the specific arrangement at hand. I will assess compliance qualitatively instead of computationally.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Public Contracts Regulations"
+      ],
+      "reasoning": "This scenario does not contain any explicit formula, sub-scores, or numbers. It is a qualitative dispute about the nature of the contract and whether it was properly procured. I will assess compliance qualitatively instead.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 3,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Public Contracts Regulations",
+        "Procurement Act 2023"
+      ],
+      "reasoning": "This scenario does not contain any explicit formula, sub-scores, or numbers. The dispute revolves around the classification of the development agreement as a public works contract and the procurement process followed by West Berkshire Council. I will assess compliance qualitatively instead. Both parties have proposed compromises to address Faraday Development Ltd's concerns about transparency, but neither proposal directly addresses the issue at hand. However, the Contracting Authority has offered to provide access to unredacted documents, excluding confidential or proprietary information, which is a reasonable step towards transparency.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 4,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Public Contracts Regulations",
+        "Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a dispute over the classification of a development agreement and whether it should have been competitively procured. There are no explicit formulas or sub-scores mentioned in the scenario. The parties' positions focus on the evaluation methodology and scoring process, but do not provide any numerical data to verify. Therefore, I will assess compliance qualitatively using Step 2B's reasoning.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 5,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Public Contracts Regulations"
+      ],
+      "reasoning": "This scenario does not contain any explicit formula, sub-scores, or numbers. It is a qualitative dispute regarding the classification of a development agreement as a public works contract. The parties have agreed to appoint an independent reviewer to review and provide feedback on the evaluation methodology and scoring in its entirety. This suggests that the Contracting Authority is willing to engage with the Aggrieved Bidder's concerns and address any potential issues with transparency and process. I conclude that the process has been followed, as the parties are working together to resolve the dispute through a transparent review.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    }
+  ],
+  "resolved": false,
+  "resolution_outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+  "adjudicated": false,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome is a compromise that avoids the significant costs and risks associated with escalating the dispute to formal proceedings, which could have taken up to 6-12 months and cost over \u00a350k.",
+    "win_statement": "We successfully negotiated an agreement that meets Faraday Development Ltd's concerns regarding transparency and accountability in our procurement process, while protecting commercially sensitive information. The appointment of an independent reviewer will provide a thorough and transparent review of our evaluation process, which we believe is a fair and reasonable outcome given the circumstances.",
+    "what_was_achieved": [
+      "Provided additional information and documentation related to the agreement with St Modwen Developments Ltd",
+      "Appointed an independent reviewer to review and provide feedback on our evaluation methodology and scoring in its entirety"
+    ],
+    "what_was_conceded": [
+      "Allowed access to all unredacted documents, excluding only those explicitly marked as confidential or proprietary by St Modwen Developments Ltd",
+      "Granted the independent reviewer full authority to make recommendations for any necessary changes or improvements to the procurement process"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The outcome is better than pursuing damages or formal TCC proceedings, which would be costly, slow, and uncertain. However, it's worth noting that the contracting authority did not fully concede to our original demands for access to unredacted documents.",
+    "win_statement": "We successfully negotiated a compromise with West Berkshire Council, securing an independent reviewer to review and provide feedback on their evaluation methodology and scoring in its entirety. This will ensure a thorough and transparent review of the procurement process, addressing our concerns regarding redactions and providing a clear understanding of the procurement process.",
+    "what_was_achieved": [
+      "Access to all unredacted documents, excluding only those explicitly marked as confidential or proprietary by St Modwen Developments Ltd",
+      "Appointment of an independent reviewer with full authority to make recommendations for any necessary changes or improvements to the procurement process"
+    ],
+    "what_was_conceded": [
+      "Our original demand for access to all unredacted documents without any redactions was partially conceded, as some confidential information will still be excluded",
+      "The contracting authority did not fully concede to our proposal for the independent reviewer to have full authority to re-evaluate the entire procurement process if deemed necessary"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Classification of development agreement with St Modwen Developments Ltd as public works contract",
+      "Transparency in procurement process, including evaluation methodology and scoring",
+      "Access to unredacted documents for review by independent reviewer"
+    ],
+    "concessions_summary": "Both parties made concessions throughout the negotiation. The Contracting Authority agreed to provide additional information, documentation, and access to unredacted documents, while the Aggrieved Bidder was willing to withdraw their claim in light of the proposed appointment of an independent reviewer.",
+    "court_reasoning_summary": "The Court assessed each round qualitatively due to the complex nature of the dispute. The Court concluded that the process had been followed and there were no manifest errors, recommending continued negotiation. The Court's reasoning focused on the parties' willingness to engage with each other's concerns and address potential issues with transparency and process.",
+    "likely_next_steps": "Given the deadlock reached in the negotiation, it is likely that the dispute will escalate to formal proceedings. The Aggrieved Bidder has withdrawn their claim, but this may not necessarily resolve the matter. The Court's assessment suggests that the parties have made concessions and are willing to engage with each other's concerns, which could potentially lead to a settlement or re-evaluation of the procurement process.",
+    "plain_english_summary": "The negotiation between Faraday Development Ltd and West Berkshire Council focused on the classification of a development agreement as a public works contract and transparency in the procurement process. Both parties made concessions, but ultimately reached a deadlock. The dispute is likely to escalate to formal proceedings, although there may be opportunities for settlement or re-evaluation of the procurement process."
+  }
+}

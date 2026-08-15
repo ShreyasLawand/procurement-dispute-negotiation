@@ -1,0 +1,12 @@
+{
+  "dispute_id": "REAL-LANCS-2018",
+  "title": "Lancashire Care NHS Foundation Trust v Lancashire County Council",
+  "description": "The two claimant NHS Foundation Trusts challenged the award of a \u00a3104 million contract for Public Health Nursing and the 0-19 Healthy Child Programme, alleging that the Council's evaluation and scoring was flawed due to inadequate reasons given for the scores awarded. The core allegation is not that a specific calculation was wrong, but that the contracting authority failed to discharge its duty to give sufficiently clear reasons for its evaluation decision.",
+  "contract_value_gbp": 104000000.0,
+  "dispute_type": "transparency_breach",
+  "procedural_stage": "trial",
+  "contracting_authority_name": "Lancashire County Council",
+  "bidder_name": "Lancashire Care NHS Foundation Trust & Blackpool Teaching Hospitals NHS Foundation Trust",
+  "ca_profile": null,
+  "bidder_profile": null
+}

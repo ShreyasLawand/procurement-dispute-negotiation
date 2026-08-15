@@ -1,0 +1,125 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-FARADAY-2018",
+    "title": "Faraday Development Ltd v West Berkshire Council",
+    "description": "West Berkshire Council entered into a development agreement with St Modwen Developments Ltd for approximately \u00a3125 million, structured as a conditional land agreement. Faraday Development Ltd challenged the arrangement, alleging that it was in substance a public works contract that should have been competitively procured under the Public Contracts Regulations. The High Court initially dismissed the claim, but the Court of Appeal reversed this decision, holding that the agreement was indeed a public works contract and declaring its ineffectiveness.",
+    "contract_value_gbp": 125000000.0,
+    "dispute_type": "process_avoidance",
+    "procedural_stage": "appeal",
+    "contracting_authority_name": "West Berkshire Council",
+    "bidder_name": "Faraday Development Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Ensure the procurement process was lawful and followed proper procedure.",
+      "Protection of Public Funds: Avoid delays that increase costs or create service delivery gaps, particularly for a \u00a3125,000,000 contract.",
+      "Continuity of Service / Delivery: The development agreement delivers critical infrastructure and housing projects in West Berkshire, with significant operational consequences if delayed or re-run.",
+      "Reputation & Public Accountability: Maintain public confidence in the procurement process and protect our reputation as a competent buyer."
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Maintain transparency and fairness throughout the process"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our evaluation process, which was conducted fairly and in accordance with the Public Contracts Regulations.",
+    "legal_basis": [
+      "Public Contracts Regulations",
+      "Procurement Act 2023"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a3125 million contract value at stake, significant bid costs (\u00a3500k-\u00a31M) already incurred",
+      "Fairness & Transparency: Perception of unfairness if the evaluation process is deemed flawed or biased",
+      "Protection of Reputation: Bid team's credibility and win-rate targets are at risk due to this dispute"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids, giving us a chance to be awarded the contract ourselves",
+      "An award of damages for losses incurred due to the flawed evaluation process"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We believe that the evaluation process was flawed and we request a re-evaluation of all bids to ensure fairness and transparency",
+    "legal_basis": [
+      "Public Contracts Regulations",
+      "Court of Appeal's decision"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Faraday Development Ltd's concerns regarding the development agreement with St Modwen Developments Ltd. However, we would like to clarify whether you are suggesting that we re-evaluate the entire procurement process or focus on specific aspects of the agreement that led to the Court of Appeal's decision. We are willing to provide additional information and transparency regarding our evaluation criteria and scoring process, but we must ensure that any disclosure does not compromise the integrity of the original procurement.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to provide additional information and transparency regarding our evaluation criteria and scoring process. However, we must clarify that our main concern is not with the specific aspects of the agreement that led to the Court of Appeal's decision, but rather with the manifest error in the original procurement process. We believe that a re-evaluation of the entire process is necessary to ensure fairness and transparency. Can you explain why you are hesitant to consider a full re-evaluation, given the significant implications for the integrity of the original procurement?",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Public Contracts Regulations",
+        "Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, not numeric. The parties' statements and the contract value are irrelevant to determining compliance with the procurement process. However, based on the Court of Appeal's decision, it appears that the Contracting Authority did not follow a lawful, rational, and procedurally correct process in entering into the development agreement with St Modwen Developments Ltd. The agreement was deemed ineffective due to its substance being a public works contract that should have been competitively procured under the Public Contracts Regulations.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome is more favorable than our BATNA (defending in TCC court, which would cost \u00a350k+ and take 6-12 months) since we were able to negotiate a re-evaluation of the procurement process without having to go through the lengthy and costly legal proceedings.",
+    "win_statement": "We successfully negotiated a re-evaluation of the procurement process, which will allow us to address Faraday Development Ltd's concerns and potentially resolve the dispute without further litigation. This outcome is a win for West Berkshire Council as it avoids the significant costs and risks associated with defending in court.",
+    "what_was_achieved": [
+      "Negotiated a re-evaluation of the procurement process",
+      "Avoided costly legal proceedings"
+    ],
+    "what_was_conceded": [
+      "Agreed to provide additional information and transparency regarding our evaluation criteria and scoring process",
+      "Acknowledged the need for a re-evaluation of the entire procurement process"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is more favourable than our BATNA (pursuing damages or formal TCC proceedings) but still falls short of a complete re-evaluation, which we considered essential to rectify the manifest error in the original procurement process.",
+    "win_statement": "We successfully negotiated a re-evaluation of the development agreement, although it was not as comprehensive as initially sought. This outcome acknowledges our concerns and provides some level of transparency into the contracting authority's evaluation criteria and scoring process.",
+    "what_was_achieved": [
+      "The contracting authority agreed to provide additional information and transparency regarding their evaluation criteria and scoring process",
+      "A re-evaluation of the development agreement was undertaken"
+    ],
+    "what_was_conceded": [
+      "We did not achieve a full re-evaluation of the entire procurement process, which we considered essential to rectify the manifest error in the original procurement",
+      "The contracting authority maintained their position on ensuring that any disclosure does not compromise the integrity of the original procurement"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Re-evaluation of the entire procurement process",
+      "Manifest error in the original procurement process",
+      "Integrity of the original procurement"
+    ],
+    "concessions_summary": "The Contracting Authority offered to provide additional information and transparency regarding their evaluation criteria and scoring process, but maintained that any disclosure must not compromise the integrity of the original procurement. The Aggrieved Bidder did not make significant concessions in this round.",
+    "court_reasoning_summary": "The Court concluded that there was a manifest error in the original procurement process due to the Contracting Authority's failure to follow a lawful, rational, and procedurally correct process in entering into the development agreement with St Modwen Developments Ltd. The Court recommended re-evaluation of the entire process.",
+    "likely_next_steps": "The case will likely proceed to formal proceedings for re-evaluation of the procurement process, as recommended by the Court. This may involve a new evaluation and scoring process, potentially leading to a revised contract award or further negotiations between the parties.",
+    "plain_english_summary": "The main disagreement was about whether the entire procurement process should be re-evaluated due to a mistake made by the Contracting Authority. The Court agreed that there was an error in the original process and recommended re-evaluation, which will likely lead to formal proceedings."
+  }
+}

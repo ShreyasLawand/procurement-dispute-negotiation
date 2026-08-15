@@ -1,0 +1,149 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-FARADAY-2018",
+    "title": "Faraday Development Ltd v West Berkshire Council",
+    "description": "West Berkshire Council entered into a development agreement with St Modwen Developments Ltd for approximately \u00a3125 million, structured as a conditional land agreement. Faraday Development Ltd challenged the arrangement, alleging that it was in substance a public works contract that should have been competitively procured under the Public Contracts Regulations. The High Court initially dismissed the claim, but the Court of Appeal reversed this decision, holding that the agreement was indeed a public works contract and declaring its ineffectiveness.",
+    "contract_value_gbp": 125000000.0,
+    "dispute_type": "process_avoidance",
+    "procedural_stage": "appeal",
+    "contracting_authority_name": "West Berkshire Council",
+    "bidder_name": "Faraday Development Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 2,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: Avoid delays that increase costs or create service delivery gaps for \u00a3125,000,000 development agreement.",
+      "Continuity of Service / Delivery: Ensure timely completion of the Faraday Development project to deliver critical infrastructure and services to residents.",
+      "Reputation & Public Accountability: Maintain public confidence in our procurement process and protect our reputation as a competent buyer."
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Resolve the dispute through negotiation"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our original evaluation and scoring, which were conducted fairly and in accordance with the Public Contracts Regulations.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Public Contracts Regulations"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: We stand to lose \u00a3125 million in contract value due to the declared ineffectiveness of the agreement.",
+      "Fairness & Transparency: The Council's decision-making process has been deemed unfair and opaque, causing reputational damage for us as a business.",
+      "Protection of Reputation: Our credibility with parent companies, shareholders, and partners is at risk if this dispute is not resolved fairly."
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "An award of damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We request an immediate re-evaluation of the submitted bids to rectify any perceived injustices and ensure a fair outcome.",
+    "legal_basis": [
+      "Public Contracts Regulations",
+      "Court of Appeal ruling"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "Faraday Development Ltd's claim that West Berkshire Council's development agreement with St Modwen Developments Ltd is in substance a public works contract raises concerns about compliance with the Public Contracts Regulations. Can you clarify what specific provisions or circumstances led Faraday to believe this was the case? Additionally, how do you respond to their assertion that the agreement's ineffectiveness has caused significant financial losses for them?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate West Berkshire Council's clarification regarding their concerns about compliance with the Public Contracts Regulations. However, we would like to request more specific information on what led them to believe our claim was unfounded. Can they provide details on which provisions or circumstances in the development agreement triggered this concern? Additionally, we take issue with their assertion that the agreement's ineffectiveness has caused significant financial losses for them. We would appreciate it if they could quantify these losses and provide evidence to support their claim.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Faraday's request for more specific information on what led us to believe their claim was unfounded. We can provide details on the development agreement's provisions that triggered our concern about compliance with the Public Contracts Regulations. Specifically, we were concerned about the agreement's conditional nature and the potential for St Modwen Developments Ltd to benefit from the arrangement in a way that could be seen as unfair or prejudicial to other bidders. We also take issue with Faraday's assertion that the agreement's ineffectiveness has caused significant financial losses for them, and we would like to request evidence to support this claim. However, we are willing to provide additional feedback and transparency on our evaluation process to address any concerns Faraday may have.",
+      "proposal": null,
+      "concession_made": "We will provide a voluntary standstill extension of two weeks to allow for further engagement and discussion"
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "We acknowledge West Berkshire Council's willingness to provide additional feedback and transparency on their evaluation process. However, we would like to request that they provide specific details on how the conditional nature of the development agreement with St Modwen Developments Ltd impacted our bid scores and ranking. We believe that this is crucial in understanding why we were not awarded the contract despite meeting all the technical requirements. Additionally, we reiterate our request for evidence supporting their claim about significant financial losses caused by the agreement's ineffectiveness. We are willing to consider a partial award covering 50% of the contract value if West Berkshire Council can demonstrate that this is feasible and in line with their procurement regulations.",
+      "proposal": "A partial award covering 50% of the contract value",
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Public Contracts Regulations"
+      ],
+      "reasoning": "This scenario does not contain any explicit formula, sub-scores, or numbers. It is a qualitative dispute about the classification of a development agreement as a public works contract. I will assess compliance qualitatively instead.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Public Contracts Regulations",
+        "Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a conditional land agreement and concerns about fairness and prejudice. There are no explicit formulas or sub-scores provided. However, I note that the Court of Appeal declared the development agreement ineffective due to non-compliance with the Public Contracts Regulations. This suggests that there was a manifest error in the evaluation process. The Contracting Authority's concern about the conditional nature of the agreement and potential unfairness to other bidders is a rational basis for their decision, but it does not justify the lack of competitive procurement.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiated outcome avoided a costly and time-consuming court battle, which would have likely exceeded \u00a350k+ in costs and taken 6-12 months to resolve. This was a significant consideration for us.",
+    "win_statement": "We successfully defended our procurement process and maintained the integrity of our development agreement with St Modwen Developments Ltd. While we did not achieve a full win, we avoided a potentially costly and time-consuming court battle.",
+    "what_was_achieved": [
+      "Provided additional feedback and transparency on our evaluation process to address Faraday's concerns",
+      "Clarified the specific provisions in the development agreement that triggered our concern about compliance with the Public Contracts Regulations"
+    ],
+    "what_was_conceded": [
+      "Did not achieve a full win, as the agreement was declared ineffective by the Court of Appeal",
+      "Provided evidence to support Faraday's claim of significant financial losses caused by the agreement's ineffectiveness (although we maintain that these losses are disputed)"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The negotiation outcome is slightly favourable compared to our BATNA of pursuing damages or formal TCC proceedings, which would have been costly, slow, and uncertain. We were able to re-evaluate the agreement's ineffectiveness and potentially secure a partial award covering 50% of the contract value.",
+    "win_statement": "We successfully negotiated a potential partial award of \u00a362.5 million, representing 50% of the original contract value. This outcome acknowledges the ineffectiveness of the development agreement with St Modwen Developments Ltd and provides some financial compensation for Faraday Development Ltd's losses.",
+    "what_was_achieved": [
+      "Partial award of \u00a362.5 million",
+      "Acknowledgement of the development agreement's ineffectiveness"
+    ],
+    "what_was_conceded": [
+      "No full award of contract value (\u00a3125 million)",
+      "No evidence of significant financial losses caused by agreement's ineffectiveness (as requested)"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Classification of development agreement as public works contract",
+      "Conditional nature of agreement with St Modwen Developments Ltd",
+      "Potential unfairness or prejudice to other bidders"
+    ],
+    "concessions_summary": "The Contracting Authority made two concessions: (1) providing a voluntary standstill extension of two weeks, and (2) offering additional feedback and transparency on their evaluation process.",
+    "court_reasoning_summary": "The Court concluded that there was a manifest error in the evaluation process due to non-compliance with the Public Contracts Regulations. The Contracting Authority's concern about potential unfairness or prejudice to other bidders was rational, but not sufficient justification for the lack of competitive procurement.",
+    "likely_next_steps": "Re-evaluation is recommended by the Court, which means that the Contracting Authority will need to re-assess the bids and award the contract in accordance with the Public Contracts Regulations. This may involve re-scoring or re-ranking the bids, or even re-running the procurement process.",
+    "plain_english_summary": "The dispute centered on whether a development agreement was a public works contract and how it affected the bidding process. The Contracting Authority made some concessions to address concerns from the Aggrieved Bidder, but the Court ultimately concluded that there were errors in the evaluation process. As a result, the Contracting Authority will need to re-evaluate the bids and award the contract fairly."
+  }
+}

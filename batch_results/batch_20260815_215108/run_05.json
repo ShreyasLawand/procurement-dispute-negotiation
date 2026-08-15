@@ -1,0 +1,125 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-FARADAY-2018",
+    "title": "Faraday Development Ltd v West Berkshire Council",
+    "description": "West Berkshire Council entered into a development agreement with St Modwen Developments Ltd for approximately \u00a3125 million, structured as a conditional land agreement. Faraday Development Ltd challenged the arrangement, alleging that it was in substance a public works contract that should have been competitively procured under the Public Contracts Regulations. The High Court initially dismissed the claim, but the Court of Appeal reversed this decision, holding that the agreement was indeed a public works contract and declaring its ineffectiveness.",
+    "contract_value_gbp": 125000000.0,
+    "dispute_type": "process_avoidance",
+    "procedural_stage": "appeal",
+    "contracting_authority_name": "West Berkshire Council",
+    "bidder_name": "Faraday Development Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Uphold the principles of transparency and equal treatment in procurement.",
+      "Protection of Public Funds: Avoid delays that increase costs and ensure value for money is delivered on a \u00a3125,000,000 contract.",
+      "Continuity of Service / Delivery: Ensure timely delivery of critical infrastructure development to support local growth and economic stability.",
+      "Reputation & Public Accountability: Maintain public confidence in the procurement process and protect our reputation as a competent buyer."
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Maintain transparency and fairness throughout the dispute resolution process"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our evaluation process, which was conducted fairly and transparently. We are willing to provide additional information and clarification to address Faraday Development Ltd's concerns.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Public Contracts Regulations"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: We stand to lose \u00a3125 million in revenue if this contract is declared ineffective.",
+      "Fairness & Transparency: The Council's decision-making process was opaque, and we want clear explanations for the evaluation scores.",
+      "Protection of Reputation: Our credibility as a developer will be damaged if our bid is unfairly rejected without feedback."
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids to give us a chance to be awarded the contract",
+      "An award of damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We request that the Council provides detailed feedback on the evaluation scores and methodology to justify their decision.",
+    "legal_basis": [
+      "Public Contracts Regulations",
+      "High Court judgment"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "Faraday Development Ltd's challenge to our development agreement with St Modwen Developments Ltd raises concerns about process avoidance and compliance with public procurement regulations. We understand that the Court of Appeal has declared the agreement ineffective due to its classification as a public works contract, which should have been competitively procured. However, we would like to clarify whether Faraday Development Ltd is seeking a re-evaluation of our original tendering process or an alternative solution for awarding the development project.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your clarification on our position and acknowledge that the Court of Appeal's decision has significant implications for the development agreement. However, we would like to request more information about the specific concerns you have regarding process avoidance and compliance with public procurement regulations. Can you please provide details on what aspects of our original tendering process you believe were non-compliant or in breach of regulations? We are willing to engage in a transparent discussion and consider any necessary steps to rectify these issues.",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Public Contracts Regulations",
+        "Court of Appeal's decision"
+      ],
+      "reasoning": "This scenario is qualitative (Step 2B). The Court of Appeal declared the development agreement ineffective due to its classification as a public works contract, which should have been competitively procured. I do not need to perform any calculation. However, I must assess whether the Contracting Authority's process was compliant with public procurement regulations. Based on the scenario description, it appears that West Berkshire Council entered into a development agreement without following competitive tendering procedures, which is in breach of the Public Contracts Regulations.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "We were able to negotiate an outcome that avoided the worst-case scenario of having to re-tender the entire project, which would have been a significant cost and time burden. However, we did not achieve our desired outcome of having the agreement upheld as valid.",
+    "win_statement": "We successfully negotiated a re-evaluation of the development agreement, which will allow us to revisit the tendering process and potentially award the contract to St Modwen Developments Ltd without having to start from scratch.",
+    "what_was_achieved": [
+      "Negotiated a re-evaluation of the development agreement",
+      "Avoided the need for a full re-tendering process"
+    ],
+    "what_was_conceded": [
+      "The Court of Appeal's decision declaring the agreement ineffective was upheld",
+      "We were unable to have the agreement validated as originally intended"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is more favourable than our BATNA (pursuing damages or formal TCC proceedings) in that we have achieved a re-evaluation of the development agreement, which may lead to a revised tendering process. However, this outcome falls short of our initial goal of having the original agreement declared effective.",
+    "win_statement": "We successfully negotiated a re-evaluation of the development agreement, which may result in a more transparent and compliant tendering process for the development project.",
+    "what_was_achieved": [
+      "Re-evaluation of the development agreement",
+      "Potential for a revised tendering process"
+    ],
+    "what_was_conceded": [
+      "No formal declaration that our original challenge was justified",
+      "No guarantee of a more favourable outcome in future proceedings"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Classification of the development agreement as a public works contract",
+      "Compliance with public procurement regulations",
+      "Competitive tendering procedures"
+    ],
+    "concessions_summary": "Neither party made significant concessions during the negotiation. The Contracting Authority clarified their position, while the Aggrieved Bidder requested more information about the concerns regarding process avoidance and compliance.",
+    "court_reasoning_summary": "The Court assessed that the Contracting Authority's process was not compliant with public procurement regulations due to the lack of competitive tendering procedures. This led to a manifest error in the original development agreement, which was declared ineffective by the Court of Appeal.",
+    "likely_next_steps": "Re-evaluation of the original tendering process is recommended by the Court. This means that West Berkshire Council will need to re-run the procurement process to ensure compliance with public procurement regulations and competitive tendering procedures.",
+    "plain_english_summary": "The dispute centered around whether the development agreement was properly procured according to public procurement regulations. The Court ruled in favor of a re-evaluation due to the Contracting Authority's failure to follow competitive tendering procedures, which led to a manifest error in the original agreement."
+  }
+}

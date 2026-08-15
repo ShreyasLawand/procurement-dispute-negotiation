@@ -1,0 +1,225 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-FARADAY-2018",
+    "title": "Faraday Development Ltd v West Berkshire Council",
+    "description": "West Berkshire Council entered into a development agreement with St Modwen Developments Ltd for approximately \u00a3125 million, structured as a conditional land agreement. Faraday Development Ltd challenged the arrangement, alleging that it was in substance a public works contract that should have been competitively procured under the Public Contracts Regulations. The High Court initially dismissed the claim, but the Court of Appeal reversed this decision, holding that the agreement was indeed a public works contract and declaring its ineffectiveness.",
+    "contract_value_gbp": 125000000.0,
+    "dispute_type": "process_avoidance",
+    "procedural_stage": "appeal",
+    "contracting_authority_name": "West Berkshire Council",
+    "bidder_name": "Faraday Development Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 5,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Ensure the procurement process was lawful and within our powers under the Procurement Act 2023",
+      "Protection of Public Funds: Avoid delays that increase costs, particularly given the \u00a3125,000,000 contract value",
+      "Continuity of Service / Delivery: The development agreement supports a major infrastructure project with significant operational consequences if delayed or re-run"
+    ],
+    "goals": [
+      "Defend the procurement decision and maintain public confidence in our ability to manage large-scale projects",
+      "Minimise disruption to the project timeline and avoid unnecessary costs"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our original evaluation, which was conducted fairly and in accordance with the published criteria. We are willing to provide additional transparency and feedback to address Faraday Development Ltd's concerns.",
+    "legal_basis": [
+      "Public Contracts Regulations",
+      "Procurement Act 2023"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a3125 million contract value at risk due to West Berkshire Council's ineffectiveness of agreement",
+      "Fairness & Transparency: Perception that the original decision-making process was unfair and opaque"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids, giving us a chance to be awarded the contract ourselves",
+      "An award of damages for financial harm caused by West Berkshire Council's actions"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We believe that the original decision-making process was flawed and that we were unfairly disadvantaged. We request a re-evaluation of submitted bids to ensure fairness and transparency.",
+    "legal_basis": [
+      "Public Contracts Regulations",
+      "Court of Appeal's declaration of ineffectiveness"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "Faraday Development Ltd's claim that West Berkshire Council entered into a development agreement with St Modwen Developments Ltd without competitive procurement is a serious allegation. However, I would like to clarify whether Faraday Development Ltd has considered the specific evaluation criteria used in the original tender process and whether they believe these criteria were not followed correctly. Could you provide more information on what specifically led them to conclude that the agreement was ineffectively procured?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "Thank you for your clarification request. I'd like to clarify whether West Berkshire Council has considered the scoring discrepancies in the original tender process, particularly with regards to the evaluation criteria used for our bid. We believe that there were manifest errors in the scoring process, which significantly impacted our chances of winning the contract. Could you provide more information on how these discrepancies were addressed during the evaluation?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "Faraday Development Ltd's concerns regarding scoring discrepancies in the original tender process are taken seriously. However, I must clarify that our evaluation team followed a rigorous and transparent process, using the specific evaluation criteria outlined in the tender documents. We have reviewed the scores and can confirm that they were applied consistently across all bids. Nevertheless, we acknowledge that there may be some perceived discrepancies and are willing to provide additional feedback to Faraday Development Ltd on their bid's performance. This feedback will be based on the actual evaluation criteria used and will not involve re-scoring or re-evaluating the bids. We believe this will help address any concerns Faraday Development Ltd may have regarding the scoring process.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to provide additional feedback on our bid's performance. However, we believe that a more detailed explanation of the evaluation process is necessary to address our concerns regarding scoring discrepancies. Specifically, we would like to request access to the evaluator comments and any internal notes or discussions related to our bid. This will enable us to better understand how the evaluation criteria were applied consistently across all bids. Furthermore, we propose a feedback session with the evaluation team to clarify any points of contention and ensure that we have a clear understanding of the decision-making process.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "We understand Faraday Development Ltd's request for access to evaluator comments and internal notes related to their bid. We are willing to provide this information, subject to redaction to protect commercially sensitive information. However, we must clarify that our evaluation team followed a rigorous process, using the specific evaluation criteria outlined in the tender documents. To address concerns regarding scoring discrepancies, we propose a feedback session with the evaluation team to clarify any points of contention and ensure that Faraday Development Ltd has a clear understanding of the decision-making process.",
+      "proposal": "A voluntary standstill extension for an additional two weeks to facilitate further engagement and clarification",
+      "concession_made": "We will provide additional feedback on the bid's performance, based on the actual evaluation criteria used"
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to provide additional feedback on our bid's performance and access to evaluator comments and internal notes related to our bid. However, we would like to propose a more concrete solution to address our concerns regarding scoring discrepancies. We suggest that you re-evaluate the bids using the original evaluation criteria, with the addition of an independent third-party reviewer to ensure objectivity and fairness in the process. This will enable us to have a clear understanding of the decision-making process and provide a fair outcome for all parties involved.",
+      "proposal": "Re-evaluation of bids with an independent third-party reviewer",
+      "concession_made": null
+    },
+    {
+      "round_number": 4,
+      "sender_role": "contracting_authority",
+      "message": "We understand Faraday Development Ltd's proposal to re-evaluate the bids using an independent third-party reviewer. We are willing to consider this proposal, but we must clarify that our evaluation team followed a rigorous and transparent process, using the specific evaluation criteria outlined in the tender documents. However, to address concerns regarding scoring discrepancies and provide a fair outcome for all parties involved, we propose a compromise: we will re-evaluate the bids with an independent reviewer, but only on the specific points of contention raised by Faraday Development Ltd, rather than a full re-evaluation of all bids.",
+      "proposal": "Re-evaluation of bids with an independent third-party reviewer",
+      "concession_made": null
+    },
+    {
+      "round_number": 4,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to consider our proposal for an independent third-party reviewer. However, we would like to propose a modification to address concerns regarding scoring discrepancies and provide a fair outcome for all parties involved. We suggest that the re-evaluation with an independent reviewer be conducted on all bids, not just the specific points of contention raised by Faraday Development Ltd. This will ensure transparency and fairness in the process. Additionally, we propose that the evaluation team provides a detailed explanation of their decision-making process, including the scoring discrepancies and how they were addressed.",
+      "proposal": "A full re-evaluation with an independent third-party reviewer on all bids",
+      "concession_made": null
+    },
+    {
+      "round_number": 5,
+      "sender_role": "contracting_authority",
+      "message": "We understand that Faraday Development Ltd is seeking a fair and transparent resolution to this dispute. In light of their proposal for an independent third-party reviewer to re-evaluate all bids, we are willing to accept this proposal as a means of addressing concerns regarding scoring discrepancies. We believe that this will provide a clear understanding of the decision-making process and ensure a fair outcome for all parties involved.",
+      "proposal": "Re-evaluation of all bids using an independent third-party reviewer",
+      "concession_made": null
+    },
+    {
+      "round_number": 5,
+      "sender_role": "aggrieved_bidder",
+      "message": "We believe that the proposed re-evaluation with an independent third-party reviewer is a crucial step towards resolving this dispute fairly and transparently. We are willing to accept this proposal as a means of addressing concerns regarding scoring discrepancies, but we would like to request that the re-evaluation be conducted on all bids, not just the specific points of contention raised by Faraday Development Ltd. This will ensure transparency and fairness in the process.",
+      "proposal": "Re-evaluate all bids using an independent third-party reviewer",
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Public Contracts Regulations"
+      ],
+      "reasoning": "This scenario does not contain any explicit formula, sub-scores, or numbers. It is a qualitative dispute regarding the classification of the development agreement as a public works contract and its procurement process. I will assess compliance qualitatively instead.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Public Contracts Regulations"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves evaluation criteria and scoring discrepancies without providing explicit formulas or numeric input values. I will assess compliance qualitatively instead of performing a calculation. The Contracting Authority claims to have followed a rigorous and transparent process using the specific evaluation criteria outlined in the tender documents. However, Faraday Development Ltd's concerns regarding scoring discrepancies remain unaddressed. Upon reviewing the scenario, I note that there is no explicit formula or numeric input values provided for the evaluation process. Therefore, I will assess whether the Contracting Authority's stated reasoning is rationally defensible and consistent with the published criteria.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 3,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Public Contracts Regulations",
+        "Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a dispute over the classification of a development agreement and the application of public procurement regulations. There are no explicit formulas or numerical scores mentioned in the scenario. The Contracting Authority's proposal for a feedback session with the evaluation team and the Aggrieved Bidder's request for re-evaluation using an independent third-party reviewer do not alter the qualitative nature of the dispute. I will assess compliance qualitatively, focusing on whether the published criteria language was applied in a way that is rationally defensible.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 4,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Public Contracts Regulations",
+        "Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, as there are no explicit formulas or sub-scores mentioned. The parties' discussion revolves around the evaluation process and scoring discrepancies, but no specific numbers or calculations are provided. Therefore, I will assess compliance qualitatively using Step 2B's reasoning. Both parties agree on the need for transparency and fairness in the process, which suggests that the Contracting Authority has followed a rational and defensible approach. The proposal to re-evaluate bids with an independent reviewer addresses concerns regarding scoring discrepancies, demonstrating a willingness to address potential issues.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 5,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Public Contracts Regulations",
+        "Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a dispute over the classification of a development agreement and its compliance with procurement regulations. There are no explicit formulas or numerical scores mentioned in the scenario. The parties' positions focus on the process for resolving scoring discrepancies through an independent review, rather than any specific numerical calculations. Therefore, I will assess compliance qualitatively, considering whether the proposed re-evaluation meets the requirements of transparency and fairness.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    }
+  ],
+  "resolved": false,
+  "resolution_outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+  "adjudicated": false,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiation outcome is slightly favorable compared to my BATNA, which would have involved defending against Faraday Development Ltd's claim in a TCC court, potentially costing \u00a350k+ and taking 6-12 months. However, the negotiation process allowed us to reach a mutually acceptable solution without escalating to formal proceedings.",
+    "win_statement": "We successfully negotiated a re-evaluation of all bids with an independent third-party reviewer, addressing concerns regarding scoring discrepancies and ensuring transparency and fairness in the process.",
+    "what_was_achieved": [
+      "Reached a mutually acceptable solution without escalating to formal proceedings",
+      "Agreed to re-evaluate all bids with an independent third-party reviewer"
+    ],
+    "what_was_conceded": [
+      "Providing access to evaluator comments and internal notes related to Faraday Development Ltd's bid",
+      "Conducting a re-evaluation of all bids, not just the specific points of contention raised by Faraday Development Ltd"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The negotiation did not result in a resolution that fully addressed our concerns regarding scoring discrepancies, but it did lead to an agreement for an independent third-party reviewer to re-evaluate the bids. This outcome is somewhat better than pursuing damages or formal TCC proceedings, as it allows for a more transparent and fair process.",
+    "win_statement": "We successfully negotiated an agreement for an independent third-party reviewer to re-evaluate all bids, which will provide a clear understanding of the decision-making process and ensure a fair outcome for all parties involved.",
+    "what_was_achieved": [
+      "Access to evaluator comments and internal notes related to our bid",
+      "A feedback session with the evaluation team to clarify any points of contention"
+    ],
+    "what_was_conceded": [
+      "Our proposal for a full re-evaluation of all bids, rather than just the specific points of contention raised by us",
+      "The ability to request a detailed explanation of the decision-making process and scoring discrepancies"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Scoring discrepancies in the original tender process",
+      "Application of evaluation criteria",
+      "Need for transparency and fairness in the evaluation process"
+    ],
+    "concessions_summary": "Both parties made concessions throughout the negotiation. The Contracting Authority agreed to provide additional feedback on Faraday Development Ltd's bid, access to evaluator comments and internal notes, and a re-evaluation with an independent third-party reviewer. Faraday Development Ltd proposed modifications to the re-evaluation process, including conducting it on all bids rather than just specific points of contention.",
+    "court_reasoning_summary": "The Court assessed each round qualitatively, focusing on whether the Contracting Authority's stated reasoning was rationally defensible and consistent with published criteria. The Court found that the Contracting Authority followed a rigorous and transparent process but did not address Faraday Development Ltd's concerns regarding scoring discrepancies until later rounds.",
+    "likely_next_steps": "The negotiation reached a deadlock, and formal proceedings are likely to ensue. The dispute will be escalated to a higher authority for resolution, potentially involving further negotiations or a binding decision.",
+    "plain_english_summary": "Faraday Development Ltd disputed the procurement process of West Berkshire Council's development agreement with St Modwen Developments Ltd. The negotiation centered on scoring discrepancies and the application of evaluation criteria. Both parties made concessions, but ultimately, they could not reach an agreement. Formal proceedings are likely to follow."
+  }
+}
