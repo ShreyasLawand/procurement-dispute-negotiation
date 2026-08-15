@@ -1,0 +1,122 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-WOODS-MKC-2015",
+    "title": "Woods Building Services v Milton Keynes Council",
+    "description": "Milton Keynes Council ran a competitive tender for an asbestos removal and reinstatement services contract valued at approximately \u00a38 million over a 4-year term. Woods Building Services, the incumbent provider, submitted the cheapest bid but was informed that the contract would be awarded to European Asbestos Services (EAS). Woods challenged the award alleging manifest error in the scoring of individual quality criteria and breach of transparency and equal treatment obligations. The court found that the Council's tender evaluation process was fundamentally flawed across multiple scoring items and ordered the Council to set aside its contract award decision.",
+    "contract_value_gbp": 8000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "trial",
+    "contracting_authority_name": "Milton Keynes Council",
+    "bidder_name": "Woods Building Services",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: \u00a38,000,000 contract value at stake; significant financial implications for the Council and taxpayers",
+      "Reputation & Public Accountability: Maintain public confidence in the procurement process and avoid adverse media scrutiny",
+      "Compliance & Legality: Uphold the principles of transparency, equal treatment, non-discrimination, and proportionality under the Procurement Act 2023"
+    ],
+    "goals": [
+      "Defend the original contract award decision as lawful and reasonable",
+      "Address Woods Building Services' scoring challenge in a transparent and procedurally correct manner"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We acknowledge the court's findings on procedural flaws, but dispute the extent to which these impacted the contract award",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "EU procurement directives"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: We stand to lose \u00a38 million in contract value over 4 years if we do not secure this award.",
+      "Fairness & Transparency: The Council's flawed evaluation process undermines our trust in the procurement system and our ability to bid fairly.",
+      "Strategic Leverage: A successful challenge could provide valuable feedback on our bid and help us improve our future tendering processes."
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids, giving us a chance to be awarded the contract ourselves",
+      "An award of damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We request that the Council set aside its contract award decision and re-evaluate all bids, with full disclosure of scoring methodology and evaluator comments.",
+    "legal_basis": [
+      "Public Contracts Regulations 2015",
+      "EU Directive 2014/24/EU"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge Woods Building Services' concerns regarding the scoring of individual quality criteria and breach of transparency and equal treatment obligations. However, I must clarify that the Council's tender evaluation process was not fundamentally flawed as alleged by Woods. Can you specify which particular scoring items you believe were incorrectly evaluated and how this impacted your bid?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your acknowledgement of our concerns regarding the scoring and transparency issues. However, I must clarify that we take issue with the statement that our tender evaluation process was not fundamentally flawed as alleged by Woods Building Services. Specifically, we would like to know more about the Council's response to our allegations of manifest error in the scoring of individual quality criteria. Can you provide us with a detailed explanation of how the scores were calculated for each criterion and why you believe they were correctly awarded? Additionally, can you confirm whether any further evaluation or assessment was conducted after the initial tender evaluation process?",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Transparency and equal treatment obligations under the Public Contracts Regulations 2015"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves subjective evaluation of quality criteria. I will assess compliance qualitatively instead of computing a numerical score. The Contracting Authority's tender evaluation process was fundamentally flawed across multiple scoring items, which led to the court finding that the Council must set aside its contract award decision. Specifically, the Council failed to provide a clear explanation for the scores awarded to each criterion and did not conduct further evaluation or assessment after the initial tender evaluation process. This lack of transparency and equal treatment is in breach of the Public Contracts Regulations 2015.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome is a re-evaluation of the contract award, which is a more favorable result than our BATNA (defending in TCC court, which would cost \u00a350k+ and take 6-12 months). Although we did not achieve our desired outcome of confirming the original contract award to European Asbestos Services, we were able to avoid the significant costs and risks associated with litigation.",
+    "win_statement": "We successfully negotiated a re-evaluation process that will allow us to reassess the bids and make a new decision on the contract award. This is a win for us as it avoids the uncertainty and potential reputational damage of a court case.",
+    "what_was_achieved": [
+      "Negotiated a re-evaluation process to reassess the bids",
+      "Avoided significant costs associated with litigation"
+    ],
+    "what_was_conceded": [
+      "Agreed to re-evaluate the contract award decision",
+      "Did not achieve original goal of confirming contract award to European Asbestos Services"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "Unfavourable. While we were able to secure a re-evaluation of the contract award, it is uncertain whether this will ultimately result in a more favourable outcome for us. Our BATNA (pursuing damages or formal TCC proceedings) was costly, slow, and uncertain, but at least provided a clear path forward. In contrast, the negotiation process has been lengthy and inconclusive.",
+    "win_statement": "We were able to secure a re-evaluation of the contract award, which provides us with an opportunity to potentially rectify the errors in the original scoring and tender evaluation process. However, we are still uncertain about the ultimate outcome and whether this will result in a more favourable decision for our organisation.",
+    "what_was_achieved": [
+      "Re-evaluation of the contract award",
+      "Opportunity to potentially rectify errors in the original scoring"
+    ],
+    "what_was_conceded": [
+      "Uncertainty about the ultimate outcome",
+      "Lengthy and inconclusive negotiation process"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Scoring of individual quality criteria",
+      "Transparency and equal treatment obligations"
+    ],
+    "concessions_summary": "Neither side made significant concessions during the negotiation. The Contracting Authority acknowledged Woods Building Services' concerns but maintained that their tender evaluation process was not fundamentally flawed.",
+    "court_reasoning_summary": "The Court found that the Contracting Authority's tender evaluation process was flawed due to a lack of transparency and equal treatment, specifically in relation to scoring individual quality criteria and failure to provide clear explanations for awarded scores. This breach of Public Contracts Regulations 2015 led to the recommendation for re-evaluation.",
+    "likely_next_steps": "The Council will re-evaluate Woods Building Services' bid, taking into account the Court's findings and recommendations. The outcome may be a revised contract award decision or further negotiations between the parties.",
+    "plain_english_summary": "The dispute centered on how the Contracting Authority scored individual quality criteria and whether they followed proper procedures. The Court found that the Council made mistakes in their evaluation process, which led to a recommendation for re-evaluation of Woods Building Services' bid."
+  }
+}

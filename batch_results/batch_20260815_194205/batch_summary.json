@@ -1,0 +1,441 @@
+{
+  "scenario_id": "REAL-WOODS-MKC-2015",
+  "scenario_title": "Woods Building Services v Milton Keynes Council",
+  "contracting_authority": "Milton Keynes Council",
+  "bidder": "Woods Building Services",
+  "complete": true,
+  "n_runs_requested": 8,
+  "n_runs_completed_so_far": 8,
+  "n_runs_successful": 7,
+  "n_runs_failed": 1,
+  "max_rounds": 5,
+  "timestamp": "20260815_194205",
+  "court_prompt_version": "V4",
+  "ca_profile": null,
+  "bidder_profile": null,
+  "metrics": {
+    "resolution_rate": 1.0,
+    "deadlock_rate": 0.0,
+    "manifest_error_detection_rate": 1.0,
+    "average_rounds_to_conclusion": 1.0,
+    "average_duration_seconds": 24.0,
+    "outcome_distribution": {
+      "re-evaluation": 7
+    }
+  },
+  "compliance": {
+    "structured_responses": 56,
+    "clean_responses": 56,
+    "json_fallbacks": 0,
+    "field_coercions": 0,
+    "parse_failures": 0,
+    "repetition_retries": 0,
+    "structural_compliance_rate": 1.0,
+    "by_site": {
+      "responses": {
+        "ContractingAuthorityAgent.pre_negotiation": 7,
+        "AggrievedBidderAgent.pre_negotiation": 7,
+        "ContractingAuthorityAgent.round_response": 7,
+        "AggrievedBidderAgent.round_response": 7,
+        "CourtAgent.assess_round": 7,
+        "ContractingAuthorityAgent.win_statement": 7,
+        "AggrievedBidderAgent.win_statement": 7,
+        "SummaryAgent.summarize": 7
+      },
+      "clean_responses": {
+        "ContractingAuthorityAgent.pre_negotiation": 7,
+        "AggrievedBidderAgent.pre_negotiation": 7,
+        "ContractingAuthorityAgent.round_response": 7,
+        "AggrievedBidderAgent.round_response": 7,
+        "CourtAgent.assess_round": 7,
+        "ContractingAuthorityAgent.win_statement": 7,
+        "AggrievedBidderAgent.win_statement": 7,
+        "SummaryAgent.summarize": 7
+      },
+      "json_fallbacks": {},
+      "field_coercions": {},
+      "parse_failures": {},
+      "repetition_retries": {}
+    }
+  },
+  "individual_runs": [
+    {
+      "run_number": 1,
+      "resolved": true,
+      "outcome": "re-evaluation",
+      "rounds_taken": 1,
+      "manifest_error_found_any_round": true,
+      "manifest_error_rounds": [
+        1
+      ],
+      "process_not_followed_any_round": true,
+      "duration_seconds": 24.1,
+      "compliance": {
+        "structured_responses": 8,
+        "clean_responses": 8,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ContractingAuthorityAgent.pre_negotiation": 1,
+            "AggrievedBidderAgent.pre_negotiation": 1,
+            "ContractingAuthorityAgent.round_response": 1,
+            "AggrievedBidderAgent.round_response": 1,
+            "CourtAgent.assess_round": 1,
+            "ContractingAuthorityAgent.win_statement": 1,
+            "AggrievedBidderAgent.win_statement": 1,
+            "SummaryAgent.summarize": 1
+          },
+          "clean_responses": {
+            "ContractingAuthorityAgent.pre_negotiation": 1,
+            "AggrievedBidderAgent.pre_negotiation": 1,
+            "ContractingAuthorityAgent.round_response": 1,
+            "AggrievedBidderAgent.round_response": 1,
+            "CourtAgent.assess_round": 1,
+            "ContractingAuthorityAgent.win_statement": 1,
+            "AggrievedBidderAgent.win_statement": 1,
+            "SummaryAgent.summarize": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 2,
+      "resolved": true,
+      "outcome": "re-evaluation",
+      "rounds_taken": 1,
+      "manifest_error_found_any_round": true,
+      "manifest_error_rounds": [
+        1
+      ],
+      "process_not_followed_any_round": true,
+      "duration_seconds": 24.4,
+      "compliance": {
+        "structured_responses": 8,
+        "clean_responses": 8,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ContractingAuthorityAgent.pre_negotiation": 1,
+            "AggrievedBidderAgent.pre_negotiation": 1,
+            "ContractingAuthorityAgent.round_response": 1,
+            "AggrievedBidderAgent.round_response": 1,
+            "CourtAgent.assess_round": 1,
+            "ContractingAuthorityAgent.win_statement": 1,
+            "AggrievedBidderAgent.win_statement": 1,
+            "SummaryAgent.summarize": 1
+          },
+          "clean_responses": {
+            "ContractingAuthorityAgent.pre_negotiation": 1,
+            "AggrievedBidderAgent.pre_negotiation": 1,
+            "ContractingAuthorityAgent.round_response": 1,
+            "AggrievedBidderAgent.round_response": 1,
+            "CourtAgent.assess_round": 1,
+            "ContractingAuthorityAgent.win_statement": 1,
+            "AggrievedBidderAgent.win_statement": 1,
+            "SummaryAgent.summarize": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 3,
+      "resolved": true,
+      "outcome": "re-evaluation",
+      "rounds_taken": 1,
+      "manifest_error_found_any_round": true,
+      "manifest_error_rounds": [
+        1
+      ],
+      "process_not_followed_any_round": true,
+      "duration_seconds": 24.6,
+      "compliance": {
+        "structured_responses": 8,
+        "clean_responses": 8,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ContractingAuthorityAgent.pre_negotiation": 1,
+            "AggrievedBidderAgent.pre_negotiation": 1,
+            "ContractingAuthorityAgent.round_response": 1,
+            "AggrievedBidderAgent.round_response": 1,
+            "CourtAgent.assess_round": 1,
+            "ContractingAuthorityAgent.win_statement": 1,
+            "AggrievedBidderAgent.win_statement": 1,
+            "SummaryAgent.summarize": 1
+          },
+          "clean_responses": {
+            "ContractingAuthorityAgent.pre_negotiation": 1,
+            "AggrievedBidderAgent.pre_negotiation": 1,
+            "ContractingAuthorityAgent.round_response": 1,
+            "AggrievedBidderAgent.round_response": 1,
+            "CourtAgent.assess_round": 1,
+            "ContractingAuthorityAgent.win_statement": 1,
+            "AggrievedBidderAgent.win_statement": 1,
+            "SummaryAgent.summarize": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 4,
+      "resolved": true,
+      "outcome": "re-evaluation",
+      "rounds_taken": 1,
+      "manifest_error_found_any_round": true,
+      "manifest_error_rounds": [
+        1
+      ],
+      "process_not_followed_any_round": true,
+      "duration_seconds": 24.2,
+      "compliance": {
+        "structured_responses": 8,
+        "clean_responses": 8,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ContractingAuthorityAgent.pre_negotiation": 1,
+            "AggrievedBidderAgent.pre_negotiation": 1,
+            "ContractingAuthorityAgent.round_response": 1,
+            "AggrievedBidderAgent.round_response": 1,
+            "CourtAgent.assess_round": 1,
+            "ContractingAuthorityAgent.win_statement": 1,
+            "AggrievedBidderAgent.win_statement": 1,
+            "SummaryAgent.summarize": 1
+          },
+          "clean_responses": {
+            "ContractingAuthorityAgent.pre_negotiation": 1,
+            "AggrievedBidderAgent.pre_negotiation": 1,
+            "ContractingAuthorityAgent.round_response": 1,
+            "AggrievedBidderAgent.round_response": 1,
+            "CourtAgent.assess_round": 1,
+            "ContractingAuthorityAgent.win_statement": 1,
+            "AggrievedBidderAgent.win_statement": 1,
+            "SummaryAgent.summarize": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 5,
+      "resolved": null,
+      "outcome": null,
+      "rounds_taken": null,
+      "manifest_error_found_any_round": null,
+      "manifest_error_rounds": [],
+      "process_not_followed_any_round": null,
+      "duration_seconds": 4.2,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 0,
+        "structural_compliance_rate": 0.0,
+        "json_fallbacks": 1,
+        "field_coercions": 0,
+        "parse_failures": 1,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ContractingAuthorityAgent.pre_negotiation": 1
+          },
+          "clean_responses": {},
+          "json_fallbacks": {
+            "ContractingAuthorityAgent.pre_negotiation": 1
+          },
+          "field_coercions": {},
+          "parse_failures": {
+            "ContractingAuthorityAgent.pre_negotiation": 1
+          },
+          "repetition_retries": {}
+        }
+      },
+      "error": "ContractingAuthorityAgent.pre_negotiation: could not parse JSON even after brace extraction (Invalid control character at: line 4 column 73 (char 126)). Raw text: '{\\n  \"role\": \"contracting_authority\",\\n  \"interests\": [\\n    \"Protection of Public Funds: \u00a38,000,000 contract value at stake, and\\n    potential costs of re-running the procurement process\",\\n    \"Continuity of Service / Delivery: Critical asbestos removal and\\n    reinstatement services for Milton Keynes residents may be delayed or\\n    compromised if the contract is not awarded promptly\",\\n    \"Reputation & Public Accountability: Council\\'s reputation as a fair and\\n    competent buyer is at risk due to'"
+    },
+    {
+      "run_number": 6,
+      "resolved": true,
+      "outcome": "re-evaluation",
+      "rounds_taken": 1,
+      "manifest_error_found_any_round": true,
+      "manifest_error_rounds": [
+        1
+      ],
+      "process_not_followed_any_round": true,
+      "duration_seconds": 23.5,
+      "compliance": {
+        "structured_responses": 8,
+        "clean_responses": 8,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ContractingAuthorityAgent.pre_negotiation": 1,
+            "AggrievedBidderAgent.pre_negotiation": 1,
+            "ContractingAuthorityAgent.round_response": 1,
+            "AggrievedBidderAgent.round_response": 1,
+            "CourtAgent.assess_round": 1,
+            "ContractingAuthorityAgent.win_statement": 1,
+            "AggrievedBidderAgent.win_statement": 1,
+            "SummaryAgent.summarize": 1
+          },
+          "clean_responses": {
+            "ContractingAuthorityAgent.pre_negotiation": 1,
+            "AggrievedBidderAgent.pre_negotiation": 1,
+            "ContractingAuthorityAgent.round_response": 1,
+            "AggrievedBidderAgent.round_response": 1,
+            "CourtAgent.assess_round": 1,
+            "ContractingAuthorityAgent.win_statement": 1,
+            "AggrievedBidderAgent.win_statement": 1,
+            "SummaryAgent.summarize": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 7,
+      "resolved": true,
+      "outcome": "re-evaluation",
+      "rounds_taken": 1,
+      "manifest_error_found_any_round": true,
+      "manifest_error_rounds": [
+        1
+      ],
+      "process_not_followed_any_round": true,
+      "duration_seconds": 22.6,
+      "compliance": {
+        "structured_responses": 8,
+        "clean_responses": 8,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ContractingAuthorityAgent.pre_negotiation": 1,
+            "AggrievedBidderAgent.pre_negotiation": 1,
+            "ContractingAuthorityAgent.round_response": 1,
+            "AggrievedBidderAgent.round_response": 1,
+            "CourtAgent.assess_round": 1,
+            "ContractingAuthorityAgent.win_statement": 1,
+            "AggrievedBidderAgent.win_statement": 1,
+            "SummaryAgent.summarize": 1
+          },
+          "clean_responses": {
+            "ContractingAuthorityAgent.pre_negotiation": 1,
+            "AggrievedBidderAgent.pre_negotiation": 1,
+            "ContractingAuthorityAgent.round_response": 1,
+            "AggrievedBidderAgent.round_response": 1,
+            "CourtAgent.assess_round": 1,
+            "ContractingAuthorityAgent.win_statement": 1,
+            "AggrievedBidderAgent.win_statement": 1,
+            "SummaryAgent.summarize": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 8,
+      "resolved": true,
+      "outcome": "re-evaluation",
+      "rounds_taken": 1,
+      "manifest_error_found_any_round": true,
+      "manifest_error_rounds": [
+        1
+      ],
+      "process_not_followed_any_round": true,
+      "duration_seconds": 24.5,
+      "compliance": {
+        "structured_responses": 8,
+        "clean_responses": 8,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ContractingAuthorityAgent.pre_negotiation": 1,
+            "AggrievedBidderAgent.pre_negotiation": 1,
+            "ContractingAuthorityAgent.round_response": 1,
+            "AggrievedBidderAgent.round_response": 1,
+            "CourtAgent.assess_round": 1,
+            "ContractingAuthorityAgent.win_statement": 1,
+            "AggrievedBidderAgent.win_statement": 1,
+            "SummaryAgent.summarize": 1
+          },
+          "clean_responses": {
+            "ContractingAuthorityAgent.pre_negotiation": 1,
+            "AggrievedBidderAgent.pre_negotiation": 1,
+            "ContractingAuthorityAgent.round_response": 1,
+            "AggrievedBidderAgent.round_response": 1,
+            "CourtAgent.assess_round": 1,
+            "ContractingAuthorityAgent.win_statement": 1,
+            "AggrievedBidderAgent.win_statement": 1,
+            "SummaryAgent.summarize": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    }
+  ]
+}
