@@ -6,3 +6,7 @@ chroma_db/
 *.log
 __pycache__/
 *.pyc
+
+# SSH private keys — never commit these (e.g. Ronin instance keys)
+*.pem
+*.ppk
