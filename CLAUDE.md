@@ -217,6 +217,12 @@ Two things are checked, both independently verified against legislation.gov.uk v
 
 Run over the full corpus (63 logs, 237 citations, 15 Aug 2026): **20.7% wrong-regime** (PCR2015/EU Directive cited in a PA2023-only world — one citation even names a nonexistent "Public Contracts Regulations 2020"), **21.2% of s12-specific citations misattribute subsection content** (most commonly: s12(2) miscited as value-for-money/public-benefit, or integrity attributed to (1)(c) instead of the real (1)(d)). Combined, ~30% of all citations in the corpus are demonstrably wrong on independently-verified grounds — a real, citable extension of the fabrication-rate finding, discovered from data that already existed on disk.
 
+### Readability analysis
+
+`scripts/analyze_summary_readability.py` — tests the Summary agent's own explicit claim (`NegotiationSummary.plain_english_summary`'s field description: "a 3-4 sentence summary a non-lawyer could understand") against the standard Flesch metrics. Pure analysis over already-logged data. No `textstat` dependency (not in `requirements.txt`, not worth adding for one metric without asking) — implements Flesch Reading Ease / Flesch-Kincaid Grade Level directly via the standard vowel-group syllable heuristic, which is approximate by nature (spot-checked against 8 known words: 6 exact, 2 off by 1 syllable, non-systematic).
+
+**Finding, consistent across the full corpus (n=64, mean and median close together — not one outlier skewing it): mean Flesch Reading Ease 26.2 ("very difficult, graduate level"; best single case in the corpus was 51.0, "difficult, college level"), mean Flesch-Kincaid Grade 14.2 (roughly second/third-year university reading level).** The field's own prompt claims "a non-lawyer could understand" it. That claim does not hold under a standard readability measure — a real, measured gap between what the Summary agent is asked to produce and what it produces, worth reporting as a finding and worth revisiting the summary prompt over (shorter sentences, fewer multi-syllable legal/procurement terms).
+
 ### Structural compliance instrumentation
 
 `src/utils/compliance_metrics.py` counts what the codebase used to repair silently: brace-extraction fallbacks when `json.loads` fails, Pydantic `mode="before"` field coercions, repetition regenerations, and outright parse failures. Before this, a run where every response needed repair looked identical to one where none did.
