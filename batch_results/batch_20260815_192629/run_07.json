@@ -1,0 +1,224 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-ALSTOM-2017",
+    "title": "Alstom Transport UK Ltd v London Underground Ltd",
+    "description": "London Underground awarded contract to Bombardier for \u00a3112.1 million worth of AC traction motors and control equipment. Alstom challenged the award alleging a manifest error in applying a mandatory technical threshold requirement, which should have excluded Bombardier's bid. The challenge was brought during the standstill period, triggering an automatic suspension. London Underground applied to lift the suspension under the American Cyanamid framework, arguing that damages would be adequate remedy for Alstom if it succeeded at trial and that the balance of convenience favoured proceeding with the contract.",
+    "contract_value_gbp": 112100000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "standstill",
+    "contracting_authority_name": "London Underground Ltd",
+    "bidder_name": "Alstom Transport UK Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 5,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Act lawfully under the Procurement Act 2023 and ensure rational decision-making.",
+      "Protection of Public Funds: Avoid delays that increase costs, particularly for a \u00a3112.1 million contract.",
+      "Continuity of Service / Delivery: Ensure timely delivery of AC traction motors and control equipment to maintain London Underground's operational efficiency.",
+      "Reputation & Public Accountability: Protect our reputation as a competent buyer and maintain public confidence in the procurement process."
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Minimise disruption to contract implementation"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our evaluation process and believe that no manifest error was made in applying the technical threshold requirement.",
+    "legal_basis": [
+      "Procurement Act 2023: Section 12(1) \u2014 Value for money",
+      "Procurement Act 2023: Section 15 \u2014 Procedural requirements"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a3112.1 million contract value at stake, plus bid costs (\u00a3X) and strategic opportunity cost (lost revenue from non-award)",
+      "Fairness & Transparency: perceived unfairness in application of technical threshold requirement, seeking clarity on evaluation process"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "Award damages for loss suffered due to manifest error"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We contest the award on grounds of manifest error in technical threshold requirement application, seeking re-evaluation or damages",
+    "legal_basis": [
+      "Public Contracts Regulations 2015",
+      "American Cyanamid framework"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "Alstom Transport UK Ltd has challenged our procurement decision on the basis of a manifest error in applying a mandatory technical threshold requirement, which we believe is not supported by the evaluation records. We would like to clarify whether Alstom is specifically contesting the application of this requirement to Bombardier's bid or whether they are questioning its relevance to the overall evaluation process. Furthermore, we propose providing additional transparency on our evaluation methodology and scoring system, as well as offering a voluntary standstill extension for engagement and clarification.",
+      "proposal": null,
+      "concession_made": "We are willing to provide additional feedback and transparency"
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your proposal for additional transparency on evaluation methodology and scoring system. However, I'd like to clarify whether this is a genuine offer or simply an attempt to deflect from our core concern regarding the manifest error in applying the technical threshold requirement. Can you confirm that you will provide access to the original evaluation records, including evaluator comments and scoring sheets, as part of this transparency package?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Alstom's request for access to original evaluation records, including evaluator comments and scoring sheets, as part of our proposed transparency package. We are willing to provide this information, but we would like to clarify that it will be made available in a redacted form to protect commercially sensitive information. Specifically, we propose removing any references to other bidders' scores or confidential commercial information from the evaluation records.",
+      "proposal": "A partial award covering 50% of the contract value",
+      "concession_made": "Redaction of evaluation records to protect commercially sensitive information"
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your willingness to provide access to evaluation records in a redacted form. However, I would like to request that you clarify what specific information is considered commercially sensitive and why it cannot be disclosed. Furthermore, I propose that we conduct an independent review of the evaluation process by a neutral third-party expert to ensure transparency and fairness. This could help alleviate concerns about the manifest error in applying the technical threshold requirement.",
+      "proposal": "Independent Review of Evaluation Process",
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "We appreciate Alstom's proposal for an independent review of the evaluation process by a neutral third-party expert to ensure transparency and fairness. We are willing to consider this option, but would like to propose that we jointly select the expert from a pre-agreed list of reputable firms with no conflict of interest. This would ensure that the review is impartial and focused on the specific issue at hand, rather than being a full-scale re-evaluation of the entire procurement process.",
+      "proposal": "Joint selection of an independent reviewer from a pre-agreed list",
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your willingness to consider an independent review by a neutral third-party expert. However, I would like to propose that we jointly select the expert from a pre-agreed list of reputable firms with no conflict of interest, as you suggested. To narrow down the disagreement, I propose that we also agree on specific terms of reference for the review, including the scope of the review and the timeline for completion. This will ensure that the review is focused on the specific issue at hand, rather than being a full-scale re-evaluation of the entire procurement process.",
+      "proposal": "Jointly select expert from pre-agreed list with specific terms of reference",
+      "concession_made": null
+    },
+    {
+      "round_number": 4,
+      "sender_role": "contracting_authority",
+      "message": "We agree to narrow down the disagreement by specifying the scope and timeline for the independent review. We propose that the review focus solely on the application of the mandatory technical threshold requirement in Bombardier's bid, and that it be completed within a timeframe of six weeks from the selection of the expert. This will ensure that the review is focused on the specific issue at hand and provides clarity on whether the manifest error was indeed made. We are willing to provide additional support and resources to facilitate this process.",
+      "proposal": "Jointly select an independent reviewer with expertise in procurement law and evaluation methodologies",
+      "concession_made": "We will provide access to all relevant evaluation records, including evaluator comments and scoring sheets, without redaction"
+    },
+    {
+      "round_number": 4,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your willingness to provide additional support and resources to facilitate the independent review. However, I would like to propose that we also agree on a clear timeline for the review process, including milestones and deadlines for each stage. This will ensure that the review is completed efficiently and effectively. Furthermore, I would like to request that you clarify what specific steps you will take to address any findings or recommendations made by the independent reviewer. Specifically, how will you implement any changes to your evaluation methodology or scoring system to prevent similar manifest errors in the future?",
+      "proposal": "Agreeing on a clear timeline for the review process and implementing any necessary changes to the evaluation methodology or scoring system",
+      "concession_made": null
+    },
+    {
+      "round_number": 5,
+      "sender_role": "contracting_authority",
+      "message": "We propose that we jointly select an independent reviewer from a pre-agreed list of reputable firms with no conflict of interest, and that they conduct a review focused solely on the application of the mandatory technical threshold requirement in Bombardier's bid. The review will be completed within a timeframe of six weeks from the selection of the expert, and we commit to implementing any changes to our evaluation methodology or scoring system recommended by the reviewer to prevent similar manifest errors in the future.",
+      "proposal": "Independent Review of Mandatory Technical Threshold Requirement",
+      "concession_made": "We will provide additional support and resources to facilitate the review process"
+    },
+    {
+      "round_number": 5,
+      "sender_role": "aggrieved_bidder",
+      "message": "I am willing to accept the proposed independent review by a neutral third-party expert, with jointly selected reviewer and clear terms of reference. I also appreciate your commitment to implementing any changes recommended by the reviewer to prevent similar manifest errors in the future. However, I must emphasize that this is not a concession on our core concern regarding the manifest error, but rather an attempt to bring transparency and fairness to the evaluation process. If the review confirms our allegations, we will seek corrective action, including re-evaluation or re-award of the contract.",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 of the Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, as there are no explicit formulas or sub-scores mentioned. The parties' discussion revolves around a technical threshold requirement and its application to Bombardier's bid. I will assess compliance qualitatively instead of performing a numerical calculation.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 of the Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a technical threshold requirement and evaluation records. There are no explicit formulas or sub-scores provided in the scenario description. The Contracting Authority's proposal to provide redacted evaluation records does not indicate any manifest error. However, I note that Alstom has raised concerns about the application of the technical threshold requirement, which may be a matter for further investigation.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 3,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 of the Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, as there are no explicit formulas or sub-scores mentioned. The parties' discussion revolves around an independent review by a neutral third-party expert to ensure transparency and fairness. I do not find any evidence of manifest error in the evaluation process. Both parties seem to agree on the need for an impartial review, which suggests that the Contracting Authority has acted rationally and in good faith.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 4,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Procurement Act 2023 s12",
+        "American Cyanamid framework"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a technical threshold requirement and no explicit formula or numbers are provided. The parties' discussion focuses on the application of this requirement and the proposed independent review. I will assess compliance qualitatively: was the published criteria language applied in a way that is rationally defensible? London Underground's proposal for an independent review, focusing solely on the technical threshold requirement, seems reasonable. Alstom's request for clarification on steps to address any findings or recommendations also appears justified. The Contracting Authority's willingness to provide additional support and resources suggests they are acting in good faith.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 5,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "s12 of the Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative in nature. There are no explicit formulas or sub-scores provided to compute. The parties' statements focus on the application of a mandatory technical threshold requirement and the need for an independent review. I do not find any evidence of a manifest error in the form of a calculation discrepancy. However, the Contracting Authority's evaluation process is being challenged by the Aggrieved Bidder, alleging that Bombardier's bid should have been excluded due to non-compliance with the technical threshold requirement. This suggests a potential issue with the application of the mandatory technical threshold requirement.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiated outcome is more favorable than our BATNA (defending in TCC court, which would cost \u00a350k+ and take 6-12 months) as it allows for a re-evaluation process that may resolve the dispute without the need for costly litigation.",
+    "win_statement": "We successfully negotiated an independent review of the evaluation process by a neutral third-party expert, which will focus solely on the application of the mandatory technical threshold requirement in Bombardier's bid. This outcome brings transparency and fairness to the evaluation process and provides a clear path forward for resolving the dispute.",
+    "what_was_achieved": [
+      "Joint selection of an independent reviewer from a pre-agreed list of reputable firms with no conflict of interest",
+      "Clear terms of reference for the review, including focus on the specific issue at hand (application of technical threshold requirement) and completion within six weeks"
+    ],
+    "what_was_conceded": [
+      "Providing access to evaluation records in a redacted form to protect commercially sensitive information",
+      "Commitment to implementing any changes recommended by the reviewer to prevent similar manifest errors in the future"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The outcome is slightly better than pursuing damages or formal TCC proceedings, which would have been costly, slow, and uncertain. We were able to secure an independent review by a neutral third-party expert, which will provide transparency and fairness to the evaluation process.",
+    "win_statement": "We successfully negotiated an independent review of the evaluation process, which will focus solely on the application of the mandatory technical threshold requirement in Bombardier's bid. This is a significant concession from the contracting authority, as it acknowledges our core concern regarding the manifest error.",
+    "what_was_achieved": [
+      "Independent review by a neutral third-party expert",
+      "Clear terms of reference for the review, including scope and timeline"
+    ],
+    "what_was_conceded": [
+      "No re-evaluation or re-award of the contract at this stage",
+      "Contracting authority's commitment to implementing changes recommended by the reviewer is not binding"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Application of the mandatory technical threshold requirement",
+      "Transparency in evaluation methodology and scoring system",
+      "Independent review by a neutral third-party expert"
+    ],
+    "concessions_summary": "The Contracting Authority made several concessions throughout the negotiation, including providing additional transparency on their evaluation methodology and scoring system, offering to provide access to original evaluation records (although initially with redaction), and committing to implementing any changes recommended by an independent reviewer.",
+    "court_reasoning_summary": "The Court assessed each round of negotiation qualitatively, focusing on whether the Contracting Authority's actions were rationally defensible. The Court found no evidence of manifest error in the evaluation process until Round 5, when the Aggrieved Bidder challenged the application of the technical threshold requirement.",
+    "likely_next_steps": "Given the Court's recommendation for re-evaluation in Round 5, it is likely that the Contracting Authority will be required to conduct a new evaluation of bids, taking into account the findings and recommendations of the independent reviewer. This may involve revisiting the application of the technical threshold requirement and potentially awarding the contract to a different bidder.",
+    "plain_english_summary": "The negotiation between Alstom Transport UK Ltd and London Underground Ltd centered around concerns about the evaluation process for a \u00a3112,100,000 contract. The Aggrieved Bidder challenged the Contracting Authority's application of a technical threshold requirement, which they believed was not supported by the evaluation records. After several rounds of negotiation, the Court recommended re-evaluation due to potential issues with the application of this requirement."
+  }
+}

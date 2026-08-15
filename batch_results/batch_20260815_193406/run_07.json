@@ -1,0 +1,148 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-ALSTOM-2017",
+    "title": "Alstom Transport UK Ltd v London Underground Ltd",
+    "description": "London Underground awarded contract to Bombardier for \u00a3112.1 million worth of AC traction motors and control equipment. Alstom challenged the award alleging a manifest error in applying a mandatory technical threshold requirement, which should have excluded Bombardier's bid. The challenge was brought during the standstill period, triggering an automatic suspension. London Underground applied to lift the suspension under the American Cyanamid framework, arguing that damages would be adequate remedy for Alstom if it succeeded at trial and that the balance of convenience favoured proceeding with the contract.",
+    "contract_value_gbp": 112100000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "standstill",
+    "contracting_authority_name": "London Underground Ltd",
+    "bidder_name": "Alstom Transport UK Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 2,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Act lawfully under the Procurement Act 2023 and follow published evaluation criteria.",
+      "Protection of Public Funds: Avoid delays that increase costs, particularly for a \u00a3112.1 million contract.",
+      "Continuity of Service / Delivery: Ensure timely delivery of AC traction motors and control equipment to maintain London Underground's operational capacity.",
+      "Reputation & Public Accountability: Maintain public confidence in the procurement process and protect our reputation as a competent buyer."
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Resolve the dispute through negotiation"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our evaluation process, which was conducted fairly and transparently. We are willing to provide additional feedback and transparency within the constraints of commercial confidentiality.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "American Cyanamid framework"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a3112.1 million contract value at stake, significant bid costs already incurred (\u00a3X), and potential loss of future business opportunities due to damaged reputation",
+      "Fairness & Transparency: Perceived unfair treatment by London Underground in applying the technical threshold requirement, seeking clear explanation and justification for the evaluation process"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids, giving us a chance to be awarded the contract ourselves",
+      "An award of damages if we are unable to secure the contract through re-evaluation"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We believe there was a manifest error in applying the technical threshold requirement, which unfairly excluded our bid. We request an immediate re-evaluation of all bids to ensure fairness and transparency in the evaluation process.",
+    "legal_basis": [
+      "Public Contracts Regulations 2015 (PCR 2015), specifically Regulation 87(3) for standstill period and automatic suspension"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Alstom's challenge and appreciate the opportunity to discuss this matter further. To clarify, can you specify which particular technical threshold requirement you believe was not applied correctly in our evaluation process? Additionally, we would like to offer a voluntary extension of the standstill period for an additional week to facilitate more detailed discussions and potential resolution.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "Thank you for your prompt response and offer to extend the standstill period. I'd like to clarify that our challenge is specifically focused on the technical threshold requirement for 'design flexibility', which we believe was not applied correctly in Bombardier's bid. Can you provide more information on how this requirement was evaluated, including any specific scoring criteria or weighting used? We would appreciate it if you could also confirm whether any other bidders were similarly affected by this evaluation.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "We can confirm that the technical threshold requirement for 'design flexibility' was evaluated using a scoring matrix with three sub-criteria, each weighted equally at 1/3. The scores awarded to Bombardier's bid were as follows: Sub-criterion A (innovative design) - 8/10; Sub-criterion B (adaptability) - 7/10; and Sub-criterion C (reliability) - 9/10. We can also confirm that no other bidder was awarded a higher score for this requirement than Bombardier, although one bidder did achieve the same score of 28/30. However, we cannot disclose further details about the scores or evaluation process as it is commercially sensitive information.",
+      "proposal": null,
+      "concession_made": "We will provide additional feedback to Alstom on how the technical threshold requirement was evaluated and applied in Bombardier's bid"
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your clarification on the scoring matrix and sub-criteria used to evaluate Bombardier's bid. However, we remain concerned that the scores awarded for 'adaptability' (7/10) were unusually low considering the requirement was not met in full by any bidder. We would like to request a more detailed explanation of how this score was determined, including any specific comments or feedback from evaluators. Furthermore, we believe it is essential to review the scoring matrix and sub-criteria used for 'design flexibility' as a whole, rather than relying on individual scores. Can you provide us with access to the complete evaluation report, including evaluator comments and scoring matrices?",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Public Contracts Regulations 2015",
+        "Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a technical threshold requirement and design flexibility. There are no explicit numbers or formula provided in the scenario to compute. I will assess compliance qualitatively instead: was the published criteria language applied in a way that is rationally defensible? The Contracting Authority has not provided any specific scoring criteria or weighting for the 'design flexibility' requirement, which makes it difficult to determine if they followed their own evaluation process. However, this does not necessarily indicate a manifest error at this stage.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Regulation 23(1) of the Public Contracts Regulations 2015, s12 of the Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative (Step 2B), as it involves evaluating a scoring matrix with sub-criteria and scores awarded to Bombardier's bid. However, I will assess whether the Contracting Authority applied the published criteria in a rational and defensible manner.\n\nThe Contracting Authority provided a scoring matrix with three sub-criteria, each weighted equally at 1/3. The scores awarded to Bombardier's bid were as follows: Sub-criterion A (innovative design) - 8/10; Sub-criterion B (adaptability) - 7/10; and Sub-criterion C (reliability) - 9/10.\n\nI will assess whether the score awarded for 'adaptability' was rationally justified. The Contracting Authority did not provide specific comments or feedback from evaluators, but stated that no other bidder was awarded a higher score for this requirement than Bombardier. However, one bidder achieved the same score of 28/30.\n\nBased on my assessment, I do not find any manifest error in the evaluation process. The Contracting Authority applied the published criteria and provided a clear explanation of the scoring matrix and sub-criteria used.",
+      "recommended_action": "no remedy - decision stands",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "no remedy - decision stands",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome of no remedy - decision stands is a neutral outcome relative to our BATNA. We had prepared for the possibility of a lengthy and costly court battle, which could have taken up to 12 months and cost over \u00a350k. However, the negotiation process allowed us to resolve the dispute without going to court, saving time and resources.",
+    "win_statement": "We successfully defended our decision-making process and evaluation criteria, ensuring that the contract award stands. We also maintained control of the negotiation process, avoiding concessions on key issues.",
+    "what_was_achieved": [
+      "Maintained control of the negotiation process",
+      "Avoided costly court battle"
+    ],
+    "what_was_conceded": [
+      "Provided some clarification on evaluation criteria and scoring matrices",
+      "Did not disclose further details about scores or evaluation process due to commercial sensitivity"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome was unfavourable to me. Pursuing damages or formal TCC proceedings would have been costly, slow, and uncertain, but the negotiation did not result in a more favourable resolution.",
+    "win_statement": "While we were unable to secure a remedy for our challenge, I am proud of the team's efforts in advocating for Alstom's interests throughout the negotiation process. We successfully clarified several aspects of London Underground's evaluation process and highlighted potential concerns with their scoring methodology.",
+    "what_was_achieved": [
+      "Clarification on the specific scoring criteria used to evaluate Bombardier's bid",
+      "Confirmation that no other bidder was awarded a higher score for 'design flexibility' than Bombardier"
+    ],
+    "what_was_conceded": [
+      "No remedy or resolution was achieved, and the decision of London Underground stands",
+      "Access to the complete evaluation report, including evaluator comments and scoring matrices, was not granted"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Technical threshold requirement for 'design flexibility'",
+      "Scoring matrix and sub-criteria used to evaluate Bombardier's bid",
+      "Score awarded for 'adaptability' (7/10)"
+    ],
+    "concessions_summary": "The Contracting Authority made two concessions: providing additional feedback on the evaluation process and offering a voluntary extension of the standstill period. However, these concessions did not address the Aggrieved Bidder's core concerns.",
+    "court_reasoning_summary": "The Court found that the Contracting Authority applied the published criteria in a rational and defensible manner. The scoring matrix and sub-criteria used were clear, and the scores awarded to Bombardier's bid were justified. No manifest error was found in the evaluation process.",
+    "likely_next_steps": "Given the Court's decision, it is likely that the Aggrieved Bidder will not pursue further action. However, if they choose to do so, they may appeal the decision or seek a review of the evaluation process through formal proceedings.",
+    "plain_english_summary": "The dispute centered on how the Contracting Authority evaluated Bombardier's bid for 'design flexibility'. The Aggrieved Bidder challenged the scores awarded, but the Court found that the evaluation process was fair and reasonable. As a result, no remedy was granted, and the decision stands."
+  }
+}
