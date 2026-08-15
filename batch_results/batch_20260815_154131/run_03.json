@@ -1,0 +1,224 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-ALSTOM-2017",
+    "title": "Alstom Transport UK Ltd v London Underground Ltd",
+    "description": "London Underground awarded contract to Bombardier for \u00a3112.1 million worth of AC traction motors and control equipment. Alstom challenged the award alleging a manifest error in applying a mandatory technical threshold requirement, which should have excluded Bombardier's bid. The challenge was brought during the standstill period, triggering an automatic suspension. London Underground applied to lift the suspension under the American Cyanamid framework, arguing that damages would be adequate remedy for Alstom if it succeeded at trial and that the balance of convenience favoured proceeding with the contract.",
+    "contract_value_gbp": 112100000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "standstill",
+    "contracting_authority_name": "London Underground Ltd",
+    "bidder_name": "Alstom Transport UK Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 5,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: Avoid unnecessary delays to the \u00a3112.1 million contract and minimize costs associated with a re-run.",
+      "Continuity of Service / Delivery: Ensure timely delivery of AC traction motors and control equipment for London Underground's operational needs, avoiding disruption to passenger services.",
+      "Reputation & Public Accountability: Maintain public confidence in our procurement process and avoid adverse media scrutiny by resolving the dispute fairly and transparently."
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Resolve the dispute through negotiation"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We have carefully evaluated Alstom's challenge and believe that our original scoring was correct. We are willing to provide additional transparency and feedback, but we cannot simply re-score bids or discuss other bidders' scores in detail.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "American Cyanamid framework"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a3112.1 million contract value at stake; significant opportunity cost if we fail to secure this contract",
+      "Fairness & Transparency: London Underground's evaluation process must be transparent and fair, with clear justification for their decision"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "Obtain damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We believe there was a manifest error in applying the technical threshold requirement, which should have excluded Bombardier's bid. We request a re-evaluation of all bids to ensure fairness and transparency in the evaluation process.",
+    "legal_basis": [
+      "Public Contracts Regulations 2015",
+      "EU Directive 2014/24/EU"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "Alstom Transport UK Ltd has challenged our evaluation of their bid for \u00a3112.1 million worth of AC traction motors and control equipment, alleging a manifest error in applying a mandatory technical threshold requirement. We understand that this challenge was brought during the standstill period, triggering an automatic suspension. However, we have argued that damages would be an adequate remedy for Alstom if it succeeded at trial and that the balance of convenience favoured proceeding with the contract. Can you clarify what specific evidence or information Alstom Transport UK Ltd has provided to support their claim of a manifest error in our evaluation process?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate London Underground's response regarding our challenge to the evaluation process. However, we would like to clarify that the manifest error in applying a mandatory technical threshold requirement is not just about excluding Bombardier's bid, but also about ensuring that the evaluation process was fair and transparent. We request specific information on how the technical threshold requirement was applied, including any scoring documents or evaluator comments that support this decision. Furthermore, we would like to know what evidence London Underground relies on to argue that damages would be an adequate remedy for us if we succeeded at trial.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Alstom's request for specific information on how the technical threshold requirement was applied. We can provide the scoring documents and evaluator comments that support our decision, which are based on the mandatory technical threshold requirements set out in the Invitation to Tender (ITT). These documents will demonstrate that the evaluation process was fair and transparent, as required by the Public Contracts Regulations 2015. Specifically, we can provide the following documentation: a detailed breakdown of how each bidder's score was calculated, including any relevant evaluator comments; the technical threshold requirements set out in the ITT; and our evaluation team's notes on the application of these requirements to each bid. We believe that this information will address Alstom's concerns and demonstrate that our evaluation process was lawful and procedurally correct.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate London Underground's willingness to provide additional documentation to support their evaluation process. However, we would like to request clarification on how the technical threshold requirement was applied in a way that specifically excluded Bombardier's bid. We also need to see evidence of how this application aligns with the mandatory technical threshold requirements set out in the Invitation to Tender (ITT). Furthermore, we are concerned that providing only the scoring documents and evaluator comments may not be sufficient to address our concerns about the fairness and transparency of the evaluation process. We would like to request a meeting or a detailed explanation on how these documents were used to support the exclusion of Bombardier's bid.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "We understand Alstom's concerns about the fairness and transparency of our evaluation process and are willing to provide a detailed explanation on how we applied the technical threshold requirement in this case. We propose that our evaluation team leader, who was responsible for overseeing the application of the technical threshold requirements, provides a written explanation that addresses each of Alstom's specific points of concern. This explanation will be based on the documentation provided earlier and will demonstrate that our evaluation process was lawful and procedurally correct.",
+      "proposal": null,
+      "concession_made": "We are willing to provide additional information and clarification on how we applied the technical threshold requirement"
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate London Underground's willingness to provide a detailed explanation on how they applied the technical threshold requirement in this case. However, we are concerned that having our evaluation team leader provide a written explanation may not be sufficient to address our concerns about the fairness and transparency of the evaluation process. We would like to request that this written explanation be supplemented with an oral debriefing session between our evaluation team leader and ourselves, where we can ask questions and clarify any points of concern. This will allow us to better understand how the technical threshold requirement was applied in a way that specifically excluded Bombardier's bid.",
+      "proposal": "An oral debriefing session between our evaluation team leader and ourselves",
+      "concession_made": null
+    },
+    {
+      "round_number": 4,
+      "sender_role": "contracting_authority",
+      "message": "We are willing to provide an oral debriefing session between our evaluation team leader and yourselves, where you can ask questions and clarify any points of concern regarding the application of the technical threshold requirement. This will allow us to better understand your concerns and address them in a transparent and fair manner.",
+      "proposal": "An oral debriefing session with our evaluation team leader",
+      "concession_made": null
+    },
+    {
+      "round_number": 4,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate London Underground's willingness to provide an oral debriefing session between their evaluation team leader and ourselves. However, we would like to request that this debriefing be conducted in a more formal setting, such as a meeting with both parties' legal teams present. This will allow us to better understand how the technical threshold requirement was applied in a way that specifically excluded Bombardier's bid. We also believe that having our own evaluation team leader present would provide additional clarity and transparency to this process.",
+      "proposal": "A formal debriefing meeting with both parties' legal teams present",
+      "concession_made": null
+    },
+    {
+      "round_number": 5,
+      "sender_role": "contracting_authority",
+      "message": "We are willing to provide an oral debriefing session between our evaluation team leader and yourselves, where you can ask questions and clarify any points of concern regarding the application of the technical threshold requirement. This will be conducted in a formal setting with both parties' legal teams present. Additionally, we propose that this debriefing be supplemented with a written report from our evaluation team leader, addressing each of Alstom's specific points of concern and providing further clarification on how the technical threshold requirement was applied in this case.",
+      "proposal": null,
+      "concession_made": "We will provide additional transparency and clarity through the oral debriefing session and written report"
+    },
+    {
+      "round_number": 5,
+      "sender_role": "aggrieved_bidder",
+      "message": "We are willing to accept London Underground's proposal for an oral debriefing session with both parties' legal teams present. However, we would like to request that this debriefing be supplemented with a written report from their evaluation team leader, addressing each of our specific points of concern and providing further clarification on how the technical threshold requirement was applied in this case. We believe that this additional documentation will provide sufficient transparency and fairness to address our concerns about the evaluation process.",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 of the Procurement Act 2023",
+        "American Cyanamid framework"
+      ],
+      "reasoning": "This scenario does not contain any explicit formula, sub-scores, or numbers that can be computed. The parties' discussion revolves around a mandatory technical threshold requirement and its application in the evaluation process. As such, I will assess compliance qualitatively instead of quantitatively. London Underground's position on applying the technical threshold requirement is not explicitly stated, but Alstom Transport UK Ltd's challenge suggests that there may be an issue with transparency and fairness. However, without further information or evidence, it is difficult to determine whether a manifest error has occurred. I will continue to assess the situation based on the parties' statements.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Public Contracts Regulations 2015",
+        "American Cyanamid framework"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves the application of a technical threshold requirement and exclusion of a bid based on evaluator comments. There are no explicit formulas or sub-scores provided in the scenario description. However, I will assess the Contracting Authority's compliance qualitatively. The Contracting Authority has offered to provide documentation that supports their evaluation process, including detailed breakdowns of each bidder's score calculation and evaluator comments. This suggests a rational effort to demonstrate transparency and fairness. While Alstom requests clarification on how the technical threshold requirement was applied, there is no indication that the Contracting Authority's application was internally inconsistent or contradicted the published criteria.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 3,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 of the Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a technical threshold requirement and does not contain any explicit formula or numbers. The parties are discussing the application of this requirement, but no specific calculation or score is mentioned. I will assess compliance qualitatively instead: was the published criteria language applied in a way that is rationally defensible? London Underground's proposal to provide a written explanation from their evaluation team leader addresses Alstom's concerns and demonstrates a willingness to be transparent about their process. This meets the requirements of transparency and integrity under s12 of the Procurement Act 2023.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 4,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 of the Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, as there are no explicit formulas or sub-scores mentioned. The technical threshold requirement is a mandatory criterion that should have excluded Bombardier's bid if not met. I will assess compliance qualitatively instead of computing a score. London Underground's willingness to provide an oral debriefing session and address concerns in a transparent manner suggests they are acting rationally and in good faith. However, the Aggrieved Bidder requests a more formal setting for the debriefing, which may indicate a need for further clarification on the application of the technical threshold requirement.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 5,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 of the Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative in nature as it involves a technical threshold requirement and its application. There are no explicit formulas or sub-scores provided to compute. The parties' positions focus on providing additional documentation and clarification, which suggests that the Contracting Authority's evaluation process may be subject to scrutiny. However, I do not find any evidence of manifest error in the application of the technical threshold requirement based solely on the information provided.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    }
+  ],
+  "resolved": false,
+  "resolution_outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+  "adjudicated": false,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome of a deadlock, requiring escalation to formal proceedings, is not an ideal result for us. However, it avoids the risk and cost associated with defending in TCC court, which could have taken 6-12 months and cost \u00a350k+.",
+    "win_statement": "We successfully negotiated an agreement that maintained the status quo, avoiding a lengthy and costly legal battle. We demonstrated our commitment to transparency and fairness by providing detailed explanations and documentation throughout the negotiation process.",
+    "what_was_achieved": [
+      "Provided detailed breakdowns of how each bidder's score was calculated",
+      "Offered an oral debriefing session with both parties' legal teams present"
+    ],
+    "what_was_conceded": [
+      "Agreed to provide additional documentation and explanations to address Alstom's concerns",
+      "Allowed for a more formal setting for the debriefing session"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The negotiation did not achieve a resolution in favour of Alstom, and we are now at a deadlock. Pursuing damages or formal TCC proceedings remains an option, which is costly, slow, and uncertain.",
+    "win_statement": "We successfully pushed for additional documentation and transparency from London Underground, but ultimately could not reach a mutually acceptable agreement. We secured some concessions on the process, including an oral debriefing session with both parties' legal teams present, but these do not address our core concerns about the evaluation process.",
+    "what_was_achieved": [
+      "Obtained additional documentation from London Underground to support their evaluation process",
+      "Secured a formal oral debriefing session between Alstom and London Underground's evaluation team leaders"
+    ],
+    "what_was_conceded": [
+      "Failed to secure a resolution in favour of Alstom, resulting in the need for further legal action",
+      "Did not achieve sufficient transparency or fairness in the evaluation process to address our core concerns"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Application of mandatory technical threshold requirement",
+      "Exclusion of Bombardier's bid",
+      "Fairness and transparency of evaluation process"
+    ],
+    "concessions_summary": "Both parties made concessions throughout the negotiation, with London Underground providing additional documentation, clarification, and an oral debriefing session. Alstom Transport UK Ltd accepted these concessions but continued to request further clarification on specific points.",
+    "court_reasoning_summary": "The Court assessed each round qualitatively, focusing on whether the Contracting Authority's application of the technical threshold requirement was rationally defensible and transparent. The Court found no evidence of manifest error in the application of the technical threshold requirement but recommended continuing negotiation to address Alstom's concerns.",
+    "likely_next_steps": "The dispute has reached a deadlock, with both parties unable to agree on further concessions or clarification. As a result, the case will likely proceed to formal proceedings, where the Court will make a binding decision on the matter.",
+    "plain_english_summary": "The negotiation centered around Alstom's challenge to London Underground's evaluation process for a \u00a3112 million contract. Despite concessions from both parties, including additional documentation and an oral debriefing session, the dispute remains unresolved. The case is likely to proceed to formal proceedings, where the Court will make a final decision."
+  }
+}
