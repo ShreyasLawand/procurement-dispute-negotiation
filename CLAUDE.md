@@ -127,6 +127,8 @@ procurement-dispute-negotiation/
 │   │   └── loader.py               # extract -> DisputeScenario, cached per slug
 │   ├── risk/
 │   │   └── challenge_risk.py       # pre-award challenge risk screen (rule-based, no LLM)
+│   ├── recommendation/
+│   │   └── settlement_recommendation.py  # batch-level settlement synthesis (aggregation only, no LLM)
 │   └── utils/
 │       ├── compliance_metrics.py   # structural-compliance counters + parse_llm_json()
 │       ├── negotiation_helpers.py  # is_repetitive(), format_previous_statements(), get_round_stage_instruction()
@@ -204,6 +206,20 @@ The extraction agent (`src/prompts/extraction_prompt.py`) deliberately mirrors t
 **Step 2A coverage — partially restored (15 Aug 2026) via a 5th real case.** `woods-milton-keynes` — *Woods Building Services v Milton Keynes Council* [2015] EWHC 2011 (TCC) — publishes a real, verified 60% price / 40% quality formula (£8m asbestos removal contract, 24 scoring criteria) and a real, court-quantified correction (EAS −40 marks, Woods +6 marks). Read the case's own docstring in `real_cases.py` before assuming this is a like-for-like replacement of the deleted F21-002: F21-002 was a pure transcription/addition slip; Woods' manifest error was in the *rationality* of individual quality sub-scores, which the court then recombined through the real formula. A correct Court agent run here should engage Step 2A (verify the 60/40 combination) **and** Step 2B (assess whether the underlying criterion scores were rationally justified) — a run that jumps straight to "the arithmetic is right" has missed the actual finding in this case. This is not yet run through extraction — do that before citing any results on it.
 
 Also note: every batch in `batch_results/` predating this change is a run of the deleted F21-001, so **those historical figures — including the ~57% qualitative and 100% numeric numbers — describe scenarios that no longer exist and should not be cited.**
+
+### Settlement recommendation synthesizer
+
+`src/recommendation/settlement_recommendation.py` + `scripts/synthesize_settlement_recommendation.py` — a deliberately **scoped-down** version of the "recommendations for both parties to settle" idea originally floated to Phil (that idea was the user's own suggestion to him, not his ask — his actual framing was prevention, which is why the risk screen above is the higher-priority module and was built first).
+
+**What it actually is:** `run_batch_evaluation.py` already produces an outcome distribution across N repeated runs of the same scenario — that distribution *is* a Monte Carlo sample, previously used only as noise to average into an accuracy metric. This module reframes the same data as a recommendation: pure aggregation over an already-completed batch (`synthesize_recommendation(batch_summary_dict)`, no LLM call) — modal outcome, confidence from how often runs agreed, and every dissenting outcome named explicitly rather than silently averaged away.
+
+**Constrained vocabulary, enforced, not just documented.** Doc 3 states explicitly that award-stage disputes cannot be settled by "splitting the difference." `KNOWN_OUTCOMES` is exactly the Court agent's own `recommended_action` vocabulary plus the orchestrator's deadlock string — nothing else. `synthesize_recommendation` **raises** if a batch contains any outcome outside that set, verified with a deliberately-injected `"settle for 50% of contract value"` string during testing. An unrecognised "settlement" appearing in output would be exactly the kind of fabrication this project's whole discipline exists to catch, so it's a hard error, not a warning.
+
+**Refuses to run on an incomplete batch** — same `complete` flag discipline as everywhere else in this codebase, with one refinement: batches from before 15 Aug 2026 predate the flag entirely, so an *absent* `complete` key falls back to checking `n_runs_successful + n_runs_failed == n_runs_requested` (what "complete" meant before the flag existed) rather than blanket-refusing the whole historical corpus. An *explicit* `complete: false` always blocks regardless.
+
+**Framed explicitly as computational Early Neutral Evaluation** — a real, TCC-adjacent process, not an invented category — specifically to answer the "is this practising law" question a two-sided settlement tool invites, rather than leaving it as an implicit risk.
+
+**Deliberately not built:** an LLM-generated narrative (transcript-aware rationale, terms specific to each party) — that needs a model call analogous to the Summary agent but operating across a whole batch, and was deferred so this module could be built and verified without touching Ollama during the concurrent Court-prompt ablation. `rationale` is template-generated from the aggregate numbers only, and says so in the field description.
 
 ### Pre-award challenge risk screen
 
