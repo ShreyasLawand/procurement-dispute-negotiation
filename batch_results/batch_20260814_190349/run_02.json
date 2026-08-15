@@ -1,0 +1,122 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-PARKINGEYE-2026",
+    "title": "Parkingeye Ltd v Velindre University NHS Trust & Cardiff and Vale University Health Board",
+    "description": "The contracting authorities awarded a \u00a310-20 million car park management services contract to National Parking Control Group (NPCG) over incumbent provider Parkingeye Ltd, which challenged the award citing transparency breaches, evaluation methodology issues, and inconsistent treatment of bidders. The court refused to lift the automatic suspension on contract signature pending a full trial of Parkingeye's claims.",
+    "contract_value_gbp": 15000000.0,
+    "dispute_type": "transparency_breach",
+    "procedural_stage": "standstill",
+    "contracting_authority_name": "Velindre University NHS Trust / Cardiff and Vale University Health Board",
+    "bidder_name": "Parkingeye Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: Avoid \u00a315,000,000 contract delay and associated costs",
+      "Continuity of Service / Delivery: Maintain timely car park management services for patients and visitors at Velindre University NHS Trust and Cardiff and Vale University Health Board",
+      "Reputation & Public Accountability: Uphold public confidence in the procurement process and protect reputation as a competent buyer"
+    ],
+    "goals": [
+      "Defend transparency of evaluation process",
+      "Maintain integrity of scoring methodology"
+    ],
+    "batna": "Defending the procurement decision in the Technology and Construction Court (TCC) if no agreement is reached",
+    "opening_position": "The contracting authorities stand by their evaluation decision, which was made in accordance with the Procurement Act 2023 and published evaluation criteria.",
+    "legal_basis": [
+      "Section 12 of the Procurement Act 2023: Value for money, maximising public benefit, sharing information for transparency, acting with integrity",
+      "Regulation 32(2) of the Public Contracts Regulations 2015: Automatic suspension of contract signature pending a full trial"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a35-10 million loss of revenue over the contract term, plus bid costs and opportunity cost due to lost strategic partnership",
+      "Fairness & Transparency: Perception that evaluation methodology was flawed and inconsistent treatment of bidders undermines trust in future procurements"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids to rectify perceived transparency breaches and evaluation methodology issues",
+      "Obtain damages for loss of revenue and bid costs incurred due to the flawed procurement process"
+    ],
+    "batna": "litigation cost: $250,000 - $500,000 in legal fees over a prolonged period (6-12 months), relationship damage: Irreparable damage to our relationship with Velindre University NHS Trust and Cardiff and Vale University Health Board for future bids",
+    "opening_position": "request for action: Request a full re-evaluation of the submitted bids, including disclosure of all evaluation scores and comments, alternative resolution: Propose an independent review panel to oversee the re-evaluation process and provide feedback on the procurement methodology",
+    "legal_basis": [
+      "Public Contracts Regulations 2015, Transparency in Business (EU Directive) 2009/EC"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Parkingeye Ltd's concerns regarding transparency breaches and evaluation methodology issues. However, we must clarify that our evaluation team followed a robust and transparent process as outlined in our procurement documentation. Can you specify which particular aspects of the evaluation you believe were inconsistent or lacking in transparency?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your acknowledgement of our concerns regarding transparency breaches and evaluation methodology issues. However, we need more clarity on how you can justify that your evaluation team followed a robust and transparent process as outlined in your procurement documentation when we have identified specific discrepancies in scoring and evaluator comments. Can you provide us with the detailed scoring sheets and evaluator feedback for both ourselves and NPCG to review? We believe this will help clarify the inconsistencies we've raised.",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Transparency",
+        "Evaluation methodology"
+      ],
+      "reasoning": "This scenario does not contain any explicit formula, sub-scores, or numbers. Therefore, I will assess compliance qualitatively instead of computationally. The Contracting Authority's claim that they followed a 'robust and transparent process' is contradicted by the Aggrieved Bidder's identification of specific discrepancies in scoring and evaluator comments. This suggests a lack of transparency and inconsistent treatment of bidders. Furthermore, the Contracting Authority has not provided detailed scoring sheets or evaluator feedback as requested by the Aggrieved Bidder, which would help clarify these inconsistencies.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome of re-evaluation is a more favorable result than our BATNA (defending in TCC court, which would cost \u00a350k+ and take 6-12 months). While we didn't achieve a full win, the re-evaluation process allowed us to address Parkingeye's concerns and provided clarity on our evaluation methodology.",
+    "win_statement": "We successfully navigated the dispute and maintained control over the contract award process. Although we couldn't entirely dismiss Parkingeye's claims, the re-evaluation outcome is more cost-effective and time-efficient than going to court.",
+    "what_was_achieved": [
+      "Addressed Parkingeye's concerns regarding transparency breaches and evaluation methodology issues through a re-evaluation process",
+      "Maintained control over the contract award process without incurring significant legal costs"
+    ],
+    "what_was_conceded": [
+      "Agreed to re-evaluate the contract award, which required additional time and resources",
+      "Provided detailed scoring sheets and evaluator feedback to Parkingeye as requested"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome of re-evaluation is less favourable than our BATNA, which was to pursue damages or formal TCC proceedings. This process would have been costly, slow, and uncertain, but it would have given us a chance to fully litigate our claims.",
+    "win_statement": "We were able to secure a re-evaluation of the contract award, which is a partial victory. However, we did not achieve our primary objective of having the contract award set aside in its entirety.",
+    "what_was_achieved": [
+      "Secured a re-evaluation of the contract award",
+      "Contracting authorities acknowledged transparency breaches and evaluation methodology issues"
+    ],
+    "what_was_conceded": [
+      "Did not achieve our primary objective of having the contract award set aside",
+      "Had to accept a re-evaluation rather than pursuing damages or formal TCC proceedings"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Transparency breaches",
+      "Evaluation methodology issues",
+      "Discrepancies in scoring and evaluator comments"
+    ],
+    "concessions_summary": "Neither side made any concessions during the negotiation. The Contracting Authority maintained that their evaluation team followed a robust and transparent process, while the Aggrieved Bidder continued to press for clarification on specific discrepancies.",
+    "court_reasoning_summary": "The Court concluded that there was a manifest error in the Contracting Authority's evaluation process due to inconsistencies in scoring and evaluator comments. The lack of transparency and failure to provide requested documentation further supported this conclusion.",
+    "likely_next_steps": "Re-evaluation is recommended by the Court, which means the Contracting Authority will need to re-assess the bids and make a new decision. This may involve revisiting the evaluation process, providing additional information or clarification, and potentially awarding the contract to a different bidder.",
+    "plain_english_summary": "The negotiation failed to resolve the dispute due to ongoing concerns about transparency and consistency in the Contracting Authority's evaluation process. The Court has recommended re-evaluation to ensure fairness and accuracy in the procurement process."
+  }
+}
