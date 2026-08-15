@@ -1,0 +1,12 @@
+{
+  "dispute_id": "REAL-FARADAY-2018",
+  "title": "Faraday Development Ltd v West Berkshire Council",
+  "description": "West Berkshire Council entered into a development agreement with St Modwen Developments Ltd for approximately \u00a3125 million, structured as a conditional land agreement. Faraday Development Ltd challenged the arrangement, alleging that it was in substance a public works contract that should have been competitively procured under the Public Contracts Regulations. The High Court initially dismissed the claim, but the Court of Appeal reversed this decision, holding that the agreement was indeed a public works contract and declaring its ineffectiveness.",
+  "contract_value_gbp": 125000000.0,
+  "dispute_type": "process_avoidance",
+  "procedural_stage": "appeal",
+  "contracting_authority_name": "West Berkshire Council",
+  "bidder_name": "Faraday Development Ltd",
+  "ca_profile": null,
+  "bidder_profile": null
+}

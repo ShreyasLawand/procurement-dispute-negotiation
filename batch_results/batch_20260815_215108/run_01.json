@@ -1,0 +1,123 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-FARADAY-2018",
+    "title": "Faraday Development Ltd v West Berkshire Council",
+    "description": "West Berkshire Council entered into a development agreement with St Modwen Developments Ltd for approximately \u00a3125 million, structured as a conditional land agreement. Faraday Development Ltd challenged the arrangement, alleging that it was in substance a public works contract that should have been competitively procured under the Public Contracts Regulations. The High Court initially dismissed the claim, but the Court of Appeal reversed this decision, holding that the agreement was indeed a public works contract and declaring its ineffectiveness.",
+    "contract_value_gbp": 125000000.0,
+    "dispute_type": "process_avoidance",
+    "procedural_stage": "appeal",
+    "contracting_authority_name": "West Berkshire Council",
+    "bidder_name": "Faraday Development Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Avoid manifest error and ensure the procurement process is legally defensible.",
+      "Protection of Public Funds: \u00a3125,000,000 contract value requires efficient delivery to avoid significant financial losses.",
+      "Continuity of Service / Delivery: The development agreement supports critical infrastructure projects in West Berkshire, with a delay or re-run risking operational disruption and service delivery gaps."
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Maintain public confidence in the procurement process"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our evaluation, which was conducted fairly and transparently. We are willing to provide additional feedback and clarification on the scoring process.",
+    "legal_basis": [
+      "Public Contracts Regulations",
+      "Procurement Act 2023"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: We risk losing \u00a3125m in revenue due to the ineffectiveness of the development agreement.",
+      "Fairness & Transparency: The contracting authority's process appears opaque, and we need clarity on why our bid was not considered for the public works contract.",
+      "Strategic Leverage: A challenge may be used tactically to obtain more detailed feedback and disclosure from West Berkshire Council."
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "An award of damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We request a re-evaluation of submitted bids to ensure fairness and transparency in the procurement process.",
+    "legal_basis": [
+      "Public Contracts Regulations",
+      "Court of Appeal decision"
+    ],
+    "confidence_score": 0.7
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I appreciate Faraday Development Ltd's opening position and acknowledge their concerns regarding the procurement process. However, I would like to clarify whether they are specifically challenging the evaluation criteria used for the conditional land agreement or if there are any other aspects of the procurement process that they believe were not followed correctly. Additionally, could you provide more information on what specific actions you believe West Berkshire Council should take to rectify this situation?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "Thank you for your response and acknowledgement of our concerns. We appreciate the opportunity to clarify our position. Specifically, we are challenging the evaluation criteria used for the conditional land agreement as it relates to the scoring discrepancy between our bid and that of St Modwen Developments Ltd. We believe that this discrepancy is a manifest error and warrants a re-evaluation of all bids. Regarding your request for specific actions, we propose that West Berkshire Council conduct an independent review of the evaluation process, led by a neutral third-party expert, to identify any procedural irregularities or biases in the scoring.",
+      "proposal": "Independent Review of Evaluation Process",
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Public Contracts Regulations",
+        "Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a challenge to the evaluation criteria used for the conditional land agreement. There are no explicit formulas or sub-scores mentioned in the scenario. The Aggrieved Bidder's position suggests that there was a scoring discrepancy between their bid and St Modwen Developments Ltd's bid, which they believe constitutes a manifest error. However, without specific numbers or a points system, I cannot perform an independent calculation to verify this claim. Therefore, I will rely on qualitative reasoning to assess the situation.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiated outcome is more favorable than our BATNA of defending in TCC court, which would have cost \u00a350k+ and taken 6-12 months. We avoided the uncertainty and potential costs associated with a lengthy legal battle.",
+    "win_statement": "We successfully negotiated a re-evaluation of the conditional land agreement, which will allow us to rectify any procedural irregularities or biases in the scoring without having to resort to costly litigation.",
+    "what_was_achieved": [
+      "Avoided the costs and uncertainty associated with a lengthy legal battle",
+      "Negotiated a re-evaluation of the conditional land agreement"
+    ],
+    "what_was_conceded": [
+      "Agreed to an independent review of the evaluation process, led by a neutral third-party expert",
+      "Will conduct a re-evaluation of all bids in response to the manifest error identified by Faraday Development Ltd"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is more favourable than our BATNA of pursuing damages or formal TCC proceedings, which would have been costly, slow, and uncertain. We achieved a re-evaluation of the conditional land agreement, but it falls short of our desired outcome of declaring the original agreement ineffective.",
+    "win_statement": "We successfully secured a re-evaluation of the conditional land agreement, although we did not achieve our primary objective of having the original agreement declared ineffective. This outcome is still considered a win as it acknowledges the procedural irregularities in the evaluation process and provides an opportunity for a fresh assessment.",
+    "what_was_achieved": [
+      "Re-evaluation of the conditional land agreement",
+      "Acknowledgement of procedural irregularities in the evaluation process"
+    ],
+    "what_was_conceded": [
+      "Did not achieve primary objective of declaring original agreement ineffective",
+      "Limited scope for re-evaluation, which may not fully address concerns"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Evaluation criteria used for the conditional land agreement",
+      "Scoring discrepancy between Faraday Development Ltd's bid and St Modwen Developments Ltd's bid"
+    ],
+    "concessions_summary": "Neither side made significant concessions during the negotiation. The Contracting Authority acknowledged the Aggrieved Bidder's concerns, while the Aggrieved Bidder proposed an independent review of the evaluation process.",
+    "court_reasoning_summary": "The Court concluded that a manifest error occurred due to the scoring discrepancy between the bids. However, without explicit numbers or formulas, the Court relied on qualitative reasoning and recommended a re-evaluation of all bids.",
+    "likely_next_steps": "A re-evaluation of all bids will be conducted by West Berkshire Council, as per the Court's recommendation.",
+    "plain_english_summary": "The dispute centered around a scoring discrepancy in the conditional land agreement evaluation. The Aggrieved Bidder claimed this was a manifest error and requested an independent review. The Court agreed that an error occurred but couldn't quantify it, so recommended re-evaluating all bids."
+  }
+}

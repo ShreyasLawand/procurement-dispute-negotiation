@@ -187,11 +187,23 @@ This went through three iterations, each with a distinct, empirically-measured f
 | V1 (original) | Judgement-based, no explicit verification | Manifest-error findings tracked whether CA *conceded* in dialogue, not the actual facts — unreliable |
 | V2 (verification-only) | Always independently verify any calculation | Fixed concession-dependency on numeric scenarios (100% accuracy) but **overcorrected**: fabricated invented point-systems on qualitative scenarios with no real formula |
 | V3 | Conditional: compute exactly if a real formula exists; otherwise conduct qualitative rational-basis review with no invented numbers | Restored realistic, non-fabricated judgement on qualitative scenarios (~57% agreement) while keeping 100% accuracy on numeric ones |
-| V4 (current) | V3 verbatim, with the three-line guiding-principles block replaced by all six of Doc 1's "Courts / Judiciary" interest categories, plus a precedence note | **Not yet measured — baselines must be re-run.** See below |
+| V4 (current) | V3 verbatim, with the three-line guiding-principles block replaced by all six of Doc 1's "Courts / Judiciary" interest categories, plus a precedence note | **Measured across all 5 real cases (15 Aug 2026), n=8/rounds=5 each. See below.** |
 
 **V3 vs V4 is a controlled ablation, use it as one.** `court_prompt.py` holds `COURT_SYSTEM_PROMPT_V3` and `COURT_SYSTEM_PROMPT_V4` as separate constants; V4 is derived from V3 by a single verified `.replace()` of one named block, so the two differ in exactly one variable — the interest taxonomy. `COURT_SYSTEM_PROMPT` points at V4; swap it to V3 to reproduce the pre-Doc-1 baseline. The module raises at import if the substitution anchor ever stops matching, rather than silently falling back to V3 and misreporting which prompt an evaluation ran under.
 
-Doc 1's category 5 ("Efficient Use of Judicial Resources" — encourage settlement, often through mediation) is the change most likely to shift the outcome distribution toward "continue negotiation". V4 therefore carries an explicit precedence note: the interests select *which remedy* follows a finding, never the finding itself. Whether that guard actually holds is an empirical question — measure it, don't assume it. **Every figure in `batch_results/` predates V4 and describes V3.**
+Doc 1's category 5 ("Efficient Use of Judicial Resources" — encourage settlement, often through mediation) is the change most likely to shift the outcome distribution toward "continue negotiation". V4 therefore carries an explicit precedence note: the interests select *which remedy* follows a finding, never the finding itself. Whether that guard actually holds is an empirical question — measure it, don't assume it.
+
+**V3/V4 resolution rate, n=8/rounds=5, all runs `complete: true`, 100% structural compliance on every n=8 batch (15 Aug 2026):**
+
+| Case | V3 resolution rate | V4 resolution rate |
+|---|---|---|
+| Alstom v LUL | 50.0% (4/8) | 100% (8/8) |
+| Faraday v West Berkshire | 75.0% (6/8) | 100% (8/8) |
+| Lancashire Care v Lancashire CC | 87.5% (7/8) | 100% (8/8) |
+| Woods v Milton Keynes | 100% (8/8) | 100% (7/7 successful — 1 run hit a JSON parse failure caught by `parse_llm_json`'s fallback chain, correctly recorded as failed rather than crashing the batch) |
+| Parkingeye v Velindre | n=4 legacy batch, pre-dates the `resolution_rate` rename (still `agreement_rate` in the raw file) — not directly comparable to the n=8 figures above, re-run before citing a Parkingeye V3/V4 number |
+
+**V4 resolves at 100% on every case it has an n=8 pair for; V3 varies 50-87.5% on the same three cases where it isn't already at 100%.** This is the guiding-principles ablation's headline result so far — the precedence note appears to hold in the sense that V4 never invents a remedy inconsistent with the finding, but the *direction* of the shift (uniformly toward resolution, never away from it) is exactly the kind of settlement-encouraging bias Doc 1's category 5 predicts, and is worth naming as a finding rather than treating as simply "V4 is better." A prompt that resolves everything is not automatically the more *correct* one — this needs a qualitative read of a sample of V4 transcripts (does it fabricate, concede prematurely, or genuinely reach a soundly-reasoned resolution?) before citing "V4 improves resolution rate" as an unqualified positive in the dissertation or the board deck.
 
 **Never let the Court agent fabricate arithmetic on qualitative scenarios.** This is the project's core empirical finding, don't regress it while iterating on prompts.
 
