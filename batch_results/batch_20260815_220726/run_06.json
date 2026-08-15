@@ -1,0 +1,200 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-PARKINGEYE-2026",
+    "title": "Parkingeye Ltd v Velindre University NHS Trust & Cardiff and Vale University Health Board",
+    "description": "The contracting authorities awarded a \u00a310-20 million 5-year car park management services contract to National Parking Control Group (NPCG) over incumbent provider Parkingeye Ltd, which scored 68% against NPCG's 84%. Parkingeye alleged transparency failure in the tender notice (\u00a3100,000 stated value), post-commencement evaluation methodology changes, and inconsistent treatment of bidders during clarification exchanges. The court applied the new statutory test for lifting automatic suspension under section 101 of the Procurement Act 2023 and refused to lift the suspension, finding the balance of public interest favoured allowing Parkingeye's challenge to proceed.",
+    "contract_value_gbp": 15000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "standstill",
+    "contracting_authority_name": "Velindre University NHS Trust / Cardiff and Vale University Health Board",
+    "bidder_name": "Parkingeye Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 4,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Act lawfully under the Procurement Act 2023 and follow published evaluation criteria.",
+      "Protection of Public Funds: Avoid delays that increase costs, particularly given the \u00a315,000,000 contract value.",
+      "Continuity of Service / Delivery: Ensure timely car park management services for patients and staff at Velindre University NHS Trust and Cardiff and Vale University Health Board.",
+      "Reputation & Public Accountability: Maintain public confidence in our procurement process and avoid adverse media scrutiny.",
+      "Minimising Litigation Risk: Provide sufficient disclosure to reassure Parkingeye Ltd without undermining evaluation confidentiality or integrity."
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Resolve the dispute through negotiation"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our evaluation process, which was transparent and followed published criteria. We are willing to discuss Parkingeye Ltd's concerns and provide additional feedback within the bounds of commercial confidentiality.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Section 101: statutory test for lifting automatic suspension"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a310-20 million contract value at risk due to perceived evaluation flaws",
+      "Fairness & Transparency: transparency failure in the tender notice and inconsistent treatment of bidders during clarification exchanges"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids, giving us a chance to be awarded the contract ourselves",
+      "An award of damages for loss of business due to alleged evaluation flaws"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We request a thorough re-evaluation of all bids, including access to scoring methodology and evaluator comments, to address the alleged transparency failure and inconsistent treatment of bidders",
+    "legal_basis": [
+      "Section 101 of the Procurement Act 2023",
+      "The Public Contracts Regulations 2015"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Parkingeye's concerns regarding transparency and evaluation methodology changes. However, we must clarify that the tender notice accurately reflected the estimated value of \u00a310-20 million, as stated in our published documentation. We also note that the evaluation methodology was clearly outlined in the contract specification and did not change post-commencement. Can you provide specific examples of how you believe you were treated inconsistently during clarification exchanges?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We acknowledge your clarification on the tender notice and evaluation methodology, but we still believe that there was an inconsistency in how bidders were treated during clarification exchanges. Specifically, we would like to know more about the scoring discrepancy between our bid and NPCG's bid. Can you provide us with a detailed breakdown of how our scores were calculated for each criterion, as well as any evaluator comments or feedback provided to us during the evaluation process?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "We understand your request for a detailed breakdown of how your scores were calculated for each criterion and any evaluator comments or feedback provided during the evaluation process. We can provide this information, which will be based on our published evaluation criteria and methodology. However, we must clarify that the scoring discrepancy between your bid and NPCG's bid was due to differences in their respective approaches to meeting the contract requirements, as outlined in the tender notice and specification. Specifically, NPCG's bid demonstrated a stronger alignment with our objectives for value for money and public benefit, which were key factors in determining the award decision. We can provide a detailed breakdown of the scoring for each criterion, including any evaluator comments or feedback provided to you during the evaluation process.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to provide more information on the scoring discrepancy and evaluator comments. However, we remain concerned that our scores were not accurately reflected in the final evaluation report. Specifically, we would like to see a detailed breakdown of how our scores for 'value for money' and 'public benefit' were calculated, as these criteria seemed to have been weighted differently than initially stated in the tender notice. We also request clarification on why NPCG's bid was deemed to demonstrate a stronger alignment with the contract requirements when our own bid included several innovative features that addressed specific needs outlined in the specification. Furthermore, we would like to propose a feedback session between our team and the evaluation panel to discuss any discrepancies and ensure a clear understanding of the evaluation process.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge your concerns regarding the scoring discrepancy and evaluator comments. We can provide a detailed breakdown of how your scores for 'value for money' and 'public benefit' were calculated, as well as any evaluator comments or feedback provided to you during the evaluation process. However, we must clarify that our evaluation methodology was clearly outlined in the contract specification and did not change post-commencement. We also note that NPCG's bid demonstrated a stronger alignment with our objectives for value for money and public benefit, which were key factors in determining the award decision. Regarding your request for a feedback session between our team and the evaluation panel, we are willing to offer a voluntary debriefing meeting to discuss any discrepancies and ensure a clear understanding of the evaluation process.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your offer to provide a detailed breakdown of how our scores for 'value for money' and 'public benefit' were calculated, as well as any evaluator comments or feedback provided during the evaluation process. However, we still believe that there was an inconsistency in how bidders were treated during clarification exchanges, which may have influenced the scoring discrepancy between our bid and NPCG's bid. We would like to request a meeting with the evaluation panel to discuss these discrepancies and ensure a clear understanding of the evaluation process. Furthermore, we propose a partial award covering 50% of the contract value, as this would allow us to understand how our scores were calculated for the remaining criteria.",
+      "proposal": "A partial award covering 50% of the contract value",
+      "concession_made": null
+    },
+    {
+      "round_number": 4,
+      "sender_role": "contracting_authority",
+      "message": "We understand your request for a meeting with the evaluation panel to discuss discrepancies and ensure a clear understanding of the evaluation process. We are willing to offer this meeting, but we propose that it be held in conjunction with the voluntary debriefing meeting we previously offered. This would allow both parties to engage with the evaluation panel simultaneously and address any concerns or questions they may have. Additionally, we can provide a detailed breakdown of how your scores were calculated for each criterion, including any evaluator comments or feedback provided during the evaluation process.",
+      "proposal": "A joint debriefing meeting between our team and the evaluation panel",
+      "concession_made": null
+    },
+    {
+      "round_number": 4,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your offer to provide a detailed breakdown of how our scores were calculated for each criterion, including any evaluator comments or feedback provided during the evaluation process. However, we are concerned that this information may not be sufficient to address our concerns regarding the inconsistency in how bidders were treated during clarification exchanges. Therefore, we would like to request a meeting with the evaluation panel to discuss these discrepancies and ensure a clear understanding of the evaluation process. We believe that such a meeting would provide a more comprehensive understanding of the evaluation process and allow us to better understand why our scores were calculated differently than NPCG's bid. Additionally, we would like to propose that this meeting be held in conjunction with the voluntary debriefing meeting you previously offered.",
+      "proposal": "A joint meeting between our team and the evaluation panel to discuss discrepancies and ensure a clear understanding of the evaluation process",
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Section 101 of the Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, not numeric. The parties' statements do not provide any explicit formula or sub-scores that can be computed. I will assess compliance qualitatively instead. The contracting authority's position states that the tender notice accurately reflected the estimated value of \u00a310-20 million and that the evaluation methodology was clearly outlined in the contract specification, which did not change post-commencement. These statements appear to be rationally defensible and do not contradict the published criteria's plain wording. However, I note that the aggreived bidder has raised concerns about inconsistent treatment during clarification exchanges, which requires further investigation.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 of the Procurement Act 2023",
+        "section 101 of the Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves subjective evaluation criteria such as 'value for money' and 'public benefit'. There are no explicit formulas or sub-scores provided. The Contracting Authority's explanation that NPCG's bid demonstrated a stronger alignment with their objectives does not necessarily imply a manifest error. However, the Aggrieved Bidder's concerns about the weighting of certain criteria and the evaluation process may warrant further investigation. I will assess compliance qualitatively, considering whether the published criteria language was applied in a way that is rationally defensible.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 3,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "section 101 of the Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves subjective evaluation criteria such as 'value for money' and 'public benefit'. There are no explicit formulas or sub-scores provided. The Contracting Authority's position states that NPCG's bid demonstrated a stronger alignment with their objectives, which is a rational justification for the scoring discrepancy. I do not find any manifest error in this regard. However, I note that the Aggrieved Bidder has raised concerns about inconsistent treatment of bidders during clarification exchanges, which may be a matter for further investigation.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 4,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Section 101 of the Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a comparison of scores and treatment of bidders during clarification exchanges. The Contracting Authority's statements do not provide any explicit formula or calculation method for scoring. I will assess compliance qualitatively instead. However, I notice that the Contracting Authorities awarded the contract to NPCG with an 84% score, while Parkingeye scored 68%. This large score gap raises concerns about the rational basis of the evaluation process. The Contracting Authority's proposal to provide a detailed breakdown of how scores were calculated for each criterion may be helpful, but it does not address the underlying issue of inconsistent treatment of bidders during clarification exchanges.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome of re-evaluation is a more favorable result compared to our BATNA, which would have involved defending in TCC court and potentially costing \u00a350k+ and taking 6-12 months. The negotiation process allowed us to provide additional information and clarify the evaluation methodology, which helped to address some of Parkingeye's concerns.",
+    "win_statement": "We successfully negotiated a re-evaluation of the contract award, which resulted in a more favorable outcome for our organization compared to defending in court. We were able to provide transparency into the evaluation process and demonstrate that our scoring methodology was consistent with the published criteria.",
+    "what_was_achieved": [
+      "Provided detailed breakdowns of how scores were calculated for each criterion",
+      "Offered a voluntary debriefing meeting to discuss any discrepancies"
+    ],
+    "what_was_conceded": [
+      "Agreed to provide additional information on evaluator comments and feedback",
+      "Proposed a partial award covering 50% of the contract value (although ultimately not implemented)"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome of re-evaluation is slightly favourable compared to our BATNA (pursuing damages or formal TCC proceedings, which is costly, slow, and uncertain). We were able to secure a detailed breakdown of how our scores were calculated for each criterion, including any evaluator comments or feedback provided during the evaluation process. However, we did not achieve our primary goal of having our bid re-evaluated in its entirety.",
+    "win_statement": "We successfully secured a re-evaluation of our bid and obtained a detailed breakdown of how our scores were calculated for each criterion, which should provide us with a clearer understanding of the evaluation process. However, we did not achieve our desired outcome of having our bid re-evaluated in its entirety or securing a partial award covering 50% of the contract value.",
+    "what_was_achieved": [
+      "A detailed breakdown of how our scores were calculated for each criterion",
+      "Evaluator comments and feedback provided during the evaluation process"
+    ],
+    "what_was_conceded": [
+      "Our request for a re-evaluation of our bid in its entirety was not granted",
+      "Our proposal for a partial award covering 50% of the contract value was rejected"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Inconsistent treatment of bidders during clarification exchanges",
+      "Scoring discrepancy between Parkingeye's bid and NPCG's bid",
+      "Weighting of certain criteria in the evaluation process"
+    ],
+    "concessions_summary": "The Contracting Authority made several concessions throughout the negotiation, including providing a detailed breakdown of how scores were calculated for each criterion, offering a voluntary debriefing meeting to discuss discrepancies, and proposing a partial award covering 50% of the contract value. However, they did not concede on the core issue of inconsistent treatment of bidders during clarification exchanges.",
+    "court_reasoning_summary": "The Court's reasoning was based on qualitative assessments of the parties' statements and the evaluation process. They found no manifest error in the Contracting Authority's position, but noted concerns about the rational basis of the evaluation process, particularly with regards to the scoring discrepancy between Parkingeye's bid and NPCG's bid.",
+    "likely_next_steps": "The Court recommended re-evaluation due to the large score gap between Parkingeye's bid and NPCG's bid, which raises concerns about the rational basis of the evaluation process. It is likely that the Contracting Authority will be required to re-evaluate the bids and provide a more transparent explanation for their scoring decisions.",
+    "plain_english_summary": "The negotiation was driven by a dispute over how bidders were treated during clarification exchanges, which may have influenced the scoring discrepancy between Parkingeye's bid and NPCG's bid. The Contracting Authority made several concessions but did not address the core issue of inconsistent treatment. The Court recommended re-evaluation due to concerns about the rational basis of the evaluation process."
+  }
+}
