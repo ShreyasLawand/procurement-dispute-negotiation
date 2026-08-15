@@ -123,8 +123,10 @@ procurement-dispute-negotiation/
 │   ├── schemas/
 │   │   └── agent_state.py          # all Pydantic models
 │   ├── cases/
-│   │   ├── real_cases.py           # the 4 real judgments (source texts)
+│   │   ├── real_cases.py           # the 5 real judgments (source texts)
 │   │   └── loader.py               # extract -> DisputeScenario, cached per slug
+│   ├── risk/
+│   │   └── challenge_risk.py       # pre-award challenge risk screen (rule-based, no LLM)
 │   └── utils/
 │       ├── compliance_metrics.py   # structural-compliance counters + parse_llm_json()
 │       ├── negotiation_helpers.py  # is_repetitive(), format_previous_statements(), get_round_stage_instruction()
@@ -202,6 +204,22 @@ The extraction agent (`src/prompts/extraction_prompt.py`) deliberately mirrors t
 **Step 2A coverage — partially restored (15 Aug 2026) via a 5th real case.** `woods-milton-keynes` — *Woods Building Services v Milton Keynes Council* [2015] EWHC 2011 (TCC) — publishes a real, verified 60% price / 40% quality formula (£8m asbestos removal contract, 24 scoring criteria) and a real, court-quantified correction (EAS −40 marks, Woods +6 marks). Read the case's own docstring in `real_cases.py` before assuming this is a like-for-like replacement of the deleted F21-002: F21-002 was a pure transcription/addition slip; Woods' manifest error was in the *rationality* of individual quality sub-scores, which the court then recombined through the real formula. A correct Court agent run here should engage Step 2A (verify the 60/40 combination) **and** Step 2B (assess whether the underlying criterion scores were rationally justified) — a run that jumps straight to "the arithmetic is right" has missed the actual finding in this case. This is not yet run through extraction — do that before citing any results on it.
 
 Also note: every batch in `batch_results/` predating this change is a run of the deleted F21-001, so **those historical figures — including the ~57% qualitative and 100% numeric numbers — describe scenarios that no longer exist and should not be cited.**
+
+### Pre-award challenge risk screen
+
+`src/risk/challenge_risk.py` + `scripts/assess_challenge_risk.py` — evaluation punch-list item 8, and the highest-leverage module in the project by Phil's own framing ("how can we prevent these dispute negotiations"). Everything else here — the negotiation simulator, any settlement recommendation — operates on a dispute that has already started. This is the only component that can stop one from starting, and the only component with real, observable ground truth (challenged vs. not-challenged), which nothing else in this system has.
+
+**Reuses `CAProfile`/`BidderProfile` as the risk-factor taxonomy** — they already *are* Doc 1's "Practical Considerations" tables, so no new schema was needed, just a scoring layer on top. `assess_challenge_risk(ca_profile, bidder_profile)` returns a `ChallengeRiskAssessment`: a risk band, a normalised score, and a list of `RiskFlag`s, each traced to a specific profile field and a specific close-paraphrased sentence from Doc 1, with a concrete pre-award mitigation.
+
+**Critical framing, read before extending this module:** it predicts *"is a challenge likely to be raised"*, not *"would the CA lose if challenged"* — the second question requires judging the merits, which is the Court agent's job under the anti-fabrication discipline documented above. Collapsing the two would smuggle a merits judgement in through inputs (score margin, feedback quality) that speak to bidder incentive, not process lawfulness. This module is deliberately silent on the merits.
+
+**What is and isn't calibrated:** every rule's rationale is close-paraphrased from a specific Doc 1 sentence — Doc 1 gives directional relationships ("the closer the scores, the greater the likelihood"), not weights or a combination formula. The severity-weighted scoring here is a transparent first pass, explicitly **not** validated against real outcomes. `risk_score`/`overall_risk_band` are an ordering device for triage, not a calibrated probability — this is exactly the gap anonymised pre-action data from Fusion21's member base (see "client actions" below) would close.
+
+**Caught and fixed during development:** the score normalizer originally summed the severity weight of *every* rule variant, including mutually exclusive ones (`documentation_quality` can be `'weak'` OR `'partial'`, never both) — that inflates the denominator past what any real profile can reach and silently suppresses every score, including the worst-case profile, which should have scored ~1.0 and initially scored 0.88. Fixed to take the max reachable severity per distinct field. Also: a single strong flag (e.g. a narrow score margin alone) correctly stays in the "low" band under a multi-factor aggregate — but is still surfaced verbatim in `flags` and called out explicitly in `summary`, so "low band" is never mistakable for "no signal."
+
+**Observability split:** `CAProfile` fields are fully within the authority's own knowledge pre-award, including `feedback_quality_received` — which despite living on `BidderProfile` really describes the debrief the CA is about to send, the single most actionable lever the screen has. `BidderProfile` fields describing the *bidder's own* circumstances (`legal_representation`, `revenue_dependence`, `market_conditions`) are usually not confidently known pre-award and are marked `confidence="estimated"` in the output; a few (`organisation_size`, `incumbent`, `score_margin`) are directly observable since the CA ran the competition and are marked `confidence="known"`.
+
+Not yet built: the LLM-based debrief-letter reader (read the actual draft standstill/debrief text and flag vague phrasing directly, rather than requiring the profile fields to be filled in by hand). The rule-based scorer above needs no LLM call and was built and verified without touching Ollama, which mattered given the Court-prompt ablation was running concurrently; the letter-reading extension does need one and is deferred.
 
 ### BATNA-outcome analysis
 
