@@ -180,4 +180,68 @@ REAL_CASES = {
             "stage."
         ),
     },
+    "woods-milton-keynes": {
+        # Added 15 Aug 2026 specifically to restore Step 2A (exact-arithmetic
+        # verification) test coverage. This was lost when the synthetic F21-002
+        # scenario was deleted in favour of real-case-only evaluation — none of
+        # the other four real cases here publishes a scoring formula with
+        # sub-scores, so nothing exercised "compute it yourself" until this one.
+        # See CLAUDE.md "Evaluation scenarios — real cases only" for the context.
+        #
+        # IMPORTANT — read before assuming this is a like-for-like replacement:
+        # this case is NOT a pure transcription/addition slip the way F21-002 was.
+        # The published award formula (60% price / 40% quality) is real and
+        # verified, so there IS something to compute. But the manifest error the
+        # court actually found was in the RATIONALITY of individual quality
+        # sub-scores (irrational/inconsistent marking against the published
+        # criteria) — closer to Step 2B reasoning — which the court then
+        # recombined through the real 60/40 formula to reach a corrected total.
+        # A faithful Court agent here should engage BOTH steps: verify the
+        # weighted combination is applied correctly (2A) while assessing whether
+        # the underlying quality marks were rationally justified (2B). Don't
+        # treat a run that skips straight to "the arithmetic is right" as
+        # correct — that would miss the actual manifest error in this case.
+        "dispute_id": "REAL-WOODS-MKC-2015",
+        "contracting_authority_name": "Milton Keynes Council",
+        "bidder_name": "Woods Building Services",
+        "source_text": (
+            "Woods Building Services v Milton Keynes Council [2015] EWHC 2011 (TCC) "
+            "(14 July 2015), with a separate remedies judgment [2015] EWHC 2172 (TCC).\n\n"
+            "Milton Keynes Council ran a competitive tender for an asbestos removal and "
+            "reinstatement services contract, valued at approximately £8 million over a "
+            "4-year term as a single-supplier arrangement. The published award criteria "
+            "stated that the most economically advantageous tender would be determined by "
+            "a weighting of 60% price and 40% quality, scored against 24 individual "
+            "criteria.\n\n"
+            "Five tenderers submitted bids. Woods Building Services, the incumbent "
+            "provider, submitted the cheapest bid. The Council informed Woods that its bid "
+            "had been unsuccessful and that the contract would be awarded to a competitor, "
+            "European Asbestos Services (EAS).\n\n"
+            "Woods challenged the award, alleging manifest error in the scoring of "
+            "individual quality criteria and breach of the Council's transparency and "
+            "equal treatment obligations. Woods did not allege a simple arithmetic slip in "
+            "combining the published weightings — its case was that several of the "
+            "individual criterion scores awarded to EAS and to Woods were themselves "
+            "irrational or inconsistent with the published scoring methodology, which then "
+            "fed through the real 60/40 formula into an incorrect final ranking.\n\n"
+            "The case proceeded to a full trial before Mr Justice Edwards-Stuart. The judge "
+            "went through the disputed criteria in detail and found that the Council's "
+            "tender evaluation process was fundamentally flawed across multiple scoring "
+            "items. Applying the Council's own published methodology and weighting, the "
+            "judge concluded that EAS's marks required a substantial downward correction "
+            "(a reduction of 40 marks in total across the disputed criteria) while Woods' "
+            "marks required a small upward correction (an increase of 6 marks). Once these "
+            "corrected marks were recombined through the published 60% price / 40% quality "
+            "formula, Woods' bid became the most economically advantageous tender rather "
+            "than EAS's.\n\n"
+            "In the subsequent remedies judgment, the court ordered the Council to set "
+            "aside its contract award decision to EAS, to amend its evaluation records to "
+            "reflect the corrected scores as found by the court, and declared that Woods "
+            "had in fact submitted the most economically advantageous tender. This case is "
+            "a clear illustration of a contracting authority losing a procurement challenge "
+            "where an explicit, published scoring formula existed, but the manifest error "
+            "lay in the rationality of the underlying criterion-level judgments feeding "
+            "into that formula — not in the arithmetic of the formula itself."
+        ),
+    },
 }
