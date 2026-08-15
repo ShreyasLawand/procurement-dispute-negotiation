@@ -189,3 +189,65 @@ export interface Manifest {
   cases: ManifestCaseEntry[];
   batches: ManifestBatchEntry[];
 }
+
+// -- src/risk/challenge_risk.py (pre-award challenge risk screen) --
+
+/** Mirrors CAProfile in src/schemas/agent_state.py — only the fields the risk-screen UI exposes. */
+export interface CAProfileInput {
+  documentation_quality?: 'robust' | 'partial' | 'weak';
+  panel_capability?: 'procurement_trained' | 'mixed' | 'technical_untrained';
+  internal_accountability_exposure?: 'low' | 'medium' | 'high';
+}
+
+/** Mirrors BidderProfile — only the fields the risk-screen UI exposes. */
+export interface BidderProfileInput {
+  score_margin?: 'narrow' | 'moderate' | 'wide';
+  feedback_quality_received?: 'detailed' | 'adequate' | 'minimal';
+  incumbent?: boolean;
+}
+
+export interface RiskFlag {
+  category: string;
+  field: string;
+  severity: 'low' | 'medium' | 'high';
+  confidence: 'known' | 'estimated';
+  rationale: string;
+  mitigation: string;
+}
+
+export interface ChallengeRiskAssessment {
+  overall_risk_band: 'low' | 'medium' | 'high';
+  risk_score: number;
+  flags: RiskFlag[];
+  summary: string;
+}
+
+// -- src/recommendation/settlement_recommendation.py --
+
+export interface DissentingOutcome {
+  outcome: string;
+  n_runs: number;
+  share: number;
+}
+
+export interface SettlementRecommendation {
+  scenario_id: string;
+  scenario_title: string;
+  n_runs: number;
+  modal_outcome: string;
+  modal_outcome_meaning: string;
+  confidence: number;
+  dissenting_outcomes: DissentingOutcome[];
+  resolution_rate: number | null;
+  average_rounds_to_conclusion: number;
+  rationale: string;
+  framing_caveat: string;
+}
+
+export interface BatchListEntry {
+  batch_id: string;
+  scenario_id: string;
+  scenario_title: string;
+  court_prompt_version: string | null;
+  n_runs: number;
+}

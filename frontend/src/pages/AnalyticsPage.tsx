@@ -3,6 +3,7 @@ import { BatchPicker } from '../components/analytics/BatchPicker';
 import { KpiCard } from '../components/analytics/KpiCard';
 import { OutcomeDistributionChart } from '../components/analytics/OutcomeDistributionChart';
 import { RateBarChart } from '../components/analytics/RateBarChart';
+import { RecommendationCard } from '../components/analytics/RecommendationCard';
 import { RoundsDurationTiles } from '../components/analytics/RoundsDurationTiles';
 import { RunsTable } from '../components/analytics/RunsTable';
 import { PageContainer } from '../components/layout/PageContainer';
@@ -41,7 +42,15 @@ function batchLabel(batch: BatchSummary): string {
   return `${batch.scenario_id} · ${batch.timestamp}`;
 }
 
-function BatchPanel({ batch, baseline }: { batch: BatchSummary; baseline: BatchSummary | null }) {
+function BatchPanel({
+  batchId,
+  batch,
+  baseline,
+}: {
+  batchId?: string;
+  batch: BatchSummary;
+  baseline: BatchSummary | null;
+}) {
   const isBaseline = baseline === batch;
   // `complete === false` means the batch was killed mid-run. Undefined means the
   // batch predates the flag, which is not the same thing and must not be warned on.
@@ -139,6 +148,10 @@ function BatchPanel({ batch, baseline }: { batch: BatchSummary; baseline: BatchS
         </p>
       )}
 
+      {/* Only meaningful for a batch that actually lives in batch_results/ on the API
+          server — an uploaded file has no server-side directory to synthesize from. */}
+      {batchId && <RecommendationCard batchId={batchId} />}
+
       <RunsTable runs={batch.individual_runs} title={`Run ledger — ${batchLabel(batch)}`} />
     </div>
   );
@@ -174,6 +187,12 @@ export function AnalyticsPage() {
   }
 
   const selectedBatches = selectedIds.map((id) => dataById.get(id)).filter((b): b is BatchSummary => Boolean(b));
+  // Paired with its ID explicitly, not by array index — selectedBatches can be shorter
+  // than selectedIds if a batch failed to load, which would silently mis-pair an ID
+  // with the wrong batch under positional indexing.
+  const selectedEntries = selectedIds
+    .map((id) => ({ id, batch: dataById.get(id) }))
+    .filter((e): e is { id: string; batch: BatchSummary } => Boolean(e.batch));
   const baseline = selectedBatches[0] ?? null;
 
   return (
@@ -230,8 +249,8 @@ export function AnalyticsPage() {
               />
 
               <div className="flex flex-col gap-8">
-                {selectedBatches.map((batch) => (
-                  <BatchPanel key={batchLabel(batch)} batch={batch} baseline={baseline} />
+                {selectedEntries.map(({ id, batch }) => (
+                  <BatchPanel key={id} batchId={id} batch={batch} baseline={baseline} />
                 ))}
               </div>
             </>

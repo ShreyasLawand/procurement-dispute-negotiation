@@ -1,20 +1,37 @@
 import asyncio
 import json
+from pathlib import Path
 
 from fastapi import FastAPI, File, Form, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 
-from api.models import ExtractResponse, StartNegotiationRequest, StartNegotiationResponse
+from api.models import (
+    BatchListEntry,
+    ExtractResponse,
+    RecommendationResponse,
+    RiskAssessmentRequest,
+    RiskAssessmentResponse,
+    StartNegotiationRequest,
+    StartNegotiationResponse,
+)
 from api.sessions import SESSIONS, ollama_lock, start_session
 from src.agents.extraction_agent import ScenarioExtractionAgent
+from src.recommendation.settlement_recommendation import synthesize_recommendation
+from src.risk.challenge_risk import assess_challenge_risk
 from src.utils.document_extraction import combine_documents
+
+BATCH_RESULTS_DIR = Path(__file__).resolve().parent.parent / "batch_results"
 
 app = FastAPI(title="Procurement Dispute Negotiation API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    # A hardcoded single port (5173) breaks the moment Vite has to fall back to 5174+
+    # because something else is holding the default port — which is exactly what
+    # happened during dev testing. Matching any localhost/127.0.0.1 port covers every
+    # Vite fallback without needing to predict which port it lands on.
+    allow_origin_regex=r"^https?://(localhost|127\.0\.0\.1):\d+$",
     allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
@@ -99,3 +116,55 @@ def get_negotiation(session_id: str):
     if session.status == "error":
         return {"status": "error", "message": session.error}
     return {"status": "done", "result": session.final_state}
+
+
+@app.post("/api/risk-assessment", response_model=RiskAssessmentResponse)
+def risk_assessment(req: RiskAssessmentRequest):
+    # Rule-based, no LLM call — doesn't touch ollama_lock, can run even while a live
+    # negotiation is mid-flight. See src/risk/challenge_risk.py before changing the scoring.
+    assessment = assess_challenge_risk(req.ca_profile, req.bidder_profile)
+    return RiskAssessmentResponse(assessment=assessment)
+
+
+@app.get("/api/batches", response_model=list[BatchListEntry])
+def list_batches():
+    """Completed batches available to synthesize a recommendation from — feeds a picker in the UI."""
+    entries = []
+    if not BATCH_RESULTS_DIR.exists():
+        return entries
+    for d in sorted(BATCH_RESULTS_DIR.glob("batch_*"), reverse=True):
+        summary_path = d / "batch_summary.json"
+        if not summary_path.exists():
+            continue
+        try:
+            s = json.loads(summary_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            continue
+        entries.append(BatchListEntry(
+            batch_id=d.name,
+            scenario_id=s.get("scenario_id", "?"),
+            scenario_title=s.get("scenario_title", "?"),
+            court_prompt_version=s.get("court_prompt_version"),
+            n_runs=s.get("n_runs_successful", 0),
+        ))
+    return entries
+
+
+@app.get("/api/recommendation/{batch_id}", response_model=RecommendationResponse)
+def get_recommendation(batch_id: str):
+    # batch_id comes straight from the URL path — resolve against the known batches
+    # directory and reject anything that isn't a real subdirectory of it, rather than
+    # trusting the client-supplied name as a filesystem path.
+    batch_dir = (BATCH_RESULTS_DIR / batch_id).resolve()
+    if BATCH_RESULTS_DIR.resolve() not in batch_dir.parents:
+        raise HTTPException(400, "Invalid batch_id")
+    summary_path = batch_dir / "batch_summary.json"
+    if not summary_path.exists():
+        raise HTTPException(404, f"No batch_summary.json for {batch_id}")
+
+    batch_summary = json.loads(summary_path.read_text(encoding="utf-8"))
+    try:
+        recommendation = synthesize_recommendation(batch_summary)
+    except ValueError as e:
+        raise HTTPException(400, str(e))
+    return RecommendationResponse(recommendation=recommendation)

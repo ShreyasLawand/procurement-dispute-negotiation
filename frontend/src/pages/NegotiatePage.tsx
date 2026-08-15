@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { CaseFileView } from '../components/case-file/CaseFileView';
 import { PageContainer } from '../components/layout/PageContainer';
 import { LiveStatusBar } from '../components/negotiate/LiveStatusBar';
+import { RiskScreenPanel } from '../components/negotiate/RiskScreenPanel';
 import { ScenarioPreviewCard } from '../components/negotiate/ScenarioPreviewCard';
 import { Button } from '../components/ui/Button';
 import { ErrorState } from '../components/ui/ErrorState';
@@ -121,6 +122,9 @@ export function NegotiatePage() {
             starting={starting}
           />
           {startError !== null && <ErrorState title="Could not start the negotiation" error={startError} />}
+          {/* Prevention comes before negotiation — screen for challenge risk on this
+              procurement before simulating how a dispute over it would play out. */}
+          <RiskScreenPanel />
         </div>
       )}
 
