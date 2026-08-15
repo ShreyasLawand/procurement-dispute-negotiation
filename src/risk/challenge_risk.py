@@ -247,6 +247,18 @@ _BIDDER_RULES = [
         "Give particular care to explaining continuity/transition points in the debrief, since an incumbent "
         "is uniquely positioned to spot operational inconsistencies in the evaluation.",
     ),
+    (
+        # Was named in the module docstring's "estimated" category alongside legal_representation and
+        # revenue_dependence but had no rule — found in a manual audit 15 Aug 2026 and fixed here so the
+        # docstring's claim matches what this module actually screens for.
+        "market_conditions", "slow",
+        "Availability of Time and Resources", "medium", "estimated",
+        "During slower market periods with fewer alternative opportunities, a losing bidder is more "
+        "willing to commit senior management and legal time to a challenge than when the market is "
+        "buoyant and deprioritising disputes is the easier choice.",
+        "No pre-award mitigation changes market conditions — but this raises the priority of getting the "
+        "debrief right when the wider market is known to be slow.",
+    ),
 ]
 
 

@@ -147,6 +147,16 @@ export function RiskScreenPanel() {
           ]}
           onChange={(v) => setBidder((s) => ({ ...s, feedback_quality_received: v }))}
         />
+        <FieldSelect
+          label="Wider market conditions"
+          value={bidder.market_conditions}
+          options={[
+            { value: 'buoyant', label: 'Buoyant — alternative opportunities plentiful' },
+            { value: 'normal', label: 'Normal' },
+            { value: 'slow', label: 'Slow — few alternative opportunities' },
+          ]}
+          onChange={(v) => setBidder((s) => ({ ...s, market_conditions: v }))}
+        />
         <label className="flex items-center gap-2 pt-6 text-sm text-ink">
           <input
             type="checkbox"
