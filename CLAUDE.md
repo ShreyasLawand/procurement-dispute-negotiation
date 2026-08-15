@@ -203,6 +203,12 @@ The extraction agent (`src/prompts/extraction_prompt.py`) deliberately mirrors t
 
 Also note: every batch in `batch_results/` predating this change is a run of the deleted F21-001, so **those historical figures — including the ~57% qualitative and 100% numeric numbers — describe scenarios that no longer exist and should not be cited.**
 
+### BATNA-outcome analysis
+
+`scripts/analyze_batna_outcomes.py` — pure analysis over data already logged by every run (`PreNegotiationStatement.batna`, `WinStatement.outcome_relative_to_batna`), no new negotiations needed. Classifies each free-text `outcome_relative_to_batna` via a documented keyword heuristic (beats / matches / falls_short / unclear) — **not a ground-truth label**, read the module docstring before citing. An earlier looser version of the pattern set produced a false positive (a Faraday CA statement reading "considered acceptable relative to our BATNA... avoided the risks" was misclassified `falls_short` because "did not achieve a full win" matched an unanchored pattern); patterns are now anchored to the BATNA comparison specifically, verified against 6 unit cases including that one.
+
+Run over the full corpus (63 logs, 15 Aug 2026): **CA never self-reports falling short of its own BATNA (0/63)**, beats it 65% of the time; the **Bidder falls short 29% of the time** and only beats its BATNA 13% of the time. This is a real, citable asymmetry — plausibly just the CA's structurally stronger position (defending an existing decision vs. challenging one), but it's also exactly the kind of pattern a neutrality audit should flag given Fusion21 sits CA-side. 59-65% of statements land in `unclear` (free text resists a keyword approach) — treat this as a screening tool that flags likely-interesting cases for human review, not a finished metric.
+
 ### Structural compliance instrumentation
 
 `src/utils/compliance_metrics.py` counts what the codebase used to repair silently: brace-extraction fallbacks when `json.loads` fails, Pydantic `mode="before"` field coercions, repetition regenerations, and outright parse failures. Before this, a run where every response needed repair looked identical to one where none did.
