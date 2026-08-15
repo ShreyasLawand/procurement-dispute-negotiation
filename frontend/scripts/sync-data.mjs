@@ -167,7 +167,21 @@ async function syncBatches() {
       nRunsSuccessful: summary.n_runs_successful,
       nRunsFailed: summary.n_runs_failed,
       maxRounds: summary.max_rounds,
-      metrics: summary.metrics,
+      // `resolution_rate` was named `agreement_rate` until Aug 2026 (it measures
+      // "resolved without deadlock", not agreement between the parties). Older
+      // batch_summary.json files on disk still have the old key, so it's normalized
+      // here rather than passed through raw — every entry in manifest.json's
+      // batches[] must have the same field name regardless of which batch wrote it.
+      metrics: {
+        ...summary.metrics,
+        resolution_rate: summary.metrics.resolution_rate ?? summary.metrics.agreement_rate ?? null,
+        agreement_rate: undefined,
+      },
+      // Nulled for batches produced before these fields existed, so the UI can
+      // distinguish "not recorded" from "recorded as false/zero".
+      complete: summary.complete ?? null,
+      courtPromptVersion: summary.court_prompt_version ?? null,
+      structuralComplianceRate: summary.compliance?.structural_compliance_rate ?? null,
       runs,
     });
   }

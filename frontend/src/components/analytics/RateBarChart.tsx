@@ -5,7 +5,7 @@ import { Card } from '../ui/Card';
 
 export interface RateBarChartRow {
   label: string;
-  agreement: number | null;
+  resolution: number | null;
   deadlock: number | null;
   detection: number | null;
 }
@@ -39,7 +39,7 @@ export function RateBarChart({ data }: { data: RateBarChartRow[] }) {
               }}
             />
             <Legend wrapperStyle={{ fontSize: 12, color: CHART_CHROME.inkSecondary }} />
-            <Bar dataKey="agreement" name="Agreement rate" fill={METRIC_COLORS.agreementRate} radius={[4, 4, 0, 0]} />
+            <Bar dataKey="resolution" name="Resolution rate" fill={METRIC_COLORS.resolutionRate} radius={[4, 4, 0, 0]} />
             <Bar dataKey="deadlock" name="Deadlock rate" fill={METRIC_COLORS.deadlockRate} radius={[4, 4, 0, 0]} />
             <Bar
               dataKey="detection"

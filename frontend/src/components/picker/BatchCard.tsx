@@ -20,7 +20,7 @@ export function BatchCard({ entry }: { entry: ManifestBatchEntry }) {
         <div>
           <p className="font-medium leading-snug text-ink">{entry.scenarioTitle}</p>
           <p className="mt-1 text-sm text-ink-secondary">
-            Agreement rate {fmtPct(entry.metrics.agreement_rate)} · Manifest-error detection{' '}
+            Resolution rate {fmtPct(entry.metrics.resolution_rate)} · Manifest-error detection{' '}
             {fmtPct(entry.metrics.manifest_error_detection_rate)}
           </p>
         </div>

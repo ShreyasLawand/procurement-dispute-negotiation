@@ -91,14 +91,29 @@ const BatchIndividualRunSchema = z.object({
   error: z.string().nullable(),
 });
 
-const BatchMetricsSchema = z.object({
-  agreement_rate: z.number().nullable(),
-  deadlock_rate: z.number().nullable(),
-  manifest_error_detection_rate: z.number().nullable(),
-  average_rounds_to_conclusion: z.number(),
-  average_duration_seconds: z.number(),
-  outcome_distribution: z.record(z.string(), z.number()),
-});
+// `resolution_rate` was named `agreement_rate` until Aug 2026 — the old name measured
+// "resolved without deadlock" but read as if it meant the parties agreed with each
+// other. Batches generated before the rename still have the old key on disk, and a
+// user can drop one of those files in via the upload fallback directly (bypassing
+// sync-data.mjs, which normalizes this for the manifest path), so this preprocess
+// step maps the legacy key across before validation rather than rejecting old files.
+const BatchMetricsSchema = z.preprocess(
+  (raw) => {
+    if (raw && typeof raw === 'object' && !('resolution_rate' in raw) && 'agreement_rate' in raw) {
+      const { agreement_rate, ...rest } = raw as Record<string, unknown>;
+      return { ...rest, resolution_rate: agreement_rate };
+    }
+    return raw;
+  },
+  z.object({
+    resolution_rate: z.number().nullable(),
+    deadlock_rate: z.number().nullable(),
+    manifest_error_detection_rate: z.number().nullable(),
+    average_rounds_to_conclusion: z.number(),
+    average_duration_seconds: z.number(),
+    outcome_distribution: z.record(z.string(), z.number()),
+  }),
+);
 
 export const BatchSummarySchema = z.object({
   scenario_id: z.string(),

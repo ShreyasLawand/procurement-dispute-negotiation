@@ -1,8 +1,8 @@
-import json
 from langchain_ollama import ChatOllama
 from src.prompts.extraction_prompt import EXTRACTION_SYSTEM_PROMPT, EXTRACTION_USER_TEMPLATE
 from src.schemas.agent_state import DisputeScenario
 from src.utils.document_extraction import truncate_for_context
+from src.utils.compliance_metrics import parse_llm_json
 
 
 class ScenarioExtractionAgent:
@@ -24,12 +24,7 @@ class ScenarioExtractionAgent:
             ("user", user_message),
         ])
         raw_text = response.content.strip()
-        try:
-            return json.loads(raw_text)
-        except json.JSONDecodeError:
-            start = raw_text.find("{")
-            end = raw_text.rfind("}") + 1
-            return json.loads(raw_text[start:end])
+        return parse_llm_json(raw_text, agent="ScenarioExtractionAgent", call="extract")
 
     def extract_scenario(
         self,

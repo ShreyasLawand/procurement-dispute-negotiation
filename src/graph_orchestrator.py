@@ -8,17 +8,53 @@ from src.schemas.agent_state import (
     DisputeScenario, NegotiationState, NegotiationMessage, AgentRole
 )
 from src.utils.event_stream import emit_status
+from dataclasses import dataclass
+from functools import partial
 import json
 
 
-# --- Agents are instantiated once, module-level, and reused across nodes ---
-ca_agent = ContractingAuthorityAgent()
-bidder_agent = AggrievedBidderAgent()
-court_agent = CourtAgent()
-summary_agent = SummaryAgent()
+@dataclass
+class AgentBundle:
+    """
+    The four agents a graph runs with.
+
+    Agents used to be module-level singletons. They can't be any more: the CA and
+    Bidder now carry Doc 1 behavioural profiles baked into their system prompts at
+    construction, and those vary per dispute. So the bundle is built per scenario
+    and bound into the node functions when the graph is compiled.
+
+    The Court and Summary agents take no profile — Doc 1 gives the judiciary a fixed
+    interest set with no per-case practical considerations, and the Summary agent is
+    non-negotiating — so they are rebuilt but unparameterised.
+    """
+    ca: ContractingAuthorityAgent
+    bidder: AggrievedBidderAgent
+    court: CourtAgent
+    summary: SummaryAgent
 
 
-def pre_negotiation_node(state: GraphState) -> dict:
+def build_agents(
+    scenario: DisputeScenario | None = None,
+    court_system_prompt: str | None = None,
+) -> AgentBundle:
+    """
+    Constructs the agent bundle, applying the scenario's Doc 1 profiles if present.
+
+    `court_system_prompt` overrides the active Court prompt for this bundle only —
+    that is how the V3/V4 ablation runs without mutating module state, which would
+    otherwise leak between batches executed in the same process.
+    """
+    ca_profile = getattr(scenario, "ca_profile", None) if scenario is not None else None
+    bidder_profile = getattr(scenario, "bidder_profile", None) if scenario is not None else None
+    return AgentBundle(
+        ca=ContractingAuthorityAgent(profile=ca_profile),
+        bidder=AggrievedBidderAgent(profile=bidder_profile),
+        court=CourtAgent(system_prompt=court_system_prompt),
+        summary=SummaryAgent(),
+    )
+
+
+def pre_negotiation_node(state: GraphState, agents: AgentBundle) -> dict:
     """Both agents state their interests, goals, and BATNA before negotiation begins."""
     scenario = state["scenario"]
 
@@ -26,10 +62,10 @@ def pre_negotiation_node(state: GraphState) -> dict:
     print(">> Pre-Negotiation Phase\n")
     emit_status("Both parties are preparing their opening positions…", phase="pre_negotiation")
 
-    ca_pre = ca_agent.get_pre_negotiation_statement(scenario)
+    ca_pre = agents.ca.get_pre_negotiation_statement(scenario)
     print(f"[CA] Opening position: {ca_pre.opening_position}\n")
 
-    bidder_pre = bidder_agent.get_pre_negotiation_statement(scenario)
+    bidder_pre = agents.bidder.get_pre_negotiation_statement(scenario)
     print(f"[BIDDER] Opening position: {bidder_pre.opening_position}\n")
 
     return {
@@ -45,7 +81,7 @@ def pre_negotiation_node(state: GraphState) -> dict:
     }
 
 
-def ca_round_node(state: GraphState) -> dict:
+def ca_round_node(state: GraphState, agents: AgentBundle) -> dict:
     """CA agent responds for the current round."""
     scenario = state["scenario"]
     round_num = state["round_number"] + 1
@@ -57,7 +93,7 @@ def ca_round_node(state: GraphState) -> dict:
     emit_status(f"Contracting Authority is drafting its round {round_num} response…",
                 phase="ca_round", round_number=round_num)
 
-    ca_response = ca_agent.respond_to_round(
+    ca_response = agents.ca.respond_to_round(
         scenario, state["ca_history"], round_num, max_rounds=max_rounds
     )
     ca_msg = ca_response.message
@@ -85,7 +121,7 @@ def ca_round_node(state: GraphState) -> dict:
     }
 
 
-def bidder_round_node(state: GraphState) -> dict:
+def bidder_round_node(state: GraphState, agents: AgentBundle) -> dict:
     """Bidder agent responds for the current round."""
     scenario = state["scenario"]
     round_num = state["round_number"]
@@ -93,7 +129,7 @@ def bidder_round_node(state: GraphState) -> dict:
     emit_status(f"Aggrieved Bidder is drafting its round {round_num} response…",
                 phase="bidder_round", round_number=round_num)
 
-    bidder_response = bidder_agent.respond_to_round(
+    bidder_response = agents.bidder.respond_to_round(
         scenario, state["bidder_history"], round_num, max_rounds=max_rounds
     )
     bidder_msg = bidder_response.message
@@ -120,14 +156,14 @@ def bidder_round_node(state: GraphState) -> dict:
     }
 
 
-def court_check_node(state: GraphState) -> dict:
+def court_check_node(state: GraphState, agents: AgentBundle) -> dict:
     """Court agent assesses legal compliance for the round just completed."""
     scenario = state["scenario"]
     round_num = state["round_number"]
     emit_status(f"Court is reviewing round {round_num} for compliance…",
                 phase="court_check", round_number=round_num)
 
-    assessment = court_agent.assess_round(
+    assessment = agents.court.assess_round(
         scenario, state["last_ca_msg"], state["last_bidder_msg"], round_num
     )
 
@@ -151,7 +187,7 @@ def court_check_node(state: GraphState) -> dict:
     return updates
 
 
-def win_statements_node(state: GraphState) -> dict:
+def win_statements_node(state: GraphState, agents: AgentBundle) -> dict:
     """Each agent reflects on the outcome relative to its own BATNA."""
     scenario = state["scenario"]
     outcome = state["resolution_outcome"]
@@ -165,11 +201,11 @@ def win_statements_node(state: GraphState) -> dict:
     print(f"{'='*70}\n")
     emit_status("Both parties are reflecting on the final outcome…", phase="win_statements")
 
-    ca_win = ca_agent.get_win_statement(scenario, outcome, transcript_summary)
+    ca_win = agents.ca.get_win_statement(scenario, outcome, transcript_summary)
     print(f"CONTRACTING AUTHORITY WIN STATEMENT:")
     print(f"   {ca_win.win_statement}\n")
 
-    bidder_win = bidder_agent.get_win_statement(scenario, outcome, transcript_summary)
+    bidder_win = agents.bidder.get_win_statement(scenario, outcome, transcript_summary)
     print(f"AGGRIEVED BIDDER WIN STATEMENT:")
     print(f"   {bidder_win.win_statement}\n")
 
@@ -189,7 +225,7 @@ def route_after_court(state: GraphState) -> str:
     return "continue"
 
 
-def summary_node(state: GraphState) -> dict:
+def summary_node(state: GraphState, agents: AgentBundle) -> dict:
     """Post-negotiation: Summary agent reviews the full transcript."""
     print(f"\n{'='*70}")
     print("  GENERATING NEGOTIATION SUMMARY")
@@ -211,7 +247,7 @@ def summary_node(state: GraphState) -> dict:
         adjudicated=state["adjudicated"],
     )
 
-    summary = summary_agent.summarize(temp_state)
+    summary = agents.summary.summarize(temp_state)
 
     print(f"PLAIN ENGLISH SUMMARY:")
     print(f"   {summary.plain_english_summary}\n")
@@ -229,16 +265,25 @@ def summary_node(state: GraphState) -> dict:
     return {"summary": summary}
 
 
-def build_negotiation_graph():
-    """Constructs and compiles the LangGraph StateGraph for the negotiation."""
+def build_negotiation_graph(agents: AgentBundle | None = None):
+    """
+    Constructs and compiles the LangGraph StateGraph for the negotiation.
+
+    `agents` is bound into each node via functools.partial. Node NAMES are passed
+    explicitly and are unchanged, so api/sessions.py::translate_update — which keys
+    off those names — is unaffected.
+    """
+    if agents is None:
+        agents = build_agents()
+
     graph = StateGraph(GraphState)
 
-    graph.add_node("pre_negotiation", pre_negotiation_node)
-    graph.add_node("ca_round", ca_round_node)
-    graph.add_node("bidder_round", bidder_round_node)
-    graph.add_node("court_check", court_check_node)
-    graph.add_node("win_statements", win_statements_node)
-    graph.add_node("summary", summary_node)
+    graph.add_node("pre_negotiation", partial(pre_negotiation_node, agents=agents))
+    graph.add_node("ca_round", partial(ca_round_node, agents=agents))
+    graph.add_node("bidder_round", partial(bidder_round_node, agents=agents))
+    graph.add_node("court_check", partial(court_check_node, agents=agents))
+    graph.add_node("win_statements", partial(win_statements_node, agents=agents))
+    graph.add_node("summary", partial(summary_node, agents=agents))
 
     graph.set_entry_point("pre_negotiation")
 
@@ -268,9 +313,29 @@ class GraphNegotiationOrchestrator:
     save_log() for persistence.
     """
 
-    def __init__(self, max_rounds: int = 3):
+    def __init__(self, max_rounds: int = 3, court_system_prompt: str | None = None):
         self.max_rounds = max_rounds
-        self.app = build_negotiation_graph()
+        self.court_system_prompt = court_system_prompt
+        # Default profile-less graph, kept so an orchestrator is usable without ever
+        # seeing a scenario. Scenarios carrying Doc 1 profiles get their own compiled
+        # graph in _app_for(), since profiles are baked into agent system prompts at
+        # construction time and so cannot be swapped on an already-built agent.
+        self.app = build_negotiation_graph(build_agents(None, court_system_prompt))
+
+    def _app_for(self, scenario: DisputeScenario):
+        """
+        Returns the compiled graph to run this scenario with. Falls back to the
+        shared profile-less app when the scenario declares no profiles, so the
+        common path costs nothing extra and pre-existing baselines are byte-for-byte
+        reproducible.
+        """
+        has_profile = (
+            getattr(scenario, "ca_profile", None) is not None
+            or getattr(scenario, "bidder_profile", None) is not None
+        )
+        if not has_profile:
+            return self.app
+        return build_negotiation_graph(build_agents(scenario, self.court_system_prompt))
 
     def _build_initial_state(self, scenario: DisputeScenario) -> GraphState:
         return {
@@ -294,7 +359,7 @@ class GraphNegotiationOrchestrator:
         }
 
     def run(self, scenario: DisputeScenario) -> dict:
-        final_state = self.app.invoke(self._build_initial_state(scenario))
+        final_state = self._app_for(scenario).invoke(self._build_initial_state(scenario))
         return final_state
 
     def stream(self, scenario: DisputeScenario):
@@ -304,7 +369,9 @@ class GraphNegotiationOrchestrator:
         push SSE events as each node completes; run()/save_log() above are
         untouched and remain the path used by batch scripts and tests.
         """
-        yield from self.app.stream(self._build_initial_state(scenario), stream_mode="updates")
+        yield from self._app_for(scenario).stream(
+            self._build_initial_state(scenario), stream_mode="updates"
+        )
 
     def save_log(self, final_state: dict, filepath: str):
         # Convert dict-shaped final state to the Pydantic NegotiationState for

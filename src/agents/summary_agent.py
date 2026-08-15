@@ -1,4 +1,4 @@
-import json
+from src.utils.compliance_metrics import parse_llm_json, metrics
 from langchain_ollama import ChatOllama
 from src.schemas.agent_state import NegotiationSummary, NegotiationState
 from src.prompts.summary_prompt import SUMMARY_SYSTEM_PROMPT
@@ -47,11 +47,6 @@ Analyse this completed negotiation and provide your summary as JSON.
         ])
 
         raw_text = response.content.strip()
-        try:
-            data = json.loads(raw_text)
-        except json.JSONDecodeError:
-            start = raw_text.find('{')
-            end = raw_text.rfind('}') + 1
-            data = json.loads(raw_text[start:end])
+        data = parse_llm_json(raw_text, agent="SummaryAgent", call="summarize")
 
         return NegotiationSummary(**data)

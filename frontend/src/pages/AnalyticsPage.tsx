@@ -43,21 +43,40 @@ function batchLabel(batch: BatchSummary): string {
 
 function BatchPanel({ batch, baseline }: { batch: BatchSummary; baseline: BatchSummary | null }) {
   const isBaseline = baseline === batch;
+  // `complete === false` means the batch was killed mid-run. Undefined means the
+  // batch predates the flag, which is not the same thing and must not be warned on.
+  const isIncomplete = batch.complete === false;
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex items-baseline justify-between">
+      <div className="flex items-baseline justify-between gap-3">
         <h2 className="text-lg font-semibold text-ink">{batch.scenario_title}</h2>
-        <span className="text-xs text-ink-muted">
+        <span className="flex items-center gap-2 text-xs text-ink-muted">
+          {batch.court_prompt_version && (
+            <span className="rounded-full bg-ink/5 px-2 py-0.5 font-semibold text-ink">
+              Court {batch.court_prompt_version}
+            </span>
+          )}
           {batch.scenario_id} · {batch.timestamp}
           {isBaseline && ' · baseline'}
         </span>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+      {isIncomplete && (
+        <div
+          role="alert"
+          className="rounded-lg border border-amber-500/40 bg-amber-500/10 px-4 py-3 text-sm text-ink"
+        >
+          <strong className="font-semibold">Incomplete batch — do not cite these figures.</strong>{' '}
+          This run was interrupted after {batch.n_runs_completed_so_far ?? batch.n_runs_successful} of{' '}
+          {batch.n_runs_requested} runs. Every rate below is computed over that partial sample.
+        </div>
+      )}
+
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
         <KpiCard
-          label="Agreement rate"
-          value={fmtPct(batch.metrics.agreement_rate)}
-          delta={!isBaseline && baseline ? pctPointDelta(batch.metrics.agreement_rate, baseline.metrics.agreement_rate, 'up') : null}
+          label="Resolution rate"
+          value={fmtPct(batch.metrics.resolution_rate)}
+          delta={!isBaseline && baseline ? pctPointDelta(batch.metrics.resolution_rate, baseline.metrics.resolution_rate, 'up') : null}
         />
         <KpiCard
           label="Deadlock rate"
@@ -91,7 +110,34 @@ function BatchPanel({ batch, baseline }: { batch: BatchSummary; baseline: BatchS
               : null
           }
         />
+        {/* Structural compliance is the control on every other metric here: a prompt
+            that improves judgement while breaking JSON validity is not an improvement.
+            Rendered as "—" for batches predating the instrumentation. */}
+        <KpiCard
+          label="Structural compliance"
+          value={batch.compliance ? fmtPct(batch.compliance.structural_compliance_rate) : '—'}
+          delta={
+            !isBaseline && baseline?.compliance && batch.compliance
+              ? pctPointDelta(
+                  batch.compliance.structural_compliance_rate,
+                  baseline.compliance.structural_compliance_rate,
+                  'up',
+                )
+              : null
+          }
+        />
       </div>
+
+      {batch.compliance && (
+        <p className="text-xs text-ink-muted">
+          {batch.compliance.clean_responses}/{batch.compliance.structured_responses} structured responses
+          needed no repair · {batch.compliance.json_fallbacks} JSON fallback
+          {batch.compliance.json_fallbacks === 1 ? '' : 's'} · {batch.compliance.field_coercions} field
+          coercion{batch.compliance.field_coercions === 1 ? '' : 's'} · {batch.compliance.parse_failures} parse
+          failure{batch.compliance.parse_failures === 1 ? '' : 's'} · {batch.compliance.repetition_retries} repetition
+          retr{batch.compliance.repetition_retries === 1 ? 'y' : 'ies'}
+        </p>
+      )}
 
       <RunsTable runs={batch.individual_runs} title={`Run ledger — ${batchLabel(batch)}`} />
     </div>
@@ -135,7 +181,7 @@ export function AnalyticsPage() {
       <div className="mb-6">
         <h1 className="text-xl font-semibold text-ink">Docket analytics</h1>
         <p className="mt-1 text-sm text-ink-secondary">
-          Compare batch evaluation runs — agreement rate, deadlock rate, manifest-error detection, rounds and
+          Compare batch evaluation runs — resolution rate, deadlock rate, manifest-error detection, rounds and
           duration to conclusion.
         </p>
       </div>
@@ -166,7 +212,7 @@ export function AnalyticsPage() {
               <RateBarChart
                 data={selectedBatches.map((b) => ({
                   label: batchLabel(b),
-                  agreement: b.metrics.agreement_rate,
+                  resolution: b.metrics.resolution_rate,
                   deadlock: b.metrics.deadlock_rate,
                   detection: b.metrics.manifest_error_detection_rate,
                 }))}

@@ -37,12 +37,12 @@ export const CHART_CHROME = {
 } as const;
 
 // Categorical slots 1-4, used for the "which metric" comparison in
-// RateBarChart (agreement / deadlock / manifest-error-detection rate) —
+// RateBarChart (resolution / deadlock / manifest-error-detection rate) —
 // nominal identity, not good/bad state, since the bar height already shows
 // magnitude. Reused deliberately from the same slot order as ROLE_COLORS;
 // the two never appear in the same chart.
 export const METRIC_COLORS = {
-  agreementRate: '#2a78d6', // slot 1, blue
+  resolutionRate: '#2a78d6', // slot 1, blue
   deadlockRate: '#eb6834', // slot 2, orange
   manifestErrorDetectionRate: '#1baf7a', // slot 3, aqua
 } as const;
