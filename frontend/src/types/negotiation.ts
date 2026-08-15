@@ -204,6 +204,7 @@ export interface BidderProfileInput {
   score_margin?: 'narrow' | 'moderate' | 'wide';
   feedback_quality_received?: 'detailed' | 'adequate' | 'minimal';
   incumbent?: boolean;
+  market_conditions?: 'buoyant' | 'normal' | 'slow';
 }
 
 export interface RiskFlag {
@@ -241,6 +242,7 @@ export interface SettlementRecommendation {
   resolution_rate: number | null;
   average_rounds_to_conclusion: number;
   rationale: string;
+  sample_size_caveat: string | null;
   framing_caveat: string;
 }
 

@@ -55,6 +55,13 @@ KNOWN_OUTCOMES = {
     "deadlock - max rounds reached, escalate to formal proceedings",
 }
 
+# Below this many successful runs, `confidence` is flagged rather than presented at face value — found in
+# a manual audit 15 Aug 2026: a batch with n=1 produced confidence=1.0 with nothing distinguishing it from
+# a genuinely well-replicated result. 5 is chosen so the n=4 batches already on disk from earlier in this
+# project (superseded by n=8 re-runs for the final ablation table, but still reachable via the API if
+# pointed at an old batch_id) are correctly flagged, while the current n=8 batches are not.
+SMALL_SAMPLE_THRESHOLD = 5
+
 _OUTCOME_MEANING = {
     "re-evaluation": "the Court found (or the evidence supports) a manifest error; the authority should "
                       "redo the scoring for the disputed criterion",
@@ -94,6 +101,12 @@ class SettlementRecommendation(BaseModel):
     resolution_rate: float | None
     average_rounds_to_conclusion: float
     rationale: str = Field(description="Template-generated from the aggregate stats — NOT an LLM narrative. See module docstring.")
+    sample_size_caveat: str | None = Field(
+        default=None,
+        description="Populated when n_runs is below SMALL_SAMPLE_THRESHOLD — confidence/modal_outcome from "
+                    "a handful of runs should be read as indicative, not stable. None when the batch clears "
+                    "the threshold.",
+    )
     framing_caveat: str = Field(
         default=(
             "Non-binding decision support, modelled on Early Neutral Evaluation (ENE) — a real, "
@@ -183,6 +196,21 @@ def synthesize_recommendation(batch_summary: dict) -> SettlementRecommendation:
         f"Average rounds to conclusion: {metrics.get('average_rounds_to_conclusion', '?')}."
     )
 
+    sample_size_caveat = None
+    if n < SMALL_SAMPLE_THRESHOLD:
+        sample_size_caveat = (
+            f"Based on only {n} successful run(s) — below the {SMALL_SAMPLE_THRESHOLD}-run threshold this "
+            f"module treats as a stable sample. A {confidence:.0%} confidence figure from {n} run(s) is "
+            f"barely more than an anecdote: at this sample size, a single differently-seeded run could "
+            f"change the modal outcome entirely. Re-run with more repetitions before treating this as more "
+            f"than a single illustrative data point — this is a distinct concern from the framing caveat "
+            f"below, which is about real-world validation, not sample size."
+        )
+        # Folded into rationale too (not just the dedicated field) so a caller reading only `rationale`
+        # still sees it — the dedicated field exists for a UI that wants to style it distinctly, same
+        # reasoning as why dissenting outcomes get both a rationale sentence and their own list field.
+        rationale_bits.append(sample_size_caveat)
+
     return SettlementRecommendation(
         scenario_id=batch_summary.get("scenario_id", "?"),
         scenario_title=batch_summary.get("scenario_title", "?"),
@@ -194,4 +222,5 @@ def synthesize_recommendation(batch_summary: dict) -> SettlementRecommendation:
         resolution_rate=resolution_rate,
         average_rounds_to_conclusion=metrics.get("average_rounds_to_conclusion", 0.0),
         rationale=" ".join(rationale_bits),
+        sample_size_caveat=sample_size_caveat,
     )

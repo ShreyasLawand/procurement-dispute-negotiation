@@ -63,6 +63,13 @@ export function RecommendationCard({ batchId }: { batchId: string }) {
       </div>
       <p className="text-sm text-ink-secondary">{rec.modal_outcome_meaning}</p>
 
+      {rec.sample_size_caveat && (
+        <div className="rounded-md border border-red-500/30 bg-red-500/5 p-3 text-sm">
+          <p className="font-medium text-ink">Small sample — treat as illustrative:</p>
+          <p className="mt-1 text-ink-secondary">{rec.sample_size_caveat}</p>
+        </div>
+      )}
+
       {rec.dissenting_outcomes.length > 0 && (
         <div className="rounded-md border border-amber-500/30 bg-amber-500/5 p-3 text-sm">
           <p className="font-medium text-ink">Dissenting outcomes — do not ignore these:</p>
