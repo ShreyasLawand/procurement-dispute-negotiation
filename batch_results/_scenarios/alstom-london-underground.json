@@ -1,0 +1,12 @@
+{
+  "dispute_id": "REAL-ALSTOM-2017",
+  "title": "Alstom Transport UK Ltd v London Underground Ltd",
+  "description": "London Underground awarded contract to Bombardier for \u00a3112.1 million worth of AC traction motors and control equipment. Alstom challenged the award alleging a manifest error in applying a mandatory technical threshold requirement, which should have excluded Bombardier's bid. The challenge was brought during the standstill period, triggering an automatic suspension. London Underground applied to lift the suspension under the American Cyanamid framework, arguing that damages would be adequate remedy for Alstom if it succeeded at trial and that the balance of convenience favoured proceeding with the contract.",
+  "contract_value_gbp": 112100000.0,
+  "dispute_type": "scoring_challenge",
+  "procedural_stage": "standstill",
+  "contracting_authority_name": "London Underground Ltd",
+  "bidder_name": "Alstom Transport UK Ltd",
+  "ca_profile": null,
+  "bidder_profile": null
+}
