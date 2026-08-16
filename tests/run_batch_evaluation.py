@@ -5,6 +5,16 @@ import time
 from datetime import datetime
 from collections import Counter
 
+# Windows consoles/pipes default stdout to the system code page (cp1252), which cannot
+# encode the em-dashes and typographic punctuation used throughout the real-case source
+# texts (e.g. "—" in braceurself-nhs-england). Left unfixed, every print() of a
+# scenario title or message containing one crashes the run with a UnicodeEncodeError
+# after the LLM calls for that run have already been paid for. reconfigure() is a no-op
+# on platforms where stdout is already UTF-8.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from src.graph_orchestrator import GraphNegotiationOrchestrator

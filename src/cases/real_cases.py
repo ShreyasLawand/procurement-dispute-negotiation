@@ -244,4 +244,161 @@ REAL_CASES = {
             "into that formula — not in the arithmetic of the formula itself."
         ),
     },
+    "braceurself-nhs-england": {
+        # Added as part of the BAILII expansion (evaluation punch-list item 14). Verified via
+        # WebSearch against bailii.org and multiple law-firm case notes before writing: High Court
+        # [2022] EWHC 1532 (TCC) (20 June 2022, O'Farrell J), damages question upheld on appeal in
+        # [2024] EWCA Civ 39 (30 Jan 2024) — a SEPARATE 2023 Court of Appeal judgment ([2023] EWCA
+        # Civ 837) dealt only with a procedural respondent's-notice point on the earlier
+        # suspension-lifting stage, not the merits, so it is not cited as a merits outcome here.
+        # Selected specifically because the outcome is stable at both instances (unlike Alstom/
+        # Parkingeye, where only an interim ruling exists) and because it is a genuine merits trial
+        # with a defined, close numeric score gap — a good fit for Step 2A/2B.
+        "dispute_id": "REAL-BRACEURSELF-2022",
+        "contracting_authority_name": "NHS England",
+        "bidder_name": "Braceurself Ltd",
+        "source_text": (
+            "Braceurself Ltd v NHS England [2022] EWHC 1532 (TCC) (20 June 2022), damages "
+            "question finally determined on appeal in [2024] EWCA Civ 39 (30 January 2024).\n\n"
+            "NHS England ran a nationwide re-procurement for orthodontic services structured "
+            "into geographic lots. This dispute concerned Lot PR002368 (WSX18), a seven-year "
+            "contract covering an area of East Hampshire. Braceurself Ltd was the incumbent "
+            "provider for that lot and one of two bidders. The competition was extremely "
+            "close: Braceurself scored 80.25% overall against the successful bidder's 82.5%, "
+            "a gap of 2.25 percentage points.\n\n"
+            "Braceurself challenged the award, alleging a manifest error in the marking of "
+            "its response to tender question CSD02 (clinical and service delivery). The "
+            "specific error alleged was that NHS England's evaluators misunderstood "
+            "Braceurself's answer concerning patient access to first-floor premises: "
+            "Braceurself's submission referred to a stair-climber (a portable device used to "
+            "carry a patient up stairs), but the evaluators read this as a reference to a "
+            "stair lift (a fixed installed platform lift) and marked the response down on "
+            "the mistaken basis that suitable access provision was inadequate.\n\n"
+            "The case proceeded to a full trial before O'Farrell J in the Technology and "
+            "Construction Court. The judge found that NHS England had indeed made a manifest "
+            "error in marking question CSD02: the evaluators had misunderstood what "
+            "Braceurself's bid actually proposed, and but for that error Braceurself would "
+            "have received a higher score on that question — a score sufficient to make "
+            "Braceurself, not the incumbent competitor, the successful bidder for the lot.\n\n"
+            "Despite finding the manifest error, the judge went on to consider whether the "
+            "breach was 'sufficiently serious' to found a claim for Francovich-style damages "
+            "(the EU-derived test, applied via the Public Contracts Regulations 2015, for "
+            "when a procurement breach gives rise to a damages remedy rather than only "
+            "process remedies). Weighing factors including the excusability of the error, "
+            "whether it was inadvertent, and the otherwise careful and well-organised conduct "
+            "of the procurement, the judge concluded the breach was not sufficiently serious "
+            "to warrant damages, and dismissed Braceurself's damages claim despite having "
+            "found the underlying manifest error proven.\n\n"
+            "Braceurself appealed the damages ruling. In [2024] EWCA Civ 39, the Court of "
+            "Appeal upheld the first-instance decision: it held that a breach's effect on the "
+            "claimant is not itself decisive of whether the breach is 'sufficiently serious' — "
+            "what matters more is the nature and quality of the breach itself, including "
+            "whether it was inadvertent and excusable. On that basis the Court of Appeal "
+            "confirmed that NHS England's manifest error, though real and outcome-determinative "
+            "on liability, did not meet the threshold for a damages award. This case is a "
+            "clear illustration that a proven manifest error and a damages remedy are two "
+            "separate legal hurdles in UK procurement litigation — a contracting authority can "
+            "be found to have made an outcome-changing scoring error and still not be liable "
+            "in damages for it."
+        ),
+    },
+    "bromcom-united-learning-trust": {
+        # Verified via WebSearch (bailii.org, DLA Piper, DAC Beachcroft, Lexology case notes).
+        # Selected as a clean multi-ground merits trial with damages actually awarded — useful
+        # contrast to Braceurself (liability found, no damages) and to the mostly single-issue
+        # existing corpus (here there are three independent unlawful practices, not one).
+        "dispute_id": "REAL-BROMCOM-2022",
+        "contracting_authority_name": "United Learning Trust and United Church Schools Trust",
+        "bidder_name": "Bromcom Computers plc",
+        "source_text": (
+            "Bromcom Computers plc v United Learning Trust and United Church Schools Trust "
+            "[2022] EWHC 3262 (TCC).\n\n"
+            "United Learning Trust (UL), an academy trust operating a group of schools, ran a "
+            "procurement for a cloud-based Management Information System (MIS) for use across "
+            "57 of its schools, a contract worth approximately £2 million. The incumbent "
+            "supplier to 15 of those schools, Arbor Education Partners Ltd, won the "
+            "competition. Bromcom Computers plc, an unsuccessful tenderer, challenged the "
+            "award on three independent grounds.\n\n"
+            "First, Bromcom alleged that UL's scoring methodology was itself unlawful: rather "
+            "than convening moderation meetings at which evaluators would discuss and agree a "
+            "single consensus mark for each criterion (as procurement good practice and UL's "
+            "own published process required), UL simply averaged the individual scores each "
+            "evaluator had given independently. Bromcom's case was that an unreconciled "
+            "average of divergent individual scores is not a transparent or lawful substitute "
+            "for genuine moderated consensus scoring, since it allows outlying or "
+            "misunderstood individual marks to silently affect the result without ever being "
+            "tested or corrected through discussion.\n\n"
+            "Second, Bromcom alleged that UL had unlawfully and unequally adjusted the "
+            "financial scores: UL added a notional cost to Bromcom's financial submission to "
+            "reflect the cost of transferring pupil data from the incumbent system to "
+            "Bromcom's system, but did not apply any equivalent adjustment to Arbor's "
+            "financial submission, despite Arbor's bid also requiring data transfer for the "
+            "42 schools it did not already serve — an inconsistent, one-sided cost adjustment "
+            "applied to only one bidder.\n\n"
+            "Third, Bromcom alleged that UL had allowed Arbor to offer a rebate linked to a "
+            "separate, non-tendered contract as part of its bid, which Bromcom said amounted "
+            "to an unlawful modification of the competition's terms not available to other "
+            "bidders and in breach of equal treatment.\n\n"
+            "The case proceeded to a full trial in the Technology and Construction Court. The "
+            "court found in Bromcom's favour on the claim for damages, upholding all three "
+            "grounds: the averaging-without-moderation approach to scoring was found to be "
+            "neither transparent nor lawful; the one-sided data-transfer cost adjustment "
+            "applied only to Bromcom's bid was found to breach the equal treatment principle; "
+            "and permitting Arbor's rebate on a separate contract was found to be an unlawful "
+            "modification of the competition. This case illustrates a contracting authority "
+            "losing a procurement challenge on multiple independent unlawful-process grounds "
+            "simultaneously, rather than a single scoring or arithmetic error — a different "
+            "failure pattern from the single-issue manifest-error cases elsewhere in this "
+            "corpus."
+        ),
+    },
+    "abbvie-nhs-england": {
+        # Verified via WebSearch (bailii.org / caselaw.nationalarchives.gov.uk, Sharpe Pritchard,
+        # Monckton Chambers case notes). Selected deliberately as a case where the contracting
+        # authority WON outright — the existing five-case (now eight-case) corpus otherwise skews
+        # entirely toward cases where the CA lost or a manifest error was found, which risks the
+        # Court agent's evaluation looking artificially accurate if it is never tested against a
+        # genuine "no violation" ground truth.
+        "dispute_id": "REAL-ABBVIE-2019",
+        "contracting_authority_name": "NHS England",
+        "bidder_name": "AbbVie Ltd",
+        "source_text": (
+            "AbbVie Ltd v NHS Commissioning Board (operating as NHS England) [2019] EWHC 61 "
+            "(TCC).\n\n"
+            "NHS England ran what was, at the time, the largest single procurement it had "
+            "undertaken: a competitive-dialogue procedure to award up to three contracts for "
+            "the supply of medicines to treat and eliminate Hepatitis C (HCV) across England, "
+            "with an aggregate value of approximately £1 billion over five years from April "
+            "2019. Part of the strategic goal of the procurement was to help England become "
+            "the first country to eliminate HCV as a public health concern. AbbVie Ltd, one "
+            "of only three pharmaceutical suppliers of HCV medication in the UK market, "
+            "submitted a bid but was unsuccessful.\n\n"
+            "AbbVie challenged the award methodology itself, not the arithmetic outcome. The "
+            "evaluation formula used a mechanism the parties called the Dummy Price Mechanism "
+            "(DPM): because not every bidder produced medication for every HCV genotype or "
+            "treatment category being procured, the formula imputed, or 'credited', a notional "
+            "price to a bidder for any treatment category it did not itself supply — the "
+            "credited price being the lowest price offered by any other bidder for that "
+            "category. AbbVie's case was that this mechanism was inherently meaningless or "
+            "incomprehensible as a basis for comparing bids, and that its practical effect was "
+            "to favour certain bidders' product portfolios over others in a way that breached "
+            "the equal treatment principle in regulation 18 of the Public Contracts "
+            "Regulations 2015.\n\n"
+            "The case proceeded to trial in the Technology and Construction Court. Both "
+            "parties submitted their own calculations modelling how AbbVie's score would have "
+            "changed under alternative pricing assumptions. These calculations demonstrated "
+            "that, had AbbVie priced its own bid differently within the DPM's rules, AbbVie "
+            "could have beaten the winning bidder (MSD) under the mechanism as designed. On "
+            "that basis, the court held that AbbVie's claim of unequal treatment was not made "
+            "out: the DPM, however unusual, did not structurally disadvantage AbbVie relative "
+            "to competitors — AbbVie's own pricing choices, not an unlawful mechanism, "
+            "explained its unsuccessful outcome. The court dismissed AbbVie's challenge and "
+            "upheld the award. The judgment also confirmed the wide margin of discretion "
+            "available to a contracting authority in designing the technical structure of its "
+            "award criteria, provided the criteria as designed do not in fact produce unequal "
+            "treatment between bidders. This case is the corpus's clearest example of a "
+            "contracting authority successfully defending a procurement on the merits, with no "
+            "manifest error or unlawful practice found."
+        ),
+    },
 }

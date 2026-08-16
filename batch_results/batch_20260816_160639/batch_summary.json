@@ -1,0 +1,110 @@
+{
+  "scenario_id": "REAL-ABBVIE-2019",
+  "scenario_title": "AbbVie v NHS England",
+  "contracting_authority": "NHS England",
+  "bidder": "AbbVie Ltd",
+  "complete": true,
+  "n_runs_requested": 1,
+  "n_runs_completed_so_far": 1,
+  "n_runs_successful": 1,
+  "n_runs_failed": 0,
+  "max_rounds": 3,
+  "timestamp": "20260816_160639",
+  "court_prompt_version": "V4",
+  "ca_profile": null,
+  "bidder_profile": null,
+  "metrics": {
+    "resolution_rate": 1.0,
+    "deadlock_rate": 0.0,
+    "manifest_error_detection_rate": 0.0,
+    "average_rounds_to_conclusion": 3.0,
+    "average_duration_seconds": 1011.0,
+    "outcome_distribution": {
+      "no remedy - decision stands": 1
+    }
+  },
+  "compliance": {
+    "structured_responses": 14,
+    "clean_responses": 14,
+    "json_fallbacks": 0,
+    "field_coercions": 0,
+    "parse_failures": 0,
+    "repetition_retries": 0,
+    "structural_compliance_rate": 1.0,
+    "by_site": {
+      "responses": {
+        "ContractingAuthorityAgent.pre_negotiation": 1,
+        "AggrievedBidderAgent.pre_negotiation": 1,
+        "ContractingAuthorityAgent.round_response": 3,
+        "AggrievedBidderAgent.round_response": 3,
+        "CourtAgent.assess_round": 3,
+        "ContractingAuthorityAgent.win_statement": 1,
+        "AggrievedBidderAgent.win_statement": 1,
+        "SummaryAgent.summarize": 1
+      },
+      "clean_responses": {
+        "ContractingAuthorityAgent.pre_negotiation": 1,
+        "AggrievedBidderAgent.pre_negotiation": 1,
+        "ContractingAuthorityAgent.round_response": 3,
+        "AggrievedBidderAgent.round_response": 3,
+        "CourtAgent.assess_round": 3,
+        "ContractingAuthorityAgent.win_statement": 1,
+        "AggrievedBidderAgent.win_statement": 1,
+        "SummaryAgent.summarize": 1
+      },
+      "json_fallbacks": {},
+      "field_coercions": {},
+      "parse_failures": {},
+      "repetition_retries": {}
+    }
+  },
+  "individual_runs": [
+    {
+      "run_number": 1,
+      "resolved": true,
+      "outcome": "no remedy - decision stands",
+      "rounds_taken": 3,
+      "manifest_error_found_any_round": false,
+      "manifest_error_rounds": [],
+      "process_not_followed_any_round": false,
+      "duration_seconds": 1011.0,
+      "compliance": {
+        "structured_responses": 14,
+        "clean_responses": 14,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ContractingAuthorityAgent.pre_negotiation": 1,
+            "AggrievedBidderAgent.pre_negotiation": 1,
+            "ContractingAuthorityAgent.round_response": 3,
+            "AggrievedBidderAgent.round_response": 3,
+            "CourtAgent.assess_round": 3,
+            "ContractingAuthorityAgent.win_statement": 1,
+            "AggrievedBidderAgent.win_statement": 1,
+            "SummaryAgent.summarize": 1
+          },
+          "clean_responses": {
+            "ContractingAuthorityAgent.pre_negotiation": 1,
+            "AggrievedBidderAgent.pre_negotiation": 1,
+            "ContractingAuthorityAgent.round_response": 3,
+            "AggrievedBidderAgent.round_response": 3,
+            "CourtAgent.assess_round": 3,
+            "ContractingAuthorityAgent.win_statement": 1,
+            "AggrievedBidderAgent.win_statement": 1,
+            "SummaryAgent.summarize": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-BROMCOM-2022",
+    "title": "Bromcom Computers plc v United Learning Trust",
+    "description": "UL's procurement for a cloud-based MIS used across 57 schools was challenged by Bromcom on three grounds: (1) unlawful averaging of individual scores without moderation, (2) one-sided data-transfer cost adjustment applied only to Bromcom's bid, and (3) permitting Arbor's rebate linked to a separate contract. The court found in favour of Bromcom on all three grounds.",
+    "contract_value_gbp": 2000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "trial",
+    "contracting_authority_name": "United Learning Trust and United Church Schools Trust",
+    "bidder_name": "Bromcom Computers plc",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: \u00a32,000,000 contract value at stake, and the need to avoid delays that increase costs or create service delivery gaps for 57 schools.",
+      "Continuity of Service / Delivery: Critical educational services may be disrupted if a re-run procurement is required due to an automatic suspension or prolonged litigation.",
+      "Reputation & Public Accountability: Maintain public confidence in our procurement processes and protect our reputation as a competent, fair, and professional buyer."
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Resolve the dispute through negotiation"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We acknowledge Bromcom's concerns but believe our evaluation was lawful, rational, and procedurally correct. We are willing to provide additional feedback and transparency within the constraints of commercial confidentiality.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Regulation 32(2) Standstill Period"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a32m contract value at stake, plus bid costs (\u00a3500k) and opportunity cost (lost revenue from not winning this contract)",
+      "Fairness & Transparency: perceived unfairness in evaluation process, specifically the unlawful averaging of individual scores without moderation",
+      "Protection of Reputation: maintaining credibility with parent companies, shareholders, and partners after internal messaging signalled a win"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids to give us a chance to be awarded the contract ourselves",
+      "An award of damages for the losses incurred due to the unfair evaluation process"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We are willing to accept detailed feedback on the evaluation process if it justifies the original outcome, but we believe there was a manifest error that warrants re-evaluation",
+    "legal_basis": [
+      "Procurement Regulations 2015",
+      "Public Contracts Regulations 2015"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge Bromcom's concerns regarding the unlawful averaging of individual scores without moderation and the one-sided data-transfer cost adjustment applied only to their bid. However, I would like to clarify whether you believe that permitting Arbor's rebate linked to a separate contract was a material factor in your decision-making process, as this may impact our discussion on transparency and information sharing.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your acknowledgement of our concerns regarding the unlawful averaging of individual scores without moderation and the one-sided data-transfer cost adjustment applied only to our bid. However, I would like to clarify whether you are suggesting that the permitting of Arbor's rebate linked to a separate contract was a material factor in your decision-making process. If so, could you provide specific details on how this impacted your evaluation? Furthermore, we believe that this issue is closely tied to our original concerns regarding transparency and information sharing. We propose that as part of any resolution, the Contracting Authority provides detailed feedback on the scoring methodology used for each bidder, including Arbor's rebate.",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Regulation 23(2) of the Public Contracts Regulations 2015, requiring that the procurement process be transparent and fair"
+      ],
+      "reasoning": "This scenario is qualitative (Step 2B). The Contracting Authority's permitting of Arbor's rebate linked to a separate contract raises concerns about transparency and information sharing. Upon reviewing the scenario, I did not find any explicit formula or sub-scores mentioned. However, I note that Bromcom Computers plc challenged this issue as part of their original grounds for challenge. The court found in favour of Bromcom on all three grounds, including this one. Given the lack of transparency and information sharing regarding Arbor's rebate, I conclude that the Contracting Authority did not follow a lawful process.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome is more favourable than our BATNA (defending in TCC court) would have been. While we did not achieve a full win, the re-evaluation process allowed us to avoid the significant costs and risks associated with going to trial.",
+    "win_statement": "We successfully negotiated a re-evaluation of the procurement process, which has resulted in a revised scoring methodology that addresses Bromcom's concerns regarding averaging individual scores without moderation and one-sided data-transfer cost adjustments. However, we were unable to fully defend our original approach on permitting Arbor's rebate linked to a separate contract.",
+    "what_was_achieved": [
+      "Revised scoring methodology addressing unlawful averaging of individual scores",
+      "Removal of one-sided data-transfer cost adjustment"
+    ],
+    "what_was_conceded": [
+      "Permitting Arbor's rebate linked to a separate contract was not defended",
+      "Detailed feedback on scoring methodology will be provided for each bidder, including Arbor's rebate"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "Favourable outcome relative to BATNA. We were able to secure a re-evaluation of the contract without having to pursue costly and uncertain damages or formal TCC proceedings.",
+    "win_statement": "We successfully challenged three grounds in favour of Bromcom, resulting in a re-evaluation of the contract. This outcome is a significant win for us, as it acknowledges the legitimacy of our concerns and provides an opportunity for a revised evaluation process.",
+    "what_was_achieved": [
+      "Secured a re-evaluation of the contract",
+      "Had three grounds favouring Bromcom acknowledged by the court"
+    ],
+    "what_was_conceded": [
+      "No concession on damages or formal TCC proceedings was required, as the outcome was favourable to our position"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "unlawful averaging of individual scores without moderation",
+      "one-sided data-transfer cost adjustment applied only to Bromcom's bid",
+      "permitting of Arbor's rebate linked to a separate contract"
+    ],
+    "concessions_summary": "Neither side made significant concessions during the negotiation. The Contracting Authority acknowledged Bromcom's concerns, but did not provide specific details on how Arbor's rebate impacted their evaluation. Bromcom proposed that the Contracting Authority provide detailed feedback on the scoring methodology, but this was not accepted.",
+    "court_reasoning_summary": "The Court found that the Contracting Authority did not follow a lawful process due to the lack of transparency and information sharing regarding Arbor's rebate. This was considered a manifest error (Step 2B) and led to a recommendation for re-evaluation.",
+    "likely_next_steps": "Given the Court's conclusion, it is likely that the Contract will be re-evaluated with greater transparency and information sharing. The Contracting Authority may need to provide detailed feedback on the scoring methodology used for each bidder, including Arbor's rebate.",
+    "plain_english_summary": "The dispute centred around three key issues: how scores were averaged, a cost adjustment that only affected Bromcom, and a special deal given to another company (Arbor). The Court found that the Contracting Authority did not follow proper procedures due to lack of transparency about Arbor's rebate. As a result, the contract will be re-evaluated with more openness."
+  }
+}

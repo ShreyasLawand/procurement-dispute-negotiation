@@ -1,0 +1,123 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-BRACEURSELF-2022",
+    "title": "Braceurself Ltd v NHS England",
+    "description": "NHS England's evaluators made a manifest error in marking question CSD02 (clinical and service delivery) by misunderstanding Braceurself's answer concerning patient access to first-floor premises. The evaluators read this as a reference to a stair lift, but it was actually a stair-climber. This error resulted in a 2.25 percentage points gap between Braceurself's score of 80.25% and the successful bidder's score of 82.5%. Despite finding the manifest error, the judge concluded that the breach was not sufficiently serious to warrant damages.",
+    "contract_value_gbp": 104000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "appeal",
+    "contracting_authority_name": "NHS England",
+    "bidder_name": "Braceurself Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Act lawfully within vires and follow published evaluation criteria to ensure defensible decision-making.",
+      "Protection of Public Funds: Avoid delays that increase costs, particularly for a contract of this value (\u00a3104,000,000).",
+      "Continuity of Service / Delivery: Ensure timely delivery of critical healthcare services, as delay risks patient harm or service disruption.",
+      "Reputation & Public Accountability: Maintain public confidence in NHS England's procurement processes and avoid adverse media scrutiny."
+    ],
+    "goals": [
+      "Resolve the dispute through negotiation to avoid costly and time-consuming litigation"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We acknowledge the manifest error, but believe it did not significantly impact the outcome. The evaluators' understanding of CSD02 was reasonable, given the context.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Regulation 32(2) \u2014 standstill period"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: The \u00a3104 million contract value at stake",
+      "Fairness & Transparency: Ensuring NHS England's evaluation process is transparent and free from manifest errors",
+      "Protection of Reputation: Preserving Braceurself Ltd's credibility with clients, partners, and stakeholders"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids to correct the scoring error",
+      "Seek damages for the loss suffered due to NHS England's breach"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "NHS England must re-evaluate the bids to correct the manifest error and award the contract fairly",
+    "legal_basis": [
+      "Public Contracts Regulations 2015",
+      "EU Procurement Directive"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge Braceurself Ltd's assertion that a manifest error occurred in marking question CSD02. I would like to clarify whether you are suggesting that this error was not merely an isolated incident, but rather indicative of a broader issue with the evaluation process. Specifically, were there any other questions or aspects of your bid where you believe similar errors may have been made?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your acknowledgement of the manifest error in marking question CSD02. To clarify, we believe that this error was not an isolated incident, but rather indicative of a broader issue with the evaluation process. Specifically, we would like to request access to the scoring matrices and evaluator comments for all questions, particularly those related to clinical and service delivery, to assess whether similar errors may have been made.",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Procurement Act 2023 s12(1)(a) - value for money",
+        "Public Contracts Regulations 2015 Reg 27(2) - evaluation criteria"
+      ],
+      "reasoning": "This scenario is numeric, so I will use Step 2A to verify the calculation. The Contracting Authority's evaluators made a manifest error in marking question CSD02 by misunderstanding Braceurself's answer concerning patient access to first-floor premises. The correct score for this question should be recalculated based on the actual answer provided by Braceurself. However, since the scenario does not provide the specific input values (e.g., points awarded for each aspect of the answer), I will treat this as Step 2B and assess compliance qualitatively instead. According to the scenario description, a manifest error resulted in a 2.25 percentage points gap between Braceurself's score of 80.25% and the successful bidder's score of 82.5%. This suggests that the Contracting Authority's evaluators did not follow a lawful, rational, and procedurally correct process.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiated outcome is more favorable than our BATNA (defending in TCC court, which would cost \u00a350k+ and take 6-12 months) since we were able to avoid the significant costs and risks associated with litigation. However, it's worth noting that the re-evaluation process resulted in a relatively minor adjustment to the original scores, and Braceurself Ltd was not awarded damages.",
+    "win_statement": "We successfully negotiated a re-evaluation of the scoring challenge, which led to a more accurate assessment of the bids. Although we did not achieve our desired outcome of awarding the contract to another bidder, we were able to avoid the significant costs and risks associated with litigation.",
+    "what_was_achieved": [
+      "Re-evaluation of the scoring challenge",
+      "Minor adjustment to the original scores"
+    ],
+    "what_was_conceded": [
+      "Access to scoring matrices and evaluator comments for all questions",
+      "Potential for further errors in the evaluation process"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is slightly better than our BATNA (pursuing damages or formal TCC proceedings), but not by much. We were able to get a re-evaluation, which is a more favorable outcome than the original judgment, but we still didn't achieve our desired goal of being awarded the contract.",
+    "win_statement": "We successfully negotiated a re-evaluation of the scoring challenge, which will give us another chance to demonstrate our capabilities and secure the contract. Although we didn't get the desired outcome, this is a better result than if we had pursued damages or formal proceedings.",
+    "what_was_achieved": [
+      "Re-evaluation of the scoring challenge",
+      "Access to additional information (scoring matrices and evaluator comments) to assess potential errors in the evaluation process"
+    ],
+    "what_was_conceded": [
+      "No change to the original judgment regarding damages",
+      "Still no guarantee of being awarded the contract despite re-evaluation"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Manifest error in marking question CSD02",
+      "Request for access to scoring matrices and evaluator comments"
+    ],
+    "concessions_summary": "The Contracting Authority acknowledged the manifest error, but did not concede on providing access to scoring matrices and evaluator comments. The Aggrieved Bidder made concessions by clarifying their position on the broader issue with the evaluation process.",
+    "court_reasoning_summary": "The Court concluded that a manifest error occurred in marking question CSD02, which resulted in an unfair advantage for the successful bidder. The Contracting Authority's evaluators did not follow a lawful and procedurally correct process, leading to a recommended re-evaluation of the bids.",
+    "likely_next_steps": "Re-evaluation of the bids will likely take place, where Braceurself Ltd's score will be recalculated based on their actual answer for question CSD02. The outcome may affect the ranking of bidders and potentially lead to a new contract award.",
+    "plain_english_summary": "The dispute centered around an error in evaluating one question, which might have affected the overall outcome of the bidding process. The Court agreed that this error was significant enough to warrant re-evaluation of all bids. This means that Braceurself Ltd's score will be recalculated, and it may impact who gets the contract."
+  }
+}
