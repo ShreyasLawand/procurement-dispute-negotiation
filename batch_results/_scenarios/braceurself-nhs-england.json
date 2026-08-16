@@ -1,0 +1,12 @@
+{
+  "dispute_id": "REAL-BRACEURSELF-2022",
+  "title": "Braceurself Ltd v NHS England",
+  "description": "NHS England's evaluators made a manifest error in marking question CSD02 (clinical and service delivery) by misunderstanding Braceurself's answer concerning patient access to first-floor premises. The evaluators read this as a reference to a stair lift, but it was actually a stair-climber. This error resulted in a 2.25 percentage points gap between Braceurself's score of 80.25% and the successful bidder's score of 82.5%. Despite finding the manifest error, the judge concluded that the breach was not sufficiently serious to warrant damages.",
+  "contract_value_gbp": 104000000.0,
+  "dispute_type": "scoring_challenge",
+  "procedural_stage": "appeal",
+  "contracting_authority_name": "NHS England",
+  "bidder_name": "Braceurself Ltd",
+  "ca_profile": null,
+  "bidder_profile": null
+}

@@ -1,0 +1,12 @@
+{
+  "dispute_id": "REAL-BROMCOM-2022",
+  "title": "Bromcom Computers plc v United Learning Trust",
+  "description": "UL's procurement for a cloud-based MIS used across 57 schools was challenged by Bromcom on three grounds: (1) unlawful averaging of individual scores without moderation, (2) one-sided data-transfer cost adjustment applied only to Bromcom's bid, and (3) permitting Arbor's rebate linked to a separate contract. The court found in favour of Bromcom on all three grounds.",
+  "contract_value_gbp": 2000000.0,
+  "dispute_type": "scoring_challenge",
+  "procedural_stage": "trial",
+  "contracting_authority_name": "United Learning Trust and United Church Schools Trust",
+  "bidder_name": "Bromcom Computers plc",
+  "ca_profile": null,
+  "bidder_profile": null
+}

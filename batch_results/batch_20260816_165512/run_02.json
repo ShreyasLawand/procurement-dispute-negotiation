@@ -1,0 +1,122 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-BRACEURSELF-2022",
+    "title": "Braceurself Ltd v NHS England",
+    "description": "NHS England's evaluators made a manifest error in marking question CSD02 (clinical and service delivery) by misunderstanding Braceurself's answer concerning patient access to first-floor premises. The evaluators read this as a reference to a stair lift, but it was actually a stair-climber. This error resulted in a 2.25 percentage points gap between Braceurself's score of 80.25% and the successful bidder's score of 82.5%. Despite finding the manifest error, the judge concluded that the breach was not sufficiently serious to warrant damages.",
+    "contract_value_gbp": 104000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "appeal",
+    "contracting_authority_name": "NHS England",
+    "bidder_name": "Braceurself Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Act lawfully and within powers under the Procurement Act 2023 to avoid manifest error findings.",
+      "Protection of Public Funds: \u00a3104,000,000 contract value means significant public funds at stake; avoiding delays is crucial.",
+      "Continuity of Service / Delivery: Deliver critical healthcare services to millions of patients; delay or re-run risks disruption and harm.",
+      "Reputation & Public Accountability: Maintain NHS England's reputation as a fair and competent buyer under scrutiny from media, politicians, and auditors.",
+      "Minimising Litigation Risk: Provide transparency without undermining evaluation confidentiality or integrity to avoid further challenges."
+    ],
+    "goals": [
+      "Defend procurement decision",
+      "Maintain contract continuity"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We acknowledge the manifest error, but believe it was not sufficiently serious to affect the outcome; we are willing to discuss additional feedback and transparency.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "EU Procurement Directive"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a3104M contract value at stake; potential loss of revenue and bid costs (\u00a3500k-\u00a31M) due to manifest error in marking question CSD02",
+      "Fairness & Transparency: Perception of unfairness due to evaluator's misunderstanding of stair-climber vs. stair lift, which resulted in a 2.25 percentage points gap between scores"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids to correct manifest error and award the contract fairly",
+      "Obtain damages for loss suffered as a result of NHS England's breach"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "Request a re-evaluation of question CSD02 to correct manifest error and award the contract fairly",
+    "legal_basis": [
+      "Public Contracts Regulations 2015; EU Remedies Directive"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I appreciate Braceurself Ltd's opening statement and acknowledge their concerns regarding the manifest error in marking question CSD02. I would like to clarify whether you are suggesting that this error was so significant as to have altered the outcome of the procurement, or if you believe it merely impacted your score by a margin that did not affect the overall winner. Furthermore, could you provide more context on how you intend to address this issue in light of the judge's conclusion that the breach was not sufficiently serious to warrant damages?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your acknowledgement of our concerns regarding the manifest error in marking question CSD02. To clarify, we firmly believe that this error was so significant as to have altered the outcome of the procurement. We are not just talking about a minor scoring discrepancy, but rather a fundamental misunderstanding of our response that had a direct impact on our overall score and ultimately, the award decision. I would like to request more information on how NHS England intends to address this issue in light of the judge's conclusion that the breach was not sufficiently serious to warrant damages. Specifically, what steps does NHS England propose to take to rectify this situation and ensure that similar errors do not occur in future procurements?",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Public Contracts Regulations 2015 (PCR 2015), Regulation 87(3) - manifest error"
+      ],
+      "reasoning": "This scenario is numeric. I will perform the calculation to verify the score discrepancy. The formula for calculating the scores is not explicitly stated, but it can be inferred that the Contracting Authority used a percentage-based scoring system. According to the scenario, Braceurself's score was 80.25% and the successful bidder's score was 82.5%. The difference between their scores is 2.25 percentage points. I will assume that the Contracting Authority applied the same scoring criteria to both bidders. However, upon closer inspection of the scenario, I notice that it does not provide enough information to perform a precise calculation. Specifically, it does not state how many questions were included in the clinical and service delivery (CSD02) evaluation or what percentage weightage was assigned to each question. Therefore, I will treat this as Step 2B - qualitative rational-basis check.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiated re-evaluation outcome is more favorable than our BATNA of defending the dispute in TCC court, which would have cost \u00a350k+ and taken 6-12 months. While we did not achieve a full win, the re-evaluation has resulted in a revised score that is closer to Braceurself's original score.",
+    "win_statement": "We successfully negotiated a re-evaluation of question CSD02, which has led to a more accurate reflection of Braceurself's response and a reduced gap between their score and the successful bidder's score. This outcome demonstrates our commitment to fairness and transparency in the procurement process.",
+    "what_was_achieved": [
+      "A re-evaluation of question CSD02 was conducted, resulting in a revised score for Braceurself Ltd",
+      "The gap between Braceurself's score and the successful bidder's score has been reduced"
+    ],
+    "what_was_conceded": [
+      "NHS England acknowledged the manifest error in marking question CSD02 and agreed to re-evaluate the response",
+      "Braceurself Ltd was awarded a revised score, although it did not change the overall outcome of the procurement"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is somewhat better than our BATNA, but it's still a compromise. We were hoping for a more significant adjustment to the award decision or at least a clear commitment from NHS England to improve their evaluation processes. Instead, we got a re-evaluation that has reduced the gap between our score and the successful bidder's score by 1 percentage point. While this is an improvement, it still falls short of what we believe is fair.",
+    "win_statement": "We were able to secure a re-evaluation of question CSD02, which resulted in a 1 percentage point reduction in the gap between our score and the successful bidder's score. This outcome acknowledges the manifest error made by NHS England's evaluators and provides some relief for Braceurself Ltd.",
+    "what_was_achieved": [
+      "A re-evaluation of question CSD02 was secured, which reduced the gap between our score and the successful bidder's score by 1 percentage point",
+      "NHS England acknowledged the manifest error made by their evaluators"
+    ],
+    "what_was_conceded": [
+      "The award decision remains unchanged, with NHS England reaffirming that the breach was not sufficiently serious to warrant damages",
+      "No clear commitment from NHS England to improve their evaluation processes"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Manifest error in marking question CSD02",
+      "Significance of the scoring discrepancy on the procurement outcome"
+    ],
+    "concessions_summary": "Neither side made any concessions during the negotiation. The Contracting Authority acknowledged the Aggrieved Bidder's concerns, but no specific commitments were made to address them.",
+    "court_reasoning_summary": "The Court recommended re-evaluation due to a manifest error in marking question CSD02 and insufficient information to perform a precise calculation of the score discrepancy. The Court treated this as Step 2B - qualitative rational-basis check.",
+    "likely_next_steps": "A re-evaluation will be conducted, where the Contracting Authority will reassess the scores based on the correct application of the evaluation criteria. This may lead to a revised ranking and potentially alter the outcome of the procurement.",
+    "plain_english_summary": "The dispute centered around a scoring error that significantly impacted Braceurself Ltd's chances of winning the \u00a3104 million contract. The Court agreed with the Aggrieved Bidder's concerns, but due to insufficient information, it couldn't determine the exact impact of the error on the outcome. As a result, the Contracting Authority will re-evaluate the scores, which may lead to a revised ranking and potentially alter the winner."
+  }
+}

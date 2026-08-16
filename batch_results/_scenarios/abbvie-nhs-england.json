@@ -1,0 +1,12 @@
+{
+  "dispute_id": "REAL-ABBVIE-2019",
+  "title": "AbbVie v NHS England",
+  "description": "NHS England used the Dummy Price Mechanism (DPM) in its procurement of up to \u00a31 billion worth of HCV medication. AbbVie challenged the DPM, arguing it was inherently meaningless and breached the equal treatment principle. However, the court found that AbbVie's own pricing choices, not the mechanism, explained its unsuccessful bid. The DPM did not structurally disadvantage AbbVie relative to competitors.",
+  "contract_value_gbp": 1000000000.0,
+  "dispute_type": "scoring_challenge",
+  "procedural_stage": "trial",
+  "contracting_authority_name": "NHS England",
+  "bidder_name": "AbbVie Ltd",
+  "ca_profile": null,
+  "bidder_profile": null
+}

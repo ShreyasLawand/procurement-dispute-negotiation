@@ -1,0 +1,65 @@
+{
+  "scenario_id": "REAL-ABBVIE-2019",
+  "scenario_title": "AbbVie v NHS England",
+  "contracting_authority": "NHS England",
+  "bidder": "AbbVie Ltd",
+  "complete": true,
+  "n_runs_requested": 1,
+  "n_runs_completed_so_far": 1,
+  "n_runs_successful": 0,
+  "n_runs_failed": 1,
+  "max_rounds": 3,
+  "timestamp": "20260816_160414",
+  "court_prompt_version": "V4",
+  "ca_profile": null,
+  "bidder_profile": null,
+  "metrics": {
+    "resolution_rate": null,
+    "deadlock_rate": null,
+    "manifest_error_detection_rate": null,
+    "average_rounds_to_conclusion": 0,
+    "average_duration_seconds": 0,
+    "outcome_distribution": {}
+  },
+  "compliance": {
+    "structural_compliance_rate": null,
+    "by_site": {}
+  },
+  "individual_runs": [
+    {
+      "run_number": 1,
+      "resolved": null,
+      "outcome": null,
+      "rounds_taken": null,
+      "manifest_error_found_any_round": null,
+      "manifest_error_rounds": [],
+      "process_not_followed_any_round": null,
+      "duration_seconds": 109.3,
+      "compliance": {
+        "structured_responses": 2,
+        "clean_responses": 2,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ContractingAuthorityAgent.pre_negotiation": 1,
+            "AggrievedBidderAgent.pre_negotiation": 1
+          },
+          "clean_responses": {
+            "ContractingAuthorityAgent.pre_negotiation": 1,
+            "AggrievedBidderAgent.pre_negotiation": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": "'charmap' codec can't encode characters in position 2-71: character maps to <undefined>"
+    }
+  ]
+}

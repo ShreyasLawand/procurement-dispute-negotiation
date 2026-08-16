@@ -1,0 +1,121 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-BROMCOM-2022",
+    "title": "Bromcom Computers plc v United Learning Trust",
+    "description": "UL's procurement for a cloud-based MIS used across 57 schools was challenged by Bromcom on three grounds: (1) unlawful averaging of individual scores without moderation, (2) one-sided data-transfer cost adjustment applied only to Bromcom's bid, and (3) permitting Arbor's rebate linked to a separate contract. The court found in favour of Bromcom on all three grounds.",
+    "contract_value_gbp": 2000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "trial",
+    "contracting_authority_name": "United Learning Trust and United Church Schools Trust",
+    "bidder_name": "Bromcom Computers plc",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: \u00a32,000,000 contract value at stake and potential for significant delay or re-run costs if dispute is not resolved",
+      "Continuity of Service / Delivery: Education services to 57 schools may be disrupted due to delayed MIS implementation",
+      "Reputation & Public Accountability: Maintain public confidence in procurement process and avoid adverse media scrutiny"
+    ],
+    "goals": [
+      "Defend the procurement decision and maintain transparency throughout the dispute resolution process"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We acknowledge Bromcom's concerns, but firmly believe our procurement process was lawful and compliant with the Procurement Act 2023",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "EU Procurement Directives"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a32m contract value at risk due to flawed evaluation",
+      "Fairness & Transparency: Want clear explanation of scoring methodology and justification for awarding Arbor over Bromcom"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "Award damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "Request that United Learning Trust re-evaluate all bids based on corrected scoring methodology",
+    "legal_basis": [
+      "The Public Contracts Regulations 2015",
+      "Case law precedent from previous procurement disputes"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge Bromcom's concerns regarding the procurement process and appreciate their willingness to engage in this negotiation. However, I must clarify that the court's findings were based on specific procedural irregularities rather than a fundamental flaw in our evaluation criteria or methodology. Can you please specify which aspects of the averaging process, data-transfer cost adjustment, or permitting Arbor's rebate you believe were most egregious and how you propose we rectify these issues?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your clarification on the court's findings and the procedural irregularities that led to our win. However, I would like to clarify what you mean by 'specific procedural irregularities' - did you intend to imply that there were no fundamental flaws in your evaluation criteria or methodology? If so, can you explain how you believe your scoring process was robust enough to withstand the court's findings on unlawful averaging and one-sided data-transfer cost adjustment?",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Procurement Act 2023 s12(1)(a) - Value for money",
+        "Procurement Regulations 2015 Reg 84(2) - Scoring and evaluation"
+      ],
+      "reasoning": "This scenario is numeric. The court found in favour of Bromcom on the ground that UL's procurement process involved 'unlawful averaging of individual scores without moderation'. To verify this, I will calculate the average score using the formula: Average Score = (Score1 + Score2 + ... + ScoreN) / N. However, since no specific sub-scores are provided in the scenario, I cannot perform a calculation to check against any score or outcome mentioned. Therefore, I must rely on qualitative reasoning. The court's finding suggests that UL did not follow a lawful process for averaging scores, which is a fundamental aspect of scoring and evaluation.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome is slightly unfavourable compared to our BATNA of defending in TCC court, which would have cost \u00a350k+ and taken 6-12 months. However, we managed to avoid the costs and risks associated with a lengthy legal battle.",
+    "win_statement": "We successfully negotiated a re-evaluation process that will allow us to rectify the procedural irregularities identified by the court, ensuring a more robust evaluation process for future procurements.",
+    "what_was_achieved": [
+      "Agreed on a re-evaluation process to address the court's findings",
+      "Avoided the costs and risks associated with defending in TCC court"
+    ],
+    "what_was_conceded": [
+      "Allowed Bromcom to challenge our procurement process, resulting in some concessions",
+      "Failed to defend against all three grounds of challenge, leading to a re-evaluation"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is a re-evaluation, which is better than pursuing damages or formal TCC proceedings. However, I'm not entirely satisfied with the result as it doesn't fully address the underlying issues with the procurement process.",
+    "win_statement": "We successfully challenged three grounds of the procurement and secured a re-evaluation, but we didn't achieve a complete overhaul of the evaluation criteria or methodology.",
+    "what_was_achieved": [
+      "Secured a re-evaluation of the contract",
+      "Established that unlawful averaging and one-sided data-transfer cost adjustment were procedural irregularities"
+    ],
+    "what_was_conceded": [
+      "No fundamental flaws in evaluation criteria or methodology acknowledged by the contracting authority",
+      "Rebate issue was not fully addressed"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Unlawful averaging of individual scores without moderation",
+      "One-sided data-transfer cost adjustment"
+    ],
+    "concessions_summary": "Neither party made significant concessions during the negotiation. The Contracting Authority acknowledged Bromcom's concerns and clarified the court's findings, while the Aggrieved Bidder pressed for clarification on the robustness of the scoring process.",
+    "court_reasoning_summary": "The Court concluded that a re-evaluation was necessary due to procedural irregularities in the procurement process, specifically the unlawful averaging of individual scores without moderation. The Court relied on qualitative reasoning since specific sub-scores were not provided.",
+    "likely_next_steps": "A re-evaluation will be conducted by the Contracting Authority, taking into account the court's findings and recommendations. This may involve revisiting the scoring process and addressing the issues raised by the Aggrieved Bidder.",
+    "plain_english_summary": "The negotiation centered around procedural irregularities in the procurement process, specifically how scores were averaged and costs adjusted. The Court agreed that a re-evaluation was necessary to ensure a fair and lawful process."
+  }
+}
