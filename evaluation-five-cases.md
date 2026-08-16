@@ -34,21 +34,22 @@ traceable consequence.
 |---|---|---|---|---|---|---|---|
 | Lancashire Care | Transparency / adequacy of reasons | 7 re-eval, 1 deadlock | 8 re-eval | 0.875 / 0.125 | 1.00 / 0.00 | 2.75 | 1.25 |
 | Faraday | Process avoidance (not scoring) | 6 re-eval, 2 deadlock | 8 re-eval | 0.75 / 0.25 | 1.00 / 0.00 | 3.00 | 1.12 |
-| Parkingeye | Transparency (value mis-statement) | 8 re-eval | 8 re-eval | 1.00 / 0.00 | 1.00 / 0.00 | 1.50 | 1.12 |
+| Parkingeye | Transparency (value mis-statement) | 7 re-eval, 1 deadlock | 8 re-eval | 0.875 / 0.125 | 1.00 / 0.00 | 1.50 | 1.25 |
 | Alstom | Technical-threshold manifest error | 4 re-eval, 4 deadlock | 6 re-eval, 2 no-remedy | 0.50 / 0.50 | 1.00 / 0.00 | 4.38 | 2.12 |
 | Woods (post-patch) | Numeric scoring correction | 8 re-eval | 8 re-eval | 1.00 / 0.00 | 1.00 / 0.00 | 1.00 | 1.00 |
 
 Batch identifiers: Lancashire V3 `batch_20260815_213642`, V4 `_214210`; Faraday V3 `_214543`, V4
-`_215108`; Parkingeye V3 `_220726`, V4 `_221124`; Alstom V3 `_192629`, V4 `_193406`; Woods (post-patch)
+`_215108`; Parkingeye V3 `batch_20260816_172323`, V4 `_172843` (re-run 16 Aug against a corrected
+scenario extraction — see §5.2a); Alstom V3 `_192629`, V4 `_193406`; Woods (post-patch)
 V3 `_200902`, V4 `_201219`. Structural compliance is 1.00 in every cell in this table (no JSON repair
 needed across any of the ten batches) — see the compliance-instrumentation section elsewhere in this
 chapter for the corpus-wide figure, which is lower once earlier, pre-fix batches are included.
 
-A pattern holds across every case where V3 produced any deadlock at all (Lancashire, Faraday, Alstom):
-**V4 never deadlocks, and resolves in roughly half the rounds V3 takes.** This is consistent across
-three independent cases, not a single-case artefact, and matches Doc 1's fifth judicial-interest
-category — *"Efficient Use of Judicial Resources... encourage settlement or the narrowing of
-issues"* — which V4 adds to the Court agent's stated interests and V3 does not.
+A pattern holds across every case where V3 produced any deadlock at all (Lancashire, Faraday, Alstom,
+**and now Parkingeye**): **V4 never deadlocks, and resolves in roughly the same or fewer rounds than
+V3.** This is consistent across four independent cases, not a single-case artefact, and matches Doc 1's
+fifth judicial-interest category — *"Efficient Use of Judicial Resources... encourage settlement or the
+narrowing of issues"* — which V4 adds to the Court agent's stated interests and V3 does not.
 
 ## 3. Lancashire Care NHS Foundation Trust & Blackpool Teaching Hospitals NHS Foundation Trust v Lancashire County Council
 
@@ -163,17 +164,49 @@ the merits at this stage.**
 
 ### 5.2 Results
 
-Both prompt versions reach "re-evaluation" unanimously — 8/8 for V3, 8/8 for V4 — with V4 resolving
-modestly faster (1.12 vs 1.50 average rounds) and identical, maximal manifest-error detection (1.00 vs
-1.00). The extraction record for this case is accurate — the tender-notice value discrepancy is
-faithfully captured as a real, verifiable transparency failure, and (unlike Faraday) the CA and Bidder
-agents are negotiating over facts the case actually supports, since Parkingeye is a genuine scored-bid
-dispute (68% against NPCG's 84%) with a real, additional transparency defect layered on top.
+V4 reaches "re-evaluation" unanimously (8/8); V3 reaches it in 7/8 runs, with the 8th run hitting
+deadlock at the round limit. Manifest-error detection is 0.875 (V3) vs 1.00 (V4). V4 also resolves
+marginally faster on average (1.25 vs 1.50 rounds), though both distributions are close.
+
+### 5.2a A caught extraction gap — the batches above ran against a corrected scenario, not the original
+
+The figures in §5.2 are **not** what the original 15 Aug batches (`_220726`/`_221124`) produced —
+those are superseded and should not be cited. While investigating an unrelated question, an
+independent scenario cache re-extraction of this case, run on a GPU-backed remote instance on 16 Aug,
+surfaced a real gap: the extraction cached and used for the original batches never captured the actual
+68%/84% score gap between Parkingeye and NPCG, nor the fact that the case turned on the Procurement
+Act 2023's new s.101 suspension test specifically — both of which are present in the real case's
+source text (`src/cases/real_cases.py`). An earlier draft of this section (see git history) asserted
+"Parkingeye is a genuine scored-bid dispute (68% against NPCG's 84%)" as if the extracted scenario the
+agents actually negotiated over contained that — it did not; that sentence was checked against the raw
+case source text, not against what `load_real_scenario()` had actually cached and fed to the agents.
+This is exactly the class of error this project's own discipline exists to catch, caught here on the
+write-up itself rather than on agent output.
+
+The fix, applied 16 Aug: the scenario's `description` field was corrected to include the score gap and
+the s.101 detail, verified against `real_cases.py`'s source text before being adopted. One further
+field was deliberately **not** adopted from the independent re-extraction: it had also relabelled
+`dispute_type` from `"transparency_breach"` to `"scoring_challenge"`. Given `dispute_type` is inserted
+verbatim into the CA/Bidder system prompts (`ca_agent.py`/`bidder_agent.py`) and given the Faraday
+finding above already shows this field materially steers agent framing, "scoring_challenge" was judged
+a worse label here: the real case's three actual grounds (tender-notice transparency, evaluation
+methodology fixed only after commencement, inconsistent clarification treatment) never include an
+allegation that the 68/84 split was itself miscalculated — the score gap is contextual outcome, not
+the disputed fact. Labelling it a scoring challenge risks steering agents toward relitigating arithmetic
+nobody actually disputes. `dispute_type` was kept as `"transparency_breach"`.
+
+Both V3 and V4 were re-run at n=8 against the corrected scenario (`batch_20260816_172323`/`_172843`).
+The headline corpus-level finding is **unchanged** — V4 still never deadlocks where V3 does, now across
+four cases instead of three (§2) — but the specific Parkingeye cell moved from "unanimous" to "7/8,
+with V3 producing its first deadlock on this case," which is itself informative: it means the original
+"unanimous 8/8" result reported for Parkingeye V3 was partly an artefact of a thinner scenario grounding
+the negotiation in less specific, harder-to-dispute language, not a stable property of V3's behaviour on
+this case's actual facts.
 
 ### 5.3 The same correction applied to Alstom applies here, in the opposite direction
 
-As with Alstom (§6.3 below), it is tempting to read unanimous "re-evaluation" as the simulation
-reproducing the real result. The real result was procedural: the suspension was *maintained*, meaning
+As with Alstom (§6.3 below), it is tempting to read V4's unanimous (and V3's modal) "re-evaluation" as
+the simulation reproducing the real result. The real result was procedural: the suspension was *maintained*, meaning
 Parkingeye's challenge survived to be heard, not that a court found the CA's process non-compliant.
 "Re-evaluation," in this system's vocabulary, is a merits conclusion the real case has not yet reached.
 Directionally, both outcomes favour the challenger over the contracting authority proceeding unchecked —
