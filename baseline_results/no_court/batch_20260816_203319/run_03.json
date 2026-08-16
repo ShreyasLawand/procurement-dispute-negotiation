@@ -1,0 +1,138 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-BROMCOM-2022",
+    "title": "Bromcom Computers plc v United Learning Trust",
+    "description": "UL's procurement for a cloud-based MIS used across 57 schools was challenged by Bromcom on three grounds: (1) unlawful averaging of individual scores without moderation, (2) one-sided data-transfer cost adjustment applied only to Bromcom's bid, and (3) permitting Arbor's rebate linked to a separate contract. The court found in favour of Bromcom on all three grounds.",
+    "contract_value_gbp": 2000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "trial",
+    "contracting_authority_name": "United Learning Trust and United Church Schools Trust",
+    "bidder_name": "Bromcom Computers plc",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 3,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: \u00a32,000,000 contract value at stake; delay would increase costs and create service delivery gaps.",
+      "Continuity of Service / Delivery: Education services for 57 schools rely on this MIS procurement; a re-run or delay would severely disrupt teaching and learning.",
+      "Reputation & Public Accountability: Our reputation as a competent, fair, and professional buyer is at risk if we fail to defend our procurement decision."
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Resolve the dispute through negotiation"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We acknowledge Bromcom's concerns but firmly believe our evaluation process was lawful, rational, and procedurally correct. We are willing to provide additional feedback and transparency within the bounds of commercial confidentiality.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Regulation 32(2) of the Public Contracts Regulations 2015"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a32M contract value at stake, including lost revenue and bid costs (\u00a3500k)",
+      "Fairness & Transparency: Perceived unfairness in evaluation process, particularly with averaging of individual scores without moderation"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "Award damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "Request that UL re-run the evaluation process with a fair and transparent scoring methodology",
+    "legal_basis": [
+      "The court's findings on unlawful averaging of individual scores without moderation",
+      "The court's findings on one-sided data-transfer cost adjustment"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge Bromcom's concerns regarding our procurement process and appreciate their willingness to engage in this negotiation. However, I must clarify that we did not 'unlawfully average' scores without moderation; rather, we applied a standardised evaluation methodology as outlined in the tender documents. Could you provide more context on how you believe this affected your bid? Additionally, I'd like to offer transparency by providing the detailed evaluation reports for each of the challenged grounds, which may help clarify our decision-making process.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "Thank you for clarifying that UL applied a standardised evaluation methodology. However, I'd like to ask for more specific information about how this methodology accounted for the individual scores without moderation, as our previous understanding was that moderation was an essential part of the evaluation process. Could you provide a detailed explanation of this methodology and how it was applied in our bid? Additionally, I'd like to request access to the evaluation reports for each challenged ground, but I would also like to propose a compromise: instead of releasing the full reports immediately, could we agree on a joint review of the reports together, with both parties present, to ensure that all concerns are addressed and understood?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "We understand your request for a joint review of the evaluation reports and are willing to consider this as an alternative to releasing the full reports immediately. We believe that a joint review would allow us to address any concerns you may have in real-time, while also ensuring that all parties are present to clarify any points of contention. In light of this proposal, we are prepared to offer a concession: we will provide additional feedback on our evaluation process, specifically addressing the three grounds raised by Bromcom, and will make ourselves available for a joint review at your earliest convenience.",
+      "proposal": null,
+      "concession_made": "Additional feedback on evaluation process"
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your willingness to consider a joint review of the evaluation reports and your offer of additional feedback on our three grounds of challenge. However, I would like to ask for clarification on how this additional feedback will be provided - will it be in writing or verbally? Additionally, I propose that we agree to a specific timeline for the joint review, with both parties committing to a date and time within the next two weeks. This will allow us to move forward with the process and ensure that all concerns are addressed in a timely manner.",
+      "proposal": "Agree on a specific timeline for the joint review",
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "We are willing to offer a revised evaluation methodology that addresses Bromcom's concerns regarding moderation and data-transfer cost adjustments. We will also provide additional feedback on our evaluation process, specifically addressing the three grounds raised by Bromcom. Furthermore, we propose a joint review of the evaluation reports within the next two weeks, with both parties committing to a specific date and time.",
+      "proposal": "A revised contract award that reflects the changes in methodology and feedback provided",
+      "concession_made": "Providing additional feedback on our evaluation process and making ourselves available for a joint review"
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your willingness to revise the evaluation methodology and provide additional feedback on our three grounds of challenge. However, I believe that a more concrete resolution is needed to bring this dispute to a close. In light of the court's findings in favour of Bromcom on all three grounds, I propose that we accept a partial award covering 50% of the contract value, which would be \u00a31,000,000. This would not only provide a financial remedy for our losses but also demonstrate a commitment from UL to rectify its evaluation process and ensure fairness in future procurements.",
+      "proposal": "A partial award covering 50% of the contract value",
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [],
+  "resolved": false,
+  "resolution_outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+  "adjudicated": false,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiation outcome, while not ideal, was more favorable than our BATNA of defending the case in TCC court, which would have cost \u00a350k+ and taken 6-12 months. We were able to avoid a full loss by negotiating a partial award covering 50% of the contract value.",
+    "win_statement": "We successfully negotiated a compromise that avoided a complete loss for Bromcom, while also demonstrating our commitment to rectifying our evaluation process and ensuring fairness in future procurements.",
+    "what_was_achieved": [
+      "Revised evaluation methodology addressing moderation and data-transfer cost adjustments",
+      "Additional feedback on the evaluation process specifically addressing the three grounds raised by Bromcom"
+    ],
+    "what_was_conceded": [
+      "Partial award covering 50% of the contract value (\u00a31,000,000)",
+      "Joint review of evaluation reports within two weeks"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The negotiation outcome is relatively favourable compared to pursuing damages or formal TCC proceedings, which would have been costly, slow, and uncertain. However, the final outcome of a deadlock at the max rounds reached means that we did not achieve our desired partial award of \u00a31,000,000.",
+    "win_statement": "We successfully challenged UL's procurement process on three grounds and secured a concession from the contracting authority to revise their evaluation methodology. Although we were unable to reach an agreement on a partial award, we have set a precedent for future procurements by demonstrating that unfair practices will not be tolerated.",
+    "what_was_achieved": [
+      "Secured concessions from UL on revising their evaluation methodology",
+      "Established a precedent for fair procurement practices"
+    ],
+    "what_was_conceded": [
+      "Failed to achieve a partial award of \u00a31,000,000",
+      "Had to escalate the dispute to formal proceedings due to deadlock at max rounds reached"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Application of standardised evaluation methodology",
+      "Moderation of individual scores without moderation",
+      "Data-transfer cost adjustments"
+    ],
+    "concessions_summary": "The Contracting Authority (UL) made concessions in Rounds 2 and 3, offering additional feedback on their evaluation process, revising the evaluation methodology to address Bromcom's concerns, and agreeing to a joint review of the evaluation reports. However, these concessions did not satisfy Bromcom's demands for a partial award covering 50% of the contract value.",
+    "court_reasoning_summary": "The Court likely reached its conclusion due to the lack of concrete resolution between the parties, despite the Contracting Authority's concessions. The Aggrieved Bidder (Bromcom) continued to push for a more substantial outcome, which was not met by UL's offers. The Court may have deemed that the concessions made were insufficient to resolve the dispute and therefore reached a deadlock.",
+    "likely_next_steps": "The case will likely proceed to formal proceedings, where the Court will make a final decision on the dispute. Bromcom may seek a partial award covering 50% of the contract value or other remedies, while UL will continue to defend its evaluation process.",
+    "plain_english_summary": "Despite concessions made by the Contracting Authority (UL), the negotiation reached a deadlock as the Aggrieved Bidder (Bromcom) continued to push for a more substantial outcome. The case will now proceed to formal proceedings, where the Court will make a final decision on the dispute."
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-FARADAY-2018",
+    "title": "Faraday Development Ltd v West Berkshire Council",
+    "description": "West Berkshire Council entered into a development agreement with St Modwen Developments Ltd for approximately \u00a3125 million, structured as a conditional land agreement. Faraday Development Ltd challenged the arrangement, alleging that it was in substance a public works contract that should have been competitively procured under the Public Contracts Regulations. The High Court initially dismissed the claim, but the Court of Appeal reversed this decision, holding that the agreement was indeed a public works contract and declaring its ineffectiveness.",
+    "contract_value_gbp": 125000000.0,
+    "dispute_type": "process_avoidance",
+    "procedural_stage": "appeal",
+    "contracting_authority_name": "West Berkshire Council",
+    "bidder_name": "Faraday Development Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 3,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: Avoid significant financial losses due to the contract's ineffectiveness and potential costs of re-procurement.",
+      "Continuity of Service / Delivery: Ensure timely delivery of a major development project worth \u00a3125,000,000, impacting local infrastructure and community growth.",
+      "Reputation & Public Accountability: Maintain public confidence in our procurement processes and avoid adverse media scrutiny."
+    ],
+    "goals": [
+      "Defend the original procurement decision",
+      "Minimise costs associated with re-procurement or litigation"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our original evaluation process, which was lawful and followed all applicable regulations. We are willing to provide additional transparency and feedback within the bounds of commercial confidentiality.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Public Contracts Regulations"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: We have already incurred \u00a3200,000 in bid costs and stand to lose \u00a3125 million if we don't prevail.",
+      "Fairness & Transparency: The Council's evaluation process was opaque, and we want clarity on how our bid was scored and compared to the winner.",
+      "Protection of Reputation: Our credibility as a developer is at stake, and we need to maintain our market reputation.",
+      "Strategic Leverage: We want to understand why the Council chose St Modwen Developments Ltd over us and use this knowledge for future bids."
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "Award damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We believe that the Council's evaluation process was flawed and that we were unfairly disadvantaged. We request a full re-evaluation of all bids and an explanation of the scoring methodology used.",
+    "legal_basis": [
+      "Public Contracts Regulations",
+      "High Court and Court of Appeal judgments"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge Faraday Development Ltd's concerns regarding the classification of our development agreement with St Modwen Developments Ltd as a public works contract. I would like to clarify whether your challenge is focused on the initial High Court decision or the subsequent reversal by the Court of Appeal, and what specific aspects of the agreement you believe were not competitively procured under the Public Contracts Regulations.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "Thank you for acknowledging our concerns and clarifying your position. I'd like to ask a question regarding the classification of the development agreement as a public works contract. Can you provide more information on how West Berkshire Council determined that this was a conditional land agreement rather than a public works contract, and what specific factors led to this conclusion?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "We determined that the development agreement was a conditional land agreement rather than a public works contract based on the specific terms and conditions outlined in the agreement, including the fact that St Modwen Developments Ltd retained ownership of the land until completion. This classification was also supported by our legal advisors at the time. However, we acknowledge that this decision has been challenged and overturned by the Court of Appeal. In light of this development, we are willing to revisit our evaluation process and provide additional transparency on how we assessed the agreement's compliance with public procurement regulations.",
+      "proposal": null,
+      "concession_made": "We will provide additional transparency on our evaluation process"
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your willingness to revisit the evaluation process and provide additional transparency on how you assessed the agreement's compliance with public procurement regulations. However, I would like to request that this transparency be more than just a general statement, but rather a detailed explanation of the specific factors that led to the classification of the development agreement as a public works contract. Specifically, I would like to see the scoring methodology used by your evaluators and any relevant comments or feedback provided during the evaluation process. This will allow us to better understand how our bid was assessed and whether there were any manifest errors in the evaluation. Furthermore, I propose that we schedule a meeting with your procurement team to discuss these matters in more detail and explore potential solutions for moving forward.",
+      "proposal": "Schedule a meeting with your procurement team",
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "We are willing to provide detailed explanations of our evaluation process and scoring methodology used in assessing the development agreement as a public works contract. We will also make available any relevant comments or feedback provided during the evaluation process. Furthermore, we propose scheduling a meeting with our procurement team to discuss these matters in more detail and explore potential solutions for moving forward. This will include providing additional transparency on how we assessed the agreement's compliance with public procurement regulations.",
+      "proposal": null,
+      "concession_made": "We are willing to provide detailed explanations of our evaluation process and scoring methodology, and schedule a meeting with our procurement team"
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "Given the Court of Appeal's ruling that the development agreement was indeed a public works contract and its ineffectiveness, I propose that we accept this outcome and work towards a new procurement process that ensures compliance with public procurement regulations. We would like to request a meeting with your procurement team to discuss the details of a new procurement process, including the evaluation criteria and scoring methodology, to ensure that all bidders have an equal opportunity to compete for the contract.",
+      "proposal": "A new procurement process that ensures compliance with public procurement regulations",
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [],
+  "resolved": false,
+  "resolution_outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+  "adjudicated": false,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome is somewhat unfavorable compared to our BATNA (defending in TCC court, which would cost \u00a350k+ and take 6-12 months). While we were able to provide some concessions on transparency and evaluation process, the Court of Appeal's ruling ultimately led to a deadlock, forcing us to escalate to formal proceedings.",
+    "win_statement": "We successfully negotiated an agreement that acknowledges our willingness to revisit the evaluation process and provide additional transparency. Although we did not achieve a full win, we avoided the costs and risks associated with defending in TCC court.",
+    "what_was_achieved": [
+      "Provided detailed explanations of our evaluation process and scoring methodology",
+      "Agreed to schedule a meeting with our procurement team to discuss potential solutions for moving forward"
+    ],
+    "what_was_conceded": [
+      "Acknowledged the Court of Appeal's ruling that the development agreement was indeed a public works contract and its ineffectiveness",
+      "Agreed to work towards a new procurement process that ensures compliance with public procurement regulations"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome was a deadlock, which means we did not achieve our desired outcome of having the development agreement declared effective. In comparison to our BATNA (pursuing damages or formal TCC proceedings), this outcome is less favorable as it does not provide a clear resolution to the dispute and may lead to further legal action.",
+    "win_statement": "We successfully pushed for transparency in the evaluation process and obtained commitments from West Berkshire Council to provide detailed explanations of their scoring methodology and any relevant comments or feedback provided during the evaluation process. However, we were unable to achieve our primary objective of having the development agreement declared effective.",
+    "what_was_achieved": [
+      "Obtained commitments for transparency in the evaluation process",
+      "Scheduled a meeting with West Berkshire Council's procurement team"
+    ],
+    "what_was_conceded": [
+      "Failed to have the development agreement declared effective",
+      "May need to pursue further legal action"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Classification of development agreement as public works contract or conditional land agreement",
+      "Compliance with Public Contracts Regulations",
+      "Transparency in evaluation process"
+    ],
+    "concessions_summary": "The Contracting Authority made two concessions: (1) providing additional transparency on their evaluation process, and (2) agreeing to provide detailed explanations of their evaluation process and scoring methodology. They also proposed scheduling a meeting with their procurement team to discuss the matter further.",
+    "court_reasoning_summary": "The Court likely reached its conclusion due to the deadlock between the parties after three rounds of negotiation. Despite concessions made by the Contracting Authority, the Aggrieved Bidder continued to push for more transparency and a new procurement process. The Court may have deemed that the concessions made were insufficient to resolve the dispute.",
+    "likely_next_steps": "The case will likely proceed to formal proceedings, where the parties will present their arguments in court. The outcome of these proceedings is uncertain, but it's possible that the Contracting Authority may be required to re-evaluate its procurement process or provide further transparency.",
+    "plain_english_summary": "The negotiation between West Berkshire Council and Faraday Development Ltd reached a deadlock after three rounds. Despite concessions made by the council, Faraday continued to push for more transparency and a new procurement process. The case will now proceed to court, where the outcome is uncertain."
+  }
+}

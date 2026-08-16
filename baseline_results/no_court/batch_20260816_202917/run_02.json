@@ -1,0 +1,137 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-ABBVIE-2019",
+    "title": "AbbVie v NHS England",
+    "description": "NHS England used the Dummy Price Mechanism (DPM) in its procurement of up to \u00a31 billion worth of HCV medication. AbbVie challenged the DPM, arguing it was inherently meaningless and breached the equal treatment principle. However, the court found that AbbVie's own pricing choices, not the mechanism, explained its unsuccessful bid. The DPM did not structurally disadvantage AbbVie relative to competitors.",
+    "contract_value_gbp": 1000000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "trial",
+    "contracting_authority_name": "NHS England",
+    "bidder_name": "AbbVie Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 3,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Uphold the lawfulness and procedural correctness of our procurement process under the Procurement Act 2023.",
+      "Protection of Public Funds: Ensure value for money is delivered on a \u00a31,000,000,000 contract.",
+      "Continuity of Service / Delivery: Maintain uninterrupted supply of HCV medication to patients in need, worth up to \u00a31 billion."
+    ],
+    "goals": [
+      "Defend the procurement decision against AbbVie's scoring challenge",
+      "Maintain public confidence and trust in NHS England's procurement processes"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our evaluation, which was conducted fairly and transparently. We are willing to engage in constructive dialogue to address AbbVie's concerns.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "EU Procurement Directives (as incorporated into UK law)"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a31 billion contract value at stake, potential lost revenue and bid costs",
+      "Fairness & Transparency: Perception of unfairness due to flawed DPM, desire for clear feedback on scoring methodology"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "An award of damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "Request a detailed explanation of the DPM's scoring methodology and potential flaws",
+    "legal_basis": [
+      "Public Contracts Regulations 2015",
+      "Equal Treatment Principle"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge AbbVie's concerns regarding the Dummy Price Mechanism (DPM) and its potential impact on their bid. However, I would like to clarify whether AbbVie is suggesting that the DPM was applied inconsistently or unfairly in this procurement, as opposed to being inherently meaningless. Could you provide more specific details about how the DPM affected your pricing strategy and ultimately led to your unsuccessful bid?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your acknowledgment of our concerns regarding the Dummy Price Mechanism (DPM). However, I would like to clarify that we are not merely questioning its inherent meaninglessness. Rather, we believe that the DPM was applied inconsistently in this procurement, as evidenced by the significant discrepancies in scoring between our bid and those of competing suppliers. Specifically, we have identified a 15-point difference in the evaluation scores for the 'Price' criterion, which we believe is not justified by any material differences in our pricing strategy or DPM responses. I would like to request further information on how NHS England accounted for these discrepancies and what specific factors led to this scoring variation.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "I understand AbbVie's concerns regarding the discrepancies in scoring for the 'Price' criterion, and I appreciate their request for further information on how NHS England accounted for these discrepancies. To address this point directly, I can provide additional details on our evaluation process, specifically highlighting the factors that led to the 15-point difference in scoring between AbbVie's bid and those of competing suppliers. Our evaluation team considered multiple aspects, including pricing strategies, DPM responses, and overall value for money. While we acknowledge the significant discrepancy, we believe it is justified by material differences in these areas. Nevertheless, I am willing to provide a more detailed breakdown of our evaluation process, which may help clarify any concerns AbbVie may have.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "While I appreciate NHS England's willingness to provide a more detailed breakdown of their evaluation process, I would like to request that they also explain how they accounted for the discrepancies in scoring between our bid and those of competing suppliers. Specifically, I would like to know what specific factors led to this 15-point difference in scoring for the 'Price' criterion. Furthermore, I believe it is essential to clarify whether NHS England's evaluation team considered multiple aspects, including pricing strategies, DPM responses, and overall value for money, as a single criterion or separately. If they were evaluated separately, how did they ensure that each aspect was given equal weightage in the scoring process?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "I am willing to provide a detailed breakdown of our evaluation process and address AbbVie's concerns regarding the discrepancies in scoring for the 'Price' criterion. Specifically, I can explain how we accounted for the 15-point difference in scoring between AbbVie's bid and those of competing suppliers. Our evaluation team considered multiple aspects, including pricing strategies, DPM responses, and overall value for money, as separate criteria. We ensured that each aspect was given equal weightage in the scoring process by using a standardized scoring matrix. I believe this additional information will help clarify any concerns AbbVie may have and provide a more transparent understanding of our evaluation process.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "After careful consideration and review of NHS England's evaluation process, I am willing to accept a compromise that addresses our concerns regarding the discrepancies in scoring for the 'Price' criterion. Specifically, we propose a re-evaluation of our bid, focusing on the 'Price' criterion, with an emphasis on ensuring consistency and fairness in the scoring process. We believe this will provide a more accurate assessment of our pricing strategy and DPM responses, and ultimately lead to a fairer outcome for all bidders.",
+      "proposal": "Re-evaluation of AbbVie's bid, focusing on the 'Price' criterion",
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [],
+  "resolved": false,
+  "resolution_outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+  "adjudicated": false,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiated outcome is slightly favourable compared to our BATNA of defending in TCC court, which would have cost \u00a350k+ and taken 6-12 months. We were able to avoid the significant costs and risks associated with litigation.",
+    "win_statement": "We successfully defended the Dummy Price Mechanism (DPM) against AbbVie's challenge, demonstrating that it was not inherently meaningless or unfairly applied in this procurement. Our negotiation efforts allowed us to provide additional transparency into our evaluation process, addressing AbbVie's concerns and avoiding the need for costly litigation.",
+    "what_was_achieved": [
+      "Provided a detailed breakdown of our evaluation process",
+      "Addressed AbbVie's concerns regarding discrepancies in scoring for the 'Price' criterion"
+    ],
+    "what_was_conceded": [
+      "Agreed to re-evaluate AbbVie's bid, focusing on the 'Price' criterion",
+      "Provided additional information and transparency into our evaluation process"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The negotiation did not achieve the desired outcome of resolving the dispute through agreement, and we are now facing formal proceedings. However, the additional information provided by NHS England has shed light on their evaluation process, which may be useful in future proceedings.",
+    "win_statement": "We successfully pushed for a re-evaluation of our bid, focusing on the 'Price' criterion, which will provide a more accurate assessment of our pricing strategy and DPM responses. This compromise addresses some of our concerns regarding consistency and fairness in the scoring process.",
+    "what_was_achieved": [
+      "A detailed breakdown of NHS England's evaluation process",
+      "An explanation of how they accounted for discrepancies in scoring between bids"
+    ],
+    "what_was_conceded": [
+      "The need to re-evaluate our bid, focusing on the 'Price' criterion",
+      "Some flexibility in accepting a compromise rather than pursuing formal proceedings immediately"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Dummy Price Mechanism (DPM) application",
+      "Discrepancies in scoring for the 'Price' criterion"
+    ],
+    "concessions_summary": "Neither party made significant concessions throughout the negotiation. The Contracting Authority provided additional information on their evaluation process, but AbbVie's concerns regarding inconsistencies and unfairness remained unaddressed.",
+    "court_reasoning_summary": "The Court likely reached a deadlock conclusion due to the parties' inability to resolve their differences through negotiation. Despite efforts from both sides, the core disagreement over the DPM application and scoring discrepancies persisted, indicating an impasse in reaching a mutually acceptable agreement.",
+    "likely_next_steps": "Given the maximum rounds were reached, the dispute will likely escalate to formal proceedings, where the Court will review the case and make a binding decision. This may involve further evidence submission, expert testimony, or other procedural steps before a final ruling is made.",
+    "plain_english_summary": "The negotiation between AbbVie and NHS England failed to resolve their differences over the Dummy Price Mechanism and scoring discrepancies. Despite attempts to address concerns, the core issues remained unresolvable through negotiation, leading to a deadlock conclusion and the need for formal proceedings to determine the outcome."
+  }
+}

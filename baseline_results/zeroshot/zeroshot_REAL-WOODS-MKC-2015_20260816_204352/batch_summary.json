@@ -1,0 +1,201 @@
+{
+  "baseline": "zeroshot",
+  "case_slug": "woods-milton-keynes",
+  "scenario_id": "REAL-WOODS-MKC-2015",
+  "scenario_title": "Woods Building Services v Milton Keynes Council",
+  "complete": true,
+  "n_runs_requested": 5,
+  "n_runs_successful": 5,
+  "n_runs_failed": 0,
+  "timestamp": "20260816_204352",
+  "metrics": {
+    "manifest_error_detection_rate": 1.0,
+    "outcome_distribution": {
+      "re-evaluation": 5
+    },
+    "average_duration_seconds": 2.0
+  },
+  "individual_runs": [
+    {
+      "run_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The court found that the tender evaluation process was fundamentally flawed, indicating a manifest error in how the bid was evaluated. This is evident from the reduction of 40 marks for EAS's bid and an increase of 6 marks for Woods' bid, which significantly altered the outcome.",
+      "applicable_provisions": [
+        "section 12: value for money",
+        "section 12: public benefit",
+        "section 12: transparency",
+        "section 12: integrity"
+      ],
+      "duration_seconds": 2.2,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 2,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The court found that the tender evaluation process was fundamentally flawed, indicating a manifest error in how the bid was evaluated. This is evident from the reduction of 40 marks for EAS's bid and an increase of 6 marks for Woods' bid, which suggests a lack of transparency and equal treatment.",
+      "applicable_provisions": [
+        "section 12: value for money",
+        "section 12: public benefit",
+        "section 12: transparency",
+        "section 12: integrity"
+      ],
+      "duration_seconds": 2.2,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 3,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The court found that the tender evaluation process was fundamentally flawed, resulting in a manifest error. This indicates that the Contracting Authority's process did not comply with the Procurement Act 2023, specifically regarding value for money and transparency.",
+      "applicable_provisions": [
+        "section 12: value for money",
+        "section 12: public benefit",
+        "section 12: transparency"
+      ],
+      "duration_seconds": 2.0,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 4,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The court found that the tender evaluation process was fundamentally flawed, indicating a manifest error in how the bid was evaluated. The scoring discrepancies affected multiple items and significantly impacted the overall outcome.",
+      "applicable_provisions": [
+        "section 12: value for money",
+        "section 12: public benefit",
+        "section 12: transparency"
+      ],
+      "duration_seconds": 1.8,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 5,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The court found that the tender evaluation process was fundamentally flawed, indicating a manifest error in how the bid was evaluated. This is particularly evident in the reduction of 40 marks for EAS's bid and the increase of 6 marks for Woods' bid, which suggests an arbitrary scoring system.",
+      "applicable_provisions": [
+        "section 12: value for money",
+        "section 12: transparency"
+      ],
+      "duration_seconds": 2.0,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    }
+  ]
+}

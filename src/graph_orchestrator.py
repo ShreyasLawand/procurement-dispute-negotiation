@@ -187,6 +187,38 @@ def court_check_node(state: GraphState, agents: AgentBundle) -> dict:
     return updates
 
 
+def no_court_check_node(state: GraphState, agents: AgentBundle) -> dict:
+    """
+    No-Court ablation baseline (evaluation item 22) — skips the Court agent's
+    compliance review entirely, bound into "court_check" in place of court_check_node
+    above. compliance_checks is deliberately left untouched (stays empty across the
+    whole run), so downstream nodes render it as "no checks happened", not as a
+    silently-passing review.
+
+    Without an adjudicator, nothing in this graph can ever decide the parties have
+    converged — that decision IS court_check_node's recommended_action != "continue
+    negotiation" check. So this node's only remaining job is the same max-rounds
+    check court_check_node does when the Court itself never resolves anything: run
+    to the round limit and deadlock. A version of this ablation that tried to
+    fabricate a resolution-detection heuristic from the dialogue text (e.g. "did the
+    Bidder's last message sound conciliatory?") would defeat the point of the
+    ablation — the finding this baseline exists to surface is precisely that nothing
+    in this system resolves anything without judicial adjudication, and reporting an
+    always-deadlock result honestly is that finding, not a gap to paper over.
+    """
+    round_num = state["round_number"]
+    emit_status(f"No Court agent in this ablation — round {round_num} recorded without compliance review",
+                phase="court_check", round_number=round_num)
+
+    if round_num >= state["max_rounds"]:
+        print(f"\n>> DEADLOCK after {state['max_rounds']} rounds (no-Court ablation: nothing can resolve without a Court)\n")
+        return {
+            "resolved": False,
+            "resolution_outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+        }
+    return {}
+
+
 def win_statements_node(state: GraphState, agents: AgentBundle) -> dict:
     """Each agent reflects on the outcome relative to its own BATNA."""
     scenario = state["scenario"]
@@ -265,23 +297,30 @@ def summary_node(state: GraphState, agents: AgentBundle) -> dict:
     return {"summary": summary}
 
 
-def build_negotiation_graph(agents: AgentBundle | None = None):
+def build_negotiation_graph(agents: AgentBundle | None = None, include_court: bool = True):
     """
     Constructs and compiles the LangGraph StateGraph for the negotiation.
 
     `agents` is bound into each node via functools.partial. Node NAMES are passed
     explicitly and are unchanged, so api/sessions.py::translate_update — which keys
-    off those names — is unaffected.
+    off those names — is unaffected. `include_court=False` is the no-Court ablation
+    baseline (evaluation item 22): binds no_court_check_node in place of
+    court_check_node under the same "court_check" node name, so route_after_court and
+    every downstream node are untouched — only what happens inside that one node
+    differs. See no_court_check_node's docstring for why this ablation always ends in
+    deadlock rather than fabricating a resolution-detection heuristic.
     """
     if agents is None:
         agents = build_agents()
 
     graph = StateGraph(GraphState)
 
+    court_node_fn = court_check_node if include_court else no_court_check_node
+
     graph.add_node("pre_negotiation", partial(pre_negotiation_node, agents=agents))
     graph.add_node("ca_round", partial(ca_round_node, agents=agents))
     graph.add_node("bidder_round", partial(bidder_round_node, agents=agents))
-    graph.add_node("court_check", partial(court_check_node, agents=agents))
+    graph.add_node("court_check", partial(court_node_fn, agents=agents))
     graph.add_node("win_statements", partial(win_statements_node, agents=agents))
     graph.add_node("summary", partial(summary_node, agents=agents))
 
@@ -313,14 +352,16 @@ class GraphNegotiationOrchestrator:
     save_log() for persistence.
     """
 
-    def __init__(self, max_rounds: int = 3, court_system_prompt: str | None = None):
+    def __init__(self, max_rounds: int = 3, court_system_prompt: str | None = None,
+                 include_court: bool = True):
         self.max_rounds = max_rounds
         self.court_system_prompt = court_system_prompt
+        self.include_court = include_court
         # Default profile-less graph, kept so an orchestrator is usable without ever
         # seeing a scenario. Scenarios carrying Doc 1 profiles get their own compiled
         # graph in _app_for(), since profiles are baked into agent system prompts at
         # construction time and so cannot be swapped on an already-built agent.
-        self.app = build_negotiation_graph(build_agents(None, court_system_prompt))
+        self.app = build_negotiation_graph(build_agents(None, court_system_prompt), include_court)
 
     def _app_for(self, scenario: DisputeScenario):
         """
@@ -335,7 +376,9 @@ class GraphNegotiationOrchestrator:
         )
         if not has_profile:
             return self.app
-        return build_negotiation_graph(build_agents(scenario, self.court_system_prompt))
+        return build_negotiation_graph(
+            build_agents(scenario, self.court_system_prompt), self.include_court
+        )
 
     def _build_initial_state(self, scenario: DisputeScenario) -> GraphState:
         return {

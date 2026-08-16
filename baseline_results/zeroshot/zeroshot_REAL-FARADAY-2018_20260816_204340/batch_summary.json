@@ -1,0 +1,195 @@
+{
+  "baseline": "zeroshot",
+  "case_slug": "faraday-west-berkshire",
+  "scenario_id": "REAL-FARADAY-2018",
+  "scenario_title": "Faraday Development Ltd v West Berkshire Council",
+  "complete": true,
+  "n_runs_requested": 5,
+  "n_runs_successful": 5,
+  "n_runs_failed": 0,
+  "timestamp": "20260816_204340",
+  "metrics": {
+    "manifest_error_detection_rate": 1.0,
+    "outcome_distribution": {
+      "re-evaluation": 5
+    },
+    "average_duration_seconds": 1.9
+  },
+  "individual_runs": [
+    {
+      "run_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The Contracting Authority failed to follow the correct process for public works contracts, which should have been competitively procured. This is a clear breach of the Public Contracts Regulations and the Procurement Act 2023.",
+      "applicable_provisions": [
+        "Public Contracts Regulations",
+        "Procurement Act 2023"
+      ],
+      "duration_seconds": 1.9,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 2,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The Contracting Authority failed to follow the correct process for public works contracts, which should have been competitively procured. This is a clear breach of the Public Contracts Regulations and the Procurement Act 2023.",
+      "applicable_provisions": [
+        "Public Contracts Regulations",
+        "Procurement Act 2023"
+      ],
+      "duration_seconds": 1.8,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 3,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The Contracting Authority failed to follow the correct process for public works contracts, which should have been competitively procured. The Court of Appeal's decision confirms that the agreement was indeed a public works contract and its ineffectiveness is due to the non-compliance with procurement regulations.",
+      "applicable_provisions": [
+        "Public Contracts Regulations",
+        "section 12 of the Procurement Act 2023"
+      ],
+      "duration_seconds": 2.0,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 4,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The Contracting Authority failed to follow the correct process by not competitively procuring the public works contract. The Court of Appeal's decision confirms that the agreement was indeed a public works contract, which should have been subject to competitive tendering.",
+      "applicable_provisions": [
+        "Public Contracts Regulations",
+        "Procurement Act 2023"
+      ],
+      "duration_seconds": 1.9,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 5,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The Contracting Authority's process was non-compliant with the Public Contracts Regulations as it failed to competitively procure a public works contract. The Court of Appeal held that the agreement was indeed a public works contract, which implies that there was a manifest error in how the bid was evaluated.",
+      "applicable_provisions": [
+        "Public Contracts Regulations",
+        "Procurement Act 2023"
+      ],
+      "duration_seconds": 1.9,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    }
+  ]
+}

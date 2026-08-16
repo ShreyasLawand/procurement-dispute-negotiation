@@ -1,0 +1,141 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-BRACEURSELF-2022",
+    "title": "Braceurself Ltd v NHS England",
+    "description": "NHS England's evaluators made a manifest error in marking question CSD02 (clinical and service delivery) by misunderstanding Braceurself's answer concerning patient access to first-floor premises. The evaluators read this as a reference to a stair lift, but it was actually a stair-climber. This error resulted in a 2.25 percentage points gap between Braceurself's score of 80.25% and the successful bidder's score of 82.5%. Despite finding the manifest error, the judge concluded that the breach was not sufficiently serious to warrant damages.",
+    "contract_value_gbp": 104000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "appeal",
+    "contracting_authority_name": "NHS England",
+    "bidder_name": "Braceurself Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 3,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Act lawfully under the Procurement Act 2023 and follow published evaluation criteria",
+      "Protection of Public Funds: Avoid delays that increase costs, particularly on a contract worth \u00a3104,000,000",
+      "Continuity of Service / Delivery: Deliver critical healthcare services to patients without disruption, as this procurement is for a significant NHS contract"
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Maintain public confidence in NHS England's procurement processes"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We acknowledge Braceurself Ltd's concerns, but our evaluators followed published criteria and made no manifest error in scoring question CSD02",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Regulation 32(2) of the Public Contracts Regulations 2015"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a3104,000,000 contract value at risk due to manifest error in scoring question CSD02",
+      "Fairness & Transparency: Ensure NHS England's evaluators are held accountable for misunderstanding our response to patient access concerns",
+      "Protection of Reputation: Maintain credibility with parent companies, shareholders and partners by demonstrating we did not lose due to poor performance or capability"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids to correct manifest error in scoring question CSD02",
+      "Award damages for the commercial loss incurred as a result of NHS England's evaluators' mistake"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "Request that NHS England re-run the evaluation of question CSD02 with immediate effect to correct the manifest error",
+    "legal_basis": [
+      "Public Contracts Regulations 2015",
+      "EU Procurement Directive"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge Braceurself Ltd's assertion that a manifest error occurred in marking question CSD02. However, I would like to clarify whether you are suggesting that this error was the sole reason for your lower score, or if there were other factors at play. Could you please provide more context regarding how you believe this error impacted your overall evaluation?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your acknowledgement of the manifest error in marking question CSD02. However, I would like to clarify whether this error was isolated or part of a broader issue with the evaluation process. Could you provide more information on how the evaluators' misunderstanding of our answer affected their overall assessment of our bid? Specifically, were there any other discrepancies or errors that contributed to the 2.25 percentage points gap between our score and the successful bidder's score?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge your request for more information on how the evaluators' misunderstanding affected their overall assessment. Upon reviewing the evaluation process, I have identified two additional discrepancies that may have contributed to the score gap. Firstly, there was a minor inconsistency in scoring question CSD03, where Braceurself's answer received a lower mark than expected due to an overly strict interpretation of the criteria. Secondly, the evaluators' notes suggest that they had some reservations about Braceurself's response to question CSD05, although these were not explicitly reflected in the final scores. I am willing to provide more detailed documentation on these points if you would like.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your willingness to provide more information on the discrepancies in question CSD03 and CSD05. However, I would like to request that you also provide a detailed explanation of how these issues were addressed during the evaluation process, specifically whether any mitigating factors were considered or if there was any further discussion among the evaluators regarding these points. Additionally, I would like to ask about the specific criteria used for question CSD03 and whether it was consistently applied throughout the evaluation. Furthermore, could you provide more context on what you mean by 'reservations' in relation to our response to question CSD05?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "I am willing to provide Braceurself Ltd with a detailed explanation of how the discrepancies in question CSD03 and CSD05 were addressed during the evaluation process, including any mitigating factors considered or further discussion among evaluators. I will also provide more context on what is meant by 'reservations' regarding your response to question CSD05. Additionally, I can confirm that the specific criteria used for question CSD03 were consistently applied throughout the evaluation.",
+      "proposal": null,
+      "concession_made": "I am willing to reconsider Braceurself Ltd's score for question CSD02 and provide a revised mark that accurately reflects your answer"
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your willingness to provide more information on the discrepancies in question CSD03 and CSD05. However, I believe that we have reached a point where further discussion is not yielding sufficient clarity on the evaluation process. In light of this, I am proposing a re-evaluation of our bid, specifically focusing on questions CSD02, CSD03, and CSD05, to ensure that a fair and accurate assessment can be made. This would involve revisiting the scoring methodology and ensuring that any discrepancies or errors are addressed in a transparent manner.",
+      "proposal": "A re-evaluation of our bid, specifically focusing on questions CSD02, CSD03, and CSD05",
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [],
+  "resolved": false,
+  "resolution_outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+  "adjudicated": false,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiation did not result in a full resolution, but it avoided the significant costs and risks associated with escalating to formal proceedings (BATNA: defending in TCC court, which would cost \u00a350k+ and take 6-12 months).",
+    "win_statement": "We successfully negotiated an understanding of the evaluation process and identified potential discrepancies that may have contributed to the score gap. Although we were unable to reach a mutually agreeable outcome, our efforts helped to clarify the issues and provided valuable insights for future evaluations.",
+    "what_was_achieved": [
+      "Identified two additional discrepancies in question CSD03 and CSD05",
+      "Provided detailed explanations of how these issues were addressed during the evaluation process"
+    ],
+    "what_was_conceded": [
+      "Acknowledged the manifest error in marking question CSD02",
+      "Agreed to provide more context on what is meant by 'reservations' regarding Braceurself's response to question CSD05"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The negotiation did not achieve a satisfactory outcome for Braceurself Ltd, and the dispute will now proceed to formal proceedings. The contracting authority acknowledged some discrepancies in the evaluation process but failed to provide sufficient clarity or concessions to justify a re-evaluation of our bid.",
+    "win_statement": "We successfully highlighted several discrepancies in the evaluation process, including a manifest error in marking question CSD02, and obtained commitments from NHS England to provide more detailed documentation on these issues. However, we were unable to achieve a satisfactory resolution through negotiation and will now pursue formal proceedings to seek damages for the breach.",
+    "what_was_achieved": [
+      "Acknowledgement of manifest error in marking question CSD02",
+      "Identification of two additional discrepancies in questions CSD03 and CSD05",
+      "Commitments from NHS England to provide more detailed documentation on these issues"
+    ],
+    "what_was_conceded": [
+      "Failed to achieve a satisfactory resolution through negotiation",
+      "Dispute will proceed to formal proceedings",
+      "No concessions made by the contracting authority regarding re-evaluation of our bid"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Manifest error in marking question CSD02",
+      "Discrepancies in scoring questions CSD03 and CSD05",
+      "Reservations about Aggrieved Bidder's response to question CSD05"
+    ],
+    "concessions_summary": "Contracting Authority made concessions by acknowledging the manifest error in question CSD02, providing more information on discrepancies in questions CSD03 and CSD05, and offering to reconsider Braceurself Ltd's score for question CSD02.",
+    "court_reasoning_summary": "The Court likely reached a deadlock conclusion because both parties failed to reach a mutually acceptable agreement despite concessions made by the Contracting Authority. The Aggrieved Bidder's request for re-evaluation of their bid was not accepted, and further discussion did not yield sufficient clarity on the evaluation process.",
+    "likely_next_steps": "The dispute will likely escalate to formal proceedings, where the Court will review the entire procurement process and make a final decision on the merits of Braceurself Ltd's claims. The Contracting Authority may be required to provide additional documentation or evidence to support their evaluation decisions.",
+    "plain_english_summary": "The negotiation reached a deadlock because both parties couldn't agree on how to resolve the issues with the evaluation process. Despite concessions made by the Contracting Authority, the Aggrieved Bidder wanted more transparency and a re-evaluation of their bid. The dispute will now move to formal proceedings, where the Court will make a final decision."
+  }
+}

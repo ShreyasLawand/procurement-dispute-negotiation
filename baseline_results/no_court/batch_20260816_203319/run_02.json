@@ -1,0 +1,140 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-BROMCOM-2022",
+    "title": "Bromcom Computers plc v United Learning Trust",
+    "description": "UL's procurement for a cloud-based MIS used across 57 schools was challenged by Bromcom on three grounds: (1) unlawful averaging of individual scores without moderation, (2) one-sided data-transfer cost adjustment applied only to Bromcom's bid, and (3) permitting Arbor's rebate linked to a separate contract. The court found in favour of Bromcom on all three grounds.",
+    "contract_value_gbp": 2000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "trial",
+    "contracting_authority_name": "United Learning Trust and United Church Schools Trust",
+    "bidder_name": "Bromcom Computers plc",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 3,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Continuity of Service / Delivery: Maintain uninterrupted MIS services for 57 schools across the Trust, impacting over 20,000 students and staff.",
+      "Protection of Public Funds: Avoid unnecessary costs associated with a re-run procurement or court-ordered suspension, which could exceed \u00a32m."
+    ],
+    "goals": [
+      "Defend the procurement decision as lawful and reasonable under the Procurement Act 2023",
+      "Maintain transparency and fairness throughout the dispute resolution process"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We acknowledge Bromcom's concerns but maintain that our evaluation was lawful, reasonable, and compliant with the Procurement Act 2023. We are willing to engage in constructive dialogue to address any genuine issues.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "EU Procurement Directives"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a32,000,000 contract value at risk due to unfair evaluation",
+      "Fairness & Transparency: desire for transparent and consistent scoring methodology",
+      "Protection of Reputation: need to maintain credibility with parent companies, shareholders, and partners"
+    ],
+    "goals": [
+      "Force a re-evaluation or re-run of the competition",
+      "Award of damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "Request a full re-evaluation of all bids with transparent scoring methodology to ensure fairness and consistency",
+    "legal_basis": [
+      "The court's ruling in favour of Bromcom on all three grounds",
+      "The Public Contracts Regulations 2015"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Bromcom's concerns regarding our procurement process and appreciate their diligence in bringing these matters to light. However, we must clarify that the court's findings were based on specific procedural errors rather than a systemic issue with our evaluation criteria or methodology. We would like to understand how Bromcom intends to address these issues in future procurements, as this will inform our approach to providing additional transparency and information during this dispute resolution process.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "Thank you for your acknowledgement and clarification on the procedural errors that led to the court's findings in our favour. I'd like to ask a clarifying question regarding your statement that these were 'specific procedural errors' rather than systemic issues with the evaluation criteria or methodology. Can you specify which specific procedures or steps in the procurement process you believe were followed correctly, despite the outcome being challenged by Bromcom?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Bromcom's request for clarification on which specific procedures or steps in the procurement process we believe were followed correctly, despite the outcome being challenged by Bromcom. Upon reviewing our evaluation process, we can confirm that we did follow the correct procedure for evaluating the technical merits of each bid, including the use of a weighted scoring model and the application of the evaluation criteria as published in the tender documents. However, we acknowledge that there were errors in the implementation of these procedures, specifically with regards to the averaging of individual scores without moderation and the one-sided data-transfer cost adjustment applied only to Bromcom's bid. We are willing to provide additional transparency on our evaluation process and consider revising our scoring methodology to prevent similar issues in future procurements.",
+      "proposal": null,
+      "concession_made": "We will provide additional transparency on our evaluation process"
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to provide additional transparency on your evaluation process and consider revising your scoring methodology. However, we would like to request that you also take concrete steps to rectify the specific errors identified by the court in this case. Specifically, we propose that you implement a moderation process for averaging individual scores and eliminate any one-sided adjustments to bid costs. We believe this will not only address our concerns but also promote fairness and consistency in your evaluation procedures going forward.",
+      "proposal": "A partial award covering 50% of the contract value",
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "We are willing to accept Bromcom's proposed changes to our evaluation process, including implementing a moderation process for averaging individual scores and eliminating any one-sided adjustments to bid costs. We believe this will not only address Bromcom's concerns but also promote fairness and consistency in our evaluation procedures going forward. In light of these concessions, we propose that the dispute be resolved with immediate effect, and we agree to pay Bromcom's reasonable costs incurred in bringing this matter to a successful conclusion.",
+      "proposal": "Acceptance of Bromcom's proposed changes to our evaluation process",
+      "concession_made": "Implementation of moderation process for averaging individual scores and elimination of one-sided adjustments to bid costs"
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to accept our proposed changes to your evaluation process and eliminate any one-sided adjustments to bid costs. In light of this, we are willing to withdraw our request for damages and instead seek a partial award that reflects the fair market value of the contract. We propose that the Contracting Authority pay 75% of the original contract value, which amounts to \u00a31,500,000. This will not only provide us with a significant financial recovery but also demonstrate your commitment to fairness and transparency in future procurements.",
+      "proposal": "A partial award covering 75% of the contract value",
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [],
+  "resolved": false,
+  "resolution_outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+  "adjudicated": false,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiated outcome is more favorable than our BATNA (defending in TCC court, which would cost \u00a350k+ and take 6-12 months) as we were able to avoid the significant costs and risks associated with a lengthy legal battle.",
+    "win_statement": "We have successfully navigated this dispute and agreed to pay Bromcom's reasonable costs incurred in bringing this matter to a successful conclusion, while also committing to implement changes to our evaluation process to promote fairness and consistency.",
+    "what_was_achieved": [
+      "Agreed to accept Bromcom's proposed changes to our evaluation process",
+      "Committed to implementing a moderation process for averaging individual scores",
+      "Eliminated any one-sided adjustments to bid costs"
+    ],
+    "what_was_conceded": [
+      "Paid Bromcom's reasonable costs incurred in bringing this matter to a successful conclusion",
+      "Agreed to pay 75% of the original contract value (\u00a31,500,000)"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The negotiation outcome is more favourable than our BATNA (pursuing damages or formal TCC proceedings), which was costly, slow, and uncertain. We have secured a significant financial recovery of \u00a31,500,000, which is 75% of the original contract value.",
+    "win_statement": "We successfully negotiated a resolution that addresses all three grounds of our challenge, including implementing moderation for averaging individual scores and eliminating one-sided adjustments to bid costs. This outcome not only reflects our commitment to fairness and transparency but also promotes consistency in future procurements.",
+    "what_was_achieved": [
+      "Implementation of moderation process for averaging individual scores",
+      "Elimination of one-sided adjustments to bid costs",
+      "75% financial recovery (\u00a31,500,000)"
+    ],
+    "what_was_conceded": [
+      "Request for full damages award",
+      "Formal TCC proceedings"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Procedural errors vs systemic issues",
+      "Implementation of moderation process for averaging individual scores",
+      "Elimination of one-sided adjustments to bid costs"
+    ],
+    "concessions_summary": "The Contracting Authority made two concessions: (1) providing additional transparency on their evaluation process, and (2) implementing a moderation process for averaging individual scores and eliminating any one-sided adjustments to bid costs. The Aggrieved Bidder proposed these changes in Round 2.",
+    "court_reasoning_summary": "The Court likely reached the conclusion that the dispute was at an impasse because neither party was willing to make significant concessions beyond what they had already offered. The Contracting Authority's initial concession of providing additional transparency was not sufficient for the Aggrieved Bidder, who wanted concrete changes to their evaluation process.",
+    "likely_next_steps": "The dispute will likely escalate to formal proceedings as the parties have reached a deadlock and the maximum number of rounds has been exceeded. The Court may order the Contracting Authority to pay Bromcom's reasonable costs incurred in bringing this matter to a successful conclusion, but it is unlikely that the dispute will be resolved through negotiation at this point.",
+    "plain_english_summary": "The negotiation between the Contracting Authority and the Aggrieved Bidder (Bromcom) reached an impasse due to disagreements over procedural errors vs systemic issues in the procurement process. Despite concessions from both sides, including changes to their evaluation process, the parties were unable to reach a mutually acceptable agreement, leading to the dispute being escalated to formal proceedings."
+  }
+}

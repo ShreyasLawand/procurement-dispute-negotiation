@@ -1,0 +1,137 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-BRACEURSELF-2022",
+    "title": "Braceurself Ltd v NHS England",
+    "description": "NHS England's evaluators made a manifest error in marking question CSD02 (clinical and service delivery) by misunderstanding Braceurself's answer concerning patient access to first-floor premises. The evaluators read this as a reference to a stair lift, but it was actually a stair-climber. This error resulted in a 2.25 percentage points gap between Braceurself's score of 80.25% and the successful bidder's score of 82.5%. Despite finding the manifest error, the judge concluded that the breach was not sufficiently serious to warrant damages.",
+    "contract_value_gbp": 104000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "appeal",
+    "contracting_authority_name": "NHS England",
+    "bidder_name": "Braceurself Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 3,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: \u00a3104,000,000 contract value at stake, and the need to avoid delays that increase costs or create service delivery gaps.",
+      "Continuity of Service / Delivery: Critical healthcare services may be disrupted if the procurement is delayed or re-run.",
+      "Reputation & Public Accountability: Maintain public confidence in NHS England's ability to manage large-scale procurements."
+    ],
+    "goals": [
+      "Defend the procurement decision and uphold the integrity of the evaluation process",
+      "Provide a fair and transparent debriefing to Braceurself Ltd"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We acknowledge the manifest error, but believe it did not affect the overall outcome. We are willing to provide additional feedback and transparency to address Braceurself Ltd's concerns.",
+    "legal_basis": [
+      "Procurement Act 2023: Section 12(1) - Value for money",
+      "Procurement Act 2023: Section 12(2) - Maximising public benefit"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a3104m contract value loss due to manifest error in scoring question CSD02",
+      "Fairness & Transparency: Want clear explanation of evaluators' misunderstanding and access to scoring methodology",
+      "Protection of Reputation: Maintain credibility with parent companies, shareholders, and partners after internal messaging signalled a win"
+    ],
+    "goals": [
+      "Force re-evaluation of submitted bids or award damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "Request NHS England to accept that a manifest error occurred and re-evaluate question CSD02 scores",
+    "legal_basis": [
+      "Public Contracts Regulations 2015 (PCR 2015), Regulation 86(3)"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge Braceurself Ltd's concerns regarding the manifest error in marking question CSD02. I would like to clarify whether you are suggesting that the evaluators' misunderstanding was due to a lack of clarity in your response, or an oversight on their part. Could you provide more context on how this error impacted your overall score and chances of winning the contract?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your acknowledgement of our concerns regarding the manifest error in marking question CSD02. To clarify, we believe that this error was due to an oversight on the part of the evaluators, rather than any lack of clarity in our response. We would like to request detailed feedback on how this error impacted our overall score and chances of winning the contract. Specifically, we would appreciate a breakdown of the scoring discrepancy and an explanation of how it affected the evaluation process. This will help us understand whether the outcome was truly fair and justifiable.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge Braceurself Ltd's request for detailed feedback on how the manifest error impacted their overall score and chances of winning the contract. I am willing to provide a breakdown of the scoring discrepancy, but I must emphasize that this will be based solely on the evaluation criteria and evidence provided by both parties. To ensure transparency, I propose sharing the evaluators' notes and calculations used during the marking process for question CSD02.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your offer to share the evaluators' notes and calculations used during the marking process for question CSD02. However, we would like to request that these documents be shared in a more formal and binding manner, such as through a sworn affidavit or under oath, to ensure their authenticity and credibility. This will provide us with greater confidence in the evaluation process and help us understand how this manifest error occurred. We are also willing to accept a partial award covering 50% of the contract value, but only if we receive a detailed breakdown of the scoring discrepancy and an explanation of how it affected our chances of winning the contract.",
+      "proposal": "A partial award covering 50% of the contract value",
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "I am willing to provide a detailed breakdown of the scoring discrepancy and an explanation of how it affected your chances of winning the contract, as well as sharing the evaluators' notes and calculations used during the marking process for question CSD02. I also propose that we accept a partial award covering 50% of the contract value, as this will allow us to move forward with the procurement while still acknowledging the impact of the manifest error on your bid.",
+      "proposal": "A partial award covering 50% of the contract value",
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to provide a detailed breakdown of the scoring discrepancy and an explanation of how it affected our chances of winning the contract, as well as sharing the evaluators' notes and calculations used during the marking process for question CSD02. However, we believe that this is not sufficient to rectify the situation given the manifest error's significant impact on our bid. We are willing to accept a partial award covering 50% of the contract value if you agree to share these documents in a formal and binding manner, such as through a sworn affidavit or under oath. This will provide us with greater confidence in the evaluation process and help us understand how this manifest error occurred.",
+      "proposal": "A partial award covering 50% of the contract value, contingent on sharing evaluators' notes and calculations in a formal and binding manner",
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [],
+  "resolved": false,
+  "resolution_outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+  "adjudicated": false,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome is a partial award covering 50% of the contract value, which is a compromise between our initial position and the aggrieved bidder's demands. While it avoids the costs and risks associated with defending in TCC court (estimated at \u00a350k+ and taking 6-12 months), it still falls short of a full win.",
+    "win_statement": "We successfully negotiated a partial award, acknowledging the impact of the manifest error on the aggrieved bidder's bid while minimizing our financial exposure. This outcome demonstrates our commitment to fairness and transparency in the procurement process.",
+    "what_was_achieved": [
+      "Provided a detailed breakdown of the scoring discrepancy",
+      "Shared evaluators' notes and calculations used during marking process for question CSD02"
+    ],
+    "what_was_conceded": [
+      "Partial award covering 50% of contract value",
+      "Formal and binding sharing of evaluators' documents (sworn affidavit or under oath)"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is disappointing, but not entirely unfavorable. We were unable to achieve a full award of the contract value, and instead had to settle for a partial award covering 50% of the contract value.",
+    "win_statement": "We successfully negotiated a partial award of \u00a352,000,000 (50% of the original contract value) after discovering a manifest error in the marking process. This is a significant achievement considering our initial concerns about the evaluation process and the potential for damages or formal proceedings.",
+    "what_was_achieved": [
+      "Partial award of \u00a352,000,000",
+      "Detailed breakdown of scoring discrepancy and explanation of its impact on bid"
+    ],
+    "what_was_conceded": [
+      "50% reduction in contract value",
+      "No formal and binding manner for sharing evaluators' notes and calculations"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Manifest error in marking question CSD02",
+      "Request for detailed feedback on scoring discrepancy",
+      "Formal and binding manner of sharing evaluators' notes and calculations"
+    ],
+    "concessions_summary": "Both parties made concessions throughout the negotiation, but ultimately failed to reach an agreement. The Contracting Authority offered a partial award covering 50% of the contract value in exchange for sharing the evaluators' notes and calculations. The Aggrieved Bidder was willing to accept this offer if the documents were shared in a formal and binding manner.",
+    "court_reasoning_summary": "The Court likely reached its conclusion due to the parties' inability to agree on the terms of the partial award, specifically regarding the sharing of evaluators' notes and calculations. The Court may have also considered the significant contract value and the potential impact of the manifest error on the outcome.",
+    "likely_next_steps": "Given that the negotiation reached a deadlock, it is likely that the case will proceed to formal proceedings, where the Court will review the evidence and make a binding decision. This could involve further negotiations or mediation before reaching a final judgment.",
+    "plain_english_summary": "The negotiation between Braceurself Ltd and NHS England failed due to disagreements over how to address a manifest error in marking question CSD02. Both parties made concessions, but ultimately couldn't agree on the terms of a partial award. The case will likely proceed to formal proceedings, where the Court will review the evidence and make a binding decision."
+  }
+}

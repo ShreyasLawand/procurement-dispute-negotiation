@@ -1,0 +1,140 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-ABBVIE-2019",
+    "title": "AbbVie v NHS England",
+    "description": "NHS England used the Dummy Price Mechanism (DPM) in its procurement of up to \u00a31 billion worth of HCV medication. AbbVie challenged the DPM, arguing it was inherently meaningless and breached the equal treatment principle. However, the court found that AbbVie's own pricing choices, not the mechanism, explained its unsuccessful bid. The DPM did not structurally disadvantage AbbVie relative to competitors.",
+    "contract_value_gbp": 1000000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "trial",
+    "contracting_authority_name": "NHS England",
+    "bidder_name": "AbbVie Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 3,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Uphold the lawfulness and procedural correctness of our procurement process.",
+      "Protection of Public Funds: Ensure timely delivery of \u00a31 billion worth of HCV medication to patients in need, minimizing delays and costs.",
+      "Continuity of Service / Delivery: Maintain uninterrupted supply of life-saving medication for up to 100,000 patients with chronic liver disease.",
+      "Reputation & Public Accountability: Protect NHS England's reputation as a fair and competent buyer, maintaining public trust and confidence."
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Maintain transparency and fairness"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our evaluation process, which was transparent, fair, and compliant with the Procurement Act 2023.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Dummy Price Mechanism (DPM) guidelines"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a31 billion contract value at stake, significant bid costs incurred (\u00a310 million), potential loss of revenue and market share in HCV medication",
+      "Fairness & Transparency: Perception of unfair treatment due to the use of DPM, which AbbVie believes is inherently meaningless and breached equal treatment principle",
+      "Protection of Reputation: Maintaining credibility with parent companies, shareholders, and partners, particularly given internal messaging signalling a win"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids, giving AbbVie a chance to be awarded the contract itself",
+      "An award of damages for commercial loss incurred due to the flawed procurement process"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "Request a detailed re-evaluation of scores and methodology to address perceived flaws in the DPM",
+    "legal_basis": [
+      "Public Contracts Regulations 2015",
+      "European Union public procurement directives"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge AbbVie's challenge to the Dummy Price Mechanism (DPM) and appreciate their concerns regarding equal treatment. However, I must clarify that the court has already found that the DPM did not structurally disadvantage AbbVie relative to competitors. Can you explain how you believe the DPM impacted your pricing strategy and what specific changes you would like to see in our procurement process?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your acknowledgement of AbbVie's challenge and your willingness to discuss our concerns regarding equal treatment. However, I must express my surprise that you seem to be relying on a court decision that found in favour of NHS England. Can you clarify how this decision addresses the specific issues we raised about the Dummy Price Mechanism (DPM) being inherently meaningless and not providing any useful information for bidders? Furthermore, how does this decision align with your stated commitment to transparency and fairness in procurement processes?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "I understand AbbVie's concerns regarding the Dummy Price Mechanism (DPM) and its perceived lack of transparency. However, I must reiterate that the court's decision was based on a thorough examination of the procurement process and found no structural disadvantage to AbbVie relative to competitors. To address your specific point about the DPM being inherently meaningless, I propose providing additional guidance on how bidders can effectively utilize the mechanism in future procurements. This could include workshops or webinars to clarify the DPM's purpose and application.",
+      "proposal": "Additional guidance on utilizing the Dummy Price Mechanism (DPM) in future procurements",
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your proposal to provide additional guidance on how bidders can effectively utilize the Dummy Price Mechanism (DPM) in future procurements. However, I must express my concerns that this does not address the fundamental issue with the DPM's inherent meaninglessness. Furthermore, I would like to propose an alternative solution: instead of providing workshops or webinars, we could work together to revise the DPM to make it more informative and useful for bidders. This could involve revisiting the evaluation criteria and ensuring that the DPM is aligned with the overall procurement strategy. In exchange for this concession, I would like to request a re-evaluation of our bid using the revised DPM. This would allow us to better understand how we can improve our pricing strategy in future procurements.",
+      "proposal": null,
+      "concession_made": "Revised DPM aligned with procurement strategy"
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "I am willing to revise the Dummy Price Mechanism (DPM) in collaboration with AbbVie to make it more informative and useful for bidders, while ensuring that it remains aligned with our procurement strategy. This will involve revisiting the evaluation criteria and making necessary adjustments to ensure transparency and fairness. In exchange for this concession, I propose a re-evaluation of AbbVie's bid using the revised DPM, which will allow them to better understand how they can improve their pricing strategy in future procurements.",
+      "proposal": null,
+      "concession_made": "Revising the Dummy Price Mechanism (DPM) and providing additional guidance on its application"
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your willingness to revise the Dummy Price Mechanism (DPM) and make it more informative for bidders. However, I must express my disappointment that we have not yet reached a concrete resolution to this dispute. In light of our previous discussions, I propose a compromise: we accept the revised DPM, but in exchange, we request a full re-evaluation of AbbVie's bid using the new mechanism. This would allow us to better understand how we can improve our pricing strategy in future procurements and provide a more meaningful outcome for both parties. Furthermore, as a token of goodwill, I am willing to withdraw our formal proceedings against NHS England.",
+      "proposal": "A full re-evaluation of AbbVie's bid using the revised DPM",
+      "concession_made": "Withdrawal of formal proceedings"
+    }
+  ],
+  "compliance_checks": [],
+  "resolved": false,
+  "resolution_outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+  "adjudicated": false,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiation did not result in a full win for NHS England, but it avoided the costs and risks associated with defending the case in TCC court (\u00a350k+ and 6-12 months).",
+    "win_statement": "We successfully negotiated a revised Dummy Price Mechanism (DPM) that is more informative and useful for bidders, while maintaining its alignment with our procurement strategy. This outcome demonstrates our commitment to transparency and fairness in procurement processes.",
+    "what_was_achieved": [
+      "Revised the Dummy Price Mechanism (DPM) to make it more informative and useful for bidders",
+      "Ensured that the revised DPM remains aligned with NHS England's procurement strategy"
+    ],
+    "what_was_conceded": [
+      "Agreed to re-evaluate AbbVie's bid using the revised DPM",
+      "Withdrew formal proceedings against NHS England as a token of goodwill"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The negotiation did not result in a satisfactory resolution for AbbVie. The contracting authority's concessions on revising the Dummy Price Mechanism (DPM) were made too late in the process, and the final outcome was a deadlock that would have led to formal proceedings if not for our compromise.",
+    "win_statement": "We managed to secure a revised DPM that addresses some of AbbVie's concerns regarding transparency and fairness. However, we did not achieve a full re-evaluation of our bid using the new mechanism, which would have provided more meaningful insights into how we can improve our pricing strategy in future procurements.",
+    "what_was_achieved": [
+      "Revised DPM that addresses transparency and fairness concerns",
+      "Withdrawal of formal proceedings against NHS England"
+    ],
+    "what_was_conceded": [
+      "No full re-evaluation of AbbVie's bid using the revised DPM",
+      "Compromise on final outcome"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Dummy Price Mechanism (DPM) being inherently meaningless",
+      "Lack of transparency in the DPM's purpose and application",
+      "Re-evaluation of AbbVie's bid using a revised DPM"
+    ],
+    "concessions_summary": "Both parties made concessions throughout the negotiation. The Contracting Authority agreed to revise the DPM, provide additional guidance on its application, and re-evaluate AbbVie's bid. The Aggrieved Bidder proposed an alternative solution for revising the DPM, requested a full re-evaluation of their bid, and offered to withdraw formal proceedings against NHS England.",
+    "court_reasoning_summary": "The Court likely reached the conclusion that the negotiation had reached a deadlock due to the inability of both parties to reach a mutually acceptable agreement. The Court may have considered the concessions made by each party and the willingness to compromise, but ultimately decided that the dispute could not be resolved through negotiation.",
+    "likely_next_steps": "Given the deadlock, it is likely that the dispute will proceed to formal proceedings, where the Court will make a binding decision on the matter. The Contracting Authority may need to prepare for a full trial, and AbbVie may continue with their formal proceedings against NHS England.",
+    "plain_english_summary": "The negotiation between AbbVie and NHS England over the Dummy Price Mechanism (DPM) reached a deadlock due to fundamental disagreements on its meaninglessness and lack of transparency. Despite concessions made by both parties, including revising the DPM and re-evaluating AbbVie's bid, no mutually acceptable agreement was reached. The dispute is likely to proceed to formal proceedings, where a binding decision will be made."
+  }
+}

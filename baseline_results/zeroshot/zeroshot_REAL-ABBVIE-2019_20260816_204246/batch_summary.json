@@ -1,0 +1,191 @@
+{
+  "baseline": "zeroshot",
+  "case_slug": "abbvie-nhs-england",
+  "scenario_id": "REAL-ABBVIE-2019",
+  "scenario_title": "AbbVie v NHS England",
+  "complete": true,
+  "n_runs_requested": 5,
+  "n_runs_successful": 5,
+  "n_runs_failed": 0,
+  "timestamp": "20260816_204246",
+  "metrics": {
+    "manifest_error_detection_rate": 0.0,
+    "outcome_distribution": {
+      "no remedy - decision stands": 5
+    },
+    "average_duration_seconds": 2.2
+  },
+  "individual_runs": [
+    {
+      "run_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "recommended_action": "no remedy - decision stands",
+      "reasoning": "The Contracting Authority's use of the Dummy Price Mechanism (DPM) has been found to be compliant with the Procurement Act 2023. The court determined that AbbVie's own pricing choices were responsible for its unsuccessful bid, and not any structural disadvantage caused by the DPM.",
+      "applicable_provisions": [
+        "section 12: value for money, public benefit, transparency"
+      ],
+      "duration_seconds": 2.2,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "recommended_action": "no remedy - decision stands",
+      "reasoning": "The Contracting Authority's use of the Dummy Price Mechanism (DPM) in this procurement was compliant with the Procurement Act 2023. The court found that AbbVie's own pricing choices were responsible for its unsuccessful bid, and not the DPM itself. Therefore, there is no manifest error in how the bid was evaluated.",
+      "applicable_provisions": [
+        "section 12: value for money, public benefit"
+      ],
+      "duration_seconds": 2.1,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 3,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "recommended_action": "no remedy - decision stands",
+      "reasoning": "The NHS England's use of the Dummy Price Mechanism (DPM) in this procurement process is compliant with the Procurement Act 2023. The court found that AbbVie's own pricing choices, not the mechanism, explained its unsuccessful bid. This indicates that the DPM did not structurally disadvantage AbbVie relative to competitors.",
+      "applicable_provisions": [
+        "Section 12(2) of the Procurement Act 2023: Value for Money",
+        "Section 12(4): Transparency"
+      ],
+      "duration_seconds": 2.3,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 4,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "recommended_action": "no remedy - decision stands",
+      "reasoning": "The NHS England's use of the Dummy Price Mechanism (DPM) in this procurement process appears to be compliant with the Procurement Act 2023. The court has already found that AbbVie's own pricing choices were the reason for its unsuccessful bid, and not the mechanism itself. Therefore, there is no manifest error in how the bid was evaluated.",
+      "applicable_provisions": [
+        "section 12: value for money, public benefit, transparency, integrity"
+      ],
+      "duration_seconds": 2.2,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 5,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "recommended_action": "no remedy - decision stands",
+      "reasoning": "The NHS England's use of the Dummy Price Mechanism (DPM) in this procurement process was compliant with the Procurement Act 2023. The court found that AbbVie's own pricing choices were responsible for its unsuccessful bid, and not the mechanism itself. This suggests that the DPM did not structurally disadvantage AbbVie relative to competitors.",
+      "applicable_provisions": [
+        "section 12(2) value for money, public benefit"
+      ],
+      "duration_seconds": 2.1,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    }
+  ]
+}

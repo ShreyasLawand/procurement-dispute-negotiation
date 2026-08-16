@@ -1,0 +1,137 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-WOODS-MKC-2015",
+    "title": "Woods Building Services v Milton Keynes Council",
+    "description": "The contracting authority's decision to award a \u00a38 million asbestos removal and reinstatement services contract was challenged by Woods Building Services, the incumbent provider. The challenger alleged manifest error in the scoring of individual quality criteria and breach of transparency and equal treatment obligations. The court found that the tender evaluation process was fundamentally flawed across multiple scoring items, requiring a reduction of 40 marks for EAS's bid and an increase of 6 marks for Woods' bid. Applying the published 60% price / 40% quality formula, the court concluded that Woods' bid became the most economically advantageous tender.",
+    "contract_value_gbp": 8000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "trial",
+    "contracting_authority_name": "Milton Keynes Council",
+    "bidder_name": "Woods Building Services",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 3,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: Avoid \u00a38 million contract delays and costs associated with re-tendering.",
+      "Continuity of Service / Delivery: Ensure asbestos removal and reinstatement services continue uninterrupted to maintain public health and safety, particularly in schools and residential areas.",
+      "Reputation & Public Accountability: Uphold Milton Keynes Council's reputation as a fair and competent buyer, while also maintaining public trust and confidence."
+    ],
+    "goals": [
+      "Maintain the integrity of the procurement process",
+      "Ensure the awarding of the contract is lawful and within powers"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We acknowledge Woods Building Services' concerns but maintain that our evaluation process was fundamentally sound, with any errors being minor and not affecting the overall outcome.",
+    "legal_basis": [
+      "Procurement Act 2023: s12(1) \u2014 Value for money",
+      "Procurement Act 2023: s12(2) \u2014 Maximising public benefit"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: We lost \u00a38 million worth of potential revenue due to an unfair evaluation process.",
+      "Fairness & Transparency: The contracting authority's decision-making was not transparent, and we were not given adequate feedback on our bid."
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "An award of damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We request that the contracting authority re-evaluate the submitted bids, taking into account the manifest errors identified by the court. We also seek an award of damages to compensate for the loss we suffered due to their unfair evaluation process.",
+    "legal_basis": [
+      "Public Contract Regulations 2015",
+      "EU Remedies Directive"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We appreciate Woods Building Services' concerns regarding the tender evaluation process and acknowledge that our scoring decisions were subject to a court review. However, we must clarify that the court's findings did not imply any intentional bias or malfeasance on our part. We are willing to provide additional transparency by releasing redacted versions of the original evaluation reports, which will help to address concerns about equal treatment and procedural fairness. Nevertheless, we would like to request more information from Woods Building Services regarding their specific allegations of manifest error in scoring individual quality criteria.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to provide additional transparency by releasing redacted versions of the original evaluation reports. However, we would like to request clarification on how these reports will be made available and in what format. Furthermore, we are concerned that simply releasing the reports may not address our specific allegations of manifest error in scoring individual quality criteria. Can you confirm whether the reports will include evaluator comments, scoring justifications, or any other relevant details that can help us understand the evaluation process? We also request that you provide a timeline for when these reports will be made available to us.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "We understand your concerns about the transparency and format of the redacted evaluation reports. We are willing to provide a detailed explanation of how we will make these reports available, including the inclusion of evaluator comments, scoring justifications, and other relevant details that can help address your specific allegations of manifest error in scoring individual quality criteria. Specifically, we propose releasing the reports in a searchable PDF format, with hyperlinks to relevant evaluation criteria and scoring rubrics. We also commit to providing a clear timeline for when these reports will be made available, with an initial release within 14 days from today's date.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your proposal to release the evaluation reports in a searchable PDF format with hyperlinks to relevant evaluation criteria and scoring rubrics. However, we would like to request that you also provide a detailed explanation of how these reports will be made available, including any measures taken to ensure that evaluator comments and scoring justifications are accurately reflected in the reports. Furthermore, we believe that releasing the reports within 14 days from today's date is not sufficient, considering the complexity of the issues at hand. We propose that you provide an additional week for review and analysis of the reports, making it a total of 21 days from today's date.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "We are willing to release the evaluation reports within 21 days as requested by Woods Building Services, and we commit to providing a detailed explanation of how these reports will be made available. We also acknowledge that releasing the reports in a searchable PDF format with hyperlinks to relevant evaluation criteria and scoring rubrics is essential for transparency and fairness. Furthermore, we are open to discussing potential measures to ensure that evaluator comments and scoring justifications are accurately reflected in the reports.",
+      "proposal": null,
+      "concession_made": "We will release the evaluation reports within 21 days as requested by Woods Building Services"
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate the Contracting Authority's willingness to release the evaluation reports within 21 days and in a searchable PDF format with hyperlinks to relevant evaluation criteria and scoring rubrics. However, we believe that releasing these reports is only part of the solution. We propose a more comprehensive approach to rectify the manifest error in scoring individual quality criteria, which would involve re-evaluating our bid based on the corrected scores. This would ensure that the tender evaluation process is fair, transparent, and compliant with the procurement regulations.",
+      "proposal": "Re-evaluation of our bid based on corrected scores",
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [],
+  "resolved": false,
+  "resolution_outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+  "adjudicated": false,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome of the negotiation was a deadlock, which means that we were unable to reach an agreement with Woods Building Services. However, considering our BATNA (defending in TCC court, which would cost \u00a350k+ and take 6-12 months), I believe that this outcome is acceptable as it avoids worse costs or risks.",
+    "win_statement": "We successfully negotiated the release of redacted evaluation reports in a searchable PDF format with hyperlinks to relevant evaluation criteria and scoring rubrics, providing transparency and fairness to Woods Building Services. We also committed to releasing these reports within 21 days, which is a reasonable timeframe considering the complexity of the issues at hand.",
+    "what_was_achieved": [
+      "Release of redacted evaluation reports in a searchable PDF format with hyperlinks to relevant evaluation criteria and scoring rubrics",
+      "Commitment to release reports within 21 days"
+    ],
+    "what_was_conceded": [
+      "Re-evaluation of Woods Building Services' bid based on corrected scores, which would have required significant additional effort and resources from our team"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The negotiation did not achieve a satisfactory outcome for Woods Building Services. The Contracting Authority's willingness to release redacted evaluation reports and provide additional transparency is a step in the right direction, but it does not address the core issue of manifest error in scoring individual quality criteria.",
+    "win_statement": "We were able to secure a commitment from the Contracting Authority to release redacted evaluation reports within 21 days, which will provide some level of transparency and accountability. However, we did not achieve our primary objective of having our bid re-evaluated based on corrected scores.",
+    "what_was_achieved": [
+      "Redacted evaluation reports will be released within 21 days in a searchable PDF format with hyperlinks to relevant evaluation criteria and scoring rubrics",
+      "Contracting Authority committed to providing a detailed explanation of how the reports will be made available"
+    ],
+    "what_was_conceded": [
+      "No re-evaluation of our bid based on corrected scores",
+      "Limitations on transparency, as redacted reports may not fully address concerns about equal treatment and procedural fairness"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Transparency of evaluation reports",
+      "Release format and timeline of evaluation reports",
+      "Manifest error in scoring individual quality criteria"
+    ],
+    "concessions_summary": "The Contracting Authority made concessions on releasing the evaluation reports within a specific timeframe (initially 14 days, later agreed to 21 days) and in a searchable PDF format with hyperlinks. They also acknowledged the importance of accurately reflecting evaluator comments and scoring justifications in the reports.",
+    "court_reasoning_summary": "The Court likely reached its conclusion due to the deadlock between the parties after three rounds of negotiation. The Contracting Authority's concessions on transparency were seen as insufficient by the Aggrieved Bidder, who continued to push for a more comprehensive approach to rectify the manifest error in scoring individual quality criteria.",
+    "likely_next_steps": "The dispute will likely escalate to formal proceedings, where the Court may review the evaluation reports and determine whether the Contracting Authority's actions were compliant with procurement regulations. The Aggrieved Bidder may also seek re-evaluation of their bid based on corrected scores.",
+    "plain_english_summary": "The negotiation between Woods Building Services and Milton Keynes Council reached a deadlock due to disagreements over transparency and fairness in the tender evaluation process. Despite concessions from the Contracting Authority, the Aggrieved Bidder continued to push for more comprehensive measures to address manifest error in scoring individual quality criteria. The dispute will now proceed to formal proceedings."
+  }
+}
