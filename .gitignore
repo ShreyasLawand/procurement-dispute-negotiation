@@ -10,3 +10,7 @@ __pycache__/
 # SSH private keys — never commit these (e.g. Ronin instance keys)
 *.pem
 *.ppk
+
+# scripts/start_demo.ps1 state file — local process PIDs, meaningless outside the machine
+# that started them
+.demo-state.json

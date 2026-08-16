@@ -2,7 +2,6 @@ import { roleLabel, roleSlug } from '../../lib/format';
 import type { PreNegotiationStatement } from '../../types/negotiation';
 import { Card } from '../ui/Card';
 import { Chip } from '../ui/Chip';
-import { ConfidenceMeter } from '../ui/ConfidenceMeter';
 
 const BORDER_CLASSES = {
   ca: 'border-t-4 border-t-ca',
@@ -17,7 +16,6 @@ export function PreNegotiationCard({ statement }: { statement: PreNegotiationSta
     <Card className={`flex flex-col gap-4 ${BORDER_CLASSES[slug]}`}>
       <div className="flex items-center justify-between">
         <h3 className="font-semibold text-ink">{roleLabel(statement.role)}</h3>
-        <ConfidenceMeter value={statement.confidence_score} tone={slug} className="w-28" />
       </div>
 
       <div>

@@ -122,7 +122,7 @@ export function HomePage() {
           <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-muted">Grounded in real practice</h2>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-ink-secondary">
             The simulation is built on the UK Procurement Act 2023 (value for money, public benefit, transparency,
-            and integrity under s12), the 10-day standstill period and 30-day challenge window, and Fisher &amp;
+            and integrity under s12), the 8-working-day standstill period and 30-day challenge window, and Fisher &amp;
             Ury's <em>Getting to Yes</em> negotiation framework — interests over positions, BATNA, and the zone of
             possible agreement. Case studies on the Cases tab are drawn from real UK procurement judgments,
             including the first-ever reported decision under the Procurement Act 2023.
