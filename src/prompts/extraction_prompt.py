@@ -64,13 +64,19 @@ Produce a DisputeScenario as JSON with these exact fields:
   stated at all, make a reasonable estimate and note in the description that
   it is estimated.
 
-  CONVERT UNITS CAREFULLY — count the zeros. "£104 million" = 104000000 (NOT
-  10400000). "£1.5 billion" = 1500000000. "£125m" = 125000000. A common
-  mistake is dropping a zero when expanding "million" or "billion" into a
-  full number — double-check your arithmetic: million = 6 zeros after the
-  leading digits, billion = 9 zeros. Before finalising, re-read the figure
-  you wrote in the description and confirm contract_value_gbp expands it
-  correctly — the two must agree.
+  CONVERT UNITS CAREFULLY — count the zeros. Expand "million" by appending 6
+  zeros to the leading digits, and "billion" by appending 9 zeros, to the
+  figure actually stated in the SOURCE TEXT — never a number from this
+  instruction paragraph itself, since this paragraph is describing a
+  conversion RULE, not supplying a value to extract. A common mistake is
+  dropping a zero during that expansion — double-check your arithmetic
+  before finalising, and re-read the figure you wrote in the description to
+  confirm contract_value_gbp expands it correctly, the two must agree.
+
+  If the source states no value at all, there is no figure here to convert —
+  follow the instruction two paragraphs up instead (estimate, and say so
+  plainly in the description) rather than inventing or borrowing a number
+  from anywhere in this prompt.
 - "dispute_type": a short label, e.g. "scoring_challenge",
   "transparency_breach", "process_avoidance", "automatic_suspension"
 - "procedural_stage": a short label, e.g. "standstill", "automatic_suspension",
