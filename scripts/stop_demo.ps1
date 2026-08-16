@@ -18,16 +18,22 @@ $state = Get-Content $StatePath -Raw | ConvertFrom-Json
 function Stop-IfRunning {
     param([Nullable[int]]$ProcessId, [string]$Label)
     if (-not $ProcessId) { return }
-    try {
-        $proc = Get-Process -Id $ProcessId -ErrorAction SilentlyContinue
-        if ($proc) {
-            Stop-Process -Id $ProcessId -Force
-            Write-Host "Stopped $Label (PID $ProcessId)." -ForegroundColor Green
-        } else {
-            Write-Host "$Label (PID $ProcessId) was already stopped." -ForegroundColor DarkGray
-        }
-    } catch {
-        Write-Host "Could not stop $Label (PID $ProcessId): $($_.Exception.Message)" -ForegroundColor Yellow
+    $proc = Get-Process -Id $ProcessId -ErrorAction SilentlyContinue
+    if (-not $proc) {
+        Write-Host "$Label (PID $ProcessId) was already stopped." -ForegroundColor DarkGray
+        return
+    }
+    # api_pid/frontend_pid are the WRAPPER powershell -NoExit window, not the actual
+    # python/npm process running inside it - Stop-Process on just that PID leaves the
+    # real server (and, for the frontend, npm's child node.exe) orphaned and still bound
+    # to its port, invisible with no window. Found by testing a full start/stop cycle:
+    # stop_demo.ps1 reported success, but port 8000/5173 were still LISTENING afterward.
+    # taskkill /T kills the whole process tree, not just the one PID.
+    taskkill /T /F /PID $ProcessId | Out-Null
+    if ($LASTEXITCODE -eq 0) {
+        Write-Host "Stopped $Label (PID $ProcessId, including child processes)." -ForegroundColor Green
+    } else {
+        Write-Host "Could not fully stop $Label (PID $ProcessId) - check Task Manager." -ForegroundColor Yellow
     }
 }
 
