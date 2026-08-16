@@ -1,0 +1,140 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-FARADAY-2018",
+    "title": "Faraday Development Ltd v West Berkshire Council",
+    "description": "West Berkshire Council entered into a development agreement with St Modwen Developments Ltd for approximately \u00a3125 million, structured as a conditional land agreement. Faraday Development Ltd challenged the arrangement, alleging that it was in substance a public works contract that should have been competitively procured under the Public Contracts Regulations. The High Court initially dismissed the claim, but the Court of Appeal reversed this decision, holding that the agreement was indeed a public works contract and declaring its ineffectiveness.",
+    "contract_value_gbp": 125000000.0,
+    "dispute_type": "process_avoidance",
+    "procedural_stage": "appeal",
+    "contracting_authority_name": "West Berkshire Council",
+    "bidder_name": "Faraday Development Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 3,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Ensure the procurement process was lawful and in line with Public Contracts Regulations",
+      "Protection of Public Funds: Avoid significant delays and costs associated with re-running the procurement",
+      "Continuity of Service / Delivery: Deliver a \u00a3125,000,000 development agreement for critical infrastructure, with potential operational consequences of delay or re-run"
+    ],
+    "goals": [
+      "Defend the procurement decision in accordance with the Procurement Act 2023",
+      "Maintain transparency and fairness throughout the process"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our original evaluation, which was conducted fairly and in accordance with published criteria. We are willing to provide additional information and clarification to address Faraday Development Ltd's concerns.",
+    "legal_basis": [
+      "Public Contracts Regulations",
+      "Procurement Act 2023"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: We have lost out on a \u00a3125 million contract due to an alleged public works contract that should have been competitively procured.",
+      "Fairness & Transparency: The contracting authority's decision-making process has been called into question, and we seek clarity on the evaluation methodology used.",
+      "Protection of Reputation: Our company's credibility is at stake, as this dispute may impact our future bidding prospects with West Berkshire Council."
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "Obtain damages for lost revenue"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We request that West Berkshire Council re-evaluate the submitted bids and provide detailed feedback on their evaluation methodology.",
+    "legal_basis": [
+      "Public Contracts Regulations",
+      "Court of Appeal ruling"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Faraday Development Ltd's concerns regarding the procurement process for the development agreement with St Modwen Developments Ltd. However, we would like to clarify whether the challenge is focused on the conditional land agreement aspect or the entire public works contract. Could you please specify which aspects of the High Court and Court of Appeal decisions you are contesting in this negotiation? Additionally, we are willing to provide further transparency regarding our evaluation criteria and process, but we must ensure that any information shared does not compromise the integrity of the procurement.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "Thank you for your clarification regarding the scope of our challenge. We are contesting the entire public works contract, as we believe that the conditional land agreement aspect was merely a smokescreen to avoid competitive tendering under the Public Contracts Regulations. Specifically, we take issue with the scoring discrepancy in the evaluation criteria, which we believe unfairly disadvantaged us compared to St Modwen Developments Ltd. We would like to request further transparency regarding the evaluation methodology and scores awarded to each bidder.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "We understand your concerns regarding the scoring discrepancy in the evaluation criteria and its impact on your bid. We acknowledge that transparency is essential in this matter, and we are willing to provide further clarification on our evaluation methodology. However, we must ensure that any information shared does not compromise the integrity of the procurement process. To address your specific concerns, we propose a detailed review of our scoring system, focusing on the evaluation criteria for 'Technical Capacity' and 'Commercial Viability'. We will provide a written explanation of how these scores were awarded, including the specific reasons behind each score. This will enable you to understand the basis of our decision-making process and address any perceived discrepancies.",
+      "proposal": null,
+      "concession_made": "We will provide additional feedback on the evaluation criteria"
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to provide further clarification on the evaluation methodology and scores awarded to each bidder. However, we would like to request that you also share the specific reasons behind the scoring discrepancy in the 'Technical Capacity' and 'Commercial Viability' criteria. We are not merely seeking a written explanation of how these scores were awarded, but rather a clear justification for why our bid was disadvantaged compared to St Modwen Developments Ltd's. Furthermore, we propose that you provide us with access to the original evaluation panel minutes and documentation, as well as any subsequent communication between evaluators regarding our bid.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "We are willing to provide access to the original evaluation panel minutes and documentation, as well as any subsequent communication between evaluators regarding your bid. We will also share a detailed justification for the scoring discrepancy in the 'Technical Capacity' and 'Commercial Viability' criteria. However, we must emphasize that our primary concern remains the integrity of the procurement process, and we cannot compromise on this principle. In light of the Court of Appeal's decision declaring the development agreement ineffective, we propose a revised approach to the procurement process. We are willing to re-tender the contract under a new framework, ensuring full transparency and competitiveness in the evaluation process.",
+      "proposal": "Re-tendering the contract under a new framework",
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to re-tender the contract under a new framework, ensuring full transparency and competitiveness in the evaluation process. However, we believe that this proposal does not fully address our concerns regarding the scoring discrepancy in the 'Technical Capacity' and 'Commercial Viability' criteria. We propose a hybrid approach where the original evaluation panel reviews their scores and provides a revised justification for why our bid was disadvantaged compared to St Modwen Developments Ltd's. This would allow us to understand the specific reasons behind the scoring discrepancy and provide closure on this matter. Additionally, we request that you commit to implementing changes to the evaluation methodology to prevent similar discrepancies in future procurements.",
+      "proposal": "Hybrid approach with revised justification from original evaluation panel",
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [],
+  "resolved": false,
+  "resolution_outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+  "adjudicated": false,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiation outcome is a deadlock, which means we have reached the maximum number of rounds and are now escalating to formal proceedings. This outcome is less favorable than our BATNA (defending in TCC court), as it will likely result in significant costs (\u00a350k+) and time (6-12 months).",
+    "win_statement": "We successfully navigated a complex negotiation, maintaining the integrity of the procurement process while providing transparency and addressing concerns raised by Faraday Development Ltd. Although we did not achieve a full win, we avoided worse costs or risks associated with defending in court.",
+    "what_was_achieved": [
+      "Provided access to original evaluation panel minutes and documentation",
+      "Shared detailed justification for scoring discrepancy in 'Technical Capacity' and 'Commercial Viability' criteria"
+    ],
+    "what_was_conceded": [
+      "Agreed to re-tender the contract under a new framework, ensuring full transparency and competitiveness in the evaluation process",
+      "Committed to implementing changes to the evaluation methodology to prevent similar discrepancies in future procurements"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The negotiation outcome was somewhat favorable compared to our BATNA, as we were able to secure a commitment from the contracting authority to re-tender the contract under a new framework. However, this proposal did not fully address our concerns regarding the scoring discrepancy in the 'Technical Capacity' and 'Commercial Viability' criteria.",
+    "win_statement": "We successfully negotiated a revised approach to the procurement process, ensuring full transparency and competitiveness in the evaluation process. The contracting authority has committed to re-tendering the contract under a new framework, which will provide us with an opportunity to participate in a fair and transparent evaluation process.",
+    "what_was_achieved": [
+      "Access to original evaluation panel minutes and documentation",
+      "Detailed justification for scoring discrepancy in 'Technical Capacity' and 'Commercial Viability' criteria",
+      "Commitment from contracting authority to re-tender contract under new framework"
+    ],
+    "what_was_conceded": [
+      "No direct resolution of scoring discrepancy in 'Technical Capacity' and 'Commercial Viability' criteria",
+      "No immediate implementation of changes to evaluation methodology"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Scoring discrepancy in the 'Technical Capacity' and 'Commercial Viability' criteria",
+      "Transparency regarding evaluation methodology and scores awarded to each bidder",
+      "Integrity of the procurement process"
+    ],
+    "concessions_summary": "The Contracting Authority made several concessions throughout the negotiation, including: providing additional feedback on the evaluation criteria (Round 2), sharing access to original evaluation panel minutes and documentation (Round 3), and offering a revised approach to the procurement process by re-tendering the contract under a new framework (Round 3). However, they maintained their stance on not compromising the integrity of the procurement process.",
+    "court_reasoning_summary": "The Court likely reached its conclusion due to the deadlock between the parties. Despite concessions made by the Contracting Authority, the Aggrieved Bidder's concerns regarding the scoring discrepancy and transparency were not fully addressed. The Court may have deemed that the proposed revised approach to the procurement process did not sufficiently address these concerns.",
+    "likely_next_steps": "The dispute will likely escalate to formal proceedings, with the parties potentially engaging in further litigation. The Aggrieved Bidder may seek to challenge the Contracting Authority's decision-making process and evaluation methodology in court. Alternatively, the Contracting Authority may choose to re-tender the contract under a new framework, as proposed.",
+    "plain_english_summary": "The negotiation between Faraday Development Ltd and West Berkshire Council reached an impasse due to disagreements over transparency and scoring discrepancies in the procurement process. Despite concessions made by the Council, the Aggrieved Bidder's concerns were not fully addressed, leading to a deadlock. The dispute will likely proceed to formal proceedings, with potential further litigation."
+  }
+}

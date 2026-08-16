@@ -61,7 +61,7 @@ def _aggregate_compliance(runs: list) -> dict:
 
 
 def _build_summary(scenario, results, n_runs, max_rounds, timestamp, court_system_prompt,
-                   complete: bool) -> dict:
+                   complete: bool, include_court: bool = True) -> dict:
     """Builds the batch summary from whatever runs have finished so far."""
     successful_runs = [r for r in results if r["error"] is None]
     failed_runs = [r for r in results if r["error"] is not None]
@@ -95,7 +95,8 @@ def _build_summary(scenario, results, n_runs, max_rounds, timestamp, court_syste
         "max_rounds": max_rounds,
         "timestamp": timestamp,
         # Run provenance — what this batch's numbers actually describe.
-        "court_prompt_version": _court_prompt_version(court_system_prompt),
+        "court_prompt_version": _court_prompt_version(court_system_prompt) if include_court else "no-court-ablation",
+        "include_court": include_court,
         "ca_profile": (
             scenario.ca_profile.model_dump(exclude_none=True) if scenario.ca_profile else None
         ),
@@ -124,11 +125,17 @@ def _write_summary(batch_dir: str, summary: dict) -> None:
 
 
 def run_batch(scenario, n_runs: int = 10, max_rounds: int = 3, output_dir: str = "batch_results",
-              court_system_prompt=None):
+              court_system_prompt=None, include_court: bool = True):
     """
     Runs the same scenario n_runs times, saves each individual log, and
     produces an aggregated evaluation summary — the first real quantitative
     evidence for the dissertation's evaluation chapter.
+
+    `include_court=False` runs the no-Court ablation baseline (evaluation item 22,
+    see graph_orchestrator.py::no_court_check_node) — every run in that mode ends in
+    deadlock by design, since nothing in this system can decide the parties have
+    converged without a Court. Batches from this mode should not be compared against
+    normal batches for resolution_rate; they exist to make that specific point.
     """
     os.makedirs(output_dir, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -143,7 +150,8 @@ def run_batch(scenario, n_runs: int = 10, max_rounds: int = 3, output_dir: str =
         print(f"{'#'*70}")
 
         orchestrator = GraphNegotiationOrchestrator(
-            max_rounds=max_rounds, court_system_prompt=court_system_prompt
+            max_rounds=max_rounds, court_system_prompt=court_system_prompt,
+            include_court=include_court,
         )
         metrics.reset()   # counters are per-run, aggregated across the batch below
         start_time = time.time()
@@ -203,11 +211,12 @@ def run_batch(scenario, n_runs: int = 10, max_rounds: int = 3, output_dir: str =
         # counters, which live only in memory until written).
         _write_summary(batch_dir, _build_summary(
             scenario, results, n_runs, max_rounds, timestamp, court_system_prompt,
-            complete=(i == n_runs),
+            complete=(i == n_runs), include_court=include_court,
         ))
 
     summary = _build_summary(
-        scenario, results, n_runs, max_rounds, timestamp, court_system_prompt, complete=True
+        scenario, results, n_runs, max_rounds, timestamp, court_system_prompt, complete=True,
+        include_court=include_court,
     )
     _write_summary(batch_dir, summary)
     successful_runs = [r for r in results if r["error"] is None]
@@ -258,6 +267,10 @@ if __name__ == "__main__":
     ap.add_argument("--refresh-scenario", action="store_true",
                     help="Re-extract the scenario instead of reusing the cached one. "
                          "Breaks comparability with batches already run against the cache.")
+    ap.add_argument("--no-court", action="store_true",
+                    help="Evaluation item 22 baseline: run without the Court agent. Every run "
+                         "ends in deadlock by design (see no_court_check_node) — not comparable "
+                         "to a normal batch's resolution_rate, that's the point of the ablation.")
     args = ap.parse_args()
 
     scenario = load_real_scenario(args.case, refresh=args.refresh_scenario)
@@ -269,4 +282,5 @@ if __name__ == "__main__":
     }[args.court_prompt]
 
     run_batch(scenario, n_runs=args.runs, max_rounds=args.rounds,
-              output_dir=args.output_dir, court_system_prompt=court)
+              output_dir=args.output_dir, court_system_prompt=court,
+              include_court=not args.no_court)

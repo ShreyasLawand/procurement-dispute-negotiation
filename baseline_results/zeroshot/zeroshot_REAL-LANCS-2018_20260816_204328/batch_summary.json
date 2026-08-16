@@ -1,0 +1,190 @@
+{
+  "baseline": "zeroshot",
+  "case_slug": "lancashire-care",
+  "scenario_id": "REAL-LANCS-2018",
+  "scenario_title": "Lancashire Care NHS Foundation Trust v Lancashire County Council",
+  "complete": true,
+  "n_runs_requested": 5,
+  "n_runs_successful": 5,
+  "n_runs_failed": 0,
+  "timestamp": "20260816_204328",
+  "metrics": {
+    "manifest_error_detection_rate": 0.0,
+    "outcome_distribution": {
+      "re-evaluation": 5
+    },
+    "average_duration_seconds": 1.9
+  },
+  "individual_runs": [
+    {
+      "run_number": 1,
+      "process_followed": false,
+      "manifest_error_found": false,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The Contracting Authority failed to provide sufficiently clear reasons for its evaluation decision, which is a breach of Section 12(2) of the Procurement Act 2023. This section requires that contracting authorities must give sufficient reasons for their decisions in relation to the award of contracts.",
+      "applicable_provisions": [
+        "Section 12(2) of the Procurement Act 2023: Transparency"
+      ],
+      "duration_seconds": 2.1,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 2,
+      "process_followed": false,
+      "manifest_error_found": false,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The Contracting Authority failed to provide clear reasons for its evaluation decision, which is a breach of section 12(2) of the Procurement Act 2023. The core allegation is not about a specific calculation error, but rather the lack of transparency in the evaluation process.",
+      "applicable_provisions": [
+        "section 12(2) of the Procurement Act 2023: transparency"
+      ],
+      "duration_seconds": 2.0,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 3,
+      "process_followed": false,
+      "manifest_error_found": false,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The Contracting Authority's process was not compliant with the Procurement Act 2023 as it failed to provide sufficiently clear reasons for its evaluation decision. This is a breach of the duty of transparency.",
+      "applicable_provisions": [
+        "section 12: value for money, public benefit, transparency"
+      ],
+      "duration_seconds": 1.7,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 4,
+      "process_followed": false,
+      "manifest_error_found": false,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The Contracting Authority failed to provide sufficient clear reasons for its evaluation decision, which is a breach of the duty under section 12 of the Procurement Act 2023. The core allegation is not about a specific calculation error but rather the lack of transparency in the scoring process.",
+      "applicable_provisions": [
+        "section 12: transparency"
+      ],
+      "duration_seconds": 1.9,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 5,
+      "process_followed": false,
+      "manifest_error_found": false,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The Contracting Authority failed to provide clear reasons for its evaluation decision, which is a breach of Section 12(2) of the Procurement Act 2023. This provision requires contracting authorities to act with transparency in their procurement process.",
+      "applicable_provisions": [
+        "Section 12(2) of the Procurement Act 2023: Duty to act with transparency"
+      ],
+      "duration_seconds": 1.9,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    }
+  ]
+}

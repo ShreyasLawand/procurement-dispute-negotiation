@@ -1,0 +1,138 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-FARADAY-2018",
+    "title": "Faraday Development Ltd v West Berkshire Council",
+    "description": "West Berkshire Council entered into a development agreement with St Modwen Developments Ltd for approximately \u00a3125 million, structured as a conditional land agreement. Faraday Development Ltd challenged the arrangement, alleging that it was in substance a public works contract that should have been competitively procured under the Public Contracts Regulations. The High Court initially dismissed the claim, but the Court of Appeal reversed this decision, holding that the agreement was indeed a public works contract and declaring its ineffectiveness.",
+    "contract_value_gbp": 125000000.0,
+    "dispute_type": "process_avoidance",
+    "procedural_stage": "appeal",
+    "contracting_authority_name": "West Berkshire Council",
+    "bidder_name": "Faraday Development Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 3,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Ensure the procurement process was lawful and within our powers under the Procurement Act 2023.",
+      "Protection of Public Funds: Avoid delays that increase costs, given the \u00a3125,000,000 contract value.",
+      "Continuity of Service / Delivery: The development agreement is critical for delivering a major infrastructure project, with significant operational consequences if delayed or re-run.",
+      "Reputation & Public Accountability: Maintain public confidence and protect our reputation as a competent buyer in this high-profile procurement."
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Minimise disruption to the project"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our evaluation process, which was conducted fairly and transparently. We are willing to provide additional information and clarification on the scoring challenge, but we cannot re-score bids or discuss other bidders' scores in detail.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Public Contracts Regulations"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a3125 million contract value at risk, potential loss of revenue from a major development project",
+      "Fairness & Transparency: Perceived unfair treatment by West Berkshire Council in entering into a conditional land agreement with St Modwen Developments Ltd without competitive tendering"
+    ],
+    "goals": [
+      "Force a re-evaluation of the submitted bids to give Faraday Development Ltd a chance to be awarded the contract",
+      "Obtain damages for any losses incurred due to the ineffectiveness of the development agreement"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We will not accept that the development agreement was ineffectively entered into without competitive tendering. We request a re-evaluation of the submitted bids to ensure fairness and transparency.",
+    "legal_basis": [
+      "Public Contracts Regulations",
+      "Judgment of the Court of Appeal"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "Faraday Development Ltd's claim that our development agreement with St Modwen Developments Ltd is a public works contract and should have been competitively procured under the Public Contracts Regulations raises concerns about compliance and legality. We would like to clarify whether Faraday Development Ltd is suggesting that we intentionally avoided competitive procurement, or if they are simply arguing that the agreement falls within the scope of the regulations. Can you provide more context on their position regarding our alleged non-compliance?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I'd like to clarify whether West Berkshire Council is suggesting that our original agreement with St Modwen Developments Ltd was intentionally structured as a conditional land agreement to avoid competitive procurement, or if it's simply a matter of interpretation. We're not making any claims about intentional non-compliance at this stage. I propose we share the full evaluation report and scoring methodology used by West Berkshire Council in assessing our bid, as well as any relevant documentation related to the development agreement with St Modwen Developments Ltd.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Faraday Development Ltd's request for the full evaluation report and scoring methodology used by West Berkshire Council in assessing their bid, as well as any relevant documentation related to the development agreement with St Modwen Developments Ltd. We are willing to provide this information, but we would like to clarify that our evaluation process was conducted in accordance with the Public Contracts Regulations 2015 and the EU Remedies Directive. We propose a voluntary standstill extension of two weeks to allow for further review and discussion of the provided documentation.",
+      "proposal": "A voluntary standstill extension of two weeks",
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate West Berkshire Council's willingness to provide the requested documentation. However, we would like to clarify that a two-week voluntary standstill extension may not be sufficient time for us to thoroughly review and analyze the provided information. We propose an additional week to ensure a comprehensive understanding of the evaluation process and its implications on our original bid. Additionally, we request that West Berkshire Council provide a detailed explanation of how their evaluation process was conducted in accordance with the Public Contracts Regulations 2015 and the EU Remedies Directive.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "We understand Faraday Development Ltd's concerns regarding our development agreement with St Modwen Developments Ltd and acknowledge that a two-week voluntary standstill extension may not be sufficient time for thorough review. We are willing to provide an additional week as requested, bringing the total standstill period to three weeks. During this extended period, we will also provide a detailed explanation of how our evaluation process was conducted in accordance with the Public Contracts Regulations 2015 and the EU Remedies Directive.",
+      "proposal": null,
+      "concession_made": "Additional week added to voluntary standstill extension"
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate West Berkshire Council's willingness to provide additional time for review and analysis. However, we still have concerns about the evaluation process and its implications on our original bid. We propose a re-evaluation of all bids, including ours, using the same scoring methodology and criteria as before. This would ensure that all bidders are treated fairly and consistently, and that the contract is awarded based on merit rather than any perceived flaws in the original evaluation process.",
+      "proposal": "Re-evaluation of all bids using the same scoring methodology and criteria",
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [],
+  "resolved": false,
+  "resolution_outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+  "adjudicated": false,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome of a deadlock, requiring escalation to formal proceedings, is less favorable compared to our BATNA (defending in TCC court), which would have cost \u00a350k+ and taken 6-12 months. However, the negotiation process allowed us to maintain control over the situation and avoid potential reputational damage.",
+    "win_statement": "We successfully navigated a complex dispute with Faraday Development Ltd without resorting to costly and time-consuming litigation. By engaging in good-faith negotiations, we were able to clarify our position and provide necessary documentation, which helped to build trust and understanding between the parties.",
+    "what_was_achieved": [
+      "Provided clarification on the development agreement with St Modwen Developments Ltd",
+      "Shared evaluation report and scoring methodology used in assessing bids"
+    ],
+    "what_was_conceded": [
+      "Extended standstill period to three weeks at Faraday Development Ltd's request",
+      "Agreed to provide a detailed explanation of our evaluation process"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome of a deadlock after three rounds, with no clear resolution or concession from West Berkshire Council. This is less favorable than our BATNA (pursuing damages or formal TCC proceedings) as it does not provide any certainty or financial gain.",
+    "win_statement": "We were unable to achieve a satisfactory resolution through negotiation and will now have to consider pursuing more costly and uncertain legal action.",
+    "what_was_achieved": [
+      "Additional time for review and analysis",
+      "A detailed explanation of the evaluation process"
+    ],
+    "what_was_conceded": [
+      "No concession on re-evaluation of all bids",
+      "No clear resolution or agreement on the dispute"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Whether West Berkshire Council's development agreement with St Modwen Developments Ltd is a public works contract that should have been competitively procured",
+      "The evaluation process used by West Berkshire Council in assessing bids, including the scoring methodology and criteria"
+    ],
+    "concessions_summary": "West Berkshire Council made two concessions: (1) providing additional time for review and analysis (an extra week), and (2) providing a detailed explanation of their evaluation process. Faraday Development Ltd proposed but did not secure a re-evaluation of all bids.",
+    "court_reasoning_summary": "The Court likely reached the conclusion that the negotiation had reached an impasse because neither party was willing to make significant concessions or compromise on their positions. The Court may have also considered the lack of transparency and clarity in West Berkshire Council's evaluation process, which contributed to Faraday Development Ltd's concerns.",
+    "likely_next_steps": "The dispute will likely escalate to formal proceedings, where a judge will review the case and make a binding decision. This could involve further evidence being presented, expert testimony, or other legal procedures.",
+    "plain_english_summary": "In simple terms, the negotiation broke down because both parties couldn't agree on how West Berkshire Council evaluated bids and whether their development agreement with another company was properly done. The Court will now make a final decision based on the facts of the case."
+  }
+}
