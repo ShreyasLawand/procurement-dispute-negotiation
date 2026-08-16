@@ -235,6 +235,11 @@ Also note: every batch in `batch_results/` predating this change is a run of the
 
 ### Pre-award challenge risk screen
 
+**See `deliverable-risk-screen.md` for the full write-up of this module as the project's actual
+deliverable to Fusion21** — including worked examples run against all 8 real cases in this project's
+own corpus, and the honest read on what those results do and don't show. This section stays as
+implementation reference.
+
 `src/risk/challenge_risk.py` + `scripts/assess_challenge_risk.py` — evaluation punch-list item 8, and the highest-leverage module in the project by Phil's own framing ("how can we prevent these dispute negotiations"). Everything else here — the negotiation simulator, any settlement recommendation — operates on a dispute that has already started. This is the only component that can stop one from starting, and the only component with real, observable ground truth (challenged vs. not-challenged), which nothing else in this system has.
 
 **Reuses `CAProfile`/`BidderProfile` as the risk-factor taxonomy** — they already *are* Doc 1's "Practical Considerations" tables, so no new schema was needed, just a scoring layer on top. `assess_challenge_risk(ca_profile, bidder_profile)` returns a `ChallengeRiskAssessment`: a risk band, a normalised score, and a list of `RiskFlag`s, each traced to a specific profile field and a specific close-paraphrased sentence from Doc 1, with a concrete pre-award mitigation.
@@ -347,6 +352,28 @@ Pages: `HomePage` (explainer), `NegotiatePage` (upload → extract → live SSE 
 All three fields are nullable end to end and render as `—`: the nine pre-existing batches have no provenance, and `complete === false` (killed) must stay distinguishable from `complete == null` (predates the flag). The zod manifest schema `.default(null)`s them rather than requiring them, so an older manifest never fails the whole page closed over a provenance field.
 
 `frontend/dist/` and `frontend/public/data/` are gitignored build/sync output — regenerate with `npm run sync-data && npm run build`. `batch_results/_scenarios/` is skipped by the sync script, which only matches `^batch_\d{8}_\d{6}$`. `CaseFileView` renders both static and live/in-progress negotiations with no separate "live mode" — every section is gated on data presence, including `OutcomeRibbon` which is gated on `resolution_outcome !== null` specifically so a live run doesn't show a misleading "Deadlock" ribbon before any outcome exists.
+
+## Client Actions (asks of Fusion21, not build tasks)
+
+Referenced from two places (`challenge_risk.py`'s module docstring, and this file's "Pre-award
+challenge risk screen" section) before this section actually existed — written up properly on 16
+Aug 2026 alongside `deliverable-risk-screen.md`, the write-up positioning this module as the
+project's actual deliverable to Fusion21.
+
+1. **Anonymised pre-action/challenge data from Fusion21's member base** — for procurements that did
+   and did not receive a formal challenge, the same profile fields `challenge_risk.py` already asks
+   for (documentation quality, score margin, feedback quality, panel capability, and the rest of the
+   16-field Doc 1 taxonomy), plus the outcome. This is the one thing that would let the risk screen's
+   `risk_score` graduate from a documented, transparent heuristic (severity-weighted sum, ordering
+   device only) to an actual fitted/validated model reporting a real probability. See
+   `deliverable-risk-screen.md` §6-7 for the honest current state: worked against the 8 real cases in
+   this project's own corpus, the screen mostly scores "low" not because nothing was wrong in those
+   cases, but because litigated judgments very rarely report the internal pre-award conditions this
+   screen needs — that data genuinely has to come from Fusion21's own member base, not from case law.
+2. **Real settlement data**, flagged separately in `evaluation-counterfactual-regret.md` — without
+   access to real settlement terms from Fusion21's member base, there is no ground truth to validate
+   any future counterfactual-regret or dual-acceptance claim against, even once the case-scaled BATNA
+   cost model that claim also needs is built.
 
 ## Known Gaps (don't assume these are built)
 
