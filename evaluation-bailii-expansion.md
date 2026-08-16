@@ -206,6 +206,39 @@ contains" leaves room for a round's rhetoric (AbbVie) or a misclassified case sh
 the assessment away from the ground truth. Any future work on Step 1 gating should treat this as the
 active risk, rather than treating the existing hardening as having closed the question.
 
+## Addendum: a stray Ronin extraction turned out to be a real fix, now merged and re-verified
+
+Syncing Ronin's checkout to the latest commit (below) surfaced one uncommitted local change there: a
+re-extracted `batch_results/_scenarios/parkingeye-velindre.json` from an earlier session, differing
+from the committed cache in two fields. Investigated rather than discarded or blindly adopted:
+
+- **The richer `description`** (adds the real 68%/84% score gap and the s.101 Procurement Act 2023
+  suspension-test detail, both present in `real_cases.py`'s source text but absent from the originally
+  cached extraction) — **adopted**. `evaluation-five-cases.md` §5.2 had already asserted Parkingeye
+  was "a genuine scored-bid dispute (68% against NPCG's 84%)" as if the agents had been negotiating
+  over that fact; they had not been, because the cached scenario never contained it. A real gap between
+  what the write-up claimed and what the batches actually ran against — caught here, not by the batches
+  themselves, since a wrong-but-plausible extraction produces no error, just a confident write-up about
+  the wrong (thinner) ground truth.
+- **A `dispute_type` relabel** from `"transparency_breach"` to `"scoring_challenge"` — **rejected**.
+  `dispute_type` is inserted verbatim into the CA/Bidder system prompts, and the real case's three
+  actual grounds (tender-notice transparency, evaluation-methodology timing, inconsistent clarification
+  treatment) never include an allegation that the 68/84 split was itself miscalculated. Relabelling it
+  a scoring challenge risks steering agents toward disputing arithmetic nobody in the real case disputed
+  — the same class of risk (a `dispute_type` label steering CA/Bidder framing) already documented for
+  Faraday, just encountered from the opposite direction here (an incorrect label being added, rather
+  than a correct category being missing).
+
+Both Parkingeye V3 and V4 n=8 batches were re-run against the corrected scenario
+(`batch_20260816_172323` / `_172843`), through the Ronin GPU tunnel. Result: V4 unchanged (8/8,
+resolution 1.00); V3 moved from 8/8 to 7/8, producing its first deadlock on this case (resolution 0.875,
+manifest-error detection 0.875 vs the previous 1.00). This is now a fourth case (alongside Lancashire,
+Faraday, Alstom) where V3 deadlocks and V4 doesn't — strengthening rather than changing the corpus's
+headline finding. Full details, the corrected results table, and the reasoning above are written up in
+`evaluation-five-cases.md` §5.2/§5.2a; `scripts/analyze_ablation_significance.py`'s `CASES` mapping and
+its re-run output are updated accordingly (Parkingeye resolution-rate Fisher's-exact p remains 1.0 — not
+significant at n=8, consistent with the corpus's overall null-ish finding).
+
 ## What remains for a full 20-30 case expansion
 
 With the GPU-backed remote inference path now working (`OLLAMA_HOST` pointed at a tunnelled remote

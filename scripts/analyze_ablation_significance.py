@@ -34,7 +34,11 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 CASES = {
     "lancashire-care": ("batch_20260815_213642", "batch_20260815_214210"),
     "faraday-west-berkshire": ("batch_20260815_214543", "batch_20260815_215108"),
-    "parkingeye-velindre": ("batch_20260815_220726", "batch_20260815_221124"),
+    # Superseded 16 Aug 2026: the original pair (batch_20260815_220726 / _221124) ran against a
+    # thin extraction that omitted the real 68%/84% score gap and the s101 PA2023 suspension test,
+    # and mislabelled dispute_type — see evaluation-bailii-expansion.md's "Parkingeye re-extraction"
+    # section for the full comparison and reasoning. Re-run against the corrected scenario cache.
+    "parkingeye-velindre": ("batch_20260816_172323", "batch_20260816_172843"),
     "alstom-london-underground": ("batch_20260815_192629", "batch_20260815_193406"),
     "woods-milton-keynes": ("batch_20260815_200902", "batch_20260815_201219"),
 }

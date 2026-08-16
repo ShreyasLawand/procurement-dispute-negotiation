@@ -1,0 +1,126 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-PARKINGEYE-2026",
+    "title": "Parkingeye Ltd v Velindre University NHS Trust & Cardiff and Vale University Health Board",
+    "description": "The contracting authorities awarded a \u00a310-20 million 5-year car park management services contract to National Parking Control Group (NPCG) over incumbent provider Parkingeye Ltd, which scored 68% against NPCG's 84%. Parkingeye alleged transparency failure in the tender notice (\u00a3100,000 stated value), post-commencement evaluation methodology changes, and inconsistent treatment of bidders during clarification exchanges. The court applied the new statutory test for lifting automatic suspension under section 101 of the Procurement Act 2023 and refused to lift the suspension, finding the balance of public interest favoured allowing Parkingeye's challenge to proceed.",
+    "contract_value_gbp": 15000000.0,
+    "dispute_type": "transparency_breach",
+    "procedural_stage": "standstill",
+    "contracting_authority_name": "Velindre University NHS Trust / Cardiff and Vale University Health Board",
+    "bidder_name": "Parkingeye Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Ensure the procurement process is lawful and within our powers under the Procurement Act 2023.",
+      "Protection of Public Funds: Avoid delays that increase costs, particularly given the \u00a315,000,000 contract value.",
+      "Continuity of Service / Delivery: Maintain car park management services for patients and visitors at Velindre University NHS Trust and Cardiff and Vale University Health Board facilities without interruption.",
+      "Reputation & Public Accountability: Protect our reputation as competent, fair, and professional buyers in the public eye.",
+      "Minimising Litigation Risk: Provide enough disclosure to reassure Parkingeye Ltd while maintaining evaluation confidentiality and integrity."
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Resolve the dispute through negotiation"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our evaluation process, which was conducted fairly and transparently according to published criteria.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Section 101: Lifting Automatic Suspension"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a310-20 million contract value at risk due to perceived unfairness in evaluation",
+      "Fairness & Transparency: Dispute over transparency breach and inconsistent treatment of bidders during clarification exchanges",
+      "Protection of Reputation: Potential damage to our reputation as a capable provider if the challenge is unsuccessful"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids, giving us a chance to be awarded the contract ourselves",
+      "An award of damages for any financial losses incurred due to the contracting authorities' actions"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We request that the contracting authorities re-evaluate their scoring methodology and provide detailed feedback on our bid",
+    "legal_basis": [
+      "Section 101 of the Procurement Act 2023",
+      "Transparency breach in tender notice"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Parkingeye's concerns regarding transparency and evaluation methodology changes. To clarify, can you specify which particular tender notice details or post-commencement evaluation methodologies you believe were inconsistent with our published criteria? We are willing to provide additional information on our clarification exchanges with bidders during the standstill period.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to provide additional information on clarification exchanges with bidders during the standstill period. However, we would like to clarify whether this gesture is a genuine attempt to address our concerns or simply a tactical move to delay our challenge. Specifically, can you confirm that you will also release the evaluation scores for all bidders, including NPCG, and provide detailed explanations for any discrepancies in scoring?",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Procurement Act 2023",
+        "EU Procurement Directive"
+      ],
+      "reasoning": "This scenario is qualitative, not numeric. The contracting authority changed the evaluation methodology post-commencement without a clear justification or explanation in the published criteria. This change was not transparent to bidders and may have unfairly impacted Parkingeye's chances of winning the contract. I do not need to perform any calculations as there are no explicit numbers provided. However, I note that the contracting authority's willingness to provide additional information on clarification exchanges with bidders during the standstill period does not address the underlying issue of transparency and methodology changes.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome of re-evaluation is a more favorable result than our BATNA (defending in TCC court, which would cost \u00a350k+ and take 6-12 months). While we did not achieve a full win, the negotiation allowed us to avoid the costs and risks associated with litigation.",
+    "win_statement": "We successfully negotiated a re-evaluation of the contract award, which has avoided the need for costly and time-consuming court proceedings. This outcome demonstrates our commitment to transparency and fairness in the procurement process.",
+    "what_was_achieved": [
+      "Agreed to provide additional information on clarification exchanges with bidders during the standstill period",
+      "Released evaluation scores for all bidders, including NPCG"
+    ],
+    "what_was_conceded": [
+      "Allowed re-evaluation of the contract award rather than defending in court",
+      "Provided detailed explanations for any discrepancies in scoring"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The negotiated outcome is slightly more favourable than pursuing damages or formal TCC proceedings, which would have been costly, slow, and uncertain. We managed to secure a re-evaluation of the contract award, whereas in court, the outcome might have been unpredictable.",
+    "win_statement": "We secured a re-evaluation of the contract award, which is a significant win for us. Although we didn't get the desired outcome of having our bid reinstated as the preferred supplier, at least now there's an opportunity to reassess the evaluation process and potentially correct any perceived errors or biases.",
+    "what_was_achieved": [
+      "Re-evaluation of the contract award",
+      "Contracting authority agreed to provide additional information on clarification exchanges with bidders"
+    ],
+    "what_was_conceded": [
+      "No guarantee that our bid will be reinstated as the preferred supplier",
+      "No immediate resolution or conclusion to the dispute"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Transparency in tender notice details",
+      "Evaluation methodology changes post-commencement",
+      "Release of evaluation scores for all bidders"
+    ],
+    "concessions_summary": "The Contracting Authority offered to provide additional information on clarification exchanges with bidders during the standstill period, but did not address the core issues of transparency and methodology changes.",
+    "court_reasoning_summary": "The Court concluded that there was a manifest error in the evaluation process due to the lack of transparency and justification for the post-commencement methodology change. The Contracting Authority's willingness to provide additional information was deemed insufficient to address these concerns.",
+    "likely_next_steps": "Re-evaluation of the contract, which may involve re-scoring or re-assessing the bids based on a revised evaluation methodology that is transparent and consistent with published criteria.",
+    "plain_english_summary": "The dispute centered around the Contracting Authority's changes to the evaluation process without clear justification. The Court agreed that this was unfair and decided that the contract should be re-evaluated to ensure transparency and consistency."
+  }
+}
