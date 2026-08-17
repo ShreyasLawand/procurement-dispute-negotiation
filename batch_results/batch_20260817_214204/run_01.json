@@ -1,0 +1,177 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-KBR-2021",
+    "title": "Kellogg Brown & Root Ltd v Mayor's Office for Policing and Crime",
+    "description": "MOPAC ran a \u00a3400 million framework agreement and call-off contract procurement for facilities management integrator services. KBR was the incumbent provider but unsuccessful in the new competition. An automatic suspension was triggered, and MOPAC applied to lift it, arguing damages would be an adequate remedy if lifted and KBR later succeeded at trial. Mrs Justice Smith held that damages would be adequate, specifically addressing KBR's argument on staff redundancies.",
+    "contract_value_gbp": 400000000.0,
+    "dispute_type": "automatic_suspension",
+    "procedural_stage": "interim_ruling",
+    "contracting_authority_name": "Mayor's Office for Policing and Crime",
+    "bidder_name": "Kellogg Brown & Root Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 3,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Uphold the integrity of the procurement process and ensure rational decision-making.",
+      "Protection of Public Funds: Avoid unnecessary delays and costs associated with a re-run or automatic suspension.",
+      "Continuity of Service / Delivery: Maintain critical facilities management integrator services for policing and crime prevention, impacting public safety and operational effectiveness.",
+      "Reputation & Public Accountability: Defend the procurement decision to maintain public confidence in MOPAC's competence as a buyer and avoid adverse media scrutiny."
+    ],
+    "goals": [
+      "Defend the procurement decision, ensure compliance with the Procurement Act 2023, and protect public funds"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our evaluation process, which was conducted fairly and transparently. We are willing to provide additional feedback and clarification on specific scoring aspects, but we cannot re-score bids or discuss other bidders' scores in detail.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Regulation 32(1) of the Public Contracts Regulations 2015"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a3400 million contract value at risk, potential loss of market share and reputation damage due to unsuccessful bid",
+      "Fairness & Transparency: Perceived unfairness in the evaluation process, specifically regarding staff redundancies as a mitigating factor for damages",
+      "Protection of Reputation: Incumbent provider's reputation at stake, potential long-term consequences on future bids and business relationships"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids to give us a chance to be awarded the contract ourselves",
+      "An award of damages as compensation for our losses"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We believe that the evaluation process was flawed and that we were treated unfairly. We request a re-evaluation of the bids to ensure a fair outcome.",
+    "legal_basis": [
+      "Public Procurement Regulations 2006",
+      "EU Directive 2014/24/EU"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge KBR's concerns regarding staff redundancies and appreciate Mrs Justice Smith's ruling on damages being an adequate remedy. However, I must clarify that MOPAC's primary interest is in ensuring continuity of service delivery and protecting public funds. Can you specify how the automatic suspension affects your ability to maintain critical services and infrastructure under this contract? Furthermore, what specific measures do you propose to mitigate the impact of staff redundancies on your business?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your clarification on MOPAC's primary interest in ensuring continuity of service delivery and protecting public funds. However, I would like to challenge the assumption that damages will be an adequate remedy for KBR in this case. Specifically, can you provide more information on how MOPAC intends to ensure continuity of services during the suspension period? What specific measures are being taken to mitigate any potential disruptions or impacts on service delivery? Furthermore, I would like to propose a transparency package to address our concerns regarding staff redundancies and the evaluation process.",
+      "proposal": "A detailed transparency package providing access to scoring methodology, evaluator comments, and evaluation rationale",
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "I understand your concerns regarding staff redundancies and the evaluation process. To address these concerns, I am willing to provide a detailed debriefing on the evaluation criteria and scores awarded to KBR in this procurement. This will include specific feedback on areas where KBR's bid was deemed non-compliant or did not meet the required standards. Furthermore, I can offer a voluntary standstill extension of 14 days to allow for further engagement and discussion on these matters.",
+      "proposal": null,
+      "concession_made": "Voluntary standstill extension"
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your offer to provide a detailed debriefing on the evaluation criteria and scores awarded to KBR in this procurement. However, I would like to request that this debriefing also addresses the specific concerns regarding staff redundancies and the evaluation process that were raised by our organisation. Furthermore, I would like to propose an additional condition for the standstill extension: that MOPAC agrees to provide a clear timeline for implementing any measures to mitigate potential disruptions or impacts on service delivery during the suspension period.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "I am willing to provide a detailed debriefing on the evaluation criteria and scores awarded to KBR in this procurement, including specific feedback on areas where KBR's bid was deemed non-compliant or did not meet the required standards. I will also offer a voluntary standstill extension of 14 days to allow for further engagement and discussion on these matters. Additionally, MOPAC agrees to provide a clear timeline for implementing any measures to mitigate potential disruptions or impacts on service delivery during the suspension period.",
+      "proposal": null,
+      "concession_made": "A partial award covering 50% of the contract value"
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "Given the concessions made by MOPAC in this negotiation, I am willing to accept a revised debriefing that addresses our concerns regarding staff redundancies and the evaluation process. Furthermore, I propose a compromise on the standstill extension: instead of 14 days, we agree to a 7-day extension, with the understanding that MOPAC will provide a clear timeline for implementing measures to mitigate potential disruptions or impacts on service delivery during this period. In exchange, KBR agrees to withdraw its request for an automatic suspension and to proceed with the damages claim in the Technology and Construction Court.",
+      "proposal": null,
+      "concession_made": "Withdrawal of automatic suspension request"
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Public Contracts Regulations 2015",
+        "Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a framework agreement and call-off contract procurement for facilities management integrator services. There are no explicit formulas or sub-scores mentioned in the scenario. The parties' statements focus on the impact of staff redundancies and the adequacy of damages as a remedy. I will assess compliance qualitatively instead of computationally. MOPAC's primary interest is in ensuring continuity of service delivery and protecting public funds, which aligns with the procurement regulations. However, KBR raises concerns regarding staff redundancies and the evaluation process. To address these concerns, MOPAC proposes a transparency package, which may be seen as a reasonable measure to mitigate potential disruptions or impacts on service delivery.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Procurement Act 2023 s12",
+        "EU Procurement Directive"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves evaluation criteria and scores awarded to KBR in a procurement process. There are no explicit formulas or sub-scores provided. I will assess the Contracting Authority's actions qualitatively, considering whether their decisions were rationally defensible and compliant with the published criteria.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 3,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Public Contracts Regulations 2015",
+        "Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, as it does not contain any explicit formula or numeric scores. The parties' discussion revolves around concessions and a debriefing on the evaluation criteria, which suggests that the Contracting Authority's decision was based on qualitative assessments rather than numerical calculations. As such, I will assess compliance qualitatively using Step 2B's reasoning.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    }
+  ],
+  "resolved": false,
+  "resolution_outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+  "adjudicated": false,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiation outcome is a draw, avoiding the risks and costs associated with defending in TCC court (\u00a350k+ and 6-12 months). While we did not achieve our desired outcome of lifting the automatic suspension, we were able to negotiate concessions that addressed KBR's concerns regarding staff redundancies and the evaluation process.",
+    "win_statement": "We successfully managed to navigate a complex negotiation, maintaining control over the contract and avoiding costly court proceedings. By engaging in good-faith discussions, we were able to find common ground with KBR, ultimately achieving a compromise that addresses their concerns while protecting public funds.",
+    "what_was_achieved": [
+      "Negotiated a revised debriefing that addresses KBR's concerns regarding staff redundancies and the evaluation process",
+      "Agreed to provide a clear timeline for implementing measures to mitigate potential disruptions or impacts on service delivery during the suspension period"
+    ],
+    "what_was_conceded": [
+      "Extended the standstill period from 14 days to 7 days, as requested by KBR",
+      "Provided a detailed debriefing that addresses specific concerns regarding staff redundancies and the evaluation process"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is somewhat favourable compared to our BATNA, as we were able to negotiate concessions from MOPAC on the debriefing and standstill extension. However, we did not achieve our primary goal of having the automatic suspension lifted.",
+    "win_statement": "We successfully negotiated a revised debriefing that addresses our concerns regarding staff redundancies and the evaluation process, which is a significant concession by MOPAC. We also secured a compromise on the standstill extension, agreeing to a 7-day extension in exchange for withdrawing our request for an automatic suspension.",
+    "what_was_achieved": [
+      "Revised debriefing addressing concerns regarding staff redundancies and evaluation process",
+      "Compromise on standstill extension (7 days instead of 14)",
+      "Clear timeline from MOPAC for implementing measures to mitigate potential disruptions or impacts"
+    ],
+    "what_was_conceded": [
+      "Withdrawal of request for automatic suspension",
+      "Proceeding with damages claim in the Technology and Construction Court"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Staff redundancies and their impact on KBR's business",
+      "Adequacy of damages as a remedy for KBR",
+      "Evaluation process and transparency package"
+    ],
+    "concessions_summary": "MOPAC made several concessions, including: (1) providing a detailed debriefing on the evaluation criteria and scores awarded to KBR, (2) offering a voluntary standstill extension of 14 days, and (3) agreeing to provide a clear timeline for implementing measures to mitigate potential disruptions or impacts on service delivery. Additionally, KBR agreed to withdraw its request for an automatic suspension and proceed with the damages claim in the Technology and Construction Court.",
+    "court_reasoning_summary": "The Court assessed each round qualitatively, considering whether MOPAC's decisions were rationally defensible and compliant with the published criteria. The Court found that process was followed, there was no manifest error, and recommended continuing negotiation. However, after three rounds, the parties reached a deadlock, and the Court concluded that formal proceedings should be escalated.",
+    "likely_next_steps": "The dispute will likely proceed to formal proceedings in the Technology and Construction Court, where KBR will pursue its damages claim. The exact next steps will depend on the Court's schedule and the parties' subsequent actions.",
+    "plain_english_summary": "In this negotiation, MOPAC and KBR disagreed over staff redundancies, damages, and the evaluation process. Despite concessions made by MOPAC, including a debriefing and standstill extension, the parties reached a deadlock after three rounds. The dispute will now proceed to formal court proceedings."
+  }
+}

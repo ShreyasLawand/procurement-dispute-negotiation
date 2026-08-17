@@ -1,0 +1,174 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-KBR-2021",
+    "title": "Kellogg Brown & Root Ltd v Mayor's Office for Policing and Crime",
+    "description": "MOPAC ran a \u00a3400 million framework agreement and call-off contract procurement for facilities management integrator services. KBR was the incumbent provider but unsuccessful in the new competition. An automatic suspension was triggered, and MOPAC applied to lift it, arguing damages would be an adequate remedy if lifted and KBR later succeeded at trial. Mrs Justice Smith held that damages would be adequate, specifically addressing KBR's argument on staff redundancies.",
+    "contract_value_gbp": 400000000.0,
+    "dispute_type": "automatic_suspension",
+    "procedural_stage": "interim_ruling",
+    "contracting_authority_name": "Mayor's Office for Policing and Crime",
+    "bidder_name": "Kellogg Brown & Root Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 3,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: \u00a3400 million contract value and potential for significant financial loss if procurement process is delayed or re-run.",
+      "Continuity of Service / Delivery: Critical facilities management integrator services are required to maintain public safety, and delay or disruption would compromise this essential service.",
+      "Reputation & Public Accountability: MOPAC's reputation as a competent and fair buyer must be maintained, particularly given the high-profile nature of this contract and the incumbent provider's unsuccessful bid."
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Minimise litigation risk"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our evaluation process, which was conducted fairly and in accordance with the Procurement Act 2023. We are willing to provide additional information and clarification on the scoring challenge, but we cannot re-score bids or discuss other bidders' scores in detail.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Regulation 32(1) of the Public Contracts Regulations 2015"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a3400 million contract value loss if not awarded, plus significant bid costs (\u00a31-2 million) and strategic opportunity cost (future business growth impacted)",
+      "Fairness & Transparency: Perception of unfair treatment due to automatic suspension being lifted without a full re-evaluation",
+      "Protection of Reputation: Maintaining credibility with parent companies, shareholders, and partners as the incumbent provider"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids or competition to be re-run",
+      "Award of damages if unable to secure contract"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "Request MOPAC to reconsider their decision and provide a full re-evaluation of submitted bids",
+    "legal_basis": [
+      "Public Contracts Regulations 2015 (PCR 2015), Regulation 32(2)(d)"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge KBR's concerns regarding staff redundancies and understand their desire for clarity on this matter. However, we must clarify that Mrs Justice Smith's ruling specifically addressed this issue, stating that damages would be an adequate remedy if the automatic suspension were lifted. Can you elaborate on how you believe our procurement process failed to adequately consider staff redundancies, and what specific information or transparency you are seeking from us at this stage?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your acknowledgement of our concerns regarding staff redundancies and understand that Mrs Justice Smith's ruling addressed this issue. However, we would like to clarify how MOPAC assessed the potential impact of an automatic suspension on KBR's business continuity, particularly in relation to staff redundancies. Can you provide more information on how the contracting authority considered the potential consequences of a suspension on our organisation's ability to maintain its workforce during the procurement process? Specifically, we would like to see the scoring methodology used by evaluators when assessing our bid against this criterion.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "We appreciate KBR's request for more information on how MOPAC assessed the potential impact of an automatic suspension on their business continuity, particularly in relation to staff redundancies. We can provide additional transparency by sharing a detailed report on our evaluation methodology used when assessing bids against this criterion. This report will include specific examples of how we applied the scoring framework to KBR's bid and any other relevant information that may have influenced our decision-making process.",
+      "proposal": null,
+      "concession_made": "We are willing to share a detailed report on our evaluation methodology used when assessing bids against this criterion, including specific examples of how we applied the scoring framework to KBR's bid."
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate MOPAC's offer to share a detailed report on their evaluation methodology used when assessing bids against the business continuity criterion. However, we would like to request that this report be supplemented with specific examples of how the scoring framework was applied to our bid in relation to staff redundancies. We also propose that MOPAC consider providing a feedback session with our team to discuss the evaluation process and answer any questions we may have. This will enable us to better understand their decision-making process and potentially identify areas for improvement.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "We appreciate KBR's willingness to engage in a feedback session and acknowledge their desire for greater transparency. However, we must balance this with our need to protect commercially sensitive information and maintain the integrity of the evaluation process. We are willing to offer a voluntary standstill extension of one week to facilitate further discussion and clarification on any remaining concerns. During this time, we will provide additional feedback and answer any questions KBR may have regarding the evaluation process.",
+      "proposal": null,
+      "concession_made": "voluntary standstill extension of one week"
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate MOPAC's willingness to provide additional transparency and engage in a feedback session. However, we still believe that our bid was unfairly disadvantaged by the evaluation process, particularly with regards to staff redundancies. In light of this, we are willing to accept a partial award covering 50% of the contract value, provided that it is accompanied by a detailed explanation of how MOPAC assessed the potential impact of an automatic suspension on our business continuity. We also request that the feedback session be conducted in a way that allows us to better understand their decision-making process and identify areas for improvement.",
+      "proposal": "A partial award covering 50% of the contract value",
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Public Contracts Regulations 2015",
+        "Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative (Step 2B) as it does not contain an explicit formula or numeric scores. The parties' statements focus on the contracting authority's consideration of staff redundancies and business continuity, rather than any specific scoring methodology. I will assess compliance qualitatively, examining whether the published criteria language was applied in a way that is rationally defensible.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Procurement Act 2023 s12"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves assessing the potential impact of an automatic suspension on business continuity and staff redundancies. There is no explicit formula or scoring framework provided in the scenario description. MOPAC's offer to share a detailed report on their evaluation methodology and provide specific examples of how they applied the scoring framework to KBR's bid is a reasonable step towards transparency and compliance with procurement regulations. The request for a feedback session also demonstrates a willingness to engage with the bidder and address any concerns they may have. Based on this, I conclude that MOPAC has followed a lawful and procedurally correct process.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 3,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Public Contracts Regulations 2015",
+        "Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves staff redundancies and business continuity. There are no explicit formulas or sub-scores mentioned in the scenario. The Contracting Authority's decision to lift the automatic suspension was based on Mrs Justice Smith's ruling that damages would be an adequate remedy if lifted and KBR later succeeded at trial. This reasoning is rationally defensible, as it takes into account the potential impact of an automatic suspension on KBR's business continuity. Therefore, I conclude that the process followed by MOPAC was compliant with procurement regulations.",
+      "recommended_action": "no remedy - decision stands",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "no remedy - decision stands",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome is more favorable than our BATNA, which would have involved defending in TCC court at a significant cost (\u00a350k+) and taking 6-12 months. By negotiating the terms of the dispute resolution, we were able to avoid these costs and risks.",
+    "win_statement": "We successfully defended against KBR's claims regarding staff redundancies and maintained the integrity of our evaluation process. We also provided additional transparency and engaged in a feedback session with KBR, which will help improve our procurement processes for future competitions.",
+    "what_was_achieved": [
+      "Maintained the decision to lift the automatic suspension",
+      "Provided additional transparency on evaluation methodology and scoring framework"
+    ],
+    "what_was_conceded": [
+      "Offered a voluntary standstill extension of one week to facilitate further discussion and clarification",
+      "Agreed to provide a detailed explanation of how MOPAC assessed the potential impact of an automatic suspension on KBR's business continuity"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is less favourable than our BATNA, which was to pursue damages or formal TCC proceedings. We were unable to secure a remedy that addressed our concerns regarding staff redundancies.",
+    "win_statement": "We achieved some level of transparency and understanding from the contracting authority regarding their evaluation process, but ultimately did not succeed in securing a more favourable outcome for KBR.",
+    "what_was_achieved": [
+      "Additional transparency on the evaluation methodology used by MOPAC",
+      "A voluntary standstill extension to facilitate further discussion and clarification"
+    ],
+    "what_was_conceded": [
+      "Our request for a partial award covering 50% of the contract value was not accepted",
+      "Our bid was ultimately unsuccessful, with no remedy secured regarding staff redundancies"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Staff redundancies and their impact on business continuity",
+      "Transparency in evaluation methodology and scoring framework",
+      "Feedback session to discuss evaluation process"
+    ],
+    "concessions_summary": "The Contracting Authority made two concessions: (1) sharing a detailed report on their evaluation methodology, including specific examples of how they applied the scoring framework to KBR's bid; and (2) offering a voluntary standstill extension of one week for further discussion and clarification.",
+    "court_reasoning_summary": "The Court assessed each round qualitatively, examining whether the Contracting Authority followed a lawful and procedurally correct process. The Court concluded that MOPAC had followed a compliant process in all rounds, particularly in Round 3 where they provided a rationally defensible explanation for lifting the automatic suspension.",
+    "likely_next_steps": "Given the Court's conclusion that no remedy is warranted, it is likely that KBR will accept the decision and move forward. However, if KBR chooses to appeal or seek further review, the case may proceed to formal proceedings.",
+    "plain_english_summary": "The negotiation centered around transparency in the evaluation process, particularly regarding staff redundancies and business continuity. The Contracting Authority made concessions to address these concerns, but ultimately, the Court concluded that their decision was compliant with procurement regulations, and no remedy is warranted."
+  }
+}

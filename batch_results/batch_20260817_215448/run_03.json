@@ -1,0 +1,123 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-ROBERTHEATHHEATING-2024",
+    "title": "Robert Heath Heating Ltd v Orbit Group Ltd",
+    "description": "RHH challenged the award of domestic heating service contracts to Aaron Services Ltd on two grounds: (1) undisclosed conflict of interest due to a former Orbit employee moving to the parent company of the successful bidder, and (2) opaque scoring of RHH's tender. The court applied the American Cyanamid framework and found two separate serious issues to be tried, but lifted the automatic suspension as damages were deemed an adequate remedy for RHH if it ultimately succeeded.",
+    "contract_value_gbp": 0.0,
+    "dispute_type": "transparency_breach",
+    "procedural_stage": "automatic_suspension",
+    "contracting_authority_name": "Orbit Group Ltd",
+    "bidder_name": "Robert Heath Heating Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: Avoid unnecessary costs and delays in awarding contracts for essential domestic heating services.",
+      "Continuity of Service / Delivery: Minimise disruption to the provision of critical heating services for residents, which is already at risk due to the automatic suspension.",
+      "Reputation & Public Accountability: Maintain public confidence by demonstrating transparency and fairness in the procurement process."
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Minimise costs and delays"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We maintain that our evaluation process was transparent, fair, and compliant with the Procurement Act 2023. We are willing to provide additional information and clarification on the scoring challenge, but we cannot re-score bids or disclose commercially sensitive information.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "American Cyanamid framework"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a30 contract value, but significant bid costs (\u00a350k-\u00a3100k) and opportunity cost of not securing the contract for future business growth.",
+      "Fairness & Transparency: Perceived unfairness due to undisclosed conflict of interest and opaque scoring, which may damage our reputation in the market."
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids or award damages",
+      "Obtain detailed feedback on evaluation methodology"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "Request that Orbit Group Ltd provide detailed evaluation scores and comments to justify their decision, and consider re-evaluation of all bids or partial award if necessary.",
+    "legal_basis": [
+      "The Public Contracts Regulations 2015 (SI 2015/102",
+      "The EU Remedies Directive (2009/31/EC)"
+    ],
+    "confidence_score": 0.7
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Robert Heath Heating Ltd's concerns regarding the alleged conflict of interest and scoring transparency in our domestic heating service contracts award to Aaron Services Ltd. We would like to clarify that we have reviewed our evaluation process and can confirm that all relevant documentation, including minutes of evaluation meetings and scoring records, are available for inspection. However, we must emphasize that these documents contain commercially sensitive information regarding other bidders' scores and will not be disclosed in their entirety. Can you specify which aspects of the evaluation process you believe were opaque or unfair?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your transparency regarding the evaluation process and documentation availability. However, we are concerned that the commercially sensitive information may be used to justify opaque scoring practices. Can you clarify what specific steps Orbit Group Ltd has taken to address our concerns about the conflict of interest and ensure a fair evaluation process? We would like to understand how these measures have been implemented in practice, beyond just stating their existence.",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Procurement Act 2023 s12",
+        "American Cyanamid framework"
+      ],
+      "reasoning": "This scenario is qualitative, not numeric. The parties' statements focus on the evaluation process and scoring transparency rather than providing specific numbers or formulas to calculate. However, I note that the Contracting Authority has acknowledged concerns about opaque scoring practices and commercially sensitive information. This suggests a potential issue with transparency and fairness in the evaluation process. Upon reviewing the scenario, I conclude that there is evidence of a manifest error regarding the scoring transparency.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome of re-evaluation is a more favorable result than our BATNA (defending in TCC court, which would cost \u00a350k+ and take 6-12 months). While we did not achieve a full win, the negotiated solution avoids the significant costs and risks associated with litigation.",
+    "win_statement": "We successfully defended against allegations of transparency breach and ensured that our evaluation process remains confidential to protect commercially sensitive information. We also maintained control over the re-evaluation process, which was conducted in accordance with our original evaluation criteria.",
+    "what_was_achieved": [
+      "Confirmation that all relevant documentation is available for inspection",
+      "Maintenance of confidentiality around commercially sensitive information"
+    ],
+    "what_was_conceded": [
+      "Re-evaluation of the contract award to Aaron Services Ltd",
+      "Disclosure of some additional information regarding the evaluation process"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is somewhat disappointing relative to our BATNA. While we were able to re-evaluate the award, which was a key aspect of our concerns, the contracting authority did not fully address our issues regarding the conflict of interest and scoring transparency.",
+    "win_statement": "We successfully pushed for a re-evaluation of the award, which is a significant achievement in itself, but unfortunately, we were unable to secure more concrete measures to address our concerns about the conflict of interest and scoring practices.",
+    "what_was_achieved": [
+      "Re-evaluation of the award",
+      "Access to evaluation documentation (with some limitations)"
+    ],
+    "what_was_conceded": [
+      "No full disclosure of commercially sensitive information regarding other bidders' scores",
+      "No concrete measures taken to address conflict of interest and scoring transparency"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Conflict of interest",
+      "Scoring transparency",
+      "Commercially sensitive information"
+    ],
+    "concessions_summary": "Neither party made significant concessions during the negotiation. The Contracting Authority acknowledged concerns and offered to clarify their evaluation process, but did not provide specific details or commit to changes.",
+    "court_reasoning_summary": "The Court concluded that there was a manifest error regarding scoring transparency due to the parties' statements focusing on qualitative aspects of the evaluation process rather than providing numerical evidence. The Contracting Authority's acknowledgement of concerns and offer to clarify their process were seen as insufficient.",
+    "likely_next_steps": "Re-evaluation is recommended by the Court, which means that the Contracting Authority will need to re-assess the bids and scoring transparency in accordance with the principles of fairness and transparency.",
+    "plain_english_summary": "The dispute centered on concerns about conflict of interest and scoring transparency. The parties discussed the evaluation process but failed to provide concrete evidence or commit to changes. As a result, the Court recommended re-evaluation to ensure that the Contracting Authority follows fair and transparent procedures."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "dispute_id": "REAL-KBR-2021",
+  "title": "Kellogg Brown & Root Ltd v Mayor's Office for Policing and Crime",
+  "description": "MOPAC ran a \u00a3400 million framework agreement and call-off contract procurement for facilities management integrator services. KBR was the incumbent provider but unsuccessful in the new competition. An automatic suspension was triggered, and MOPAC applied to lift it, arguing damages would be an adequate remedy if lifted and KBR later succeeded at trial. Mrs Justice Smith held that damages would be adequate, specifically addressing KBR's argument on staff redundancies.",
+  "contract_value_gbp": 400000000.0,
+  "dispute_type": "automatic_suspension",
+  "procedural_stage": "interim_ruling",
+  "contracting_authority_name": "Mayor's Office for Policing and Crime",
+  "bidder_name": "Kellogg Brown & Root Ltd",
+  "ca_profile": null,
+  "bidder_profile": null
+}

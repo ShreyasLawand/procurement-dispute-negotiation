@@ -1,0 +1,123 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-TURNINGPOINT-2012",
+    "title": "Turning Point Ltd v Norfolk County Council",
+    "description": "Norfolk County Council rejected Turning Point's tender due to a covering note qualifying part of its submission, citing the Invitation to Tender's clear statement that qualifications or caveats would not be accepted. Turning Point alleged the Council should have sought clarification before rejecting the tender and other breaches of the Public Contracts Regulations 2006.",
+    "contract_value_gbp": 0.0,
+    "dispute_type": "process_avoidance",
+    "procedural_stage": "trial",
+    "contracting_authority_name": "Norfolk County Council",
+    "bidder_name": "Turning Point Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Act lawfully and follow the Public Contracts Regulations 2006 to ensure procedural fairness and transparency.",
+      "Protection of Public Funds: Avoid delays that increase costs, as this is a zero-value contract with no operational impact.",
+      "Reputation & Public Accountability: Maintain public confidence by upholding the integrity of the procurement process and defending our decision.",
+      "Minimising Litigation Risk: Provide sufficient disclosure to reassure Turning Point Ltd without undermining evaluation confidentiality or integrity."
+    ],
+    "goals": [
+      "Defend our original decision to reject Turning Point's tender due to its covering note qualifying part of its submission",
+      "Maintain the integrity and transparency of the procurement process"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our original evaluation and rejection of Turning Point's tender, which was properly conducted in accordance with the Public Contracts Regulations 2006.",
+    "legal_basis": [
+      "Public Contracts Regulations 2006",
+      "Procurement Act 2023"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a30 contract value means we incur significant bid costs (\u00a320k) without any chance of revenue",
+      "Fairness & Transparency: We believe the Council's rejection was unfair and that they should have sought clarification on our covering note"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "An award of damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We are willing to accept detailed feedback if it justifies the Council's decision, but we believe there was a manifest error in rejecting our tender without clarification",
+    "legal_basis": [
+      "Public Contracts Regulations 2006",
+      "Invitation to Tender terms"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Turning Point Ltd's concerns regarding the rejection of their tender due to the covering note qualifying part of its submission. However, we would like to clarify whether you had previously been made aware that qualifications or caveats would not be accepted as per the Invitation to Tender. Did you have any prior discussions with our procurement team regarding this matter?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We understand that you're suggesting we were aware of the no-qualifications policy beforehand, but I'd like to clarify whether this was explicitly stated in our initial bid submission or if it was communicated verbally during a prior meeting. Can you provide specific documentation or evidence to support your claim?",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Public Contracts Regulations 2006",
+        "s12 of the Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, not numeric. The dispute revolves around the interpretation and application of the Invitation to Tender's clear statement that qualifications or caveats would not be accepted. I do not need to perform a calculation as there are no numbers provided in the scenario. However, I must assess whether the Council acted rationally and in good faith by rejecting the tender based on the covering note without seeking clarification. The Council's position seems to imply that Turning Point was aware of the policy beforehand, but this is not explicitly stated in the initial bid submission or any prior documentation provided. Therefore, I conclude that there may be a manifest error in the process.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "This outcome is more favourable than our BATNA, which would have involved defending in TCC court and incurring costs of \u00a350k+ and taking 6-12 months. We were able to resolve the dispute through re-evaluation without incurring significant legal expenses.",
+    "win_statement": "We successfully defended our decision to reject Turning Point's tender due to their qualifying note, and we avoided the potential risks and costs associated with a lengthy court battle.",
+    "what_was_achieved": [
+      "Rejection of Turning Point's tender was upheld",
+      "No need for costly and time-consuming court proceedings"
+    ],
+    "what_was_conceded": [
+      "Some clarification on the no-qualifications policy was provided to Turning Point",
+      "A re-evaluation process was undertaken, which may have been seen as a concession by some"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The outcome is slightly better than my BATNA of pursuing damages or formal TCC proceedings, but it's still a compromise. I didn't achieve the desired goal of having our tender accepted, and we're not getting any compensation for the time and resources invested.",
+    "win_statement": "We managed to get the Council to re-evaluate our tender, which is a small victory, but it's not enough to make up for the initial rejection. I'm still disappointed that our concerns weren't taken more seriously, and we're not getting any recognition of the breaches of the Public Contracts Regulations 2006.",
+    "what_was_achieved": [
+      "Re-evaluation of tender",
+      "Acknowledgement by Council of our concerns"
+    ],
+    "what_was_conceded": [
+      "Initial rejection of tender",
+      "No compensation for time and resources invested"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Qualifications or caveats policy",
+      "Prior knowledge of no-qualifications policy"
+    ],
+    "concessions_summary": "Neither side made any concessions during the negotiation. The Contracting Authority maintained that Turning Point Ltd was aware of the no-qualifications policy beforehand, while the Aggrieved Bidder sought clarification on whether this was explicitly stated or communicated verbally.",
+    "court_reasoning_summary": "The Court concluded that there may be a manifest error in the process due to the Council's implication that Turning Point was aware of the policy beforehand, despite no explicit documentation or evidence supporting this claim. The Court assessed the situation as qualitative and not numeric, focusing on the interpretation and application of the Invitation to Tender.",
+    "likely_next_steps": "The dispute will proceed with a re-evaluation of the tender, as recommended by the Court. This means that the Contracting Authority will reassess Turning Point Ltd's submission without considering the covering note or any potential qualifications.",
+    "plain_english_summary": "The dispute centered around whether Turning Point Ltd was aware of the Council's policy against accepting qualifications or caveats in their bid. The Court found that the Council may have made a mistake by implying that Turning Point knew about this policy beforehand, without providing clear evidence to support this claim. As a result, the tender will be re-evaluated, ignoring any potential issues with the covering note."
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-CONSULTANTCONNECT-2022",
+    "title": "Consultant Connect Ltd v NHS Bath and North East Somerset",
+    "description": "The contracting authority (NHS) misused an existing framework agreement to run a single-supplier 'mini-competition' without genuine competition. Consultant Connect Ltd challenged the award, arguing that this process did not comply with the terms of the framework agreement or the Public Contracts Regulations 2015 requirements for fairness and transparency.",
+    "contract_value_gbp": 0.0,
+    "dispute_type": "process_avoidance",
+    "procedural_stage": "trial",
+    "contracting_authority_name": "NHS Bath and North East Somerset, Swindon and Wiltshire Integrated Care Board",
+    "bidder_name": "Consultant Connect Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Ensure that the procurement process complies with the Public Contracts Regulations 2015 and the framework agreement terms.",
+      "Protection of Public Funds: Avoid unnecessary delays and costs associated with re-running the procurement or defending a court challenge.",
+      "Reputation & Public Accountability: Maintain public confidence in the NHS's procurement processes, particularly given the criticism of single-supplier 'mini-competitions'.",
+      "Minimising Litigation Risk: Provide sufficient transparency to reassure Consultant Connect Ltd without undermining evaluation confidentiality."
+    ],
+    "goals": [
+      "Defend the decision and maintain the integrity of the procurement process.",
+      "Avoid a costly and time-consuming court challenge, which could also lead to an automatic suspension of the contract."
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our evaluation process and believe that it was fair, transparent, and compliant with all relevant regulations. We are willing to provide additional information and clarification to Consultant Connect Ltd but will not reconsider the award.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Public Contracts Regulations 2015"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: We invested significant time and resources (\u00a350k-\u00a3100k) in preparing a bid that was not fairly evaluated due to the contracting authority's misuse of the framework agreement.",
+      "Fairness & Transparency: The lack of genuine competition undermines our trust in the procurement process, which is essential for future business relationships with this authority."
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "Pursue an award of damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We request that the contracting authority re-evaluate the bids and award the contract fairly, or provide clear justification for their decision-making process.",
+    "legal_basis": [
+      "Public Contracts Regulations 2015",
+      "Framework agreement terms"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Consultant Connect Ltd's concerns regarding the use of the framework agreement for a single-supplier 'mini-competition'. To clarify, can you please specify which particular provisions of the framework agreement or Public Contracts Regulations 2015 you believe were breached? We are committed to transparency and would like to address your concerns directly. As part of our efforts to provide clarity, we propose sharing additional information regarding our evaluation process, including a detailed breakdown of the scoring methodology used for this procurement.",
+      "proposal": "Sharing additional information regarding our evaluation process",
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to share additional information regarding your evaluation process and scoring methodology. However, we would like to clarify whether this proposed sharing is in addition to or instead of providing the detailed breakdown of evaluator comments and rationale for each bid as requested in our initial challenge. Furthermore, can you confirm that this proposed sharing will include the specific scores awarded by each evaluator for each criterion, as well as any weighting applied to these criteria? We believe it is essential to understand how the evaluation was conducted to ensure fairness and transparency.",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Public Contracts Regulations 2015",
+        "Framework Agreement terms"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a single-supplier 'mini-competition' and the use of an existing framework agreement. There are no explicit formulas or sub-scores mentioned in the scenario. The contracting authority's proposed sharing of additional information regarding their evaluation process does not change the fact that they misused the framework agreement for a non-compliant purpose. I do not need to perform any calculations, as there is no numerical data provided. My reasoning is based on the qualitative assessment of the situation.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "This outcome is more favourable than our BATNA of defending in TCC court, which would have cost \u00a350k+ and taken 6-12 months. We were able to resolve the dispute through re-evaluation without going to trial.",
+    "win_statement": "We successfully avoided a lengthy and costly court battle by agreeing to re-evaluate the procurement process, demonstrating our commitment to transparency and fairness.",
+    "what_was_achieved": [
+      "Re-evaluation of the procurement process",
+      "Sharing additional information regarding evaluation process and scoring methodology"
+    ],
+    "what_was_conceded": [
+      "Agreed to provide detailed breakdown of evaluator comments and rationale for each bid",
+      "Confirmed that sharing will include specific scores awarded by each evaluator for each criterion, as well as any weighting applied to these criteria"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome of re-evaluation does not meet our expectations, as we had hoped for a more decisive resolution, such as an annulment or a revised procurement process. However, it is better than pursuing damages or formal TCC proceedings, which would have been costly, slow, and uncertain.",
+    "win_statement": "We successfully pushed the contracting authority to re-evaluate their decision, ensuring that they provided additional information regarding their evaluation process and scoring methodology. Although this outcome does not fully address our concerns, it represents a partial victory in achieving greater transparency and accountability.",
+    "what_was_achieved": [
+      "Additional information regarding the evaluation process",
+      "Scoring methodology shared by the contracting authority"
+    ],
+    "what_was_conceded": [
+      "No annulment or revised procurement process",
+      "Limited resolution of our core concerns"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Use of framework agreement for a single-supplier 'mini-competition'",
+      "Lack of transparency in evaluation process",
+      "Request for detailed breakdown of evaluator comments and rationale"
+    ],
+    "concessions_summary": "The Contracting Authority proposed sharing additional information regarding their evaluation process, including scoring methodology. However, the Aggrieved Bidder requested clarification on whether this was in addition to or instead of providing detailed breakdowns of evaluator comments and rationale.",
+    "court_reasoning_summary": "The Court concluded that the Contracting Authority misused the framework agreement for a non-compliant purpose, citing a 'manifest error' in their process. The Court's reasoning was based on qualitative assessment rather than numerical data.",
+    "likely_next_steps": "Re-evaluation of the procurement is recommended by the Court, indicating that the Aggrieved Bidder may be invited to re-participate in the evaluation process or that the Contracting Authority will reassess their approach to using the framework agreement for single-supplier 'mini-competitions'.",
+    "plain_english_summary": "The dispute centered around the Contracting Authority's use of a framework agreement for a procurement that didn't follow the rules. The Aggrieved Bidder requested more information about how the evaluation was conducted, but the Court found that this wasn't enough to resolve the issue. As a result, the Court recommended re-evaluating the procurement to ensure it follows the proper procedures."
+  }
+}

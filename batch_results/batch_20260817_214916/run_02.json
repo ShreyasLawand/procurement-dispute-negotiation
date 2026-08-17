@@ -1,0 +1,145 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-DRAEGER-2021",
+    "title": "Draeger Safety UK Ltd v The London Fire Commissioner",
+    "description": "The London Fire Brigade's procurement for firefighter respiratory protective equipment (RPE) was challenged by Draeger Safety UK Ltd, the incumbent supplier. The Court refused to lift an automatic suspension on contract signature, finding that damages would be inadequate due to the loss of the contract and operational safety consequences.",
+    "contract_value_gbp": 0.0,
+    "dispute_type": "automatic_suspension",
+    "procedural_stage": "interim_ruling",
+    "contracting_authority_name": "London Fire Commissioner",
+    "bidder_name": "Draeger Safety UK Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 2,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: Minimise operational safety consequences due to delayed procurement",
+      "Continuity of Service / Delivery: Ensure firefighter respiratory protective equipment is in place for operational readiness"
+    ],
+    "goals": [
+      "Defend the procurement decision, maintain public confidence and reputation as a competent buyer"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We will not re-score bids or reconsider the evaluation process at this stage, but are willing to provide additional feedback and transparency within our legal obligations.",
+    "legal_basis": [
+      "Procurement Act 2023: Value for money, maximising public benefit, sharing information for transparency, acting with integrity"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: Loss of \u00a30 contract value; loss of bid costs (\u00a3X); strategic opportunity cost due to inability to supply RPE for operational safety",
+      "Fairness & Transparency: Perception that evaluation was flawed, leading to unfair treatment"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "Award damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "Request that the London Fire Commissioner re-evaluate the submitted bids to ensure fairness and transparency",
+    "legal_basis": [
+      "Public Contracts Regulations 2015",
+      "EU Remedies Directive"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Draeger Safety UK Ltd's concerns regarding the automatic suspension and its impact on operational safety. However, we must clarify whether the challenging party is seeking a re-evaluation of their bid or an adjustment to the evaluation criteria used in the procurement process. Could you provide more information on what specific aspects of the decision you are contesting?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your clarification request regarding our specific concerns with the evaluation process. To answer your question directly, we are contesting the scoring discrepancy in the 'Operational Safety' category, where our bid received a significantly lower score compared to our competitors. We believe this discrepancy is due to an inconsistent application of the evaluation criteria and would like to request access to the evaluator's comments and scoring rationale for this particular category.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "We appreciate your clarification on the specific concerns regarding the 'Operational Safety' category scoring discrepancy. We acknowledge that inconsistent application of evaluation criteria can be a legitimate concern. To address this, we are willing to provide additional feedback and transparency by sharing the evaluator's comments for the 'Operational Safety' category with you. However, please note that we cannot disclose the scorer's identity or any commercially sensitive information.",
+      "proposal": "A voluntary standstill extension of two weeks to allow for a thorough review of the evaluation process",
+      "concession_made": "Providing additional feedback and transparency on the evaluator's comments"
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to provide additional feedback and transparency by sharing the evaluator's comments for the 'Operational Safety' category with us. However, we would like to request that you also clarify how this discrepancy was addressed in the overall evaluation process, specifically what measures were taken to ensure consistency in scoring across all categories. Additionally, we would like to propose a meeting between our teams to discuss the evaluation criteria and scoring methodology used in this procurement, as we believe it is essential for us to understand how our bid was assessed.",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Procurement Act 2023 s12",
+        "EU Procurement Directive"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a scoring discrepancy in the 'Operational Safety' category without providing explicit sub-scores or numbers. I will assess compliance qualitatively instead of performing a numeric calculation. The parties are contesting the evaluation process, specifically the scoring discrepancy in the 'Operational Safety' category. However, there is no explicit formula or points system provided to evaluate this category. Therefore, I must rely on qualitative reasoning to determine if the Contracting Authority's actions were rational and compliant with procurement regulations.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Procurement Act 2023 s12, EU Procurement Directive"
+      ],
+      "reasoning": "This scenario is qualitative (Step 2B), as there are no explicit formulas or numerical inputs provided. The parties' statements focus on the evaluation criteria and scoring methodology used in the procurement process. I will assess compliance qualitatively instead of performing a numeric calculation. The Contracting Authority's willingness to provide additional feedback and transparency by sharing the evaluator's comments for the 'Operational Safety' category is a positive step, but it does not address the underlying issue of inconsistent application of evaluation criteria. The Aggrieved Bidder's request for clarification on how this discrepancy was addressed in the overall evaluation process raises concerns about the Contracting Authority's ability to ensure consistency in scoring across all categories. I conclude that there is a manifest error in the procurement process.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome of re-evaluation is a more favorable result compared to my BATNA (defending in TCC court, which would cost \u00a350k+ and take 6-12 months). Although we did not fully address the aggrieved bidder's concerns regarding the scoring discrepancy, providing additional feedback and transparency by sharing the evaluator's comments for the 'Operational Safety' category was a significant concession.",
+    "win_statement": "We successfully negotiated an outcome that maintained our operational safety requirements while providing some level of transparency and accountability in the evaluation process. Although we did not fully address the aggrieved bidder's concerns, this outcome avoids the risks and costs associated with defending in TCC court.",
+    "what_was_achieved": [
+      "Provided additional feedback and transparency by sharing the evaluator's comments for the 'Operational Safety' category",
+      "Avoided the risks and costs associated with defending in TCC court"
+    ],
+    "what_was_conceded": [
+      "Shared evaluator's comments, but not scorer's identity or commercially sensitive information",
+      "Agreed to a re-evaluation process without fully addressing the aggrieved bidder's concerns regarding scoring discrepancy"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "Favourable outcome relative to BATNA. We were able to secure a re-evaluation of the procurement process, which is not typically available in such disputes.",
+    "win_statement": "We successfully negotiated additional transparency and feedback from the contracting authority regarding the 'Operational Safety' category scoring discrepancy, including access to evaluator's comments. This outcome demonstrates that our concerns were taken seriously and addressed, albeit partially.",
+    "what_was_achieved": [
+      "Access to evaluator's comments for the 'Operational Safety' category",
+      "Additional feedback and transparency on the evaluation process"
+    ],
+    "what_was_conceded": [
+      "No formal agreement or commitment from the contracting authority to adjust the scoring methodology or re-score our bid",
+      "No guarantee of a more favourable outcome in future evaluations"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Scoring discrepancy in the 'Operational Safety' category",
+      "Inconsistent application of evaluation criteria",
+      "Lack of transparency in scoring methodology"
+    ],
+    "concessions_summary": "The Contracting Authority conceded to provide additional feedback and transparency by sharing the evaluator's comments for the 'Operational Safety' category. However, they did not address the underlying issue of inconsistent application of evaluation criteria.",
+    "court_reasoning_summary": "The Court concluded that there was a manifest error in the procurement process due to the Contracting Authority's inability to ensure consistency in scoring across all categories and their failure to provide adequate transparency in the scoring methodology.",
+    "likely_next_steps": "Re-evaluation of the Aggrieved Bidder's bid is recommended by the Court, as the underlying issue of inconsistent application of evaluation criteria was not adequately addressed.",
+    "plain_english_summary": "The negotiation failed due to a lack of transparency and consistency in the evaluation process. The Contracting Authority provided some concessions but did not address the core issues raised by the Aggrieved Bidder. As a result, the Court recommended re-evaluation of the bid."
+  }
+}

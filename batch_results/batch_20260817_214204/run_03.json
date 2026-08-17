@@ -1,0 +1,150 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-KBR-2021",
+    "title": "Kellogg Brown & Root Ltd v Mayor's Office for Policing and Crime",
+    "description": "MOPAC ran a \u00a3400 million framework agreement and call-off contract procurement for facilities management integrator services. KBR was the incumbent provider but unsuccessful in the new competition. An automatic suspension was triggered, and MOPAC applied to lift it, arguing damages would be an adequate remedy if lifted and KBR later succeeded at trial. Mrs Justice Smith held that damages would be adequate, specifically addressing KBR's argument on staff redundancies.",
+    "contract_value_gbp": 400000000.0,
+    "dispute_type": "automatic_suspension",
+    "procedural_stage": "interim_ruling",
+    "contracting_authority_name": "Mayor's Office for Policing and Crime",
+    "bidder_name": "Kellogg Brown & Root Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 2,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Uphold the lawfulness and procedural correctness of our procurement process.",
+      "Protection of Public Funds: Avoid delays that increase costs or create service delivery gaps, especially for a \u00a3400 million contract.",
+      "Continuity of Service / Delivery: Ensure continuity of facilities management integrator services to maintain public safety and operational efficiency.",
+      "Reputation & Public Accountability: Maintain public confidence in our procurement process and protect our reputation as a competent buyer."
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Maintain transparency and fairness throughout the dispute resolution process"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We have acted lawfully, procedurally correctly, and within our powers under the Procurement Act 2023. We will provide additional transparency and evidence to support our evaluation process.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Public Contract Regulations 2015"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a3400 million contract value at stake, with potential loss of future revenue and damage to our business reputation.",
+      "Fairness & Transparency: We believe the evaluation process was flawed, leading to an unfair outcome, and we want clear explanations for the scoring discrepancies.",
+      "Protection of Reputation: As the incumbent provider, losing this contract may harm our credibility in the market and with our clients."
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "An award of damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We request an immediate re-evaluation of all bids, with full disclosure of scoring methodology and evaluator comments.",
+    "legal_basis": [
+      "Procurement Regulations 2015",
+      "Public Contracts Regulations 2015"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge KBR's concerns regarding staff redundancies and the potential impact on their business. However, I would like to clarify whether you are suggesting that MOPAC should have taken into account these specific circumstances when evaluating bids, or if there were any other factors that contributed to your unsuccessful bid. Could you please provide more context and details about how you believe the evaluation process was flawed?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "Thank you for acknowledging our concerns regarding staff redundancies. However, I would like to clarify that MOPAC's response seems to be shifting the focus from addressing the evaluation flaws to questioning our understanding of the procurement process. We believe that the evaluation team failed to properly consider the impact of staff redundancies on our ability to deliver the contract, which is a critical aspect of the facilities management integrator services. I would like to request more information about how MOPAC's scoring methodology accounted for this specific circumstance, as it was not adequately addressed in the evaluation report.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "I understand your concerns about staff redundancies and their impact on your business. However, I must clarify that MOPAC's evaluation team did consider these circumstances when assessing bids. Specifically, we looked at how each bidder would manage potential redundancies and ensure continuity of service. In our evaluation report, we highlighted the importance of having a robust plan in place to mitigate any negative impacts on staff. We also assessed each bidder's ability to adapt to changing circumstances and maintain high-quality services. I'd like to offer additional information about our scoring methodology, which took into account the specific circumstances you mentioned. This includes details on how we weighted factors such as staff retention, training, and redeployment plans.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "While we appreciate MOPAC's clarification on their evaluation methodology, we remain concerned that the scoring process did not adequately account for our specific circumstances regarding staff redundancies. We would like to request access to the detailed scoring sheets and evaluator comments to better understand how our bid was evaluated in this regard. Additionally, we believe that a re-evaluation of our bid is necessary to ensure fairness and transparency in the procurement process.",
+      "proposal": "A re-evaluation of our bid with a focus on addressing the evaluation flaws regarding staff redundancies",
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Procurement Act 2023 s12",
+        "EU Procurement Directive"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves the evaluation of bid submissions based on criteria such as 'specificity, evidence, and named commitments'. There are no explicit formulas or numerical inputs provided. I will assess compliance qualitatively instead, examining whether MOPAC's published criteria language was applied in a way that is rationally defensible.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Regulation 32(1) of the Public Contracts Regulations 2015",
+        "s12 of the Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative (Step 2B). The Contracting Authority's evaluation methodology considered staff redundancies and continuity of service, but no specific numbers or formula are provided. I will assess compliance qualitatively instead of quantitatively. The Contracting Authority has clarified their scoring methodology, which took into account factors such as staff retention, training, and redeployment plans. This appears to be a rational and defensible justification for the evaluation process. While the Aggrieved Bidder remains concerned about the scoring process, I do not find any evidence of manifest error or procedural irregularity.",
+      "recommended_action": "no remedy - decision stands",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "no remedy - decision stands",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome was more favorable than our BATNA, which would have cost \u00a350k+ and taken 6-12 months to resolve through TCC court. We were able to avoid the significant financial and time burdens associated with litigation.",
+    "win_statement": "We successfully defended against KBR's claims and maintained the integrity of our procurement process. Our negotiation strategy allowed us to clarify and justify our evaluation methodology, which ultimately led to the decision standing.",
+    "what_was_achieved": [
+      "Clarified and justified MOPAC's evaluation methodology regarding staff redundancies",
+      "Provided additional information on scoring methodology and weighting factors"
+    ],
+    "what_was_conceded": [
+      "Acknowledged KBR's concerns about staff redundancies and their potential impact on the business",
+      "Offered access to some evaluator comments, but not detailed scoring sheets as requested by KBR"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome was less favourable than our BATNA, as we were unable to secure a remedy or have the decision overturned. In contrast, pursuing damages or formal TCC proceedings would have been costly, slow, and uncertain.",
+    "win_statement": "We successfully clarified MOPAC's evaluation methodology and highlighted concerns regarding staff redundancies, but ultimately did not achieve our desired outcome of having the decision overturned or securing a remedy.",
+    "what_was_achieved": [
+      "Clarified MOPAC's evaluation methodology and highlighted concerns regarding staff redundancies",
+      "Gained additional information about scoring methodology and weighting factors"
+    ],
+    "what_was_conceded": [
+      "Failed to secure a remedy or have the decision overturned",
+      "Unable to access detailed scoring sheets and evaluator comments"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Staff redundancies and their impact on the Aggrieved Bidder's ability to deliver the contract",
+      "The Contracting Authority's evaluation methodology and scoring process"
+    ],
+    "concessions_summary": "The Contracting Authority clarified their evaluation methodology, providing additional information about how they weighted factors such as staff retention, training, and redeployment plans. However, no specific concessions were made regarding a re-evaluation of the Aggrieved Bidder's bid.",
+    "court_reasoning_summary": "The Court assessed compliance qualitatively, examining whether MOPAC's published criteria language was applied in a way that is rationally defensible. The Contracting Authority's evaluation methodology was deemed to be rational and defensible, with no evidence of manifest error or procedural irregularity.",
+    "likely_next_steps": "Given the Court's decision, it is likely that the Aggrieved Bidder will not pursue further action, as there is no remedy available. However, if they choose to do so, they may consider appealing the decision or seeking judicial review.",
+    "plain_english_summary": "The negotiation centered around the Contracting Authority's evaluation methodology and scoring process, specifically regarding staff redundancies. The Aggrieved Bidder expressed concerns that their bid was not adequately considered in this regard. Despite clarifications from the Contracting Authority, the Court ultimately decided that no remedy was warranted, upholding the original decision."
+  }
+}
