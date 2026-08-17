@@ -1,0 +1,149 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-DRAEGER-2021",
+    "title": "Draeger Safety UK Ltd v The London Fire Commissioner",
+    "description": "The London Fire Brigade's procurement for firefighter respiratory protective equipment (RPE) was challenged by Draeger Safety UK Ltd, the incumbent supplier. The Court refused to lift an automatic suspension on contract signature, finding that damages would be inadequate due to the loss of the contract and operational safety consequences.",
+    "contract_value_gbp": 0.0,
+    "dispute_type": "automatic_suspension",
+    "procedural_stage": "interim_ruling",
+    "contracting_authority_name": "London Fire Commissioner",
+    "bidder_name": "Draeger Safety UK Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 2,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: Avoid operational safety consequences due to delayed procurement and potential loss of critical equipment.",
+      "Continuity of Service / Delivery: Ensure firefighter respiratory protective equipment is procured and deployed in time for the new fire season, minimizing disruption to emergency services.",
+      "Reputation & Public Accountability: Maintain public confidence in our ability to deliver essential services, including firefighting, while upholding transparency and fairness in procurement."
+    ],
+    "goals": [
+      "Resolve dispute through negotiation",
+      "Defend procurement decision"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We will provide additional transparency on our evaluation process, but stand by our original scoring decisions as evidence-based and compliant with the Procurement Act 2023.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Regulation 32(2) of the Public Contracts Regulations 2015"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: Loss of \u00a30 contract value, potential loss of future contracts due to damaged reputation, and operational safety consequences for the London Fire Brigade.",
+      "Fairness & Transparency: Perceived unfairness in the procurement process, desire for detailed feedback on scoring methodology and evaluator comments."
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "Obtain an award of damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "Request that the London Fire Commissioner provide detailed feedback on scoring methodology and evaluator comments to address concerns over fairness and transparency.",
+    "legal_basis": [
+      "Public Contracts Regulations 2015",
+      "EU Remedies Directive"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge Draeger Safety UK Ltd's concerns regarding the automatic suspension and interim ruling in this procurement dispute. I would like to clarify whether Draeger Safety UK Ltd is suggesting that we re-evaluate the scores for their bid, or if they are disputing specific aspects of our evaluation process. Could you provide more context on what you believe was manifestly wrong with our decision-making?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "Thank you for acknowledging our concerns and providing an opportunity to clarify our position. We would like to request more information on the specific aspects of your evaluation process that we are disputing. Can you provide a detailed explanation of how you arrived at the scores for our bid, particularly in relation to the key evaluation criteria? We would also appreciate it if you could share any evaluator comments or feedback that were provided during the assessment.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "We have reviewed our evaluation process and can provide additional feedback on your bid's scores. Specifically, we found that your bid scored 92 out of 100 for 'Technical Capability' due to minor discrepancies in the documentation provided. However, we did not consider this a critical issue as it was easily rectifiable. We are willing to share evaluator comments from our internal review process, which highlighted areas where your bid could have been improved.",
+      "proposal": "A voluntary standstill extension of two weeks for further engagement and clarification on specific evaluation criteria",
+      "concession_made": "We will provide additional feedback on the 'Technical Capability' scoring"
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to share evaluator comments and feedback on our bid's scores. However, we would like to clarify that minor discrepancies in documentation are not sufficient grounds for a 92 out of 100 score deduction. We believe this scoring discrepancy is manifestly wrong and requires further investigation. Specifically, we would like to request clarification on the evaluation criteria used for 'Technical Capability' and how our bid's scores were calculated in relation to other bidders. Furthermore, we would appreciate it if you could provide a detailed explanation of why our bid was not considered for a higher score despite being deemed 'easily rectifiable'.",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Procurement Act 2023 s12",
+        "Public Contracts Regulations 2015"
+      ],
+      "reasoning": "This scenario is qualitative, as there are no explicit formulas or sub-scores provided. The parties' statements focus on the evaluation process and the automatic suspension rather than specific numerical scores. I will assess compliance qualitatively instead of performing a calculation. The contracting authority's position acknowledges concerns but does not provide any information about manifest errors in their decision-making. The aggreived bidder requests more information on the evaluation process, which suggests they are disputing aspects of it. However, without further details or evidence of manifest error, I conclude that the process followed was generally compliant.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Procurement Act 2023 s12",
+        "EU Procurement Directive"
+      ],
+      "reasoning": "This scenario is qualitative (Step 2B), as it involves evaluation criteria and scores without explicit formulas or numeric inputs. The Contracting Authority's position states that the bid scored 92 out of 100 for 'Technical Capability' due to minor discrepancies in documentation, but does not provide a clear explanation of how this score was calculated. I will assess compliance qualitatively instead of computing a numerical result.\n\nThe Contracting Authority's decision to deduct points for minor discrepancies is rationally defensible, as it aims to ensure the bidder meets the required standards. However, the lack of transparency in the evaluation process and the failure to provide clear criteria for 'Technical Capability' raises concerns about procedural compliance.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiated outcome is more favorable than defending in TCC court, which would have cost \u00a350k+ and taken 6-12 months. The re-evaluation process has allowed us to address the aggrieved bidder's concerns without incurring significant costs or risks.",
+    "win_statement": "We successfully navigated a complex procurement dispute through negotiation, avoiding costly litigation and preserving operational continuity for our fire services.",
+    "what_was_achieved": [
+      "Re-evaluation of the bid scores",
+      "Clarification on evaluation criteria and scoring discrepancies"
+    ],
+    "what_was_conceded": [
+      "Sharing evaluator comments and feedback on internal review process",
+      "Minor adjustments to bid scores based on additional feedback"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome of the negotiation is that we will re-evaluate the scores for our bid, which is a partial success compared to pursuing damages or formal TCC proceedings. However, it's worth noting that this outcome still falls short of our original goal, which was to have the contract awarded to us.",
+    "win_statement": "We were able to secure a re-evaluation of our bid scores, which may potentially lead to a more favorable outcome in the future.",
+    "what_was_achieved": [
+      "Re-evaluation of our bid scores",
+      "Additional feedback on our bid's scores and evaluator comments"
+    ],
+    "what_was_conceded": [
+      "The contracting authority did not agree to lift the automatic suspension or award us the contract immediately",
+      "We were unable to have the scoring discrepancy for 'Technical Capability' fully resolved in this negotiation"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Minor discrepancies in documentation leading to a score deduction",
+      "Lack of transparency in the evaluation process",
+      "Unclear criteria for 'Technical Capability'"
+    ],
+    "concessions_summary": "The Contracting Authority made one concession: providing additional feedback on the 'Technical Capability' scoring.",
+    "court_reasoning_summary": "The Court concluded that there was no manifest error in the Contracting Authority's decision-making, but recommended re-evaluation due to concerns about procedural compliance and transparency.",
+    "likely_next_steps": "Given the Court's recommendation for re-evaluation, it is likely that the Contracting Authority will re-assess Draeger Safety UK Ltd's bid, taking into account the additional feedback provided. This may lead to a revised score or outcome.",
+    "plain_english_summary": "The dispute centered around minor discrepancies in documentation and unclear evaluation criteria. The Contracting Authority made some concessions but ultimately maintained its original decision. The Court recommended re-evaluation due to concerns about transparency, which may lead to a revised outcome for Draeger Safety UK Ltd's bid."
+  }
+}

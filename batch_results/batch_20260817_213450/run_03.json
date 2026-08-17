@@ -1,0 +1,122 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-TURNINGPOINT-2012",
+    "title": "Turning Point Ltd v Norfolk County Council",
+    "description": "Norfolk County Council rejected Turning Point's tender due to a covering note qualifying part of its submission, citing the Invitation to Tender's clear statement that qualifications or caveats would not be accepted. Turning Point alleged the Council should have sought clarification before rejecting the tender and other breaches of the Public Contracts Regulations 2006.",
+    "contract_value_gbp": 0.0,
+    "dispute_type": "process_avoidance",
+    "procedural_stage": "trial",
+    "contracting_authority_name": "Norfolk County Council",
+    "bidder_name": "Turning Point Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: Avoid unnecessary costs from re-tendering and potential court fees.",
+      "Continuity of Service / Delivery: Delay in awarding the contract could impact critical substance misuse services for vulnerable individuals.",
+      "Reputation & Public Accountability: Maintain public confidence by upholding transparency, fairness, and integrity throughout the procurement process."
+    ],
+    "goals": [
+      "Defend the decision to reject Turning Point's tender based on their failure to comply with the Invitation to Tender",
+      "Provide a clear explanation of the evaluation criteria and scoring"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our initial decision to reject Turning Point's tender due to their failure to comply with the Invitation to Tender. We are willing to provide additional information on the evaluation criteria and scoring, but we cannot revisit or re-score the bids at this stage.",
+    "legal_basis": [
+      "The Public Contracts Regulations 2006",
+      "Section 12 of the Procurement Act 2023"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a30 contract value means we lost revenue opportunity",
+      "Fairness & Transparency: Council's rejection without clarification seems unjustified",
+      "Protection of Reputation: Our bid team's performance is being questioned"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We believe the Council's rejection was premature and unjustified, and we request a re-evaluation of our bid",
+    "legal_basis": [
+      "Public Contracts Regulations 2006"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "Turning Point Ltd's opening position seems to focus on alleged breaches of the Public Contracts Regulations 2006. Can you clarify which specific regulations or clauses you believe were breached, and how these led to the rejection of your tender? Additionally, I'd like to understand what you're seeking as a resolution in this dispute.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your clarification request and acknowledge that our previous statement did focus on alleged breaches of the Public Contracts Regulations 2006. Specifically, we believe that Regulation 30(1) was breached by Norfolk County Council's rejection of our tender without first seeking clarification from us regarding the covering note. We also contend that Regulation 23(2) was breached as the Invitation to Tender failed to provide sufficient clarity on how qualifications or caveats would be treated in the evaluation process.\n\nRegarding your request for clarification, we are willing to provide additional information and transparency throughout this negotiation. However, we must emphasize our primary concern is ensuring that Norfolk County Council adheres to the proper procedures outlined in the Public Contracts Regulations 2006.\n\nAs a starting point, we propose that both parties agree to review the evaluation process together to identify any potential issues or discrepancies.",
+      "proposal": "Joint Review of Evaluation Process",
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Regulation 30(1)",
+        "Regulation 23(2)"
+      ],
+      "reasoning": "This scenario is qualitative, not numeric. The dispute revolves around the interpretation and application of the Public Contracts Regulations 2006, specifically Regulation 30(1) and Regulation 23(2). I will assess compliance qualitatively instead of computing a score. Turning Point Ltd's tender was rejected due to a covering note qualifying part of its submission, citing the Invitation to Tender's clear statement that qualifications or caveats would not be accepted. The question is whether Norfolk County Council followed a lawful and procedurally correct process by rejecting the tender without seeking clarification from Turning Point Ltd. I conclude that there was a manifest error in the process as Regulation 30(1) requires the contracting authority to seek clarification before rejecting a tender, especially when it involves an interpretation of the Invitation to Tender.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome of re-evaluation is a more favorable result compared to our BATNA (defending in TCC court, which would cost \u00a350k+ and take 6-12 months). The negotiation allowed us to avoid the significant financial and time costs associated with litigation.",
+    "win_statement": "We successfully negotiated an alternative resolution that avoided costly and time-consuming legal proceedings. This outcome demonstrates our commitment to finding mutually beneficial solutions while upholding our obligations under the Public Contracts Regulations 2006.",
+    "what_was_achieved": [
+      "Avoided significant financial costs associated with litigation",
+      "Prevented lengthy delays in resolving the dispute"
+    ],
+    "what_was_conceded": [
+      "Agreed to re-evaluate the tender, which may have implications for future procurement processes",
+      "Provided additional transparency and clarification on our evaluation process"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome of re-evaluation is a compromise relative to our BATNA (pursuing damages or formal TCC proceedings). While we didn't achieve the full resolution we sought, it's better than pursuing costly and uncertain legal action.",
+    "win_statement": "We successfully negotiated a review of the evaluation process with Norfolk County Council, which addresses some of our concerns regarding the alleged breaches of the Public Contracts Regulations 2006. This outcome acknowledges that there may have been issues with the tendering process and provides an opportunity for both parties to work together to rectify any discrepancies.",
+    "what_was_achieved": [
+      "Obtained agreement from Norfolk County Council to review the evaluation process",
+      "Identification of potential issues or discrepancies in the tendering process"
+    ],
+    "what_was_conceded": [
+      "Did not achieve a full resolution regarding alleged breaches of the Public Contracts Regulations 2006",
+      "No formal apology or acknowledgment of wrongdoing by Norfolk County Council"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Interpretation and application of Public Contracts Regulations 2006",
+      "Regulation 30(1) - seeking clarification before rejecting a tender",
+      "Regulation 23(2) - clarity on qualifications or caveats in the evaluation process"
+    ],
+    "concessions_summary": "Turning Point Ltd proposed reviewing the evaluation process together to identify potential issues, but no concrete concessions were made regarding their primary concerns.",
+    "court_reasoning_summary": "The Court concluded that there was a manifest error in the process due to Norfolk County Council's failure to seek clarification from Turning Point Ltd before rejecting its tender, as required by Regulation 30(1).",
+    "likely_next_steps": "Re-evaluation of Turning Point Ltd's tender is recommended. This means that Norfolk County Council will re-examine the evaluation process and may reconsider their decision to reject the tender.",
+    "plain_english_summary": "The dispute centered on whether Norfolk County Council followed proper procedures when rejecting Turning Point Ltd's tender. The Court found that they didn't, so the tender will be re-evaluated."
+  }
+}

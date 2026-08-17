@@ -1,0 +1,123 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-ENERGYSOLUTIONS-2016",
+    "title": "EnergySolutions EU Ltd v Nuclear Decommissioning Authority",
+    "description": "The NDA's evaluation of bids for a \u00a3[estimated] contract to decommission twelve Magnox nuclear facilities and two research sites across the UK was found to have fallen short in several respects. The judge determined that correcting for these errors would have changed the competitive outcome in favour of RSS, even before considering whether CFP's bid should have been disqualified. The NDA was found liable in principle for breach of procurement regulations, but the Supreme Court later held that a breach must be 'sufficiently serious' to found a damages award.",
+    "contract_value_gbp": 100000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "trial",
+    "contracting_authority_name": "Nuclear Decommissioning Authority",
+    "bidder_name": "EnergySolutions EU Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: \u00a3100,000,000 contract value at stake; delay risks significant financial consequences and operational disruption.",
+      "Continuity of Service / Delivery: Decommissioning twelve Magnox nuclear facilities and two research sites across the UK; immediate commencement critical for public safety and environmental protection.",
+      "Reputation & Public Accountability: Uphold transparency and integrity in procurement process to maintain public trust and confidence."
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Maintain transparency and fairness throughout the dispute resolution process"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We acknowledge the bidder's concerns but stand by our evaluation process, which was conducted fairly and transparently according to the Procurement Act 2023.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "EU procurement regulations"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a3100m contract value at stake, significant loss of revenue if we don't win or get a fair re-evaluation",
+      "Fairness & Transparency: Need to understand the scoring methodology and ensure it was applied fairly to all bidders",
+      "Protection of Reputation: Our credibility in the market is at risk if we're seen as trouble-makers or difficult to deal with"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids, giving us a chance to be awarded the contract ourselves",
+      "Seek an award of damages for the breach of procurement regulations"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We believe there were manifest errors in the evaluation process that unfairly disadvantaged us. We request a thorough re-evaluation of all bids to ensure fairness and transparency.",
+    "legal_basis": [
+      "Procurement Regulations 2015",
+      "EU Remedies Directive"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge EnergySolutions EU Ltd's concerns regarding our evaluation process and appreciate their willingness to engage in this negotiation. However, we must clarify that the Supreme Court's ruling on 'sufficiently serious' breach of procurement regulations does not necessarily imply a finding of liability against us. We would like to request more information about what specific aspects of our evaluation EnergySolutions EU Ltd believes were flawed and how these errors impacted their bid. Furthermore, we are willing to provide additional transparency regarding our evaluation process, including the scoring criteria and any relevant documentation.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to engage in this negotiation and provide additional transparency regarding your evaluation process. However, we must clarify that our concerns are not just about minor errors, but rather a systemic issue with the scoring methodology used by your evaluators. Specifically, we take issue with the discrepancy between the scores awarded for Technical Capability and Price, which seems inconsistent with the evaluation criteria provided in the tender documents. We would like to request detailed information on how these scores were calculated and why this discrepancy occurred. Furthermore, we believe that correcting for these errors would have changed the competitive outcome in favour of our bid, as per the Supreme Court's ruling.",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Regulation 32(2) of the Public Contracts Regulations 2015",
+        "The Public Procurement (Review Procedures) Regulations 2006"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a discrepancy between scores awarded for Technical Capability and Price without providing any explicit formula or calculation method. I will assess compliance qualitatively instead of performing a numerical computation. The Contracting Authority's evaluation process has been found to have fallen short in several respects by the judge, indicating a systemic issue with the scoring methodology. The Aggrieved Bidder's concerns about the discrepancy between Technical Capability and Price scores seem justified, as this discrepancy seems inconsistent with the evaluation criteria provided in the tender documents. I conclude that there is evidence of a manifest error.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiated re-evaluation outcome is a more favorable alternative to defending in TCC court, which would have cost \u00a350k+ and taken 6-12 months.",
+    "win_statement": "We successfully avoided the significant costs and risks associated with a lengthy court battle, while still acknowledging the need for a re-evaluation of the bids.",
+    "what_was_achieved": [
+      "Secured a re-evaluation of the bids, which will allow us to correct any errors in our evaluation process",
+      "Avoided the financial and reputational risks associated with a court case"
+    ],
+    "what_was_conceded": [
+      "Agreed to re-evaluate the bids, which may result in a change to the competitive outcome",
+      "Provided additional transparency regarding our evaluation process, including scoring criteria and documentation"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The negotiation did not result in a damages award or formal TCC proceedings, which is a more costly and uncertain route. However, the contracting authority has agreed to re-evaluate our bid, which may lead to a revised outcome.",
+    "win_statement": "We were able to secure a re-evaluation of our bid, which provides an opportunity for a revised outcome. This is a significant win, as it acknowledges the potential flaws in the original evaluation process and gives us another chance to demonstrate the merits of our proposal.",
+    "what_was_achieved": [
+      "Secured a re-evaluation of our bid",
+      "Contracting authority agreed to provide additional transparency regarding their evaluation process"
+    ],
+    "what_was_conceded": [
+      "Did not achieve a damages award or formal TCC proceedings",
+      "No clear indication that the original outcome will be overturned"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Discrepancy between Technical Capability and Price scores",
+      "Systemic issue with scoring methodology used by evaluators"
+    ],
+    "concessions_summary": "The Contracting Authority offered to provide additional transparency regarding their evaluation process, including the scoring criteria and relevant documentation. However, they did not concede on the core issue of the discrepancy between Technical Capability and Price scores.",
+    "court_reasoning_summary": "The Court concluded that there was a manifest error in the Contracting Authority's evaluation process due to the systemic issue with the scoring methodology. The Court assessed compliance qualitatively, finding that the discrepancy between scores awarded for Technical Capability and Price seemed inconsistent with the evaluation criteria provided in the tender documents.",
+    "likely_next_steps": "The dispute will likely proceed to re-evaluation of the bids, as recommended by the Court. This means that the Contracting Authority will need to re-score the bids using a revised scoring methodology that addresses the systemic issue identified by the Court.",
+    "plain_english_summary": "The main disagreement was about how the Contracting Authority evaluated the bids, specifically a discrepancy between scores for Technical Capability and Price. The Aggrieved Bidder argued that this error would have changed the outcome of the competition in their favour. The Court agreed with the Aggrieved Bidder's concerns and recommended re-evaluation to ensure a fair outcome."
+  }
+}

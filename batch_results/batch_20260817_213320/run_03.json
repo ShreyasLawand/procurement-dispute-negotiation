@@ -1,0 +1,123 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-ENERGYSOLUTIONS-2016",
+    "title": "EnergySolutions EU Ltd v Nuclear Decommissioning Authority",
+    "description": "The NDA's evaluation of bids for a \u00a3[estimated] contract to decommission twelve Magnox nuclear facilities and two research sites across the UK was found to have fallen short in several respects. The judge determined that correcting for these errors would have changed the competitive outcome in favour of RSS, even before considering whether CFP's bid should have been disqualified. The NDA was found liable in principle for breach of procurement regulations, but the Supreme Court later held that a breach must be 'sufficiently serious' to found a damages award.",
+    "contract_value_gbp": 100000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "trial",
+    "contracting_authority_name": "Nuclear Decommissioning Authority",
+    "bidder_name": "EnergySolutions EU Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: \u00a3100,000,000 contract value at stake, significant financial implications for the Authority and the public purse.",
+      "Continuity of Service / Delivery: Critical decommissioning work delayed or re-run due to dispute resolution, posing operational risks to site safety and environmental protection.",
+      "Reputation & Public Accountability: NDA's reputation as a competent buyer under scrutiny, with potential media and parliamentary attention.",
+      "Minimising Litigation Risk: Balancing disclosure of evaluation information with maintaining confidentiality and integrity of the procurement process."
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Resolve dispute through negotiation"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "The Authority stands by its evaluation process, which was conducted in accordance with the Procurement Act 2023 and relevant regulations.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "EU procurement directives"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a3100m contract value at stake, significant bid costs already incurred (\u00a3X), and potential long-term strategic opportunity cost due to loss of credibility with the NDA",
+      "Fairness & Transparency: Perceived unfairness in evaluation process, desire for clear explanation of scoring discrepancies and evaluator comments"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids or rerun the competition to give EnergySolutions EU Ltd a chance to be awarded the contract",
+      "Award of damages due to breach of procurement regulations"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "Request a detailed explanation of scoring methodology and evaluator comments to understand how we can improve our bid strategy in future procurements",
+    "legal_basis": [
+      "The Public Contracts Regulations 2015",
+      "Case law from EnergySolutions EU Ltd v Nuclear Decommissioning Authority"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge EnergySolutions EU Ltd's concerns regarding the evaluation process and appreciate their willingness to engage in this negotiation. However, I must clarify that the NDA's evaluation was conducted in accordance with the published criteria and applicable procurement regulations. Can you specify which particular aspects of the evaluation you believe were flawed and how these errors would have changed the competitive outcome?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your acknowledgement of our concerns and willingness to engage in this negotiation. However, I must clarify that we do not accept that the evaluation was conducted in accordance with published criteria and applicable procurement regulations. We believe there were significant flaws in the scoring methodology used by the NDA's evaluators, particularly regarding the weighting assigned to certain criteria. Specifically, we take issue with the fact that our bid received a significantly lower score than RSS's bid for the 'Technical Capability' criterion, despite our proposal being deemed more comprehensive and robust by the evaluators themselves. This discrepancy in scoring is not only inconsistent but also unjustifiable given the evaluation criteria provided.",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Regulation 32(2) of the Public Contracts Regulations 2015",
+        "EU Procurement Directive (2014/24/EU), Article 42"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a dispute over the scoring methodology and weighting assigned to certain criteria. I will assess compliance qualitatively instead of performing a numerical calculation. The aggreived bidder's position highlights a discrepancy in scoring for the 'Technical Capability' criterion, which they claim is unjustifiable given the evaluation criteria provided. Upon reviewing the scenario, I find that the NDA's evaluation process was not transparent and did not provide clear justification for the scoring discrepancies. This lack of transparency and rational basis for the scoring methodology suggests a manifest error in the evaluation process.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome, while not a full win for the NDA, is considered acceptable as it avoided the significant costs and risks associated with defending in TCC court (\u00a350k+ and 6-12 months) and instead resulted in a re-evaluation of the bids.",
+    "win_statement": "We successfully negotiated an agreement that allows for a re-evaluation of the bids, which may lead to a revised outcome. This outcome is considered a win as it avoids the costs and risks associated with defending in court.",
+    "what_was_achieved": [
+      "Negotiated an agreement for a re-evaluation of the bids",
+      "Avoided significant costs and risks associated with defending in TCC court"
+    ],
+    "what_was_conceded": [
+      "Agreed to re-evaluate the bids, which may lead to a revised outcome",
+      "Did not achieve a full win, as the NDA was found liable in principle for breach of procurement regulations"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome of re-evaluation, while acknowledging some flaws in the NDA's scoring methodology, does not fully address our concerns and may not have changed the competitive outcome in our favour. This is a less favourable outcome than pursuing damages or formal TCC proceedings, which would have been costly, slow, and uncertain but potentially more beneficial to us.",
+    "win_statement": "We were able to secure some concessions from the NDA regarding their evaluation process, including an acknowledgement of flaws in the scoring methodology used. However, we did not achieve our desired outcome of being declared the winner or receiving a revised contract award.",
+    "what_was_achieved": [
+      "Acknowledgement by the NDA of flaws in their scoring methodology",
+      "Recognition that our bid was more comprehensive and robust than RSS's for certain criteria"
+    ],
+    "what_was_conceded": [
+      "The NDA did not fully accept our claims of error or bias in their evaluation process",
+      "We did not achieve a revised contract award or being declared the winner"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Discrepancy in scoring for 'Technical Capability' criterion",
+      "Lack of transparency in NDA's evaluation process"
+    ],
+    "concessions_summary": "Neither party made significant concessions during the negotiation. The Contracting Authority acknowledged EnergySolutions EU Ltd's concerns, but maintained that the evaluation was conducted correctly. EnergySolutions EU Ltd continued to argue that there were flaws in the scoring methodology.",
+    "court_reasoning_summary": "The Court concluded that there was a manifest error in the NDA's evaluation process due to a lack of transparency and justification for the scoring discrepancies. The Court assessed compliance qualitatively, finding that the evaluation process did not meet the required standards.",
+    "likely_next_steps": "Re-evaluation is likely to occur, as recommended by the Court. This means that the NDA will re-assess EnergySolutions EU Ltd's bid and compare it with RSS's bid using a revised scoring methodology or criteria.",
+    "plain_english_summary": "The dispute centered on how the Contracting Authority evaluated bids for a \u00a3100 million contract. The Aggrieved Bidder, EnergySolutions EU Ltd, argued that there were flaws in the evaluation process, particularly regarding the 'Technical Capability' criterion. The Court agreed with this assessment and recommended re-evaluation to ensure a fair comparison between the bids."
+  }
+}

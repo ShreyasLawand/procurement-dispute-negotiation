@@ -401,4 +401,470 @@ REAL_CASES = {
             "manifest error or unlawful practice found."
         ),
     },
+    # --- Added 17 Aug 2026: scaling the corpus from 8 toward the original 20-30 target
+    # (evaluation punch-list item 14). Verified via WebSearch (bailii.org / caselaw
+    # .nationalarchives.gov.uk plus law-firm case notes) before writing, same discipline
+    # as every other entry in this file. Weighted toward genuine merits-trial dispositions
+    # (7 of 13) with a smaller set of well-documented interim-only rulings (6 of 13,
+    # roughly the same proportion as the original corpus's Alstom/Parkingeye pair) added
+    # for volume and diversity rather than every one being forced into a merits shape it
+    # doesn't have. See CLAUDE.md's "BAILII expansion, round 2" for the full methodology
+    # note, including which candidates were researched and rejected.
+    "bechtel-hs2": {
+        "dispute_id": "REAL-BECHTEL-2021",
+        "contracting_authority_name": "High Speed Two (HS2) Ltd",
+        "bidder_name": "Bechtel Ltd",
+        "source_text": (
+            "Bechtel Ltd v High Speed Two (HS2) Ltd [2021] EWHC 458 (TCC).\n\n"
+            "High Speed Two (HS2) Ltd ran a procurement to select a construction partner "
+            "for Old Oak Common station, a complex interchange station development in west "
+            "London, under the Utilities Contracts Regulations 2016. The contract was "
+            "awarded to a consortium, Balfour Beatty Vinci Systra (BBVS). Bechtel Ltd, an "
+            "unsuccessful bidder, challenged the award, alleging manifest error in HS2's "
+            "evaluation and selection of BBVS over Bechtel's bid, as well as unequal "
+            "treatment and a lack of transparency in the evaluation process.\n\n"
+            "The case proceeded to a full trial on liability and causation, held over three "
+            "weeks in October 2020 with eighteen witnesses giving evidence. Judgment was "
+            "handed down on 4 March 2021 by Mr Justice Fraser. The judge found that HS2 had "
+            "not breached the Utilities Contracts Regulations 2016 in its evaluation and "
+            "selection of BBVS: Bechtel failed to establish that any of the evaluations were "
+            "in error, let alone manifestly in error, and failed to establish unequal "
+            "treatment or a lack of transparency in HS2's process. The judgment reiterated "
+            "that manifest error is a high threshold to meet, requiring something akin to "
+            "irrationality in the Wednesbury sense, not merely a disagreement with the "
+            "evaluators' judgment. This case is a clear example of a contracting authority "
+            "successfully defending a large, complex procurement on the merits, following a "
+            "full trial rather than only an interim application."
+        ),
+    },
+    "inhealth-nhs-england": {
+        "dispute_id": "REAL-INHEALTH-2023",
+        "contracting_authority_name": "NHS England",
+        "bidder_name": "InHealth Intelligence Ltd",
+        "source_text": (
+            "InHealth Intelligence Ltd v NHS England [2023] EWHC 352 (TCC).\n\n"
+            "NHS England ran a procurement, split into four geographical Lots, for the "
+            "award of contracts to provide child health information services across the "
+            "Greater Manchester, Midlands and East of England regions, with a combined "
+            "value of over £140 million across a 6-year term (with an optional 3-year "
+            "extension). InHealth Intelligence Ltd (IIL) was bidding for three of the four "
+            "Lots.\n\n"
+            "The Invitation to Tender required a single bid document, containing the "
+            "submission for every Lot tendered for, to be uploaded to a third-party "
+            "e-tendering portal by the submission deadline; the rules stated explicitly "
+            "that a late or incorrect submission would result in the entire bid across all "
+            "Lots being excluded, even where other Lots had been validly completed. An "
+            "employee of IIL uploaded the relevant document to the wrong location on the "
+            "portal; when the system would not allow the same document to be uploaded a "
+            "second time to the correct location, the employee sent a message via the "
+            "portal requesting help six minutes before the deadline. NHS England excluded "
+            "IIL's entire bid, across all three Lots it was contesting, on this basis.\n\n"
+            "IIL challenged the exclusion, arguing the e-portal's software was flawed and "
+            "that the error should have been waived or corrected. The case proceeded to a "
+            "full trial. Mr Justice Constable found that the portal's error message would "
+            "have taken less than a minute to read, understand and act on, was not in any "
+            "way problematic, and did not amount to an inherent flaw in the software. The "
+            "judge held that IIL had failed to comply with a clearly stated deadline and "
+            "clearly stated instructions in the Invitation to Tender, and that there was "
+            "nothing in the circumstances to justify waiving a clear exclusion rule. NHS "
+            "England successfully defended the claim in full. This case illustrates a "
+            "contracting authority successfully defending a procurement exclusion decision "
+            "on the merits, in a dispute about compliance with submission rules rather than "
+            "about the scoring or evaluation of a bid actually received."
+        ),
+    },
+    "energysolutions-nda": {
+        "dispute_id": "REAL-ENERGYSOLUTIONS-2016",
+        "contracting_authority_name": "Nuclear Decommissioning Authority",
+        "bidder_name": "EnergySolutions EU Ltd",
+        "source_text": (
+            "EnergySolutions EU Ltd v Nuclear Decommissioning Authority [2016] EWHC 1988 "
+            "(TCC), damages question later determined by the Supreme Court in Nuclear "
+            "Decommissioning Authority v EnergySolutions EU Ltd [2017] UKSC 34.\n\n"
+            "The Nuclear Decommissioning Authority (NDA) ran a competitive-dialogue "
+            "procurement, between 2012 and 2014, for a contract to decommission twelve "
+            "Magnox nuclear facilities and two research sites across the UK. EnergySolutions "
+            "formed a consortium, Reactor Site Solutions (RSS) with Bechtel Management "
+            "Company Ltd, and was one of the bidders. The contract was awarded to a rival "
+            "consortium, Cavendish Fluor Partnership (CFP). The competition was extremely "
+            "close: RSS scored 85.42% against CFP's 86.48%, a gap of just over one "
+            "percentage point.\n\n"
+            "EnergySolutions challenged the award, alleging manifest error in the "
+            "evaluation of both bids. The case proceeded to a full trial on liability "
+            "before Mr Justice Fraser. Because the claim was issued after the standstill "
+            "period had ended, no automatic suspension arose, and the contract had already "
+            "been signed and performance had begun. EnergySolutions therefore sought "
+            "damages, claimed in the region of £100 million, rather than a re-run of the "
+            "competition.\n\n"
+            "The judge found that the NDA's evaluation had fallen short in a number of "
+            "significant respects, and that correcting for those errors changed the "
+            "competitive outcome in RSS's favour, even before separately considering "
+            "whether CFP's bid should have been disqualified. The NDA was found liable in "
+            "principle for breach of the procurement regulations. The subsequent question of "
+            "whether the breach was 'sufficiently serious' to found a damages award, applying "
+            "the Francovich test derived from EU law, was ultimately determined by the "
+            "Supreme Court, which held that a breach must reach that threshold before "
+            "damages are payable — the same legal question later revisited in Braceurself v "
+            "NHS England. This case is a clear illustration of a contracting authority "
+            "losing a large, high-value procurement dispute on a narrow scoring margin, at "
+            "full trial, with a real, substantial damages claim at stake."
+        ),
+    },
+    "turning-point-norfolk": {
+        "dispute_id": "REAL-TURNINGPOINT-2012",
+        "contracting_authority_name": "Norfolk County Council",
+        "bidder_name": "Turning Point Ltd",
+        "source_text": (
+            "Turning Point Ltd v Norfolk County Council [2012] EWHC 2121 (TCC).\n\n"
+            "Norfolk County Council ran a procurement for the provision of drug and "
+            "alcohol treatment services. Turning Point Ltd submitted a tender that included "
+            "a covering note qualifying or caveating part of its submission. The Invitation "
+            "to Tender had stated clearly that qualifications or caveats to a tender would "
+            "not be accepted. The Council rejected Turning Point's tender on this basis.\n\n"
+            "Turning Point challenged the rejection, alleging that the Council should have "
+            "sought clarification of the caveat before rejecting the tender outright, and "
+            "alleging other breaches of the Public Contracts Regulations 2006. The case "
+            "proceeded to a full trial before Mr Justice Akenhead. Two separate issues were "
+            "considered. First, on limitation: the judge held that Turning Point must have "
+            "known of the basis for its complaint no later than the date it submitted its "
+            "tender (9 February 2012), but did not issue its claim until 28 March 2012, "
+            "well outside the applicable 30-day time limit for bringing a procurement "
+            "challenge; the judge declined to extend time, finding no good reason to do so, "
+            "and held the claim time-barred on that basis. Second, and in any event, on the "
+            "merits: the judge held that Turning Point's covering note was a clear "
+            "qualification of its tender, that the no-caveats requirement in the Invitation "
+            "to Tender was fair, reasonable and a common feature of public procurement, and "
+            "that the Council had not been obliged to seek clarification from Turning Point "
+            "before rejecting the qualified tender. Norfolk County Council successfully "
+            "defended the claim in full, both on limitation and on the merits. This case is "
+            "a clear illustration of a contracting authority successfully defending a "
+            "tender-rejection decision grounded in the bidder's own failure to comply with "
+            "a clearly stated tender-compliance rule, rather than in a dispute about scoring "
+            "or evaluation."
+        ),
+    },
+    "siemens-mobility-hs2": {
+        "dispute_id": "REAL-SIEMENSMOBILITY-2023",
+        "contracting_authority_name": "High Speed Two (HS2) Ltd",
+        "bidder_name": "Siemens Mobility Ltd",
+        "source_text": (
+            "Siemens Mobility Ltd v High Speed Two (HS2) Ltd [2023] EWHC 2768 (TCC).\n\n"
+            "High Speed Two (HS2) Ltd ran a procurement under the Utilities Contracts "
+            "Regulations 2016 for (i) a manufacture and supply agreement for a minimum "
+            "fleet of 54 rolling stock units for the HS2 rail project, and (ii) an "
+            "associated train maintenance and services agreement running for a minimum of "
+            "twelve years with optional extensions. Siemens Mobility Ltd was an "
+            "unsuccessful bidder.\n\n"
+            "Siemens brought a wide-ranging challenge to the award, comprising seventeen "
+            "separate claims. These included allegations of manifest error in the scores "
+            "awarded and in HS2's exercises of evaluative discretion, breach of general "
+            "public law principles, an allegation that the winning bid was abnormally low, "
+            "and an allegation of undisclosed conflicts of interest affecting the "
+            "evaluation panel.\n\n"
+            "The case proceeded to a full trial before Mrs Justice O'Farrell. In a judgment "
+            "handed down on 6 November 2023, the judge dismissed all seventeen of Siemens' "
+            "claims. The judge held that HS2 had not breached the key procurement "
+            "principles of equal treatment, non-discrimination or transparency at any stage "
+            "of the evaluation, and rejected each of the specific manifest-error, "
+            "abnormally-low-bid and conflict-of-interest allegations individually. HS2 "
+            "successfully defended the procurement of one of the largest and most complex "
+            "contracts in the project's history in full, at trial, against a wide-ranging "
+            "and heavily contested challenge. This case is regarded as one of the most "
+            "significant UK procurement judgments of recent years, precisely because of the "
+            "breadth of grounds it rejected in a single trial."
+        ),
+    },
+    "tnlc-gambling-commission": {
+        "dispute_id": "REAL-TNLC-2026",
+        "contracting_authority_name": "The Gambling Commission",
+        "bidder_name": "The New Lottery Company Ltd",
+        "source_text": (
+            "The New Lottery Company Ltd & Anor v The Gambling Commission [2026] EWHC 891 "
+            "(TCC).\n\n"
+            "The Gambling Commission ran the competition for the Fourth National Lottery "
+            "Licence, one of the most financially significant procurement processes in UK "
+            "history. The licence was awarded to Allwyn Entertainment Ltd in 2022. The New "
+            "Lottery Company Ltd (TNLC) and its parent company, Northern & Shell plc, "
+            "challenged the award, alleging that the Commission had wrongly awarded the "
+            "licence to Allwyn and that TNLC should have won the competition instead, and "
+            "separately alleging that the Commission and Allwyn had entered into "
+            "impermissible post-award modifications of the licence arrangements. TNLC "
+            "claimed damages of approximately £1.3 billion.\n\n"
+            "The case proceeded to a full trial lasting three months, concluding in January "
+            "2026, before Mrs Justice Joanna Smith. By the close of trial many of TNLC's "
+            "original allegations had been abandoned. In a 280-page judgment, the judge "
+            "dismissed the remainder of TNLC's claims in full. The judge found that TNLC "
+            "had been properly disqualified from the competition for failing over half of "
+            "the 23 mandatory requirements a bid had to satisfy to be eligible for "
+            "acceptance, and that there had been an enormous gap of over 30 percentage "
+            "points between TNLC's aggregate score and Allwyn's. On TNLC's damages claim, "
+            "the judge held that TNLC had suffered no recoverable loss, and had no standing "
+            "to claim, because it was 'fanciful to suppose' TNLC would have won any "
+            "competition against Allwyn, a recognised world leader in operating lotteries. "
+            "The judge separately held that TNLC's post-award modifications claim was "
+            "time-barred. The Court of Appeal subsequently refused TNLC permission to "
+            "appeal. This is a clear, emphatic example of a contracting authority "
+            "successfully defending a procurement award at full trial against an "
+            "exceptionally high-value challenge, with a real, large numeric score gap "
+            "central to the court's reasoning."
+        ),
+    },
+    "consultant-connect-nhs-banes": {
+        "dispute_id": "REAL-CONSULTANTCONNECT-2022",
+        "contracting_authority_name": "NHS Bath and North East Somerset, Swindon and Wiltshire Integrated Care Board",
+        "bidder_name": "Consultant Connect Ltd",
+        "source_text": (
+            "Consultant Connect Ltd v NHS Bath and North East Somerset, Swindon and "
+            "Wiltshire Integrated Care Board & Ors [2022] EWHC 2037 (TCC).\n\n"
+            "A group of NHS bodies, including NHS Bath and North East Somerset, Swindon and "
+            "Wiltshire Integrated Care Board and NHS Gloucestershire, wished to procure "
+            "communications equipment and referral software for use by medical "
+            "practitioners. Rather than running a fresh competitive procurement, or a "
+            "proper mini-competition among all suppliers on the relevant framework "
+            "agreement, the NHS bodies consulted only a handful of framework suppliers, "
+            "identified Cinapsis Ltd as the only supplier they considered suitable, and "
+            "then ran what they described as a 'mini-competition' under the framework in "
+            "which Cinapsis was the only competitor invited to bid. Cinapsis was duly "
+            "awarded the contract.\n\n"
+            "Consultant Connect Ltd, a supplier that was not a party to the framework "
+            "agreement being used and so was never entitled to be considered at all, "
+            "nonetheless challenged the award, arguing that the process used did not "
+            "comply with the terms of the framework agreement and breached the "
+            "contracting authorities' duties of fairness and transparency under the Public "
+            "Contracts Regulations 2015 — this was a case about whether the correct "
+            "procurement route was used at all, not about the scoring of competing bids.\n\n"
+            "The case proceeded to a full trial. In a judgment handed down on 29 July 2022, "
+            "the court found against the NHS defendants, holding that running a "
+            "single-supplier 'mini-competition' with no genuine competitor did not comply "
+            "with the requirements of the framework agreement or with the regulations' "
+            "requirements of fairness and transparency, and that this was, in the judge's "
+            "assessment, one of the worst breaches of those requirements the case law had "
+            "seen. The court imposed financial penalties directly on the three defendant "
+            "NHS bodies individually — £10,000, £8,000 and £4,000 respectively, scaled to "
+            "reflect the severity of each body's conduct. This case is a clear illustration "
+            "of a contracting authority losing a procurement challenge not on a scoring "
+            "dispute but on process-avoidance grounds — misusing an existing framework "
+            "agreement to sidestep a genuine competitive process altogether — the same "
+            "broad category of failure as Faraday Development Ltd v West Berkshire Council "
+            "elsewhere in this corpus, though the remedy here (direct financial penalties "
+            "on the contracting authorities) is a distinct remedy shape from anywhere else "
+            "in this corpus."
+        ),
+    },
+    "kbr-mopac": {
+        "dispute_id": "REAL-KBR-2021",
+        "contracting_authority_name": "Mayor's Office for Policing and Crime",
+        "bidder_name": "Kellogg Brown & Root Ltd",
+        "source_text": (
+            "Kellogg Brown & Root Ltd v Mayor's Office for Policing and Crime & Anor "
+            "[2021] EWHC 3321 (TCC) — an interim ruling on lifting the automatic "
+            "suspension, not a merits trial; the underlying manifest-error allegation was "
+            "never itself resolved at this stage.\n\n"
+            "The Mayor's Office for Policing and Crime (MOPAC) ran a procurement for a "
+            "£400 million framework agreement and call-off contract for facilities "
+            "management integrator services, covering contract, financial and operational "
+            "management of MOPAC's property supply chain. Kellogg Brown & Root Ltd (KBR) "
+            "was the incumbent provider of this role, under a contract originally entered "
+            "into in April 2013, and was an unsuccessful bidder in the new competition.\n\n"
+            "KBR challenged the award, triggering an automatic suspension on contract "
+            "signature. MOPAC applied to the Technology and Construction Court to lift the "
+            "suspension so it could proceed to contract with the winning bidder pending "
+            "trial of KBR's underlying claim. MOPAC accepted, for the purposes of the "
+            "application, that there was a serious issue to be tried on KBR's substantive "
+            "allegations, so the application turned on whether damages would be an "
+            "adequate remedy for KBR if the suspension were lifted and it later succeeded "
+            "at trial.\n\n"
+            "Mrs Justice Smith held that damages would be an adequate remedy for KBR. The "
+            "judge specifically addressed KBR's argument that redundancies among its staff "
+            "working on the existing contract were a form of harm damages could not "
+            "compensate, holding that while redundancy is a real detriment to an "
+            "individual employee, it was not relevant to the separate legal question of "
+            "whether the claimant company itself could be adequately compensated in "
+            "damages. The automatic suspension was lifted, allowing MOPAC to proceed to "
+            "contract with the winning bidder while KBR's underlying manifest-error "
+            "allegation remained technically live and unresolved. This case, like Alstom "
+            "and Parkingeye elsewhere in this corpus, is a clear illustration of a "
+            "contracting authority successfully defending an interim suspension "
+            "application on adequacy-of-damages grounds, without the underlying "
+            "substantive dispute ever reaching a merits hearing in this judgment."
+        ),
+    },
+    "sysmex-imperial-college": {
+        "dispute_id": "REAL-SYSMEX-2017",
+        "contracting_authority_name": "Imperial College Healthcare NHS Trust",
+        "bidder_name": "Sysmex (UK) Ltd",
+        "source_text": (
+            "Sysmex (UK) Ltd v Imperial College Healthcare NHS Trust [2017] EWHC 1824 "
+            "(TCC) — an interim ruling on lifting the automatic suspension, not a merits "
+            "trial; the underlying allegation was never itself resolved at this stage.\n\n"
+            "Imperial College Healthcare NHS Trust ran a procurement, conducted over "
+            "roughly fourteen months through several stages of an Invitation to Submit "
+            "Detailed Solutions followed by an Invitation to Submit Final Tenders, for a "
+            "managed service contract covering pathology equipment and services. By the "
+            "final stage only two bidders remained: Abbott and Roche. The Trust notified "
+            "Roche that its bid had been rejected and that the Trust intended to award the "
+            "contract to Abbott. Sysmex (UK) Ltd, which had a commercial interest in the "
+            "outcome, brought proceedings.\n\n"
+            "The central allegation was that Abbott's winning bid was based on equipment — "
+            "a full blood count analyser referred to as the Alinity Hs — that was, at the "
+            "time of the bid, still a prototype product that had not yet received the CE "
+            "marking regulatory approval required for clinical use, and that the Trust "
+            "could not lawfully accept a bid built around equipment that did not yet have "
+            "that approval.\n\n"
+            "The dispute reached the Technology and Construction Court on the question of "
+            "whether the automatic suspension on contract signature should be lifted "
+            "pending trial. Mr Justice Coulson held that damages would be an adequate "
+            "remedy for the claimant, quantifiable by reference to the profit margin "
+            "reflected in the claimant's own tender, and lifted the suspension so the Trust "
+            "could proceed to contract with Abbott. The underlying CE-marking allegation "
+            "was never resolved on its merits in this judgment. This case, like Alstom and "
+            "Parkingeye elsewhere in this corpus, is an interim suspension ruling, and its "
+            "reasoning on the quantifiability of damages by reference to tendered profit "
+            "margin became an influential precedent cited in later procurement cases."
+        ),
+    },
+    "vodafone-fcdo": {
+        "dispute_id": "REAL-VODAFONE-2021",
+        "contracting_authority_name": "Secretary of State for Foreign, Commonwealth and Development Affairs",
+        "bidder_name": "Vodafone Ltd",
+        "source_text": (
+            "Vodafone Ltd v Secretary of State for Foreign, Commonwealth and Development "
+            "Affairs & Anor [2021] EWHC 2793 (TCC) — an interim ruling refusing to lift "
+            "the automatic suspension, not a merits trial; the underlying allegations were "
+            "never themselves resolved at this stage.\n\n"
+            "The Foreign, Commonwealth and Development Office and the British Council ran "
+            "a procurement for a £184 million framework agreement (referred to as the ECHO "
+            "2 contract) for network integration services — a system of secure electronic "
+            "communications connecting 532 sites across more than 170 countries. Vodafone "
+            "Ltd was an unsuccessful bidder; the contract was awarded to Fujitsu, whose "
+            "score was significantly higher than Vodafone's across the evaluation.\n\n"
+            "Vodafone's challenge combined two distinct grounds. First, Vodafone argued "
+            "that Fujitsu's initial tender had failed to meet a minimum quality threshold "
+            "for one specific question, and that although the procurement documents gave "
+            "the contracting authorities discretion to exclude a bidder failing such a "
+            "threshold, they were not obliged to do so — Vodafone argued this discretion "
+            "should have been exercised to exclude Fujitsu regardless of Vodafone's own "
+            "score. Second, and separately, Vodafone brought what the parties described as "
+            "a 'conventional scoring challenge' disputing the evaluation and scoring of "
+            "tenders more generally, notwithstanding the significant gap between the "
+            "parties' overall scores.\n\n"
+            "Vodafone's challenge triggered an automatic suspension, and the contracting "
+            "authorities applied to lift it. Mr Justice Kerr declined to lift the "
+            "suspension, allowing Vodafone's underlying claims to proceed to a full "
+            "hearing rather than letting the contract signature go ahead. The judgment is "
+            "notable for its observations on how trials of preliminary issues should be "
+            "conducted in procurement disputes of this kind. This case, like Alstom and "
+            "Parkingeye elsewhere in this corpus, is an interim suspension ruling — but "
+            "unlike those two cases the ruling favoured the challenger rather than the "
+            "contracting authority, mirroring the same interim-stage outcome as Parkingeye "
+            "specifically."
+        ),
+    },
+    "draeger-london-fire": {
+        "dispute_id": "REAL-DRAEGER-2021",
+        "contracting_authority_name": "London Fire Commissioner",
+        "bidder_name": "Draeger Safety UK Ltd",
+        "source_text": (
+            "Draeger Safety UK Ltd v The London Fire Commissioner [2021] EWHC 2221 (TCC) "
+            "— an interim ruling refusing to lift the automatic suspension, not a merits "
+            "trial; the underlying allegations were never themselves resolved at this "
+            "stage.\n\n"
+            "The London Fire Commissioner (on behalf of the London Fire Brigade) ran a "
+            "procurement, initiated in August 2020, for a ten-year contract for firefighter "
+            "respiratory protective equipment (RPE), together with associated repair and "
+            "maintenance services. The stated aim of the procurement was to obtain lighter, "
+            "easier-to-use equipment to improve both firefighter safety and public service "
+            "delivery. Draeger Safety UK Ltd, a company providing medical and safety "
+            "technology, was the incumbent supplier of RPE to the Brigade under a contract "
+            "originally awarded in 2010, and was an unsuccessful bidder in the new "
+            "competition.\n\n"
+            "Draeger's challenge to the award triggered an automatic suspension on "
+            "contract signature. The London Fire Brigade applied to the Technology and "
+            "Construction Court to lift the suspension, while Draeger separately applied "
+            "for an expedited trial of its underlying claim.\n\n"
+            "Mrs Justice O'Farrell refused the Brigade's application to lift the automatic "
+            "suspension, finding that damages would be an inadequate remedy for both "
+            "sides — for Draeger, given the loss of the contract and associated business "
+            "impact, and for the Brigade, given the operational safety consequences of "
+            "delay to introducing improved equipment. The judgment noted that the Court's "
+            "practical ability to accommodate an expedited trial on a timetable that would "
+            "not itself risk seriously delaying the new equipment's introduction was an "
+            "important factor in the decision. This case, like Parkingeye and Vodafone "
+            "elsewhere in this corpus, is an interim suspension ruling that favoured the "
+            "challenger; the underlying manifest-error and evaluation allegations were not "
+            "resolved on their merits in this judgment."
+        ),
+    },
+    "one-medicare-nhs-northants": {
+        "dispute_id": "REAL-ONEMEDICARE-2025",
+        "contracting_authority_name": "NHS Northamptonshire Integrated Care Board",
+        "bidder_name": "One Medicare (t/a One Primary Care)",
+        "source_text": (
+            "One Medicare (t/a One Primary Care) v NHS Northamptonshire Integrated Care "
+            "Board [2025] EWHC 63 (TCC) — an interim ruling on lifting the automatic "
+            "suspension, not a merits trial; the underlying allegations were never "
+            "themselves resolved at this stage.\n\n"
+            "NHS Northamptonshire Integrated Care Board (ICB) issued an Invitation to "
+            "Tender for a contract to provide an Urgent Care Centre, published on 23 June "
+            "2023 with submissions closing on 27 June 2023. The evaluation criteria "
+            "comprised price (assessed pass/fail), quality (weighted 90%, with a minimum "
+            "60% score required to pass), and social value (weighted 10%). Tenderers were "
+            "notified that DHU Healthcare CIC's bid had been identified as the most "
+            "economically advantageous, and the ICB intended to award the contract to DHU. "
+            "One Medicare, trading as One Primary Care (OPC), the incumbent provider, was "
+            "an unsuccessful bidder.\n\n"
+            "OPC challenged the award, alleging breaches of transparency, breaches in how "
+            "the bids were scored, and a conflict of interest affecting the evaluation. The "
+            "challenge triggered an automatic suspension, and the ICB applied to the "
+            "Technology and Construction Court to lift it pending trial of OPC's "
+            "underlying claims.\n\n"
+            "The court held that the balance of convenience firmly favoured lifting the "
+            "suspension. The judge found that if the suspension remained in place, the ICB "
+            "would suffer harm extending beyond purely financial loss, including evidence "
+            "that the successful bidder's services would improve the quality of patient "
+            "care sooner than if the incumbent continued. The judge noted that OPC's "
+            "absence of a standard cross-undertaking in damages to the ICB was, if not the "
+            "sole reason, then the strongest reason to grant the application. The "
+            "suspension was lifted, and OPC's separate application for an expedited trial "
+            "was refused. This case, like Alstom and Bechtel-adjacent suspension rulings "
+            "elsewhere in this corpus, is an interim ruling favouring the contracting "
+            "authority; the underlying transparency, scoring and conflict-of-interest "
+            "allegations were not resolved on their merits in this judgment."
+        ),
+    },
+    "robert-heath-heating-orbit": {
+        "dispute_id": "REAL-ROBERTHEATHHEATING-2024",
+        "contracting_authority_name": "Orbit Group Ltd",
+        "bidder_name": "Robert Heath Heating Ltd",
+        "source_text": (
+            "Robert Heath Heating Ltd v Orbit Group Ltd [2024] EWHC 3039 (TCC) — an "
+            "interim ruling on lifting the automatic suspension, not a merits trial; the "
+            "underlying allegations were never themselves resolved at this stage.\n\n"
+            "Orbit Group Ltd, a housing association, ran a procurement for domestic "
+            "heating service contracts. Robert Heath Heating Ltd (RHH) was an unsuccessful "
+            "bidder; the contract was awarded to Aaron Services Ltd. RHH challenged the "
+            "award on two distinct grounds: first, that a former Orbit employee involved "
+            "in the procurement had moved to the parent company of the successful bidder, "
+            "creating an undisclosed conflict of interest; and second, that RHH's own "
+            "tender had been scored on the basis of opaque reasoning, compounded by "
+            "Orbit's withholding of the evaluation disclosure RHH needed to properly assess "
+            "its complaint.\n\n"
+            "RHH's challenge triggered an automatic suspension. RHH sought early specific "
+            "disclosure of the evaluation documents, while Orbit applied to lift the "
+            "suspension so it could proceed to contract with Aaron Services pending trial. "
+            "The court, applying the American Cyanamid framework used for interim "
+            "injunctions generally (this procurement pre-dated the Procurement Act 2023's "
+            "new statutory suspension test), found that there were in fact two separate "
+            "serious issues to be tried — one relating to the alleged conflict of "
+            "interest, and one relating to the tender-scoring complaint. Notwithstanding "
+            "that finding, the court held that RHH would not be permitted to freeze the "
+            "entire procurement while those issues were resolved at trial, concluding that "
+            "damages were an entirely adequate remedy for RHH if it ultimately succeeded. "
+            "The suspension was lifted. This case, like Alstom and Bechtel-adjacent "
+            "suspension rulings elsewhere in this corpus, is an interim ruling favouring "
+            "the contracting authority on adequacy-of-damages grounds; the underlying "
+            "conflict-of-interest and scoring allegations were not resolved on their "
+            "merits in this judgment."
+        ),
+    },
 }

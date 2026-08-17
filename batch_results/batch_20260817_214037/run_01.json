@@ -1,0 +1,123 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-CONSULTANTCONNECT-2022",
+    "title": "Consultant Connect Ltd v NHS Bath and North East Somerset",
+    "description": "The contracting authority (NHS) misused an existing framework agreement to run a single-supplier 'mini-competition' without genuine competition. Consultant Connect Ltd challenged the award, arguing that this process did not comply with the terms of the framework agreement or the Public Contracts Regulations 2015 requirements for fairness and transparency.",
+    "contract_value_gbp": 0.0,
+    "dispute_type": "process_avoidance",
+    "procedural_stage": "trial",
+    "contracting_authority_name": "NHS Bath and North East Somerset, Swindon and Wiltshire Integrated Care Board",
+    "bidder_name": "Consultant Connect Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Ensure the mini-competition process complied with the framework agreement and Public Contracts Regulations 2015.",
+      "Protection of Public Funds: Avoid delays that increase costs, given the \u00a30 contract value and potential for future service delivery gaps.",
+      "Reputation & Public Accountability: Maintain public confidence in our procurement processes and avoid adverse media scrutiny.",
+      "Minimising Litigation Risk: Provide enough disclosure to reassure Consultant Connect Ltd without undermining evaluation confidentiality or integrity."
+    ],
+    "goals": [
+      "Defend the mini-competition process as compliant with applicable regulations",
+      "Avoid a costly and time-consuming TCC hearing"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our evaluation process, which was fair, transparent, and compliant with all applicable regulations. We are willing to provide additional feedback and transparency to Consultant Connect Ltd.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Public Contracts Regulations 2015"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: We stand to lose future business opportunities due to reputational damage from this unfair process.",
+      "Fairness & Transparency: The lack of genuine competition undermines the integrity of the procurement process and our trust in NHS Bath and North East Somerset, Swindon and Wiltshire Integrated Care Board's ability to manage public contracts."
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids, giving us a chance to be awarded the contract ourselves",
+      "An award of damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We will not accept this unfair process and demand a re-evaluation of the bids to ensure genuine competition and transparency.",
+    "legal_basis": [
+      "Public Contracts Regulations 2015",
+      "Framework Agreement terms"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Consultant Connect Ltd's concerns regarding the framework agreement and Public Contracts Regulations 2015 requirements for fairness and transparency. To clarify, can you specify which particular provisions of the framework agreement or regulations you believe were not adhered to in this instance? Additionally, what specific actions do you propose we take to rectify the situation?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your acknowledgement of our concerns and welcome the opportunity to clarify the specific provisions that were not adhered to. We would like to request more information on the evaluation criteria used for the mini-competition, specifically how the scoring was weighted and what factors were considered in determining the winner. Can you provide us with a detailed breakdown of the evaluation process and any documentation or records related to this?",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Public Contracts Regulations 2015",
+        "Framework Agreement"
+      ],
+      "reasoning": "This scenario is qualitative (Step 2B) as it does not contain any explicit formula or numeric values. The Contracting Authority's use of an existing framework agreement to run a single-supplier 'mini-competition' without genuine competition raises concerns about fairness and transparency. The Aggrieved Bidder has requested information on the evaluation criteria, but this is not relevant to determining whether the process was compliant with the regulations. Based on my qualitative assessment, I conclude that the Contracting Authority's actions did not adhere to the requirements for fairness and transparency.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiated outcome is more favorable than our BATNA (defending in TCC court, which would cost \u00a350k+ and take 6-12 months) as it avoids the significant costs and risks associated with litigation.",
+    "win_statement": "We were able to negotiate a re-evaluation of the mini-competition, which has resulted in a revised outcome that addresses some of Consultant Connect Ltd's concerns regarding fairness and transparency. While we did not achieve a full win, we have avoided the potential for costly and time-consuming litigation.",
+    "what_was_achieved": [
+      "A re-evaluation of the mini-competition was agreed upon",
+      "Some concessions were made to address Consultant Connect Ltd's concerns"
+    ],
+    "what_was_conceded": [
+      "The contracting authority acknowledged that the original process may not have been entirely compliant with the framework agreement and Public Contracts Regulations 2015 requirements for fairness and transparency",
+      "Some documentation and records related to the evaluation process were provided to Consultant Connect Ltd"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome of re-evaluation is less favorable than our BATNA (pursuing damages or formal TCC proceedings) in terms of cost and certainty, but it avoids the significant time and financial investment required for a lengthy court battle.",
+    "win_statement": "We successfully pushed for a re-evaluation of the mini-competition, which resulted in a revised outcome that better aligns with the framework agreement and Public Contracts Regulations 2015 requirements. While we did not achieve our desired outcome of being awarded the contract, we were able to secure a more favorable position than if we had proceeded with litigation.",
+    "what_was_achieved": [
+      "A re-evaluation of the mini-competition was conducted, which led to a revised outcome",
+      "The contracting authority acknowledged and addressed some of our concerns regarding fairness and transparency"
+    ],
+    "what_was_conceded": [
+      "We did not secure the contract award as originally intended",
+      "Some of our specific proposals for rectifying the situation were not fully implemented or accepted by the contracting authority"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "fairness and transparency in the framework agreement and Public Contracts Regulations 2015",
+      "evaluation criteria used for the mini-competition"
+    ],
+    "concessions_summary": "Neither side made any concessions during the negotiation. The Contracting Authority acknowledged the Aggrieved Bidder's concerns, but no specific actions were proposed to rectify the situation.",
+    "court_reasoning_summary": "The Court concluded that the Contracting Authority's use of an existing framework agreement for a single-supplier 'mini-competition' without genuine competition raised concerns about fairness and transparency. The Court determined that the process followed was not compliant with the regulations, citing a manifest error in the evaluation process.",
+    "likely_next_steps": "The Contracting Authority will re-evaluate the mini-competition, taking into account the requirements for fairness and transparency outlined in the Public Contracts Regulations 2015.",
+    "plain_english_summary": "The dispute centered on whether the Contracting Authority followed proper procedures when running a mini-competition. The Court found that they didn't, so the Contracting Authority will have to redo the process to ensure it's fair and transparent."
+  }
+}

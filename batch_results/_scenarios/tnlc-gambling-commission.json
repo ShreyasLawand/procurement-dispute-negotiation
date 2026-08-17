@@ -1,0 +1,12 @@
+{
+  "dispute_id": "REAL-TNLC-2026",
+  "title": "New Lottery Company Ltd v The Gambling Commission",
+  "description": "The New Lottery Company Ltd (TNLC) challenged the award of the Fourth National Lottery Licence to Allwyn Entertainment Ltd, alleging wrongful award and post-award modifications. The judge dismissed TNLC's claims in full, finding they were properly disqualified for failing over half of mandatory requirements and had a significant score gap with Allwyn. The damages claim was also dismissed due to lack of standing.",
+  "contract_value_gbp": 1300000000.0,
+  "dispute_type": "scoring_challenge",
+  "procedural_stage": "trial",
+  "contracting_authority_name": "The Gambling Commission",
+  "bidder_name": "The New Lottery Company Ltd",
+  "ca_profile": null,
+  "bidder_profile": null
+}

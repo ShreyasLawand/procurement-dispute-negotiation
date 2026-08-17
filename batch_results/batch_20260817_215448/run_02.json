@@ -1,0 +1,122 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-ROBERTHEATHHEATING-2024",
+    "title": "Robert Heath Heating Ltd v Orbit Group Ltd",
+    "description": "RHH challenged the award of domestic heating service contracts to Aaron Services Ltd on two grounds: (1) undisclosed conflict of interest due to a former Orbit employee moving to the parent company of the successful bidder, and (2) opaque scoring of RHH's tender. The court applied the American Cyanamid framework and found two separate serious issues to be tried, but lifted the automatic suspension as damages were deemed an adequate remedy for RHH if it ultimately succeeded.",
+    "contract_value_gbp": 0.0,
+    "dispute_type": "transparency_breach",
+    "procedural_stage": "automatic_suspension",
+    "contracting_authority_name": "Orbit Group Ltd",
+    "bidder_name": "Robert Heath Heating Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: Avoid delays that increase costs or create service delivery gaps in the domestic heating services for our residents.",
+      "Continuity of Service / Delivery: Ensure uninterrupted heating services to our residents, who rely on these essential services for their well-being and safety.",
+      "Reputation & Public Accountability: Maintain public confidence and protect our reputation as a fair and professional buyer by resolving this dispute efficiently."
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Maintain transparency in the evaluation process"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our evaluation process, which was conducted fairly and transparently. We are willing to provide additional information and clarification on the scoring challenge, but we cannot re-score bids or disclose commercially sensitive information.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Regulation 32(2) of the Public Contracts Regulations 2015"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a30 contract value loss, but significant bid costs (\u00a330k) incurred for a potential \u00a31m revenue opportunity over 5 years.",
+      "Fairness & Transparency: Perceived unfairness due to undisclosed conflict of interest and opaque scoring of our tender.",
+      "Protection of Reputation: Maintaining credibility with parent companies, shareholders, and partners is crucial, as internal messaging signalled a win."
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "An award of damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "Request detailed feedback on scoring methodology and evaluation rationale to justify the outcome.",
+    "legal_basis": [
+      "Transparency Breach",
+      "Undisclosed Conflict of Interest"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge Robert Heath Heating Ltd's concerns regarding the alleged conflict of interest and opaque scoring. To clarify, can you provide specific details on how you believe the former Orbit employee's move to the parent company of Aaron Services Ltd created a conflict of interest in this procurement? Additionally, what evidence do you have that suggests the scoring was not transparent or fair?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your acknowledgement of our concerns regarding the conflict of interest and opaque scoring. However, I would like to clarify that we believe the former Orbit employee's move to Aaron Services Ltd's parent company created a direct conflict of interest in this procurement. Specifically, we are concerned about the potential for preferential treatment or access to sensitive information. Can you provide more details on how Orbit Group Ltd ensured that the successful bidder did not receive any undue advantage due to this connection? Furthermore, regarding the scoring transparency, can you explain why certain evaluation criteria were weighted as heavily as they were, particularly in light of our own scores and feedback from other evaluators?",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Procurement Act 2023 s12, EU Remedies Directive"
+      ],
+      "reasoning": "This scenario is qualitative (Step 2B) as it involves allegations of conflict of interest and opaque scoring. I do not have any numbers or formula to compute. However, based on the parties' statements, I can assess the rational basis for their claims. The Contracting Authority has acknowledged concerns regarding the alleged conflict of interest and opaque scoring, but has not provided sufficient justification for its actions. Specifically, it has not explained how it ensured that the successful bidder did not receive any undue advantage due to the connection between the former Orbit employee and Aaron Services Ltd's parent company. Furthermore, the Contracting Authority has not provided a clear explanation for the weighting of certain evaluation criteria, which raises concerns about transparency and fairness.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome is more favorable than my BATNA (defending in TCC court, which would cost \u00a350k+ and take 6-12 months) because we were able to avoid the significant financial and reputational risks associated with a lengthy court battle. However, it's not an ideal outcome as we had to re-evaluate the procurement process, which still may have some implications for our future procurements.",
+    "win_statement": "We successfully navigated this challenging dispute without having to resort to costly litigation, ensuring that our organization can continue to operate efficiently and effectively.",
+    "what_was_achieved": [
+      "Avoided a lengthy court battle with significant financial costs",
+      "Preserved the integrity of our procurement process"
+    ],
+    "what_was_conceded": [
+      "Had to re-evaluate the procurement process, which may have some implications for future procurements",
+      "Did not fully address the concerns raised by Robert Heath Heating Ltd regarding the conflict of interest and opaque scoring"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is somewhat favourable compared to pursuing damages or formal TCC proceedings, which would have been costly, slow, and uncertain. However, the re-evaluation process did not result in a complete reversal of the original award decision.",
+    "win_statement": "We were able to secure a re-evaluation of the procurement process, which acknowledged our concerns regarding transparency and conflict of interest. Although we did not achieve a full reversal of the award decision, this outcome still represents a partial victory for Robert Heath Heating Ltd.",
+    "what_was_achieved": [
+      "Re-evaluation of the procurement process",
+      "Acknowledgement of concerns regarding transparency and conflict of interest"
+    ],
+    "what_was_conceded": [
+      "No complete reversal of the original award decision",
+      "Damages or formal TCC proceedings were still considered a viable option"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Conflict of interest due to former Orbit employee's move to Aaron Services Ltd's parent company",
+      "Opaque scoring and weighting of evaluation criteria"
+    ],
+    "concessions_summary": "Neither party made any concessions in terms of specific actions or changes. The Contracting Authority acknowledged concerns but did not provide sufficient justification for its actions.",
+    "court_reasoning_summary": "The Court found that the Contracting Authority had not provided a rational basis for its actions, particularly regarding the conflict of interest and opaque scoring. It recommended re-evaluation due to manifest error.",
+    "likely_next_steps": "Re-evaluation will likely occur, where the Contracting Authority will reassess the bids and evaluation process. This may involve revisiting the weighting of evaluation criteria and ensuring transparency in the scoring process.",
+    "plain_english_summary": "The dispute centered around concerns that a former Orbit employee's move to Aaron Services Ltd's parent company created a conflict of interest, and that the scoring process was not transparent or fair. The Court agreed with these concerns and recommended re-evaluation to ensure a fair outcome."
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-DRAEGER-2021",
+    "title": "Draeger Safety UK Ltd v The London Fire Commissioner",
+    "description": "The London Fire Brigade's procurement for firefighter respiratory protective equipment (RPE) was challenged by Draeger Safety UK Ltd, the incumbent supplier. The Court refused to lift an automatic suspension on contract signature, finding that damages would be inadequate due to the loss of the contract and operational safety consequences.",
+    "contract_value_gbp": 0.0,
+    "dispute_type": "automatic_suspension",
+    "procedural_stage": "interim_ruling",
+    "contracting_authority_name": "London Fire Commissioner",
+    "bidder_name": "Draeger Safety UK Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 3,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: \u00a30 contract value means every day's delay increases costs",
+      "Continuity of Service / Delivery: Critical firefighter safety equipment procurement delayed due to automatic suspension",
+      "Reputation & Public Accountability: Maintaining public confidence in our procurement process is crucial"
+    ],
+    "goals": [
+      "Defend the procurement decision, upholding transparency and fairness"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our evaluation process and scores, which were based on clear criteria and evidence.",
+    "legal_basis": [
+      "Procurement Act 2023: s12 objectives of value for money, maximising public benefit, sharing information for transparency, acting with integrity"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a30 contract value loss due to automatic suspension",
+      "Fairness & Transparency: Perceived unfair treatment by the London Fire Commissioner"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids, giving us a chance to be awarded the contract ourselves"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "Request an immediate re-evaluation of the procurement process to address perceived flaws",
+    "legal_basis": [
+      "Public Contracts Regulations 2015",
+      "European Union law on public procurement"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "Draeger Safety UK Ltd's opening position highlights concerns about the procurement process and potential biases in evaluation scoring. I'd like to clarify whether Draeger is specifically contesting the scores for any particular criteria or if there are other issues they'd like to bring to our attention.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I'd like to clarify that Draeger Safety UK Ltd is contesting the scoring methodology used for the evaluation criteria 'Cost' and 'Technical', as we believe there was an inconsistency in how our bid was scored compared to our competitors. Specifically, we are concerned about the weighting applied to each criterion and whether it was consistently applied throughout the evaluation process.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Draeger's concerns regarding the scoring methodology for 'Cost' and 'Technical' evaluation criteria. To address these concerns, we propose providing a detailed breakdown of our evaluation process, including the weighting applied to each criterion. This will enable Draeger to understand how their bid was scored in comparison to other bidders. We also offer to provide additional feedback on specific aspects of their submission that were deemed non-compliant with the tender requirements.",
+      "proposal": "A detailed breakdown of the evaluation process and scoring methodology",
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to provide a detailed breakdown of the evaluation process and additional feedback on our submission. However, we would like to request that you also provide us with the original scoring sheets for each bidder, including any annotations or comments made by the evaluators. This will enable us to better understand how our bid was scored in comparison to others and identify any potential biases or inconsistencies in the evaluation process.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "We are willing to provide the original scoring sheets for each bidder, including any annotations or comments made by the evaluators, in order to increase transparency and address Draeger's concerns. We also propose that our evaluation team reviews their scoring methodology to ensure consistency and fairness throughout the process. Furthermore, we suggest that both parties agree to a joint review of the procurement process to identify areas for improvement and prevent similar disputes in the future.",
+      "proposal": null,
+      "concession_made": "We will provide the original scoring sheets as requested"
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "We are willing to accept the proposed joint review of the procurement process and the evaluation team's review of their scoring methodology. In exchange, we request that you provide us with a clear timeline for implementing these changes and a commitment to providing additional feedback on our submission. We also propose that both parties agree to a mutually beneficial resolution, such as a partial award covering 50% of the contract value, which would allow us to continue supplying the London Fire Brigade while also addressing our concerns regarding the evaluation process.",
+      "proposal": "A partial award covering 50% of the contract value",
+      "concession_made": "Acceptance of joint review and scoring methodology changes"
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Procurement Act 2023 s12"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves evaluation criteria 'Cost' and 'Technical', without any explicit formula or numeric scoring system. I will assess compliance qualitatively instead of performing a calculation. The parties are contesting the weighting applied to each criterion and its consistent application throughout the evaluation process. However, the scenario does not provide specific details on the weights assigned to each criterion or how they were applied. Therefore, I will examine whether the Contracting Authority's actions can be justified as rational and in good faith.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "The Procurement Act 2023, s12 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative in nature. There are no explicit formulas or sub-scores provided. The Contracting Authority's proposal to provide a detailed breakdown of the evaluation process and additional feedback on specific aspects of the submission aligns with the principles of transparency and fairness. However, the Aggrieved Bidder's request for original scoring sheets, including annotations or comments made by evaluators, may be seen as an attempt to access sensitive information that could compromise the integrity of the evaluation process. I do not find any manifest error in the Contracting Authority's actions this round.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 3,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Procurement Act 2023 s12",
+        "Regulation 86(1) of the Public Contracts Regulations 2015"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a subjective evaluation of bidder submissions. There are no explicit formulas or sub-scores mentioned in the scenario description or either party's statements. The Contracting Authority's proposal to review their scoring methodology and provide original scoring sheets for each bidder suggests a willingness to increase transparency and address concerns. However, there is no indication of a manifest error in the evaluation process. Draeger's request for additional feedback on their submission and a mutually beneficial resolution does not necessarily imply a procedural issue with the contract award.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    }
+  ],
+  "resolved": false,
+  "resolution_outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+  "adjudicated": false,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome is a stalemate, with no clear winner. While we were able to provide some concessions, such as the original scoring sheets and a joint review of the procurement process, Draeger's request for a partial award covering 50% of the contract value was not accepted.",
+    "win_statement": "We successfully defended our position and avoided a costly and time-consuming court battle. The negotiation allowed us to provide some concessions while maintaining our stance on the original contract terms.",
+    "what_was_achieved": [
+      "Provided a detailed breakdown of the evaluation process",
+      "Offered additional feedback on Draeger's submission",
+      "Agreed to a joint review of the procurement process"
+    ],
+    "what_was_conceded": [
+      "Provided original scoring sheets for each bidder",
+      "Committed to reviewing and improving the evaluation team's scoring methodology"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The negotiation did not result in a favourable outcome for Draeger Safety UK Ltd. The contracting authority was able to maintain control and avoid providing the original scoring sheets, which was one of our key demands.",
+    "win_statement": "We were unable to achieve our desired outcome and will need to consider pursuing formal proceedings or damages, which is costly and uncertain.",
+    "what_was_achieved": [
+      "A joint review of the procurement process",
+      "The evaluation team's review of their scoring methodology"
+    ],
+    "what_was_conceded": [
+      "Our request for original scoring sheets was not met",
+      "We were unable to secure a partial award covering 50% of the contract value"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Scoring methodology for 'Cost' and 'Technical' evaluation criteria",
+      "Weighting applied to each criterion and its consistent application throughout the evaluation process"
+    ],
+    "concessions_summary": "Both parties made concessions: Draeger accepted a joint review of the procurement process, while the Contracting Authority agreed to provide original scoring sheets for each bidder.",
+    "court_reasoning_summary": "The Court assessed each round as qualitative and found no manifest error in the Contracting Authority's actions. The Court recommended continuing negotiation based on the parties' willingness to increase transparency and address concerns.",
+    "likely_next_steps": "Given that the maximum number of rounds was reached, the dispute will likely escalate to formal proceedings, such as a court hearing or arbitration.",
+    "plain_english_summary": "The core disagreement centered around the scoring methodology for 'Cost' and 'Technical' evaluation criteria. Both parties made concessions, but ultimately, they were unable to reach an agreement. As a result, the dispute will move forward to a more formal process."
+  }
+}

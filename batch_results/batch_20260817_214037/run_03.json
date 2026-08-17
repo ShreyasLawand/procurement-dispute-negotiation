@@ -1,0 +1,122 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-CONSULTANTCONNECT-2022",
+    "title": "Consultant Connect Ltd v NHS Bath and North East Somerset",
+    "description": "The contracting authority (NHS) misused an existing framework agreement to run a single-supplier 'mini-competition' without genuine competition. Consultant Connect Ltd challenged the award, arguing that this process did not comply with the terms of the framework agreement or the Public Contracts Regulations 2015 requirements for fairness and transparency.",
+    "contract_value_gbp": 0.0,
+    "dispute_type": "process_avoidance",
+    "procedural_stage": "trial",
+    "contracting_authority_name": "NHS Bath and North East Somerset, Swindon and Wiltshire Integrated Care Board",
+    "bidder_name": "Consultant Connect Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Ensure the mini-competition process was lawful and transparent.",
+      "Protection of Public Funds: Avoid unnecessary delays and costs associated with a re-run procurement.",
+      "Continuity of Service / Delivery: Secure timely delivery of essential healthcare services through a compliant procurement process."
+    ],
+    "goals": [
+      "Defend the procurement decision against Consultant Connect Ltd's challenge",
+      "Maintain public confidence in NHS Bath and North East Somerset, Swindon and Wiltshire Integrated Care Board's procurement practices"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our evaluation process, which was fair, transparent, and compliant with the Public Contracts Regulations 2015.",
+    "legal_basis": [
+      "The Procurement Act 2023",
+      "The Public Contracts Regulations 2015"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: We stand to lose future revenue from this contract, which could have been \u00a30 had we won the mini-competition fairly.",
+      "Fairness & Transparency: The contracting authority's misuse of the framework agreement undermines trust in the procurement process and our confidence in competing."
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids to give us a chance to be awarded the contract ourselves",
+      "An award of damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We believe the contracting authority's actions were unfair and we request a re-evaluation of the mini-competition process.",
+    "legal_basis": [
+      "Public Contracts Regulations 2015",
+      "Framework Agreement terms"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Consultant Connect Ltd's concerns regarding the process used for the mini-competition under our existing framework agreement. However, we would like to clarify that the mini-competition was conducted in accordance with the framework agreement's terms and conditions, which permit such a process in certain circumstances. Can you provide more details on how you believe the Public Contracts Regulations 2015 were breached?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your clarification on the framework agreement's terms and conditions, but we still maintain that the mini-competition was not conducted in accordance with these rules. Specifically, we would like to know more about how you determined that the existing framework agreement permitted a single-supplier 'mini-competition' without genuine competition. Could you please provide us with the specific clause or section of the agreement that justifies this approach? Furthermore, can you explain why you did not follow the standard mini-competition process outlined in the Public Contracts Regulations 2015?",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Public Contracts Regulations 2015",
+        "Framework Agreement terms and conditions"
+      ],
+      "reasoning": "This scenario is qualitative, not numeric. The contracting authority's position relies on a specific clause or section of the framework agreement that justifies a single-supplier 'mini-competition' without genuine competition. However, I have found no evidence in the provided text to support this claim. In fact, the Public Contracts Regulations 2015 require genuine competition for mini-competitions. The contracting authority's failure to follow these regulations and provide clear justification for their actions constitutes a manifest error.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiated outcome is more favorable than our BATNA of defending a costly and time-consuming court case, which could have taken 6-12 months and cost over \u00a350k.",
+    "win_statement": "We successfully defended the mini-competition process used under our existing framework agreement, avoiding potential reputational damage and costs associated with a lengthy court battle.",
+    "what_was_achieved": [
+      "Clarified the terms and conditions of the framework agreement regarding single-supplier 'mini-competitions'",
+      "Avoided costly and time-consuming court case"
+    ],
+    "what_was_conceded": [
+      "Agreed to re-evaluate the mini-competition process to address concerns raised by Consultant Connect Ltd",
+      "Acknowledged that the original process may not have fully complied with Public Contracts Regulations 2015 requirements for fairness and transparency"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome of re-evaluation is a mixed result. While we were able to raise important questions about the contracting authority's process, we did not achieve our desired goal of having the award set aside and the mini-competition re-run with genuine competition.",
+    "win_statement": "We successfully challenged the contracting authority's approach and highlighted potential breaches of the Public Contracts Regulations 2015, which may lead to improved compliance in future procurements. However, this outcome falls short of our original goal and does not provide a clear resolution for our client.",
+    "what_was_achieved": [
+      "Raised important questions about the contracting authority's process and potential breaches of the Public Contracts Regulations 2015",
+      "Highlighted the need for improved compliance in future procurements"
+    ],
+    "what_was_conceded": [
+      "Did not achieve the desired goal of having the award set aside and the mini-competition re-run with genuine competition",
+      "The contracting authority's approach was only subject to a re-evaluation, rather than a full review or reversal"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Whether the mini-competition was conducted in accordance with the framework agreement's terms and conditions",
+      "The contracting authority's interpretation of the Public Contracts Regulations 2015"
+    ],
+    "concessions_summary": "Neither side made any concessions during the negotiation. The Contracting Authority maintained that they followed the framework agreement's terms, while the Aggrieved Bidder continued to argue that this was not the case.",
+    "court_reasoning_summary": "The Court found a 'manifest error' on the part of the Contracting Authority due to their failure to provide clear justification for conducting a single-supplier mini-competition without genuine competition. The Court also noted that the Public Contracts Regulations 2015 require genuine competition for mini-competitions.",
+    "likely_next_steps": "The case will likely proceed with a re-evaluation, as recommended by the Court. This means that the Contracting Authority will need to re-conduct the mini-competition in accordance with the Public Contracts Regulations 2015 and provide clear justification for their actions.",
+    "plain_english_summary": "In short, the Aggrieved Bidder disputed how a mini-competition was conducted under an existing framework agreement. The Court found that the Contracting Authority made a mistake by not following the proper rules and procedures, so they will need to re-do the mini-competition correctly."
+  }
+}

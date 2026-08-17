@@ -1,0 +1,12 @@
+{
+  "dispute_id": "REAL-ENERGYSOLUTIONS-2016",
+  "title": "EnergySolutions EU Ltd v Nuclear Decommissioning Authority",
+  "description": "The NDA's evaluation of bids for a \u00a3[estimated] contract to decommission twelve Magnox nuclear facilities and two research sites across the UK was found to have fallen short in several respects. The judge determined that correcting for these errors would have changed the competitive outcome in favour of RSS, even before considering whether CFP's bid should have been disqualified. The NDA was found liable in principle for breach of procurement regulations, but the Supreme Court later held that a breach must be 'sufficiently serious' to found a damages award.",
+  "contract_value_gbp": 100000000.0,
+  "dispute_type": "scoring_challenge",
+  "procedural_stage": "trial",
+  "contracting_authority_name": "Nuclear Decommissioning Authority",
+  "bidder_name": "EnergySolutions EU Ltd",
+  "ca_profile": null,
+  "bidder_profile": null
+}

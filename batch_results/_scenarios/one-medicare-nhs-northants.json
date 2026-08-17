@@ -1,0 +1,12 @@
+{
+  "dispute_id": "REAL-ONEMEDICARE-2025",
+  "title": "One Medicare v NHS Northamptonshire Integrated Care Board",
+  "description": "The ICB issued an Invitation to Tender for an Urgent Care Centre contract, published on 23 June 2023. The evaluation criteria comprised price (assessed pass/fail), quality (weighted 90%, with a minimum 60% score required to pass), and social value (weighted 10%). One Medicare challenged the award, alleging breaches of transparency, scoring issues, and conflict of interest affecting the evaluation. The court held that lifting the automatic suspension was in favour of the ICB, citing harm extending beyond financial loss if the suspension remained in place.",
+  "contract_value_gbp": 0.0,
+  "dispute_type": "transparency_breach",
+  "procedural_stage": "automatic_suspension",
+  "contracting_authority_name": "NHS Northamptonshire Integrated Care Board",
+  "bidder_name": "One Medicare (t/a One Primary Care)",
+  "ca_profile": null,
+  "bidder_profile": null
+}

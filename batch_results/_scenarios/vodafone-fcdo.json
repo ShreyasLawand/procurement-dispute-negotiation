@@ -1,0 +1,12 @@
+{
+  "dispute_id": "REAL-VODAFONE-2021",
+  "title": "Vodafone Ltd v Secretary of State for Foreign, Commonwealth and Development Affairs",
+  "description": "The contracting authority awarded the \u00a3184 million ECHO 2 contract to Fujitsu, but Vodafone challenged the evaluation process on two grounds: (1) Fujitsu's initial tender failed to meet a minimum quality threshold, and (2) the scoring of tenders was flawed. The challenge triggered an automatic suspension, which Mr Justice Kerr declined to lift, allowing Vodafone's claims to proceed.",
+  "contract_value_gbp": 184000000.0,
+  "dispute_type": "scoring_challenge",
+  "procedural_stage": "automatic_suspension",
+  "contracting_authority_name": "Secretary of State for Foreign, Commonwealth and Development Affairs",
+  "bidder_name": "Vodafone Ltd",
+  "ca_profile": null,
+  "bidder_profile": null
+}

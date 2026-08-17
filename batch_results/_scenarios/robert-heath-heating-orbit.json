@@ -1,0 +1,12 @@
+{
+  "dispute_id": "REAL-ROBERTHEATHHEATING-2024",
+  "title": "Robert Heath Heating Ltd v Orbit Group Ltd",
+  "description": "RHH challenged the award of domestic heating service contracts to Aaron Services Ltd on two grounds: (1) undisclosed conflict of interest due to a former Orbit employee moving to the parent company of the successful bidder, and (2) opaque scoring of RHH's tender. The court applied the American Cyanamid framework and found two separate serious issues to be tried, but lifted the automatic suspension as damages were deemed an adequate remedy for RHH if it ultimately succeeded.",
+  "contract_value_gbp": 0.0,
+  "dispute_type": "transparency_breach",
+  "procedural_stage": "automatic_suspension",
+  "contracting_authority_name": "Orbit Group Ltd",
+  "bidder_name": "Robert Heath Heating Ltd",
+  "ca_profile": null,
+  "bidder_profile": null
+}

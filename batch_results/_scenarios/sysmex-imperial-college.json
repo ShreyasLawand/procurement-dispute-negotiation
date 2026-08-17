@@ -1,0 +1,12 @@
+{
+  "dispute_id": "REAL-SYSMEX-2017",
+  "title": "Sysmex v Imperial College Healthcare NHS Trust",
+  "description": "Imperial College Healthcare NHS Trust ran a procurement for a managed service contract covering pathology equipment and services. Sysmex (UK) Ltd challenged the award to Abbott, alleging that Abbott's winning bid was based on unapproved prototype equipment. The dispute reached the Technology and Construction Court on whether to lift an automatic suspension on contract signature. Mr Justice Coulson held that damages would be an adequate remedy for the claimant, quantifiable by reference to the profit margin reflected in the claimant's own tender.",
+  "contract_value_gbp": 0.0,
+  "dispute_type": "automatic_suspension",
+  "procedural_stage": "interim_ruling",
+  "contracting_authority_name": "Imperial College Healthcare NHS Trust",
+  "bidder_name": "Sysmex (UK) Ltd",
+  "ca_profile": null,
+  "bidder_profile": null
+}
