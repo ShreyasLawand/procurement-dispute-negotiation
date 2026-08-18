@@ -1,0 +1,122 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-NEOLOGY-2020",
+    "title": "Neology UK Ltd v Newcastle City Council",
+    "description": "Neology challenged the award of an ANPR system contract to Siemens Mobility Ltd, alleging evaluation panel errors including unequal treatment and lack of transparency. The court dismissed a summary judgment application by the defendant authorities, holding Neology's criticisms were ordinary disagreements rather than evidence of breaches. The automatic suspension was lifted, allowing the Council to proceed with Siemens pending trial.",
+    "contract_value_gbp": 0.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "automatic_suspension",
+    "contracting_authority_name": "The Council of the City of Newcastle Upon Tyne",
+    "bidder_name": "Neology UK Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: Avoid unnecessary delays to critical ANPR system delivery",
+      "Continuity of Service / Delivery: Ensure timely implementation of the ANPR system for public safety and traffic management",
+      "Reputation & Public Accountability: Maintain transparency and fairness in procurement process to uphold public trust"
+    ],
+    "goals": [
+      "Defend the procurement decision, upholding the principles of good governance and compliance with the Procurement Act 2023"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our evaluation process, which was subject to rigorous scrutiny in court. We are willing to engage in constructive dialogue to address any genuine concerns.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Regulation 32(2) of the Public Contracts Regulations 2015"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: Potential loss of \u00a30 contract value, damage to reputation, and opportunity cost for our business",
+      "Fairness & Transparency: Perception of unfair treatment due to alleged evaluation panel errors, impacting future bid credibility",
+      "Protection of Reputation: Maintaining credibility with parent companies, shareholders, and partners in the face of perceived unfairness"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids or rerun the competition",
+      "Award damages for commercial loss and reputational damage"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "Request a detailed explanation of the evaluation panel's scoring methodology and alleged errors",
+    "legal_basis": [
+      "Public Contracts Regulations 2015 (PCR 2015), EU Remedies Directive"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge Neology's concerns regarding evaluation panel errors and unequal treatment. However, I'd like to clarify that the court's dismissal of the summary judgment application suggests that these criticisms are indeed ordinary disagreements rather than evidence of breaches. Can you provide specific examples or documentation that demonstrate how the evaluation panel's actions deviated from the published criteria? This would help me better understand your position and address any legitimate concerns.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your acknowledgement of our concerns regarding evaluation panel errors and unequal treatment. However, I'd like to clarify that the court's dismissal of the summary judgment application does not necessarily mean that Neology's criticisms were unfounded or without merit. In fact, we believe that the court's decision was based on a narrow interpretation of the legal framework rather than an exhaustive examination of the facts. Therefore, we would like to request access to the evaluation panel's scoring records and evaluator comments in order to better understand their thought process and identify any potential biases or inconsistencies. This information will enable us to provide specific examples and documentation that demonstrate how the evaluation panel's actions deviated from the published criteria.",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Procurement Act 2023 s12",
+        "Public Contracts Regulations 2015"
+      ],
+      "reasoning": "This scenario is qualitative, as there are no explicit formulas or sub-scores mentioned. The Contracting Authority's position acknowledges Neology's concerns but does not provide any evidence of compliance with the published criteria. The Aggrieved Bidder's request for access to evaluation panel scoring records and evaluator comments suggests that they have reason to believe that the evaluation process was flawed. I do not see any evidence in the scenario or the parties' statements that would allow me to perform a calculation or verify compliance through numerical means.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome of re-evaluation is more favorable than our BATNA (defending in TCC court, which would cost \u00a350k+ and take 6-12 months) as it allows us to proceed with the original contract award without significant additional costs or delays.",
+    "win_statement": "We successfully negotiated a re-evaluation process that maintains the integrity of the original contract award, avoiding costly and time-consuming litigation.",
+    "what_was_achieved": [
+      "Maintained the original contract award",
+      "Avoided significant additional costs (\u00a350k+)",
+      "Prevented lengthy court proceedings (6-12 months)"
+    ],
+    "what_was_conceded": [
+      "Provided access to evaluation panel's scoring records and evaluator comments",
+      "Allowed for re-evaluation of the contract award"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome of re-evaluation is better than pursuing damages or formal TCC proceedings, which would have been costly, slow, and uncertain. However, it's not a complete success as we didn't achieve our desired goal of having the contract cancelled.",
+    "win_statement": "We were able to secure a re-evaluation of the scoring challenge, which is a better outcome than pursuing legal action. This means that the Council will have to reassess their evaluation and potentially award the contract to a different bidder or revisit the original decision.",
+    "what_was_achieved": [
+      "Access to the evaluation panel's scoring records and evaluator comments",
+      "A re-evaluation of the scoring challenge"
+    ],
+    "what_was_conceded": [
+      "Our initial request for the contract to be cancelled was not successful",
+      "We had to compromise on the scope of the re-evaluation"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Evaluation panel errors and unequal treatment",
+      "Access to evaluation panel scoring records and evaluator comments"
+    ],
+    "concessions_summary": "Neither party made significant concessions during the negotiation. The Contracting Authority acknowledged Neology's concerns, but did not provide evidence of compliance with the published criteria. Neology requested access to evaluation panel scoring records and evaluator comments, which was not granted.",
+    "court_reasoning_summary": "The Court concluded that there was a manifest error in the evaluation process due to the lack of explicit formulas or sub-scores mentioned. The Contracting Authority's position did not provide sufficient evidence of compliance with the published criteria, while Neology's request for access to scoring records and evaluator comments suggested that they had reason to believe the evaluation process was flawed.",
+    "likely_next_steps": "The Court recommended a re-evaluation of the bids, which means that the Contracting Authority will need to re-score the bids using the original evaluation criteria. This may involve providing Neology with access to the scoring records and evaluator comments as requested.",
+    "plain_english_summary": "The negotiation was unsuccessful due to a lack of evidence from the Contracting Authority and concerns raised by Neology about the evaluation process. The Court recommended re-evaluation, which will give both parties another chance to address these issues."
+  }
+}

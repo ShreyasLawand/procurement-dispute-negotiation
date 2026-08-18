@@ -21,7 +21,7 @@ export function TranscriptThread({ messages, complianceChecks }: TranscriptThrea
         const compliance = complianceByRound.get(round);
 
         return (
-          <div key={round} className="flex flex-col gap-3">
+          <div key={round} className="flex animate-fade-in-up flex-col gap-3">
             <div className="flex items-center gap-3">
               <span className="text-xs font-semibold uppercase tracking-wide text-ink-muted">Round {round}</span>
               <div className="h-px flex-1 bg-hairline" />

@@ -12,7 +12,7 @@ export function OutcomeRibbon({ resolved, outcome }: OutcomeRibbonProps) {
   return (
     <div
       className={cn(
-        'flex items-center gap-3 rounded-xl border px-5 py-4',
+        'flex animate-scale-in items-center gap-3 rounded-xl border px-5 py-4 shadow-sm',
         resolved ? 'border-good/20 bg-good-soft' : 'border-warning/30 bg-warning-soft'
       )}
     >

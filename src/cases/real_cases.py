@@ -867,4 +867,89 @@ REAL_CASES = {
             "merits in this judgment."
         ),
     },
+    # --- Added 17 Aug 2026, same session as the round-2 batch above but researched
+    # separately after diminishing returns set in on finding new well-documented
+    # candidates — verified the same way as every other entry in this file.
+    "optima-health-dwp": {
+        "dispute_id": "REAL-OPTIMA-2024",
+        "contracting_authority_name": "Department for Work and Pensions",
+        "bidder_name": "Working on Wellbeing Ltd (t/a Optima Health)",
+        "source_text": (
+            "Working on Wellbeing Ltd (trading as Optima Health) v Secretary of State for "
+            "Work and Pensions [2024] EWHC 766 (TCC), reversed on appeal in Working on "
+            "Wellbeing Ltd t/a Optima Health v Secretary of State for Work and Pensions & "
+            "Anor [2025] EWCA Civ 127 (14 February 2025).\n\n"
+            "The Department for Work and Pensions (DWP) ran a procurement for a call-off "
+            "contract, under an existing framework agreement, for occupational health and "
+            "employee assistance programme services. The framework agreement provided that "
+            "suppliers could not charge prices in excess of the framework's own ceiling "
+            "prices for any call-off contract awarded under it. Optima Health submitted a "
+            "tender in which a small number of line items in its pricing schedule exceeded "
+            "the relevant framework prices — the tender documentation described these as "
+            "minor clerical errors. Optima's bid scored highest of all tenderers on "
+            "quality, and would have been the winning bid but for the pricing "
+            "non-compliance. DWP excluded Optima's entire bid from the competition on the "
+            "basis of the excess pricing, without first seeking clarification from Optima "
+            "about the apparent errors.\n\n"
+            "Optima challenged the exclusion. The case proceeded to a full trial before "
+            "Mr Justice Freedman. The High Court dismissed Optima's claim on all grounds, "
+            "holding that the tender documentation, read in its commercial context, made "
+            "clear that bids with prices exceeding the framework ceiling would or might be "
+            "excluded, and that DWP had therefore lawfully excluded Optima's "
+            "non-compliant bid. DWP successfully defended the exclusion decision at first "
+            "instance.\n\n"
+            "Optima appealed. On 14 February 2025 the Court of Appeal reversed the High "
+            "Court's decision. The Court of Appeal held that DWP had been wrong to exclude "
+            "Optima outright: given that the pricing errors were plainly minor, clerical "
+            "and immaterial to the substance of Optima's bid, DWP should instead have "
+            "sought clarification of the obvious errors before treating the bid as "
+            "non-compliant. As a consequence of that finding, the Court of Appeal held "
+            "that DWP should have awarded the contract to Optima, the highest-scoring "
+            "bidder on quality. This case is a clear illustration of a contracting "
+            "authority initially succeeding on a bid-exclusion decision at full trial, "
+            "only for that decision to be reversed on appeal for failing to seek "
+            "clarification of an immaterial, correctable error — a similar procedural "
+            "principle to the one that decided InHealth v NHS England elsewhere in this "
+            "corpus, but reaching the opposite result on its own facts."
+        ),
+    },
+    "neology-newcastle": {
+        "dispute_id": "REAL-NEOLOGY-2020",
+        "contracting_authority_name": "The Council of the City of Newcastle Upon Tyne",
+        "bidder_name": "Neology UK Ltd",
+        "source_text": (
+            "Neology UK Ltd v The Council of the City of Newcastle Upon Tyne & Ors [2020] "
+            "EWHC 2958 (TCC) — a ruling on an application for summary judgment and to "
+            "lift the automatic suspension, not a full merits trial; the underlying "
+            "scoring allegations were never themselves resolved at this stage.\n\n"
+            "Newcastle City Council, together with other defendant local authorities, ran "
+            "a procurement for an automatic number plate recognition (ANPR) system needed "
+            "to enforce a mandatory Clean Air Zone, part of the government's programme to "
+            "reduce nitrogen dioxide levels in major UK cities. Three tenderers "
+            "participated. The contract was awarded to Siemens Mobility Ltd. Neology UK "
+            "Ltd came third of the three bidders, with Siemens' winning score exceeding "
+            "Neology's by a margin of 6.49 percentage points.\n\n"
+            "Neology challenged the award, alleging that the evaluation panel had "
+            "fundamentally erred, including by penalising Neology's responses in ways "
+            "that breached the principles of equal treatment, transparency and "
+            "proportionality. Neology's challenge triggered an automatic suspension on "
+            "contract signature. Unusually, rather than simply applying to lift the "
+            "suspension, the defendant authorities applied for summary judgment against "
+            "Neology's claim, arguing it had no real prospect of success.\n\n"
+            "Mr Justice Kerr dismissed the application for summary judgment, holding the "
+            "case was wholly unsuitable for that procedure: the criticisms Neology made "
+            "were, in the judge's assessment, more in the nature of ordinary disagreement "
+            "with the scoring and the reasoning behind it than evidence of an actual "
+            "breach of equal treatment, transparency or proportionality — but that "
+            "assessment was not itself sufficient to dispose of the claim summarily "
+            "without a trial. Separately, the judge held that Neology had not shown it "
+            "would be unjust to confine it to a remedy in damages, and lifted the "
+            "automatic suspension so the Council could proceed to contract with Siemens "
+            "pending any full trial. This case, like the KBR and Sysmex suspension "
+            "rulings elsewhere in this corpus, is an interim-stage ruling favouring the "
+            "contracting authority; unlike those two, the procedural route here was a "
+            "summary judgment application rather than a suspension-lifting application, "
+            "adding a distinct procedural shape to this corpus's interim-ruling cases."
+        ),
+    },
 }

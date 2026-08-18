@@ -7,8 +7,8 @@ import { Stamp } from '../ui/Stamp';
 
 export function CaseCard({ entry }: { entry: ManifestCaseEntry }) {
   return (
-    <Link to={`/case/${entry.id}`} className="group block">
-      <Card className="flex h-full flex-col gap-3 transition-shadow group-hover:shadow-md">
+    <Link to={`/case/${entry.id}`} className="group block h-full">
+      <Card hoverable className="flex h-full flex-col gap-3">
         <div className="flex items-start justify-between gap-3">
           <span className="rounded-md bg-page px-2 py-1 text-xs font-semibold text-ink-secondary">
             {entry.scenarioId}

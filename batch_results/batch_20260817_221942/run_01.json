@@ -1,0 +1,119 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-OPTIMA-2024",
+    "title": "Optima Health v Secretary of State for Work and Pensions",
+    "description": "DWP excluded Optima's bid due to minor clerical errors in pricing schedule exceeding framework prices. The High Court upheld the exclusion, but the Court of Appeal reversed, holding that DWP should have sought clarification before treating the bid as non-compliant. The Court of Appeal found that Optima was the highest-scoring bidder on quality and should have been awarded the contract.",
+    "contract_value_gbp": 0.0,
+    "dispute_type": "process_avoidance",
+    "procedural_stage": "appeal",
+    "contracting_authority_name": "Department for Work and Pensions",
+    "bidder_name": "Working on Wellbeing Ltd (t/a Optima Health)",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Uphold the principles of transparency and equal treatment in procurement.",
+      "Protection of Public Funds: Avoid delays that increase costs or create service delivery gaps.",
+      "Reputation & Public Accountability: Maintain public confidence as a competent, fair and professional buyer."
+    ],
+    "goals": [
+      "Defend the exclusion of Optima's bid due to minor clerical errors in pricing schedule exceeding framework prices",
+      "Protect the integrity of the procurement process"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our original evaluation, which was upheld by the High Court. The Court of Appeal's ruling does not change the facts on the ground: Optima's bid contained errors that made it non-compliant with the framework prices.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Framework Agreement terms and conditions"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a30 contract value, but significant bid costs (\u00a350k-\u00a3100k) incurred for a lost opportunity to secure the contract and meet business plan targets.",
+      "Fairness & Transparency: Perceived unfair treatment due to minor clerical errors being grounds for exclusion, despite the Court of Appeal finding that DWP should have sought clarification.",
+      "Protection of Reputation: Maintaining credibility with parent companies, shareholders, and partners after internal messaging signalled a win."
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids to give Optima Health another chance to be awarded the contract",
+      "An award of damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "Seeking a re-run of the competition or an award of damages to compensate for the lost opportunity",
+    "legal_basis": [
+      "The Court of Appeal's decision that DWP should have sought clarification before excluding Optima's bid"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge that Optima Health was found to be the highest-scoring bidder on quality by the Court of Appeal. However, I would like to clarify whether you are suggesting that we should have awarded the contract to Optima despite the minor clerical errors in their pricing schedule exceeding framework prices. Could you please provide more context or justification for this claim?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I'd like to clarify whether you're suggesting that these minor clerical errors were not significant enough to exclude Optima's bid, despite exceeding framework prices. Can you explain what specific factors led you to consider the High Court's decision as correct, and how you would have proceeded differently if given the opportunity? Additionally, I'd appreciate more information on the scoring methodology used by your evaluators, particularly in relation to quality, which the Court of Appeal found Optima to excel in.",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Procurement Act 2023 s12(1)(a) - Value for money",
+        "Public Contracts Regulations 2015 Reg. 32(2)(b) - Exclusion grounds"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a discussion of minor clerical errors and their impact on the bid's compliance with framework prices. There are no explicit formulas or sub-scores provided in the scenario to compute. The Court of Appeal found that Optima was the highest-scoring bidder on quality, but the Contracting Authority excluded their bid due to minor clerical errors exceeding framework prices. This decision was upheld by the High Court but reversed by the Court of Appeal. I will assess compliance qualitatively, focusing on whether the published criteria language was applied in a way that is rationally defensible. The Contracting Authority's exclusion of Optima's bid appears to be based on a strict interpretation of framework prices, which may not have been proportionate or rational given the minor nature of the errors and Optima's high score on quality.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome is more favourable than our BATNA (defending in TCC court, which would cost \u00a350k+ and take 6-12 months) as we were able to avoid the significant costs and risks associated with litigation.",
+    "win_statement": "We successfully negotiated a re-evaluation of Optima's bid, taking into account the Court of Appeal's ruling that DWP should have sought clarification before excluding their bid due to minor clerical errors. Although we did not achieve a full win, as the contract was awarded to Optima, we were able to preserve our original decision-making process and avoid any further legal action.",
+    "what_was_achieved": [
+      "Preserved the integrity of our procurement process",
+      "Avoided significant costs associated with litigation"
+    ],
+    "what_was_conceded": [
+      "Awarding the contract to Optima, despite minor clerical errors in their pricing schedule",
+      "Some flexibility on re-evaluation criteria and scoring methodology"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is more favorable than my BATNA (pursuing damages or formal TCC proceedings) because we were able to achieve a re-evaluation of the bid, which resulted in Optima being awarded the contract. However, it's worth noting that this outcome was only possible due to the Court of Appeal's ruling, and not as a direct result of our negotiation efforts.",
+    "win_statement": "We successfully negotiated a re-evaluation of the bid, resulting in Optima Health being awarded the contract despite initial exclusion due to minor clerical errors. This outcome is a significant win for us, but it's tempered by the fact that we were not able to achieve any concessions from the contracting authority on damages or other related issues.",
+    "what_was_achieved": [
+      "Re-evaluation of the bid",
+      "Awarding of contract to Optima Health"
+    ],
+    "what_was_conceded": []
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Minor clerical errors in Optima Health's pricing schedule exceeding framework prices",
+      "Quality scoring methodology used by evaluators"
+    ],
+    "concessions_summary": "Neither party made explicit concessions during the negotiation. The Contracting Authority acknowledged Optima Health's high score on quality, but maintained that minor clerical errors were sufficient to exclude their bid.",
+    "court_reasoning_summary": "The Court found a manifest error in the Contracting Authority's decision-making process, recommending re-evaluation due to an apparent lack of proportionality and rationality in excluding Optima's bid based solely on minor clerical errors. The Court highlighted the importance of considering the overall context, including Optima's high quality score.",
+    "likely_next_steps": "The case will likely proceed with a re-evaluation of bids, taking into account the Court's recommendations and the Contracting Authority's revised approach to assessing compliance with framework prices.",
+    "plain_english_summary": "The dispute centered on whether minor errors in Optima Health's bid should have disqualified them from winning the contract. The Court agreed that this decision was unreasonable and recommended re-evaluation, suggesting a more nuanced assessment of compliance with framework prices."
+  }
+}

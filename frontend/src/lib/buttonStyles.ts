@@ -11,9 +11,12 @@ export type ButtonVariant = 'primary' | 'outline';
  */
 export function pillButtonClasses(variant: ButtonVariant = 'primary', className?: string): string {
   return cn(
-    'inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-bold transition-colors',
-    variant === 'primary' && 'bg-brand text-white hover:bg-brand-dark',
-    variant === 'outline' && 'border-2 border-brand text-brand hover:bg-brand-soft',
+    'inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-bold',
+    'transition-all duration-150 ease-out',
+    'hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]',
+    'disabled:pointer-events-none disabled:opacity-50 disabled:hover:translate-y-0',
+    variant === 'primary' && 'bg-brand text-white shadow-sm hover:bg-brand-dark hover:shadow-md',
+    variant === 'outline' && 'border-2 border-brand text-brand hover:bg-brand-soft hover:shadow-sm',
     className
   );
 }
