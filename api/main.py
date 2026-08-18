@@ -20,8 +20,14 @@ from src.agents.extraction_agent import ScenarioExtractionAgent
 from src.recommendation.settlement_recommendation import synthesize_recommendation
 from src.risk.challenge_risk import assess_challenge_risk
 from src.utils.document_extraction import combine_documents
+from src.utils.ollama_connection import current_status, resolve_ollama_host_at_startup
 
 BATCH_RESULTS_DIR = Path(__file__).resolve().parent.parent / "batch_results"
+
+# Must run before any agent is constructed below (or in api/sessions.py, on first
+# negotiation) — it sets OLLAMA_HOST in the process environment if nothing was already
+# configured and the Ronin GPU tunnel answers. See src/utils/ollama_connection.py.
+resolve_ollama_host_at_startup()
 
 app = FastAPI(title="Procurement Dispute Negotiation API")
 
@@ -35,6 +41,15 @@ app.add_middleware(
     allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
+
+
+@app.get("/api/system-status")
+def system_status():
+    """Which Ollama backend this server is using right now, and whether it's actually
+    reachable — the frontend polls this to show a GPU-connection hint. Re-checks
+    reachability live on every call (see current_status()'s docstring for why)."""
+    return current_status()
+
 
 # Module-level singleton, same pattern as graph_orchestrator.py's agents.
 _extractor = ScenarioExtractionAgent()
@@ -53,15 +68,38 @@ def extract(
     docs = [(f.filename or "document", f.file.read()) for f in files]
     if not docs:
         raise HTTPException(400, "No files uploaded")
-    source_text = combine_documents(docs)
 
-    with ollama_lock:
-        scenario = _extractor.extract_scenario(
-            source_text,
-            dispute_id=dispute_id,
-            contracting_authority_name=contracting_authority_name,
-            bidder_name=bidder_name,
-        )
+    try:
+        source_text = combine_documents(docs)
+    except ValueError as e:
+        # Unsupported file type, or a parser-level failure reading the file itself.
+        raise HTTPException(400, str(e)) from e
+
+    try:
+        with ollama_lock:
+            scenario = _extractor.extract_scenario(
+                source_text,
+                dispute_id=dispute_id,
+                contracting_authority_name=contracting_authority_name,
+                bidder_name=bidder_name,
+            )
+    except ValueError as e:
+        # Includes ScenarioExtractionAgent's own "not enough usable text" guard —
+        # a 400, since the problem is the uploaded document, not the server.
+        raise HTTPException(400, str(e)) from e
+    except Exception as e:
+        # Anything else (Ollama unreachable, model not pulled, malformed LLM output
+        # surviving the agent's own repair attempt) used to surface as a bare 500 with
+        # no detail — the frontend's ErrorState had nothing to show beyond "Extraction
+        # failed (500)". A specific, actionable message here is the fix, not a retry.
+        raise HTTPException(
+            502,
+            f"Could not reach the extraction model, or it returned something unusable: {e}. "
+            f"Check that Ollama is running and reachable (see OLLAMA_HOST if you're using "
+            f"the Ronin GPU tunnel — /api/system-status reports what this server is "
+            f"currently configured to use).",
+        ) from e
+
     return ExtractResponse(scenario=scenario)
 
 

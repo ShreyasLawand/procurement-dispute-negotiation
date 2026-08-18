@@ -4,6 +4,16 @@ from src.schemas.agent_state import DisputeScenario
 from src.utils.document_extraction import truncate_for_context
 from src.utils.compliance_metrics import parse_llm_json
 
+# Below this, there isn't plausibly enough real dispute content for a genuine extraction —
+# found by testing what this agent does with EMPTY source text (simulating a scanned/
+# image-based PDF that pypdf silently returns no text for, see document_extraction.py):
+# rather than erroring, the model fabricated an entire fictional scenario from nothing
+# (a specific contract value, a 60/40 scoring formula, a marks correction) with no
+# indication anything was wrong. That is exactly the failure mode this project's whole
+# anti-fabrication discipline exists to catch — caught here in the one place upstream of
+# every other check, so it never reaches the Court agent's grounding checks at all.
+MIN_SOURCE_TEXT_CHARS = 200
+
 
 class ScenarioExtractionAgent:
     """
@@ -33,6 +43,16 @@ class ScenarioExtractionAgent:
         contracting_authority_name: str | None = None,
         bidder_name: str | None = None,
     ) -> DisputeScenario:
+        stripped = source_text.strip()
+        if len(stripped) < MIN_SOURCE_TEXT_CHARS:
+            raise ValueError(
+                f"No usable text could be extracted from the uploaded document(s) — only "
+                f"{len(stripped)} character(s) of content found (need at least "
+                f"{MIN_SOURCE_TEXT_CHARS}). This usually means a scanned or image-based PDF "
+                f"with no text layer, a password-protected file, or an empty document. Try a "
+                f"text-based PDF, a .docx, or a .txt/.md file instead."
+            )
+
         truncated = truncate_for_context(source_text)
         user_message = EXTRACTION_USER_TEMPLATE.format(source_text=truncated)
 
