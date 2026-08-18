@@ -1,5 +1,4 @@
 import { Sparkles } from 'lucide-react';
-import { useState } from 'react';
 import { CaseFileView } from '../components/case-file/CaseFileView';
 import { PageContainer } from '../components/layout/PageContainer';
 import { GpuStatusBanner } from '../components/negotiate/GpuStatusBanner';
@@ -9,79 +8,25 @@ import { ScenarioPreviewCard } from '../components/negotiate/ScenarioPreviewCard
 import { Button } from '../components/ui/Button';
 import { ErrorState } from '../components/ui/ErrorState';
 import { MultiFileDropzone } from '../components/upload/MultiFileDropzone';
-import { API_BASE } from '../lib/api-config';
-import { useLiveNegotiation } from '../lib/useLiveNegotiation';
-import type { DisputeScenario } from '../types/negotiation';
-
-type Stage = 'upload' | 'preview' | 'running';
+import { useNegotiationDraft } from '../lib/negotiation-draft-context';
 
 export function NegotiatePage() {
-  const [stage, setStage] = useState<Stage>('upload');
-  const [files, setFiles] = useState<File[]>([]);
-  const [scenario, setScenario] = useState<DisputeScenario | null>(null);
-  const [maxRounds, setMaxRounds] = useState(3);
-  const [sessionId, setSessionId] = useState<string | null>(null);
-
-  const [extracting, setExtracting] = useState(false);
-  const [extractError, setExtractError] = useState<unknown>(null);
-  const [starting, setStarting] = useState(false);
-  const [startError, setStartError] = useState<unknown>(null);
-
-  const live = useLiveNegotiation(sessionId, scenario, maxRounds);
-
-  async function handleExtract() {
-    setExtracting(true);
-    setExtractError(null);
-    try {
-      const formData = new FormData();
-      for (const file of files) formData.append('files', file);
-      const res = await fetch(`${API_BASE}/api/extract`, { method: 'POST', body: formData });
-      if (!res.ok) {
-        const body = await res.json().catch(() => null);
-        throw new Error(body?.detail ?? `Extraction failed (${res.status})`);
-      }
-      const data = (await res.json()) as { scenario: DisputeScenario };
-      setScenario(data.scenario);
-      setStage('preview');
-    } catch (err) {
-      setExtractError(err);
-    } finally {
-      setExtracting(false);
-    }
-  }
-
-  async function handleStart() {
-    if (!scenario) return;
-    setStarting(true);
-    setStartError(null);
-    try {
-      const res = await fetch(`${API_BASE}/api/negotiations`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ scenario, max_rounds: maxRounds }),
-      });
-      if (!res.ok) {
-        const body = await res.json().catch(() => null);
-        throw new Error(body?.detail ?? `Could not start negotiation (${res.status})`);
-      }
-      const data = (await res.json()) as { session_id: string };
-      setSessionId(data.session_id);
-      setStage('running');
-    } catch (err) {
-      setStartError(err);
-    } finally {
-      setStarting(false);
-    }
-  }
-
-  function handleReset() {
-    setStage('upload');
-    setFiles([]);
-    setScenario(null);
-    setSessionId(null);
-    setExtractError(null);
-    setStartError(null);
-  }
+  const {
+    stage,
+    files,
+    setFiles,
+    scenario,
+    maxRounds,
+    setMaxRounds,
+    extracting,
+    extractError,
+    starting,
+    startError,
+    live,
+    handleExtract,
+    handleStart,
+    handleReset,
+  } = useNegotiationDraft();
 
   return (
     <PageContainer>
