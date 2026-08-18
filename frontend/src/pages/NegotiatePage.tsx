@@ -2,6 +2,7 @@ import { Sparkles } from 'lucide-react';
 import { useState } from 'react';
 import { CaseFileView } from '../components/case-file/CaseFileView';
 import { PageContainer } from '../components/layout/PageContainer';
+import { GpuStatusBanner } from '../components/negotiate/GpuStatusBanner';
 import { LiveStatusBar } from '../components/negotiate/LiveStatusBar';
 import { RiskScreenPanel } from '../components/negotiate/RiskScreenPanel';
 import { ScenarioPreviewCard } from '../components/negotiate/ScenarioPreviewCard';
@@ -97,6 +98,10 @@ export function NegotiatePage() {
             Start over
           </button>
         )}
+      </div>
+
+      <div className="mb-6">
+        <GpuStatusBanner />
       </div>
 
       {stage === 'upload' && (
