@@ -47,11 +47,13 @@ export function MultiFileDropzone({ files, onFilesChange, className }: MultiFile
           if (e.dataTransfer.files.length) addFiles(e.dataTransfer.files);
         }}
         className={cn(
-          'flex cursor-pointer flex-col items-center gap-2 rounded-xl border-2 border-dashed px-6 py-8 text-center transition-colors',
-          isDragging ? 'border-brand bg-brand-soft' : 'border-hairline bg-surface hover:border-ink-muted'
+          'flex cursor-pointer flex-col items-center gap-2 rounded-xl border-2 border-dashed px-6 py-8 text-center transition-all duration-200',
+          isDragging
+            ? 'scale-[1.01] border-brand bg-brand-soft shadow-md'
+            : 'border-hairline bg-surface hover:border-ink-muted hover:bg-page'
         )}
       >
-        <Upload className="h-6 w-6 text-ink-muted" />
+        <Upload className={cn('h-6 w-6 text-ink-muted transition-transform duration-200', isDragging && 'scale-110 text-brand')} />
         <p className="text-sm font-medium text-ink">Drop the case documents here</p>
         <p className="text-xs text-ink-muted">
           Framework documents, evaluation reports, complaint letters — {ACCEPTED_EXTENSIONS.join(', ')}. Add as many
@@ -75,7 +77,7 @@ export function MultiFileDropzone({ files, onFilesChange, className }: MultiFile
           {files.map((file) => (
             <li
               key={file.name}
-              className="flex items-center gap-2 rounded-md border border-hairline bg-surface px-3 py-2 text-sm"
+              className="animate-fade-in-up flex items-center gap-2 rounded-md border border-hairline bg-surface px-3 py-2 text-sm transition-colors hover:border-ink-muted"
             >
               <FileText className="h-4 w-4 shrink-0 text-ink-muted" />
               <span className="min-w-0 flex-1 truncate text-ink">{file.name}</span>

@@ -148,3 +148,33 @@ Managed Services [2014] EWHC 3193, Mears Ltd v Shoreline Housing Partnership [20
 EWHC 1396, and a handful of 2024-2026 Procurement Act 2023 cases mentioned only in
 passing during this round's searches) were not run to ground and are candidates for the
 next tranche rather than rejected outright.
+
+## 8. Addendum, same session: 2 more cases, corpus now 23
+
+Follow-up research after §7 turned up diminishing returns quickly — most new leads
+either weren't procurement disputes at all (Peterborough City Council v Enterprise
+Managed Services, checked and confirmed to be an unrelated FIDIC construction-contract
+dispute over a solar plant's output; Mears Ltd v Shoreline Housing Partnership,
+confirmed to be an NEC3 term-service-contract payment dispute, not a procurement
+scoring challenge — both explicitly wrong leads from §7, now resolved rather than left
+open) or repeated already-covered patterns (standing/preliminary-issue rulings like IGT
+v Gambling Commission, more interim suspension rulings like Alstom v Network Rail and
+Boxxe v SoS Justice). Rather than pad the corpus with weaker matches, added the two
+genuinely new, well-verified finds and stopped:
+
+- **Optima Health v DWP** — [2024] EWHC 766 (TCC), Freedman J: DWP won at first
+  instance (lawful exclusion of a bid with minor pricing non-compliance). Reversed on
+  appeal in [2025] EWCA Civ 127: the Court of Appeal held DWP should have sought
+  clarification of an obviously minor, correctable error rather than excluding the bid
+  outright, and should have awarded the contract to Optima. Real disposition: **DWP
+  ultimately lost.** Run at n=3 (active/V4): 3/3 "re-evaluation" — **correct direction**,
+  extending this round's merits-case tally to 7/8.
+- **Neology UK v Newcastle City Council** — [2020] EWHC 2958 (TCC), an interim ruling
+  of a different procedural shape than any other case in this corpus (a summary
+  judgment application, not a suspension-lifting application), adding genuine
+  procedural diversity rather than a repeat pattern. Run at n=3: 3/3 "re-evaluation" —
+  not scored against a merits disposition, same reasoning as every other interim case
+  here.
+
+Corpus: **23 cases**, 14 genuine merits-trial dispositions and 9 well-documented
+interim-only rulings drawn from this round's two tranches combined with the original 8.

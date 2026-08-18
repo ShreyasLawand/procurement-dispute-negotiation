@@ -60,21 +60,38 @@ const STEPS = [
 export function HomePage() {
   return (
     <div>
-      <section className="bg-brand-soft">
-        <PageContainer className="py-16 sm:py-20">
+      <section className="relative overflow-hidden bg-brand-soft">
+        {/* A quiet radial glow + dot grid, brand-tinted and low-opacity — texture, not
+            decoration competing for attention. Purely decorative, hidden from AT. */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0"
+          style={{
+            backgroundImage:
+              'radial-gradient(circle at 15% 20%, color-mix(in srgb, var(--color-brand) 12%, transparent), transparent 45%), radial-gradient(circle at 85% 0%, color-mix(in srgb, var(--color-brand) 10%, transparent), transparent 40%), radial-gradient(color-mix(in srgb, var(--color-brand) 18%, transparent) 1px, transparent 1px)',
+            backgroundSize: 'auto, auto, 22px 22px',
+          }}
+        />
+        <PageContainer className="relative py-16 sm:py-20">
           <div className="max-w-2xl">
-            <span className="inline-block rounded-full bg-white/60 px-3 py-1 text-xs font-bold uppercase tracking-wide text-brand-dark">
+            <span className="animate-fade-in-up inline-block rounded-full bg-white/60 px-3 py-1 text-xs font-bold uppercase tracking-wide text-brand-dark">
               Procurement with Purpose
             </span>
-            <h1 className="mt-4 text-4xl font-black leading-tight text-ink sm:text-5xl">
+            <h1
+              className="animate-fade-in-up mt-4 text-4xl font-black leading-tight text-ink sm:text-5xl"
+              style={{ animationDelay: '0.08s' }}
+            >
               Multi-agent AI negotiation for procurement disputes
             </h1>
-            <p className="mt-4 text-base leading-relaxed text-ink-secondary sm:text-lg">
+            <p
+              className="animate-fade-in-up mt-4 text-base leading-relaxed text-ink-secondary sm:text-lg"
+              style={{ animationDelay: '0.16s' }}
+            >
               Upload a real dispute and watch a Contracting Authority, an Aggrieved Bidder, and a Court agent
               negotiate it round by round — grounded in the UK Procurement Act 2023 and modelled on the Technology
               and Construction Court.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="animate-fade-in-up mt-8 flex flex-wrap gap-3" style={{ animationDelay: '0.24s' }}>
               <Link to="/negotiate" className={pillButtonClasses('primary')}>
                 <Upload className="h-4 w-4" />
                 Run a live negotiation
@@ -91,8 +108,12 @@ export function HomePage() {
         <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-muted">How it works</h2>
         <div className="mt-4 grid gap-6 sm:grid-cols-3">
           {STEPS.map((step, i) => (
-            <div key={step.title} className="flex flex-col gap-2">
-              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand text-sm font-black text-white">
+            <div
+              key={step.title}
+              className="animate-fade-in-up flex flex-col gap-2"
+              style={{ animationDelay: `${i * 0.08}s` }}
+            >
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand text-sm font-black text-white transition-transform duration-200 hover:scale-110">
                 {i + 1}
               </span>
               <p className="font-semibold text-ink">{step.title}</p>
@@ -105,9 +126,15 @@ export function HomePage() {
       <PageContainer className="pb-16">
         <h2 className="text-sm font-semibold uppercase tracking-wide text-ink-muted">The four agents</h2>
         <div className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {FEATURES.map((feature) => (
-            <div key={feature.title} className="flex flex-col items-start gap-3">
-              <span className={`flex h-12 w-12 items-center justify-center rounded-full ${feature.badgeClass}`}>
+          {FEATURES.map((feature, i) => (
+            <div
+              key={feature.title}
+              className="animate-fade-in-up group flex flex-col items-start gap-3"
+              style={{ animationDelay: `${i * 0.08}s` }}
+            >
+              <span
+                className={`flex h-12 w-12 items-center justify-center rounded-full transition-transform duration-200 ease-out group-hover:scale-110 group-hover:rotate-6 ${feature.badgeClass}`}
+              >
                 <feature.icon className="h-5 w-5" />
               </span>
               <p className="font-semibold text-ink">{feature.title}</p>

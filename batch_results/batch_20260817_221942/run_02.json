@@ -1,0 +1,124 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-OPTIMA-2024",
+    "title": "Optima Health v Secretary of State for Work and Pensions",
+    "description": "DWP excluded Optima's bid due to minor clerical errors in pricing schedule exceeding framework prices. The High Court upheld the exclusion, but the Court of Appeal reversed, holding that DWP should have sought clarification before treating the bid as non-compliant. The Court of Appeal found that Optima was the highest-scoring bidder on quality and should have been awarded the contract.",
+    "contract_value_gbp": 0.0,
+    "dispute_type": "process_avoidance",
+    "procedural_stage": "appeal",
+    "contracting_authority_name": "Department for Work and Pensions",
+    "bidder_name": "Working on Wellbeing Ltd (t/a Optima Health)",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Act lawfully and within powers under the Procurement Act 2023 to avoid manifest error and unfairness.",
+      "Protection of Public Funds: Avoid delays that increase costs or create service delivery gaps, particularly given the \u00a30 contract value.",
+      "Continuity of Service / Delivery: Deliver a critical wellbeing service for vulnerable populations, with operational consequences of delay including prolonged suffering and potential harm.",
+      "Reputation & Public Accountability: Maintain public confidence in DWP's procurement processes to justify taxpayers' money spent on this framework."
+    ],
+    "goals": [
+      "Defend the exclusion decision as lawful and rational",
+      "Maintain transparency and fairness throughout the dispute resolution process"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our original evaluation, which excluded Optima's bid due to minor clerical errors exceeding framework prices. We are willing to provide additional feedback and transparency within the bounds of commercial sensitivity.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Framework agreement terms"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a30 contract value indicates significant lost revenue opportunity, and bid costs (\u00a350k-\u00a3100k) are unrecoverable if we don't secure the contract.",
+      "Fairness & Transparency: We want a clear explanation for DWP's evaluation process, including scoring methodology, to ensure our quality scores were accurately reflected.",
+      "Future Competition Considerations: We need assurance that similar minor clerical errors won't lead to exclusion in future procurements."
+    ],
+    "goals": [
+      "Force the competition to be re-run, giving us a chance to be awarded the contract ourselves",
+      "Award of damages for lost revenue and bid costs"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We believe DWP's evaluation process was flawed and we should have been awarded the contract. We request a re-evaluation of all bids to ensure fairness and transparency.",
+    "legal_basis": [
+      "Court of Appeal ruling",
+      "High Court judgment"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Optima's concerns regarding the exclusion of their bid due to minor clerical errors in pricing schedule exceeding framework prices. However, we must clarify that our evaluation process was guided by the published evaluation criteria and the framework agreement terms. Can you specify which particular aspects of the Court of Appeal's decision you believe were not adequately addressed in our original response?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your clarification that the evaluation process was guided by the published evaluation criteria and the framework agreement terms. However, we would like to understand what specific steps DWP took to clarify the pricing schedule discrepancies with Optima before excluding our bid from the competition. Can you provide a detailed account of these interactions? Furthermore, given the Court of Appeal's ruling that Optima was the highest-scoring bidder on quality, do you intend to re-evaluate the bids and award the contract to us as per their decision?",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Procurement Act 2023 s12(1)(a) - value for money",
+        "Public Contracts Regulations 2015 Reg 32(2)(b) - exclusion of bidders"
+      ],
+      "reasoning": "This scenario is qualitative (Step 2B). The Court of Appeal's decision implies that the Contracting Authority did not follow a lawful process. Specifically, they should have sought clarification from Optima before excluding their bid due to minor clerical errors. This was a manifest error as it led to an incorrect exclusion of the highest-scoring bidder on quality.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiated outcome is more favorable than our BATNA, as it avoids the significant costs and risks associated with a lengthy court battle. Although we were not able to fully reverse the Court of Appeal's decision, we have managed to re-evaluate the bids and award the contract in accordance with their ruling.",
+    "win_statement": "We successfully navigated the dispute resolution process, ensuring that our original evaluation decisions were upheld while also addressing the concerns raised by Optima. The negotiated outcome reflects a balanced approach, taking into account both our contractual obligations and the Court of Appeal's decision.",
+    "what_was_achieved": [
+      "Re-evaluation of bids to award contract in accordance with Court of Appeal's ruling",
+      "Avoidance of significant costs and risks associated with a lengthy court battle"
+    ],
+    "what_was_conceded": [
+      "Awarding the contract to Optima, despite their minor clerical errors in pricing schedule exceeding framework prices",
+      "Re-evaluation of bids, which may have implications for future procurement processes"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "Favourable outcome relative to BATNA. The Court of Appeal's decision has led to a re-evaluation, which is a better result than pursuing damages or formal TCC proceedings.",
+    "win_statement": "We successfully secured a re-evaluation of the bids and are now in line for contract award as per the Court of Appeal's ruling that we were the highest-scoring bidder on quality.",
+    "what_was_achieved": [
+      "Re-evaluation of the bids",
+      "Potential contract award"
+    ],
+    "what_was_conceded": [
+      "Minor clerical errors in pricing schedule exceeding framework prices",
+      "Need for clarification before excluding bid from competition"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Exclusion of Optima's bid due to minor clerical errors in pricing schedule",
+      "Contracting Authority's evaluation process and communication with Optima"
+    ],
+    "concessions_summary": "Neither side made significant concessions during the negotiation. The Contracting Authority acknowledged Optima's concerns but maintained that their evaluation process was guided by published criteria and framework agreement terms.",
+    "court_reasoning_summary": "The Court concluded that the Contracting Authority did not follow a lawful process, specifically failing to seek clarification from Optima before excluding their bid. This led to an incorrect exclusion of the highest-scoring bidder on quality, which was deemed a manifest error.",
+    "likely_next_steps": "Re-evaluation of bids is recommended by the Court. The Contracting Authority will likely re-evaluate the bids and award the contract according to the correct process.",
+    "plain_english_summary": "The dispute centered around whether Optima's bid should have been excluded due to minor errors in their pricing schedule. The Court ruled that the Contracting Authority made a mistake by not seeking clarification from Optima before excluding their bid, which was the highest-scoring bidder on quality. As a result, the contract will likely be re-evaluated and awarded according to the correct process."
+  }
+}

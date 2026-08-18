@@ -6,8 +6,8 @@ import { Card } from '../ui/Card';
 
 export function BatchCard({ entry }: { entry: ManifestBatchEntry }) {
   return (
-    <Link to={`/analytics?batches=${entry.id}`} className="group block">
-      <Card className="flex h-full flex-col gap-3 transition-shadow group-hover:shadow-md">
+    <Link to={`/analytics?batches=${entry.id}`} className="group block h-full">
+      <Card hoverable className="flex h-full flex-col gap-3">
         <div className="flex items-start justify-between gap-3">
           <span className="rounded-md bg-page px-2 py-1 text-xs font-semibold text-ink-secondary">
             {entry.scenarioId}
