@@ -62,10 +62,6 @@ def connect_gpu():
     return connect_to_ronin()
 
 
-# Module-level singleton, same pattern as graph_orchestrator.py's agents.
-_extractor = ScenarioExtractionAgent()
-
-
 @app.post("/api/extract", response_model=ExtractResponse)
 def extract(
     files: list[UploadFile] = File(...),
@@ -88,7 +84,18 @@ def extract(
 
     try:
         with ollama_lock:
-            scenario = _extractor.extract_scenario(
+            # Built fresh per request, NOT a module-level singleton (that was the bug: a
+            # ChatOllama client resolves OLLAMA_HOST into a fixed ollama.Client host exactly
+            # once, at construction — see langchain_ollama's `_set_clients` model_validator.
+            # A singleton built at server startup, before "Connect to GPU" repoints
+            # OLLAMA_HOST, silently kept sending every extraction to local CPU Ollama
+            # forever after, even though /api/system-status correctly reported the tunnel
+            # as connected. Reproduced live: a single extraction took 6-7 minutes on a
+            # server whose singleton predated a GPU reconnect, vs ~10s fresh. Same reason
+            # graph_orchestrator.py's build_agents() is called per negotiation rather than
+            # once — this now matches that pattern instead of being the one exception to it.
+            extractor = ScenarioExtractionAgent()
+            scenario = extractor.extract_scenario(
                 source_text,
                 dispute_id=dispute_id,
                 contracting_authority_name=contracting_authority_name,
