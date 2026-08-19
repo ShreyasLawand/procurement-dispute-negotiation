@@ -1,5 +1,5 @@
 import { Play } from 'lucide-react';
-import { fmtGBP } from '../../lib/format';
+import { fmtContractChip } from '../../lib/format';
 import type { DisputeScenario } from '../../types/negotiation';
 import { Button } from '../ui/Button';
 import { Card } from '../ui/Card';
@@ -34,7 +34,7 @@ export function ScenarioPreviewCard({
       <div className="flex flex-wrap gap-2">
         <Chip>{scenario.dispute_type.replace(/_/g, ' ')}</Chip>
         <Chip>{scenario.procedural_stage.replace(/_/g, ' ')}</Chip>
-        <Chip>{fmtGBP(scenario.contract_value_gbp)} contract</Chip>
+        <Chip>{fmtContractChip(scenario.contract_value_gbp)}</Chip>
       </div>
 
       <div className="flex flex-wrap items-center gap-x-6 gap-y-1 border-t border-hairline pt-4 text-sm text-ink-secondary">

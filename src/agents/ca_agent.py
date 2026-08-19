@@ -1,5 +1,10 @@
 from langchain_ollama import ChatOllama
-from src.utils.negotiation_helpers import is_repetitive, format_previous_statements, get_round_stage_instruction
+from src.utils.negotiation_helpers import (
+    is_repetitive,
+    format_previous_statements,
+    get_round_stage_instruction,
+    format_contract_value,
+)
 from src.prompts.ca_prompt import CA_SYSTEM_PROMPT, CA_WIN_STATEMENT_PROMPT, build_ca_system_prompt
 from src.schemas.agent_state import PreNegotiationStatement, DisputeScenario, AgentRole, RoundResponse, WinStatement, CAProfile
 from src.utils.event_stream import emit_status
@@ -16,13 +21,15 @@ class ContractingAuthorityAgent:
         self.system_prompt = build_ca_system_prompt(profile)
 
     def build_scenario_context(self, scenario: DisputeScenario) -> str:
+        governing_legislation = scenario.governing_legislation or "Procurement Act 2023 (default — not otherwise stated in the source)"
         return f"""
 DISPUTE DETAILS:
 - Dispute ID: {scenario.dispute_id}
 - Title: {scenario.title}
-- Contract Value: £{scenario.contract_value_gbp:,.0f}
+- Contract Value: {format_contract_value(scenario.contract_value_gbp)}
 - Dispute Type: {scenario.dispute_type}
 - Procedural Stage: {scenario.procedural_stage}
+- Governing Legislation: {governing_legislation}
 - Your Organisation: {scenario.contracting_authority_name}
 - Challenging Party: {scenario.bidder_name}
 
@@ -32,14 +39,18 @@ DISPUTE DESCRIPTION:
 
     def get_pre_negotiation_statement(self, scenario: DisputeScenario) -> PreNegotiationStatement:
         scenario_context = self.build_scenario_context(scenario)
+        governing_legislation = scenario.governing_legislation or "the Procurement Act 2023"
 
         user_message = f"""
 {scenario_context}
 
 You are now entering pre-negotiation. Based on this dispute, provide your
 pre-negotiation statement as a JSON object. Be specific to this scenario —
-reference the scoring challenge, the £{scenario.contract_value_gbp:,.0f} contract,
-and your legal position under the Procurement Act 2023.
+reference the actual dispute at issue, the contract value shown above (exactly
+as shown — do not invent a figure if it says "Not stated"), and your legal
+position under {governing_legislation}, the legislation actually governing
+THIS dispute (see "Governing Legislation" above — do not cite the Procurement
+Act 2023 for a case governed by an earlier regime).
 
 For "interests", work from your seven primary interests & drivers, but do NOT
 simply list the category names back. Select only the categories genuinely engaged
@@ -51,6 +62,16 @@ delivers, and the concrete operational consequence of delay or a re-run given th
 facts>"
 Fill the angle brackets with the real facts of this dispute. Do not reproduce the
 bracketed wording itself.
+
+ANTI-FABRICATION — numbers in "interests": only state a specific monetary figure,
+percentage, or other number if it actually appears in the DISPUTE DETAILS or
+DISPUTE DESCRIPTION above. Many real disputes do not state cost or value figures
+for every interest a party has — if the facts above give you a number, use it
+exactly; if they do not, describe the exposure in general, non-numeric terms (e.g.
+"significant delay costs and reputational exposure" rather than inventing "£85,000
+in delay costs"). Inventing a plausible-sounding figure that is not in the facts
+above is a fabrication, not a reasonable inference — treat it exactly as
+seriously as inventing a scoring formula would be.
 
 "batna" and "opening_position" MUST each be a single plain-English string —
 NEVER a nested JSON object.

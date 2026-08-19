@@ -2,6 +2,7 @@ from src.utils.compliance_metrics import parse_llm_json, metrics
 from langchain_ollama import ChatOllama
 from src.schemas.agent_state import NegotiationSummary, NegotiationState
 from src.prompts.summary_prompt import SUMMARY_SYSTEM_PROMPT
+from src.utils.negotiation_helpers import format_contract_value
 
 class SummaryAgent:
 
@@ -29,7 +30,7 @@ class SummaryAgent:
 
         user_message = f"""
 DISPUTE: {state.scenario.title}
-CONTRACT VALUE: £{state.scenario.contract_value_gbp:,.0f}
+CONTRACT VALUE: {format_contract_value(state.scenario.contract_value_gbp)}
 FINAL OUTCOME: {state.resolution_outcome}
 
 NEGOTIATION TRANSCRIPT:

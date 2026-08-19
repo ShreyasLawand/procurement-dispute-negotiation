@@ -1,5 +1,19 @@
 from difflib import SequenceMatcher
-from typing import List
+from typing import List, Optional
+
+
+def format_contract_value(value: Optional[float]) -> str:
+    """
+    Renders a scenario's contract_value_gbp for inclusion in an agent prompt.
+    None means "not stated in the source document" - a genuinely different fact
+    from "the contract is worth £0" - so it must render as plainly unknown, not
+    silently become "£0" (which reads to the model as a real fact about the case
+    and gets treated as ground truth by downstream reasoning). See
+    real-case-test-findings.md, bug #1/#2.
+    """
+    if value is None:
+        return "Not stated in the source documents"
+    return f"£{value:,.0f}"
 
 
 def similarity(a: str, b: str) -> float:

@@ -1,5 +1,10 @@
 from langchain_ollama import ChatOllama
-from src.utils.negotiation_helpers import is_repetitive, format_previous_statements, get_round_stage_instruction
+from src.utils.negotiation_helpers import (
+    is_repetitive,
+    format_previous_statements,
+    get_round_stage_instruction,
+    format_contract_value,
+)
 from src.prompts.bidder_prompt import BIDDER_SYSTEM_PROMPT, BIDDER_WIN_STATEMENT_PROMPT, build_bidder_system_prompt
 from src.schemas.agent_state import PreNegotiationStatement, DisputeScenario, AgentRole, RoundResponse, WinStatement, BidderProfile
 from src.utils.event_stream import emit_status
@@ -16,13 +21,15 @@ class AggrievedBidderAgent:
         self.system_prompt = build_bidder_system_prompt(profile)
 
     def build_scenario_context(self, scenario: DisputeScenario) -> str:
+        governing_legislation = scenario.governing_legislation or "Procurement Act 2023 (default — not otherwise stated in the source)"
         return f"""
 DISPUTE DETAILS:
 - Dispute ID: {scenario.dispute_id}
 - Title: {scenario.title}
-- Contract Value: £{scenario.contract_value_gbp:,.0f}
+- Contract Value: {format_contract_value(scenario.contract_value_gbp)}
 - Dispute Type: {scenario.dispute_type}
 - Procedural Stage: {scenario.procedural_stage}
+- Governing Legislation: {governing_legislation}
 - Contracting Authority: {scenario.contracting_authority_name}
 - Your Organisation: {scenario.bidder_name}
 
@@ -46,9 +53,19 @@ by these facts, and write each entry as:
 TOO VAGUE (category name alone): "Commercial Loss & Recovery"
 CORRECT SHAPE: "Commercial Loss & Recovery: <the specific commercial exposure these
 facts create for you — cite the actual figures, timescales and consequences from the
-dispute details above>"
+dispute details above, IF they are actually stated there>"
 Fill the angle brackets with the real facts of this dispute. Do not reproduce the
 bracketed wording itself.
+
+ANTI-FABRICATION — numbers in "interests": only state a specific monetary figure,
+percentage, or other number if it actually appears in the DISPUTE DETAILS or
+DISPUTE DESCRIPTION above. Many real disputes do not state a bid cost, lost-revenue,
+or investment figure at all — if the facts above give you a number, use it exactly;
+if they do not, describe the commercial exposure in general, non-numeric terms (e.g.
+"a significant investment of time and resource in preparing this bid" rather than
+inventing "a £150,000 investment"). Inventing a plausible-sounding figure that is not
+in the facts above is a fabrication, not a reasonable inference — treat it exactly as
+seriously as inventing a scoring formula would be.
 
 Your "batna" must also be specific to your actual circumstances here — what
 pursuing this through the TCC would realistically cost YOU, given your size,

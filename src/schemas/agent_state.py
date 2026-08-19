@@ -110,9 +110,20 @@ class DisputeScenario(BaseModel):
     dispute_id: str
     title: str
     description: str
-    contract_value_gbp: float
+    # None means "not stated in the source" - genuinely different from a £0 contract,
+    # and must be treated as such downstream (see format_contract_value() in
+    # negotiation_helpers.py) rather than defaulting to 0, which reads as a real
+    # zero-value contract rather than an unknown one. See real-case-test-findings.md.
+    contract_value_gbp: Optional[float] = None
     dispute_type: str
     procedural_stage: str
+    # The actual legislation/regulations governing this dispute (e.g. "Public
+    # Contracts Regulations 2006", "Procurement Act 2023"), extracted from the
+    # source rather than assumed - a case predating the 2023 Act cannot be governed
+    # by it. None means not stated/inferrable in the source; downstream agents fall
+    # back to the Procurement Act 2023 default in that case (see build_ca_system_prompt
+    # and build_scenario_context in ca_agent.py/bidder_agent.py).
+    governing_legislation: Optional[str] = None
     contracting_authority_name: str
     bidder_name: str
 

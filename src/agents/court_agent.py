@@ -2,6 +2,7 @@ from src.utils.compliance_metrics import parse_llm_json, metrics
 from langchain_ollama import ChatOllama
 from src.schemas.agent_state import ComplianceAssessment, DisputeScenario
 from src.prompts.court_prompt import COURT_SYSTEM_PROMPT
+from src.utils.negotiation_helpers import format_contract_value
 
 
 class CourtAgent:
@@ -17,7 +18,7 @@ class CourtAgent:
         user_message = f"""
 FULL DISPUTE SCENARIO (contains the ground-truth facts you must verify against):
 Title: {scenario.title}
-Contract Value: £{scenario.contract_value_gbp:,.0f}
+Contract Value: {format_contract_value(scenario.contract_value_gbp)}
 Description:
 {scenario.description}
 
