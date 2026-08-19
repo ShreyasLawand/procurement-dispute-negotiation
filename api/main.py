@@ -20,7 +20,7 @@ from src.agents.extraction_agent import ScenarioExtractionAgent
 from src.recommendation.settlement_recommendation import synthesize_recommendation
 from src.risk.challenge_risk import assess_challenge_risk
 from src.utils.document_extraction import combine_documents
-from src.utils.ollama_connection import current_status, resolve_ollama_host_at_startup
+from src.utils.ollama_connection import connect_to_ronin, current_status, resolve_ollama_host_at_startup
 
 BATCH_RESULTS_DIR = Path(__file__).resolve().parent.parent / "batch_results"
 
@@ -49,6 +49,17 @@ def system_status():
     reachable — the frontend polls this to show a GPU-connection hint. Re-checks
     reachability live on every call (see current_status()'s docstring for why)."""
     return current_status()
+
+
+@app.post("/api/connect-gpu")
+def connect_gpu():
+    """(Re)establishes the SSH tunnel to the Ronin GPU and points OLLAMA_HOST at it — the
+    frontend's "Connect to GPU" button calls this so a dropped tunnel (laptop sleep, network
+    blip) can be brought back up without a terminal. Can take up to ~20s (see
+    ollama_connection.CONNECT_TIMEOUT_SECONDS); a plain `def` runs it in FastAPI's threadpool
+    rather than blocking the event loop. Returns 200 with success=false (not an HTTPException)
+    on failure — this is an expected, user-facing outcome, not a server error."""
+    return connect_to_ronin()
 
 
 # Module-level singleton, same pattern as graph_orchestrator.py's agents.
