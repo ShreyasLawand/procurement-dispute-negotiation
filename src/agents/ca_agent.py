@@ -45,12 +45,11 @@ DISPUTE DESCRIPTION:
 {scenario_context}
 
 You are now entering pre-negotiation. Based on this dispute, provide your
-pre-negotiation statement as a JSON object. Be specific to this scenario —
-reference the actual dispute at issue, the contract value shown above (exactly
-as shown — do not invent a figure if it says "Not stated"), and your legal
-position under {governing_legislation}, the legislation actually governing
-THIS dispute (see "Governing Legislation" above — do not cite the Procurement
-Act 2023 for a case governed by an earlier regime).
+pre-negotiation statement as a JSON object. Be specific to this scenario,
+reference the contract value shown above exactly as shown (do not invent a
+figure if it says "Not stated"), and cite {governing_legislation} — the
+legislation actually governing THIS dispute, not the Procurement Act 2023 by
+default.
 
 For "interests", work from your seven primary interests & drivers, but do NOT
 simply list the category names back. Select only the categories genuinely engaged
@@ -63,15 +62,11 @@ facts>"
 Fill the angle brackets with the real facts of this dispute. Do not reproduce the
 bracketed wording itself.
 
-ANTI-FABRICATION — numbers in "interests": only state a specific monetary figure,
-percentage, or other number if it actually appears in the DISPUTE DETAILS or
-DISPUTE DESCRIPTION above. Many real disputes do not state cost or value figures
-for every interest a party has — if the facts above give you a number, use it
-exactly; if they do not, describe the exposure in general, non-numeric terms (e.g.
-"significant delay costs and reputational exposure" rather than inventing "£85,000
-in delay costs"). Inventing a plausible-sounding figure that is not in the facts
-above is a fabrication, not a reasonable inference — treat it exactly as
-seriously as inventing a scoring formula would be.
+ANTI-FABRICATION — numbers in "interests": only cite a monetary figure or
+percentage if it actually appears in the DISPUTE DETAILS/DESCRIPTION above. If
+none is given, describe the exposure in general terms (e.g. "significant delay
+costs") rather than inventing one (e.g. a fabricated "£85,000") — an invented
+figure is exactly as serious a fabrication as an invented scoring formula.
 
 "batna" and "opening_position" MUST each be a single plain-English string —
 NEVER a nested JSON object.
@@ -92,7 +87,23 @@ Respond ONLY with valid JSON, no other text before or after.
 
         data = parse_llm_json(raw_text, agent="ContractingAuthorityAgent", call="pre_negotiation")
 
-        return PreNegotiationStatement(**data)
+        try:
+            return PreNegotiationStatement(**data)
+        except Exception as first_error:
+            # A longer, more instruction-dense user_message (anti-fabrication +
+            # governing-legislation guidance) measurably raised the rate of the
+            # model dropping a required field under json mode — first observed
+            # as a 3/8 batch failure rate on Faraday with zero prior failures in
+            # the whole batch_results corpus. One repair attempt, same pattern
+            # already used by ScenarioExtractionAgent for the same reason.
+            repair_message = (
+                f"{user_message}\n\n"
+                f"Your previous JSON response was invalid: {first_error}\n"
+                f"Return corrected JSON only, matching the exact structure requested."
+            )
+            response = self.llm.invoke([("system", self.system_prompt), ("user", repair_message)])
+            data = parse_llm_json(response.content.strip(), agent="ContractingAuthorityAgent", call="pre_negotiation_repair")
+            return PreNegotiationStatement(**data)
 
     def respond_to_round(self, scenario: DisputeScenario, conversation_history: list,
                           round_number: int, max_rounds: int = 3) -> RoundResponse:

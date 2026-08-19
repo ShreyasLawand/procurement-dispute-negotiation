@@ -15,10 +15,12 @@ class CourtAgent:
         self.system_prompt = system_prompt or COURT_SYSTEM_PROMPT
 
     def assess_round(self, scenario: DisputeScenario, ca_message: str, bidder_message: str, round_number: int) -> ComplianceAssessment:
+        governing_legislation = scenario.governing_legislation or "Procurement Act 2023 (default — not otherwise stated in the source)"
         user_message = f"""
 FULL DISPUTE SCENARIO (contains the ground-truth facts you must verify against):
 Title: {scenario.title}
 Contract Value: {format_contract_value(scenario.contract_value_gbp)}
+Governing Legislation: {governing_legislation}
 Description:
 {scenario.description}
 

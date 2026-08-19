@@ -57,15 +57,12 @@ dispute details above, IF they are actually stated there>"
 Fill the angle brackets with the real facts of this dispute. Do not reproduce the
 bracketed wording itself.
 
-ANTI-FABRICATION — numbers in "interests": only state a specific monetary figure,
-percentage, or other number if it actually appears in the DISPUTE DETAILS or
-DISPUTE DESCRIPTION above. Many real disputes do not state a bid cost, lost-revenue,
-or investment figure at all — if the facts above give you a number, use it exactly;
-if they do not, describe the commercial exposure in general, non-numeric terms (e.g.
-"a significant investment of time and resource in preparing this bid" rather than
-inventing "a £150,000 investment"). Inventing a plausible-sounding figure that is not
-in the facts above is a fabrication, not a reasonable inference — treat it exactly as
-seriously as inventing a scoring formula would be.
+ANTI-FABRICATION — numbers in "interests": only cite a monetary figure or
+percentage if it actually appears in the DISPUTE DETAILS/DESCRIPTION above. If
+none is given, describe the exposure in general terms (e.g. "a significant
+investment of time and resource") rather than inventing one (e.g. a fabricated
+"£150,000 investment") — an invented figure is exactly as serious a
+fabrication as an invented scoring formula.
 
 Your "batna" must also be specific to your actual circumstances here — what
 pursuing this through the TCC would realistically cost YOU, given your size,
@@ -90,7 +87,20 @@ Respond ONLY with valid JSON, no other text.
 
         data = parse_llm_json(raw_text, agent="AggrievedBidderAgent", call="pre_negotiation")
 
-        return PreNegotiationStatement(**data)
+        try:
+            return PreNegotiationStatement(**data)
+        except Exception as first_error:
+            # See the matching comment in ca_agent.py's get_pre_negotiation_statement —
+            # same repair pattern, same cause (a longer, more instruction-dense prompt
+            # measurably raising the required-field-dropped rate under json mode).
+            repair_message = (
+                f"{user_message}\n\n"
+                f"Your previous JSON response was invalid: {first_error}\n"
+                f"Return corrected JSON only, matching the exact structure requested."
+            )
+            response = self.llm.invoke([("system", self.system_prompt), ("user", repair_message)])
+            data = parse_llm_json(response.content.strip(), agent="AggrievedBidderAgent", call="pre_negotiation_repair")
+            return PreNegotiationStatement(**data)
 
     def respond_to_round(self, scenario: DisputeScenario, conversation_history: list,
                           round_number: int, max_rounds: int = 3) -> RoundResponse:

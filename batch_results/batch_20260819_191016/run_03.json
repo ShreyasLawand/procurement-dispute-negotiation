@@ -1,0 +1,125 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-FARADAY-2018",
+    "title": "Faraday Development Ltd v West Berkshire Council",
+    "description": "West Berkshire Council entered into a development agreement with St Modwen Developments Ltd for approximately \u00a3125 million, structured as a conditional land agreement. Faraday Development Ltd challenged the arrangement, alleging that it was in substance a public works contract that should have been competitively procured under the Public Contracts Regulations. The High Court initially dismissed the claim, but the Court of Appeal reversed this decision, holding that the agreement was indeed a public works contract and declaring its ineffectiveness.",
+    "contract_value_gbp": 125000000.0,
+    "dispute_type": "process_avoidance",
+    "procedural_stage": "appeal",
+    "governing_legislation": null,
+    "contracting_authority_name": "West Berkshire Council",
+    "bidder_name": "Faraday Development Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Uphold the principles of transparency, equal treatment, and non-discrimination in procurement.",
+      "Protection of Public Funds: Avoid significant delay costs and ensure value for money is delivered on a \u00a3125,000,000 contract.",
+      "Continuity of Service / Delivery: Ensure timely delivery of critical infrastructure to support local development and community growth.",
+      "Reputation & Public Accountability: Maintain public confidence in the procurement process and protect our reputation as a competent buyer.",
+      "Minimising Litigation Risk: Provide sufficient disclosure to reassure Faraday Development Ltd without undermining evaluation confidentiality or integrity."
+    ],
+    "goals": [
+      "Defend the original decision and maintain the status quo"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We are willing to engage in constructive dialogue to address Faraday Development Ltd's concerns, but we must ensure that our procurement process remains lawful and compliant with the Procurement Act 2023.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Public Contracts Regulations"
+    ],
+    "confidence_score": 0.5
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: We have already incurred significant costs in pursuing this claim (\u00a3125M contract value at stake)",
+      "Fairness & Transparency: The Court of Appeal's decision has highlighted procedural irregularities, and we seek clarity on the evaluation process",
+      "Protection of Reputation: Our reputation as a developer is at risk if we are seen to be challenging the authority's decisions without merit"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids, giving us a chance to be awarded the contract ourselves",
+      "An award of damages for our incurred costs and potential loss of revenue"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We request that West Berkshire Council re-evaluate the submitted bids, provide detailed feedback on their evaluation process, and consider awarding us the contract",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Public Contracts Regulations"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I appreciate Faraday Development Ltd's opening position and acknowledge their concerns regarding the procurement process for the development agreement with West Berkshire Council. However, I would like to clarify that the High Court initially dismissed the claim, and we are now in a situation where the Court of Appeal has declared the agreement ineffective due to its failure to comply with the Public Contracts Regulations. Can you please provide more information on how Faraday Development Ltd believes this decision affects our procurement process and what specific changes they would like us to make?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "Thank you for your clarification regarding the Court of Appeal's decision. However, I would like to clarify that our concerns are not solely based on this development agreement, but also on the evaluation process of our bid in the original procurement. We believe that there were discrepancies in scoring and methodology used by your evaluators, which resulted in an unfair advantage for St Modwen Developments Ltd. Can you provide us with more information on how these discrepancies occurred and what steps you have taken to prevent similar issues in future procurements? Additionally, we would like to request access to the evaluation reports and scoring documents to better understand the decision-making process.",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "s12 of the Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a dispute over the evaluation process and methodology used by the Contracting Authority. I will assess compliance qualitatively instead of performing a numeric calculation. The Aggrieved Bidder's concerns regarding discrepancies in scoring and methodology suggest that the published criteria language was not applied consistently or rationally. This could indicate a manifest error, as the Contracting Authority may have failed to uphold transparency and integrity in the evaluation process.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome is more favorable than our BATNA, which would have involved a lengthy and costly court battle (6-12 months) with potential costs exceeding \u00a350k. Through negotiation, we were able to re-evaluate the agreement and make adjustments without having to go through the full appeal process.",
+    "win_statement": "We successfully negotiated a revised development agreement that addresses Faraday Development Ltd's concerns regarding the procurement process and evaluation methodology used in our original procurement. Although the Court of Appeal declared the original agreement ineffective, we were able to work with Faraday Development Ltd to find a mutually acceptable solution.",
+    "what_was_achieved": [
+      "Revised development agreement addressing procurement process concerns",
+      "Access to evaluation reports and scoring documents provided"
+    ],
+    "what_was_conceded": [
+      "Acknowledgement of discrepancies in original evaluation process",
+      "Agreement to re-evaluate the procurement process and make adjustments"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The negotiation outcome is slightly more favourable than my BATNA of pursuing damages or formal TCC proceedings, which would have been costly, slow, and uncertain. We were able to secure some concessions from the contracting authority, but ultimately did not achieve our primary goal of having the original procurement process re-evaluated.",
+    "win_statement": "We secured a commitment from West Berkshire Council to review their evaluation methodology and provide additional training for evaluators to prevent similar issues in future procurements. Additionally, we were granted access to the evaluation reports and scoring documents, which will help us understand the decision-making process better.",
+    "what_was_achieved": [
+      "Access to evaluation reports and scoring documents",
+      "Commitment from West Berkshire Council to review their evaluation methodology"
+    ],
+    "what_was_conceded": [
+      "No re-evaluation of the original procurement process",
+      "Limited changes to the development agreement"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Discrepancies in scoring and methodology used by evaluators",
+      "Failure to comply with Public Contracts Regulations",
+      "Lack of transparency and integrity in the evaluation process"
+    ],
+    "concessions_summary": "Neither side made significant concessions during the negotiation. The Contracting Authority acknowledged Faraday Development Ltd's concerns, but did not commit to making specific changes. The Aggrieved Bidder requested access to evaluation reports and scoring documents, but this was not explicitly granted.",
+    "court_reasoning_summary": "The Court assessed the situation qualitatively due to its qualitative nature. It concluded that there may have been a manifest error in the evaluation process, indicating a failure by the Contracting Authority to uphold transparency and integrity.",
+    "likely_next_steps": "Re-evaluation of the procurement process is likely to occur, as recommended by the Court. This will involve re-assessing the bids and scoring documents to ensure compliance with Public Contracts Regulations and fairness in the evaluation process.",
+    "plain_english_summary": "The negotiation centered around Faraday Development Ltd's concerns about the evaluation process and methodology used by West Berkshire Council. The Court concluded that there may have been a mistake in the way the bids were evaluated, leading to an unfair advantage for one bidder over another. As a result, the procurement process will be re-evaluated to ensure fairness and compliance with regulations."
+  }
+}

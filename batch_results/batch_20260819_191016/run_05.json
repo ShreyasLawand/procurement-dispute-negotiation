@@ -1,0 +1,122 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-FARADAY-2018",
+    "title": "Faraday Development Ltd v West Berkshire Council",
+    "description": "West Berkshire Council entered into a development agreement with St Modwen Developments Ltd for approximately \u00a3125 million, structured as a conditional land agreement. Faraday Development Ltd challenged the arrangement, alleging that it was in substance a public works contract that should have been competitively procured under the Public Contracts Regulations. The High Court initially dismissed the claim, but the Court of Appeal reversed this decision, holding that the agreement was indeed a public works contract and declaring its ineffectiveness.",
+    "contract_value_gbp": 125000000.0,
+    "dispute_type": "process_avoidance",
+    "procedural_stage": "appeal",
+    "governing_legislation": null,
+    "contracting_authority_name": "West Berkshire Council",
+    "bidder_name": "Faraday Development Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Ensure the procurement process was lawful and within our powers under the Procurement Act 2023.",
+      "Protection of Public Funds: Avoid significant delay costs associated with re-running the procurement or a lengthy court battle.",
+      "Continuity of Service / Delivery: \u00a3125,000,000 development agreement for West Berkshire Council's infrastructure projects \u2014 critical to local economic growth and public services.",
+      "Reputation & Public Accountability: Maintain public confidence in our ability to manage large-scale procurements and protect our reputation as a competent buyer."
+    ],
+    "goals": [
+      "Resolve the dispute amicably",
+      "Maintain market relationships"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our original procurement process, which was lawful and followed due process.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Public Contracts Regulations"
+    ],
+    "confidence_score": 0.5
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a3125 million contract value loss if agreement declared ineffective",
+      "Fairness & Transparency: Perceived unfairness in West Berkshire Council's procurement process"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids, giving us a chance to be awarded the contract ourselves"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We request that West Berkshire Council re-evaluate their procurement process to ensure fairness and transparency.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Court of Appeal decision"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "Faraday Development Ltd's claim that our development agreement with St Modwen Developments Ltd is in substance a public works contract raises significant concerns about compliance with the Public Contracts Regulations. I'd like to clarify whether Faraday Development Ltd is suggesting that we should have competitively procured this contract, and if so, what specific procurement route they believe would have been more suitable. Furthermore, I'd appreciate it if you could provide more information on how your company arrived at this conclusion, as it seems to contradict the High Court's initial decision.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I'd like to clarify the Contracting Authority's understanding of our position on this matter. We do not dispute that the development agreement with St Modwen Developments Ltd is a public works contract, but rather we assert that it was improperly structured and should have been competitively procured as such. I'd appreciate more information on how West Berkshire Council determined that this arrangement did not fall under the Public Contracts Regulations. Specifically, what evaluation criteria were used to assess the agreement's compliance with these regulations? Furthermore, can you provide any documentation or evidence supporting your original decision-making process?",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "s12 of the Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative in nature. The parties are disputing whether the development agreement with St Modwen Developments Ltd should have been competitively procured under the Public Contracts Regulations. There is no explicit formula or numerical calculation mentioned in the scenario. I will assess compliance qualitatively instead, checking if the Contracting Authority's decision-making process was rational and defensible.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiated outcome is more favorable than our BATNA of defending in TCC court, which would have cost \u00a350k+ and taken 6-12 months. The re-evaluation process allowed us to avoid the costs and risks associated with a lengthy court battle.",
+    "win_statement": "We successfully navigated the dispute through negotiation, avoiding the need for costly and time-consuming litigation. This outcome not only saves our organization resources but also allows us to focus on more critical priorities.",
+    "what_was_achieved": [
+      "Avoided the costs associated with defending in TCC court",
+      "Preserved organizational resources and focus"
+    ],
+    "what_was_conceded": [
+      "Re-evaluation of the development agreement, which may have implications for future contracts",
+      "Potential reputational impact due to the Court of Appeal's decision declaring the agreement ineffective"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is more favourable than pursuing damages or formal TCC proceedings, which would have been costly, slow, and uncertain. We were able to achieve a re-evaluation of the development agreement without having to resort to litigation.",
+    "win_statement": "We successfully challenged the West Berkshire Council's original decision and had the Court of Appeal declare the development agreement ineffective. This outcome acknowledges that our concerns about compliance with the Public Contracts Regulations were valid, and we are now in a better position to negotiate a more favourable arrangement.",
+    "what_was_achieved": [
+      "Had the Court of Appeal declare the development agreement ineffective",
+      "Established that West Berkshire Council's original decision was flawed"
+    ],
+    "what_was_conceded": [
+      "The need for re-evaluation of the development agreement, rather than a complete reversal of the original decision",
+      "Some flexibility in terms of the procurement route, as opposed to a strict adherence to competitive tendering"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Competitive procurement under Public Contracts Regulations",
+      "Proper structuring of development agreement with St Modwen Developments Ltd"
+    ],
+    "concessions_summary": "Neither side made any concessions in terms of changing their positions or offering compromises. The Aggrieved Bidder maintained that the development agreement should have been competitively procured, while the Contracting Authority stood by its original decision-making process.",
+    "court_reasoning_summary": "The Court assessed the dispute qualitatively, focusing on whether the Contracting Authority's decision-making process was rational and defensible. The Court identified a manifest error in the Contracting Authority's evaluation criteria and recommended re-evaluation to ensure compliance with the Public Contracts Regulations.",
+    "likely_next_steps": "Given the Court's recommendation for re-evaluation, it is likely that West Berkshire Council will revisit its original decision-making process and reassess whether the development agreement with St Modwen Developments Ltd was properly structured. This may involve re-examining evaluation criteria, documentation, and evidence supporting the original decision.",
+    "plain_english_summary": "The dispute centered on whether a development agreement should have been competitively procured under public regulations. The Court found that the Contracting Authority's decision-making process contained errors and recommended re-evaluation to ensure compliance with these regulations."
+  }
+}
