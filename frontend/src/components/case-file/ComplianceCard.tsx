@@ -2,12 +2,33 @@ import { Scale } from 'lucide-react';
 import type { ComplianceAssessment } from '../../types/negotiation';
 import { Card } from '../ui/Card';
 import { Chip } from '../ui/Chip';
-import { Stamp } from '../ui/Stamp';
+import { Stamp, type StampTone } from '../ui/Stamp';
 
 // The Court agent assesses process compliance only — never who "deserves" to
 // win. Copy here stays neutral by design: "process followed" / "manifest
 // error found or not", never "Court sided with X".
-export function ComplianceCard({ assessment }: { assessment: ComplianceAssessment }) {
+//
+// Disclosure/procedural disputes (see isDisclosureDispute in lib/disputeType.ts, mirroring
+// the backend's negotiation_helpers.py) answer a different legal question — the Court's
+// disclosure-branch prompt always sets manifest_error_found to false there, by design
+// (it's not the question a disclosure application decides), so showing "No manifest error
+// found" on every round would misleadingly read as a merits finding that was never made.
+// The second stamp switches to reflect the disclosure-specific recommended_action instead.
+interface ComplianceCardProps {
+  assessment: ComplianceAssessment;
+  isDisclosureDispute?: boolean;
+}
+
+function disclosureStamp(action: string): { tone: StampTone; label: string } {
+  const normalized = action.trim().toLowerCase();
+  if (normalized === 'disclosure ordered') return { tone: 'good', label: 'Disclosure ordered' };
+  if (normalized === 'disclosure refused') return { tone: 'critical', label: 'Disclosure refused' };
+  return { tone: 'warning', label: 'Prima facie case under review' };
+}
+
+export function ComplianceCard({ assessment, isDisclosureDispute = false }: ComplianceCardProps) {
+  const disclosure = isDisclosureDispute ? disclosureStamp(assessment.recommended_action) : null;
+
   return (
     <Card className="border-l-4 border-l-court bg-court-soft/30">
       <div className="flex items-center gap-2">
@@ -20,10 +41,14 @@ export function ComplianceCard({ assessment }: { assessment: ComplianceAssessmen
           tone={assessment.process_followed ? 'good' : 'critical'}
           label={assessment.process_followed ? 'Process followed' : 'Process not followed'}
         />
-        <Stamp
-          tone={assessment.manifest_error_found ? 'critical' : 'good'}
-          label={assessment.manifest_error_found ? 'Manifest error found' : 'No manifest error found'}
-        />
+        {disclosure ? (
+          <Stamp tone={disclosure.tone} label={disclosure.label} />
+        ) : (
+          <Stamp
+            tone={assessment.manifest_error_found ? 'critical' : 'good'}
+            label={assessment.manifest_error_found ? 'Manifest error found' : 'No manifest error found'}
+          />
+        )}
         {assessment.deadlock && <Stamp tone="warning" label="Deadlock" />}
       </div>
 

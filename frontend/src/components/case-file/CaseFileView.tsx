@@ -1,3 +1,4 @@
+import { isDisclosureDispute } from '../../lib/disputeType';
 import type { NegotiationState } from '../../types/negotiation';
 import { CaseHeader } from './CaseHeader';
 import { OutcomeRibbon } from './OutcomeRibbon';
@@ -7,6 +8,8 @@ import { TranscriptThread } from './TranscriptThread';
 import { WinStatementCard } from './WinStatementCard';
 
 export function CaseFileView({ state }: { state: NegotiationState }) {
+  const disclosureDispute = isDisclosureDispute(state.scenario);
+
   return (
     <div className="flex flex-col gap-6">
       <CaseHeader scenario={state.scenario} roundNumber={state.round_number} maxRounds={state.max_rounds} />
@@ -19,7 +22,11 @@ export function CaseFileView({ state }: { state: NegotiationState }) {
       )}
 
       {state.messages.length > 0 && (
-        <TranscriptThread messages={state.messages} complianceChecks={state.compliance_checks} />
+        <TranscriptThread
+          messages={state.messages}
+          complianceChecks={state.compliance_checks}
+          isDisclosureDispute={disclosureDispute}
+        />
       )}
 
       {/* Gated on resolution_outcome being set, not rendered unconditionally

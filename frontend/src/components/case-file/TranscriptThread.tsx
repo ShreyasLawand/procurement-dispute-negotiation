@@ -5,9 +5,10 @@ import { MessageBubble } from './MessageBubble';
 interface TranscriptThreadProps {
   messages: NegotiationMessage[];
   complianceChecks: ComplianceAssessment[];
+  isDisclosureDispute?: boolean;
 }
 
-export function TranscriptThread({ messages, complianceChecks }: TranscriptThreadProps) {
+export function TranscriptThread({ messages, complianceChecks, isDisclosureDispute = false }: TranscriptThreadProps) {
   const roundNumbers = Array.from(
     new Set([...messages.map((m) => m.round_number), ...complianceChecks.map((c) => c.round_number)])
   ).sort((a, b) => a - b);
@@ -33,7 +34,7 @@ export function TranscriptThread({ messages, complianceChecks }: TranscriptThrea
               ))}
             </div>
 
-            {compliance && <ComplianceCard assessment={compliance} />}
+            {compliance && <ComplianceCard assessment={compliance} isDisclosureDispute={isDisclosureDispute} />}
           </div>
         );
       })}
