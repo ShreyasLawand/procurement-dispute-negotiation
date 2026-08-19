@@ -1,0 +1,126 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-WOODS-MKC-2015",
+    "title": "Woods Building Services v Milton Keynes Council",
+    "description": "The contracting authority's decision to award a \u00a38 million asbestos removal and reinstatement services contract was challenged by Woods Building Services, the incumbent provider. The challenger alleged manifest error in the scoring of individual quality criteria and breach of transparency and equal treatment obligations. The court found that the tender evaluation process was fundamentally flawed across multiple scoring items, requiring a reduction of 40 marks for EAS's bid and an increase of 6 marks for Woods' bid. Applying the published 60% price / 40% quality formula, the court concluded that Woods' bid became the most economically advantageous tender.",
+    "contract_value_gbp": 8000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "trial",
+    "governing_legislation": null,
+    "contracting_authority_name": "Milton Keynes Council",
+    "bidder_name": "Woods Building Services",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Values, Behaviours and Principles of Good Governance: Maintain public confidence in our procurement processes.",
+      "Compliance & Legality: Act lawfully and within powers under the Procurement Act 2023 to avoid manifest error findings.",
+      "Protection of Public Funds: Avoid significant delay costs due to automatic suspension or re-run of the procurement process.",
+      "Continuity of Service / Delivery: Ensure timely delivery of asbestos removal and reinstatement services for public safety, with a \u00a38 million contract value at stake.",
+      "Reputation & Public Accountability: Protect our reputation as a competent and fair buyer in Milton Keynes Council.",
+      "Minimising Litigation Risk: Provide enough disclosure to reassure Woods Building Services without undermining evaluation confidentiality or integrity.",
+      "Maintaining Market Relationships: Avoid alienating suppliers who may bid in future procurements, including Woods Building Services"
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Resolve the dispute through negotiation"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We acknowledge Woods Building Services' concerns, but our evaluation process was lawful and compliant with the Procurement Act 2023.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Regulation 32(2) of the Public Contracts Regulations 2015"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a38 million contract value at stake",
+      "Fairness & Transparency: Alleged manifest error in scoring of individual quality criteria",
+      "Protection of Reputation: Incumbent provider challenging authority's decision"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "Award the contract to our company"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We believe that the contracting authority's decision was flawed due to manifest error in scoring and we request a re-evaluation of all bids.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Common law principles of fairness and transparency"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge Woods Building Services' concerns regarding the scoring of individual quality criteria and appreciate their diligence in bringing this matter to our attention. However, I must clarify that the court's decision to reduce EAS's bid by 40 marks and increase Woods' bid by 6 marks was based on a thorough review of the tender evaluation process. Can you provide more information on which specific scoring items you believe were manifestly erroneous and how you propose we rectify this situation? Furthermore, I would like to offer additional transparency regarding our evaluation process, including providing access to the original scoring sheets and any relevant documentation.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "Thank you for acknowledging our concerns and offering additional transparency regarding your evaluation process. However, I would like to clarify that a review of the original scoring sheets and relevant documentation is not sufficient to address our concerns about manifest error in the scoring of individual quality criteria. Can you provide more information on how the court's decision to reduce EAS's bid by 40 marks and increase Woods' bid by 6 marks was based on a thorough review of the tender evaluation process, specifically with regards to which specific scoring items were re-evaluated or re-scored during this process?",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is numeric. The published formula is a 60% price / 40% quality split. However, the court's decision to reduce EAS's bid by 40 marks and increase Woods' bid by 6 marks was applied to this formula. To verify compliance, I will calculate the original scores for both bids using only the numbers provided in the scenario: EAS's bid was reduced by 40 marks, so its new score is 60 - (40/100) * 60 = 36. Woods' bid was increased by 6 marks, so its new score is 40 + (6/100) * 40 = 46. Applying the formula, EAS's final score would be 0.4 * 36 = 14.4 and Woods' final score would be 0.6 * 46 = 27.6. However, this contradicts the stated outcome that Woods' bid became the most economically advantageous tender after the court's correction. Therefore, I conclude that a manifest error occurred in the scoring process.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "This outcome is more favorable than our BATNA of defending in TCC court, which would have cost \u00a350k+ and taken 6-12 months. We were able to negotiate a re-evaluation process that resulted in a revised scoring, avoiding the need for costly litigation.",
+    "win_statement": "We successfully negotiated a re-evaluation process that addressed the challenger's concerns regarding manifest error in the scoring of individual quality criteria, resulting in Woods' bid becoming the most economically advantageous tender. This outcome demonstrates our commitment to transparency and fairness in the procurement process.",
+    "what_was_achieved": [
+      "Re-evaluation of the tender evaluation process",
+      "Revision of the scoring to address challenger's concerns"
+    ],
+    "what_was_conceded": [
+      "Reduction of 40 marks for EAS's bid",
+      "Increase of 6 marks for Woods' bid"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "Favourable outcome relative to BATNA. The negotiation resulted in a re-evaluation of the scoring, which led to Woods' bid being declared the most economically advantageous tender.",
+    "win_statement": "We successfully challenged the contracting authority's decision and secured a more favourable outcome for our company through the negotiation process.",
+    "what_was_achieved": [
+      "Re-evaluation of the scoring, resulting in a more favourable outcome",
+      "Increased transparency regarding the evaluation process"
+    ],
+    "what_was_conceded": [
+      "40 marks reduction for EAS's bid and 6 marks increase for Woods' bid, as per the court's decision"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Manifest error in the scoring of individual quality criteria",
+      "Court's decision to reduce EAS's bid by 40 marks and increase Woods' bid by 6 marks"
+    ],
+    "concessions_summary": "The Contracting Authority offered additional transparency regarding their evaluation process, including providing access to original scoring sheets and relevant documentation.",
+    "court_reasoning_summary": "The Court concluded that a manifest error occurred in the scoring process because the court's decision to reduce EAS's bid by 40 marks and increase Woods' bid by 6 marks resulted in an outcome that contradicted the stated formula. The Court calculated the original scores for both bids using only the numbers provided, which showed that Woods' bid should not have become the most economically advantageous tender after the court's correction.",
+    "likely_next_steps": "The dispute will likely proceed to re-evaluation of the tenders as recommended by the Court.",
+    "plain_english_summary": "The Aggrieved Bidder (Woods Building Services) disputed the scoring process, claiming a manifest error. The Contracting Authority offered more transparency but couldn't resolve the issue. The Court agreed that an error occurred and recommended re-evaluation of the tenders to ensure fairness."
+  }
+}

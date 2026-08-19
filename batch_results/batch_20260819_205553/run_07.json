@@ -1,0 +1,172 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-ALSTOM-2017",
+    "title": "Alstom Transport UK Ltd v London Underground Ltd",
+    "description": "London Underground awarded contract to Bombardier for \u00a3112.1 million worth of AC traction motors and control equipment. Alstom challenged the award alleging a manifest error in applying a mandatory technical threshold requirement, which should have excluded Bombardier's bid. The challenge was brought during the standstill period, triggering an automatic suspension. London Underground applied to lift the suspension under the American Cyanamid framework, arguing that damages would be adequate remedy for Alstom if it succeeded at trial and that the balance of convenience favoured proceeding with the contract.",
+    "contract_value_gbp": 112100000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "standstill",
+    "governing_legislation": null,
+    "contracting_authority_name": "London Underground Ltd",
+    "bidder_name": "Alstom Transport UK Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 3,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Apply the Procurement Act 2023 correctly to avoid manifest errors and procedural unfairness",
+      "Protection of Public Funds: \u00a3112.1 million contract value at risk due to automatic suspension and potential damages award if Alstom succeeds",
+      "Continuity of Service / Delivery: Critical AC traction motors and control equipment for London Underground's services delayed or re-run, impacting passenger safety and service reliability"
+    ],
+    "goals": [
+      "Defend the procurement decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension",
+      "Maintain public confidence by upholding transparency and fairness in the procurement process"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We acknowledge Alstom's concerns but must defend our evaluation process as lawful, rational, and procedurally correct under the Procurement Act 2023.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "American Cyanamid framework"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a3112.1 million contract value at stake",
+      "Fairness & Transparency: perceived unfair application of technical threshold requirement",
+      "Protection of Reputation: maintain credibility with parent companies, shareholders and partners"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "Request a detailed explanation of the evaluation process and scoring methodology to identify any manifest errors",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "American Cyanamid framework"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "Alstom Transport UK Ltd has alleged a manifest error in applying the technical threshold requirement. Can you clarify what specific aspect of our evaluation process Alstom is challenging, and how this relates to the mandatory technical threshold requirement?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I'd like to clarify that Alstom is challenging the application of the technical threshold requirement in the evaluation process. Specifically, we're questioning how Bombardier's bid scored above this threshold when our own bid clearly met it. Can you provide more details on the scoring methodology used for this particular criterion and how it was applied to each bidder's submission?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Alstom's concerns regarding the technical threshold requirement and its application to Bombardier's bid. To address this, we can provide additional information on how our evaluation team applied the mandatory technical threshold requirement to each bidder's submission. Specifically, we can share a detailed breakdown of the scoring methodology used for this criterion, including the specific weights assigned to each sub-criterion and the scores awarded to each bidder. We believe that this additional transparency will help clarify any misunderstandings and demonstrate the fairness and consistency of our evaluation process.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your offer to provide additional transparency on the scoring methodology used for the technical threshold requirement. However, we would like to request a more detailed explanation of how this information will be provided and what specific metrics or data points will be shared with us. Furthermore, can you confirm that this additional transparency will be made available in a format that is easily accessible and understandable by all parties involved? Additionally, we would like to propose a joint review of the scoring methodology used for the technical threshold requirement, led by an independent third-party expert, to ensure a fair and accurate evaluation process.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "We appreciate Alstom's request for a joint review of the scoring methodology used for the technical threshold requirement. We are willing to consider this proposal and suggest that an independent third-party expert be appointed to lead the review. However, we would like to propose that the review focus on specific aspects of the evaluation process rather than a comprehensive re-evaluation of all bids. This will allow us to address Alstom's concerns while also ensuring that the integrity of our original evaluation is maintained.",
+      "proposal": "A joint review led by an independent third-party expert, focusing on the technical threshold requirement",
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to consider our proposal for a joint review of the scoring methodology used for the technical threshold requirement. However, we would like to narrow the disagreement by focusing on a specific aspect of the evaluation process that led to Bombardier's bid being scored above the technical threshold. We propose that the review examine the application of the 'design and functionality' sub-criterion within the technical threshold requirement. This will allow us to address our concerns while also ensuring that the integrity of your original evaluation is maintained. Furthermore, we would like to ask a new question: Can you provide specific examples of how Bombardier's bid met or exceeded the requirements in this sub-criterion, and how these were scored?",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative as it involves a technical threshold requirement and its application to bids. Alstom Transport UK Ltd has alleged a manifest error in applying this requirement. I will assess the Contracting Authority's process qualitatively under Step 2B. The Contracting Authority applied the mandatory technical threshold requirement, but Alstom claims that Bombardier's bid scored above it when their own bid met it. Without explicit scoring methodology or numbers provided, I cannot perform a calculation. However, I will assess whether the published criteria language was applied in a way that is rationally defensible.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s.12 of the Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a technical threshold requirement and its application to each bidder's submission. There is no explicit formula or sub-scores mentioned in the scenario. The Contracting Authority has offered to provide additional information on how their evaluation team applied the mandatory technical threshold requirement, which may help clarify any misunderstandings. However, I will not perform a calculation as there are no numbers provided. Instead, I will assess compliance qualitatively: was the published criteria language applied in a way that is rationally defensible? The Contracting Authority's offer to provide additional transparency and their willingness to share detailed information on the scoring methodology suggests a commitment to fairness and consistency.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 3,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a technical threshold requirement and the application of sub-criteria. There is no explicit formula or numeric input values provided. The Contracting Authority's original evaluation was based on a rational and defensible justification for scoring Bombardier's bid above the technical threshold. While Alstom challenges this decision, there is no evidence to suggest that the Contracting Authority acted irrationally or in bad faith. Therefore, I conclude that the process followed by the Contracting Authority was compliant with the Procurement Act 2023.",
+      "recommended_action": "no remedy - decision stands",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "no remedy - decision stands",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome is more favorable than our BATNA (defending in TCC court), which would have cost \u00a350k+ and taken 6-12 months. We were able to negotiate a resolution without proceeding with the costly and time-consuming litigation.",
+    "win_statement": "We successfully defended our evaluation process and maintained the integrity of our original decision, avoiding the risk of costly and lengthy litigation.",
+    "what_was_achieved": [
+      "Provided additional transparency on the scoring methodology used for the technical threshold requirement",
+      "Offered a joint review of the scoring methodology led by an independent third-party expert"
+    ],
+    "what_was_conceded": [
+      "Agreed to provide specific examples of how Bombardier's bid met or exceeded the requirements in the 'design and functionality' sub-criterion",
+      "Limited the scope of the joint review to a specific aspect of the evaluation process"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is less favourable than our BATNA. We did not achieve a remedy for the manifest error in applying the technical threshold requirement, and the decision stands.",
+    "win_statement": "We were able to narrow the disagreement with the contracting authority and propose a joint review of the scoring methodology used for the technical threshold requirement. However, we were unable to secure a more favourable outcome.",
+    "what_was_achieved": [
+      "Additional transparency on the scoring methodology was offered by the contracting authority",
+      "A proposal for a joint review of the scoring methodology was considered by the contracting authority"
+    ],
+    "what_was_conceded": [
+      "The decision stands, and no remedy was granted to Alstom",
+      "The scope of the joint review was limited to specific aspects of the evaluation process rather than a comprehensive re-evaluation of all bids"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Application of technical threshold requirement",
+      "Scoring methodology for 'design and functionality' sub-criterion"
+    ],
+    "concessions_summary": "The Contracting Authority offered to provide additional transparency on the scoring methodology used for the technical threshold requirement, but ultimately refused to reconsider their original evaluation. Alstom Transport UK Ltd proposed a joint review of the scoring methodology led by an independent third-party expert, which was not accepted.",
+    "court_reasoning_summary": "The Court concluded that the Contracting Authority's process followed the Procurement Act 2023 and was rationally defensible. The Court found no evidence to suggest that the Contracting Authority acted irrationally or in bad faith when scoring Bombardier's bid above the technical threshold.",
+    "likely_next_steps": "Given the Court's decision, it is likely that Alstom Transport UK Ltd will not pursue further action and the original evaluation will stand. The Contracting Authority may proceed with awarding the contract to the successful bidder (Bombardier).",
+    "plain_english_summary": "The dispute centered on how the technical threshold requirement was applied in the evaluation process. Alstom challenged this, but the Court found that the Contracting Authority's process was fair and consistent. As a result, the original decision stands, and it is unlikely that Alstom will appeal further."
+  }
+}

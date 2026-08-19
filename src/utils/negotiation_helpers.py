@@ -1,5 +1,32 @@
 from difflib import SequenceMatcher
-from typing import List, Optional
+from typing import TYPE_CHECKING, List, Optional
+
+if TYPE_CHECKING:
+    from src.schemas.agent_state import DisputeScenario
+
+# Keywords identifying a disclosure/procedural dispute (a CPR 31.12 application for
+# early specific disclosure, assessed under Roche Diagnostics principles) rather than
+# a merits/scoring dispute (assessed under the Court agent's Step 1/2A/2B manifest-
+# error review). Both real cases in real-case-test-findings.md extracted
+# procedural_stage="interim_application" - dispute_type stayed a scoring/transparency
+# label in both, since that describes the underlying grievance, not the procedural
+# question actually before the court - so procedural_stage is the reliable signal.
+_DISCLOSURE_KEYWORDS = ("disclosure", "interim_application", "interim application")
+
+
+def is_disclosure_dispute(scenario: "DisputeScenario") -> bool:
+    """
+    Classifies a scenario as a disclosure/procedural dispute vs. a merits/scoring
+    dispute. Deterministic and rule-based rather than a separate LLM call - both real
+    cases that exposed the Court agent's "only knows how to assess merits disputes"
+    gap were correctly identifiable from their own already-extracted
+    procedural_stage, so no new model call (and no new fabrication surface) was
+    needed to classify them. See CourtAgent.assess_round(), which picks the
+    disclosure-branch prompt when this returns True and leaves the existing
+    merits-branch prompt (V3/V4) completely untouched otherwise.
+    """
+    haystack = f"{scenario.procedural_stage} {scenario.dispute_type}".lower()
+    return any(kw in haystack for kw in _DISCLOSURE_KEYWORDS)
 
 
 def format_contract_value(value: Optional[float]) -> str:

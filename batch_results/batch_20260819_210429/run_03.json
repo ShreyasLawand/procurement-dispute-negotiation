@@ -1,0 +1,150 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-FARADAY-2018",
+    "title": "Faraday Development Ltd v West Berkshire Council",
+    "description": "West Berkshire Council entered into a development agreement with St Modwen Developments Ltd for approximately \u00a3125 million, structured as a conditional land agreement. Faraday Development Ltd challenged the arrangement, alleging that it was in substance a public works contract that should have been competitively procured under the Public Contracts Regulations. The High Court initially dismissed the claim, but the Court of Appeal reversed this decision, holding that the agreement was indeed a public works contract and declaring its ineffectiveness.",
+    "contract_value_gbp": 125000000.0,
+    "dispute_type": "process_avoidance",
+    "procedural_stage": "appeal",
+    "governing_legislation": null,
+    "contracting_authority_name": "West Berkshire Council",
+    "bidder_name": "Faraday Development Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 2,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Ensure the procurement process was lawful and within our powers under the Procurement Act 2023.",
+      "Protection of Public Funds: Avoid significant delay costs due to automatic suspension or re-run of the procurement.",
+      "Continuity of Service / Delivery: The development agreement is crucial for delivering a \u00a3125,000,000 project that will transform West Berkshire's infrastructure and economy.",
+      "Reputation & Public Accountability: Maintain public confidence in our ability to manage large-scale procurements and protect our reputation as a competent buyer."
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Maintain market relationships with suppliers"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our evaluation process and believe it was fair, lawful, and compliant with the Procurement Act 2023.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Public Contracts Regulations"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a3125 million contract value at stake",
+      "Fairness & Transparency: desire to understand how the agreement was deemed non-competitive",
+      "Protection of Reputation: maintain credibility with parent companies, shareholders, and partners"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "Force the competition to be re-run"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "Request a full re-evaluation of all bids, citing the Court of Appeal's ruling that the agreement was indeed a public works contract",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Court of Appeal decision"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "Faraday Development Ltd has raised concerns regarding the evaluation process and scoring of our procurement for a development agreement with St Modwen Developments Ltd. I would like to clarify whether their specific objections relate to the initial evaluation criteria, the scoring methodology, or both. Can you please provide more details on which aspects of the evaluation they are contesting?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "Thank you for your clarification request. I'd like to ask a question regarding the scoring methodology. Can you provide more details on how the evaluation team arrived at the scores for our bid, specifically in relation to the 'innovation' and 'value for money' criteria? We believe there may have been an inconsistency in the application of these criteria across different bidders.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "Regarding the scoring methodology for 'innovation' and 'value for money', I can confirm that our evaluation team applied a weighted scoring model, with specific criteria and sub-criteria as outlined in the tender documentation. The scores were awarded based on the bidders' responses to these criteria, with due consideration given to the overall quality of their submissions. However, upon reviewing the evaluation process, we have identified an opportunity for clarification on our approach to scoring 'innovation'. We are willing to provide additional feedback and transparency on this aspect, including a detailed breakdown of how scores were allocated for each bidder.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "Thank you for providing additional transparency on your approach to scoring 'innovation'. We appreciate the willingness to clarify this aspect of the evaluation process. However, we still have concerns regarding the consistency and fairness of the scoring methodology across different bidders. Specifically, we would like to request a detailed breakdown of how scores were allocated for each bidder, including any weighting or adjustments applied during the evaluation process. This information will help us better understand the evaluation team's decision-making and address our concerns about potential inconsistencies.",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario does not contain a formula or explicit numeric scores. It appears to be a qualitative dispute regarding the evaluation process and scoring methodology. I will assess compliance qualitatively instead of performing an arithmetic calculation. The parties' statements suggest that there may have been an inconsistency in the application of certain criteria, but no specific numbers are mentioned. Therefore, I will not invent any points system or weightings.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "s12 of the Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative. The Contracting Authority's position does not provide a specific formula or sub-scores for 'innovation' and 'value for money'. However, it mentions applying a weighted scoring model with specific criteria and sub-criteria as outlined in the tender documentation. The Aggrieved Bidder's position also focuses on consistency and fairness of the scoring methodology across different bidders. Given that no explicit formula or numeric inputs are provided, I will assess compliance qualitatively. However, the Contracting Authority's willingness to provide additional feedback and transparency does not address the Aggrieved Bidder's concerns about potential inconsistencies in the evaluation process.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiated outcome is more favorable than our BATNA (defending in TCC court, which would cost \u00a350k+ and take 6-12 months) as it avoids the significant costs and risks associated with litigation.",
+    "win_statement": "We have successfully navigated a potentially costly and time-consuming legal dispute through negotiation, achieving a re-evaluation of the development agreement that addresses the concerns raised by Faraday Development Ltd.",
+    "what_was_achieved": [
+      "Provided additional transparency on our approach to scoring 'innovation'",
+      "Clarified the evaluation process and scoring methodology"
+    ],
+    "what_was_conceded": [
+      "Agreed to provide a detailed breakdown of how scores were allocated for each bidder",
+      "Acknowledged potential inconsistencies in the application of certain criteria across different bidders"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome of re-evaluation is more favourable than pursuing damages or formal TCC proceedings, which would have been costly, slow, and uncertain. While we did not achieve our desired outcome of full contract award, the negotiation process has provided some clarity on the evaluation methodology and scoring.",
+    "win_statement": "We secured additional transparency on the evaluation team's approach to scoring 'innovation' and were able to understand how scores were allocated for each bidder. This level of detail was not initially provided, and we appreciate the contracting authority's willingness to clarify their process.",
+    "what_was_achieved": [
+      "Additional transparency on the evaluation team's approach to scoring 'innovation'",
+      "Detailed breakdown of how scores were allocated for each bidder"
+    ],
+    "what_was_conceded": [
+      "No full contract award, despite initial concerns regarding the ineffectiveness of the agreement",
+      "Some concerns regarding consistency and fairness of the scoring methodology remain unaddressed"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Inconsistency in applying scoring criteria for 'innovation' and 'value for money'",
+      "Lack of transparency in the evaluation process",
+      "Concerns about fairness and consistency across different bidders"
+    ],
+    "concessions_summary": "The Contracting Authority offered to provide additional feedback and transparency on their approach to scoring 'innovation', but did not address the Aggrieved Bidder's concerns about potential inconsistencies.",
+    "court_reasoning_summary": "The Court assessed compliance qualitatively, as no specific numbers or formulas were mentioned. The Contracting Authority's willingness to provide more information was seen as insufficient to address the Aggrieved Bidder's concerns.",
+    "likely_next_steps": "Re-evaluation of the procurement process is recommended by the Court, indicating that the dispute will continue with further evaluation and assessment.",
+    "plain_english_summary": "The Contracting Authority and the Aggrieved Bidder disagreed about how the scoring criteria were applied. The Contracting Authority offered to provide more information, but it was not enough to resolve the issue. As a result, the Court recommended re-evaluating the procurement process to ensure fairness and consistency."
+  }
+}

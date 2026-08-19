@@ -1,0 +1,173 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-ALSTOM-2017",
+    "title": "Alstom Transport UK Ltd v London Underground Ltd",
+    "description": "London Underground awarded contract to Bombardier for \u00a3112.1 million worth of AC traction motors and control equipment. Alstom challenged the award alleging a manifest error in applying a mandatory technical threshold requirement, which should have excluded Bombardier's bid. The challenge was brought during the standstill period, triggering an automatic suspension. London Underground applied to lift the suspension under the American Cyanamid framework, arguing that damages would be adequate remedy for Alstom if it succeeded at trial and that the balance of convenience favoured proceeding with the contract.",
+    "contract_value_gbp": 112100000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "standstill",
+    "governing_legislation": null,
+    "contracting_authority_name": "London Underground Ltd",
+    "bidder_name": "Alstom Transport UK Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 3,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: significant delay costs",
+      "Continuity of Service / Delivery: delivery of \u00a3112.1 million worth of AC traction motors and control equipment for London Underground's operational needs",
+      "Reputation & Public Accountability: maintain public confidence in the procurement process"
+    ],
+    "goals": [
+      "Defend the procurement decision, uphold the integrity of the evaluation process",
+      "Minimise disruption to critical services"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We acknowledge Alstom's concerns, but firmly believe our evaluation was lawful, rational, and procedurally correct under the Procurement Act 2023.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Regulation 32(1) of the Public Contracts Regulations 2015 (as amended by the Procurement Act 2023)"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a3112.1 million contract value at stake",
+      "Fairness & Transparency: perceived unfair treatment by London Underground in applying technical threshold requirement"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids, giving us a chance to be awarded the contract ourselves",
+      "An award of damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We believe that London Underground made an error in applying the technical threshold requirement, which should have excluded Bombardier's bid. We request a re-evaluation of all bids to ensure fairness and transparency.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "American Cyanamid framework"
+    ],
+    "confidence_score": 0.7
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "Alstom Transport UK Ltd has challenged our evaluation process for the AC traction motors and control equipment contract, alleging a manifest error in applying a mandatory technical threshold requirement. We understand their concerns but must clarify: can you specify which particular technical threshold requirement you believe was incorrectly applied?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your clarification request and acknowledge that we do have concerns regarding the application of a mandatory technical threshold requirement in this procurement. We would like to clarify whether our bid was evaluated against the correct technical specifications, as outlined in the Invitation to Tender (ITT). Specifically, we are concerned about the evaluation of our AC traction motors' performance under varying load conditions. Can you provide us with detailed information on how this aspect was assessed and scored?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge your concern about the evaluation of AC traction motors' performance under varying load conditions. Our evaluation team applied the technical threshold requirement as outlined in Section 4.2.1 of the ITT, which states that bidders must demonstrate a minimum performance level of 95% efficiency under load conditions. We can confirm that Bombardier's bid met this requirement, while Alstom's bid fell short by approximately 3%. However, we are willing to provide additional information on our evaluation process and methodology used to assess the technical specifications. Specifically, we can offer a detailed breakdown of how we calculated the efficiency levels for each bidder.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your offer to provide a detailed breakdown of how you calculated the efficiency levels for each bidder. However, we would like to request that this information be provided in a format that allows us to easily identify and challenge any discrepancies or inconsistencies in the evaluation process. Specifically, can you provide a table or chart showing the raw data used to calculate the efficiency levels for each bidder, including the specific test conditions and measurement protocols employed? This will enable us to better understand your methodology and assess whether it was applied consistently across all bidders.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "We are willing to provide a detailed breakdown of how we calculated the efficiency levels for each bidder, including the specific test conditions and measurement protocols employed. This information will be presented in a table format that allows you to easily identify and challenge any discrepancies or inconsistencies in the evaluation process. We have attached a document titled 'Efficiency Level Calculation Breakdown' which includes the raw data used to calculate the efficiency levels for each bidder, including Bombardier's bid.",
+      "proposal": null,
+      "concession_made": "We will provide additional information on our evaluation process and methodology used to assess the technical specifications"
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your offer to provide a detailed breakdown of how you calculated the efficiency levels for each bidder. However, we are concerned that this information only addresses our concerns regarding Bombardier's bid and does not provide any insight into whether Alstom's bid was evaluated correctly. We request that you also provide a separate document or table showing how Alstom's bid was assessed against the technical threshold requirement, including the specific test conditions and measurement protocols employed. This will enable us to better understand your methodology and assess whether it was applied consistently across all bidders.",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative as it involves the application of a mandatory technical threshold requirement. There are no explicit formulas or sub-scores provided to compute. The parties' statements indicate concerns about the evaluation process, but there is no specific numeric information given to perform a calculation. I will assess compliance qualitatively instead.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves the evaluation of technical specifications and performance under varying load conditions. The Contracting Authority applied a mandatory technical threshold requirement in Section 4.2.1 of the ITT, which states that bidders must demonstrate a minimum performance level of 95% efficiency under load conditions. Alstom's bid fell short by approximately 3%. I do not have enough information to perform a calculation myself, as no specific numbers or formula are provided in the scenario. However, based on the Contracting Authority's statements, it appears that they applied the technical threshold requirement consistently across all bidders. Therefore, I conclude that the process followed was compliant.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 3,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative as it involves a technical threshold requirement and does not provide explicit numbers or formulas. However, the Contracting Authority has offered to provide a detailed breakdown of how they calculated efficiency levels for each bidder. This suggests that there may be some objective criteria involved in the evaluation process. I will assess compliance qualitatively instead of performing a numeric calculation.\n\nThe Contracting Authority's offer to provide a detailed breakdown of their methodology is a positive step towards transparency and accountability. However, the Aggrieved Bidder has raised concerns about the consistency of this approach across all bidders. To address these concerns, I recommend that the Contracting Authority provides a separate document or table showing how Alstom's bid was assessed against the technical threshold requirement.\n\nBased on my assessment, it appears that the Contracting Authority is taking steps to provide transparency and accountability in their evaluation process. However, further clarification is needed regarding the consistency of this approach across all bidders.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome of re-evaluation is a compromise that avoids the risk of lengthy and costly litigation, which would have been our BATNA. While we did not fully resolve Alstom's concerns, we were able to provide sufficient information to address their specific allegations.",
+    "win_statement": "We successfully navigated the dispute process without incurring significant costs or delays associated with a full trial. Our negotiation strategy allowed us to maintain control of the evaluation process and provided a clear understanding of our methodology.",
+    "what_was_achieved": [
+      "Provided detailed breakdown of efficiency level calculations for each bidder",
+      "Offered additional information on evaluation process and methodology"
+    ],
+    "what_was_conceded": [
+      "Allowed re-evaluation of Alstom's bid against technical threshold requirement",
+      "Provided separate document or table showing how Alstom's bid was assessed"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome of a re-evaluation, which is a compromise between pursuing damages or formal TCC proceedings and obtaining a more favorable result. While it does not fully address our concerns regarding the evaluation process, it provides some clarity on how the technical threshold requirement was applied.",
+    "win_statement": "We were able to secure a re-evaluation of the contract award, which will provide us with additional information about the evaluation process. Although this outcome is not as favorable as we had hoped for, it is still a positive development in our pursuit of justice and fairness in this procurement.",
+    "what_was_achieved": [
+      "Secured a re-evaluation of the contract award",
+      "Obtained additional information about the evaluation process"
+    ],
+    "what_was_conceded": [
+      "Did not obtain full satisfaction regarding the evaluation process",
+      "Was unable to have our bid evaluated correctly in relation to the technical threshold requirement"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Application of mandatory technical threshold requirement",
+      "Evaluation of AC traction motors' performance under varying load conditions",
+      "Consistency of evaluation process across all bidders"
+    ],
+    "concessions_summary": "The Contracting Authority made two concessions: (1) providing a detailed breakdown of how they calculated efficiency levels for each bidder, and (2) offering to provide additional information on their evaluation process and methodology used to assess the technical specifications.",
+    "court_reasoning_summary": "The Court assessed compliance qualitatively due to the absence of explicit formulas or sub-scores. The Contracting Authority's application of a mandatory technical threshold requirement was deemed compliant, but further clarification was needed regarding consistency across all bidders.",
+    "likely_next_steps": "Re-evaluation: The Court recommended re-evaluation as the next step, indicating that the dispute is not yet resolved and requires further examination of the evaluation process.",
+    "plain_english_summary": "The negotiation centered around a technical threshold requirement in a \u00a3112 million contract. The Aggrieved Bidder challenged the Contracting Authority's evaluation process, which was deemed compliant by the Court but required further clarification on consistency. As a result, re-evaluation is recommended to ensure fairness and transparency."
+  }
+}

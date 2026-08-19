@@ -1,0 +1,149 @@
+{
+  "scenario": {
+    "dispute_id": "PHASE3-Casemine",
+    "title": "Geodesign Barriers Ltd v. The Environment Agency",
+    "description": "The Plaintiff, Geodesign Barriers Ltd, challenged the evaluation process of a tender for temporary flood barrier systems conducted by the Defendant, The Environment Agency, under the Public Contracts Regulations 2006. The Plaintiff claimed that the successful bid did not comply with mandatory performance specifications and requested specific disclosure of documents relating to the tender evaluation process. The court granted in part and refused in part the Plaintiff's applications, ordering disclosure of category C documents (guidance emails), category E documents (bids of other tenderers), and any relevant category D documents (score sheets and notes).",
+    "contract_value_gbp": null,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "interim_application",
+    "governing_legislation": "Public Contracts Regulations 2006",
+    "contracting_authority_name": "The Environment Agency",
+    "bidder_name": "Geodesign Barriers Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 2,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: significant delay costs due to ongoing flood management needs",
+      "Continuity of Service / Delivery: timely delivery of temporary flood barrier systems for the Environment Agency's operations",
+      "Reputation & Public Accountability: maintaining public confidence in our procurement processes and avoiding adverse media scrutiny"
+    ],
+    "goals": [
+      "Defend the evaluation process as lawful and procedurally correct under the Public Contracts Regulations 2006",
+      "Maintain transparency and fairness throughout the dispute resolution process"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We will provide additional disclosure as per the court's order, but we cannot re-score bids or discuss other bidders' scores in detail.",
+    "legal_basis": [
+      "Public Contracts Regulations 2006"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: We risk losing revenue from this contract due to an incomplete evaluation process.",
+      "Fairness & Transparency: The lack of transparency in the evaluation process undermines our trust in the procurement process and may harm our reputation if not addressed.",
+      "Protection of Reputation: Our bid team's performance is being questioned, which could impact future bids and our credibility with partners and stakeholders.",
+      "Strategic Leverage: We need to understand the flaws in the evaluation process to avoid similar issues in future procurements."
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "Award damages for the loss suffered due to the incomplete evaluation"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We request that the Environment Agency provide detailed feedback on their evaluation process, including any relevant category D documents, to ensure fairness and transparency in the procurement process.",
+    "legal_basis": [
+      "Public Contracts Regulations 2006"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "Geodesign Barriers Ltd's opening position highlights concerns regarding the evaluation process and disclosure of documents. I would like to clarify whether their request for specific disclosure of category C, D, and E documents is based on a particular aspect of the tender evaluation that they believe was not properly addressed. Can you specify which aspects of the evaluation they are challenging?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I'd like to clarify that our request for specific disclosure of category C, D, and E documents is based on a scoring discrepancy in category C, where we believe our bid was incorrectly penalized. We've reviewed the score sheets and notes, but we're concerned that there may have been an error in the evaluation process. Can you confirm whether the Environment Agency has re-checked the scoring for this category?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "We have reviewed the scoring for category C and can confirm that our evaluation team re-checked the scores to ensure accuracy. However, we did not find any evidence of an error in the original scoring process. We are willing to provide additional context on how the scores were calculated, but we cannot revise the original scores without compromising the integrity of the evaluation process.",
+      "proposal": null,
+      "concession_made": "We will provide a detailed explanation of our scoring methodology for category C"
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to provide additional context on how the scores were calculated. However, we remain concerned that our bid was unfairly penalized in category C. We would like to request a detailed breakdown of the scoring methodology used for this category, including any specific weightings or thresholds applied to individual evaluation criteria. This information will help us understand why our bid received a lower score than expected and allow us to better assess the fairness of the evaluation process.",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Public Contracts Regulations 2006",
+        "Roche Diagnostics Ltd v The Mid Yorkshire Hospitals NHS Trust [2013] EWHC 933 (TCC)"
+      ],
+      "reasoning": "The Aggrieved Bidder has articulated a specific concern regarding the scoring discrepancy in category C, which may indicate an error in the evaluation process. This is sufficient to establish a prima facie case for disclosure. The request appears targeted at the actual issue in dispute, rather than a broad trawl through the Contracting Authority's records. However, the burden of disclosing category D documents (score sheets and notes) may be disproportionate if it involves significant time and cost. Confidentiality safeguards will be necessary to protect commercially sensitive material.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Roche Diagnostics principles"
+      ],
+      "reasoning": "The Plaintiff has shown a prima facie case that there may be something wrong with the evaluation, specifically in category C. The request for a detailed breakdown of the scoring methodology is specific and targeted at the actual issue in dispute. However, the burden of providing this information should be proportionate to its evidential value. Given the contracting authority's willingness to provide additional context on how scores were calculated, it seems reasonable to order disclosure of this information. To ensure confidentiality safeguards, the detailed breakdown should only be shared with the Plaintiff's legal team and not made publicly available.",
+      "recommended_action": "disclosure ordered",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "disclosure ordered",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiated outcome was more favorable than our BATNA, which would have involved defending in TCC court and potentially facing costs of \u00a350k+ and a timeframe of 6-12 months. Through negotiation, we were able to limit the scope of disclosure ordered by the court.",
+    "win_statement": "We successfully defended the integrity of the evaluation process and limited the scope of disclosure ordered by the court, while also providing additional context on how scores were calculated.",
+    "what_was_achieved": [
+      "Limited the scope of disclosure ordered by the court",
+      "Provided additional context on scoring methodology"
+    ],
+    "what_was_conceded": [
+      "Disclosure of category C documents (guidance emails)",
+      "Disclosure of category E documents (bids of other tenderers)"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome of disclosure ordered is slightly favourable compared to our BATNA (pursuing damages or formal TCC proceedings), which would have been costly, slow, and uncertain. While we did not achieve the desired revision of scores or full disclosure of all relevant documents, the court's order for disclosure of category C, D, and E documents provides some insight into the evaluation process.",
+    "win_statement": "We successfully secured disclosure of key documents related to the tender evaluation process, which will allow us to better understand the basis for the scoring discrepancies in category C. This outcome is a partial victory, as it enables us to assess the fairness of the evaluation process and potentially inform future negotiations or legal action.",
+    "what_was_achieved": [
+      "Disclosure of category C documents (guidance emails)",
+      "Disclosure of category E documents (bids of other tenderers)",
+      "Disclosure of relevant category D documents (score sheets and notes)"
+    ],
+    "what_was_conceded": [
+      "No revision of original scores in category C",
+      "Limited disclosure of specific weightings or thresholds applied to individual evaluation criteria"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Scoring discrepancy in category C",
+      "Disclosure of documents related to category C, D, and E"
+    ],
+    "concessions_summary": "The Contracting Authority agreed to provide a detailed explanation of their scoring methodology for category C (Round 2) and eventually ordered disclosure of the detailed breakdown of the scoring methodology used for this category.",
+    "court_reasoning_summary": "The Court found that the Aggrieved Bidder had established a prima facie case for disclosure due to the specific concern regarding the scoring discrepancy in category C. The request was targeted at the actual issue in dispute, and the burden of disclosing the information was proportionate to its evidential value.",
+    "likely_next_steps": "The Contracting Authority will provide the detailed breakdown of the scoring methodology used for category C to the Aggrieved Bidder's legal team, ensuring confidentiality safeguards are in place. The outcome may lead to a re-evaluation of the scores or further negotiations between the parties.",
+    "plain_english_summary": "A company (Geodesign Barriers Ltd) disputed how their bid was scored by the Environment Agency during a tender process. They requested specific documents related to the scoring, which the Agency initially resisted but eventually agreed to disclose after reviewing their scoring methodology. The Court ordered disclosure of this information, which may lead to a re-evaluation of the scores or further negotiations between the parties."
+  }
+}
