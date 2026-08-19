@@ -37,8 +37,11 @@ this dispute. When in doubt, err toward including more of the source's exact
 numeric language, not less — "dense narrative" (below) means factually
 dense, not short.
 
-If the source text does not state a contract value, dispute type, or
-procedural stage explicitly, make the most reasonable inference from context
+If the source text does not state a contract value explicitly, output `null`
+for contract_value_gbp — see that field's own instructions below, do not
+estimate one. dispute_type and procedural_stage must still always be set
+(every dispute has some procedural posture even if no money figure is ever
+mentioned) — for those two, make the most reasonable inference from context
 and say so plainly in the description rather than presenting a guess as fact.
 
 YOUR OUTPUT:
@@ -53,16 +56,24 @@ Produce a DisputeScenario as JSON with these exact fields:
   exact figures (see "EQUALLY CRITICAL" above), those MUST appear in this
   field verbatim — do not compress them into a vaguer qualitative sentence.
 - "contract_value_gbp": the contract's REAL/ACTUAL value in GBP as a plain
-  number. If the source mentions more than one figure for the contract
+  number, or JSON `null` — never 0 as a placeholder — if the source does not
+  state one. If the source mentions more than one figure for the contract
   value — e.g. a published or tender-notice figure that the source itself
   says was mistaken, understated, or disputed, alongside a real/estimated
   actual value — use the REAL value here, not the disputed one, even if the
   disputed figure appears first or more prominently in the source. A
   mis-stated tender value is itself part of the dispute's facts, not the
   number to report as the contract's value. If genuinely only one figure is
-  given with no indication it is disputed, use that figure. If no value is
-  stated at all, make a reasonable estimate and note in the description that
-  it is estimated.
+  given with no indication it is disputed, use that figure.
+
+  DO NOT ESTIMATE OR GUESS A VALUE. Many real disputes — interim applications,
+  disclosure hearings, procedural challenges — never state a headline contract
+  value at all, because the value isn't what's in issue. `null` is the
+  correct, honest output for those, meaning "not stated" — never invent a
+  plausible-sounding figure, and never fall back to 0, which reads downstream
+  as "this is a real £0 contract" rather than "value unknown". Getting this
+  wrong in either direction (inventing a number, or silently zeroing one out)
+  is the same fabrication failure as inventing a scoring formula.
 
   CONVERT UNITS CAREFULLY — count the zeros. Expand "million" by appending 6
   zeros to the leading digits, and "billion" by appending 9 zeros, to the
@@ -72,15 +83,36 @@ Produce a DisputeScenario as JSON with these exact fields:
   dropping a zero during that expansion — double-check your arithmetic
   before finalising, and re-read the figure you wrote in the description to
   confirm contract_value_gbp expands it correctly, the two must agree.
-
-  If the source states no value at all, there is no figure here to convert —
-  follow the instruction two paragraphs up instead (estimate, and say so
-  plainly in the description) rather than inventing or borrowing a number
-  from anywhere in this prompt.
 - "dispute_type": a short label, e.g. "scoring_challenge",
-  "transparency_breach", "process_avoidance", "automatic_suspension"
-- "procedural_stage": a short label, e.g. "standstill", "automatic_suspension",
-  "trial", "appeal"
+  "transparency_breach", "process_avoidance", "automatic_suspension",
+  "disclosure_application"
+- "procedural_stage": read the document's ACTUAL procedural posture — do not
+  default to "trial" as a generic fallback. Many real disputes never reach a
+  merits trial at all: a case can be an interim application for specific
+  disclosure of evaluation records (CPR 31.12), heard and decided on its own
+  terms, with no trial on the underlying scoring dispute ever occurring in
+  the source text you were given. Judge this from what the document actually
+  is (a full trial judgment on the merits? an interim hearing on a discrete
+  procedural question? a pre-action standstill letter?), not from the
+  existence of a dispute. Examples across the range: "standstill",
+  "automatic_suspension", "interim_application", "disclosure_application",
+  "trial", "appeal". If the document is itself a judgment on a disclosure or
+  other interim application, "trial" is the WRONG label even though a "trial"
+  in the colloquial sense (a court hearing) took place — CPR terminology
+  reserves "trial" for the substantive merits hearing specifically.
+- "governing_legislation": the actual legislation or regulations the source
+  text cites as governing this procurement — e.g. "Public Contracts
+  Regulations 2006", "Public Contracts Regulations 2015", "Procurement Act
+  2023". Extract this from the source, not from assumption: the Procurement
+  Act 2023 only governs procurements from its commencement (late 2024
+  onward) — an older case is necessarily governed by whichever PCR regime
+  applied when it was decided, and citing the 2023 Act for it would be
+  simply wrong, the same way citing GDPR for a 1990s data dispute would be.
+  If the source states a case citation with a year, or explicitly names its
+  governing regulations, use that. If genuinely not stated or determinable,
+  output JSON `null` rather than defaulting to the Procurement Act 2023 —
+  downstream agents already fall back to that default themselves when this
+  field is null, so guessing here only removes information, it doesn't add any.
 - "contracting_authority_name": the real organisation name if given, else a
   short generic label
 - "bidder_name": the real challenger/claimant organisation name if given,
@@ -92,12 +124,16 @@ explanation, no markdown formatting, just JSON:
 {
   "title": "...",
   "description": "...",
-  "contract_value_gbp": 0,
+  "contract_value_gbp": null,
   "dispute_type": "...",
   "procedural_stage": "...",
+  "governing_legislation": null,
   "contracting_authority_name": "...",
   "bidder_name": "..."
 }
+(contract_value_gbp and governing_legislation shown as null above only to
+illustrate the type when not stated — use a real number/string whenever the
+source actually states one.)
 """
 
 EXTRACTION_USER_TEMPLATE = """

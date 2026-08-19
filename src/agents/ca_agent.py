@@ -1,5 +1,10 @@
 from langchain_ollama import ChatOllama
-from src.utils.negotiation_helpers import is_repetitive, format_previous_statements, get_round_stage_instruction
+from src.utils.negotiation_helpers import (
+    is_repetitive,
+    format_previous_statements,
+    get_round_stage_instruction,
+    format_contract_value,
+)
 from src.prompts.ca_prompt import CA_SYSTEM_PROMPT, CA_WIN_STATEMENT_PROMPT, build_ca_system_prompt
 from src.schemas.agent_state import PreNegotiationStatement, DisputeScenario, AgentRole, RoundResponse, WinStatement, CAProfile
 from src.utils.event_stream import emit_status
@@ -16,13 +21,15 @@ class ContractingAuthorityAgent:
         self.system_prompt = build_ca_system_prompt(profile)
 
     def build_scenario_context(self, scenario: DisputeScenario) -> str:
+        governing_legislation = scenario.governing_legislation or "Procurement Act 2023 (default — not otherwise stated in the source)"
         return f"""
 DISPUTE DETAILS:
 - Dispute ID: {scenario.dispute_id}
 - Title: {scenario.title}
-- Contract Value: £{scenario.contract_value_gbp:,.0f}
+- Contract Value: {format_contract_value(scenario.contract_value_gbp)}
 - Dispute Type: {scenario.dispute_type}
 - Procedural Stage: {scenario.procedural_stage}
+- Governing Legislation: {governing_legislation}
 - Your Organisation: {scenario.contracting_authority_name}
 - Challenging Party: {scenario.bidder_name}
 
@@ -32,14 +39,17 @@ DISPUTE DESCRIPTION:
 
     def get_pre_negotiation_statement(self, scenario: DisputeScenario) -> PreNegotiationStatement:
         scenario_context = self.build_scenario_context(scenario)
+        governing_legislation = scenario.governing_legislation or "the Procurement Act 2023"
 
         user_message = f"""
 {scenario_context}
 
 You are now entering pre-negotiation. Based on this dispute, provide your
-pre-negotiation statement as a JSON object. Be specific to this scenario —
-reference the scoring challenge, the £{scenario.contract_value_gbp:,.0f} contract,
-and your legal position under the Procurement Act 2023.
+pre-negotiation statement as a JSON object. Be specific to this scenario,
+reference the contract value shown above exactly as shown (do not invent a
+figure if it says "Not stated"), and cite {governing_legislation} — the
+legislation actually governing THIS dispute, not the Procurement Act 2023 by
+default.
 
 For "interests", work from your seven primary interests & drivers, but do NOT
 simply list the category names back. Select only the categories genuinely engaged
@@ -51,6 +61,12 @@ delivers, and the concrete operational consequence of delay or a re-run given th
 facts>"
 Fill the angle brackets with the real facts of this dispute. Do not reproduce the
 bracketed wording itself.
+
+ANTI-FABRICATION — numbers in "interests": only cite a monetary figure or
+percentage if it actually appears in the DISPUTE DETAILS/DESCRIPTION above. If
+none is given, describe the exposure in general terms (e.g. "significant delay
+costs") rather than inventing one (e.g. a fabricated "£85,000") — an invented
+figure is exactly as serious a fabrication as an invented scoring formula.
 
 "batna" and "opening_position" MUST each be a single plain-English string —
 NEVER a nested JSON object.
@@ -71,7 +87,23 @@ Respond ONLY with valid JSON, no other text before or after.
 
         data = parse_llm_json(raw_text, agent="ContractingAuthorityAgent", call="pre_negotiation")
 
-        return PreNegotiationStatement(**data)
+        try:
+            return PreNegotiationStatement(**data)
+        except Exception as first_error:
+            # A longer, more instruction-dense user_message (anti-fabrication +
+            # governing-legislation guidance) measurably raised the rate of the
+            # model dropping a required field under json mode — first observed
+            # as a 3/8 batch failure rate on Faraday with zero prior failures in
+            # the whole batch_results corpus. One repair attempt, same pattern
+            # already used by ScenarioExtractionAgent for the same reason.
+            repair_message = (
+                f"{user_message}\n\n"
+                f"Your previous JSON response was invalid: {first_error}\n"
+                f"Return corrected JSON only, matching the exact structure requested."
+            )
+            response = self.llm.invoke([("system", self.system_prompt), ("user", repair_message)])
+            data = parse_llm_json(response.content.strip(), agent="ContractingAuthorityAgent", call="pre_negotiation_repair")
+            return PreNegotiationStatement(**data)
 
     def respond_to_round(self, scenario: DisputeScenario, conversation_history: list,
                           round_number: int, max_rounds: int = 3) -> RoundResponse:

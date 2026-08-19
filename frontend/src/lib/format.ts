@@ -6,8 +6,19 @@ const gbpFormatter = new Intl.NumberFormat('en-GB', {
   maximumFractionDigits: 0,
 });
 
-export function fmtGBP(value: number): string {
+export function fmtGBP(value: number | null | undefined): string {
+  // null/undefined means "not stated in the source" - a real, different fact from
+  // £0 - see real-case-test-findings.md and the backend's format_contract_value().
+  if (value === null || value === undefined) return 'Not stated';
   return gbpFormatter.format(value);
+}
+
+// Same null handling as fmtGBP, but phrased for the "<value> contract" chip used on
+// the scenario preview/case header - "Not stated contract" reads oddly, so the whole
+// phrase inverts instead of just substituting the number.
+export function fmtContractChip(value: number | null | undefined): string {
+  if (value === null || value === undefined) return 'Contract value not stated';
+  return `${fmtGBP(value)} contract`;
 }
 
 export function fmtPct(value: number | null | undefined, digits = 0): string {

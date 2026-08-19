@@ -5,6 +5,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 
 from src.agents.ca_agent import ContractingAuthorityAgent
 from src.cases.loader import load_real_scenario
+from src.utils.negotiation_helpers import format_contract_value
 
 CASE = os.environ.get("CASE", "parkingeye-velindre")
 
@@ -20,7 +21,7 @@ def check_ca_pre_negotiation():
     print("TESTING: Contracting Authority Pre-Negotiation Statement")
     print("="*60)
     print(f"\nScenario: {scenario.title}")
-    print(f"Contract Value: £{scenario.contract_value_gbp:,.0f}")
+    print(f"Contract Value: {format_contract_value(scenario.contract_value_gbp)}")
     print(f"Dispute Type: {scenario.dispute_type}")
     print("\nRunning CA agent...\n")
     

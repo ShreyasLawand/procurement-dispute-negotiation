@@ -53,6 +53,11 @@ KNOWN_OUTCOMES = {
     "no remedy - decision stands",
     "damages",
     "deadlock - max rounds reached, escalate to formal proceedings",
+    # Disclosure/procedural dispute outcomes (Phase 3, COURT_SYSTEM_PROMPT_DISCLOSURE
+    # in court_prompt.py) — a disclosure application never reaches "re-evaluation" or
+    # "no remedy - decision stands", the merits-branch vocabulary above.
+    "disclosure ordered",
+    "disclosure refused",
 }
 
 # Below this many successful runs, `confidence` is flagged rather than presented at face value — found in
@@ -74,6 +79,11 @@ _OUTCOME_MEANING = {
     "deadlock - max rounds reached, escalate to formal proceedings": "no resolution was reached within the "
                                                                       "simulated negotiation; the real-world "
                                                                       "equivalent is formal TCC proceedings",
+    "disclosure ordered": "the Court found a prima facie case and proportionate disclosure request; the "
+                           "authority should disclose the specified material, subject to any confidentiality "
+                           "safeguards",
+    "disclosure refused": "the prima facie case was not made out, or the request was disproportionate or a "
+                           "fishing expedition; disclosure was not ordered",
 }
 
 

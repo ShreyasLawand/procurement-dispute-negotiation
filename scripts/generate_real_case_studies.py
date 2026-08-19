@@ -22,6 +22,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from src.agents.extraction_agent import ScenarioExtractionAgent
 from src.graph_orchestrator import GraphNegotiationOrchestrator
+from src.utils.negotiation_helpers import format_contract_value
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
@@ -38,7 +39,7 @@ def run_case(slug: str, max_rounds: int = 3) -> None:
         contracting_authority_name=case["contracting_authority_name"],
         bidder_name=case["bidder_name"],
     )
-    print(f"[{slug}] Extracted: {scenario.title} (£{scenario.contract_value_gbp:,.0f}, {scenario.dispute_type})")
+    print(f"[{slug}] Extracted: {scenario.title} ({format_contract_value(scenario.contract_value_gbp)}, {scenario.dispute_type})")
 
     orchestrator = GraphNegotiationOrchestrator(max_rounds=max_rounds)
     t0 = time.time()

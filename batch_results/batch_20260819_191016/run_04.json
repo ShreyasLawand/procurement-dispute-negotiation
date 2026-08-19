@@ -1,0 +1,120 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-FARADAY-2018",
+    "title": "Faraday Development Ltd v West Berkshire Council",
+    "description": "West Berkshire Council entered into a development agreement with St Modwen Developments Ltd for approximately \u00a3125 million, structured as a conditional land agreement. Faraday Development Ltd challenged the arrangement, alleging that it was in substance a public works contract that should have been competitively procured under the Public Contracts Regulations. The High Court initially dismissed the claim, but the Court of Appeal reversed this decision, holding that the agreement was indeed a public works contract and declaring its ineffectiveness.",
+    "contract_value_gbp": 125000000.0,
+    "dispute_type": "process_avoidance",
+    "procedural_stage": "appeal",
+    "governing_legislation": null,
+    "contracting_authority_name": "West Berkshire Council",
+    "bidder_name": "Faraday Development Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Continuity of Service / Delivery: \u00a3125,000,000 development agreement impacts critical infrastructure and public services in West Berkshire.",
+      "Protection of Public Funds: Significant delay costs and potential financial losses if the contract is not awarded promptly.",
+      "Reputation & Public Accountability: Maintain public confidence and avoid adverse media or political scrutiny due to the high-profile nature of this dispute."
+    ],
+    "goals": [
+      "Defend the procurement decision"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our evaluation process and the awarding of the contract to St Modwen Developments Ltd, which was conducted in accordance with the Public Contracts Regulations and the Procurement Act 2023.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Public Contracts Regulations"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a3125 million contract value at risk due to potential re-procurement",
+      "Fairness & Transparency: Perception of unfairness in the original procurement process and desire for clear feedback on evaluation methodology"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids, giving us a chance to be awarded the contract ourselves"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "Request a re-evaluation of all bids with immediate suspension of award to St Modwen Developments Ltd",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Public Contracts Regulations"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "Faraday Development Ltd's allegations regarding the development agreement with St Modwen Developments Ltd are based on their interpretation that it is a public works contract. However, our evaluation process was conducted in accordance with the Procurement Act 2023 and the Public Contracts Regulations. I would like to clarify whether Faraday Development Ltd is suggesting that we failed to properly evaluate the agreement as a public works contract or if they have specific concerns regarding the procurement process itself.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your clarification regarding our interpretation of the development agreement with St Modwen Developments Ltd. However, I would like to challenge the Contracting Authority's assertion that our evaluation process was conducted in accordance with the Procurement Act 2023 and the Public Contracts Regulations. Specifically, we have concerns regarding the scoring methodology used by the evaluation panel, which appears inconsistent with the published criteria. Can you provide more detail on how the scores were allocated for each criterion, particularly in relation to the 'experience' and 'financial capacity' categories?",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative (Step 2B), as it involves a dispute over the interpretation of the development agreement and the evaluation process. The Contracting Authority's position suggests that they followed the Procurement Act 2023 and the Public Contracts Regulations, but the Aggrieved Bidder has raised concerns regarding the scoring methodology used by the evaluation panel. Upon reviewing the scenario, I note that there is no explicit formula or sub-scores provided for the 'experience' and 'financial capacity' categories. Therefore, I will assess the Contracting Authority's compliance qualitatively, rather than computationally. The Aggrieved Bidder's concerns regarding the scoring methodology suggest a potential issue with rationality and proportionality in the evaluation process.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome of re-evaluation is more favorable than our BATNA (defending in TCC court, which would cost \u00a350k+ and take 6-12 months). Although we did not achieve a full win, the negotiated settlement avoids the significant costs and risks associated with litigation.",
+    "win_statement": "We successfully defended our procurement process and evaluation methodology, while also addressing some of Faraday Development Ltd's concerns regarding scoring inconsistencies. This outcome demonstrates our commitment to transparency and fairness in public contracting.",
+    "what_was_achieved": [
+      "Clarified the development agreement's classification as a public works contract",
+      "Addressed concerns regarding scoring methodology and provided detailed explanations for each criterion"
+    ],
+    "what_was_conceded": [
+      "Agreed to re-evaluate the development agreement, acknowledging some inconsistencies in the original evaluation process",
+      "Provided additional information on the scoring methodology to address Faraday Development Ltd's specific concerns"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is more favorable than pursuing damages or formal TCC proceedings, which would have been costly, slow, and uncertain. We were able to achieve a re-evaluation of the development agreement, which acknowledges our concerns regarding the scoring methodology used by the evaluation panel.",
+    "win_statement": "We successfully challenged the Contracting Authority's assertion that their evaluation process was conducted in accordance with the Procurement Act 2023 and the Public Contracts Regulations. Our persistence in questioning the scoring methodology led to a re-evaluation of the agreement, which is a significant victory for us.",
+    "what_was_achieved": [
+      "A re-evaluation of the development agreement",
+      "Acknowledgement of concerns regarding the scoring methodology used by the evaluation panel"
+    ],
+    "what_was_conceded": [
+      "The Contracting Authority's initial assertion that their evaluation process was conducted in accordance with the Procurement Act 2023 and the Public Contracts Regulations",
+      "The ineffectiveness of the development agreement, although this is not a direct concession by the Contracting Authority"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Interpretation of development agreement with St Modwen Developments Ltd",
+      "Scoring methodology used by the evaluation panel"
+    ],
+    "concessions_summary": "Neither side made any concessions in this negotiation. The Contracting Authority maintained its position that it followed the Procurement Act 2023 and the Public Contracts Regulations, while the Aggrieved Bidder continued to raise concerns about the scoring methodology.",
+    "court_reasoning_summary": "The Court assessed the scenario as qualitative (Step 2B) due to the dispute over interpretation and evaluation process. The Court noted a potential issue with rationality and proportionality in the evaluation process based on the Aggrieved Bidder's concerns regarding the scoring methodology.",
+    "likely_next_steps": "Re-evaluation of the development agreement with St Modwen Developments Ltd, as recommended by the Court.",
+    "plain_english_summary": "The negotiation centered around a disagreement between Faraday Development Ltd and West Berkshire Council over how to evaluate a development agreement. The Aggrieved Bidder raised concerns about the scoring methodology used by the evaluation panel, which led the Court to recommend re-evaluation of the agreement."
+  }
+}

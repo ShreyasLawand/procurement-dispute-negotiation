@@ -1,0 +1,121 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-FARADAY-2018",
+    "title": "Faraday Development Ltd v West Berkshire Council",
+    "description": "West Berkshire Council entered into a development agreement with St Modwen Developments Ltd for approximately \u00a3125 million, structured as a conditional land agreement. Faraday Development Ltd challenged the arrangement, alleging that it was in substance a public works contract that should have been competitively procured under the Public Contracts Regulations. The High Court initially dismissed the claim, but the Court of Appeal reversed this decision, holding that the agreement was indeed a public works contract and declaring its ineffectiveness.",
+    "contract_value_gbp": 125000000.0,
+    "dispute_type": "process_avoidance",
+    "procedural_stage": "appeal",
+    "governing_legislation": null,
+    "contracting_authority_name": "West Berkshire Council",
+    "bidder_name": "Faraday Development Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Uphold the principles of transparency and equal treatment in procurement.",
+      "Protection of Public Funds: Avoid significant delay costs associated with a re-run of the procurement process.",
+      "Continuity of Service / Delivery: Ensure timely delivery of \u00a3125,000,000 development agreement for West Berkshire Council's infrastructure projects.",
+      "Reputation & Public Accountability: Maintain public confidence and protect our reputation as a competent buyer in the eyes of stakeholders and auditors."
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Resolve the dispute through negotiation"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We will defend our evaluation process, but are willing to provide additional transparency and feedback to Faraday Development Ltd.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Public Contracts Regulations"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: We may have missed out on a \u00a3125 million contract",
+      "Fairness & Transparency: The Court of Appeal's decision raises questions about the Council's evaluation process and scoring methodology"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids, giving us a chance to be awarded the contract ourselves"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We believe that the Council's evaluation process was flawed and we request a re-evaluation of all bids to ensure fairness and transparency",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Court of Appeal decision"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "Faraday Development Ltd's claim that our development agreement with St Modwen Developments Ltd was a public works contract is based on their assertion that it involved 'substantial construction work'. However, we maintain that this characterization is overly broad and does not accurately reflect the scope of the agreement. Can you clarify what specific aspects of the agreement led you to conclude that it was a public works contract?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your clarification on the characterization of the development agreement as a public works contract. However, we would like to request more specific information regarding the evaluation process and scoring methodology used by West Berkshire Council in determining that the agreement was not a public works contract. Can you provide us with details on how the council assessed the 'substantial construction work' requirement and what specific criteria were applied in this assessment?",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative in nature. The parties' positions focus on the characterization of the development agreement and the evaluation process used by West Berkshire Council. There are no explicit formulas or sub-scores mentioned in the description. However, I note that the High Court initially dismissed Faraday Development Ltd's claim, but the Court of Appeal reversed this decision, holding that the agreement was indeed a public works contract and declaring its ineffectiveness. This suggests a manifest error in the initial evaluation process.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome is more favorable than our BATNA, which would have involved defending the case in TCC court at a significant cost (\u00a350k+ and 6-12 months). While we did not achieve a full win, the re-evaluation process allowed us to avoid the risks associated with a lengthy and costly legal battle.",
+    "win_statement": "We successfully negotiated a re-evaluation of the development agreement, which has been declared ineffective. This outcome avoids the potential costs and risks associated with defending the case in TCC court.",
+    "what_was_achieved": [
+      "Avoided the risk of a lengthy and costly legal battle",
+      "Achieved a more favorable outcome than our BATNA"
+    ],
+    "what_was_conceded": [
+      "Declaring the development agreement ineffective, rather than achieving a full win on the characterization of the agreement as a public works contract"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is more favorable than pursuing damages or formal TCC proceedings, which would have been costly, slow, and uncertain. While we did not achieve our desired result of the agreement being declared valid, the re-evaluation process has led to a clearer understanding of the council's evaluation process.",
+    "win_statement": "We successfully pushed for a re-evaluation of the development agreement, highlighting potential flaws in the council's assessment of 'substantial construction work'. Although we did not achieve our primary goal, this outcome allows us to better understand the council's thought process and may inform future negotiations or disputes.",
+    "what_was_achieved": [
+      "A clearer understanding of the council's evaluation process and criteria for assessing 'substantial construction work'",
+      "Potential flaws in the council's assessment were highlighted"
+    ],
+    "what_was_conceded": [
+      "The agreement was declared ineffective, which may have significant implications for future development projects",
+      "We did not achieve our primary goal of having the agreement declared valid"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Characterization of the development agreement as a public works contract",
+      "Evaluation process and scoring methodology used by West Berkshire Council"
+    ],
+    "concessions_summary": "Neither party made any concessions during the negotiation. The Contracting Authority maintained its position that the characterization was overly broad, while the Aggrieved Bidder requested more information on the evaluation process.",
+    "court_reasoning_summary": "The Court concluded that there was a manifest error in the initial evaluation process due to the qualitative nature of the assessment and the lack of explicit formulas or sub-scores. The Court's reasoning was influenced by the High Court's reversal of its decision, which suggested an error in the initial evaluation.",
+    "likely_next_steps": "The dispute will likely proceed with a re-evaluation of the development agreement as a public works contract. This may involve a more detailed assessment of the 'substantial construction work' requirement and the criteria applied by West Berkshire Council.",
+    "plain_english_summary": "The negotiation centered on whether a development agreement was a public works contract or not. The Aggrieved Bidder questioned the evaluation process used by the Contracting Authority, which led the Court to conclude that there was an error in the initial assessment. As a result, the dispute will be re-evaluated."
+  }
+}

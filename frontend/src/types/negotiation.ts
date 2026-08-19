@@ -7,9 +7,11 @@ export interface DisputeScenario {
   dispute_id: string;
   title: string;
   description: string;
-  contract_value_gbp: number;
+  // null means "not stated in the source" - see schema.ts's comment.
+  contract_value_gbp: number | null;
   dispute_type: string;
   procedural_stage: string;
+  governing_legislation?: string | null;
   contracting_authority_name: string;
   bidder_name: string;
 }

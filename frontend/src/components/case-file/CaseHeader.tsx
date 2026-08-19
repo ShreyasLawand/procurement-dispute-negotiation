@@ -1,5 +1,5 @@
 import { Building2, Landmark } from 'lucide-react';
-import { fmtGBP } from '../../lib/format';
+import { fmtContractChip } from '../../lib/format';
 import type { DisputeScenario } from '../../types/negotiation';
 import { Card } from '../ui/Card';
 import { Chip } from '../ui/Chip';
@@ -40,9 +40,7 @@ export function CaseHeader({ scenario, roundNumber, maxRounds }: CaseHeaderProps
           <Building2 className="h-4 w-4 text-bidder" />
           {scenario.bidder_name}
         </span>
-        <span className="ml-auto font-semibold tabular-nums text-ink">
-          {fmtGBP(scenario.contract_value_gbp)} contract
-        </span>
+        <span className="ml-auto font-semibold tabular-nums text-ink">{fmtContractChip(scenario.contract_value_gbp)}</span>
       </div>
     </Card>
   );

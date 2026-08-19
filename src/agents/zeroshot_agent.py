@@ -2,6 +2,7 @@ from src.utils.compliance_metrics import parse_llm_json, metrics
 from langchain_ollama import ChatOllama
 from src.schemas.agent_state import ComplianceAssessment, DisputeScenario
 from src.prompts.zeroshot_prompt import ZEROSHOT_SYSTEM_PROMPT
+from src.utils.negotiation_helpers import format_contract_value
 
 
 class ZeroShotAgent:
@@ -19,7 +20,7 @@ class ZeroShotAgent:
     def assess(self, scenario: DisputeScenario) -> ComplianceAssessment:
         user_message = f"""
 DISPUTE: {scenario.title}
-Contract Value: £{scenario.contract_value_gbp:,.0f}
+Contract Value: {format_contract_value(scenario.contract_value_gbp)}
 Dispute Type: {scenario.dispute_type}
 Procedural Stage: {scenario.procedural_stage}
 Contracting Authority: {scenario.contracting_authority_name}

@@ -1,0 +1,149 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-PARKINGEYE-2026",
+    "title": "Parkingeye Ltd v Velindre University NHS Trust & Cardiff and Vale University Health Board",
+    "description": "The contracting authorities awarded a \u00a310-20 million 5-year car park management services contract to National Parking Control Group (NPCG) over incumbent provider Parkingeye Ltd, which scored 68% against NPCG's 84%. Parkingeye alleged transparency failure in the tender notice (\u00a3100,000 stated value), post-commencement evaluation methodology changes, and inconsistent treatment of bidders during clarification exchanges. The court applied the new statutory test for lifting automatic suspension under section 101 of the Procurement Act 2023 and refused to lift the suspension, finding the balance of public interest favoured allowing Parkingeye's challenge to proceed.",
+    "contract_value_gbp": 15000000.0,
+    "dispute_type": "transparency_breach",
+    "procedural_stage": "standstill",
+    "governing_legislation": null,
+    "contracting_authority_name": "Velindre University NHS Trust / Cardiff and Vale University Health Board",
+    "bidder_name": "Parkingeye Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 2,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Act lawfully and within vires to avoid manifest error and breach of procedure.",
+      "Protection of Public Funds: \u00a315,000,000 contract value at risk if procurement decision is overturned or delayed.",
+      "Continuity of Service / Delivery: Critical car park management services may be disrupted or suspended due to automatic standstill.",
+      "Reputation & Public Accountability: Maintain public confidence and the trust of senior stakeholders in our procurement process."
+    ],
+    "goals": [
+      "Defend the procurement decision against Parkingeye Ltd's challenge",
+      "Maintain transparency and fairness throughout the evaluation process"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We acknowledge Parkingeye Ltd's concerns, but we stand by our evaluation process and scoring methodology.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Section 101: Lifting Automatic Suspension"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a310-20 million contract value at stake",
+      "Fairness & Transparency: transparency failure in tender notice and post-commencement evaluation methodology changes",
+      "Strategic Leverage: obtain more detailed feedback to trigger additional disclosure from the contracting authority"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids, giving us a chance to be awarded the contract ourselves",
+      "An award of damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We believe the contracting authority's decision was tainted by transparency issues and inconsistent treatment of bidders. We request a re-evaluation of submitted bids to ensure fairness and transparency.",
+    "legal_basis": [
+      "Procurement Act 2023"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Parkingeye's concerns regarding transparency in our tender notice and evaluation methodology changes. However, we would like to clarify whether you are specifically contesting the stated \u00a3100,000 value as being misleading or inaccurate? We have reviewed our documentation and can provide additional information on this point if required.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your acknowledgement of our concerns regarding transparency in the tender notice and evaluation methodology changes. However, we would like to clarify whether the \u00a3100,000 stated value was indeed a typographical error or an intentional misrepresentation. Can you provide evidence that this figure was not misleading or inaccurate, as it significantly impacted our bid strategy and competitiveness?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge that the stated \u00a3100,000 value in our tender notice may have been misleading or inaccurate, and we are willing to provide additional information on this point. We can confirm that this figure was an error and not a deliberate attempt to mislead bidders. Our evaluation methodology changes were intended to improve transparency and fairness, but we understand how the \u00a3100,000 value could have impacted your bid strategy. We propose providing a detailed breakdown of our evaluation scores for all bidders, including Parkingeye Ltd, in order to provide greater clarity on the decision-making process.",
+      "proposal": "A detailed breakdown of our evaluation scores for all bidders",
+      "concession_made": "Acknowledging that the \u00a3100,000 value was an error"
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to provide additional information on the \u00a3100,000 value. However, we would like to request that you also provide a detailed explanation for the significant discrepancy in evaluation scores between our bid and NPCG's, particularly given the changes to the evaluation methodology. This will help us understand whether the outcome was truly reflective of our capabilities and competitiveness. We are willing to consider a partial award covering 50% of the contract value if we can be assured that the evaluation process was fair and transparent.",
+      "proposal": "A partial award covering 50% of the contract value",
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 of the Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative, not numeric. The parties are contesting transparency and evaluation methodology changes, but no formula or sub-scores are mentioned. I will assess compliance qualitatively instead.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves evaluation of bidders' capabilities and competitiveness. The Contracting Authority's willingness to provide additional information on the \u00a3100,000 value is a positive step towards transparency. However, the significant discrepancy in evaluation scores between Parkingeye Ltd's bid (68%) and NPCG's bid (84%) raises concerns about the fairness and consistency of the evaluation process. Upon reviewing the scenario, I did not find any explicit formula or sub-scores that could be used to calculate a specific numeric outcome. Therefore, I will assess compliance qualitatively. The Contracting Authority's changes to the evaluation methodology were intended to improve transparency and fairness, but the \u00a3100,000 value in the tender notice may have impacted bidders' strategies. This discrepancy, combined with the lack of clear explanation for the significant score difference, suggests that the process was not compliant with s12 Procurement Act 2023.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiated outcome is more favourable than our BATNA, which would have involved defending in TCC court at a cost of \u00a350k+ and taking 6-12 months. This negotiation has allowed us to avoid these costs and risks while still addressing Parkingeye's concerns.",
+    "win_statement": "We successfully navigated the dispute and negotiated a re-evaluation of the contract award, which will provide greater transparency and clarity on our evaluation process. While we did not achieve a full win, we have avoided the significant costs and risks associated with defending in court.",
+    "what_was_achieved": [
+      "Provided additional information on the \u00a3100,000 value in the tender notice",
+      "Agreed to provide a detailed breakdown of our evaluation scores for all bidders"
+    ],
+    "what_was_conceded": [
+      "Acknowledged that the stated \u00a3100,000 value may have been misleading or inaccurate",
+      "Agreed to provide a detailed explanation for the discrepancy in evaluation scores between Parkingeye's bid and NPCG's"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The negotiated outcome is a re-evaluation, which is an improvement over our BATNA of pursuing damages or formal TCC proceedings. However, it still falls short of our desired outcome of being awarded the contract.",
+    "win_statement": "We have secured a re-evaluation of the tender process, which may lead to a more favorable outcome for our bid. We are also able to request additional information from the contracting authority regarding their evaluation methodology and scores.",
+    "what_was_achieved": [
+      "Contracting authorities acknowledged transparency issues in the tender notice",
+      "Agreed to provide additional information on the \u00a3100,000 value and evaluation methodology changes"
+    ],
+    "what_was_conceded": [
+      "No award of contract at this stage",
+      "Limited scope for re-evaluation, with no guarantee of a favorable outcome"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Transparency in tender notice and evaluation methodology changes",
+      "\u00a3100,000 value stated in tender notice being misleading or inaccurate",
+      "Significant discrepancy in evaluation scores between Parkingeye Ltd's bid (68%) and NPCG's bid (84%)"
+    ],
+    "concessions_summary": "The Contracting Authority conceded that the \u00a3100,000 value was an error. They also proposed providing a detailed breakdown of their evaluation scores for all bidders.",
+    "court_reasoning_summary": "The Court concluded that the process followed by the Contracting Authority was not compliant with s12 Procurement Act 2023 due to the lack of clear explanation for the significant score difference and concerns about fairness and consistency in the evaluation process. The manifest error was identified as the \u00a3100,000 value being misleading or inaccurate.",
+    "likely_next_steps": "The Court recommended re-evaluation, which means that the Contracting Authority will need to reassess Parkingeye Ltd's bid based on a revised evaluation methodology and transparent scoring system.",
+    "plain_english_summary": "The negotiation ended with the Court recommending re-evaluation due to concerns about transparency and fairness in the original evaluation process. The Contracting Authority acknowledged errors in their tender notice and proposed providing more information, but the significant discrepancy in scores between bidders raised further questions about the process."
+  }
+}

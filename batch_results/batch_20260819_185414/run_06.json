@@ -1,0 +1,148 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-ALSTOM-2017",
+    "title": "Alstom Transport UK Ltd v London Underground Ltd",
+    "description": "London Underground awarded contract to Bombardier for \u00a3112.1 million worth of AC traction motors and control equipment. Alstom challenged the award alleging a manifest error in applying a mandatory technical threshold requirement, which should have excluded Bombardier's bid. The challenge was brought during the standstill period, triggering an automatic suspension. London Underground applied to lift the suspension under the American Cyanamid framework, arguing that damages would be adequate remedy for Alstom if it succeeded at trial and that the balance of convenience favoured proceeding with the contract.",
+    "contract_value_gbp": 112100000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "standstill",
+    "governing_legislation": null,
+    "contracting_authority_name": "London Underground Ltd",
+    "bidder_name": "Alstom Transport UK Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 2,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: \u00a3112.1 million contract value at stake",
+      "Continuity of Service / Delivery: Critical AC traction motors and control equipment needed for London Underground's operations, significant delay costs and reputational exposure if procurement is delayed or re-run"
+    ],
+    "goals": [
+      "Defend the procurement decision, maintain public confidence in our ability to deliver complex procurements",
+      "Minimise disruption caused by automatic suspension or litigation"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We have carefully evaluated Alstom's challenge and believe that our application of the technical threshold requirement was correct. We are willing to provide additional information and transparency, but we cannot simply re-score bids or discuss other bidders' scores in detail.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "American Cyanamid framework for lifting automatic suspension"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a3112.1 million contract value at stake",
+      "Fairness & Transparency: perceived unfairness in application of technical threshold requirement",
+      "Protection of Reputation: maintaining credibility with parent companies, shareholders, and partners"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "Award damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "Request that London Underground re-evaluate the bids to ensure compliance with the technical threshold requirement",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "American Cyanamid framework"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Alstom's challenge and appreciate the opportunity to discuss this matter further. However, we would like to clarify whether you are alleging a manifest error in the application of the technical threshold requirement or an incorrect interpretation of the evaluation criteria. Could you provide more specific details on what you believe constitutes the manifest error? Additionally, we propose providing additional transparency regarding our evaluation process, including sharing the detailed scoring matrix used for this procurement.",
+      "proposal": "Additional transparency regarding evaluation process",
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "Thank you for acknowledging our challenge and proposing additional transparency regarding your evaluation process. However, I would like to clarify whether this proposed transparency is in addition to or instead of providing us with a detailed explanation of how the technical threshold requirement was applied to each bid. Specifically, can you confirm that the scoring matrix you propose sharing will include all relevant evaluator comments and scores for both our bid and Bombardier's bid? Furthermore, I would like to request that you provide a more detailed explanation of why you believe damages would be an adequate remedy in this case, given the significant contract value at stake.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "We confirm that the scoring matrix we propose sharing will include all relevant evaluator comments and scores for both Alstom's bid and Bombardier's bid, as well as a detailed explanation of how the technical threshold requirement was applied to each bid. We also acknowledge your request for clarification on our position regarding damages being an adequate remedy in this case. In light of the significant contract value at stake, we are willing to consider alternative dispute resolution mechanisms that could provide a more satisfactory outcome for both parties.",
+      "proposal": "A voluntary standstill extension for engagement and negotiation",
+      "concession_made": "We will provide a detailed explanation of how the technical threshold requirement was applied to each bid"
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to consider alternative dispute resolution mechanisms. However, we believe that a re-evaluation of our bid is necessary to ensure fairness and transparency in this procurement. We propose that both bids be re-evaluated using the same scoring matrix and evaluation criteria, with a focus on addressing the manifest error in applying the technical threshold requirement. This would provide a more satisfactory outcome for both parties and avoid the need for further litigation.",
+      "proposal": "A re-evaluation of both bids using the same scoring matrix and evaluation criteria",
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves the application of a technical threshold requirement and evaluation criteria. There are no explicit formulas or sub-scores provided in the scenario description. I will assess compliance qualitatively instead. The Contracting Authority's proposal to share additional transparency regarding their evaluation process may be seen as a positive step towards openness and accountability. However, it does not address Alstom's specific concerns about the application of the technical threshold requirement or provide a clear explanation for why damages would be an adequate remedy in this case.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "s12 of the Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative. The technical threshold requirement was applied to both bids, but Alstom claims a manifest error in its application. I will assess compliance qualitatively instead of computing a score. London Underground's proposed sharing of the scoring matrix and evaluator comments may provide insight into their evaluation process, but it does not address the core issue of whether they correctly applied the technical threshold requirement. Without explicit details on how this was done, I cannot verify that the process was compliant. Therefore, I conclude that a manifest error has been found.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "This outcome is slightly better than our BATNA, as it avoids the significant costs and risks associated with a lengthy court battle. However, it's not a full win for us, as we had to agree to re-evaluate Alstom's bid.",
+    "win_statement": "We successfully negotiated an alternative dispute resolution mechanism that prioritizes fairness and transparency in this procurement, ensuring that both parties have a more satisfactory outcome without the need for further litigation.",
+    "what_was_achieved": [
+      "Agreed to share detailed scoring matrix with Alstom, including evaluator comments and scores",
+      "Provided a detailed explanation of how the technical threshold requirement was applied to each bid"
+    ],
+    "what_was_conceded": [
+      "Re-evaluation of Alstom's bid, which may lead to a revised contract award",
+      "Consideration of alternative dispute resolution mechanisms, which may not have been our initial preference"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome of re-evaluation is slightly better than pursuing damages or formal TCC proceedings, which would have been costly, slow, and uncertain. However, it falls short of our initial goal of having the contract awarded to us.",
+    "win_statement": "We successfully negotiated a re-evaluation of both bids, which has led to a revised outcome that is more favourable than what we might have achieved through formal proceedings or damages claims. Although we did not achieve our desired outcome of being awarded the contract, this result provides some level of satisfaction and closure.",
+    "what_was_achieved": [
+      "A re-evaluation of both bids was agreed upon, which will provide a more transparent and fair evaluation process.",
+      "The contracting authority has committed to sharing detailed evaluator comments and scores for both our bid and Bombardier's bid."
+    ],
+    "what_was_conceded": [
+      "We did not achieve our goal of being awarded the contract.",
+      "The contracting authority was able to maintain its position that damages would be an adequate remedy in this case, which we do not agree with given the significant contract value at stake."
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Application of the technical threshold requirement",
+      "Transparency in evaluation process",
+      "Damages as an adequate remedy"
+    ],
+    "concessions_summary": "The Contracting Authority made two concessions: (1) providing a detailed explanation of how the technical threshold requirement was applied to each bid, and (2) considering alternative dispute resolution mechanisms.",
+    "court_reasoning_summary": "The Court concluded that a manifest error had been found because the Contracting Authority's proposed sharing of the scoring matrix did not address the core issue of whether they correctly applied the technical threshold requirement. The Court assessed compliance qualitatively due to the scenario's qualitative nature.",
+    "likely_next_steps": "A re-evaluation of both bids is likely to occur, using the same scoring matrix and evaluation criteria, with a focus on addressing the manifest error in applying the technical threshold requirement.",
+    "plain_english_summary": "The negotiation centered around Alstom's concerns about how London Underground applied a technical requirement in evaluating bids. Although London Underground offered some concessions, such as sharing more information about their evaluation process, they did not directly address Alstom's core issue. The Court agreed with Alstom that there was an error and recommended re-evaluation to ensure fairness and transparency."
+  }
+}

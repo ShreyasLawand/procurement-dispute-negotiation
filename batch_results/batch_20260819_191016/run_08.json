@@ -1,0 +1,125 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-FARADAY-2018",
+    "title": "Faraday Development Ltd v West Berkshire Council",
+    "description": "West Berkshire Council entered into a development agreement with St Modwen Developments Ltd for approximately \u00a3125 million, structured as a conditional land agreement. Faraday Development Ltd challenged the arrangement, alleging that it was in substance a public works contract that should have been competitively procured under the Public Contracts Regulations. The High Court initially dismissed the claim, but the Court of Appeal reversed this decision, holding that the agreement was indeed a public works contract and declaring its ineffectiveness.",
+    "contract_value_gbp": 125000000.0,
+    "dispute_type": "process_avoidance",
+    "procedural_stage": "appeal",
+    "governing_legislation": null,
+    "contracting_authority_name": "West Berkshire Council",
+    "bidder_name": "Faraday Development Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Ensure the procurement process was lawful and within our powers under the Procurement Act 2023.",
+      "Protection of Public Funds: Avoid significant delay costs associated with re-running the procurement or defending a court challenge.",
+      "Continuity of Service / Delivery: The development agreement was for approximately \u00a3125,000,000, which would have delivered critical infrastructure and housing in West Berkshire.",
+      "Reputation & Public Accountability: Maintain public confidence and protect our reputation as a competent buyer by upholding the law and following proper procedures.",
+      "Minimising Litigation Risk: Provide enough disclosure to reassure Faraday Development Ltd without undermining evaluation confidentiality or integrity.",
+      "Maintaining Market Relationships: Avoid alienating suppliers who may bid in future procurements, including St Modwen Developments Ltd."
+    ],
+    "goals": [
+      "Defend the procurement decision and uphold the law"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our original evaluation and believe that we followed proper procedures throughout the procurement process.",
+    "legal_basis": [
+      "Procurement Act 2023"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a3125 million contract value at stake",
+      "Fairness & Transparency: Concerned about potential corruption and unfair treatment in the evaluation process",
+      "Protection of Reputation: Want to maintain credibility with parent companies, shareholders, and partners"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "Award damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "Request an immediate review of the evaluation process to ensure fairness and transparency",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Court of Appeal decision"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge Faraday Development Ltd's concerns regarding the procurement process for the development agreement with St Modwen Developments Ltd. However, I would like to clarify whether Faraday Development Ltd is suggesting that West Berkshire Council should have competitively procured the entire \u00a3125 million contract or only a specific portion of it? Additionally, could you provide more information on what specific aspects of the procurement process Faraday Development Ltd believes were in breach of the Public Contracts Regulations?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "Thank you for your clarification on our concerns regarding the procurement process. To answer your question, Faraday Development Ltd believes that the entire \u00a3125 million contract should have been competitively procured under the Public Contracts Regulations. We are not suggesting a partial award or selective re-tendering of specific portions of the contract. Regarding the specific aspects of the procurement process in breach of the regulations, we point to the lack of transparency and clarity in the evaluation criteria and scoring methodology used by West Berkshire Council. Specifically, we have concerns about the weighting assigned to different evaluation criteria and the subjective nature of some of the assessment parameters.",
+      "proposal": "Request for detailed documentation on the evaluation criteria and scoring methodology used by West Berkshire Council",
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "s12 of the Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative, as it does not contain an explicit formula or numeric evaluation criteria. The Aggrieved Bidder's concerns focus on the lack of transparency and clarity in the evaluation criteria and scoring methodology used by West Berkshire Council. Specifically, they point to the weighting assigned to different evaluation criteria and the subjective nature of some assessment parameters. I do not have enough information to perform a calculation or verify specific numeric inputs. However, based on the Aggrieved Bidder's statements, it appears that there may be issues with transparency and clarity in the procurement process. Therefore, I conclude that there is a potential manifest error.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome is more favorable than our BATNA, which was to defend in TCC court at a cost of \u00a350k+ and take 6-12 months. The re-evaluation process has allowed us to avoid the significant costs and risks associated with a lengthy court battle.",
+    "win_statement": "We have successfully negotiated an outcome that avoids the need for costly litigation, while also acknowledging the Court of Appeal's ruling on the ineffectiveness of the development agreement. This is a pragmatic solution that balances our interests with those of Faraday Development Ltd.",
+    "what_was_achieved": [
+      "Avoided the costs and risks associated with defending in TCC court",
+      "Reached an outcome that acknowledges the Court of Appeal's ruling"
+    ],
+    "what_was_conceded": [
+      "The ineffectiveness of the development agreement, as declared by the Court of Appeal",
+      "Some flexibility on re-evaluation, although this was a necessary step to address Faraday Development Ltd's concerns"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is more favorable than our BATNA, but not by a significant margin. We were able to achieve some concessions from the contracting authority, which would have been difficult or impossible to obtain through formal TCC proceedings.",
+    "win_statement": "We successfully challenged the development agreement with St Modwen Developments Ltd and had it declared ineffective by the Court of Appeal. This outcome acknowledges that West Berkshire Council's procurement process was flawed and that a more transparent and competitive approach should have been taken.",
+    "what_was_achieved": [
+      "The development agreement with St Modwen Developments Ltd has been declared ineffective, which means that the contract will need to be re-procured through a more transparent and competitive process.",
+      "West Berkshire Council has agreed to re-evaluate the procurement process and consider alternative options for delivering the development project."
+    ],
+    "what_was_conceded": [
+      "Faraday Development Ltd was not awarded any damages or compensation for its losses resulting from the flawed procurement process.",
+      "The contracting authority did not agree to our request for a full competitive re-tendering of the entire \u00a3125 million contract, but instead opted for a re-evaluation of the existing procurement process."
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Competitive procurement of the entire \u00a3125 million contract",
+      "Lack of transparency and clarity in evaluation criteria and scoring methodology",
+      "Subjective nature of assessment parameters"
+    ],
+    "concessions_summary": "Neither side made any concessions during the negotiation. The Contracting Authority acknowledged Faraday Development Ltd's concerns, but did not offer any solutions or compromises.",
+    "court_reasoning_summary": "The Court concluded that there may be a potential manifest error in the procurement process due to the lack of transparency and clarity in the evaluation criteria and scoring methodology. This led to a recommendation for re-evaluation.",
+    "likely_next_steps": "Given the Court's conclusion, it is likely that West Berkshire Council will re-evaluate the procurement process to address the concerns raised by Faraday Development Ltd. This may involve revising the evaluation criteria and scoring methodology to increase transparency and clarity.",
+    "plain_english_summary": "The dispute centered around whether the \u00a3125 million contract should have been competitively procured, and issues with the evaluation criteria and scoring methodology used by West Berkshire Council. The Court recommended re-evaluation due to potential manifest errors in the procurement process."
+  }
+}

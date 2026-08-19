@@ -12,9 +12,13 @@ const DisputeScenarioSchema = z.object({
   dispute_id: z.string(),
   title: z.string(),
   description: z.string(),
-  contract_value_gbp: z.number(),
+  // null means "not stated in the source" - genuinely different from a £0
+  // contract. See real-case-test-findings.md and format_contract_value() on
+  // the backend (src/utils/negotiation_helpers.py).
+  contract_value_gbp: z.number().nullable(),
   dispute_type: z.string(),
   procedural_stage: z.string(),
+  governing_legislation: z.string().nullable().optional(),
   contracting_authority_name: z.string(),
   bidder_name: z.string(),
 });

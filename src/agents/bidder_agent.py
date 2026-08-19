@@ -1,5 +1,10 @@
 from langchain_ollama import ChatOllama
-from src.utils.negotiation_helpers import is_repetitive, format_previous_statements, get_round_stage_instruction
+from src.utils.negotiation_helpers import (
+    is_repetitive,
+    format_previous_statements,
+    get_round_stage_instruction,
+    format_contract_value,
+)
 from src.prompts.bidder_prompt import BIDDER_SYSTEM_PROMPT, BIDDER_WIN_STATEMENT_PROMPT, build_bidder_system_prompt
 from src.schemas.agent_state import PreNegotiationStatement, DisputeScenario, AgentRole, RoundResponse, WinStatement, BidderProfile
 from src.utils.event_stream import emit_status
@@ -16,13 +21,15 @@ class AggrievedBidderAgent:
         self.system_prompt = build_bidder_system_prompt(profile)
 
     def build_scenario_context(self, scenario: DisputeScenario) -> str:
+        governing_legislation = scenario.governing_legislation or "Procurement Act 2023 (default — not otherwise stated in the source)"
         return f"""
 DISPUTE DETAILS:
 - Dispute ID: {scenario.dispute_id}
 - Title: {scenario.title}
-- Contract Value: £{scenario.contract_value_gbp:,.0f}
+- Contract Value: {format_contract_value(scenario.contract_value_gbp)}
 - Dispute Type: {scenario.dispute_type}
 - Procedural Stage: {scenario.procedural_stage}
+- Governing Legislation: {governing_legislation}
 - Contracting Authority: {scenario.contracting_authority_name}
 - Your Organisation: {scenario.bidder_name}
 
@@ -46,9 +53,16 @@ by these facts, and write each entry as:
 TOO VAGUE (category name alone): "Commercial Loss & Recovery"
 CORRECT SHAPE: "Commercial Loss & Recovery: <the specific commercial exposure these
 facts create for you — cite the actual figures, timescales and consequences from the
-dispute details above>"
+dispute details above, IF they are actually stated there>"
 Fill the angle brackets with the real facts of this dispute. Do not reproduce the
 bracketed wording itself.
+
+ANTI-FABRICATION — numbers in "interests": only cite a monetary figure or
+percentage if it actually appears in the DISPUTE DETAILS/DESCRIPTION above. If
+none is given, describe the exposure in general terms (e.g. "a significant
+investment of time and resource") rather than inventing one (e.g. a fabricated
+"£150,000 investment") — an invented figure is exactly as serious a
+fabrication as an invented scoring formula.
 
 Your "batna" must also be specific to your actual circumstances here — what
 pursuing this through the TCC would realistically cost YOU, given your size,
@@ -73,7 +87,20 @@ Respond ONLY with valid JSON, no other text.
 
         data = parse_llm_json(raw_text, agent="AggrievedBidderAgent", call="pre_negotiation")
 
-        return PreNegotiationStatement(**data)
+        try:
+            return PreNegotiationStatement(**data)
+        except Exception as first_error:
+            # See the matching comment in ca_agent.py's get_pre_negotiation_statement —
+            # same repair pattern, same cause (a longer, more instruction-dense prompt
+            # measurably raising the required-field-dropped rate under json mode).
+            repair_message = (
+                f"{user_message}\n\n"
+                f"Your previous JSON response was invalid: {first_error}\n"
+                f"Return corrected JSON only, matching the exact structure requested."
+            )
+            response = self.llm.invoke([("system", self.system_prompt), ("user", repair_message)])
+            data = parse_llm_json(response.content.strip(), agent="AggrievedBidderAgent", call="pre_negotiation_repair")
+            return PreNegotiationStatement(**data)
 
     def respond_to_round(self, scenario: DisputeScenario, conversation_history: list,
                           round_number: int, max_rounds: int = 3) -> RoundResponse:

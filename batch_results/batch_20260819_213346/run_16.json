@@ -1,0 +1,124 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-WOODS-MKC-2015",
+    "title": "Woods Building Services v Milton Keynes Council",
+    "description": "The contracting authority's decision to award a \u00a38 million asbestos removal and reinstatement services contract was challenged by Woods Building Services, the incumbent provider. The challenger alleged manifest error in the scoring of individual quality criteria and breach of transparency and equal treatment obligations. The court found that the tender evaluation process was fundamentally flawed across multiple scoring items, requiring a reduction of 40 marks for EAS's bid and an increase of 6 marks for Woods' bid. Applying the published 60% price / 40% quality formula, the court concluded that Woods' bid became the most economically advantageous tender.",
+    "contract_value_gbp": 8000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "trial",
+    "governing_legislation": null,
+    "contracting_authority_name": "Milton Keynes Council",
+    "bidder_name": "Woods Building Services",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Adhere to the Procurement Act 2023 and its principles of transparency, equal treatment, non-discrimination, and proportionality.",
+      "Protection of Public Funds: \u00a38,000,000 contract value at stake, with significant delay costs if a re-run is required.",
+      "Reputation & Public Accountability: Maintain public confidence as a competent, fair, and professional buyer in the face of an adverse court ruling.",
+      "Minimising Litigation Risk: Provide enough disclosure to reassure Woods Building Services without undermining evaluation confidentiality or integrity.",
+      "Maintaining Market Relationships: Avoid alienating suppliers who may bid in future procurements by providing constructive debriefing."
+    ],
+    "goals": [
+      "Defend the procurement decision, and where possible, resolve the dispute through negotiation"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "The contracting authority maintains that its original evaluation was lawful and procedurally correct, but acknowledges some minor errors in scoring individual quality criteria which have been corrected by the court.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "s12: Value for money, maximising public benefit, sharing information for transparency, acting with integrity"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: We stand to lose an \u00a38 million contract that we believed was ours due to a flawed evaluation process.",
+      "Fairness & Transparency: The scoring discrepancy and breach of transparency obligations have undermined our trust in the tendering process.",
+      "Protection of Reputation: Our bid team's performance has been called into question, which may impact future bids and relationships with other contracting authorities."
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "Award damages for the loss of the contract"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We request that the Contracting Authority re-run the evaluation process to ensure fairness and transparency.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Manifest error in scoring of individual quality criteria"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Woods Building Services' concerns regarding the tender evaluation process and appreciate the opportunity to address these issues through negotiation. However, we must clarify that the court's findings have already been considered in the original decision-making process. Can you specify which particular scoring items you believe were fundamentally flawed and how you propose they should be re-evaluated?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your acknowledgement of our concerns and willingness to address them through negotiation. However, we would like clarification on how you've considered the court's findings in the original decision-making process. Specifically, can you provide more information on which aspects of the scoring were deemed unaffected by the court's ruling? Additionally, regarding the proposed re-evaluation of scoring items, could you specify which criteria will be revised and what methodology will be used to ensure a fair evaluation?",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "The scenario states a formula: 60% price / 40% quality. However, it also mentions that the court reduced EAS's marks by 40 and increased Woods' marks by 6. To verify this, I will calculate the original scores using the given formula. Let's assume the original scores were x for price and y for quality. The total score would be 0.6x + 0.4y. However, since we don't have the actual input values (x and y), I cannot perform a calculation to verify the outcome. Therefore, this scenario is not objectively computable under Step 2A. Instead, I will assess compliance qualitatively using Step 2B.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiated outcome is more favorable than our BATNA, as it avoids the significant costs and risks associated with defending in TCC court (estimated \u00a350k+ and 6-12 months). The re-evaluation process allows us to rectify the flaws identified by the court, ensuring a fair evaluation of bids.",
+    "win_statement": "We successfully negotiated a revised tender evaluation process that addresses the concerns raised by Woods Building Services, maintaining our original decision-making integrity while avoiding costly litigation.",
+    "what_was_achieved": [
+      "Re-evaluation of scoring items to rectify flaws identified by the court",
+      "Revision of tender evaluation process to ensure fair and transparent assessment"
+    ],
+    "what_was_conceded": [
+      "40 marks reduction for EAS's bid, and a 6 marks increase for Woods' bid as per the court's ruling",
+      "Admission that the original decision-making process was flawed in multiple scoring items"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The negotiated outcome was slightly more favorable than our BATNA, but it still falls short of the ideal resolution we had hoped for. While we were able to secure a re-evaluation that corrected some of the scoring errors, the contracting authority's original decision-making process and the court's findings remain intact.",
+    "win_statement": "We successfully negotiated a re-evaluation of the tender evaluation process, which resulted in a more accurate assessment of our bid's quality. This correction led to a significant shift in the contract award, with our bid being deemed the most economically advantageous tender.",
+    "what_was_achieved": [
+      "Re-evaluation of the tender evaluation process",
+      "Correction of scoring errors that favored EAS's bid"
+    ],
+    "what_was_conceded": [
+      "No concessions were made on the contracting authority's original decision-making process or the court's findings",
+      "The re-evaluation was limited to specific scoring items and did not address broader concerns regarding transparency and equal treatment obligations"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "The Contracting Authority's consideration of the court's findings in the original decision-making process",
+      "The Aggrieved Bidder's concerns regarding the tender evaluation process, specifically the scoring items deemed fundamentally flawed"
+    ],
+    "concessions_summary": "Neither party made significant concessions during the negotiation. The Contracting Authority acknowledged the Aggrieved Bidder's concerns and offered to address them through re-evaluation, while the Aggrieved Bidder requested clarification on how the court's findings were considered in the original decision-making process.",
+    "court_reasoning_summary": "The Court assessed the scenario qualitatively using Step 2B due to the lack of objective computability under Step 2A. The Court found a manifest error and recommended re-evaluation, citing inconsistencies between the stated formula and the actual scoring adjustments.",
+    "likely_next_steps": "Given the Court's recommendation for re-evaluation, it is likely that the Contracting Authority will proceed with revisiting the tender evaluation process to address the Aggrieved Bidder's concerns. This may involve recalculating scores or reassessing the weight given to certain criteria.",
+    "plain_english_summary": "The negotiation centered around the Contracting Authority's handling of the court's findings and the Aggrieved Bidder's concerns about the tender evaluation process. The Court found a mistake in the scoring process, leading to a recommendation for re-evaluation. This means that the Contracting Authority will likely revisit the original scores and reassess the criteria used to evaluate bids."
+  }
+}
