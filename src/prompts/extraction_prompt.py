@@ -37,6 +37,13 @@ this dispute. When in doubt, err toward including more of the source's exact
 numeric language, not less — "dense narrative" (below) means factually
 dense, not short.
 
+If a bidder's stated sub-scores already sum to its stated total (e.g. "Price
+Score (40%): 29.78, Quality Score (60%): 60.00, Total: 89.78" — 29.78 + 60.00
+= 89.78 exactly), those sub-scores are ALREADY weighted, not raw marks still
+needing a percentage applied — include them and say so explicitly ("Quality
+Score of 60.00, already weighted, max 60 points"). Do not drop these numbers
+to sidestep the ambiguity — that violates the EQUALLY CRITICAL rule above.
+
 If the source text does not state a contract value explicitly, output `null`
 for contract_value_gbp — see that field's own instructions below, do not
 estimate one. dispute_type and procedural_stage must still always be set

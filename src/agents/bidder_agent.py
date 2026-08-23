@@ -120,6 +120,11 @@ NEGOTIATION ROUND {round_number} of {max_rounds}.
 YOUR OWN PREVIOUS STATEMENTS IN THIS NEGOTIATION (do not repeat these):
 {format_previous_statements(own_previous)}
 
+Only cite a specific figure, score, or breakdown if it is actually stated in
+the DISPUTE DETAILS/DESCRIPTION above or was actually said by the other
+party earlier in this conversation — do not invent a number about your own
+or the other party's evaluation that was not actually given to you.
+
 Respond ONLY with valid JSON matching this exact flat structure — no nesting, no extra keys:
 {{
   "message": "your 2-3 paragraph response here as a single string",
