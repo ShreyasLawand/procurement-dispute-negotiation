@@ -64,7 +64,7 @@ python ../scripts/count_thesis_words.py
 That script counts the abstract and Chapters 1–4 only, and excludes tables,
 figures, captions, listings and appendices, matching the rubric's definition
 (references, appendices and figure/table captions are not counted). Current
-total: **7,959** against a target of ~8,000 and a permitted range of 7,000–9,000.
+total: **8,772** against a target of ~8,000 and a permitted range of 7,000–9,000.
 
 ## Two things to decide before you submit
 
@@ -73,8 +73,8 @@ total: **7,959** against a target of ~8,000 and a permitted range of 7,000–9,0
    sample title page in the DATA72000 presentation guidance, which lists a
    student ID and no name. If your programme wants your name there instead,
    delete `anon` from the `\documentclass` options.
-2. **Department vs School.** The title page currently reads *Department of
-   Computer Science*. The guidance asks for "the candidate's School". Confirm
+2. **Department vs School.** The title page currently reads *School of Social Sciences*, Faculty of
+   *Humanities*. The guidance asks for "the candidate's School". Confirm
    which your programme expects and adjust `\department{}` in `report.tex`.
 
 ## Checks that were run

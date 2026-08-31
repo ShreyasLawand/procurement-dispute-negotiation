@@ -7,7 +7,7 @@ sequences, which are markup rather than prose.
 """
 import re, sys, pathlib
 
-ROOT = pathlib.Path(__file__).resolve().parent.parent / "thesis"
+ROOT = pathlib.Path(__file__).resolve().parent.parent / "thesis_overleaf"
 FILES = ["abstract.tex", "chapter1.tex", "chapter2.tex", "chapter3.tex", "chapter4.tex"]
 
 ENV_DROP = ["tikzpicture", "tabular", "lstlisting", "table", "figure"]

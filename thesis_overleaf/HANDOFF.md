@@ -1,7 +1,7 @@
 # Thesis handoff — context pack for a new Claude session
 
 Read this first, then the ledger in §4. Everything here is for continuing work on
-the MSc report draft in `thesis/`.
+the MSc report draft in `thesis_overleaf/`.
 
 ---
 
@@ -43,11 +43,11 @@ Then upload the files in §2.
 
 | File | Why |
 |---|---|
-| `thesis/HANDOFF.md` | This file. The ledger and the rules. |
-| `thesis/chapter1.tex` … `chapter4.tex` | The draft body |
-| `thesis/abstract.tex`, `ai-statement.tex`, `acknowledgements.tex` | Front matter |
-| `thesis/appendix1.tex` | Appendices A–D |
-| `thesis/report.tex`, `refs.bib` | Preamble, title metadata, bibliography |
+| `thesis_overleaf/HANDOFF.md` | This file. The ledger and the rules. |
+| `thesis_overleaf/chapter1.tex` … `chapter4.tex` | The draft body |
+| `thesis_overleaf/abstract.tex`, `ai-statement.tex`, `acknowledgements.tex` | Front matter |
+| `thesis_overleaf/appendix1.tex` | Appendices A–D |
+| `thesis_overleaf/report.tex`, `refs.bib` | Preamble, title metadata, bibliography |
 | `MSc_Report_and_Video_Rubric.pdf` | The marking scheme. Everything is graded against this. |
 | `DATA72000 Guidance for the Presentation of ERP Reports v1.1.pdf` | Required pages, formatting, word count placement |
 
@@ -72,24 +72,24 @@ Don't upload `muthesis.cls`. A chat session can't compile anyway and it wastes c
 
 ## 3. Where things stand
 
-Draft is **complete and internally consistent**: 7,959 words, 4 chapters, 6 TikZ
+Draft is **complete and internally consistent**: 8,772 words, 4 chapters, 6 TikZ
 figures, 10 tables, 25 references, all `\ref` and `\cite` resolving. It has not
 been compiled — there is no LaTeX installed locally. Use Overleaf (upload
-`thesis-overleaf.zip`, set main document to `report.tex`, compiler pdfLaTeX).
+the contents of this folder, set main document to `report.tex`, compiler pdfLaTeX).
 
 Chapter map and word split:
 
 | File | Words | Rubric component |
 |---|---|---|
 | `abstract.tex` | 297 | Abstract, 5% |
-| `chapter1.tex` | 1,711 | Introductory Material, 20% |
-| `chapter2.tex` | 1,820 | Methodology, 20% |
-| `chapter3.tex` | 2,936 | Evaluation and/or Reflection, 20% |
-| `chapter4.tex` | 1,195 | Conclusion, 10% |
+| `chapter1.tex` | 1,849 | Introductory Material, 20% |
+| `chapter2.tex` | 1,993 | Methodology, 20% |
+| `chapter3.tex` | 3,176 | Evaluation and/or Reflection, 20% |
+| `chapter4.tex` | 1,457 | Conclusion, 10% |
 
 Format and Structure (5%) and Project Achievement (20%) are assessed across the
 whole document. Recount after any edit with `python scripts/count_thesis_words.py`,
-which writes `thesis/word.count` — the file the title page reads from.
+which writes `thesis_overleaf/word.count` — the file the title page reads from.
 
 ---
 
@@ -184,7 +184,7 @@ categories; risk screen has 16 rules (7 CA-side, 9 bidder-side).
 
 1. **Never change an experimental number.** See §4. If one looks wrong, flag it
    and stop.
-2. **Word count 7,000–9,000**, target ~8,000. Currently 7,959, so there is almost
+2. **Word count 7,000–9,000**, target ~8,000. Currently 8,772, so there is almost
    no headroom. Any addition needs a corresponding cut. References, appendices and
    figure/table captions don't count.
 3. **Don't remove the negative results.** The zero-shot tie (§3.5), the readability
@@ -213,13 +213,15 @@ categories; risk screen has 16 rules (7 CA-side, 9 bidder-side).
 
 **Before submission, in rough priority order:**
 
-1. **Compile it.** Upload `thesis-overleaf.zip` to Overleaf, main document
+1. **Compile it.** Upload the contents of this folder to Overleaf, main document
    `report.tex`, compiler pdfLaTeX. Nothing has been rendered yet — expect to nudge
    figure placement and check no table overflows the margin.
 2. **The two title-page decisions.** `report.tex` passes the `anon` class option,
    which prints your student ID instead of your name (this matches the DATA72000
-   sample title page). And the title page says "Department of Computer Science"
-   while the guidance asks for "School". Confirm both with your programme.
+   sample title page). The title page now reads School of Social Sciences,
+   Faculty of Humanities, changed from the Computer Science / Science and
+   Engineering default. Worth one final confirmation against your programme
+   handbook, since it is a submission-critical field.
 3. **Supervisor review cycle.** Dr. Mu has not seen this draft.
 4. **The video — 15% of the overall grade, not started.** 6–8 minutes, must
    *complement* rather than repeat the report: a live demo of the negotiation
@@ -264,6 +266,6 @@ These are honestly reported in the draft as limitations. Don't let a new session
 
 ## 8. Repository state
 
-Branch `frontend-rebuild`, HEAD `5ee1b6b`. `thesis/`, `thesis-guidance/` and
+Branch `frontend-rebuild`, HEAD `5ee1b6b`. `thesis_overleaf/`, `thesis-guidance/` and
 `scripts/count_thesis_words.py` are untracked — commit them when you're ready.
 Nothing has been pushed to origin.
