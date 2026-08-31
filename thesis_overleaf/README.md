@@ -48,7 +48,7 @@ Packages used: `graphicx`, `booktabs`, `array`, `longtable`, `multirow`, `url`,
 `shapes.geometric`, `calc`, `fit`, `backgrounds` libraries), `caption`,
 `xcolor`, `hyperref`, `lmodern`.
 
-All six figures are drawn in TikZ, so there are no external image files to
+All ten figures are drawn in TikZ, so there are no external image files to
 manage and nothing to go missing.
 
 ## Regenerating the word count
@@ -64,7 +64,7 @@ python ../scripts/count_thesis_words.py
 That script counts the abstract and Chapters 1–4 only, and excludes tables,
 figures, captions, listings and appendices, matching the rubric's definition
 (references, appendices and figure/table captions are not counted). Current
-total: **8,772** against a target of ~8,000 and a permitted range of 7,000–9,000.
+total: **8,667** against a target of ~8,000 and a permitted range of 7,000–9,000.
 
 ## Two things to decide before you submit
 

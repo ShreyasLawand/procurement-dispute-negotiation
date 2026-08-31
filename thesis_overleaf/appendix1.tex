@@ -14,39 +14,52 @@ authority.
 \caption[Merits-disposition cases]{The 14 cases with a genuine merits disposition.
 Only these support the agreement figure in \S\ref{sec:agreement}.}
 \label{tab:corpus}
-\begin{tabular}{@{}p{5.3cm}p{3.0cm}p{1.3cm}p{3.5cm}@{}}
-\toprule
+\begin{tabular}{|p{5.3cm}|p{3.0cm}|p{1.3cm}|p{3.5cm}|}
+\hline
 \textbf{Case} & \textbf{Citation} & \textbf{Outcome} & \textbf{Dispute type} \\
-\midrule
+\hline
 Lancashire Care NHS FT \& Blackpool Teaching Hospitals NHS FT v Lancashire CC &
   [2018] EWHC 1589 (TCC) & CA lost & Transparency, adequacy of reasons \\
+\hline
 Faraday Development Ltd v West Berkshire Council &
   [2018] EWCA Civ 2532 & CA lost & Process avoidance \\
+\hline
 Woods Building Services v Milton Keynes Council &
   [2015] EWHC 2011 (TCC) & CA lost & Numeric scoring correction \\
+\hline
 Braceurself Ltd v NHS England &
   [2022] EWHC 1532 (TCC) & CA lost & Manifest error, narrow margin \\
+\hline
 Bromcom Computers plc v United Learning Trust &
   [2022] EWHC 3262 (TCC) & CA lost & Evaluation methodology \\
+\hline
 EnergySolutions EU Ltd v Nuclear Decommissioning Authority &
   [2016] EWHC 1988 (TCC) & CA lost & Scoring, narrow margin \\
+\hline
 Consultant Connect Ltd v NHS Bath \& North East Somerset ICB \& Ors &
   [2022] EWHC 2037 (TCC) & CA lost & Framework misuse \\
+\hline
 Working on Wellbeing Ltd (Optima Health) v SSWP &
   [2024] EWHC 766 (TCC), rev'd [2025] EWCA Civ 127 & CA lost & Exclusion for minor pricing error \\
+\hline
 AbbVie Ltd v NHS Commissioning Board &
   [2019] EWHC 61 (TCC) & CA won & Evaluation challenge \\
+\hline
 Bechtel Ltd v High Speed Two (HS2) Ltd &
   [2021] EWHC 458 (TCC) & CA won & Scoring, all claims dismissed \\
+\hline
 InHealth Intelligence Ltd v NHS England &
   [2023] EWHC 352 (TCC) & CA won & Bid exclusion upheld \\
+\hline
 Turning Point Ltd v Norfolk County Council &
   [2012] EWHC 2121 (TCC) & CA won & Tender caveat, limitation \\
+\hline
 Siemens Mobility Ltd v High Speed Two (HS2) Ltd &
   [2023] EWHC 2768 (TCC) & CA won & Scoring, 17 claims dismissed \\
+\hline
 The New Lottery Company Ltd \& Anor v The Gambling Commission &
   [2026] EWHC 891 (TCC) & CA won & Scoring, wide margin \\
-\bottomrule
+\hline
 \end{tabular}
 \end{table}
 
@@ -56,29 +69,37 @@ The New Lottery Company Ltd \& Anor v The Gambling Commission &
 \caption[Interim-only cases]{The 9 interim-only rulings. Excluded from every
 accuracy figure: the merits question this system assesses was never decided.}
 \label{tab:corpus-interim}
-\begin{tabular}{@{}p{5.6cm}p{3.0cm}p{4.4cm}@{}}
-\toprule
+\begin{tabular}{|p{5.6cm}|p{3.0cm}|p{4.4cm}|}
+\hline
 \textbf{Case} & \textbf{Citation} & \textbf{Interim disposition} \\
-\midrule
+\hline
 Parkingeye Ltd v Velindre University NHS Trust \& Anor &
   [2026] EWHC 1019 (TCC) & Suspension maintained; first reported PA 2023 s.101 ruling \\
+\hline
 Alstom Transport UK Ltd v London Underground Ltd &
   [2017] EWHC 1521 (TCC) & Suspension lifted (American Cyanamid) \\
+\hline
 Kellogg Brown \& Root Ltd v Mayor's Office for Policing and Crime &
   [2021] EWHC 3321 (TCC) & Suspension lifted \\
+\hline
 Sysmex (UK) Ltd v Imperial College Healthcare NHS Trust &
   [2017] EWHC 1824 (TCC) & Suspension lifted \\
+\hline
 Vodafone Ltd v SS for Foreign, Commonwealth and Development Affairs &
   [2021] EWHC 2793 (TCC) & Suspension maintained \\
+\hline
 Draeger Safety UK Ltd v The London Fire Commissioner &
   [2021] EWHC 2221 (TCC) & Suspension maintained \\
+\hline
 One Medicare Ltd v NHS Northamptonshire ICB &
   [2025] EWHC 63 (TCC) & Suspension lifted \\
+\hline
 Robert Heath Heating Ltd v Orbit Group Ltd &
   [2024] EWHC 3039 (TCC) & Suspension lifted \\
+\hline
 Neology UK Ltd v Council of the City of Newcastle Upon Tyne \& Ors &
   [2020] EWHC 2958 (TCC) & Summary judgment application \\
-\bottomrule
+\hline
 \end{tabular}
 \end{table}
 
@@ -151,31 +172,40 @@ cannot encode.
 \footnotesize
 \caption[Reproduction commands]{Each reported figure and the command that
 produces it. All analysis scripts read committed logs and make no model calls.}
-\begin{tabular}{@{}p{5.0cm}p{7.4cm}@{}}
-\toprule
+\begin{tabular}{|p{5.0cm}|p{7.4cm}|}
+\hline
 \textbf{Figure in this report} & \textbf{Command} \\
-\midrule
+\hline
 Structural compliance, \S\ref{sec:structural} &
   Read \texttt{compliance} from each \texttt{batch\_results/batch\_*/batch\_summary.json} \\
+\hline
 V3/V4 ablation, Table~\ref{tab:ablation} &
   \texttt{python tests/run\_batch\_evaluation.py --case <slug> --court-prompt V3|V4 --runs 8 --rounds 5} \\
+\hline
 Significance, Table~\ref{tab:ablation} &
   \texttt{python scripts/analyze\_ablation\_significance.py} \\
+\hline
 Baselines, Table~\ref{tab:baselines} &
   \texttt{python scripts/run\_baseline\_zeroshot.py}; \texttt{baseline\_heuristic.py}; \texttt{run\_batch\_evaluation.py --no-court} \\
+\hline
 Numeric fabrication, Table~\ref{tab:fabrication} &
   \texttt{python scripts/analyze\_qualitative\_fabrication.py} \\
+\hline
 Citation validity, \S\ref{sec:citation} &
   \texttt{python scripts/analyze\_citation\_validity.py} \\
+\hline
 Concessions, \S\ref{sec:dynamics} &
   \texttt{python scripts/analyze\_negotiation\_dynamics.py} \\
+\hline
 BATNA, Table~\ref{tab:batna} &
   \texttt{python scripts/analyze\_batna\_outcomes.py} \\
+\hline
 Readability, \S\ref{sec:readability} &
   \texttt{python scripts/analyze\_summary\_readability.py} \\
+\hline
 Risk screen, \S\ref{sec:risk-eval} &
   \texttt{python scripts/assess\_challenge\_risk.py} \\
-\bottomrule
+\hline
 \end{tabular}
 \end{table}
 

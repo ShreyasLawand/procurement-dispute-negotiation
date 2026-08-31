@@ -72,8 +72,8 @@ Don't upload `muthesis.cls`. A chat session can't compile anyway and it wastes c
 
 ## 3. Where things stand
 
-Draft is **complete and internally consistent**: 8,772 words, 4 chapters, 6 TikZ
-figures, 10 tables, 25 references, all `\ref` and `\cite` resolving. It has not
+Draft is **complete and internally consistent**: 8,667 words, 4 chapters, 10 TikZ
+figures, 12 tables, 39 references, all `\ref` and `\cite` resolving. It has not
 been compiled — there is no LaTeX installed locally. Use Overleaf (upload
 the contents of this folder, set main document to `report.tex`, compiler pdfLaTeX).
 
@@ -82,10 +82,10 @@ Chapter map and word split:
 | File | Words | Rubric component |
 |---|---|---|
 | `abstract.tex` | 297 | Abstract, 5% |
-| `chapter1.tex` | 1,849 | Introductory Material, 20% |
-| `chapter2.tex` | 1,993 | Methodology, 20% |
-| `chapter3.tex` | 3,176 | Evaluation and/or Reflection, 20% |
-| `chapter4.tex` | 1,457 | Conclusion, 10% |
+| `chapter1.tex` | 1,820 | Introductory Material, 20% |
+| `chapter2.tex` | 2,023 | Methodology, 20% |
+| `chapter3.tex` | 3,124 | Evaluation and/or Reflection, 20% |
+| `chapter4.tex` | 1,403 | Conclusion, 10% |
 
 Format and Structure (5%) and Project Achievement (20%) are assessed across the
 whole document. Recount after any edit with `python scripts/count_thesis_words.py`,
@@ -184,7 +184,7 @@ categories; risk screen has 16 rules (7 CA-side, 9 bidder-side).
 
 1. **Never change an experimental number.** See §4. If one looks wrong, flag it
    and stop.
-2. **Word count 7,000–9,000**, target ~8,000. Currently 8,772, so there is almost
+2. **Word count 7,000–9,000**, target ~8,000. Currently 8,667, so there is almost
    no headroom. Any addition needs a corresponding cut. References, appendices and
    figure/table captions don't count.
 3. **Don't remove the negative results.** The zero-shot tie (§3.5), the readability
@@ -198,12 +198,15 @@ categories; risk screen has 16 rules (7 CA-side, 9 bidder-side).
    "furthermore", "moreover", "it is important to note", "comprehensive". The
    draft was written and checked to avoid these. First-person singular is used
    deliberately and is correct for a solo project.
-6. **All `.tex` files are pure ASCII.** Em-dashes are `---`, en-dashes `--`, quotes
+6. **Citations use natbib author-year** (`\citet` / `\citep`), style `plainnat`.
+   All 39 bib entries are cited; an uncited entry never reaches the bibliography.
+   All tables are fully ruled (`{|l|c|}` with `\hline`), not booktabs.
+7. **All `.tex` files are pure ASCII.** Em-dashes are `---`, en-dashes `--`, quotes
    are `` `` '' ``. Don't paste in Unicode punctuation; it can break older LaTeX
    installs.
-7. **Every `\cite` key must exist in `refs.bib`; every `\ref` must have a
+8. **Every `\cite` key must exist in `refs.bib`; every `\ref` must have a
    `\label`.** Check after editing.
-8. **Don't cite a case, statute or figure that isn't already verified.** The
+9. **Don't cite a case, statute or figure that isn't already verified.** The
    project's whole argument is about fabrication. A made-up citation in the report
    about fabrication is fatal.
 

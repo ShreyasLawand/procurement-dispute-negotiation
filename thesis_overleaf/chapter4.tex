@@ -13,23 +13,28 @@ different from the one originally proposed.
 \caption[Objectives against evidence]{Objectives against the evidence in this
 report.}
 \label{tab:objectives}
-\begin{tabular}{@{}clp{5.5cm}l@{}}
-\toprule
+\begin{tabular}{|c|l|p{5.5cm}|l|}
+\hline
 & \textbf{Objective} & \textbf{Evidence} & \textbf{Status} \\
-\midrule
+\hline
 O1 & Three agents + summariser & \S\ref{sec:grounding}, Table~\ref{tab:agent-config};
-     interests traced to Doc 1 categories & Met \\
+ interests traced to Doc 1 categories & Met \\
+\hline
 O2 & Deterministic orchestration, validated output & \S\ref{sec:orchestration};
-     structural compliance 0.9986 over 2{,}865 responses & Met \\
+ structural compliance 0.9986 over 2{,}865 responses & Met \\
+\hline
 O3 & Conditionally verifying court agent & \S\ref{sec:court-design};
-     0 of 9 flagged instances Court-originated & Met \\
+ 0 of 9 flagged instances Court-originated & Met \\
+\hline
 O4 & Real documents to structured scenarios & \S\ref{sec:extraction};
-     23 cases ingested through the user upload path & Met \\
+ 23 cases ingested through the user upload path & Met \\
+\hline
 O5 & Verified corpus, baselines, ablations & \S\ref{sec:baselines}--\S\ref{sec:ablation};
-     13 of 14 merits dispositions matched & Met \\
+ 13 of 14 merits dispositions matched & Met \\
+\hline
 O6 & Something the client can use & \S\ref{sec:risk-screen};
-     rule-based screen, not the simulator & Met, reframed \\
-\bottomrule
+ rule-based screen, not the simulator & Met, reframed \\
+\hline
 \end{tabular}
 \end{table}
 
@@ -43,7 +48,7 @@ bidder concedes far less, and each reports the opposite kind of outcome against
 its own declared fallback. The caveat is that a prompt developed against one
 dispute shape doesn't automatically generalise to another. Confronted with a
 case where nobody was ever actually scored, both negotiating agents invented a
-scoring dispute anyway, simply because that was the only script either of them
+scoring dispute anyway, because that was the only script either of them
 had.
 
 \textbf{RQ2, on which part of the protocol is load-bearing.} The adjudicator,
@@ -86,15 +91,14 @@ scripts, all held together by 92 tests. The complexity that actually mattered,
 though, was never any of those pieces individually. It was that the domain
 punishes exactly the thing generative models are best at. A language model asked
 about a procurement dispute will produce something fluent, structured and
-legally shaped and the harder the case, the more confident it tends to sound.
+legally shaped, and the harder the case, the more confident it tends to sound.
 Almost every engineering decision in Chapter~\ref{ch:methodology} traces back to
-that one fact: schema-validated output so malformed responses can't pass
-silently, per-response compliance counters so repairs stay visible instead of
-disappearing into the log, an extraction agent instructed as firmly against
-dropping real numbers as against inventing new ones, a minimum source-length
-guard because an empty PDF once produced a complete fictional dispute out of
-nothing, and a conditional verification protocol whose whole purpose is getting
-the adjudicator to say ``I cannot compute this'' precisely when it can't.
+that one fact: schema-validated output so malformed responses cannot pass
+silently, compliance counters so repairs stay visible, an extraction agent
+instructed as firmly against dropping real numbers as against inventing them, a
+minimum source-length guard because an empty PDF once produced a fictional
+dispute, and a verification protocol whose purpose is getting the adjudicator to
+say ``I cannot compute this'' when it cannot.
 
 There are two things I would do differently given the chance again. First, I
 would build the corpus before building the agents. The synthetic scenarios
@@ -110,23 +114,22 @@ Second, I would have started testing on documents I hadn't chosen myself much
 sooner. Two of the most informative defects in this project came out of a
 single hour spent running a Fusion21 employee's own files, and both sat in code
 paths that months of my own test cases had never once exercised, because
-without quite noticing it I had been selecting inputs shaped like the failures
+without noticing it I had been selecting inputs shaped like the failures
 I already understood.
 
 On execution quality, the structural layer is strong and the measurements say so:
 0.9986 clean structured responses across 2{,}865 calls, a green 92-case test
-suite, every figure in this report reproducible from committed logs by a named
-command, and provenance carried all the way through to the analytics interface so
-a partial batch can never be mistaken for a finished one. The reasoning layer is
-where the limits sit, and the important point is that they are limits this
-project can state numerically rather than suspect: a 23.1\% wrong-regime citation
-rate, a summariser that fails its own accessibility claim by 35 points of Flesch
-Reading Ease, an outcome vocabulary that cannot express three of the real remedies
-present in its own corpus, and one arithmetic defect that prompt engineering alone
-never managed to close. Each of those is quantified, traced to a named case or
-command, and paired with the specific fix it needs in \S\ref{sec:future}. A
-system whose failure modes are this precisely bounded is a more useful starting
-point than one whose failures have simply not been looked for.
+suite, every figure reproducible from committed logs by a named command in the
+sense \citet{pineau2021improving} set out, and provenance carried through to the
+analytics interface so a partial batch cannot be mistaken for a finished one. The
+reasoning layer is where the limits sit, and the point is that they are limits
+this project can state numerically rather than suspect: a 23.1\% wrong-regime
+citation rate, a summariser missing its own accessibility claim by 35 points of
+Flesch Reading Ease, an outcome vocabulary that cannot express three real remedies
+in its own corpus, and one arithmetic defect prompt engineering never closed. Each
+is quantified, traced to a named case or command, and paired with its fix in
+\S\ref{sec:future}. Failure modes bounded this precisely are a better starting
+point than failures nobody looked for.
 
 \section{Future work}
 \label{sec:future}
@@ -137,7 +140,7 @@ than from speculation about what might be nice to try.
 \textbf{Ground the citations.} A 23.1\% wrong-regime rate is the strongest
 argument anywhere in this report for the retrieval layer that was scoped out
 earlier. Retrieval over the Procurement Act 2023 and the TCC guidance targets
-exactly the failure observed here: the model simply does not know which regime
+exactly the failure observed here: the model does not know which regime
 governs a given year, and no instruction can hand it that knowledge the way
 retrieval actually can.
 
@@ -150,28 +153,27 @@ already provides, is a concrete and well-evidenced next step rather than an
 open-ended one.
 
 \textbf{Extend the remedy vocabulary beyond scoring challenges.} The corpus
-itself already contains three real remedies the system simply cannot express: a
+itself already contains three real remedies the system cannot express: a
 declaration of ineffectiveness, financial penalties on the authority, and a
 court-determined re-ranking. Each of these is a documented gap tied to a named
 case, not a hypothetical concern.
 
 \textbf{Calibrate the risk screen against real outcomes.} This is the only thing
-this project actually asks of Fusion21, and it's the highest-value item on this
-whole list. Anonymised pre-action data from their member base (the same profile
-fields the screen already requests, plus whether a challenge ended up following)
-would let a severity-weighted heuristic be replaced or validated by a properly
-fitted model, and would let the risk score be reported as an actual probability
-rather than just an ordering. It is also the only component in this system whose
-central claim is directly falsifiable, which is exactly why it deserves the
-data most.
+this project asks of Fusion21, and the highest-value item on the list. Anonymised
+pre-action data from their member base (the profile fields the screen already
+requests, plus whether a challenge followed) would let the severity-weighted
+heuristic be replaced or validated by a fitted model, and the risk score reported
+as a probability rather than an ordering, with the calibration checked as
+\citet{guo2017calibration} set out. It is also the only component whose central
+claim is directly falsifiable, which is why it deserves the data most.
 
 The broader conclusion here is narrower than the one I expected to end up
 writing. A multi-agent LLM system can conduct a procedurally coherent
 procurement dispute negotiation, and it can be constrained not to invent the
 arithmetic it reasons from. What it cannot yet be shown to do is reason better
 than a single well-posed prompt, and it can still be led into confident nonsense
-by a premise it was simply handed rather than one it worked out itself. The
+by a premise it was handed rather than one it worked out itself. The
 value in this work sits less in the simulator than in the evidence about what
 such a system does when nobody is checking, and in the demonstration that
 finding that out requires screens built specifically to catch a system that is
-wrong in a fluent and entirely plausible way.
+wrong in a fluent and plausible way.

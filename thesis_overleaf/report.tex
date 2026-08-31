@@ -29,14 +29,28 @@
 \usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc,fit,backgrounds}
 \usepackage[font=small,labelfont=bf]{caption}
 \usepackage{xcolor}
+% Author-year citations. natbib is loaded after the class, so its \thebibliography
+% supersedes muthesis's, which is what adds the Bibliography line to the contents
+% page - hence the explicit \addcontentsline before \bibliography at the end.
+% To revert to numeric [1] citations: drop this line and set the style back to
+% `plain`; nothing else in the document depends on natbib.
+\usepackage[round,authoryear]{natbib}
 \usepackage[hidelinks]{hyperref}
 
 % --- Fusion21-adjacent palette, used sparingly in diagrams only ------------
+% Categorical order is fixed and never cycled: green, blue, amber. The three were
+% checked together for colour-vision-deficiency separation rather than chosen by
+% eye (worst adjacent pair dE 25.7 deutan, 28.8 normal vision), so the charts stay
+% readable for colourblind readers and survive greyscale printing, which is
+% reinforced by direct-labelling every bar.
 \definecolor{f21green}{HTML}{00804A}
+\definecolor{f21blue}{HTML}{1D4ED8}
+\definecolor{f21amber}{HTML}{B45309}
+% Non-series roles only: ink for text, grey for axes/grid and the residual
+% "not classifiable" bucket, mist for panel fills.
 \definecolor{f21ink}{HTML}{1E212B}
 \definecolor{f21grey}{HTML}{6B7280}
 \definecolor{f21mist}{HTML}{EEF3F0}
-\definecolor{f21amber}{HTML}{B45309}
 
 % --- Listings style for the few short code/prompt extracts -----------------
 \lstset{
@@ -89,7 +103,9 @@
 \include{chapter3}
 \include{chapter4}
 
-\bibliographystyle{plain}
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{plainnat}
 \bibliography{refs}
 
 \appendix

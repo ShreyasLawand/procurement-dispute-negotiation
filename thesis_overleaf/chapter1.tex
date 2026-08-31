@@ -21,7 +21,7 @@ Court.
 
 Those deadlines are what make this problem interesting rather than merely legal.
 Figure~\ref{fig:lifecycle} shows the shape of it. Nearly all the leverage sits in
-the first fortnight, before anyone has instructed a solicitor and nearly all the
+the first fortnight, before anyone has instructed a solicitor, and nearly all the
 information asymmetry sits there too. The authority knows exactly what its
 evaluation panel did; the losing bidder knows only whatever the assessment
 summary was willing to tell it. Once the automatic suspension kicks in and the
@@ -33,31 +33,31 @@ resolve.
 \centering
 \resizebox{\textwidth}{!}{%
 \begin{tikzpicture}[font=\footnotesize,>=Latex]
-  % timeline spine
-  \draw[line width=1.1pt,f21ink] (0,0) -- (13.2,0);
-  \foreach \x in {0,2.6,5.2,8.4,11.6} \draw[f21ink,line width=1.1pt] (\x,-0.13) -- (\x,0.13);
+ % timeline spine
+ \draw[line width=1.1pt,f21ink] (0,0) -- (13.2,0);
+ \foreach \x in {0,2.6,5.2,8.4,11.6} \draw[f21ink,line width=1.1pt] (\x,-0.13) -- (\x,0.13);
 
-  % labels below
-  \node[anchor=north,text width=2.3cm,align=center] at (0,-0.25)
-    {Evaluation\\ complete};
-  \node[anchor=north,text width=2.4cm,align=center] at (2.6,-0.25)
-    {Assessment\\ summary sent\\ \textit{(s.50)}};
-  \node[anchor=north,text width=2.4cm,align=center] at (5.2,-0.25)
-    {Standstill ends\\ 8 working days\\ \textit{(s.51)}};
-  \node[anchor=north,text width=2.5cm,align=center] at (8.4,-0.25)
-    {Claim issued\\ 30-day limit\\ suspension bites};
-  \node[anchor=north,text width=2.5cm,align=center] at (11.6,-0.25)
-    {TCC judgment\\ 4 months--2 years};
+ % labels below
+ \node[anchor=north,text width=2.3cm,align=center] at (0,-0.25)
+ {Evaluation\\ complete};
+ \node[anchor=north,text width=2.4cm,align=center] at (2.6,-0.25)
+ {Assessment\\ summary sent\\ \textit{(s.50)}};
+ \node[anchor=north,text width=2.4cm,align=center] at (5.2,-0.25)
+ {Standstill ends\\ 8 working days\\ \textit{(s.51)}};
+ \node[anchor=north,text width=2.5cm,align=center] at (8.4,-0.25)
+ {Claim issued\\ 30-day limit\\ suspension bites};
+ \node[anchor=north,text width=2.5cm,align=center] at (11.6,-0.25)
+ {TCC judgment\\ 4 months--2 years};
 
-  % artefact bands above
-  \begin{scope}[on background layer]
-    \fill[f21green!12,rounded corners=3pt] (-0.5,0.42) rectangle (3.9,1.5);
-    \fill[f21amber!12,rounded corners=3pt] (4.3,0.42) rectangle (12.6,1.5);
-  \end{scope}
-  \node[anchor=west,text width=4.2cm,align=left,f21green] at (-0.45,0.96)
-    {\textbf{Risk screen} (\S\ref{sec:risk-screen})\\ acts before a dispute exists};
-  \node[anchor=west,text width=8.0cm,align=left,f21amber] at (4.4,0.96)
-    {\textbf{Negotiation simulator} (\S\ref{sec:orchestration}) acts on a dispute\\ that has already been raised};
+ % artefact bands above
+ \begin{scope}[on background layer]
+ \fill[f21green!12,rounded corners=3pt] (-0.5,0.42) rectangle (3.9,1.5);
+ \fill[f21amber!12,rounded corners=3pt] (4.3,0.42) rectangle (12.6,1.5);
+ \end{scope}
+ \node[anchor=west,text width=4.2cm,align=left,f21green] at (-0.45,0.96)
+ {\textbf{Risk screen} (\S\ref{sec:risk-screen})\\ acts before a dispute exists};
+ \node[anchor=west,text width=8.0cm,align=left,f21amber] at (4.4,0.96)
+ {\textbf{Negotiation simulator} (\S\ref{sec:orchestration}) acts on a dispute\\ that has already been raised};
 \end{tikzpicture}}
 \caption[The procurement dispute lifecycle]{The procurement dispute lifecycle
 under the Procurement Act 2023, and where this project's two artefacts sit on it.
@@ -106,10 +106,10 @@ here: the Court agent's verification protocol described in
 Section~\ref{sec:court-design} is exactly this kind of encoded procedure, closer
 in spirit to ReAct's interleaving of reasoning with a defined action space
 \cite{yao2023react} than to open-ended chat, and Chapter~\ref{ch:evaluation}
-shows fairly plainly what happens once the case shapes stop matching what it was
+shows plainly what happens once the case shapes stop matching what it was
 written for. Orchestration in this project runs on LangGraph \cite{langgraph},
 which represents the interaction as an explicit state graph rather than a
-free-form conversation a choice defended in Section~\ref{sec:orchestration}.
+free-form conversation, a choice defended in Section~\ref{sec:orchestration}.
 
 \subsection*{LLMs as negotiators}
 
@@ -122,19 +122,19 @@ found that LLM negotiators could be talked into bad deals through manipulation
 tactics like feigned desperation. Closer to the setting used here, Abdelnabi et
 al.\ \cite{abdelnabi2024negotiation} built multi-party negotiations around
 conflicting private goals and scored agents on whether the deal they reached
-actually satisfied their own constraints. What unites all three is that the
-environment is self-contained the payoff is defined by the game, so there is
-never any doubt about what counts as correct. Procurement disputes offer no such
-luxury. The governing framework sits outside the simulation, is genuinely
-contested, and is expressed in statute and case law, and the "correct" outcome
-is simply whatever a court would have held which is usually unknown.
+satisfied their own constraints. What unites all three is a self-contained
+environment: the payoff is defined by the game, so there is never any doubt about
+what counts as correct. Procurement disputes offer no such luxury. The governing
+framework sits outside the simulation, is contested, and is expressed in statute
+and case law, so the ``correct'' outcome is whatever a court would have held,
+which is usually unknown.
 
 The normative framework the agents reason with is drawn from Fisher and Ury's
 \emph{Getting to Yes} \cite{fisher2011getting} (separate interests from positions,
 know your BATNA) and from Raiffa's work on asymmetric negotiation
 \cite{raiffa1982art}. Doc 3 adds a hard constraint from that literature that
 ends up shaping the system's entire outcome vocabulary: in award-stage
-procurement disputes you cannot simply split the difference, because the
+procurement disputes you cannot split the difference, because the
 available remedies are fixed by statute, and re-running an award is not
 something either side can bargain away.
 
@@ -146,14 +146,14 @@ Uniform Bar Examination \cite{katz2024gpt4}, and LegalBench
 legal reasoning ability. The evidence that matters more for this project cuts
 the other way. Dahl et al.\ \cite{dahl2024legal} went looking for legal
 hallucination and, on verifiable questions about federal court cases, found
-error rates of 58--82\%, with models rarely able to tell when they simply did
+error rates of 58--82\%, with models rarely able to tell when they did
 not know the answer. Magesh et al.\ \cite{magesh2024hallucination} tested
 commercial retrieval-augmented legal research tools specifically built to avoid
 this problem and still measured hallucination rates above 17\%. Ji et al.'s
 survey \cite{ji2023survey} puts it plainly: fluent, confident, wrong output is
 the default failure mode for these systems, not some rare edge case.
 
-That is really the whole difficulty in one sentence. A system that produces a
+That is the whole difficulty in one sentence. A system that produces a
 plausible-looking compliance finding on a procurement dispute is not merely
 useless but actively harmful, precisely because it is persuasive, unless
 something separately guarantees that the numbers and provisions it cites
@@ -169,12 +169,11 @@ Multi-agent negotiation research is typically scored against a payoff function
 that the environment itself defines. Legal-LLM research is typically scored
 against benchmark answers a human has already labelled. A simulated procurement
 dispute has neither luxury: the artefact hands down a legal judgment on facts
-that a real court either decided differently, decided on a different question
-entirely, or never decided at all. So the question this project actually
-organised itself around was not \emph{can agents negotiate a procurement
-dispute} which, it turns out, is the easy part but how you evaluate what they
-produce, and how you stop them inventing the evidence they are supposedly
-reasoning from.
+that a real court either decided differently, decided on a different question, or
+never decided. So the question this project organised itself around was not
+\emph{can agents negotiate a procurement dispute}, which turned out to be the easy
+part, but how you evaluate what they produce and how you stop them inventing the
+evidence they reason from.
 
 \section{Aim, research questions and objectives}
 \label{sec:objectives}
@@ -186,68 +185,67 @@ aggrieved bidder and the court and, alongside it, to establish an evaluation
 methodology suited to a domain where ground truth is scarce and fabrication is
 the main risk.
 
-The research questions carried over from the project plan, sharpened somewhat by
+The research questions carried over from the project plan, sharpened by
 what the work actually turned up, are:
 
 \begin{description}
-  \item[RQ1] Without fine-tuning, can prompt engineering and structured context
-    injection alone produce agents that reliably represent each party's distinct
-    interests, legal constraints and BATNA?
-  \item[RQ2] Which negotiation protocol lets autonomous agents reach legally
-    grounded resolutions, and which single component of that protocol is
-    actually doing the work?
-  \item[RQ3] Can an LLM court agent be made to verify arithmetic when a case
-    supplies one and refuse to invent one when it doesn't and does that
-    constraint survive contact with dispute shapes it was never designed
-    against?
-  \item[RQ4] Given that most real disputes settle confidentially and never
-    produce a ground-truth label, how should outcomes even be evaluated for
-    reliability, fabrication and alignment with what actually happened?
+ \item[RQ1] Without fine-tuning, can prompt engineering and structured context
+ injection alone produce agents that reliably represent each party's distinct
+ interests, legal constraints and BATNA?
+ \item[RQ2] Which negotiation protocol lets autonomous agents reach legally
+ grounded resolutions, and which single component of that protocol is
+ actually doing the work?
+ \item[RQ3] Can an LLM court agent be made to verify arithmetic when a case
+ supplies one and refuse to invent one when it doesn't and does that
+ constraint survive contact with dispute shapes it was never designed
+ against?
+ \item[RQ4] Given that most real disputes settle confidentially and never
+ produce a ground-truth label, how should outcomes even be evaluated for
+ reliability, fabrication and alignment with what actually happened?
 \end{description}
 
-These break down into six objectives, which also give Chapter~\ref{ch:methodology}
-its structure: (O1) specify three negotiating agents plus a non-negotiating
-summariser against Fusion21's own interest taxonomies; (O2) build a
-deterministic, inspectable orchestration protocol with structured,
-schema-validated output; (O3) design a court agent that verifies conditionally
-rather than by default; (O4) build an ingestion path from real documents into
-structured scenarios; (O5) assemble a verified corpus of real UK judgments and
-evaluate against it with explicit baselines and ablations; and (O6) deliver
-something Fusion21 can actually use which, as it turned out, meant a pre-award
-risk screen rather than the simulator itself.
+These break down into six objectives (O1--O6), which give
+Chapter~\ref{ch:methodology} its structure and are assessed against the evidence
+in Table~\ref{tab:objectives}: specify the agents against Fusion21's own interest
+taxonomies; build a deterministic orchestration protocol with schema-validated
+output; design a court agent that verifies conditionally rather than by default;
+build an ingestion path from real documents into structured scenarios; assemble a
+verified corpus and evaluate against it with explicit baselines and ablations; and
+deliver something Fusion21 can use, which turned out to mean a pre-award risk
+screen rather than the simulator.
 
 \section{Contributions}
 \label{sec:contributions}
 
 \begin{enumerate}
-  \item \textbf{A conditional verification protocol for an LLM adjudicator}
-    (Section~\ref{sec:court-design}). Exact arithmetic is only attempted when
-    both a formula and every input it needs are present, and invented values are
-    refused even when the agent tries to hedge them as illustrative. Four prompt
-    revisions are documented, each written in response to a specific failure
-    mode the previous version produced.
-  \item \textbf{An evaluation methodology for a domain with almost no ground
-    truth} (Chapter~\ref{ch:evaluation}). It combines agreement with real
-    dispositions, three independent fabrication screens, instrumentation for
-    structural compliance, a controlled prompt ablation with significance
-    testing, and three baselines.
-  \item \textbf{A negative result that limits how far the architecture claim can
-    go} (Section~\ref{sec:baselines}): a naive zero-shot prompt matches the full
-    pipeline on directional accuracy, while removing the court agent causes
-    every run to deadlock. Whatever the architecture earns, it earns on
-    resolution mechanics and process, not on accuracy.
-  \item \textbf{Three distinct failure modes}, evidenced on named cases
-    (Section~\ref{sec:fabrication}): numeric fabrication, narrative-premise
-    fabrication, and legal-judgment divergence, together with the finding that
-    hardening the adjudicator against the first does nothing at all about the
-    second.
-  \item \textbf{A verified corpus of 23 real UK procurement judgments}, rendered
-    as structured scenarios with each disposition checked individually, released
-    alongside the project.
-  \item \textbf{A pre-award challenge risk screen} (Section~\ref{sec:risk-screen}),
-    traced rule by rule back to Fusion21's own practical-considerations tables
-    and the only part of this system with an observable ground truth in
-    principle.
+ \item \textbf{A conditional verification protocol for an LLM adjudicator}
+ (Section~\ref{sec:court-design}). Exact arithmetic is only attempted when
+ both a formula and every input it needs are present, and invented values are
+ refused even when the agent tries to hedge them as illustrative. Four prompt
+ revisions are documented, each written in response to a specific failure
+ mode the previous version produced.
+ \item \textbf{An evaluation methodology for a domain with almost no ground
+ truth} (Chapter~\ref{ch:evaluation}). It combines agreement with real
+ dispositions, three independent fabrication screens, instrumentation for
+ structural compliance, a controlled prompt ablation with significance
+ testing, and three baselines.
+ \item \textbf{A negative result that limits how far the architecture claim can
+ go} (Section~\ref{sec:baselines}): a naive zero-shot prompt matches the full
+ pipeline on directional accuracy, while removing the court agent causes
+ every run to deadlock. Whatever the architecture earns, it earns on
+ resolution mechanics and process, not on accuracy.
+ \item \textbf{Three distinct failure modes}, evidenced on named cases
+ (Section~\ref{sec:fabrication}): numeric fabrication, narrative-premise
+ fabrication, and legal-judgment divergence, together with the finding that
+ hardening the adjudicator against the first does nothing about the
+ second.
+ \item \textbf{A verified corpus of 23 real UK procurement judgments}, rendered
+ as structured scenarios with each disposition checked individually, released
+ alongside the project.
+ \item \textbf{A pre-award challenge risk screen} (Section~\ref{sec:risk-screen}),
+ traced rule by rule back to Fusion21's own practical-considerations tables
+ and the only part of this system with an observable ground truth in
+ principle.
 \end{enumerate}
 
 \section{Report structure}
