@@ -1,0 +1,149 @@
+{
+  "scenario": {
+    "dispute_id": "UPLOADED-001",
+    "title": "Prime Way Care Ltd vs The Mayor and Burgesses",
+    "description": "This judgment determines an application for specific disclosure brought by Prime Way Care Ltd against the London Borough of Southwark. The dispute concerns the evaluation process for a multi-lot framework agreement relating to Adult Home Care Services, specifically question 22(ii) of the Procurement Specific Questionnaire (PSQ). Prime Way was awarded a score of 3 out of 5, while 33 bidders scored 4 or higher. The Claimant alleges that Southwark breached Section 12 of the Procurement Act 2023 by treating all suppliers unequally and failing to disclose key decision-making materials. The Defendant contends that its evaluation process was consistent with published criteria and that Prime Way's response did not meet the required standard.",
+    "contract_value_gbp": null,
+    "dispute_type": "transparency_breach",
+    "procedural_stage": "interim_application",
+    "governing_legislation": "Procurement Act 2023",
+    "contracting_authority_name": "The Mayor and Burgesses of the London Borough of Southwark",
+    "bidder_name": "Prime Way Care Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 2,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Act lawfully and within vires in evaluating bids for Adult Home Care Services framework agreement.",
+      "Protection of Public Funds: Avoid significant delay costs due to automatic suspension or re-run of the procurement process.",
+      "Continuity of Service / Delivery: Ensure timely delivery of critical Adult Home Care Services, impacting vulnerable adults' care and well-being.",
+      "Reputation & Public Accountability: Maintain public confidence in our procurement processes and protect our reputation as a competent buyer."
+    ],
+    "goals": [
+      "Defend the evaluation process as consistent with published criteria",
+      "Provide sufficient disclosure to address Prime Way Care Ltd's concerns"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our evaluation process, which was conducted fairly and transparently. We are willing to provide additional feedback and clarification on question 22(ii) of the PSQ.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Section 12: Value for money, Maximising public benefit, Sharing information for transparency, Acting with integrity"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: A significant investment of time and resource in preparing the bid, which may have been wasted if the evaluation process was flawed.",
+      "Fairness & Transparency: The perceived lack of transparency in the evaluation process, particularly with regards to question 22(ii) of the PSQ."
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "Obtain detailed feedback on the evaluation process"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We request specific disclosure of key decision-making materials to understand how question 22(ii) was evaluated and scored.",
+    "legal_basis": [
+      "Section 12 of the Procurement Act 2023"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge Prime Way Care Ltd's concerns regarding the evaluation process for question 22(ii) of the Procurement Specific Questionnaire (PSQ). However, I must clarify that the scoring was consistent with published criteria and based on a thorough review of all responses. Can you provide specific examples or evidence to support your claim that Southwark treated suppliers unequally or failed to disclose key decision-making materials? Furthermore, I'd like to offer additional transparency by providing Prime Way Care Ltd with access to the evaluation panel's minutes and any relevant documentation related to question 22(ii).",
+      "proposal": null,
+      "concession_made": "Providing access to evaluation panel's minutes and relevant documentation"
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "Thank you for acknowledging our concerns and offering additional transparency by providing access to the evaluation panel's minutes and relevant documentation related to question 22(ii). However, I would like to clarify that while this is a step in the right direction, it does not address the core issue of unequal treatment. Can you explain why 33 bidders scored 4 or higher on question 22(ii) while our score was significantly lower? Was there any consideration given to the fact that our response was identical to one of the higher-scoring bids?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "I understand your concern that our evaluation process may have treated suppliers unequally regarding question 22(ii). To address this, I'd like to provide a detailed breakdown of how we evaluated each response, including specific examples of why some bidders scored higher than others. Additionally, I acknowledge that Prime Way Care Ltd's response was identical to one of the higher-scoring bids, and I'm willing to consider whether this may have been a factor in our evaluation.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your willingness to consider whether our identical response may have been a factor in the evaluation. However, I would like to request that you provide specific examples of how our response differed from the higher-scoring bids, and what exactly led to the discrepancy in scores. Furthermore, I'd like to propose an additional concession: if we can agree on a re-evaluation of question 22(ii) with the added transparency you've offered, Prime Way Care Ltd will withdraw its interim application and proceed with the original evaluation process.",
+      "proposal": "Re-evaluation of question 22(ii) with added transparency",
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Roche Diagnostics principles",
+        "Section 12 of the Procurement Act 2023"
+      ],
+      "reasoning": "The prima facie case is met as Prime Way Care Ltd has raised specific concerns regarding unequal treatment and lack of disclosure. The specificity test is also met as the request for disclosure is targeted at the actual issue in dispute, which is question 22(ii) of the PSQ. However, the proportionality test requires further consideration as the scope of disclosure sought by Prime Way Care Ltd is not clearly defined. Additionally, confidentiality safeguards will be necessary to protect commercially sensitive material.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "Roche Diagnostics principles",
+        "Section 12 of the Procurement Act 2023"
+      ],
+      "reasoning": "The Claimant has shown a prima facie case that there may be something wrong with the evaluation, specifically regarding question 22(ii) and the treatment of identical responses. The Defendant's willingness to provide a detailed breakdown of how they evaluated each response addresses this concern. However, the Claimant is still seeking specific examples of how their response differed from higher-scoring bids, which suggests that the disclosure sought is targeted at a real issue in dispute. Considering the time and cost involved, the burden of the disclosure seems proportionate to the evidential value it may hold. Confidentiality safeguards are not explicitly mentioned but can be assumed as necessary.",
+      "recommended_action": "disclosure ordered",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "disclosure ordered",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiated outcome of disclosure ordered is a more favorable result compared to our BATNA (defending in TCC court, which would cost \u00a350k+ and take 6-12 months). While we did not achieve a full win, the concession to provide additional transparency and re-evaluate question 22(ii) with Prime Way Care Ltd's participation has mitigated potential risks and costs.",
+    "win_statement": "We successfully negotiated an outcome that maintains our original evaluation process while providing increased transparency and potentially revising the scoring for question 22(ii). This demonstrates our commitment to fairness and openness in procurement, even when faced with criticism from bidders.",
+    "what_was_achieved": [
+      "Provided additional transparency by offering access to evaluation panel minutes and relevant documentation",
+      "Agreed to consider re-evaluation of question 22(ii) with Prime Way Care Ltd's participation"
+    ],
+    "what_was_conceded": [
+      "Disclosure ordered, potentially impacting our evaluation process for question 22(ii)",
+      "Potential revision of scoring for question 22(ii)"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is more favourable than our BATNA (pursuing damages or formal TCC proceedings), which would have been costly, slow, and uncertain. We achieved specific disclosure of the evaluation panel's minutes and relevant documentation related to question 22(ii).",
+    "win_statement": "We successfully negotiated additional transparency from the contracting authority, including a detailed breakdown of how they evaluated each response and specific examples of why some bidders scored higher than others.",
+    "what_was_achieved": [
+      "Specific disclosure of evaluation panel's minutes and relevant documentation related to question 22(ii)",
+      "Detailed breakdown of evaluation process with specific examples"
+    ],
+    "what_was_conceded": [
+      "Contracting authority acknowledged unequal treatment regarding question 22(ii)",
+      "Contracting authority offered re-evaluation of question 22(ii) with added transparency"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Unequal treatment in evaluation process for question 22(ii) of the PSQ",
+      "Lack of disclosure regarding key decision-making materials"
+    ],
+    "concessions_summary": "The Contracting Authority made two concessions: (1) providing access to the evaluation panel's minutes and relevant documentation, and (2) offering a detailed breakdown of how they evaluated each response. The Aggrieved Bidder proposed an additional concession: re-evaluation of question 22(ii) with added transparency in exchange for withdrawing its interim application.",
+    "court_reasoning_summary": "The Court found that the Aggrieved Bidder had made out a prima facie case, and the Contracting Authority's concessions addressed some of these concerns. However, the Claimant was still seeking specific examples of how their response differed from higher-scoring bids, which suggested that the disclosure sought was targeted at a real issue in dispute. The Court considered the time and cost involved to be proportionate to the evidential value it may hold.",
+    "likely_next_steps": "The likely next step is for the Contracting Authority to provide the disclosure ordered by the Court, which includes providing specific examples of how the Aggrieved Bidder's response differed from higher-scoring bids. The Aggrieved Bidder will then have access to this information and may choose to proceed with its original evaluation or withdraw its interim application.",
+    "plain_english_summary": "The dispute centered on whether the Contracting Authority treated suppliers equally in evaluating question 22(ii) of the PSQ, and whether they disclosed enough information about their decision-making process. The Contracting Authority made concessions to address some of these concerns, but the Aggrieved Bidder continued to push for more transparency. In the end, the Court ordered the Contracting Authority to provide specific examples of how the Aggrieved Bidder's response differed from higher-scoring bids."
+  }
+}

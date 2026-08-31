@@ -1,0 +1,152 @@
+\chapter{Conclusion}
+\label{ch:conclusion}
+
+\section{Objectives revisited}
+
+Table~\ref{tab:objectives} maps each objective from Section~\ref{sec:objectives}
+to the evidence bearing on it. Five were met; one was met in a form different from
+the one proposed.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption[Objectives against evidence]{Objectives against the evidence in this
+report.}
+\label{tab:objectives}
+\begin{tabular}{@{}clp{5.5cm}l@{}}
+\toprule
+& \textbf{Objective} & \textbf{Evidence} & \textbf{Status} \\
+\midrule
+O1 & Three agents + summariser & \S\ref{sec:grounding}, Table~\ref{tab:agent-config};
+     interests traced to Doc 1 categories & Met \\
+O2 & Deterministic orchestration, validated output & \S\ref{sec:orchestration};
+     structural compliance 0.9986 over 2{,}865 responses & Met \\
+O3 & Conditionally verifying court agent & \S\ref{sec:court-design};
+     0 of 9 flagged instances Court-originated & Met \\
+O4 & Real documents to structured scenarios & \S\ref{sec:extraction};
+     23 cases ingested through the user upload path & Met \\
+O5 & Verified corpus, baselines, ablations & \S\ref{sec:baselines}--\S\ref{sec:ablation};
+     13 of 14 merits dispositions matched & Met \\
+O6 & Something the client can use & \S\ref{sec:risk-screen};
+     rule-based screen, not the simulator & Met, reframed \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{What the research questions turned out to have as answers}
+
+\textbf{RQ1, on prompt engineering without fine-tuning.} Yes, with a caveat that
+only appeared under testing. Agents specified purely through role prompts and
+injected context do sustain distinct, role-appropriate positions: the authority
+concedes rarely on opening and about half the time thereafter, the bidder concedes
+far less, and the two report opposite outcomes against their own declared
+fallbacks. The caveat is that a prompt developed against one dispute shape does
+not generalise to another. Confronted with a case where nobody was ever scored,
+both negotiating agents invented a scoring dispute, because that was the only
+script they had.
+
+\textbf{RQ2, on which part of the protocol is load-bearing.} The adjudicator, and
+nothing else. Removing it deadlocks every run. That result is close to trivial in
+retrospect --- nothing else in the graph can set the resolution flag --- but it is
+the only unambiguous architectural finding in this project, and it is worth more
+than the accuracy figures, because the accuracy figures do not distinguish this
+system from a single prompt.
+
+\textbf{RQ3, on constraining an LLM adjudicator's arithmetic.} Largely yes, and
+the boundary is now mapped. Gating exact computation on the presence of both a
+formula and every input it needs, and banning unstated numbers even when hedged as
+illustrative, holds across 425 qualitative assessments with no Court-originated
+fabrication among the nine flagged. It does not hold universally: a documented
+instance exists of the Court inventing an entire illustrative dataset on a case it
+misclassified as numeric, and the arithmetic defect found on the client's own
+scoring table resisted three prompt revisions. The discipline constrains what the
+adjudicator computes; it does not constrain what premise it computes on.
+
+\textbf{RQ4, on evaluating in the absence of ground truth.} The answer this
+project arrived at is a stack of partial checks with explicit sample sizes, and a
+refusal to combine them into a single score. The stack has to include an
+architecture check, because a system can agree with reality for reasons that have
+nothing to do with its design; it has to include fabrication screens, because a
+correct conclusion reached from invented evidence looks identical from outside to a
+correct conclusion; and it has to report negative results, because the two most
+informative findings here --- the zero-shot tie and the readability failure ---
+both count against the artefact.
+
+\section{Reflection on the approach}
+
+The scope was wide: five agent types, a state-machine orchestrator, a document
+ingestion path, a streaming API, a client-facing web application, a rule-based
+risk screen, a 23-case verified legal corpus, and eight analysis scripts, held
+together by 92 tests. The complexity that actually mattered, though, was not any
+of those individually. It was that the domain punishes exactly the thing
+generative models are best at. A language model asked about a procurement dispute
+will produce something fluent, structured and legally shaped, and the harder the
+case, the more confident it sounds. Almost every engineering decision in
+Chapter~\ref{ch:methodology} is downstream of that: schema-validated output so
+malformed responses cannot pass silently, per-response compliance counters so
+repairs are visible, an extraction agent instructed as firmly against dropping
+real numbers as against inventing them, a minimum source-length guard because an
+empty PDF produced a complete fictional dispute, and a conditional verification
+protocol whose entire purpose is to make the adjudicator say ``I cannot compute
+this'' when it cannot.
+
+Two things I would do differently. First, I would build the corpus before building
+the agents. The synthetic scenarios written early on were AI-authored, which made
+every result derived from them circular, and they were eventually deleted along
+with seven directories of evaluation output --- a month of work that established
+nothing. Second, I would have tested on documents I did not choose much sooner.
+Two of the most informative defects in this project came from an hour spent
+running a Fusion21 employee's own files, and both were in code paths that months
+of my own test cases had never exercised, because I had unknowingly been selecting
+inputs shaped like the failures I already understood.
+
+On execution quality, the honest position is mixed and the mix is informative. The
+structural layer is solid: 0.9986 clean structured responses, a green test suite,
+every result reproducible from committed logs, and provenance carried through to
+the analytics interface so a partial batch cannot be mistaken for a finished one.
+The reasoning layer is where the limits are, and they are documented rather than
+smoothed over --- a 23.1\% wrong-regime citation rate, a summariser that fails its
+own accessibility claim, an outcome vocabulary that cannot express three of the
+real remedies in its own corpus, and one arithmetic defect that prompt engineering
+did not close.
+
+\section{Future work}
+
+Four directions follow directly from findings above rather than from speculation.
+
+\textbf{Ground the citations.} A 23.1\% wrong-regime rate is the strongest
+argument in this report for the retrieval layer that was scoped out. Retrieval
+over the Procurement Act 2023 and the TCC guidance targets exactly the failure
+observed: the model does not know which regime governs a given year, and no
+instruction can supply that knowledge, whereas retrieval can.
+
+\textbf{Check premises the way arithmetic is checked.} The Court agent verifies
+numbers against the scenario record but accepts factual assertions from the
+negotiating agents without checking them against the same record. The Faraday
+result shows what that costs. A grounding check applied to negotiating-agent
+statements, using the machinery the numeric screen already provides, is a
+concrete and well-evidenced next step.
+
+\textbf{Extend the remedy vocabulary beyond scoring challenges.} The corpus itself
+contains three real remedies the system cannot express: a declaration of
+ineffectiveness, financial penalties on the authority, and a court-determined
+re-ranking. Each is a documented gap on a named case, not a hypothetical.
+
+\textbf{Calibrate the risk screen against real outcomes.} This is the only ask
+this project has of Fusion21, and it is the highest-value item on this list.
+Anonymised pre-action data from their member base --- the same profile fields the
+screen already requests, plus whether a challenge followed --- would let a
+severity-weighted heuristic be replaced or validated by a fitted model, and would
+let the risk score be reported as a probability instead of an ordering. It is also
+the only component here whose central claim is directly falsifiable, which is
+precisely why it deserves the data.
+
+The broader conclusion is narrower than the one I expected to write. A
+multi-agent LLM system can conduct a procedurally coherent procurement dispute
+negotiation, and can be constrained not to invent the arithmetic it reasons from.
+It cannot yet be shown to reason better than a single well-posed prompt, and it
+can still be led into confident nonsense by a premise it was handed rather than one
+it computed. The value in this work is less the simulator than the evidence about
+what such a system does when nobody is checking --- and the demonstration that
+finding out requires screens built specifically to catch a system that is wrong in
+a fluent and plausible way.

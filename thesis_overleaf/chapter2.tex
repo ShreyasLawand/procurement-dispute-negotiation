@@ -1,0 +1,451 @@
+\chapter{Methodology}
+\label{ch:methodology}
+
+\section{System overview}
+\label{sec:overview}
+
+The system is built as a five-layer stack (Figure~\ref{fig:architecture}) around
+one governing idea: every claim an agent makes has to be traceable back to
+something it was actually given. A document goes in, an extraction agent turns it
+into a validated scenario object, four agents interact under an explicit state
+machine, and every step is written to a JSON log that later analysis can read
+without ever re-invoking the model. The Python backend runs to 33 modules and
+roughly 4,900 lines, backed by a 92-case test suite; the API and frontend add a
+further 374 and 3,800 lines on top of that.
+
+\begin{figure}[htbp]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[font=\footnotesize,
+    badge/.style={circle,draw=f21ink,fill=white,text=f21ink,
+                  font=\bfseries\footnotesize,minimum size=9mm,inner sep=0pt},
+    layer/.style={draw=f21ink,line width=0.7pt,rounded corners=3pt,
+                  text width=10.8cm,minimum height=1.15cm,align=left,
+                  fill=f21mist,inner sep=7pt},
+    gaplayer/.style={draw=f21grey,dashed,line width=0.7pt,rounded corners=3pt,
+                text width=10.8cm,minimum height=0.95cm,align=left,
+                fill=white,inner sep=7pt},
+    tag/.style={f21grey,font=\scriptsize\itshape}]
+
+  \node[badge] (b1) at (0,0) {L1};
+  \node[layer,right=6mm of b1,anchor=west] (l1)
+    {\textbf{Presentation} --- React/TypeScript client: upload, live streamed\\
+     negotiation, case browser, analytics, risk screen \hfill\tag{browser}};
+
+  \node[badge,below=8mm of b1] (b2) {L2.5};
+  \node[layer,right=6mm of b2,anchor=west] (l2)
+    {\textbf{API} --- FastAPI: extraction endpoint, server-sent-event\\
+     negotiation stream, risk assessment, GPU-tunnel status and reconnect};
+
+  \node[badge,below=8mm of b2] (b3) {L2};
+  \node[layer,right=6mm of b3,anchor=west] (l3)
+    {\textbf{Orchestration} --- LangGraph \texttt{StateGraph}: deterministic\\
+     turn order, conditional routing, per-super-step streaming \hfill\tag{process}};
+
+  \node[badge,below=8mm of b3] (b4) {L3};
+  \node[layer,right=6mm of b4,anchor=west] (l4)
+    {\textbf{Agents} --- Contracting Authority, Aggrieved Bidder, Court,\\
+     Summary, Extraction (Llama 3.1 8B via Ollama; local CPU or\\
+     tunnelled A10G GPU) \hfill\tag{model}};
+
+  \node[badge,below=8mm of b4] (b5) {L4};
+  \node[gaplayer,right=6mm of b5,anchor=west] (l5)
+    {\textbf{Knowledge / RAG} --- vector retrieval over legislation and\\
+     case law \emph{--- deliberately not built; see \S\ref{sec:alternatives}}};
+
+  \node[badge,below=8mm of b5] (b6) {L5};
+  \node[layer,right=6mm of b6,anchor=west] (l6)
+    {\textbf{Persistence} --- structured JSON logs per run; batch summaries\\
+     with provenance and compliance counters};
+
+  \draw[->,f21ink] (b1) -- (b2);
+  \draw[->,f21ink] (b2) -- (b3);
+  \draw[->,f21ink] (b3) -- (b4);
+  \draw[->,f21grey,dashed] (b4) -- (b5);
+  \draw[->,f21ink] (b5) -- (b6);
+\end{tikzpicture}}
+\caption[System architecture]{The five-layer architecture, read top to bottom as
+the path a request takes. The dashed layer is reported because it was scoped
+out, not because it exists: the extraction agent is a single-pass synthesis
+step and must not be mistaken for retrieval.}
+\label{fig:architecture}
+\end{figure}
+
+\section{Grounding the agents in the client's own material}
+\label{sec:grounding}
+
+An early version of this system used interest lists I had written myself, which
+made the agents believable but gave nobody a way to challenge them. Those were
+replaced with the taxonomies already sitting in Fusion21's Doc 1, so that every
+agent's stated interests trace back to a named category in a document the client
+wrote, rather than to my own guess at what a procurement officer cares about. Doc
+1 sets out seven categories for the contracting authority, six for the supplier,
+and six for the judiciary; Table~\ref{tab:agent-config} summarises the resulting
+configuration.
+
+Doc 1 also supplies per-case behavioural modifiers its ``practical
+considerations'' tables which vary by dispute rather than sitting fixed to a
+role. These are modelled as optional \texttt{CAProfile} and \texttt{BidderProfile}
+objects attached to a scenario and rendered into the system prompt at
+construction time. Both default to unset and render no text at all, so that every
+result obtained before profiles existed stays directly comparable to later ones.
+That decision carries a structural consequence: agents can no longer be
+module-level singletons, since their system prompts now depend on the scenario in
+front of them, so they get built per dispute and bound into the graph nodes at
+compile time instead.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption[Agent configuration]{Agent configuration. Temperatures were set by role
+function rather than tuned: the adjudicator and summariser are held low because
+consistency matters more than variety, the challenger is highest because a
+negotiation in which nobody proposes anything new stalls.}
+\label{tab:agent-config}
+\begin{tabular}{@{}llcp{5.4cm}@{}}
+\toprule
+\textbf{Agent} & \textbf{Interest source} & \textbf{Temp.} & \textbf{Structured output} \\
+\midrule
+Contracting Authority & Doc 1, 7 CA categories & 0.3 &
+  \texttt{PreNegotiationStatement}, \texttt{RoundResponse}, \texttt{WinStatement} \\
+Aggrieved Bidder & Doc 1, 6 supplier categories & 0.4 &
+  \texttt{PreNegotiationStatement}, \texttt{RoundResponse}, \texttt{WinStatement} \\
+Court / Judge & Doc 1, 6 judiciary categories & 0.2 &
+  \texttt{ComplianceAssessment} \\
+Summary (non-negotiating) & --- & 0.2 &
+  \texttt{NegotiationSummary} \\
+Extraction & --- & 0.1 &
+  \texttt{DisputeScenario} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The fourth agent was added on my supervisor's suggestion and takes no part in the
+negotiation itself. It reads the finished transcript and writes a plain-English
+account of what happened, on the reasoning that a system whose output only a
+procurement lawyer can parse has not really lowered anybody's costs.
+Section~\ref{sec:readability} tests that claim against a standard readability
+measure rather than leaving it as an assertion, which turns out to matter: the
+summaries read fluently enough that the shortfall is invisible without measuring
+it.
+
+\section{The Court agent: conditional verification}
+\label{sec:court-design}
+
+The Court agent assesses process compliance only, which mirrors how UK courts
+actually review procurement decisions: the live question is whether the authority
+followed a lawful, rational and procedurally correct process, not whether the
+better bidder happened to win. Getting the agent to behave took four revisions,
+each one driven by a measured failure rather than a hunch
+(Table~\ref{tab:court-versions}).
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.25}
+\caption[Court prompt revisions]{Four revisions of the Court agent's prompt. Each
+row's failure mode is what motivated the next row.}
+\label{tab:court-versions}
+\begin{tabular}{@{}p{1.4cm}p{3.6cm}p{5.4cm}@{}}
+\toprule
+\textbf{Version} & \textbf{Instruction} & \textbf{Observed behaviour} \\
+\midrule
+V1 & Judgement-based, no explicit check &
+  Manifest-error findings tracked whether the CA conceded in dialogue, not the
+  facts \\
+V2 & Always verify any calculation &
+  Fixed the numeric cases, but invented point systems on qualitative disputes
+  that had none \\
+V3 & Conditional: compute if a real formula exists, otherwise qualitative
+  review &
+  Restored non-fabricating judgement while keeping numeric accuracy \\
+V4 & V3 with the judiciary interest block replaced by Doc 1's six categories &
+  Never deadlocks on any case; see \S\ref{sec:ablation} for whether that is
+  good news \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+V4 is derived from V3 through a single verified string substitution of one named
+block, and the module raises an error at import if that anchor ever stops
+matching. The two prompts therefore differ in exactly one variable, which is what
+turns the ablation in Section~\ref{sec:ablation} into a controlled comparison
+rather than a before-and-after anecdote.
+
+The decision procedure itself is shown in Figure~\ref{fig:court-flow}. Its
+least obvious part is the middle branch. A scenario that states a formula and a
+correction, but not the original inputs, is not actually computable, and an
+earlier version of the prompt let the model paper over that gap by assuming the
+missing figures. What that produced was arithmetic that looked internally valid
+and was evidentially worthless. Step 1's gate was tightened accordingly, to
+require the formula \emph{and} every input value it needs, with an explicit note
+that a stated correction describes an outcome rather than an input, backed by an
+outright ban on writing down an unstated number even when it is hedged as
+illustrative or assumed. The hedge is not a safeguard here; it is the exact shape
+the failure took.
+
+\begin{figure}[htbp]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+    font=\footnotesize,
+    >=Latex,
+    node distance=8mm and 6mm,
+    start/.style={draw=f21ink,rounded corners=3pt,align=center,inner sep=6pt,
+                  fill=f21mist,line width=0.8pt,text width=5.0cm},
+    decision/.style={draw=f21ink,rounded corners=3pt,align=center,inner sep=7pt,
+                     fill=white,line width=1.3pt,text width=5.6cm},
+    outcome/.style={draw=f21green,line width=1pt,rounded corners=3pt,align=center,
+                    inner sep=6pt,fill=f21green!8,text width=3.9cm},
+    warn/.style={draw=f21amber,line width=1pt,rounded corners=3pt,align=center,
+                 inner sep=6pt,fill=f21amber!8,text width=4.6cm},
+    lbl/.style={font=\scriptsize\itshape,fill=white,inner sep=1.5pt}
+  ]
+
+  \node[start] (in) {Round transcript + scenario};
+  \node[decision, below=of in] (q1)
+      {\textbf{Step 1}\\[2pt] Does the scenario state a formula \emph{and}
+       every input value that formula needs?};
+
+  \node[outcome, below left=14mm and 2mm of q1] (a)
+      {\textbf{Step 2A --- Verify}\\ Recompute exactly, show working.\\
+       Mismatch $\Rightarrow$ manifest error};
+  \node[outcome, below right=14mm and 2mm of q1] (b)
+      {\textbf{Step 2B --- Review}\\ Qualitative rational-basis review.\\
+       No invented numbers};
+  \node[warn, below=24mm of q1] (c)
+      {\textbf{Formula stated, inputs missing}\\
+       Do not assume, estimate, or ``illustrate'' the gap};
+
+  \draw[->] (in) -- (q1);
+  \draw[->] (q1.west) -- ++(-4mm,0) |- node[lbl,pos=0.7] {both present} (a.north);
+  \draw[->] (q1.east) -- ++(4mm,0) |- node[lbl,pos=0.7] {neither} (b.north);
+  \draw[->] (q1.south) -- node[lbl,right] {formula only, inputs missing} (c.north);
+  \draw[->,f21amber,line width=1.1pt] (c.south) -- ++(0,-4mm) -| node[lbl,below,pos=0.75]
+      {falls back to 2B} (b.south);
+\end{tikzpicture}}
+\caption[Court agent decision procedure]{The Court agent's gating procedure. The
+amber path is the one that had to be added after the Woods v Milton Keynes case
+exposed it: a formula plus a stated correction is not a computable scenario, and
+treating it as one produced fabricated inputs.}
+\label{fig:court-flow}
+\end{figure}
+
+The same discipline applies to legal citation. The agent may only cite a
+provision if it appears in the scenario, in a party's statement that round, or in
+the grounding material handed to it in its own system prompt. A correct general
+point with no citation attached is explicitly preferred over a specific-sounding
+invented one, on the view that a fabricated regulation number belongs to exactly
+the same category of error as a fabricated sub-score. Section~\ref{sec:citation}
+measures whether that instruction actually holds up.
+
+\section{Orchestration}
+\label{sec:orchestration}
+
+Turn order runs through a LangGraph \texttt{StateGraph} (Figure~\ref{fig:graph})
+rather than a conversational free-for-all. Both parties set out their interests,
+goals and BATNA before any negotiating starts; then the authority and the bidder
+alternate, with the Court checking compliance after every round. One conditional
+edge decides whether the loop continues.
+
+\begin{figure}[htbp]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[font=\footnotesize,>=Latex,
+  n/.style={draw=f21ink,rounded corners=2pt,minimum height=8mm,inner xsep=6pt,
+            fill=white,line width=0.7pt},
+  c/.style={draw=f21green,rounded corners=2pt,minimum height=8mm,inner xsep=6pt,
+            fill=f21green!8,line width=0.9pt}]
+  \node[n] (pre) at (0,0) {pre\_negotiation};
+  \node[n,right=9mm of pre] (ca) {ca\_round};
+  \node[n,right=9mm of ca] (bid) {bidder\_round};
+  \node[c,right=9mm of bid] (crt) {court\_check};
+  \node[n,right=11mm of crt] (win) {win\_statements};
+  \node[n,below=9mm of win] (sum) {summary};
+  \node[n,right=9mm of sum] (end) {\textsc{end}};
+
+  \draw[->] (pre) -- (ca);
+  \draw[->] (ca) -- (bid);
+  \draw[->] (bid) -- (crt);
+  \draw[->] (crt) -- node[above,font=\scriptsize,align=center]
+      {resolved\\ or round $\geq$ max} (win);
+  \draw[->] (win) -- (sum);
+  \draw[->] (sum) -- (end);
+  \draw[->,f21green] (crt.south) -- ++(0,-0.9) -| node[below,pos=0.25,font=\scriptsize]
+      {\textcolor{f21green}{continue}} (ca.south);
+\end{tikzpicture}}
+\caption[Negotiation state graph]{The negotiation graph. Everything hinges on
+\texttt{court\_check}: it is the only node that can set \texttt{resolved}, and
+therefore the only escape from the loop other than exhausting the round limit.
+Section~\ref{sec:baselines} removes it and measures the consequence.}
+\label{fig:graph}
+\end{figure}
+
+Resolution is decided by the Court's \texttt{recommended\_action}, drawn from a
+closed vocabulary: continue negotiation, re-evaluation, no remedy with the
+decision standing, or damages. Anything other than ``continue'' resolves the
+dispute; exhausting the round limit without resolution is recorded as deadlock and
+escalation to formal proceedings. Constraining this vocabulary is a legal
+requirement rather than an implementation convenience (Doc 3 is explicit that
+award-stage disputes cannot be settled by splitting the difference), and the
+constraint is enforced rather than merely documented: the downstream
+recommendation module raises an error if a batch contains any outcome outside the
+set, which was checked by deliberately injecting the string ``settle for 50\% of
+contract value'' during testing.
+
+The orchestrator exposes both a synchronous \texttt{run()} used by batch scripts
+and a \texttt{stream()} generator used by the API. One detail is worth recording
+here because it caused a real bug in practice: the streamed per-node updates are
+partial, and \texttt{bidder\_round} does not carry \texttt{round\_number} in its
+update the way \texttt{ca\_round} does so any consumer has to read that field from
+merged state rather than from the raw update itself.
+
+\section{From documents to scenarios}
+\label{sec:extraction}
+
+Real users upload PDFs and Word files, not Python objects. The extraction agent
+takes raw text and produces a validated \texttt{DisputeScenario} in one model
+call, with a repair retry if that call fails. Its prompt mirrors the Court
+agent's discipline in both directions: do not invent a scoring formula the source
+does not contain, and do not summarise away one it does. That second half was
+added after a real case lost its published 60/40 weighting during extraction,
+which silently downgraded every downstream Court assessment from exact
+verification to qualitative review without anyone noticing.
+
+Two guards were added after failures turned up while running the system on
+documents I had not hand-picked. A minimum source-length check now raises before
+any model call whenever extraction yields under 200 characters, because a scanned
+PDF with no text layer had previously produced not an error but an entire
+fictional dispute, complete with its own contract value and scoring formula.
+Separately, an unstated contract value has to serialise as \texttt{null} and
+never as zero, since a zero reads downstream as a genuine \pounds0 contract
+rather than as missing information.
+
+\section{Structured output and compliance instrumentation}
+\label{sec:compliance-method}
+
+Every agent returns JSON validated against a Pydantic schema. Before this
+instrumentation existed, a run in which every single response needed repair
+looked identical to one in which none did, so a counter layer was added around
+parsing. It records brace-extraction fallbacks when \texttt{json.loads} fails,
+field coercions during validation, repetition regenerations, and outright parse
+failures. The headline metric is \emph{structural compliance}: the proportion of
+structured responses that needed no repair at all. It is scoped per response
+rather than summed over events, because a single response can trigger several
+coercions at once, and naively summing them produces a rate that climbs past one
+and then goes negative. Repetition retries are counted but do not mark a response
+dirty, since repetitiveness is a content problem rather than a structural one.
+
+\section{Method selection, and what was rejected}
+\label{sec:alternatives}
+
+Table~\ref{tab:alternatives} records the significant choices made against the
+alternatives that were considered. Three of these are worth commenting on
+directly.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption[Design alternatives]{Design decisions against the alternatives considered.
+Rows marked \emph{plan change} diverge from the original project plan.}
+\label{tab:alternatives}
+\begin{tabular}{@{}p{2.6cm}p{3.0cm}p{6.4cm}@{}}
+\toprule
+\textbf{Decision} & \textbf{Alternative} & \textbf{Reasoning} \\
+\midrule
+Prompt engineering + context injection & Fine-tuning a domain model &
+  No labelled corpus of procurement dispute negotiations exists to fine-tune on,
+  and building one was not realistic within the time available. Prompts also stay
+  auditable, which matters when fabrication is the thing being tested for. \\
+Llama 3.1 8B \cite{grattafiori2024llama}, self-hosted \emph{(plan change)} & GPT-4o via API &
+  Cost, and the fact that client documents are commercially sensitive. It is
+  also the harder test: a discipline that holds on an 8B model is not quietly
+  relying on raw capability to paper over a weak prompt. \\
+Single-pass extraction & Retrieval-augmented generation &
+  RAG solves retrieving the right authority; the failure mode here is inventing
+  facts about the case actually in front of the model, which retrieval does not
+  touch. Scoped out explicitly rather than left unaddressed. \\
+LangGraph state machine & Free-form agent conversation &
+  Deterministic turn order and explicit conditional edges are what make the
+  ablation in \S\ref{sec:baselines} possible at all: you can delete a node and
+  measure what happens. \\
+React frontend \emph{(plan change)} & Streamlit &
+  Needed to be demonstrated to a client board, and needed to stream a
+  negotiation live while it was still in progress. \\
+JSON logs \emph{(plan change)} & PostgreSQL &
+  Every analysis in Chapter~\ref{ch:evaluation} is a batch read over completed
+  runs; a database would have added operational overhead for no analytical
+  benefit. \\
+Real judgments only \emph{(plan change)} & Synthetic scenarios &
+  The two synthetic scenarios were AI-authored and were deleted, along with
+  their evaluation batches, once a real corpus existed. A synthetic dispute
+  cannot falsify anything. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The move from synthetic to real scenarios is the most consequential of these.
+The project plan had proposed synthetic dispute scenarios with real cases kept as
+optional validation. In practice the synthetic pair had been written with model
+assistance, which quietly made the whole test circular: a scenario generated by
+a language model and then assessed by a language model tells you nothing
+independent about whether either one is right. They were deleted outright,
+along with seven batch directories of results derived from them, rather than
+kept with a caveat attached, because those results were still being served into
+the frontend's analytics page, where no caveat could actually reach a viewer.
+
+The plan had also proposed ablations over temperature and BATNA values. Those
+were dropped in favour of the three baselines in Section~\ref{sec:baselines}, on
+the judgement that ``does this architecture beat a single prompt'' is the
+question an examiner asks first, and it is not a question a temperature sweep
+can answer.
+
+\section{Delivery and the industrial deliverable}
+\label{sec:risk-screen}
+
+The negotiation simulator is exposed through a FastAPI backend and a
+Fusion21-branded React client, with live negotiations streamed over
+server-sent events. Inference runs against local Ollama by default and against a
+tunnelled University GPU instance whenever one is reachable, detected at startup
+and re-establishable from a button in the interface. That last piece exists
+because the tunnel is fragile in practice, and a demonstration that needs a
+terminal open beside it is not really a demonstration.
+
+The component Fusion21 actually asked for is a different thing entirely. Their
+framing was prevention: every other part of this system operates on a dispute
+that has already been raised. The pre-award challenge risk screen is a
+rule-based function with no model call in it at all, taking the same 16 profile
+fields already encoded from Doc 1 and returning a risk band, a normalised score,
+and a list of flags. Each flag names the field that triggered it, the Doc 1
+category it traces back to, a severity, a confidence tag, a rationale closely
+paraphrased from a specific Doc 1 sentence, and a concrete pre-award mitigation.
+
+Three boundaries here are deliberate. It predicts whether a challenge is likely
+to be \emph{raised}, not whether the authority would go on to lose one, because
+that second question belongs to the Court agent, and blurring the two would
+smuggle a merits judgment in through inputs that really only speak to a bidder's
+incentive to complain. Every flag carries a confidence tag, because an authority
+knows the quality of its own documentation but can only guess at a losing
+bidder's legal representation. And the score is a triage ordering device, not a
+probability: Doc 1 gives directional relationships rather than weights, so the
+severity weighting here is a transparent first pass, and the module's own output
+says as much it is not claiming to be calibrated.
+
+\section{Verification discipline as a method}
+\label{sec:verification-discipline}
+
+One methodological commitment runs through everything described above, and it is
+worth stating outright as a method rather than leaving it as an implied habit. No
+number, citation or case fact enters this project without being checked against
+a primary source, and that rule was applied to my own write-ups just as strictly
+as to model output. It caught real errors in both directions. An earlier draft of
+the evaluation claimed the agents had negotiated over a case's 68\%/84\% score
+gap; they had not, because the cached scenario never actually contained it, and
+the sentence had been checked against the raw case text rather than against what
+the pipeline had actually fed the agents. A contract value of roughly
+\pounds1.5 billion attributed to one case turned out, on verification, to be
+\pounds112.1 million for the specific procurement actually at issue. Both errors
+belong to the same class the Court agent is hardened against, just occurring in
+the human layer instead, and both are reported here rather than quietly fixed
+and left unmentioned.

@@ -14,3 +14,18 @@ __pycache__/
 # scripts/start_demo.ps1 state file — local process PIDs, meaningless outside the machine
 # that started them
 .demo-state.json
+
+# Course materials and exemplar reports supplied for guidance (thesis-guidance/):
+# ~101MB of third-party PDFs including other students' dissertations, plus the
+# 60MB muthesis example archive. Reference material, not this project's work, and
+# not ours to redistribute.
+thesis-guidance/
+
+# Fusion21 client documents used for live testing. Commercially sensitive, and the
+# report's AI statement explicitly says they are not reproduced. Keep them locally,
+# never commit them.
+award letter.docx
+pretend data.pdf
+
+# Build artefacts regenerable from the .tex sources
+thesis*/*.zip

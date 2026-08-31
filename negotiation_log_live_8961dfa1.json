@@ -1,0 +1,125 @@
+{
+  "scenario": {
+    "dispute_id": "UPLOADED-001",
+    "title": "Prime Way Care Ltd v The Mayor and Burgesses of the London Borough of Southwark",
+    "description": "This dispute concerns the procurement by Southwark for a multi-lot framework agreement relating to Adult Home Care Services. Prime Way Care Ltd challenged the evaluation process under the Procurement Act 2023, alleging that the published scoring matrix was not applied consistently and that the Defendant's evaluation records were incomplete. The Claimant requested specific disclosure of the evaluation records related to their own bid and those of other bidders who scored 4 or higher on Q22(ii). Southwark refused to provide this disclosure, citing procurement governance requirements. The Court held that the low threshold for prima facie case was met and granted the application for early specific disclosure.",
+    "contract_value_gbp": 0.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "trial",
+    "contracting_authority_name": "The Mayor and Burgesses of the London Borough of Southwark",
+    "bidder_name": "Prime Way Care Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 3,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Act lawfully under the Procurement Act 2023 and follow published evaluation criteria.",
+      "Protection of Public Funds: Avoid delays that increase costs, particularly given the \u00a30 contract value.",
+      "Continuity of Service / Delivery: Ensure timely delivery of Adult Home Care Services to residents in Southwark.",
+      "Reputation & Public Accountability: Maintain public confidence as a competent and fair buyer.",
+      "Minimising Litigation Risk: Provide enough disclosure to reassure Prime Way Care Ltd without undermining evaluation confidentiality or integrity."
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Resolve the dispute through negotiation"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We have carefully evaluated Prime Way Care Ltd's bid, and our scoring decisions are based on clear evidence and published criteria.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Regulations implementing the EU Public Procurement Directive"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: We risk losing \u00a30 contract value due to alleged scoring inconsistencies, impacting our bid team's performance metrics and future business opportunities.",
+      "Fairness & Transparency: We seek assurance that the evaluation process was fair and transparent, with access to complete evaluation records for all bidders who scored 4 or higher on Q22(ii).",
+      "Protection of Reputation: Our reputation as a bidder is at stake if we are seen as challenging the procurement process without merit."
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids, giving us a chance to be awarded the contract ourselves.",
+      "Secure specific disclosure of evaluation records related to our bid and those of other high-scoring bidders."
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We demand immediate disclosure of evaluation records and re-evaluation of bids to address alleged scoring inconsistencies.",
+    "legal_basis": [
+      "The Procurement Act 2023",
+      "The Court's ruling granting early specific disclosure"
+    ],
+    "confidence_score": 0.5
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Prime Way Care Ltd's concerns regarding the evaluation process and the requested disclosure of evaluation records. However, we must clarify that the specific disclosure sought is commercially sensitive and may compromise the integrity of our procurement process. Can you explain how this disclosure would assist in resolving the dispute and what specific information you are seeking?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your clarification regarding the commercial sensitivity of the disclosure sought. However, we would like to request further information on what specific procurement governance requirements are being cited as justification for withholding this information. Can you provide us with a detailed explanation or documentation that outlines these requirements and how they relate to our requested disclosure? We believe that transparency is essential in resolving this dispute and would like to work together to find a mutually beneficial solution.",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Procurement Act 2023",
+        "Civil Procedure Rules"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves the evaluation of a procurement process and the requested disclosure of evaluation records. There are no explicit formulas or sub-scores mentioned in the scenario. The Contracting Authority's refusal to provide specific disclosure citing 'procurement governance requirements' raises concerns about transparency and compliance with the Procurement Act 2023. I do not have enough information to perform a calculation, but I can assess the qualitative aspects of the dispute. Upon reviewing the scenario, it appears that the Contracting Authority may be withholding information that is essential for resolving the dispute, which could indicate a lack of transparency and potentially a manifest error in the evaluation process.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome of re-evaluation was more favourable than our BATNA (defending in TCC court, which would have cost \u00a350k+ and taken 6-12 months). We were able to avoid the significant costs and risks associated with litigation.",
+    "win_statement": "We successfully negotiated a re-evaluation process that allowed us to address Prime Way Care Ltd's concerns while maintaining the integrity of our procurement process. Although we did not achieve a full win, we were able to preserve our position and avoid more costly and time-consuming litigation.",
+    "what_was_achieved": [
+      "Negotiated a re-evaluation process to address Prime Way Care Ltd's concerns",
+      "Preserved the integrity of our procurement process"
+    ],
+    "what_was_conceded": [
+      "Provided some additional information on procurement governance requirements",
+      "Agreed to re-evaluate the bids, which may have resulted in some changes to the original evaluation"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome of re-evaluation is slightly better than our BATNA (pursuing damages or formal TCC proceedings), which would have been costly, slow, and uncertain. However, it's still a compromise that doesn't fully address our concerns about the evaluation process.",
+    "win_statement": "We were able to secure a re-evaluation of our bid, which acknowledges some of our concerns about the scoring matrix and evaluation records. This outcome is a partial vindication of our position and may lead to a more transparent procurement process in the future.",
+    "what_was_achieved": [
+      "Secured a re-evaluation of our bid",
+      "Had our concerns about the scoring matrix partially acknowledged"
+    ],
+    "what_was_conceded": [
+      "Did not receive full disclosure of evaluation records as requested",
+      "Were unable to fully address our concerns about the evaluation process"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Disclosure of evaluation records",
+      "Commercial sensitivity vs. procurement governance requirements"
+    ],
+    "concessions_summary": "Neither side made any concessions during the negotiation, with both parties maintaining their positions.",
+    "court_reasoning_summary": "The Court assessed the dispute as qualitative and identified concerns about transparency and compliance with the Procurement Act 2023 due to the Contracting Authority's refusal to provide specific disclosure. The Court concluded that there may be a manifest error in the evaluation process, recommending re-evaluation.",
+    "likely_next_steps": "The case will likely proceed to formal proceedings or settlement negotiations after re-evaluation, depending on the outcome of the re-evaluation and any further developments.",
+    "plain_english_summary": "The dispute centered around the Contracting Authority's refusal to disclose evaluation records, citing commercial sensitivity. The Court was concerned about transparency and compliance with procurement laws, recommending that the evaluation process be re-done."
+  }
+}

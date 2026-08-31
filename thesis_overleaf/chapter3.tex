@@ -1,0 +1,543 @@
+\chapter{Evaluation and Reflection}
+\label{ch:evaluation}
+
+\section{Designing an evaluation when there is no ground truth}
+\label{sec:eval-design}
+
+The obvious evaluation is accuracy against real outcomes, and for the most part it
+simply isn't available. Fusion21's own Doc 4 states that the overwhelming
+majority of procurement disputes settle before proceedings, so the cases that
+produce a published judgment are already a biased minority; of the 23 in this
+corpus, nine were decided on an interim application where the underlying merits
+were never reached at all. Any single accuracy number computed over that set
+would be both small and misleading.
+
+The evaluation is built instead as a stack of partial checks
+(Figure~\ref{fig:evidence}), each answering a question the others can't, and each
+reported with the sample size that produced it. Every figure below comes from an
+analysis script in the repository run over committed logs, and every script was
+re-run immediately before submission. At that point the corpus stood at 299
+completed negotiations across 59 batches.
+
+\begin{figure}[htbp]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[font=\footnotesize,
+  band/.style={draw=f21ink,rounded corners=2pt,line width=0.7pt,align=left,
+               inner sep=5pt,text width=11.6cm}]
+  \node[band,fill=f21mist] (a)
+    {\textbf{Does it produce well-formed output at all?}\quad
+     Structural compliance over 2{,}865 structured responses~(\S\ref{sec:structural})};
+  \node[band,below=2.6mm of a,fill=f21mist] (b)
+    {\textbf{Does it agree with reality where reality is knowable?}\quad
+     14 merits dispositions~(\S\ref{sec:agreement})};
+  \node[band,below=2.6mm of b,fill=f21green!10] (c)
+    {\textbf{Does the architecture earn its complexity?}\quad
+     Three baselines, one ablation, $n=6$ and $n=18$~(\S\ref{sec:baselines})};
+  \node[band,below=2.6mm of c,fill=f21green!10] (d)
+    {\textbf{Does a prompt change alter judgement or only confidence?}\quad
+     Controlled V3/V4 ablation, $n=8$ per cell, Fisher's exact~(\S\ref{sec:ablation})};
+  \node[band,below=2.6mm of d,fill=f21amber!10] (e)
+    {\textbf{Is the reasoning grounded in what the model was given?}\quad
+     Three independent fabrication screens~(\S\ref{sec:fabrication})};
+  \node[band,below=2.6mm of e,fill=f21amber!10] (f)
+    {\textbf{Is the output usable by the person who has to act on it?}\quad
+     Concession dynamics, BATNA self-report, readability~(\S\ref{sec:dynamics}--\S\ref{sec:readability})};
+\end{tikzpicture}}
+\caption[Evaluation design]{The evaluation as a stack of partial checks. No single
+row is sufficient; the fabrication screens in particular exist because a system can
+score well on every row above them while inventing the evidence it reasons from.}
+\label{fig:evidence}
+\end{figure}
+
+\section{The corpus}
+\label{sec:corpus}
+
+Twenty-three real UK procurement judgments were researched, individually verified
+against BAILII or the National Archives case law service, and written into the
+project as dense source texts before being run through the same extraction path a
+user upload takes. Seven further candidates were investigated and rejected along
+the way, two of which turned out on closer reading not to be procurement cases at
+all. Table~\ref{tab:corpus-summary} summarises the composition; the full list
+with citations is in Appendix~\ref{app:corpus}.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption[Corpus composition]{Composition of the 23-case corpus. Only the merits
+group supports an agreement claim; the interim group is reported for completeness
+and excluded from every accuracy figure in this chapter.}
+\label{tab:corpus-summary}
+\begin{tabular}{@{}lccp{5.6cm}@{}}
+\toprule
+\textbf{Group} & \textbf{Cases} & \textbf{CA won / lost} & \textbf{Why grouped this way} \\
+\midrule
+Merits disposition & 14 & 6 / 8 &
+  A court ruled on the substantive question this system assesses \\
+Interim only & 9 & --- &
+  Suspension or summary-judgment rulings; the merits were never decided, so
+  comparing a merits prediction to them is not a check \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The corpus grew in three stages, and what constrained its growth changed each
+time. While inference ran on a CPU-bound local model, a single negotiation took
+around seventeen minutes, which turned a twenty-case corpus into a compute
+problem on its own. Once inference moved to a tunnelled A10G GPU, per-call
+latency fell roughly thirty-fold and the bottleneck shifted to research and
+verification instead: the largest single expansion added fifteen cases in one
+session, with the compute for all fifteen finishing inside an hour while the
+searching and checking took up the rest of it.
+
+\section{Structural reliability}
+\label{sec:structural}
+
+Across the 50 batches carrying the instrumentation described in
+\S\ref{sec:compliance-method}, 2{,}861 of 2{,}865
+structured responses required no repair, giving a corpus-wide structural
+compliance rate of \textbf{0.9986}. Forty-eight of the 50 batches were clean at
+1.00; the worst single batch scored 0.906 and predates the repair-retry pattern
+described below.
+
+That pattern is itself a finding worth reporting on its own. When the
+anti-fabrication and governing-legislation instructions were added to the
+pre-negotiation prompts, the rate at which the model dropped a required JSON
+field rose measurably, first showing up as three failures in an eight-run batch
+where the entire prior corpus had had none. The cause wasn't the content of the
+instruction but its length: a longer, more instruction-dense prompt degraded
+adherence to the output-format instruction sitting at the end of it. The fix was
+a single repair retry that re-sends the same message with the validation error
+appended, mirroring the pattern the extraction agent already used. This
+interaction recurred enough to be worth naming for anyone hardening prompts
+against a small model: \emph{adding an instruction has a cost paid somewhere
+else in the same prompt}, and that cost stays invisible unless something is
+actually counting it.
+
+\section{Agreement with real dispositions}
+\label{sec:agreement}
+
+On the 14 cases with a genuine merits disposition, the simulated outcome
+direction matches the real one in \textbf{13}. The exception is Turning Point v
+Norfolk County Council, and it isn't a bug. Reading the transcript rather than
+just the outcome distribution, the simulated Court's reasoning is almost verbatim
+the real claimant's losing argument: that the authority should have sought
+clarification of a caveated tender before rejecting it. The real judge rejected
+exactly that argument, holding the no-caveats rule fair and commonly used.
+Nothing here was invented, and the reasoning engages the real facts throughout
+the model simply reached a different legal conclusion on a genuinely arguable
+point. That's a category of error worth separating out from fabrication, and
+Section~\ref{sec:fabrication} does exactly that.
+
+Two caveats attach to the 13. On Faraday v West Berkshire the direction is
+correct but the reasoning isn't trustworthy, for reasons given below. On
+Consultant Connect the direction is correct but the remedy shape is wrong: the
+real court imposed financial penalties on three NHS bodies, and this system's
+outcome vocabulary simply has no way to express that, so ``re-evaluation'' ends
+up standing in as the closest available match to ``the authority was at fault''.
+The same gap shows up on Faraday, whose real remedy was a declaration of
+ineffectiveness, and on Woods, where the court didn't merely order the scoring
+redone but went as far as determining the corrected winner itself. The
+vocabulary was built for scoring challenges, and it shows.
+
+Across all 299 runs the outcome distribution comes out heavily skewed:
+re-evaluation 80.6\%, no remedy 10.4\%, deadlock 5.7\%, disclosure ordered
+3.0\%. One run produced ``request for additional information'', a string
+outside the closed vocabulary entirely. That is a single instance in 299, from an
+early four-run batch, and precisely the kind of drift the downstream module is
+designed to raise on rather than quietly average away. Median resolution takes
+one round; the maximum observed is five.
+
+\section{Baselines and ablations: does the architecture earn itself?}
+\label{sec:baselines}
+
+This is the question an examiner asks first, so it was tested head-on, using the
+six cases where a merits disposition existed at the time of the comparison.
+Three baselines were built: a majority-class heuristic with no model call at
+all, a single zero-shot prompt deliberately \emph{not} hardened the way the
+Court prompt is, and an ablation of the full pipeline with the Court node
+replaced by one that cannot resolve anything.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption[Baseline comparison]{Directional accuracy against real dispositions, and
+the no-Court ablation. The imbalance matters: five of the six cases are ``CA
+lost'', so always guessing the majority class scores 5/6 with no reasoning
+whatsoever.}
+\label{tab:baselines}
+\begin{tabular}{@{}lccl@{}}
+\toprule
+\textbf{System} & \textbf{Runs} & \textbf{Direction correct} & \textbf{What it establishes} \\
+\midrule
+Majority-class heuristic & --- & 5 / 6 & The floor. No model call, no reasoning \\
+Zero-shot single prompt & 5 per case & 6 / 6 & A naive prompt is not worse here \\
+Full pipeline (V4) & 8 per case & 6 / 6 & Ties the naive prompt \\
+No-Court ablation & 3 per case & --- & \textbf{0 of 18 runs resolved} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The headline result is negative, and it's reported exactly as measured.
+\textbf{At $n=6$ the full multi-agent pipeline and the naive single-prompt
+baseline tie: both get every case right, and the gap down to a predictor with no
+reasoning at all is just one case wide.} No claim in this project about the
+architecture's value can rest on accuracy alone. Establishing that is the point
+of building the baselines: without them, the pipeline's 6/6 would have looked
+like evidence of design quality, when the majority-class floor shows most of it
+is the corpus's own class imbalance. A second check tested whether
+the unhardened prompt at least fabricated more, applying the same grounding
+screen used on the Court agent to all 30 zero-shot reasoning texts: it found
+zero ungrounded numbers. That's a genuine null result on this evidence, not a
+finding bent into a narrative it doesn't support.
+
+What the ablation shows is a different kind of result. Removing the Court agent
+produces deadlock in \textbf{all 18 runs, uniformly on every case}. This isn't a
+trend that could plausibly be sampling luck; it's architecturally necessary,
+because nothing else in the graph can decide the parties have converged. A
+version of the ablation that inferred resolution from conciliatory language in
+the dialogue would have quietly defeated the whole point, which is precisely
+that nothing here resolves without adjudication. The multi-agent design's
+defensible claim is therefore about mechanism rather than accuracy: the
+pipeline produces a modelled negotiation with declared interests, BATNAs,
+rounds of concession, and a court reviewing the actual exchange. None of that
+exists in a single call, and all of it is what the downstream components
+structurally depend on.
+
+\section{The V3/V4 prompt ablation}
+\label{sec:ablation}
+
+Replacing the Court agent's three-line guiding-principles block with Doc 1's six
+judiciary interest categories is a single-variable change, and its effect is
+consistent. Across every case where V3 deadlocks at all, V4 reaches zero
+deadlock and resolves in roughly half the rounds (Figure~\ref{fig:ablation},
+Table~\ref{tab:ablation}).
+
+\begin{figure}[htbp]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[font=\footnotesize]
+  % axes
+  \draw[f21grey,line width=0.5pt] (0,0) -- (11.6,0);
+  \foreach \y/\lab in {0/0, 1.4/.25, 2.8/.50, 4.2/.75, 5.6/1.0} {
+    \draw[f21grey!45,line width=0.4pt] (0,\y) -- (11.6,\y);
+    \node[anchor=east,f21grey,font=\scriptsize] at (-0.1,\y) {\lab};
+  }
+  \node[rotate=90,anchor=south,f21grey,font=\scriptsize] at (-0.95,2.8) {resolution rate};
+
+  % five case groups; x centres
+  \foreach \i/\lbl/\vthree in {0/Lancashire/4.9, 1/Faraday/4.2, 2/Parkingeye/4.9,
+                               3/Alstom/2.8, 4/Woods/5.6} {
+    \pgfmathsetmacro\xc{0.75 + \i*2.25}
+    \fill[f21grey!55] ({\xc-0.62},0) rectangle ({\xc-0.06},\vthree);
+    \fill[f21green]   ({\xc+0.06},0) rectangle ({\xc+0.62},5.6);
+    \node[anchor=north,font=\scriptsize] at (\xc,-0.12) {\lbl};
+  }
+  % legend
+  \fill[f21grey!55] (8.9,6.25) rectangle (9.25,6.55);
+  \node[anchor=west,font=\scriptsize] at (9.32,6.4) {V3};
+  \fill[f21green] (10.2,6.25) rectangle (10.55,6.55);
+  \node[anchor=west,font=\scriptsize] at (10.62,6.4) {V4};
+\end{tikzpicture}}
+\vspace{4mm}
+\caption[V3 vs V4 resolution rates]{Resolution rate by Court prompt version,
+$n=8$ per bar, five real cases. V4 sits at the ceiling everywhere; V3 varies by
+case. Reaching 1.00 on every case is not automatically the better result --- see
+the text.}
+\label{fig:ablation}
+\end{figure}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption[Ablation significance]{V3/V4 resolution rates with Fisher's exact tests
+\cite{fisher1922interpretation}.
+No case reaches $p<0.05$. At $n=8$ per arm this test has low power, so these are
+``not distinguishable from noise at this sample size'', not ``no difference''.}
+\label{tab:ablation}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Case} & \textbf{V3} & \textbf{V4} & \textbf{V3 avg.\ rounds} & \textbf{Fisher $p$} \\
+\midrule
+Lancashire Care & 0.875 & 1.000 & 2.75 & 1.000 \\
+Faraday & 0.750 & 1.000 & 3.00 & 0.467 \\
+Parkingeye & 0.875 & 1.000 & 1.50 & 1.000 \\
+Alstom & 0.500 & 1.000 & 4.38 & 0.077 \\
+Woods & 1.000 & 1.000 & 1.00 & 1.000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Two things follow from this, and they pull in opposite directions. The pattern
+is real and holds consistently across four independent cases, and it matches the
+mechanism you'd predict from the change: Doc 1's fifth judicial category is
+efficient use of judicial resources, which favours settlement and narrowing of
+issues. But nothing here reaches statistical significance, and a prompt that
+resolves everything isn't obviously the more correct one for that reason alone.
+On Alstom, V4's manifest-error detection rate is identical to V3's at 0.50
+so the difference lies entirely in what happens \emph{after} a finding, not in
+whether one gets made at all. The honest reading is that V4 changes remedy
+efficiency rather than judgement, which is what its explicit precedence note was
+written to ensure but ``V4 improves resolution rate'' is not a claim that should
+travel without that qualification attached.
+
+\section{Fabrication: three distinct failure modes}
+\label{sec:fabrication}
+
+This is the project's central concern, and the screens built for it are
+correspondingly paranoid. Three independent checks run over the corpus,
+summarised in Table~\ref{tab:fabrication}; the failure modes they separate out
+are shown in Figure~\ref{fig:failures}.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption[Fabrication screens]{The three grounding screens, over 299 logs.}
+\label{tab:fabrication}
+\begin{tabular}{@{}lcp{6.2cm}@{}}
+\toprule
+\textbf{Screen} & \textbf{Result} & \textbf{Reading} \\
+\midrule
+Numeric grounding (Step 2B) & 9 flagged of 425 (2.1\%) &
+  All nine re-read individually; \textbf{none is a Court-originated fabrication} \\
+Legal citation, regime & 162 of 702 (23.1\%) wrong regime &
+  PCR 2015 or the EU Directive cited in a Procurement Act 2023 world \\
+Legal citation, s.12 content & 7 of 21 (33.3\%) misattributed &
+  Subsection contents swapped, e.g.\ transparency assigned to s.12(1)(a) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The numeric screen extracts every score-shaped number from a qualitative
+compliance assessment and checks whether it appears in the scenario description.
+Nine of 425 qualitative assessments were flagged, and reading all nine changes
+the interpretation of that number completely. None of them is the Court
+inventing a figure. Six reproduce a pattern first seen on Alstom, where the
+negotiating agents invent quantitative specificity and the Court declines to
+treat it as verified. Two are the Court quoting a number attributively
+(``the Contracting Authority's position states that the bid scored 92 out of
+100''), and one is a Court repeating a party's own negotiating proposal back. The
+clearest of the nine is worth quoting directly, because the detector fired on an
+instance of the discipline working exactly as it was designed to:
+
+\begin{quote}\itshape\small
+``I do not have enough information to perform a calculation myself, as no specific
+numbers or formula are provided in the scenario.''
+\hfill --- Court agent, Alstom, round 2
+\end{quote}
+
+The screen's real signal, then, sits further upstream. The negotiating agents
+fabricate factual premises, and the Court simply adopts them. The clearest
+instance is Faraday, which isn't a scoring dispute at all: the authority
+structured a \pounds125\,m regeneration deal so as to avoid running a
+competition in the first place, and Faraday never submitted a bid to be scored.
+Extraction captured this correctly, labelling the dispute
+\texttt{process\_avoidance}. The negotiating agents did not preserve that label
+in practice. In 3 of 8 V3 runs and 6 of 8 V4 runs, the bidder asserts a
+``scoring discrepancy between our bid and that of St Modwen Developments Ltd''.
+That is a comparison which cannot exist, since neither party was ever scored to
+begin with. The cause is traceable: every CA and bidder prompt in this system was
+developed against scored-bid disputes, and neither contains a branch for a case
+where no bid was ever scored at all. Confronted with an unfamiliar dispute type,
+both agents fall back on the only script they have.
+
+\begin{figure}[htbp]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[font=\footnotesize,
+  m/.style={draw,rounded corners=2pt,line width=0.9pt,align=left,inner sep=6pt,
+            text width=3.55cm,minimum height=3.0cm,anchor=north west}]
+  \node[m,draw=f21green,fill=f21green!8] at (0,0)
+    {\textbf{1. Numeric fabrication}\\[2pt]
+     \scriptsize Inventing a sub-score or formula the case does not state.\\[3pt]
+     \textbf{Status:} addressed. Step 1 gating; 0 of 9 flagged instances
+     Court-originated.};
+  \node[m,draw=f21amber,fill=f21amber!10] at (4.05,0)
+    {\textbf{2. Premise fabrication}\\[2pt]
+     \scriptsize A negotiating agent inventing a fact about the dispute, which the
+     Court then adopts.\\[3pt]
+     \textbf{Status:} open. 6 of 8 runs on Faraday.};
+  \node[m,draw=f21grey,fill=f21mist] at (8.1,0)
+    {\textbf{3. Judgment divergence}\\[2pt]
+     \scriptsize Grounded reasoning reaching a different legal conclusion than the
+     real judge.\\[3pt]
+     \textbf{Status:} not a defect. Turning Point.};
+\end{tikzpicture}}
+\caption[Failure mode taxonomy]{Three failure modes that a single ``hallucination''
+label would conflate. Hardening the adjudicator addresses the first and does
+nothing about the second, because the second enters the system before the
+adjudicator sees it.}
+\label{fig:failures}
+\end{figure}
+
+\subsection{Legal citation}
+\label{sec:citation}
+
+Citation is the same discipline applied to a different field, and it holds up
+far less well there. Of 702 citations logged, 162 (23.1\%) name the wrong regime
+entirely, citing the Public Contracts Regulations 2015 or the EU Directive
+inside a system explicitly grounded in the Procurement Act 2023; one even names
+a ``Public Contracts Regulations 2020'' that does not exist. Of the 21
+citations specific enough to check against section 12, 7 misattribute the
+subsection's contents. Both checks were verified against legislation.gov.uk
+rather than assumed correct. The remaining 519 citations are bucketed as not
+specific enough to check, rather than silently passed as correct which is a
+deliberately conservative choice: it means the true error rate is bounded below
+by these figures, not estimated by them.
+
+This is the clearest limitation of prompt-only grounding. The citation-discipline
+instruction cut down on fabricated pinpoint citations, but it cannot hand the
+model knowledge of which regime governs a 2018 procurement, and an 8B model's
+priors are saturated with pre-2023 material regardless of what the prompt says.
+Retrieval over the actual legislation is the right fix here, and this result is
+the strongest argument in the whole project for building the layer that was
+scoped out.
+
+\section{Negotiation dynamics and BATNA}
+\label{sec:dynamics}
+
+Two behavioural checks confirm the negotiation is an actual negotiation rather
+than two monologues running in parallel. Concession rate by the contracting
+authority rises from 0.013 in round one to 0.470 in later rounds: it essentially
+never concedes on opening, and concedes roughly half the time once the exchange
+is properly underway. The bidder concedes far less, 0.000 to 0.075, which
+matches what a bidder concession actually amounts to dropping the challenge
+entirely, a much larger move than simply offering extra transparency.
+Consecutive same-role message similarity averages 0.097 over 426 pairs, so the
+repetition suppression appears to be working as intended. Zero explicit
+retractions were found, using a check that was narrowed after an earlier version
+misread ``willing to withdraw our claim'', which is a settlement offer, as a
+retraction.
+
+Table~\ref{tab:batna} shows how each agent judges its own outcome against its
+declared BATNA. The asymmetry here is structural and matches the law: an
+authority that successfully defends its award loses nothing, while a bidder that
+obtains a re-evaluation has still spent the bid cost and may well lose again.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption[BATNA self-assessment]{Self-reported outcome relative to declared BATNA,
+$n=299$ per role, classified by a documented keyword heuristic. The heuristic is
+not a ground-truth label, and the large ``unclear'' fractions are reported rather
+than redistributed.}
+\label{tab:batna}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Role} & \textbf{Beats} & \textbf{Matches} & \textbf{Falls short} & \textbf{Unclear} \\
+\midrule
+Contracting Authority & 71\% & 1\% & 2\% & 27\% \\
+Aggrieved Bidder & 24\% & 0\% & 21\% & 56\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+An earlier run of this analysis over 63 logs reported the authority as never
+falling short at all. At 299 logs it falls short in five cases, all of which
+read as genuine self-reported shortfalls on inspection. The absolute claim was
+never really safe to make from the smaller sample, and the correction is a
+reminder of how cautiously any proportion in this project should be cited before
+$N$ gets much larger.
+
+\section{Readability: the summariser does not meet its own claim}
+\label{sec:readability}
+
+The Summary agent's schema describes its own output as ``a 3--4 sentence summary
+a non-lawyer could understand''. Measured over all 299 summaries, mean Flesch
+Reading Ease \cite{flesch1948readability} comes out at \textbf{24.7} (median
+25.9), which sits in the ``very difficult, graduate level'' band; mean
+Flesch--Kincaid grade level \cite{kincaid1975derivation} is 14.7. The best single
+summary in the corpus scores 57.5, just short of the 60--70 plain-English band,
+and the worst is negative. The figure is essentially unchanged from an earlier
+run over a different and smaller corpus, so this looks like a stable property of
+the prompt rather than a sampling artefact. The agent that exists specifically
+to make the output accessible does not, by a standard measure, actually succeed
+and it would have gone unnoticed without measuring it, because the summaries
+read fluently on the page.
+
+\section{The risk screen against real cases}
+\label{sec:risk-eval}
+
+The pre-award screen was run against the eight cases whose judgments state
+enough to populate any profile field, filling a field only where the judgment
+directly states or entails it. Two cases reach ``medium'' from bidder-side facts
+alone: Braceurself, with a stated 80.25\% against 82.5\% margin, and Lancashire
+Care, where the court found the authority's reasons ``too vague and generic''.
+Both happen to be among the clearest cases in the corpus where a court found the
+process actually defective. That co-occurrence is worth naming, though it is not
+a validated correlation six cases cannot establish one.
+
+Four of the six land ``low'' despite being real litigated challenges, and this
+is a finding about the data rather than a failure of the screen itself.
+Judgments record legal reasoning; they very rarely record whether the
+evaluation panel was procurement-trained or the audit trail complete, which are
+exactly the pre-award conditions the rules key on. The module already states
+that an unpopulated profile always scores low, and that this reflects a gap in
+the input rather than a genuine finding. The worked examples confirm this is the
+actual behaviour rather than a defensive caveat added after the fact.
+
+\section{Threats to validity}
+\label{sec:threats}
+
+\textbf{Sample size.} Every rate reported here is a proportion over a modest
+$N$. The ablation is $n=8$ per cell with no significant result; the baseline
+comparison is $n=6$. The deadlock finding is the exception, holding at 18 of 18
+by architectural necessity rather than sampling luck.
+
+\textbf{Single model, single configuration.} Everything runs on Llama 3.1 8B at
+fixed per-role temperatures. Nothing here separates ``this architecture'' from
+``this model under these particular prompts''.
+
+\textbf{Corpus bias.} Litigated cases are already a filtered minority of all
+disputes, and this corpus is filtered further toward cases well documented
+enough to verify. The merits group splits 6 authority wins to 8 losses, which is
+far more balanced than the original five cases were, but that balance was
+achieved by deliberately hunting for authority-win cases which is itself a
+selection choice worth flagging.
+
+\textbf{Detector limits.} The numeric screen is string-presence matching against
+the scenario description, not a fact-checker; the premise-fabrication count on
+Faraday comes from a phrase search and should be read as a lower bound; the
+BATNA classifier is a documented keyword heuristic. Each of these is stated
+plainly in its own module.
+
+\textbf{Structural mismatch.} Nine of 23 cases were decided at an interim stage
+this system cannot model at all. Any apparent correspondence on those cases is
+directional at best, and they were excluded from every accuracy figure in this
+chapter.
+
+\section{Reflection on the process}
+\label{sec:reflection}
+
+Three things went differently from the plan, and in each case the difference
+turned out to be productive rather than merely disruptive.
+
+The first is that the interesting problem moved. The plan treated the
+negotiation system as the deliverable and evaluation as a final phase tacked on
+the end. In practice the negotiation itself was working within weeks, and the
+remaining months went almost entirely into evaluation because the question that
+actually mattered was never whether agents could negotiate, but whether anything
+they produced could be trusted. The structure of this report reflects that
+reallocation.
+
+The second is that the client reframed the project in a single sentence.
+Fusion21's real interest was prevention, not replay, and the risk screen exists
+because of that reframing. It is the smallest component in the whole system, has
+no model call in it whatsoever, and is the only part with an observable ground
+truth in principle. That makes it, somewhat awkwardly, the most scientifically
+tractable thing here, and also the thing this project is least able to validate
+without data only the client can actually supply.
+
+The third is that the most useful bugs came from documents I hadn't chosen
+myself. A board demonstration ended with a Fusion21 employee handing me an award
+letter and a scoring table and asking what the system made of them on the spot.
+It found a genuine arithmetic defect: the Court agent re-applying an
+already-applied percentage weighting to a sub-score, turning a correct
+evaluation into a false manifest-error finding that three increasingly explicit
+prompt revisions still failed to fix. The model would state the correct approach
+in words and then execute the wrong arithmetic in that same response. Those
+revisions were reverted rather than shipped, since they added prompt length for
+no measured benefit, and the limitation is recorded here as still open. The same
+session also surfaced a real premise-fabrication instance which \emph{was}
+fixed. Choosing my own test inputs had, without my really noticing at the time,
+been quietly selecting for the failures I already knew about.
