@@ -1,0 +1,249 @@
+\chapter{Introduction}
+\label{ch:intro}
+
+\section{Why procurement disputes are worth modelling}
+\label{sec:context}
+
+UK public bodies spend somewhere around \pounds300 billion a year on goods, works
+and services \cite{cabinetoffice2020}, and in 2023 the rulebook for how they spend
+it changed. The Procurement Act 2023 \cite{pa2023} swept away a patchwork of
+EU-derived regulations and replaced it with a single regime built around four
+statutory objectives in section 12: value for money, maximising public benefit,
+sharing information for transparency, and acting with integrity. It also
+tightened what happens to losing bidders. Section 50 requires a contracting
+authority to send each unsuccessful supplier an assessment summary explaining how
+its tender was scored; section 51 then opens an eight-working-day standstill
+period, starting the day the contract award notice is published, during which the
+contract cannot be signed. A supplier who thinks the evaluation went wrong has
+that window to raise it, and thirty days from when it knew or ought to have known
+of the breach to actually start proceedings in the Technology and Construction
+Court.
+
+Those deadlines are what make this problem interesting rather than merely legal.
+Figure~\ref{fig:lifecycle} shows the shape of it. Nearly all the leverage sits in
+the first fortnight, before anyone has instructed a solicitor, and nearly all the
+information asymmetry sits there too. The authority knows exactly what its
+evaluation panel did; the losing bidder knows only whatever the assessment
+summary was willing to tell it. Once the automatic suspension kicks in and the
+case reaches the TCC, both sides are locked into a process that, across this
+project's own case corpus, took anywhere from four months to two years to
+resolve.
+
+\begin{figure}[htbp]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[font=\footnotesize,>=Latex]
+ % timeline spine
+ \draw[line width=1.1pt,f21ink] (0,0) -- (13.2,0);
+ \foreach \x in {0,2.6,5.2,8.4,11.6} \draw[f21ink,line width=1.1pt] (\x,-0.13) -- (\x,0.13);
+
+ % labels below
+ \node[anchor=north,text width=2.3cm,align=center] at (0,-0.25)
+ {Evaluation\\ complete};
+ \node[anchor=north,text width=2.4cm,align=center] at (2.6,-0.25)
+ {Assessment\\ summary sent\\ \textit{(s.50)}};
+ \node[anchor=north,text width=2.4cm,align=center] at (5.2,-0.25)
+ {Standstill ends\\ 8 working days\\ \textit{(s.51)}};
+ \node[anchor=north,text width=2.5cm,align=center] at (8.4,-0.25)
+ {Claim issued\\ 30-day limit\\ suspension bites};
+ \node[anchor=north,text width=2.5cm,align=center] at (11.6,-0.25)
+ {TCC judgment\\ 4 months--2 years};
+
+ % artefact bands above
+ \begin{scope}[on background layer]
+ \fill[f21green!12,rounded corners=3pt] (-0.5,0.42) rectangle (3.9,1.5);
+ \fill[f21amber!12,rounded corners=3pt] (4.3,0.42) rectangle (12.6,1.5);
+ \end{scope}
+ \node[anchor=west,text width=4.2cm,align=left,f21green] at (-0.45,0.96)
+ {\textbf{Risk screen} (\S\ref{sec:risk-screen})\\ acts before a dispute exists};
+ \node[anchor=west,text width=8.0cm,align=left,f21amber] at (4.4,0.96)
+ {\textbf{Negotiation simulator} (\S\ref{sec:orchestration}) acts on a dispute\\ that has already been raised};
+\end{tikzpicture}}
+\caption[The procurement dispute lifecycle]{The procurement dispute lifecycle
+under the Procurement Act 2023, and where this project's two artefacts sit on it.
+The statutory windows are short; the litigation that follows is not. The horizontal
+axis is ordinal, not to scale.}
+\label{fig:lifecycle}
+\end{figure}
+
+This project was carried out with Fusion21, a social enterprise running
+procurement frameworks for housing providers, local authorities and NHS bodies,
+which sees the same disputes recur across its member base. Fusion21 supplied four
+internal documents, referred to throughout as Docs 1--4: the interests and drivers
+of each party, the escalation ladder from informal engagement to litigation, the
+negotiation theory they apply, and three worked examples. Doc 4 makes a point that
+quietly shapes the whole project: litigated cases are not typical, because most
+procurement disputes settle before proceedings are issued. Every judgment used in
+this evaluation is therefore a survivor of that filtering, and any claim built on
+the resulting corpus inherits its bias.
+
+\section{Subject area and related work}
+\label{sec:related}
+
+The technical territory here is multi-agent LLM simulation: several instances of
+a language model, each assigned a role, a set of interests and a private
+fallback position, made to act out a structured multi-party interaction. Three
+strands of prior work are directly relevant.
+
+\subsection*{Multi-agent LLM frameworks}
+
+Once instruction-following models could handle few-shot task specification
+\cite{brown2020language} and expose their intermediate reasoning on request
+\cite{wei2022chain}, the prompt itself became a kind of programming surface. From
+there it is a short step to running several copies of one model under different
+role prompts and getting something that looks like a division of labour. That
+is essentially what CAMEL \cite{li2023camel} does, pairing an assistant and a
+user agent under an inception-prompting scheme, and what Generative Agents
+\cite{park2023generative} extended by giving twenty-five simulated townspeople
+memory, reflection and planning. AutoGen \cite{wu2023autogen} and MetaGPT
+\cite{hong2024metagpt} took the same underlying idea and pointed it at
+engineering workflows instead, and MetaGPT's authors argue specifically that
+what stops multi-agent conversation from collapsing into noise is encoding
+standard operating procedures directly into the prompts. That claim matters
+here: the Court agent's verification protocol described in
+Section~\ref{sec:court-design} is exactly this kind of encoded procedure, closer
+in spirit to ReAct's interleaving of reasoning with a defined action space
+\cite{yao2023react} than to open-ended chat, and Chapter~\ref{ch:evaluation}
+shows plainly what happens once the case shapes stop matching what it was
+written for. Orchestration in this project runs on LangGraph \cite{langgraph},
+which represents the interaction as an explicit state graph rather than a
+free-form conversation, a choice defended in Section~\ref{sec:orchestration}.
+
+\subsection*{LLMs as negotiators}
+
+Negotiation makes a good testbed because it comes with structure, an outcome, and
+an existing literature. Fu et al.\ \cite{fu2023negotiation} set two models
+bargaining over a balloon and let them improve through self-play with AI feedback.
+Bianchi et al.'s NegotiationArena \cite{bianchi2024negotiation} built
+resource-allocation, buy--sell and ultimatum games into a benchmark and found LLM
+negotiators could be talked into bad deals by tactics like feigned desperation.
+Closer to the setting here, Abdelnabi et al.\ \cite{abdelnabi2024negotiation}
+built multi-party negotiations around conflicting private goals, scoring agents on
+whether the deal reached satisfied their own constraints. What unites all three is
+a self-contained environment: the payoff is defined by the game, so correctness is
+decidable. Procurement disputes offer no such luxury. The governing framework sits
+outside the simulation, is contested, and lives in statute and case law, so the
+``correct'' outcome is whatever a court would have held, which is usually unknown.
+
+The normative framework the agents reason with comes from Fisher and Ury's
+\emph{Getting to Yes} \cite{fisher2011getting} (separate interests from positions,
+know your BATNA) and Raiffa on asymmetric negotiation \cite{raiffa1982art}. Doc 3
+adds a constraint from that literature which shapes the system's whole outcome
+vocabulary: in award-stage disputes you cannot split the difference, because the
+available remedies are fixed by statute.
+
+\subsection*{Legal reasoning and the fabrication problem}
+
+On legal benchmarks, language models do reasonably well. GPT-4 passed the Uniform
+Bar Examination \cite{katz2024gpt4}, and LegalBench \cite{guha2023legalbench}
+assembled 162 tasks showing real, if uneven, legal reasoning. The evidence that
+matters more here cuts the other way. Dahl et al.\ \cite{dahl2024legal} profiled
+legal hallucination and found error rates of 58--82\% on verifiable questions
+about federal cases, with models rarely able to tell when they did not know.
+Magesh et al.\ \cite{magesh2024hallucination} tested commercial
+retrieval-augmented legal tools built specifically to avoid this and still
+measured hallucination above 17\%. Ji et al.\ \cite{ji2023survey} put it plainly:
+fluent, confident, wrong output is the default failure mode, not a rare edge case.
+
+That is the difficulty in one sentence. A plausible-looking compliance finding on
+a procurement dispute is not merely useless but actively harmful, precisely
+because it is persuasive, unless something separately guarantees that the numbers
+and provisions it cites came from the case in front of it. Retrieval
+\cite{lewis2020rag} was the obvious candidate and was seriously considered;
+Section~\ref{sec:alternatives} explains why it was scoped out and what was built
+instead.
+
+\section{The gap this project addresses}
+\label{sec:gap}
+
+Multi-agent negotiation research is typically scored against a payoff function
+that the environment itself defines. Legal-LLM research is typically scored
+against benchmark answers a human has already labelled. A simulated procurement
+dispute has neither luxury: the artefact hands down a legal judgment on facts
+that a real court either decided differently, decided on a different question, or
+never decided. So the question this project organised itself around was not
+\emph{can agents negotiate a procurement dispute}, which turned out to be the easy
+part, but how you evaluate what they produce and how you stop them inventing the
+evidence they reason from.
+
+\section{Aim, research questions and objectives}
+\label{sec:objectives}
+
+\textbf{Aim.} To build and evaluate a multi-agent LLM system that simulates
+procurement dispute resolution under the Procurement Act 2023 modelling the
+interests, constraints and fallback positions of the contracting authority, the
+aggrieved bidder and the court and, alongside it, to establish an evaluation
+methodology suited to a domain where ground truth is scarce and fabrication is
+the main risk.
+
+The research questions carried over from the project plan, sharpened by
+what the work actually turned up, are:
+
+\begin{description}
+ \item[RQ1] Without fine-tuning, can prompt engineering and structured context
+ injection alone produce agents that reliably represent each party's distinct
+ interests, legal constraints and BATNA?
+ \item[RQ2] Which negotiation protocol lets autonomous agents reach legally
+ grounded resolutions, and which single component of that protocol is
+ actually doing the work?
+ \item[RQ3] Can an LLM court agent be made to verify arithmetic when a case
+ supplies one and refuse to invent one when it doesn't and does that
+ constraint survive contact with dispute shapes it was never designed
+ against?
+ \item[RQ4] Given that most real disputes settle confidentially and never
+ produce a ground-truth label, how should outcomes even be evaluated for
+ reliability, fabrication and alignment with what actually happened?
+\end{description}
+
+These break down into six objectives (O1--O6), which give
+Chapter~\ref{ch:methodology} its structure and are assessed against the evidence
+in Table~\ref{tab:objectives}: specify the agents against Fusion21's own interest
+taxonomies; build a deterministic orchestration protocol with schema-validated
+output; design a court agent that verifies conditionally rather than by default;
+build an ingestion path from real documents into structured scenarios; assemble a
+verified corpus and evaluate against it with explicit baselines and ablations; and
+deliver something Fusion21 can use, which turned out to mean a pre-award risk
+screen rather than the simulator.
+
+\section{Contributions}
+\label{sec:contributions}
+
+\begin{enumerate}
+ \item \textbf{A conditional verification protocol for an LLM adjudicator}
+ (Section~\ref{sec:court-design}). Exact arithmetic is only attempted when
+ both a formula and every input it needs are present, and invented values are
+ refused even when the agent tries to hedge them as illustrative. Four prompt
+ revisions are documented, each written in response to a specific failure
+ mode the previous version produced.
+ \item \textbf{An evaluation methodology for a domain with almost no ground
+ truth} (Chapter~\ref{ch:evaluation}). It combines agreement with real
+ dispositions, three independent fabrication screens, instrumentation for
+ structural compliance, a controlled prompt ablation with significance
+ testing, and three baselines.
+ \item \textbf{A negative result that limits how far the architecture claim can
+ go} (Section~\ref{sec:baselines}): a naive zero-shot prompt matches the full
+ pipeline on directional accuracy, while removing the court agent causes
+ every run to deadlock. Whatever the architecture earns, it earns on
+ resolution mechanics and process, not on accuracy.
+ \item \textbf{Three distinct failure modes}, evidenced on named cases
+ (Section~\ref{sec:fabrication}): numeric fabrication, narrative-premise
+ fabrication, and legal-judgment divergence, together with the finding that
+ hardening the adjudicator against the first does nothing about the
+ second.
+ \item \textbf{A verified corpus of 23 real UK procurement judgments}, rendered
+ as structured scenarios with each disposition checked individually, released
+ alongside the project.
+ \item \textbf{A pre-award challenge risk screen} (Section~\ref{sec:risk-screen}),
+ traced rule by rule back to Fusion21's own practical-considerations tables
+ and the only part of this system with an observable ground truth in
+ principle.
+\end{enumerate}
+
+\section{Report structure}
+
+Chapter~\ref{ch:methodology} describes the system and defends the design choices
+against the alternatives that were considered and rejected along the way.
+Chapter~\ref{ch:evaluation} presents the evaluation, including the results that
+do not flatter the artefact. Chapter~\ref{ch:conclusion} returns to the
+objectives, reflects on how the project actually went, and sets out what should
+be built next.

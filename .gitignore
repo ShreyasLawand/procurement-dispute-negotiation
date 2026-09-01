@@ -29,3 +29,4 @@ pretend data.pdf
 
 # Build artefacts regenerable from the .tex sources
 thesis*/*.zip
+thesis*/thesis-v4-final.zip
