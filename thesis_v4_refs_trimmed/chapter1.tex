@@ -19,15 +19,14 @@ that window to raise it, and thirty days from when it knew or ought to have know
 of the breach to actually start proceedings in the Technology and Construction
 Court.
 
-Those deadlines are what make this problem interesting rather than merely legal.
-Figure~\ref{fig:lifecycle} shows the shape of it. Nearly all the leverage sits in
-the first fortnight, before anyone has instructed a solicitor, and nearly all the
-information asymmetry sits there too. The authority knows exactly what its
-evaluation panel did; the losing bidder knows only whatever the assessment
-summary was willing to tell it. Once the automatic suspension kicks in and the
-case reaches the TCC, both sides are locked into a process that, across this
-project's own case corpus, took anywhere from four months to two years to
-resolve.
+Those deadlines are what make this problem interesting rather than merely legal
+(Figure~\ref{fig:lifecycle}). Nearly all the leverage sits in the first fortnight,
+before anyone has instructed a solicitor, and so does nearly all the information
+asymmetry: the authority knows exactly what its evaluation panel did, while the
+losing bidder knows only what the assessment summary chose to tell it. Once the
+automatic suspension kicks in and the case reaches the TCC, both sides are locked
+into a process that, across this project's corpus, took four months to two years
+to resolve.
 
 \begin{figure}[htbp]
 \centering
@@ -80,34 +79,31 @@ the resulting corpus inherits its bias.
 \section{Subject area and related work}
 \label{sec:related}
 
-The technical territory here is multi-agent LLM simulation: several instances of
-a language model, each assigned a role, a set of interests and a private
-fallback position, made to act out a structured multi-party interaction. Three
-strands of prior work are directly relevant.
+The technical territory is multi-agent LLM simulation: several instances of a
+language model, each assigned a role, a set of interests and a private fallback
+position, acting out a structured multi-party interaction.
 
 \subsection*{Multi-agent LLM frameworks}
 
 Once instruction-following models could handle few-shot task specification
 \cite{brown2020language} and expose their intermediate reasoning on request
-\cite{wei2022chain}, the prompt itself became a kind of programming surface. From
-there it is a short step to running several copies of one model under different
-role prompts and getting something that looks like a division of labour. That
-is essentially what CAMEL \cite{li2023camel} does, pairing an assistant and a
-user agent under an inception-prompting scheme, and what Generative Agents
-\cite{park2023generative} extended by giving twenty-five simulated townspeople
-memory, reflection and planning. AutoGen \cite{wu2023autogen} and MetaGPT
-\cite{hong2024metagpt} took the same underlying idea and pointed it at
-engineering workflows instead, and MetaGPT's authors argue specifically that
-what stops multi-agent conversation from collapsing into noise is encoding
-standard operating procedures directly into the prompts. That claim matters
-here: the Court agent's verification protocol described in
-Section~\ref{sec:court-design} is exactly this kind of encoded procedure, closer
-in spirit to ReAct's interleaving of reasoning with a defined action space
-\cite{yao2023react} than to open-ended chat, and Chapter~\ref{ch:evaluation}
-shows plainly what happens once the case shapes stop matching what it was
-written for. Orchestration in this project runs on LangGraph \cite{langgraph},
-which represents the interaction as an explicit state graph rather than a
-free-form conversation, a choice defended in Section~\ref{sec:orchestration}.
+\cite{wei2022chain}, the prompt became a programming surface. From there it is a
+short step to running several copies of one model under different role prompts
+and getting something that looks like a division of labour. That is what CAMEL
+\cite{li2023camel} does, pairing an assistant and a user agent under an
+inception-prompting scheme, and what Generative Agents \cite{park2023generative}
+extended by giving twenty-five simulated townspeople memory, reflection and
+planning. AutoGen \cite{wu2023autogen} and MetaGPT \cite{hong2024metagpt} pointed the same
+idea at engineering workflows, and MetaGPT's authors argue that what stops
+multi-agent conversation collapsing into noise is encoding standard operating
+procedures into the prompts. That matters here: the Court agent's verification
+protocol (\S\ref{sec:court-design}) is exactly such a procedure, closer to ReAct's
+interleaving of reasoning with a defined action space \cite{yao2023react} than to
+open-ended chat, and Chapter~\ref{ch:evaluation} shows what happens once case
+shapes stop matching what it was written for. Orchestration runs on LangGraph
+\cite{langgraph}, which represents the interaction as an explicit state graph
+rather than free-form conversation, a choice defended in
+\S\ref{sec:orchestration}.
 
 \subsection*{LLMs as negotiators}
 
@@ -210,40 +206,36 @@ screen rather than the simulator.
 
 \begin{enumerate}
  \item \textbf{A conditional verification protocol for an LLM adjudicator}
- (Section~\ref{sec:court-design}). Exact arithmetic is only attempted when
- both a formula and every input it needs are present, and invented values are
- refused even when the agent tries to hedge them as illustrative. Four prompt
- revisions are documented, each written in response to a specific failure
- mode the previous version produced.
+ (\S\ref{sec:court-design}): exact arithmetic only when both a formula and every
+ input it needs are present, and invented values refused even when hedged as
+ illustrative. Four prompt revisions are documented, each answering a specific
+ measured failure.
  \item \textbf{An evaluation methodology for a domain with almost no ground
- truth} (Chapter~\ref{ch:evaluation}). It combines agreement with real
- dispositions, three independent fabrication screens, instrumentation for
- structural compliance, a controlled prompt ablation with significance
- testing, and three baselines.
- \item \textbf{A negative result that limits how far the architecture claim can
- go} (Section~\ref{sec:baselines}): a naive zero-shot prompt matches the full
- pipeline on directional accuracy, while removing the court agent causes
- every run to deadlock. Whatever the architecture earns, it earns on
- resolution mechanics and process, not on accuracy.
- \item \textbf{Three distinct failure modes}, evidenced on named cases
- (Section~\ref{sec:fabrication}): numeric fabrication, narrative-premise
- fabrication, and legal-judgment divergence, together with the finding that
- hardening the adjudicator against the first does nothing about the
- second.
- \item \textbf{A verified corpus of 23 real UK procurement judgments}, rendered
- as structured scenarios with each disposition checked individually, released
- alongside the project.
- \item \textbf{A pre-award challenge risk screen} (Section~\ref{sec:risk-screen}),
- traced rule by rule back to Fusion21's own practical-considerations tables
- and the only part of this system with an observable ground truth in
- principle.
+ truth} (Chapter~\ref{ch:evaluation}): agreement with real dispositions, three
+ fabrication screens, structural-compliance instrumentation, a controlled prompt
+ ablation with significance testing, and three baselines.
+ \item \textbf{An outcome-leakage audit} (\S\ref{sec:leakage}) showing that six of
+ fourteen merits scenarios state the real disposition in the text the agents
+ reason over, and re-basing every accuracy claim on the subset that does not.
+ \item \textbf{A negative result bounding the architecture claim}
+ (\S\ref{sec:baselines}): a naive zero-shot prompt matches the full pipeline on
+ directional accuracy, while removing the court agent deadlocks every run.
+ Whatever the architecture earns, it earns on resolution mechanics, not accuracy.
+ \item \textbf{Three distinct failure modes} evidenced on named cases
+ (\S\ref{sec:fabrication}): numeric fabrication, narrative-premise fabrication and
+ legal-judgment divergence, with the finding that hardening the adjudicator
+ against the first does nothing about the second.
+ \item \textbf{A verified corpus of 23 real UK procurement judgments}, rendered as
+ structured scenarios with each disposition checked individually.
+ \item \textbf{A pre-award challenge risk screen} (\S\ref{sec:risk-screen}), traced
+ rule by rule to Fusion21's own practical-considerations tables and the only part
+ of this system with an observable ground truth in principle.
 \end{enumerate}
 
 \section{Report structure}
 
-Chapter~\ref{ch:methodology} describes the system and defends the design choices
-against the alternatives that were considered and rejected along the way.
-Chapter~\ref{ch:evaluation} presents the evaluation, including the results that
-do not flatter the artefact. Chapter~\ref{ch:conclusion} returns to the
-objectives, reflects on how the project actually went, and sets out what should
-be built next.
+Chapter~\ref{ch:methodology} describes the system and defends its design against
+the alternatives rejected along the way; Chapter~\ref{ch:evaluation} presents the
+evaluation, including the results that do not flatter the artefact; and
+Chapter~\ref{ch:conclusion} returns to the objectives and sets out what should be
+built next.

@@ -3,9 +3,9 @@
 
 \section{Objectives revisited}
 
-Table~\ref{tab:objectives} maps each objective from Section~\ref{sec:objectives}
-to the evidence bearing on it. Five were met outright; one was met, but in a form
-different from the one originally proposed.
+Table~\ref{tab:objectives} maps each objective from \S\ref{sec:objectives} to the
+evidence bearing on it. Five were met outright; one was met in a different form
+from the one proposed.
 
 \begin{table}[htbp]
 \centering
@@ -41,100 +41,83 @@ O6 & Something the client can use & \S\ref{sec:risk-screen};
 \section{What the research questions turned out to have as answers}
 
 \textbf{RQ1, on prompt engineering without fine-tuning.} Yes broadly, with a
-caveat that only surfaced under testing. Agents specified purely through role
-prompts and injected context do sustain distinct, role-appropriate positions:
-the authority concedes rarely on opening and about half the time thereafter, the
-bidder concedes far less, and each reports the opposite kind of outcome against
-its own declared fallback. The caveat is that a prompt developed against one
-dispute shape doesn't automatically generalise to another. Confronted with a
-case where nobody was ever actually scored, both negotiating agents invented a
-scoring dispute anyway, because that was the only script either of them
-had.
+caveat that surfaced only under testing. Agents specified through role prompts and
+injected context do sustain distinct, role-appropriate positions: the authority
+concedes rarely on opening and about half the time thereafter, the bidder far
+less, and each reports the opposite kind of outcome against its own declared
+fallback. The caveat is that a prompt developed against one dispute shape does not
+generalise to another. Confronted with a case where nobody was ever scored, both
+agents invented a scoring dispute, because that was the only script they had.
 
 \textbf{RQ2, on which part of the protocol is load-bearing.} The adjudicator,
-and essentially nothing else. Removing it deadlocks every single run. In
-hindsight that result is close to trivial, since nothing else in the graph can
-set the resolution flag, but it remains the one unambiguous architectural
-finding in this
-project, and it's worth more than the accuracy figures precisely because the
-accuracy figures don't distinguish this system from a single prompt.
+and essentially nothing else: removing it deadlocks every run. That is close to
+trivial in hindsight, since nothing else in the graph can set the resolution flag,
+but it remains the one unambiguous architectural finding here, and it is worth
+more than the accuracy figures precisely because those do not distinguish this
+system from a single prompt.
 
 \textbf{RQ3, on constraining an LLM adjudicator's arithmetic.} Largely yes, and
-the boundary of that discipline is now mapped rather than merely assumed. Gating
-exact computation on the presence of both a formula and every input it needs,
-and banning unstated numbers even when hedged as illustrative, held across 425
-qualitative assessments with no Court-originated fabrication among the nine
-flagged. It doesn't hold universally, though: there is a documented instance of
-the Court inventing an entire illustrative dataset on a case it had
-misclassified as numeric, and the arithmetic defect found on the client's own
-scoring table resisted three separate prompt revisions. The discipline
-constrains what the adjudicator computes; it does not constrain what premise it
-is computing on.
+the boundary is now mapped rather than assumed. Gating exact computation on the
+presence of both a formula and every input it needs, and banning unstated numbers
+even when hedged as illustrative, held across 425 qualitative assessments with no
+Court-originated fabrication among the nine flagged. It does not hold universally:
+the Court invented an illustrative dataset on a case it had misclassified as
+numeric, and the arithmetic defect on the client's own scoring table resisted
+three prompt revisions. The discipline constrains what the adjudicator computes,
+not what premise it computes on.
 
-\textbf{RQ4, on evaluating in the absence of ground truth.} What this project
-arrived at is a stack of partial checks with explicit sample sizes attached, and
-a deliberate refusal to collapse them into a single score. The stack needs an
-architecture check, because a system can agree with reality for reasons that
-have nothing to do with its design. It needs fabrication screens, because a
-correct conclusion reached from invented evidence looks identical from the
-outside to a correct conclusion reached honestly. And it needs to report
-negative results, since the two most informative findings in this whole
-project, the zero-shot tie and the readability shortfall, both count against the
-artefact rather than for it.
+\textbf{RQ4, on evaluating in the absence of ground truth.} A stack of partial
+checks with explicit sample sizes, and a refusal to collapse them into one score.
+It needs an architecture check, because a system can agree with reality for
+reasons unrelated to its design; fabrication screens, because a correct conclusion
+from invented evidence looks identical from outside to an honest one; and a
+leakage audit, because a scenario can hand over the answer. It also needs to
+report negative results, since the two most informative findings here, the
+zero-shot tie and the readability shortfall, both count against the artefact.
 
 \section{Reflection on the approach}
 
 The scope ended up wide: five agent types, a state-machine orchestrator, a
 document ingestion path, a streaming API, a web application, a rule-based risk
-screen, a 23-case verified legal corpus, and ten analysis scripts, held together
-by 92 tests. The complexity that mattered was never any of those individually. It
-was that the domain punishes exactly the thing generative models are best at: a
-language model asked about a procurement dispute produces something fluent,
-structured and legally shaped, and the harder the case, the more confident it
-sounds. Almost every engineering decision in Chapter~\ref{ch:methodology} traces
-back to that: schema-validated output so malformed responses cannot pass silently,
-compliance counters so repairs stay visible, an extraction agent instructed as
-firmly against dropping real numbers as against inventing them, a
-minimum source-length guard because an empty PDF once produced a fictional
-dispute, and a verification protocol whose purpose is getting the adjudicator to
-say ``I cannot compute this'' when it cannot.
+screen, a 23-case verified legal corpus and ten analysis scripts, held together by
+92 tests. The complexity that mattered was none of those individually. It was that
+the domain punishes exactly what generative models are best at: a model asked
+about a procurement dispute produces something fluent, structured and legally
+shaped, and the harder the case, the more confident it sounds. Almost every
+decision in Chapter~\ref{ch:methodology} traces back to that: schema-validated
+output so malformed responses cannot pass silently, compliance counters so repairs
+stay visible, an extraction agent instructed as firmly against dropping real
+numbers as against inventing them, a source-length guard because an empty PDF once
+produced a fictional dispute, and a verification protocol whose purpose is getting
+the adjudicator to say ``I cannot compute this'' when it cannot.
 
-There are two things I would do differently given the chance again. First, I
-would build the corpus before building the agents. The synthetic scenarios
-written early on were AI-authored, which quietly made every result derived from
-them circular, and they were eventually deleted along with seven directories of
-evaluation output. That cost roughly a month, though not for nothing: the reason
-those results had to go is itself a methodological finding, and it is the reason
-the corpus in this report is 23 verified real judgments rather than a set of
-plausible fictions. A model-authored scenario cannot falsify a model-based
-system, and discovering that early enough to rebuild on real case law is what
-makes every figure in Chapter~\ref{ch:evaluation} mean anything.
-Second, I would have started testing on documents I hadn't chosen myself much
-sooner. Two of the most informative defects in this project came out of a
-single hour spent running a Fusion21 employee's own files, and both sat in code
-paths that months of my own test cases had never once exercised, because
-without noticing it I had been selecting inputs shaped like the failures
-I already understood.
+Two things I would do differently. First, build the corpus before the agents.
+The synthetic scenarios written early on were AI-authored, which made every result
+derived from them circular, and they were deleted along with seven directories of
+evaluation output. That cost roughly a month, though not for nothing: a
+model-authored scenario cannot falsify a model-based system, and discovering that
+early enough to rebuild on real case law is what makes every figure in
+Chapter~\ref{ch:evaluation} mean anything. Second, test on documents I had not
+chosen much sooner, for the reason \S\ref{sec:reflection} gives.
 
 On execution quality, the structural layer is strong and the measurements say so:
 0.9986 clean structured responses across 2{,}865 calls, a green 92-case test
-suite, every figure reproducible from committed logs by a
-named command, and provenance carried through to the
-analytics interface so a partial batch cannot be mistaken for a finished one. The
-reasoning layer is where the limits sit, and the point is that they are limits
-this project can state numerically rather than suspect \cite{dodge2019showyourwork}: a 23.1\% wrong-regime
-citation rate, a summariser missing its own accessibility claim by 35 points of
-Flesch Reading Ease, an outcome vocabulary that cannot express three real remedies
-in its own corpus, and one arithmetic defect prompt engineering never closed. Each
-is quantified, traced to a named case or command, and paired with its fix in
-\S\ref{sec:future}. Failure modes bounded this precisely are a better starting
-point than failures nobody looked for.
+suite, every figure reproducible from committed logs by a named command, and
+provenance carried through to the analytics interface so a partial batch cannot be
+mistaken for a finished one. The reasoning layer is where the limits sit, and they
+are limits this project can state numerically rather than suspect
+\cite{dodge2019showyourwork}: a 23.1\% wrong-regime citation rate, a summariser
+missing its own accessibility claim by 35 points of Flesch Reading Ease, an outcome
+vocabulary that cannot express three real remedies in its own corpus, six scenarios
+that hand the Court its answer, and one arithmetic defect prompt engineering never
+closed. Each is quantified, traced to a named case or command, and paired with its
+fix in \S\ref{sec:future}. Failure modes bounded this precisely are a better
+starting point than failures nobody looked for.
 
 \section{Future work}
 \label{sec:future}
 
-Five directions follow from findings reported above, rather than from
-speculation about what might be nice to try.
+Five directions follow from findings reported above rather than from speculation.
 
 \textbf{Ground the citations.} A 23.1\% wrong-regime rate is the strongest
 argument anywhere in this report for the retrieval layer that was scoped out

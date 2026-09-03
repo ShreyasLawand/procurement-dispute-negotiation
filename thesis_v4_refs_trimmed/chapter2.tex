@@ -76,15 +76,14 @@ step and must not be mistaken for retrieval.}
 
 Assigning a model a role and a set of interests is role play rather than
 instantiation: the model is not becoming a procurement officer, it is being
-steered toward the region of its distribution that talks like one. That matters
-for what the agents can be trusted to do, because a persuasive role performance is
-not evidence the reasoning is sound. An early version used interest lists I had
-written myself, which made the agents believable but gave nobody a way to
-challenge them. Those were replaced with the taxonomies in Fusion21's Doc 1, so
-every agent's stated interests trace to a named category in a document the client
-wrote rather than to my guess at what a procurement officer cares about. Doc 1
-sets out seven categories for the contracting authority, six for the supplier and
-six for the judiciary; Table~\ref{tab:agent-config} summarises the result.
+steered toward the region of its distribution that talks like one. That matters,
+because a persuasive role performance is not evidence the reasoning is sound. An
+early version used interest lists I had written myself, which made the agents
+believable but gave nobody a way to challenge them. Those were replaced with the
+taxonomies in Fusion21's Doc 1, so every agent's stated interests trace to a named
+category in a document the client wrote. Doc 1 sets out seven categories for the
+contracting authority, six for the supplier and six for the judiciary
+(Table~\ref{tab:agent-config}).
 
 Doc 1 also supplies per-case behavioural modifiers in its ``practical
 considerations'' tables, which vary by dispute rather than sitting fixed to a role.
@@ -137,14 +136,13 @@ without measuring it.
 \section{The Court agent: conditional verification}
 \label{sec:court-design}
 
-The Court agent assesses process compliance only, which mirrors how UK courts
-actually review procurement decisions: the live question is whether the authority
-followed a lawful, rational and procedurally correct process, not whether the
-better bidder happened to win \cite{arrowsmith2014law}. Using a model to score
-another model's output is now a common evaluation pattern
-\cite{zheng2023judging}, and the same caution applies here as there, since the
-judge inherits the biases of the thing being judged. Getting the agent to behave took four revisions,
-each one driven by a measured failure rather than a hunch
+The Court agent assesses process compliance only, mirroring how UK courts review
+procurement decisions: the question is whether the authority followed a lawful,
+rational and procedurally correct process, not whether the better bidder won
+\cite{arrowsmith2014law}. Using a model to score another model's output is a
+common evaluation pattern \cite{zheng2023judging}, and the same caution applies,
+since the judge inherits the biases of the thing judged. Getting the agent to
+behave took four revisions, each driven by a measured failure rather than a hunch
 (Table~\ref{tab:court-versions}).
 
 \begin{table}[htbp]
@@ -184,16 +182,15 @@ matching. The two prompts therefore differ in exactly one variable, which is wha
 turns the ablation in Section~\ref{sec:ablation} into a controlled comparison
 rather than a before-and-after anecdote.
 
-The decision procedure itself is shown in Figure~\ref{fig:court-flow}. Its
-least obvious part is the middle branch. A scenario that states a formula and a
-correction, but not the original inputs, is not actually computable, and an
-earlier version of the prompt let the model paper over that gap by assuming the
-missing figures. What that produced was arithmetic that looked internally valid
-and was evidentially worthless. Step 1's gate was tightened to require the
-formula \emph{and} every input it needs, noting that a stated correction describes
-an outcome rather than an input, backed by a ban on writing down an unstated
-number even when hedged as illustrative. The hedge is not a safeguard; it is the
-exact shape the failure took.
+The procedure is shown in Figure~\ref{fig:court-flow}, and its least obvious
+part is the middle branch. A scenario stating a formula and a correction, but not
+the original inputs, is not computable; an earlier prompt let the model paper over
+that gap by assuming the missing figures, producing arithmetic that looked
+internally valid and was evidentially worthless. Step 1's gate now requires the
+formula \emph{and} every input it needs, notes that a stated correction describes
+an outcome rather than an input, and bans writing down an unstated number even
+when hedged as illustrative. The hedge is not a safeguard; it is the exact shape
+the failure took.
 
 \begin{figure}[htbp]
 \centering
@@ -293,66 +290,60 @@ Section~\ref{sec:baselines} removes it and measures the consequence.}
 \end{figure}
 
 Resolution is decided by the Court's \texttt{recommended\_action}, drawn from a
-closed vocabulary: continue negotiation, re-evaluation, no remedy with the
-decision standing, or damages. Anything other than ``continue'' resolves the
-dispute; exhausting the round limit without resolution is recorded as deadlock and
-escalation to formal proceedings. Constraining this vocabulary is a legal
-requirement, not an implementation convenience: Doc 3 is explicit that
-award-stage disputes cannot be settled by splitting the difference. The constraint
-is enforced rather than merely documented, since the downstream recommendation
-module raises on any outcome outside the set, verified by injecting the string
+closed vocabulary: continue negotiation, re-evaluation, no remedy with the decision
+standing, or damages. Anything but ``continue'' resolves the dispute; exhausting
+the round limit is recorded as deadlock and escalation to formal proceedings.
+Constraining this vocabulary is a legal requirement, not an implementation
+convenience: Doc 3 is explicit that award-stage disputes cannot be settled by
+splitting the difference. It is enforced rather than documented, since the
+downstream module raises on any outcome outside the set, verified by injecting
 ``settle for 50\% of contract value'' during testing.
 
 The orchestrator exposes both a synchronous \texttt{run()} used by batch scripts
-and a \texttt{stream()} generator used by the API. One detail is worth recording
-because it caused a real bug: the streamed per-node updates are partial, and
-\texttt{bidder\_round} does not carry \texttt{round\_number} in its update the way
-\texttt{ca\_round} does, so any consumer must read that field from merged state
-rather than from the raw update.
+and a \texttt{stream()} generator used by the API. One detail caused a real bug:
+streamed per-node updates are partial, and \texttt{bidder\_round} does not carry
+\texttt{round\_number} the way \texttt{ca\_round} does, so a consumer must read that
+field from merged state rather than the raw update.
 
 \section{From documents to scenarios}
 \label{sec:extraction}
 
 Real users upload PDFs and Word files, not Python objects. The extraction agent
-takes raw text and produces a validated \texttt{DisputeScenario} in one model
-call, with a repair retry if that call fails. Its prompt mirrors the Court
-agent's discipline in both directions: do not invent a scoring formula the source
-does not contain, and do not summarise away one it does. That second half was
-added after a real case lost its published 60/40 weighting during extraction,
-which silently downgraded every downstream Court assessment from exact
-verification to qualitative review without anyone noticing.
+turns raw text into a validated \texttt{DisputeScenario} in one model call, with a
+repair retry on failure. Its prompt mirrors the Court agent's discipline in both
+directions: do not invent a scoring formula the source lacks, and do not summarise
+away one it has. The second half was added after a real case lost its published
+60/40 weighting during extraction, silently downgrading every downstream Court
+assessment from exact verification to qualitative review.
 
-What extraction deliberately does \emph{not} do is remove anything. There is no
-pass that strips the eventual court result out of a source document before the
-agents negotiate over it, so where a judgment states its own disposition that
-sentence can survive into the scenario the agents receive.
-Section~\ref{sec:leakage} measures how often that happens and reports every
-accuracy figure against the subset where it does not.
+What extraction deliberately does \emph{not} do is remove anything. No pass strips
+the eventual court result from a source document, so where a judgment states its
+own disposition that sentence can survive into the scenario the agents receive;
+\S\ref{sec:leakage} measures how often, and reports every accuracy figure against
+the subset where it does not.
 
-Two guards were added after failures turned up on documents I had not hand-picked.
-A minimum source-length check raises before any model call when extraction yields
+Two guards were added after failures on documents I had not hand-picked. A
+minimum source-length check raises before any model call when extraction yields
 under 200 characters, because a scanned PDF with no text layer had previously
-produced not an error but an entire fictional dispute, complete with contract
-value and scoring formula. Separately, an unstated contract value must serialise
-as \texttt{null} rather than zero, since zero reads downstream as a genuine
-\pounds0 contract rather than missing information.
+produced not an error but an entire fictional dispute. Separately, an unstated
+contract value must serialise as \texttt{null} rather than zero, since zero reads
+downstream as a genuine \pounds0 contract rather than missing information.
 
 \section{Structured output and compliance instrumentation}
 \label{sec:compliance-method}
 
 Every agent returns JSON validated against a Pydantic schema, with Ollama's JSON
-mode constraining generation at the decoding step in the manner
-Willard and Louf \cite{willard2023guided} formalise. Before this
-instrumentation existed, a run in which every single response needed repair
-looked identical to one in which none did, so a counter layer was added around
-parsing. It records brace-extraction fallbacks when \texttt{json.loads} fails,
-field coercions during validation, repetition regenerations, and outright parse
-failures. The headline metric is \emph{structural compliance}: the proportion of
-structured responses that needed no repair. It is scoped per response
-rather than summed over events, because a single response can trigger several
-coercions at once, and naively summing them produces a rate that climbs past one
-and then goes negative. Repetition retries are counted but do not mark a response
-dirty, since repetitiveness is a content problem rather than a structural one.
+mode constraining generation at the decoding step in the manner Willard and Louf
+\cite{willard2023guided} formalise. Before this instrumentation existed, a run in
+which every response needed repair looked identical to one in which none did, so a
+counter layer was added around parsing, recording brace-extraction fallbacks,
+field coercions, repetition regenerations and outright parse failures. The
+headline metric is \emph{structural compliance}: the proportion of structured
+responses needing no repair. It is scoped per response rather than summed over
+events, because one response can trigger several coercions and naively summing
+them produces a rate that climbs past one and then goes negative. Repetition
+retries are counted but do not mark a response dirty, since repetitiveness is a
+content problem rather than a structural one.
 
 \section{Method selection, and what was rejected}
 \label{sec:alternatives}
@@ -427,15 +418,9 @@ can answer.
 \section{Delivery and the industrial deliverable}
 \label{sec:risk-screen}
 
-The negotiation simulator is exposed through a FastAPI backend and a
-Fusion21-branded React client, with live negotiations streamed over
-server-sent events. Inference runs against local Ollama by default and against a
-tunnelled University GPU instance whenever one is reachable, detected at startup
-and re-establishable from a button in the interface. That last piece exists
-because the tunnel is fragile and a demonstration that needs a
-terminal open beside it is not a demonstration.
-
-The component Fusion21 asked for is a different thing. Their framing was
+The simulator is exposed through the FastAPI backend and React client of
+Figure~\ref{fig:architecture}, with negotiations streamed live over server-sent
+events. The component Fusion21 asked for is a different thing. Their framing was
 prevention: every other part of this system operates on a dispute already raised.
 The pre-award challenge risk screen is a rule-based function with no model call,
 taking the 16 profile fields already encoded from Doc 1 and returning a risk band,
@@ -443,29 +428,27 @@ a normalised score, and a list of flags. Each flag names the field that triggere
 it, the Doc 1 category it traces to, a severity, a confidence tag, a rationale
 paraphrased from a specific Doc 1 sentence, and a concrete pre-award mitigation.
 
-Three boundaries here are deliberate. It predicts whether a challenge is likely
-to be \emph{raised}, not whether the authority would lose one, because that second
-question belongs to the Court agent, and blurring the two would smuggle a merits
-judgment in through inputs that only speak to a bidder's incentive to complain.
-Every flag carries a confidence tag, because an authority knows the quality of its
-own documentation but can only guess at a losing bidder's legal representation.
-And the score is a triage ordering device, not a probability: Doc 1 gives
-directional relationships rather than weights, so the severity weighting is a
-transparent first pass, and the module's own output says so rather than claiming
-calibration it does not have.
+Three boundaries are deliberate. It predicts whether a challenge is likely to be
+\emph{raised}, not whether the authority would lose one: that second question
+belongs to the Court agent, and blurring the two would smuggle a merits judgment in
+through inputs that speak only to a bidder's incentive to complain. Every flag
+carries a confidence tag, because an authority knows its own documentation quality
+but can only guess at a losing bidder's legal representation. And the score is a
+triage ordering device, not a probability: Doc 1 gives directional relationships
+rather than weights, so the severity weighting is a transparent first pass, and the
+module's output says so rather than claiming calibration it does not have.
 
 \section{Verification discipline as a method}
 \label{sec:verification-discipline}
 
-One methodological commitment runs through everything above and is worth stating
-as a method rather than an implied habit. No number, citation or case fact enters
-this project without being checked against a primary source, and that rule applied
-to my own write-ups as strictly as to model output. It caught errors in both
-directions. An earlier draft claimed the agents had negotiated over a case's
-68\%/84\% score gap; they had not, because the cached scenario never contained it,
-and the sentence had been checked against the raw case text rather than against
-what the pipeline fed the agents. A contract value of roughly \pounds1.5 billion
-attributed to one case proved on verification to be \pounds112.1 million for the
-procurement at issue. Both belong to the same class the Court agent is hardened
-against, occurring in the human layer, and both are reported rather than quietly
-fixed.
+One commitment runs through everything above and is worth stating as a method
+rather than an implied habit. No number, citation or case fact enters this project
+without being checked against a primary source, and that rule applied to my own
+write-ups as strictly as to model output. An earlier draft claimed the agents had
+negotiated over a case's 68\%/84\% score gap; they had not, because the cached
+scenario never contained it, and the sentence had been checked against the raw
+case text rather than what the pipeline fed the agents. A contract value of
+roughly \pounds1.5 billion attributed to one case proved to be \pounds112.1
+million for the procurement at issue. Both belong to the same class the Court
+agent is hardened against, occurring in the human layer, and both are reported
+rather than quietly fixed.
