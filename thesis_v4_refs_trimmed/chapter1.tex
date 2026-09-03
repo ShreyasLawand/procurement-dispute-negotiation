@@ -128,6 +128,21 @@ adds a constraint from that literature which shapes the system's whole outcome
 vocabulary: in award-stage disputes you cannot split the difference, because the
 available remedies are fixed by statute.
 
+That constraint is not a modelling convenience but a feature of the legal regime,
+and it is why this system's five-outcome vocabulary is a closed statutory set
+rather than a bargaining range. The remedies available to an aggrieved bidder ---
+set-aside before contract, a declaration of ineffectiveness after it, and damages
+--- descend from the EU Remedies Directive as amended in 2007
+\cite{remediesdirective} and are carried into the Procurement Act 2023; Arrowsmith
+\cite{arrowsmith2014law} treats them as the fixed menu a challenge must be argued
+into. A negotiation simulator for this domain therefore cannot invent a settlement
+shape, which is a stronger design constraint than most negotiation benchmarks
+impose. It also frames what a simulator can usefully contribute: Genn
+\cite{genn2009judging} argues that civil disputes overwhelmingly settle rather than
+being adjudicated, and that the value of an early, cheap signal lies in informing
+that settlement rather than in predicting a judgment nobody will seek. Fusion21's
+Doc 4 makes the same observation about procurement specifically.
+
 \subsection*{Legal reasoning and the fabrication problem}
 
 On legal benchmarks, language models do reasonably well. GPT-4 passed the Uniform
@@ -191,15 +206,23 @@ what the work actually turned up, are:
  reliability, fabrication and alignment with what actually happened?
 \end{description}
 
-These break down into six objectives (O1--O6), which give
-Chapter~\ref{ch:methodology} its structure and are assessed against the evidence
-in Table~\ref{tab:objectives}: specify the agents against Fusion21's own interest
-taxonomies; build a deterministic orchestration protocol with schema-validated
-output; design a court agent that verifies conditionally rather than by default;
-build an ingestion path from real documents into structured scenarios; assemble a
-verified corpus and evaluate against it with explicit baselines and ablations; and
-deliver something Fusion21 can use, which turned out to mean a pre-award risk
-screen rather than the simulator.
+These break down into six objectives, which give Chapter~\ref{ch:methodology} its
+structure and are assessed against the evidence in Table~\ref{tab:objectives}.
+
+\begin{description}
+  \item[O1] Specify three negotiating agents plus a non-negotiating summariser
+    against Fusion21's own interest taxonomies.
+  \item[O2] Build a deterministic, inspectable orchestration protocol with
+    schema-validated output.
+  \item[O3] Design a court agent that verifies conditionally rather than by
+    default.
+  \item[O4] Build an ingestion path from real documents into structured
+    scenarios.
+  \item[O5] Assemble a verified corpus of real UK judgments and evaluate against
+    it with explicit baselines and ablations.
+  \item[O6] Deliver something Fusion21 can use, which turned out to mean a
+    pre-award risk screen rather than the simulator.
+\end{description}
 
 \section{Contributions}
 \label{sec:contributions}

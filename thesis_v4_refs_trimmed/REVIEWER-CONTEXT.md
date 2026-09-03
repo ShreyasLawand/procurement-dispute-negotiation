@@ -58,7 +58,7 @@ Arabic page sequence with the word count at the foot of the contents page,
 left-justified body text, and required preliminary pages in order — title page,
 contents, abstract, declaration, copyright, AI statement.
 
-**Current compliance:** body 8,338 words; abstract 298; all preliminary pages
+**Current compliance:** body 8,607 words; abstract 298; all preliminary pages
 present including the AI statement; word count in `word.count` is what the
 `wordcount` class option prints.
 
@@ -148,7 +148,7 @@ Faraday 0.750→1.000 (p=0.467), Parkingeye 0.875→1.000 (p=1.000), Alstom
 ### Fabrication and citation
 | Screen | Result |
 |---|---|
-| Numeric grounding | 9 flagged of 425 (2.1%); all nine re-read, **none Court-originated** |
+| Numeric grounding | 9 flagged of 425 (2.1%); all nine re-read, **none Court-originated within the screened population**. One known miss outside it: Bromcom, which classified itself numeric (so never entered the 425) and whose `A=80` form the score-shaped regex does not match |
 | Faraday premise fabrication | 3/8 V3 runs, 6/8 V4 runs (phrase search, a lower bound) |
 | Citation, wrong regime | 162 of 702 = **23.1%** |
 | Citation, s.12 content | 7 of 21 = **33.3%** |
@@ -188,11 +188,13 @@ genuine weak points, not to pre-empt criticism.
    these prompts."
 
 5. **Detector limits.** The numeric screen is string-presence matching, not
-   fact-checking. There is a documented case (Bromcom) where the Court fabricated
-   an entire scoring dataset and the screen missed it on two independent grounds —
-   the run was classified numeric so fell outside the screened population, and the
-   regex matches `80%` but not `A=80`. *The report discusses the fabrication; check
-   whether it is honest enough about the detector's blind spot.*
+   fact-checking. §3.7 discloses the Bromcom case where the Court fabricated an
+   entire scoring dataset and the screen missed it on two independent grounds — the
+   run classified itself numeric so fell outside the screened population, and the
+   regex matches `80%` but not `A=80`. The claim is therefore bounded as "no
+   Court-originated fabrication *within the screened population*". *Check whether
+   that bounding is stated clearly enough at the point of claim, and whether
+   Figure 3.5's status label matches it.*
 
 6. **Unfixed defect.** An arithmetic bug found on the client's own scoring table
    (the Court re-applying an already-applied percentage weighting) resisted three
@@ -215,19 +217,20 @@ genuine weak points, not to pre-empt criticism.
 | File | Words | Component | Weight |
 |---|---|---|---|
 | `abstract.tex` | 298 | Abstract | 5% |
-| `chapter1.tex` | 1,666 | Introductory Material | 20% |
+| `chapter1.tex` | 1,842 | Introductory Material | 20% |
 | `chapter2.tex` | 1,882 | Methodology | 20% |
-| `chapter3.tex` | 3,227 | Evaluation and Reflection | 20% |
-| `chapter4.tex` | 1,265 | Conclusion | 10% |
-| **Total** | **8,338** | | |
+| `chapter3.tex` | 3,299 | Evaluation and Reflection | 20% |
+| `chapter4.tex` | 1,286 | Conclusion | 10% |
+| **Total** | **8,607** | | |
 
 Format and Structure (5%) and Project Achievement (20%) are assessed across the
 whole document. `appendix1.tex` holds the verified case corpus, prompt extracts,
 a complete logged prompt/response exchange, the reproduction commands, and the
 ethics statement — appendices are outside the word count.
 
-Ten figures, all drawn in TikZ (no external image files); thirteen fully-ruled
-tables; 31 references, all cited, author-year via natbib.
+Ten figures, all drawn in TikZ (no external image files); thirteen booktabs
+tables (no vertical rules); 33 references, all cited, numeric `plain` style with
+author names written out in the text.
 
 **A fair criticism to consider:** chapter 3 is 39% of the body for a component
 worth 20%, while chapter 1 (20%) and chapter 2 (20%) are smaller. The defence is

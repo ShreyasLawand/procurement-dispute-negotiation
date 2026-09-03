@@ -103,25 +103,21 @@ consistency matters more than variety, the challenger is highest because a
 negotiation in which nobody proposes anything new stalls. The trade-off is between the repetitiveness of
 low-temperature decoding and the incoherence of high-temperature sampling.}
 \label{tab:agent-config}
-\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{3.3cm}|>{\raggedright\arraybackslash}p{3.1cm}|c|X|}
-\hline
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{3.3cm}>{\raggedright\arraybackslash}p{3.1cm}cX@{}}
+\toprule
 \textbf{Agent} & \textbf{Interest source} & \textbf{Temp.} & \textbf{Structured output} \\
-\hline
+\midrule
 Contracting Authority & Doc 1, 7 CA categories & 0.3 &
  \texttt{PreNegotiationStatement}, \texttt{RoundResponse}, \texttt{WinStatement} \\
-\hline
 Aggrieved Bidder & Doc 1, 6 supplier categories & 0.4 &
  \texttt{PreNegotiationStatement}, \texttt{RoundResponse}, \texttt{WinStatement} \\
-\hline
 Court / Judge & Doc 1, 6 judiciary categories & 0.2 &
  \texttt{ComplianceAssessment} \\
-\hline
 Summary (non-negotiating) & --- & 0.2 &
  \texttt{NegotiationSummary} \\
-\hline
 Extraction & --- & 0.2 &
  \texttt{DisputeScenario} \\
-\hline
+\bottomrule
 \end{tabularx}
 \end{table}
 
@@ -153,26 +149,23 @@ behave took four revisions, each driven by a measured failure rather than a hunc
 \caption[Court prompt revisions]{Four revisions of the Court agent's prompt. Each
 row's failure mode is what motivated the next row.}
 \label{tab:court-versions}
-\begin{tabularx}{\textwidth}{|p{1.3cm}|>{\raggedright\arraybackslash}p{3.9cm}|X|}
-\hline
+\begin{tabularx}{\textwidth}{@{}p{1.3cm}>{\raggedright\arraybackslash}p{3.9cm}X@{}}
+\toprule
 \textbf{Version} & \textbf{Instruction} & \textbf{Observed behaviour} \\
-\hline
+\midrule
 V1 & Judgement-based, no explicit check &
  Manifest-error findings tracked whether the CA conceded in dialogue, not the
  facts \\
-\hline
 V2 & Always verify any calculation &
  Fixed the numeric cases, but invented point systems on qualitative disputes
  that had none \\
-\hline
 V3 & Conditional: compute if a real formula exists, otherwise qualitative
  review &
  Restored non-fabricating judgement while keeping numeric accuracy \\
-\hline
 V4 & V3 with the judiciary interest block replaced by Doc 1's six categories &
  Never deadlocks on any case; see \S\ref{sec:ablation} for whether that is
  good news \\
-\hline
+\bottomrule
 \end{tabularx}
 \end{table}
 
@@ -358,44 +351,40 @@ directly.
 \caption[Design alternatives]{Design decisions against the alternatives considered.
 Rows marked \emph{plan change} diverge from the original project plan.}
 \label{tab:alternatives}
-\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.9cm}|>{\raggedright\arraybackslash}p{3.0cm}|X|}
-\hline
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{2.9cm}>{\raggedright\arraybackslash}p{3.0cm}X@{}}
+\toprule
 \textbf{Decision} & \textbf{Alternative} & \textbf{Reasoning} \\
-\hline
+\midrule
 Prompt engineering + context injection & Fine-tuning a domain model &
  No labelled corpus of procurement dispute negotiations exists to fine-tune on,
  and building one was not realistic within the time available. Prompts also stay auditable, which matters when fabrication is the
  thing being tested for. \\
-\hline
 Llama 3.1 8B \cite{grattafiori2024llama}, self-hosted \emph{(plan change)} & GPT-4o via API &
  Cost, and the fact that client documents are commercially sensitive. It is
  also the harder test: a discipline that holds on an 8B model is not quietly
  relying on raw capability to paper over a weak prompt. \\
-\hline
 Single-pass extraction & Retrieval-augmented generation &
  RAG \cite{lewis2020rag} solves retrieving the right authority; the failure mode
  here is inventing facts about the case actually in front of the model, which
  retrieval does not touch. Scoped out explicitly rather than left unaddressed. \\
-\hline
 LangGraph state machine & Free-form agent conversation &
- Deterministic turn order and explicit conditional edges are what make the
- ablation in \S\ref{sec:baselines} possible at all: you can delete a node and
- measure what happens. \\
-\hline
+ A dispute has a fixed procedural order --- both parties state a position before
+ either responds, and compliance is assessed after each round --- so an explicit
+ graph encodes the domain rather than constraining it. Free-form conversation
+ would have to rediscover that order every run. It also makes the ablation in
+ \S\ref{sec:baselines} possible: a node can be deleted and the effect measured. \\
 React frontend \emph{(plan change)} & Streamlit &
  Needed to be demonstrated to a client board, and needed to stream a
  negotiation live while it was still in progress. \\
-\hline
 JSON logs \emph{(plan change)} & PostgreSQL &
  Every analysis in Chapter~\ref{ch:evaluation} is a batch read over completed
  runs; a database would have added operational overhead for no analytical
  benefit. \\
-\hline
 Real judgments only \emph{(plan change)} & Synthetic scenarios &
  The two synthetic scenarios were AI-authored and were deleted, along with
  their evaluation batches, once a real corpus existed. A synthetic dispute
  cannot falsify anything. \\
-\hline
+\bottomrule
 \end{tabularx}
 \end{table}
 

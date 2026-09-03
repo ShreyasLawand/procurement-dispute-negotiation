@@ -67,17 +67,16 @@ with citations is in Appendix~\ref{app:corpus}.
 group supports an agreement claim; the interim group is reported for completeness
 and excluded from every accuracy figure in this chapter.}
 \label{tab:corpus-summary}
-\begin{tabularx}{\textwidth}{|l|c|c|X|}
-\hline
+\begin{tabularx}{\textwidth}{@{}lccX@{}}
+\toprule
 \textbf{Group} & \textbf{Cases} & \textbf{CA won / lost} & \textbf{Why grouped this way} \\
-\hline
+\midrule
 Merits disposition & 14 & 6 / 8 &
  A court ruled on the substantive question this system assesses \\
-\hline
 Interim only & 9 & --- &
  Suspension or summary-judgment rulings; the merits were never decided, so
  comparing a merits prediction to them is not a check \\
-\hline
+\bottomrule
 \end{tabularx}
 \end{table}
 
@@ -98,19 +97,18 @@ compliance rate of \textbf{0.9986}. Forty-eight of the 50 batches were clean at
 1.00; the worst single batch scored 0.906 and predates the repair-retry pattern
 described below.
 
-That pattern is itself a finding. When the anti-fabrication and
-governing-legislation instructions were added to the pre-negotiation prompts, the
-rate at which the model dropped a required JSON field rose measurably, first
-showing up as three failures in an eight-run batch where the prior corpus had
-none. The cause was not the instruction's content but its length: a longer,
-denser prompt degraded adherence to the output-format instruction sitting at the
-end of it, which is the positional sensitivity Lu et al.\ \cite{lu2022fantastically}
-document for few-shot prompts, appearing here in a format instruction rather than
-an example ordering. The fix was a single repair retry
-re-sending the message with the validation error appended. The interaction is worth naming for
-anyone hardening prompts against a small model: \emph{adding an instruction has a
-cost paid somewhere else in the same prompt}, and that cost stays invisible
-unless something counts it.
+That pattern is itself a finding. Adding the anti-fabrication and
+governing-legislation instructions to the pre-negotiation prompts measurably
+raised the rate at which the model dropped a required JSON field, first showing as
+three failures in an eight-run batch where the prior corpus had none. The cause
+was not the instruction's content but its length: a longer, denser prompt degraded
+adherence to the output-format instruction at the end of it, the positional
+sensitivity Lu et al.\ \cite{lu2022fantastically} document for few-shot prompts,
+appearing here in a format instruction rather than an example ordering. The fix
+was a single repair retry re-sending the message with the validation error
+appended. The interaction is worth naming for anyone hardening prompts against a
+small model: \emph{adding an instruction has a cost paid somewhere else in the
+same prompt}, invisible unless something counts it.
 
 \section{Agreement with real dispositions}
 \label{sec:agreement}
@@ -123,11 +121,10 @@ the scenario does not state what the real court decided, agreement is
 Reading the transcript rather than the outcome distribution, the simulated Court's
 reasoning is almost verbatim the real claimant's losing argument: that the
 authority should have sought clarification of a caveated tender before rejecting
-it. The real judge rejected exactly that, holding the no-caveats rule fair and
-commonly used. Nothing was invented and the reasoning engages the real facts
-throughout; the model reached a different legal conclusion on a genuinely arguable
-point. That is a category of error worth separating from fabrication, and
-\S\ref{sec:fabrication} does so.
+it. The real judge rejected exactly that. Nothing was invented and the reasoning
+engages the real facts throughout; the model reached a different legal conclusion
+on a genuinely arguable point, a category of error \S\ref{sec:fabrication}
+separates from fabrication.
 
 Two caveats attach. On Faraday the direction is correct but the reasoning is not
 trustworthy, for reasons given below. On Consultant Connect the direction is
@@ -197,8 +194,8 @@ merely informed of the answer but directed towards it.
 Auditing all 23 cached scenarios against a deliberately broad pattern
 (\texttt{analyze\_outcome\_leakage.py}) finds the disposition stated in eight, six
 of them merits cases. Bromcom's description contains ``the court found in favour
-of Bromcom on all three grounds''; Bechtel's records that the court ``found no
-breach''. That is not procedural context, it is the answer.
+of Bromcom on all three grounds''. That is not procedural context, it is the
+answer.
 
 \begin{table}[htbp]
 \centering
@@ -207,19 +204,17 @@ breach''. That is not procedural context, it is the answer.
 split by whether the scenario states the real disposition. The combined figure is
 the 13 of 14 quoted above; the split shows how much of it is prediction.}
 \label{tab:leakage}
-\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{3.4cm}|c|c|X|}
-\hline
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{3.4cm}ccX@{}}
+\toprule
 \textbf{Subset} & \textbf{Cases} & \textbf{Agreement} & \textbf{What it measures} \\
-\hline
+\midrule
 Disposition stated & 6 & 6 / 6 &
  The Court was told the outcome and instructed not to contradict it.
  Compliance, not prediction \\
-\hline
 Disposition absent & 8 & \textbf{7 / 8} &
  Reasoning from facts alone. The single miss is Turning Point \\
-\hline
 Combined & 14 & 13 / 14 & Should not be quoted without the split \\
-\hline
+\bottomrule
 \end{tabularx}
 \end{table}
 
@@ -228,11 +223,10 @@ answer and instructed to respect it should agree, and does. The leak-free 7 of 8
 the real result, and a stronger claim than the combined figure precisely because
 nothing was given away. The split is not a convenient one either: those eight cases
 divide four authority wins to four losses, so the majority-class floor is 4 of 8
-and 7 of 8 clears it by a real margin. The fix is a pass stripping disposition
-sentences at ingestion, straightforward for this corpus but not for arbitrary
-uploads where a user may legitimately supply a judgment. The leak was measured
-rather than removed, and every accuracy claim rests on the subset where it does
-not apply.
+and 7 of 8 clears it by a real margin. The leak was measured rather than removed
+--- stripping dispositions at ingestion is straightforward for this corpus but not
+for arbitrary uploads --- and every accuracy claim rests on the subset where it
+does not apply.
 
 \section{Baselines and ablations: does the architecture earn itself?}
 \label{sec:baselines}
@@ -252,18 +246,15 @@ the no-Court ablation. The imbalance matters: five of the six cases are ``CA
 lost'', so always guessing the majority class scores 5/6 with no reasoning
 whatsoever.}
 \label{tab:baselines}
-\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{4.3cm}|c|c|X|}
-\hline
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{4.3cm}ccX@{}}
+\toprule
 \textbf{System} & \textbf{Runs} & \textbf{Direction correct} & \textbf{What it establishes} \\
-\hline
+\midrule
 Majority-class heuristic & --- & 5 / 6 & The floor. No model call, no reasoning \\
-\hline
 Zero-shot single prompt & 5 per case & 6 / 6 & A naive prompt is not worse here \\
-\hline
 Full pipeline (V4) & 8 per case & 6 / 6 & Ties the naive prompt \\
-\hline
 No-Court ablation & 3 per case & --- & \textbf{0 of 18 runs resolved} \\
-\hline
+\bottomrule
 \end{tabularx}
 \end{table}
 
@@ -342,20 +333,16 @@ the text.}
 test has low power, so these are ``not distinguishable from noise at this sample
 size'', not ``no difference'' \cite{dror2018hitchhiker}.}
 \label{tab:ablation}
-\begin{tabular}{|l|c|c|c|c|}
-\hline
+\begin{tabular}{@{}lcccc@{}}
+\toprule
 \textbf{Case} & \textbf{V3} & \textbf{V4} & \textbf{V3 avg.\ rounds} & \textbf{Fisher $p$} \\
-\hline
+\midrule
 Lancashire Care & 0.875 & 1.000 & 2.75 & 1.000 \\
-\hline
 Faraday & 0.750 & 1.000 & 3.00 & 0.467 \\
-\hline
 Parkingeye & 0.875 & 1.000 & 1.50 & 1.000 \\
-\hline
 Alstom & 0.500 & 1.000 & 4.38 & 0.077 \\
-\hline
 Woods & 1.000 & 1.000 & 1.00 & 1.000 \\
-\hline
+\bottomrule
 \end{tabular}
 \end{table}
 
@@ -385,19 +372,18 @@ Figure~\ref{fig:failures}.
 \footnotesize
 \caption[Fabrication screens]{The three grounding screens, over 299 logs.}
 \label{tab:fabrication}
-\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{3.6cm}|c|X|}
-\hline
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{3.6cm}cX@{}}
+\toprule
 \textbf{Screen} & \textbf{Result} & \textbf{Reading} \\
-\hline
+\midrule
 Numeric grounding (Step 2B) & 9 flagged of 425 (2.1\%) &
- All nine re-read individually; \textbf{none is a Court-originated fabrication} \\
-\hline
+ All nine re-read individually; none is a Court-originated fabrication
+ \textbf{within the screened population}. One known miss sits outside it \\
 Legal citation, regime & 162 of 702 (23.1\%) wrong regime &
  PCR 2015 or the EU Directive cited in a Procurement Act 2023 world \\
-\hline
 Legal citation, s.12 content & 7 of 21 (33.3\%) misattributed &
  Subsection contents swapped, e.g.\ transparency assigned to s.12(1)(a) \\
-\hline
+\bottomrule
 \end{tabularx}
 \end{table}
 
@@ -415,6 +401,19 @@ detector fired on the discipline working as designed:
 numbers or formula are provided in the scenario.''
 \hfill --- Court agent, Alstom, round 2
 \end{quote}
+
+That clean result holds only inside the population the screen examines, and one
+case falls outside it. On Bromcom the Court opened ``this scenario is numeric'',
+invented a complete per-bidder dataset (``let's say the scores are as follows:
+Bidder 1: A=80, B=70, C=90\ldots''), and performed real arithmetic on twelve values
+that appear nowhere in the case. The screen reports nothing, on two independent
+grounds: the run classified itself \emph{numeric}, so it never entered the 425
+qualitative assessments, and the score-shaped regex matches ``80\%'' or ``scored
+80'' but not ``A=80'', so it would have extracted nothing even had the run been
+screened. Both are limits of the detector rather than of the Court prompt, and
+they bound the finding above as much as they qualify it: the honest claim is that
+no Court-originated fabrication survives \emph{this} screen on \emph{these} 425
+assessments, not that none occurred.
 
 The screen's real signal sits further upstream: the negotiating agents fabricate
 factual premises, and the Court adopts them. The clearest instance is Faraday,
@@ -438,8 +437,8 @@ dispute type, both fall back on the only script they have.
  \node[m,draw=f21green,fill=f21green!8] at (0,0)
  {\textbf{1. Numeric fabrication}\\[2pt]
  \scriptsize Inventing a sub-score or formula the case does not state.\\[3pt]
- \textbf{Status:} addressed. Step 1 gating; 0 of 9 flagged instances
- Court-originated.};
+ \textbf{Status:} addressed within the screened population;
+ one known miss outside it (Bromcom).};
  \node[m,draw=f21amber,fill=f21amber!10] at (4.05,0)
  {\textbf{2. Premise fabrication}\\[2pt]
  \scriptsize A negotiating agent inventing a fact about the dispute, which the
@@ -467,10 +466,9 @@ the Public Contracts Regulations 2015 or the EU Directive inside a system ground
 in the Procurement Act 2023; one names a ``Public Contracts Regulations 2020''
 that does not exist. Of the 21 citations specific enough to check against section
 12, 7 misattribute the subsection's contents. Both checks were verified against
-legislation.gov.uk rather than assumed. Figure~\ref{fig:citations} shows how the 702 divide.
-The remaining 519 citations are bucketed as not
-specific enough to check, rather than silently passed as correct, which is a
-deliberately conservative choice: it means the true error rate is bounded below
+legislation.gov.uk rather than assumed (Figure~\ref{fig:citations}). The remaining
+519 are bucketed as not specific enough to check rather than silently passed as
+correct, a deliberately conservative choice: the true error rate is bounded below
 by these figures, not estimated by them.
 
 \begin{figure}[htbp]
@@ -518,13 +516,11 @@ for building the layer that was scoped out.
 
 Two behavioural checks confirm the negotiation is an actual negotiation rather
 than two monologues in parallel. The authority's concession rate rises from 0.013
-in round one to 0.470 later: it never concedes on opening, and concedes roughly
-half the time once the exchange is underway. The bidder concedes far less, 0.000
-to 0.075, matching what a bidder concession amounts to: dropping the challenge
-entirely, a much larger move than offering extra transparency
-(Figure~\ref{fig:concession}).
+in round one to 0.470 later; the bidder concedes far less, 0.000 to 0.075,
+matching what a bidder concession amounts to: dropping the challenge entirely, a
+much larger move than offering extra transparency (Figure~\ref{fig:concession}).
 Consecutive same-role message similarity averages 0.097 over 426 pairs, so the
-repetition suppression appears to be working as intended.
+repetition suppression is working.
 
 \begin{figure}[htbp]
 \centering
@@ -583,14 +579,13 @@ $n=299$ per role, classified by a documented keyword heuristic. The heuristic is
 not a ground-truth label, and the large ``unclear'' fractions are reported rather
 than redistributed.}
 \label{tab:batna}
-\begin{tabular}{|l|c|c|c|c|}
-\hline
+\begin{tabular}{@{}lcccc@{}}
+\toprule
 \textbf{Role} & \textbf{Beats} & \textbf{Matches} & \textbf{Falls short} & \textbf{Unclear} \\
-\hline
+\midrule
 Contracting Authority & 71\% & 1\% & 2\% & 27\% \\
-\hline
 Aggrieved Bidder & 24\% & 0\% & 21\% & 56\% \\
-\hline
+\bottomrule
 \end{tabular}
 \end{table}
 
@@ -650,16 +645,17 @@ six.
 fixed per-role temperatures. Nothing here separates ``this architecture'' from
 ``this model under these particular prompts''.
 
-\textbf{Corpus bias.} Litigated cases are already a filtered minority of all
-disputes, and this corpus is filtered further toward cases documented well enough
-to verify. The merits group splits 6 authority wins to 8 losses, far more balanced
-than the original five, but that balance was achieved by deliberately hunting for
-authority-win cases, which is itself a selection choice.
+\textbf{Corpus bias.} Litigated cases are already a filtered minority, and this
+corpus is filtered further toward cases documented well enough to verify. The
+merits group splits 6 authority wins to 8 losses, but that balance was achieved by
+deliberately hunting for authority-win cases, which is itself a selection
+choice.
 
 \textbf{Detector limits.} The numeric screen is string-presence matching against
-the scenario description, not a fact-checker; the Faraday premise-fabrication
-count comes from a phrase search and is a lower bound; the BATNA classifier is a
-keyword heuristic. Each is stated plainly in its own module.
+the scenario description, not a fact-checker, and is known to have missed one real
+Court fabrication on both of its axes (\S\ref{sec:fabrication}); the Faraday
+premise-fabrication count comes from a phrase search and is a lower bound; the
+BATNA classifier is a keyword heuristic. Each is stated plainly in its own module.
 
 \textbf{Structural mismatch.} Nine of 23 cases were decided at an interim stage
 this system cannot model. Any apparent correspondence on those cases is
@@ -686,10 +682,10 @@ supply.
 The third is that the most useful bugs came from documents I had not chosen. A
 board demonstration ended with a Fusion21 employee handing me an award letter and
 a scoring table and asking what the system made of them. It found a genuine
-arithmetic defect: the Court agent re-applying an already-applied percentage
-weighting to a sub-score, turning a correct evaluation into a false
-manifest-error finding that three increasingly explicit prompt revisions failed
-to fix. The model would state the correct approach in words, then execute the
-wrong arithmetic in the same response. Those revisions were reverted rather than
-shipped, and the limitation is recorded here as open. Choosing my own test inputs
-had been quietly selecting for the failures I already knew about.
+arithmetic defect: the Court re-applying an already-applied percentage weighting
+to a sub-score, turning a correct evaluation into a false manifest-error finding
+that three increasingly explicit prompt revisions failed to fix. The model would
+state the correct approach in words, then execute the wrong arithmetic in the same
+response. Those revisions were reverted rather than shipped, and the limitation is
+recorded as open. Choosing my own test inputs had been selecting for the failures
+I already knew about.

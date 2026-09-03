@@ -13,28 +13,24 @@ from the one proposed.
 \caption[Objectives against evidence]{Objectives against the evidence in this
 report.}
 \label{tab:objectives}
-\begin{tabularx}{\textwidth}{|c|>{\raggedright\arraybackslash}p{5.0cm}|X|>{\raggedright\arraybackslash}p{1.7cm}|}
-\hline
+\begin{tabularx}{\textwidth}{@{}c>{\raggedright\arraybackslash}p{5.0cm}X>{\raggedright\arraybackslash}p{1.7cm}@{}}
+\toprule
 & \textbf{Objective} & \textbf{Evidence} & \textbf{Status} \\
-\hline
+\midrule
 O1 & Three agents + summariser & \S\ref{sec:grounding}, Table~\ref{tab:agent-config};
  interests traced to Doc 1 categories & Met \\
-\hline
 O2 & Deterministic orchestration, validated output & \S\ref{sec:orchestration};
  structural compliance 0.9986 over 2{,}865 responses & Met \\
-\hline
 O3 & Conditionally verifying court agent & \S\ref{sec:court-design};
- 0 of 9 flagged instances Court-originated & Met \\
-\hline
+ 0 of 9 flagged instances Court-originated & Met, with a
+ documented boundary (\S\ref{sec:fabrication}) \\
 O4 & Real documents to structured scenarios & \S\ref{sec:extraction};
  23 cases ingested through the user upload path & Met \\
-\hline
 O5 & Verified corpus, baselines, ablations & \S\ref{sec:baselines}--\S\ref{sec:ablation};
  7 of 8 leak-free merits dispositions matched & Met \\
-\hline
 O6 & Something the client can use & \S\ref{sec:risk-screen};
  rule-based screen, not the simulator & Met, reframed \\
-\hline
+\bottomrule
 \end{tabularx}
 \end{table}
 
@@ -61,10 +57,12 @@ the boundary is now mapped rather than assumed. Gating exact computation on the
 presence of both a formula and every input it needs, and banning unstated numbers
 even when hedged as illustrative, held across 425 qualitative assessments with no
 Court-originated fabrication among the nine flagged. It does not hold universally:
-the Court invented an illustrative dataset on a case it had misclassified as
-numeric, and the arithmetic defect on the client's own scoring table resisted
-three prompt revisions. The discipline constrains what the adjudicator computes,
-not what premise it computes on.
+on Bromcom the Court invented an illustrative dataset on a case it had
+misclassified as numeric, which the screen missed on both its axes
+(\S\ref{sec:fabrication}), and the arithmetic defect on the client's own scoring
+table resisted three prompt revisions. The discipline constrains what the
+adjudicator computes, not what premise it computes on --- and the screen bounds
+what can be claimed about either.
 
 \textbf{RQ4, on evaluating in the absence of ground truth.} A stack of partial
 checks with explicit sample sizes, and a refusal to collapse them into one score.
