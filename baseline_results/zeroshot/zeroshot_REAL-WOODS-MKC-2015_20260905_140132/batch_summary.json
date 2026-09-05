@@ -1,0 +1,194 @@
+{
+  "baseline": "zeroshot",
+  "case_slug": "woods-milton-keynes",
+  "scenario_id": "REAL-WOODS-MKC-2015",
+  "scenario_title": "Woods Building Services v Milton Keynes Council",
+  "complete": true,
+  "n_runs_requested": 5,
+  "n_runs_successful": 5,
+  "n_runs_failed": 0,
+  "timestamp": "20260905_140132",
+  "metrics": {
+    "manifest_error_detection_rate": 0.8,
+    "outcome_distribution": {
+      "re-evaluation": 5
+    },
+    "average_duration_seconds": 2.3
+  },
+  "individual_runs": [
+    {
+      "run_number": 1,
+      "process_followed": true,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The challenger has identified discrepancies in the scoring process, specifically alleging manifest error in the evaluation of individual quality criteria. The council's own methodology was applied to the disputed criteria, revealing a discrepancy of 46 marks between the two bidders. This suggests that the evaluation process may not have been conducted fairly or transparently.",
+      "applicable_provisions": [
+        "Section 12(2) of the Procurement Act 2023: Transparency",
+        "Section 12(4): Integrity"
+      ],
+      "duration_seconds": 2.3,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 2,
+      "process_followed": true,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The contracting authority's process appears to have been compliant with the Procurement Act 2023, but a manifest error has been found in the scoring of individual quality criteria. The challenger's case that applying the council's own published methodology would result in a downward correction of 40 marks for EAS and an upward correction of 6 marks for Woods suggests that the evaluation was not carried out consistently with the published criteria.",
+      "applicable_provisions": [
+        "section 12(2) - value for money",
+        "section 12(3) - public benefit"
+      ],
+      "duration_seconds": 2.4,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 3,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The Contracting Authority's process appears to have been compliant with the Procurement Act 2023. The evaluation formula weights price at 60% and quality at 40%, which is transparent and in line with the published methodology. However, Woods Building Services has alleged a manifest error in the scoring of individual quality criteria, disputing several individual scores awarded to both bidders across the 24 published criteria.",
+      "applicable_provisions": [
+        "section 12: value for money, public benefit, transparency, integrity"
+      ],
+      "duration_seconds": 2.3,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 4,
+      "process_followed": true,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The challenger has provided a detailed analysis of the scoring methodology used by the Contracting Authority. The discrepancy in scores between the two bidders across several criteria suggests that there may have been an error in the evaluation process. Furthermore, the fact that the challenger has applied the Council's own published methodology to demonstrate the required corrections supports their claim.",
+      "applicable_provisions": [
+        "section 12: value for money, public benefit, transparency, integrity",
+        "section 22: equal treatment"
+      ],
+      "duration_seconds": 2.2,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 5,
+      "process_followed": true,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The challenger has provided a detailed analysis of the scoring methodology used by the Contracting Authority, highlighting discrepancies in the marks awarded to both bidders across several criteria. The challenger's calculations demonstrate that applying the Council's own published methodology would result in a significant downward correction for EAS and an upward correction for Woods. This suggests that the Contracting Authority's evaluation process may have contained manifest errors.",
+      "applicable_provisions": [
+        "section 12(2) - value for money",
+        "section 12(3) - public benefit"
+      ],
+      "duration_seconds": 2.3,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    }
+  ]
+}

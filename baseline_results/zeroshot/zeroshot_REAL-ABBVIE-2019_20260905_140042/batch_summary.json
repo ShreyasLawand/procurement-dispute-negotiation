@@ -1,0 +1,194 @@
+{
+  "baseline": "zeroshot",
+  "case_slug": "abbvie-nhs-england",
+  "scenario_id": "REAL-ABBVIE-2019",
+  "scenario_title": "AbbVie v NHS England",
+  "complete": true,
+  "n_runs_requested": 5,
+  "n_runs_successful": 5,
+  "n_runs_failed": 0,
+  "timestamp": "20260905_140042",
+  "metrics": {
+    "manifest_error_detection_rate": 1.0,
+    "outcome_distribution": {
+      "re-evaluation": 5
+    },
+    "average_duration_seconds": 2.4
+  },
+  "individual_runs": [
+    {
+      "run_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The Dummy Price Mechanism (DPM) used by NHS England to evaluate bids appears flawed. The DPM imputes a notional 'credited' price to bidders who do not supply medication for every HCV genotype or treatment category, which can lead to arbitrary and unpredictable outcomes. This mechanism may favour certain bidders' product portfolios over others, potentially breaching the equal treatment principle.",
+      "applicable_provisions": [
+        "section 12: value for money, public benefit, transparency, integrity"
+      ],
+      "duration_seconds": 2.5,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 2,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The Dummy Price Mechanism (DPM) used by NHS England is questionable as it imputes a notional 'credited' price to bidders who do not supply medication for every HCV genotype or treatment category. This mechanism may lead to an unfair advantage to certain bidders with more comprehensive product portfolios, potentially breaching the equal treatment principle.",
+      "applicable_provisions": [
+        "section 12(2) - value for money",
+        "section 12(3) - public benefit"
+      ],
+      "duration_seconds": 2.2,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 3,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The Dummy Price Mechanism (DPM) used in the evaluation process appears to be flawed. By imputing a notional 'credited' price to bidders who did not supply medication for every HCV genotype or treatment category, the DPM may have unfairly favoured certain bidders' product portfolios over others. This could be seen as a breach of the equal treatment principle and potentially undermines the value for money and public benefit principles outlined in section 12(2)(a) and (b) of the Procurement Act 2023.",
+      "applicable_provisions": [
+        "section 12(2)(a) - value for money",
+        "section 12(2)(b) - public benefit"
+      ],
+      "duration_seconds": 2.7,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 4,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The Dummy Price Mechanism (DPM) used by NHS England to evaluate bids is inherently flawed as it imputes a notional 'credited' price to bidders who do not supply medication for every HCV genotype or treatment category. This mechanism can lead to arbitrary and incomprehensible comparisons between bids, potentially favouring certain product portfolios over others in breach of the equal treatment principle.",
+      "applicable_provisions": [
+        "section 12: value for money, public benefit, transparency, integrity",
+        "section 15: equal treatment principle"
+      ],
+      "duration_seconds": 2.4,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 5,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The Dummy Price Mechanism (DPM) used in the procurement process appears to be flawed. The mechanism's reliance on imputed prices, which are based on the lowest price offered by other bidders, creates a situation where certain bidders' product portfolios may be unfairly favoured over others. This could lead to unequal treatment of bidders and undermine the principles of value for money and public benefit.",
+      "applicable_provisions": [
+        "section 12(2) - value for money",
+        "section 12(3) - public benefit"
+      ],
+      "duration_seconds": 2.4,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    }
+  ]
+}

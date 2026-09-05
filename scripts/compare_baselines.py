@@ -37,13 +37,19 @@ REAL_DISPOSITIONS = {
 # Most recent full-pipeline (active/V4 prompt, Court included) batch per case — see
 # CLAUDE.md's "BAILII expansion" / "Fix Parkingeye scenario extraction gap" sections for
 # how these specific batches were chosen and verified.
+#
+# UPDATED 5 Sep 2026 (Phase 4, RESULTS-FOR-THESIS.md): abbvie/bromcom/faraday/woods were
+# pointing at batches run against scenario descriptions that stated the real disposition
+# outright (see Phase 3's outcome-leakage strip). Repointed to the leak-free re-runs from
+# the same phase. lancashire-care and braceurself-nhs-england were never leaked — their
+# original batches are untouched and still valid.
 FULL_PIPELINE_BATCHES = {
-    "abbvie-nhs-england": "batch_results/batch_20260816_162426",
+    "abbvie-nhs-england": "batch_results/batch_20260905_133532",
     "braceurself-nhs-england": "batch_results/batch_20260816_165512",
-    "bromcom-united-learning-trust": "batch_results/batch_20260816_165719",
+    "bromcom-united-learning-trust": "batch_results/batch_20260905_132616",
     "lancashire-care": "batch_results/batch_20260815_214210",
-    "faraday-west-berkshire": "batch_results/batch_20260815_215108",
-    "woods-milton-keynes": "batch_results/batch_20260815_201219",
+    "faraday-west-berkshire": "batch_results/batch_20260905_131106",
+    "woods-milton-keynes": "batch_results/batch_20260905_131917",
 }
 
 
@@ -69,10 +75,21 @@ def _load_summary(path: str) -> dict | None:
 _REMEDY_ACTIONS = {"re-evaluation", "damages"}
 
 
+_DEADLOCK = "deadlock - max rounds reached, escalate to formal proceedings"
+
+
 def _full_pipeline_violation_rate(summary: dict) -> float | None:
-    """Fraction of successful runs whose outcome was a substantive remedy
-    (re-evaluation/damages) rather than no-remedy/continue-negotiation."""
-    runs = [r for r in summary["individual_runs"] if r["error"] is None]
+    """Fraction of RESOLVED runs whose outcome was a substantive remedy
+    (re-evaluation/damages) rather than no-remedy. Deadlock is excluded from both the
+    numerator and denominator (fixed 5 Sep 2026, Phase 4) - it is neither a violation
+    finding nor a no-violation finding, it is the negotiation not resolving at all. The
+    original version counted deadlocks in the denominator only, which silently pulled the
+    rate toward "no violation" every time a case failed to resolve. This never showed up
+    before because every batch this table cited pre-Phase-4 had 0 deadlocks (100%
+    resolution, itself likely partly an artifact of the outcome-leakage this project's
+    Phase 3 fixed - see RESULTS-FOR-THESIS.md); it surfaced immediately once genuinely
+    leak-free runs (which do deadlock sometimes) were substituted in."""
+    runs = [r for r in summary["individual_runs"] if r["error"] is None and r["outcome"] != _DEADLOCK]
     if not runs:
         return None
     return round(sum(1 for r in runs if r["outcome"] in _REMEDY_ACTIONS) / len(runs), 3)

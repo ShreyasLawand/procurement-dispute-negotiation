@@ -1,0 +1,195 @@
+{
+  "baseline": "zeroshot",
+  "case_slug": "faraday-west-berkshire",
+  "scenario_id": "REAL-FARADAY-2018",
+  "scenario_title": "Faraday Development Ltd v West Berkshire Council",
+  "complete": true,
+  "n_runs_requested": 5,
+  "n_runs_successful": 5,
+  "n_runs_failed": 0,
+  "timestamp": "20260905_140115",
+  "metrics": {
+    "manifest_error_detection_rate": 1.0,
+    "outcome_distribution": {
+      "re-evaluation": 5
+    },
+    "average_duration_seconds": 2.4
+  },
+  "individual_runs": [
+    {
+      "run_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The Contracting Authority failed to follow the correct process by entering into a conditional land agreement without competitive tendering. This arrangement may be in substance a public works contract, which should have been subject to competitive procurement under the Public Contracts Regulations. Furthermore, the lack of transparency and potential for conflict of interest raises concerns about value for money and public benefit.",
+      "applicable_provisions": [
+        "Public Contracts Regulations",
+        "section 12 of the Procurement Act 2023: value for money, public benefit, transparency, integrity"
+      ],
+      "duration_seconds": 2.4,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 2,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The development agreement between West Berkshire Council and St Modwen Developments Ltd appears to be a public works contract with a value exceeding \u00a3125 million. As such, it should have been competitively procured under the Public Contracts Regulations. The fact that it was structured as a conditional land agreement does not change its essential nature. This is a clear case of process avoidance, which is prohibited by the Procurement Act 2023.",
+      "applicable_provisions": [
+        "Public Contracts Regulations",
+        "Procurement Act 2023, Section 12"
+      ],
+      "duration_seconds": 2.4,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 3,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The development agreement between West Berkshire Council and St Modwen Developments Ltd appears to be a public works contract that should have been competitively procured. The fact that it was structured as a conditional land agreement does not change its substance. As such, the Contracting Authority's process did not comply with the Public Contracts Regulations and the Procurement Act 2023 section 12.",
+      "applicable_provisions": [
+        "Public Contracts Regulations",
+        "Procurement Act 2023 section 12: value for money, public benefit, transparency, integrity"
+      ],
+      "duration_seconds": 2.4,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 4,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The development agreement between West Berkshire Council and St Modwen Developments Ltd appears to be a public works contract with an estimated value of \u00a3125 million. The Public Contracts Regulations require that contracts above certain thresholds are competitively procured. It is likely that the Contracting Authority failed to follow the correct process, as they did not conduct a competitive procurement for this significant contract.",
+      "applicable_provisions": [
+        "Public Contracts Regulations",
+        "Procurement Act 2023, section 12: value for money, public benefit, transparency, integrity"
+      ],
+      "duration_seconds": 2.3,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 5,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The development agreement between West Berkshire Council and St Modwen Developments Ltd appears to be a public works contract with a value exceeding \u00a3125 million. The Public Contracts Regulations require that such contracts be competitively procured through an open or restricted procedure. By entering into the conditional land agreement without following these regulations, West Berkshire Council failed to comply with the Procurement Act 2023 and the applicable EU Directives.",
+      "applicable_provisions": [
+        "Public Contracts Regulations",
+        "Procurement Act 2023, section 12: value for money, public benefit, transparency, integrity"
+      ],
+      "duration_seconds": 2.4,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    }
+  ]
+}

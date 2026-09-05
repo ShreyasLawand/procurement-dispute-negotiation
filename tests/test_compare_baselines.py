@@ -58,6 +58,29 @@ def test_full_pipeline_ignores_failed_runs():
     assert _full_pipeline_violation_rate(summary) == 1.0  # 1/1 successful, not 1/2
 
 
+def test_full_pipeline_excludes_deadlock_from_both_numerator_and_denominator():
+    """Regression test for a real bug caught 5 Sep 2026 (Phase 4, RESULTS-FOR-THESIS.md):
+    the original version counted deadlock runs in the denominator only, silently pulling
+    the rate toward "no violation" every time a case failed to resolve — deadlock means
+    unresolved, not "no violation found". Never showed up before Phase 4 because every
+    pre-existing cited batch had 0 deadlocks; surfaced immediately on leak-free re-runs,
+    which do deadlock sometimes."""
+    summary = _full_pipeline_summary(
+        ("re-evaluation", True, None),
+        ("deadlock - max rounds reached, escalate to formal proceedings", False, None),
+        ("deadlock - max rounds reached, escalate to formal proceedings", False, None),
+    )
+    # 1 resolved run, and it's a remedy -> rate must be 1.0, not 1/3
+    assert _full_pipeline_violation_rate(summary) == 1.0
+
+
+def test_full_pipeline_all_deadlock_returns_none():
+    summary = _full_pipeline_summary(
+        ("deadlock - max rounds reached, escalate to formal proceedings", False, None),
+    )
+    assert _full_pipeline_violation_rate(summary) is None
+
+
 def test_zeroshot_counts_remedy_action_even_without_manifest_error_flag():
     summary = {
         "individual_runs": [

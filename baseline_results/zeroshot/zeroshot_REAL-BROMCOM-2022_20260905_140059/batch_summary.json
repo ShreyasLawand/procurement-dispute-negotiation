@@ -1,0 +1,198 @@
+{
+  "baseline": "zeroshot",
+  "case_slug": "bromcom-united-learning-trust",
+  "scenario_id": "REAL-BROMCOM-2022",
+  "scenario_title": "Bromcom Computers plc v United Learning Trust",
+  "complete": true,
+  "n_runs_requested": 5,
+  "n_runs_successful": 5,
+  "n_runs_failed": 0,
+  "timestamp": "20260905_140059",
+  "metrics": {
+    "manifest_error_detection_rate": 1.0,
+    "outcome_distribution": {
+      "re-evaluation": 5
+    },
+    "average_duration_seconds": 2.4
+  },
+  "individual_runs": [
+    {
+      "run_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The Contracting Authority's process was non-compliant with the Procurement Act 2023. Firstly, averaging individual scores without moderation is a manifest error as it does not allow for the evaluation of each bid on its own merit. Secondly, applying a one-sided data-transfer cost adjustment to only Bromcom's bid introduces bias and undermines transparency. Lastly, permitting Arbor's rebate linked to a separate contract raises concerns about integrity.",
+      "applicable_provisions": [
+        "section 12(2): value for money",
+        "section 12(3): public benefit"
+      ],
+      "duration_seconds": 2.5,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 2,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The Contracting Authority's process failed to comply with the Procurement Act 2023. The unlawful averaging of individual scores without moderation is a clear breach of section 12(2) and (3), as it may have led to an inaccurate assessment of value for money and public benefit. Additionally, applying a one-sided data-transfer cost adjustment only to Bromcom's bid raises concerns about transparency and fairness.",
+      "applicable_provisions": [
+        "section 12(2): value for money",
+        "section 12(3): public benefit",
+        "section 15: transparency"
+      ],
+      "duration_seconds": 2.4,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 3,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The Contracting Authority's process was non-compliant with the Procurement Act 2023. The unlawful averaging of individual scores without moderation is a clear breach of the rules, as it does not allow for a fair and transparent evaluation of bids. Additionally, applying a one-sided data-transfer cost adjustment only to Bromcom's bid introduces bias and undermines the integrity of the procurement process.",
+      "applicable_provisions": [
+        "section 12: value for money",
+        "section 12: transparency"
+      ],
+      "duration_seconds": 2.2,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 4,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The Contracting Authority's process failed to comply with the Procurement Act 2023. Firstly, averaging individual scores without moderation is not a compliant method of evaluation (section 12(2)). Secondly, applying a one-sided data-transfer cost adjustment only to Bromcom's bid raises concerns about fairness and transparency (section 15). Lastly, permitting Arbor's rebate linked to a separate contract may have created an unfair advantage. These issues indicate a manifest error in the evaluation process.",
+      "applicable_provisions": [
+        "section 12(2): value for money",
+        "section 12(3): public benefit",
+        "section 15: transparency"
+      ],
+      "duration_seconds": 2.6,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    },
+    {
+      "run_number": 5,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "recommended_action": "re-evaluation",
+      "reasoning": "The Contracting Authority's process failed to comply with the Procurement Act 2023. Firstly, averaging individual scores without moderation is not a compliant method of evaluation (section 12(2)). Secondly, applying a one-sided data-transfer cost adjustment only to Bromcom's bid raises concerns about fairness and transparency (section 15). Lastly, permitting Arbor's rebate linked to a separate contract may have created an unfair advantage.",
+      "applicable_provisions": [
+        "section 12(2): value for money",
+        "section 12(3): public benefit",
+        "section 15: transparency"
+      ],
+      "duration_seconds": 2.4,
+      "compliance": {
+        "structured_responses": 1,
+        "clean_responses": 1,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "clean_responses": {
+            "ZeroShotAgent.assess": 1
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": null
+    }
+  ]
+}

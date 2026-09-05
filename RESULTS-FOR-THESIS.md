@@ -200,3 +200,83 @@ higher one.
 
 **Test suite:** 103/103 passed (`pytest tests/`) before this phase's commit — no code changed, scenario
 cache edits only, run as a sanity check regardless.
+
+---
+
+## Phase 4 — rebuild the baselines comparison on the leak-free set
+
+**Files changed:** `scripts/compare_baselines.py` (repointed `FULL_PIPELINE_BATCHES`, fixed a
+deadlock-handling bug — see below), `tests/test_compare_baselines.py` (2 new regression tests). New
+data: 4 zero-shot re-runs under `baseline_results/zeroshot/`.
+
+### Scope: exactly the original 6-case comparison, not expanded
+
+`compare_baselines.py`'s `REAL_DISPOSITIONS` was left as the original 6 cases (abbvie, braceurself,
+bromcom, lancashire, faraday, woods) — per instruction, rebuilt on leak-free data, not widened to the
+other 8 leak-free cases in the corpus. Of these 6, 4 (`abbvie`, `bromcom`, `faraday`, `woods`) were
+leaked and needed refreshing; `lancashire-care` and `braceurself-nhs-england` were never leaked and are
+untouched.
+
+### A second contamination source, caught before trusting the rebuild: zero-shot
+
+The full-pipeline batches were the obvious thing to refresh, but `run_baseline_zeroshot.py` loads from
+the exact same `batch_results/_scenarios/<slug>.json` cache Phase 3 edited — and `zeroshot_prompt.py`
+has **no** "don't contradict a stated outcome" guard at all, unlike `court_prompt.py`. That means the old
+zero-shot baseline was, if anything, more directly exposed to the leak than the Court agent: it would
+have read the disposition sentence as a plain fact and could parrot it straight back. Checked directly
+(not assumed): all 6 existing zero-shot batches under `baseline_results/zeroshot/` were dated 16 Aug
+2026 — before Phase 3 existed, so all 4 for the leaked cases are contaminated the same way the old
+full-pipeline batches were. Re-ran zero-shot for `abbvie`, `bromcom`, `faraday`, `woods` at n=5 (matching
+the existing convention); `lancashire-care` and `braceurself-nhs-england`'s existing n=5 zero-shot runs
+were never leaked and are reused as-is, per the "reuse where n is already adequate" instruction.
+
+### A third issue, exposed rather than caused by the leak-free re-runs: deadlock miscounted as "no violation"
+
+`_full_pipeline_violation_rate()` computed `remedy runs / all successful runs`. Every batch this table
+had ever cited before Phase 4 had **zero deadlocks** — 100% resolution, consistent with the
+`court_prompt.py` GROUNDING instruction making resolution easier when the Court is told not to
+contradict a stated outcome. Once genuinely leak-free negotiations (which do deadlock sometimes) were
+substituted in, this silently pulled the rate toward "no violation" every time a case failed to resolve
+— `faraday-west-berkshire`'s first (uncorrected) read was 38% ("WRONG") purely because 3 of 8 runs
+deadlocked, not because the runs that did resolve disagreed with the real disposition (they were 3
+remedy / 2 no-remedy among the 5 that resolved — 60% once deadlocks are excluded from the denominator
+entirely, matching `analyze_outcome_leakage.py`'s own convention). Fixed in
+`_full_pipeline_violation_rate()` (deadlock excluded from both numerator and denominator, returns `None`
+if every run deadlocked) and locked in with 2 new regression tests. `_zeroshot_violation_rate()` needed
+no equivalent fix — a single zero-shot call has no rounds and cannot itself deadlock.
+
+### The new table — old vs new
+
+| Case | Real | Old (leaked) heuristic/full/zero-shot | New (leak-free) heuristic/full/zero-shot |
+|---|---|---|---|
+| abbvie-nhs-england | clean | WRONG / correct / correct | WRONG / **WRONG (62%)** / **WRONG (100%)** |
+| braceurself-nhs-england | VIOL | correct / correct / correct | correct / correct / correct (unchanged, never leaked) |
+| bromcom-united-learning-trust | VIOL | correct / correct / correct | correct / correct / correct |
+| lancashire-care | VIOL | correct / correct / correct | correct / correct / correct (unchanged, never leaked) |
+| faraday-west-berkshire | VIOL | correct / correct / correct | correct / correct (60%, post-fix) / correct |
+| woods-milton-keynes | VIOL | correct / correct / correct | correct / correct (71%, post-fix) / correct |
+
+**Old headline (CLAUDE.md, `evaluation-baselines.md`): "at n=6, the full pipeline and the naive zero-shot
+baseline tie exactly (6/6 direction-correct each); the zero-reasoning heuristic gets 5/6."**
+
+**New headline: all three methods now tie at 5/6** — heuristic 5/6, full pipeline 5/6 (down from 6/6),
+zero-shot 5/6 (down from 6/6). **All three miss the identical case, AbbVie, and only AbbVie.** This is a
+genuine, structural change to the "does the multi-agent architecture earn its complexity" answer: the
+old story was "the multi-agent pipeline ties a naive single LLM call, both clearly beat a zero-reasoning
+majority-class guess." The honest, leak-free story is that on this 6-case set, the multi-agent pipeline
+no longer demonstrably beats even the zero-reasoning heuristic on raw direction-accuracy — all three
+converge on the same single miss. This does not undermine the existing, separately-grounded "why
+multi-agent" argument in `evaluation-baselines.md` §8 (the no-Court ablation's 0/18 resolution rate is
+untouched by any of this — that finding has nothing to do with outcome leakage), but the accuracy-tie
+claim specifically needs restating.
+
+**n=6 still has essentially no statistical power — read the pattern (all three converge on AbbVie
+specifically), not the percentage.**
+
+### Where this feeds the thesis
+
+`evaluation-baselines.md`'s headline claim and its §8 argument structure; the RQ3/RQ-does-complexity-earn-
+its-keep answer in Chapter 4; any table quoting the old "6/6 tie" figure needs the new "5/6, all three
+converge on AbbVie" figure instead.
+
+**Test suite:** 105/105 passed (`pytest tests/`), including 2 new regression tests for the deadlock fix.
