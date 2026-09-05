@@ -382,3 +382,122 @@ hand-computed number**, and every individual case's vote count (faraday 5/7, woo
 optima 8/8, abbvie 5/8, bechtel 3/5) matches the hand isolation exactly.
 
 **Test suite:** 108/108 passed (`pytest tests/`), including the 3 new tests.
+
+---
+
+## Full corpus refresh (5 Sep 2026, final pass) — every `analyze_*.py` re-run against the complete corpus
+
+New logs were added by Phases 3-5 (6 leak-free re-runs, 4 zero-shot re-runs, 2 Alstom n=30 batches).
+Every script re-run once more; every figure below is fresh, not carried forward. Corpus size at this
+point: **406 negotiation logs** (up from 299 at Phase 1's start).
+
+### The one figure that needed real work before trusting it: fabrication count
+
+The corpus refresh alone moved the fabrication screen's raw numbers a lot — screened population
+460→**784**, raw suspects 19→**45** — almost entirely because the 227 rounds in the two new Alstom n=30
+batches (already screened and reported in Phase 5) and the 6 Phase-3 leak-free re-run batches got folded
+into the same corpus-wide scan. **9 of the 45 raw suspects had never been individually read before this
+final pass** (they come from the Phase 3 leak-free re-runs of faraday/woods/bechtel, which were re-run
+for outcome-leakage reasons and never separately fabrication-screened). Read all 9 against the same
+Court-originated-vs-upstream discipline as every other phase:
+
+- **1 confirmed new Court-originated fabrication:** `batch_results/batch_20260905_131917/run_07.json`
+  round 2 (Woods, leak-free re-run) — *"Assuming the original scores for Q4.3 were EAS = 8/10 and
+  Woods = 9/10"* — invents a specific sub-criterion ("Q4.3") and concrete scores for it that appear
+  nowhere in the real record (which only ever states the aggregate ±40/±6 mark correction, never a
+  per-criterion breakdown). A 6th Woods instance, distinct from the 5 already found in Phase 1.
+- **1 screening-tool false positive, not fabrication** — worth documenting so it isn't miscounted either
+  way: the same run's round 1 flagged `'0.4'`/`'0.6'` as ungrounded. These are the real, stated 60%/40%
+  price/quality weights, just written by the Court as decimals rather than percentages — the scenario
+  text contains "60%" and "40%" as literal strings, so `_number_grounded()`'s exact-substring check
+  doesn't recognise "0.6" as the same fact. Not a fix made in this pass (out of scope, flagged like
+  Phase 3's other known gaps) — but material to the exact count, so recorded rather than silently
+  dropped from either side of the ledger.
+- **7 upstream**, all following the pattern already established across every prior phase: numbers
+  explicitly attributed to a CA/Bidder dialogue claim, or symbolic algebra where the Court explicitly
+  states it lacks concrete inputs and declines to invent them.
+
+**Corpus-wide confirmed Court-originated fabrication count, final: 12** (up from Phase 1's 9): 1 Bromcom,
+1 Parkingeye, 4 Alstom (2 original + 2 from the n=30 ablation bump), **6 Woods** (5 original + 1 from
+this pass). Denominator 784 screened, 45 raw suspects, 12 confirmed / 32 upstream / 1 screening
+false-positive.
+
+### A separate, more serious finding, caught while reading that same round — not caught by any existing screening tool
+
+`batch_results/batch_20260905_131917/run_07.json` round 2's reasoning contains this sentence: *"the
+scenario description itself states what a court or tribunal actually decided in this dispute (the court
+found no error and dismissed the challenge)."* **Checked directly: that statement does not appear
+anywhere in the actual scenario description the Court was given, nor anywhere in `real_cases.py`'s
+source text** (`grep` returns zero matches in both files). This is not a number-fabrication the existing
+screen could ever catch (it only checks score-shaped numbers against the scenario text) — it is the
+Court **fabricating what its own input contained**, then citing that fabrication as grounds for not
+contradicting a "stated" outcome. It is also **factually backwards**: the real Woods disposition is that
+Woods *won* and the court found manifest error, not that the challenge was dismissed. Whether this
+reflects the underlying model's own pretraining "knowledge" of this real, published EWHC judgment
+leaking through independent of what the scenario actually says is a real possibility worth naming, not
+confirmed here (this is one instance, found by reading, not by a systematic screen — see the
+verify-before-submitting checklist below). If so, it is a distinct vulnerability from anything Phase 3's
+outcome-leakage strip addressed: that fix controls what the *scenario text* says; it cannot control what
+the model already "knows" about a real case from training.
+
+### The other six scripts
+
+| Script | Prior figure (RESULTS-FOR-THESIS.md, Phase 1) | Final (406 logs) | Moved? |
+|---|---|---|---|
+| `check_zeroshot_fabrication.py` | 0/30 ungrounded | **0/50 ungrounded** | No — n grew (4 new zero-shot batches), rate unchanged |
+| `analyze_citation_validity.py` | 702 citations @ 299 logs; wrong-regime 23.1%; s12 error 33.3% (7/21) | **1070 citations @ 406 logs; wrong-regime 15.7% (168); s12 error 30.3% (10/33)** | Yes, both rates — consistent with corpus growth, not a new pattern |
+| `analyze_batna_outcomes.py` | CA beats 71%, falls_short 2% (5/299); Bidder beats 24%, falls_short 21% | **CA beats 65%, falls_short 2% (7/406); Bidder beats 22%, falls_short 23%** | Modest movement, same qualitative asymmetry |
+| `analyze_negotiation_dynamics.py` | CA concession 0.013→0.470; Bidder 0.0→0.075; similarity 0.097/426 pairs; 0 retractions | **CA concession 0.0123→0.465; Bidder 0.0→0.0701; similarity 0.1188/942 pairs; 0 retractions** | Modest movement, same pattern |
+| `analyze_summary_readability.py` | FRE mean 24.7/median 25.9; FKG mean 14.7/median 14.4 | **FRE mean 23.2/median 23.9 (worst case now -22.4); FKG mean 14.9/median 14.6** | Modest movement, same "very difficult, graduate" band |
+| `compare_baselines.py` | 5/6, 5/6, 5/6 (Phase 4) | **5/6, 5/6, 5/6 — identical** | No — hardcoded 6-case set, no new inputs since Phase 4 |
+| `analyze_ablation_significance.py` | Alstom p=3.96e-5 (Phase 5) | **Identical — no new inputs since Phase 5** | No |
+
+None of this movement is unexpected — every script here (other than the fabrication screen) is
+independent of the corpus's fabrication/leakage content and moves only because the denominator (logs
+scanned) grew from 299 to 406 across Phases 3-5. Flagged per instruction regardless, since "moved,
+even slightly" was the bar, not "moved unexpectedly."
+
+**Test suite, final: 108/108 passed** (`pytest tests/`).
+
+---
+
+## Verify before submitting
+
+Specific, honest items — not a reassurance list. A human should personally check each of these before
+any number in this document goes into the thesis:
+
+1. **The Woods "fabricated scenario-attribution" finding is a single instance, found by reading one
+   transcript, not a systematic corpus-wide screen.** No existing script checks for a Court claim about
+   what its own input contains being false. Before citing this as evidence of parametric-knowledge
+   leakage (the model "knowing" a real case's outcome independent of the prompt), someone should
+   deliberately search the corpus for the pattern *"the scenario states/describes what happened..."* or
+   similar self-referential claims across all 406 logs — this session did not do that, and the true
+   prevalence of this failure mode is unknown, not "rare" or "common."
+2. **The AbbVie flip (correct → wrong, across all three baselines) rests on one n=8 batch per method.**
+   The Alstom ablation in this same session showed both n=8 rates (50%/100%) were meaningfully off from
+   the n=30 truth (31%/86%) once the sample grew. There is no equivalent n=30 check for AbbVie — treat
+   "AbbVie predicts wrong" as suggestive at current sample size, not as settled, unless it's worth the
+   GPU time to verify the same way Alstom was.
+3. **The Alstom V4 p-value (3.96×10⁻⁵) is computed from data that includes 2 confirmed fabricated
+   reasoning instances, both in the V4 arm.** This session did not re-compute the resolution-rate
+   statistics with those 2 runs excluded or re-coded. It is not obvious the direction of the finding
+   would change (fabrication ≠ wrong outcome, and 2/28 is a small fraction), but the exact p-value has
+   not been checked for sensitivity to this, and should be before it's presented as clean.
+4. **`_number_grounded()`'s exact-substring matching has at least one confirmed false-positive mode**
+   (decimal-vs-percentage formatting, found this pass) that was documented but not fixed. The 45-suspect,
+   12-confirmed count in this document is the product of human reading correcting for this on every
+   individual suspect found so far — but the screening tool itself would still misflag the same pattern
+   on any future run. Don't trust a future bare `--verbose` run's raw suspect count without the same
+   manual check this session did.
+5. **Every `batch_summary.json`'s `complete: True` flag was trusted throughout this session**, per the
+   project's own established convention — except where a batch's low run-success count was independently
+   noticed and excluded by hand (the two contaminated Phase 3 partial batches). `complete: True` is known,
+   demonstrated fact within this session, to not imply "all runs succeeded" or "citable." No systematic
+   sweep was done to confirm every OTHER cited batch across this document doesn't have a similar,
+   unnoticed high-failure-rate problem — the ones that surfaced did so because a tunnel drop made them
+   obviously wrong, not because anything was checking for this proactively.
+6. **The 113 stale votes excluded by the outcome-leakage fix were verified against exactly 2 cases**
+   (abbvie, faraday) plus one never-leaked control (lancashire-care). The other 3 previously-leaked cases
+   (woods, bromcom, optima) were trusted to work correctly by the same logic, not independently
+   hand-verified the way abbvie/faraday were in Phase 3's manual isolation. Spot-check at least one more
+   before citing the fixed script's output as definitively correct.
