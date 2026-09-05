@@ -87,3 +87,116 @@ these five scripts touch the fabrication-screen code path.
 | `compare_baselines.py` | Heuristic 5/6, full pipeline 6/6, zero-shot 6/6, n=6 | Unchanged — this script's inputs are untouched by Phase 1 |
 
 **Test suite:** 103/103 passed (`pytest tests/`), including the 11 new fabrication-screen tests.
+
+---
+
+## Phase 3 — strip outcome leakage from the 6 leaked merits cases, re-run against clean scenarios
+
+**Files changed:** 6 scenario cache files under `batch_results/_scenarios/`: `faraday-west-berkshire.json`,
+`woods-milton-keynes.json`, `bromcom-united-learning-trust.json`, `optima-health-dwp.json`,
+`abbvie-nhs-england.json`, `bechtel-hs2.json` — `description` field only, no code changes.
+
+### What was wrong
+
+`scripts/analyze_outcome_leakage.py` (built earlier, not new to this phase) found that 6 of the
+corpus's 14 merits-trial scenario descriptions stated the real court's disposition outright (e.g. "the
+Court of Appeal reversed... declaring its ineffectiveness"), and `court_prompt.py` separately instructs
+the Court agent not to contradict a disposition the scenario states — so agreement figures computed over
+those 6 were partly measuring instruction-following, not prediction.
+
+### The rewrite principle
+
+Remove any sentence stating or implying who prevailed or what a court concluded; keep every fact, number,
+and formula the case's real record contains, so the Court agent still has a genuine Step 2A/2B task
+rather than an emptied-out scenario. Two of the six needed real care, both caught and corrected before
+writing anything (see `git log` for the exact turns this happened across):
+
+- **Woods:** an early draft attributed the −40/+6 mark correction to "a disputed re-evaluation of the
+  scoring records" — a process that does not exist anywhere in `src/cases/real_cases.py`'s source text.
+  Checked directly against the source (lines 227-236): the correction is the trial judge's own
+  conclusion, with no real intermediate re-evaluation process at all. Corrected to attribute the figures
+  to Woods' own contested claim ("Woods' case is that... EAS's marks require a downward correction of 40
+  marks... Woods' marks require an upward correction of 6 marks") rather than inventing a fictional
+  process to route around the leak — the exact discipline this project's whole fabrication-screen strand
+  exists to enforce, now applied to a scenario edit rather than a Court response.
+- **Optima:** an early draft kept "without first seeking clarification" as a settled fact — that's the
+  actual crux of the Court of Appeal's finding, so stating it as fact still leaked the answer even though
+  no sentence matched the detector's regex. Reworded so the clarification question is Optima's allegation
+  and DWP's dispute, not an established fact; kept "Optima's bid scored highest on quality" as a neutral
+  record fact but cut "would have been the winning bid but for..." — the counterfactual conclusion
+  itself.
+- **AbbVie:** the pre-existing cached description had almost no negotiable content (2 thin sentences).
+  Pulled the DPM's actual mechanics from `real_cases.py`'s source text — how the mechanism imputes a
+  "credited" price for a category a bidder doesn't supply, set at the lowest other bidder's price for
+  that category — so the CA/Bidder agents have a real mechanism to argue about, not just "AbbVie says
+  it's unfair."
+
+### Re-run: 8 runs / 5 rounds per case, active (V4) prompt, Ronin GPU tunnel
+
+The tunnel dropped twice mid-session (both times: `WinError 10061`, connection actively refused,
+independent of anything this session did). Neither drop was worked around — the affected batch was
+re-run in full after the tunnel came back, and the contaminated partial batch was left on disk rather
+than silently discarded:
+
+| Case | Attempts | Usable result |
+|---|---|---|
+| faraday-west-berkshire | 1st: 2/8 (tunnel dropped mid-batch, `batch_20260905_130434` — **not cited**) · 2nd: 8/8 (`batch_20260905_131106`) | 8/8 successful |
+| woods-milton-keynes | 8/8 (`batch_20260905_131917`) | 8/8 successful |
+| bromcom-united-learning-trust | 8/8 (`batch_20260905_132616`) | 8/8 successful |
+| optima-health-dwp | 8/8 (`batch_20260905_133047`) | 8/8 successful |
+| abbvie-nhs-england | 8/8 (`batch_20260905_133532`) | 8/8 successful |
+| bechtel-hs2 | 1st: 0/8 (tunnel dropped before any run started, `batch_20260905_134344` — **not cited**) · 2nd: 8/8 (`batch_20260905_134717`) | 8/8 successful |
+
+### The headline result: agreement dropped, and 5 of 6 cases still predict correctly on their own merits
+
+Old figure (leaked, `court_prompt.py` told not to contradict): **6/6 "correct," but this was partly
+compliance, not prediction.** Combined-with-leak-free old figure: 13/14.
+
+**New, honest figure, computed from ONLY the post-strip runs listed above (isolating today's batches
+from every pre-existing leaked-era batch for these 6 cases, since `analyze_outcome_leakage.py`'s own
+vote-counting naively pools every historical run for a scenario regardless of which version of the
+description generated it — see "known measurement gap" below): 5/6 correct.**
+
+| Case | Real | Leak-free-only vote (excl. deadlock) | Modal | Verdict |
+|---|---|---|---|---|
+| faraday-west-berkshire | lost | 5 lost / 2 won | lost | correct |
+| woods-milton-keynes | lost | 5 lost / 2 won | lost | correct |
+| bromcom-united-learning-trust | lost | 8 lost / 0 won | lost | correct |
+| optima-health-dwp | lost | 8 lost / 0 won | lost | correct |
+| **abbvie-nhs-england** | **won** | **5 lost / 3 won** | **lost** | **WRONG** |
+| bechtel-hs2 | won | 2 lost / 3 won | won | correct |
+
+**AbbVie is a genuine, unforced miss, not a fabrication or a bug.** Read against the source: the Court
+engages the DPM's actual mechanics (does imputing a "credited" price structurally disadvantage a
+bidder?) rather than inventing anything, and reaches the wrong answer on 5 of 8 runs once it isn't told
+the answer. This qualifies — without contradicting — the corpus's existing "this system tracks real
+dispositions reasonably well" claim (`evaluation-bailii-expansion-round2.md`): that claim was measured
+substantially on leaked scenarios and needs restating against leak-free evidence specifically.
+
+**Full 14-case corpus, honest leak-free figure: 12/14 (85.7%).** This combines the 5/6 above with the
+7/8 that never needed editing (`lancashire-care`, `braceurself-nhs-england`, `energysolutions-nda`,
+`consultant-connect-nhs-banes`, `inhealth-nhs-england`, `siemens-mobility-hs2`,
+`tnlc-gambling-commission` correct; `turning-point-norfolk` wrong — a pre-existing, already-documented
+genuine legal-judgment disagreement, not a new finding). `analyze_outcome_leakage.py --verbose` run
+against the full 14-case corpus confirms **0/0 leaked** — every merits scenario is now leak-free.
+
+**Known measurement gap, not fixed in this phase:** `analyze_outcome_leakage.py`'s vote-counting globs
+every `run_*.json` ever logged for a scenario's `dispute_id` and pools them into one modal vote,
+regardless of which version of the scenario description generated each run. For these 6 cases that
+means its raw output (e.g. `abbvie-nhs-england (6/12) WRONG`) mixes 4 old leaked-era votes in with the 8
+new leak-free ones. In this instance the pooled figure happens to agree with the isolated leak-free-only
+figure on every case's correct/incorrect verdict (confirmed by hand above), so the 12/14 headline number
+is not affected here — but the script itself does not distinguish eras, and a future re-run of any of
+these 6 cases will keep pooling old and new votes together unless it's changed to filter by scenario
+version or run timestamp. Flagged rather than fixed, given time constraints.
+
+### Where this feeds the thesis
+
+Same locations as Phase 1 (§3.7 methodology chapter; new material for the RQ3 answer and the
+disposition-tracking claim currently cited from `evaluation-bailii-expansion-round2.md` and
+`evaluation-baselines.md`), plus **Table 4.1** should gain a row distinguishing the leaked (6/6,
+compliance) figure from the leak-free (12/14, genuine prediction) figure rather than quoting only the
+higher one.
+
+**Test suite:** 103/103 passed (`pytest tests/`) before this phase's commit — no code changed, scenario
+cache edits only, run as a sanity check regardless.

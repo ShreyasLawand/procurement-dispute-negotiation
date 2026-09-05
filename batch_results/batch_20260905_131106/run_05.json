@@ -1,0 +1,122 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-FARADAY-2018",
+    "title": "Faraday Development Ltd v West Berkshire Council",
+    "description": "West Berkshire Council entered into a development agreement with St Modwen Developments Ltd for approximately \u00a3125 million, structured as a conditional land agreement. Faraday Development Ltd challenged the arrangement, alleging that it was in substance a public works contract that should have been competitively procured under the Public Contracts Regulations.",
+    "contract_value_gbp": 125000000.0,
+    "dispute_type": "process_avoidance",
+    "procedural_stage": "appeal",
+    "governing_legislation": null,
+    "contracting_authority_name": "West Berkshire Council",
+    "bidder_name": "Faraday Development Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Ensure lawful and procedurally correct procurement process",
+      "Protection of Public Funds: Avoid significant delay costs associated with re-running the procurement",
+      "Continuity of Service / Delivery: Deliver a \u00a3125,000,000 development project on time to meet local infrastructure needs"
+    ],
+    "goals": [
+      "Defend the procurement decision as lawful and procedurally correct",
+      "Maintain public confidence in the procurement process"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "The procurement was conducted lawfully and in accordance with the Procurement Act 2023, specifically section 12(1) which requires public bodies to act with integrity and transparency.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Public Contracts Regulations"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: A \u00a3125 million contract value at stake, and we stand to lose this significant revenue opportunity.",
+      "Fairness & Transparency: We believe the development agreement was in substance a public works contract that should have been competitively procured under the Public Contracts Regulations.",
+      "Strategic Leverage: We want evaluation flaws corrected so we are not disadvantaged in future procurements, and to maintain our reputation as a credible bidder."
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "Force the competition to be re-run"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We believe West Berkshire Council's development agreement with St Modwen Developments Ltd was unlawful and we request a re-evaluation of submitted bids to ensure fairness and transparency.",
+    "legal_basis": [
+      "Procurement Act 2023"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We appreciate Faraday Development Ltd's concerns regarding the development agreement with St Modwen Developments Ltd. However, we would like to clarify whether the challenge is specifically focused on the conditional land agreement aspect or if it pertains to the entire procurement process. Could you please provide more details on which specific aspects of the arrangement Faraday Development Ltd believes were not in line with the Procurement Act 2023?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your clarification request and acknowledge that our challenge does indeed pertain to the entire procurement process. We believe that the conditional land agreement between West Berkshire Council and St Modwen Developments Ltd is, in substance, a public works contract that should have been competitively procured under the Public Contracts Regulations. As such, we contest the arrangement's compliance with the Procurement Act 2023. To address your request for specificity, can you provide more details on how West Berkshire Council determined that this agreement did not fall within the scope of the Public Contracts Regulations?",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a determination of whether the conditional land agreement between West Berkshire Council and St Modwen Developments Ltd constitutes a public works contract. There are no explicit formulas or sub-scores to compute. However, I will assess compliance qualitatively instead. The issue at hand revolves around the substance of the agreement and its classification under the Public Contracts Regulations. West Berkshire Council's determination that this agreement did not fall within the scope of these regulations is questionable, as it appears to be a public works contract in substance. This raises concerns about the rationality and good faith of the Contracting Authority's decision-making process.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome is a re-evaluation, which means we have avoided the potential costs and risks associated with defending in TCC court, estimated to be \u00a350k+ and taking 6-12 months. This outcome is more favourable than our BATNA.",
+    "win_statement": "We successfully negotiated a re-evaluation of the development agreement, which will allow us to maintain the existing arrangement without significant changes. While we did not entirely address Faraday Development Ltd's concerns, we have avoided a potentially costly and time-consuming legal battle.",
+    "what_was_achieved": [
+      "Avoided potential costs and risks associated with defending in TCC court",
+      "Maintained the existing development agreement"
+    ],
+    "what_was_conceded": [
+      "Did not entirely address Faraday Development Ltd's concerns regarding the procurement process",
+      "May need to revisit and revise certain aspects of the development agreement"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is slightly better than our BATNA, but still falls short of a complete victory. We were able to get the contracting authority to re-evaluate their position, which acknowledges some of our concerns.",
+    "win_statement": "We successfully challenged the development agreement's compliance with the Procurement Act 2023, and although we did not achieve a full reversal of the original decision, we have made progress in bringing attention to this issue.",
+    "what_was_achieved": [
+      "Re-evaluation of the development agreement",
+      "Acknowledgement of some concerns regarding compliance with the Procurement Act 2023"
+    ],
+    "what_was_conceded": [
+      "The contracting authority did not fully accept our challenge and revert to a competitive procurement process",
+      "We were unable to achieve a complete reversal of the original decision"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Classification of the conditional land agreement between West Berkshire Council and St Modwen Developments Ltd",
+      "Compliance with the Public Contracts Regulations under the Procurement Act 2023"
+    ],
+    "concessions_summary": "Neither side made any concessions during the negotiation. The Aggrieved Bidder maintained its challenge to the procurement process, while the Contracting Authority sought clarification on the specifics of the challenge.",
+    "court_reasoning_summary": "The Court assessed the situation qualitatively and found that West Berkshire Council's determination that the conditional land agreement did not fall within the scope of the Public Contracts Regulations was questionable. This raised concerns about the rationality and good faith of the Contracting Authority's decision-making process.",
+    "likely_next_steps": "Re-evaluation: The Court recommended re-evaluation, which means that the procurement process will be reviewed again to determine whether it complied with the Procurement Act 2023 and the Public Contracts Regulations. This may involve a more detailed examination of the conditional land agreement and its classification.",
+    "plain_english_summary": "The dispute centered on whether the conditional land agreement was properly classified under the Public Contracts Regulations. The Court found that West Berkshire Council's decision-making process raised concerns, so it recommended re-evaluation to ensure compliance with procurement laws."
+  }
+}

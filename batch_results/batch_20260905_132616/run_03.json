@@ -1,0 +1,121 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-BROMCOM-2022",
+    "title": "Bromcom Computers plc v United Learning Trust",
+    "description": "UL's procurement for a cloud-based MIS used across 57 schools was challenged by Bromcom on three grounds: (1) unlawful averaging of individual scores without moderation, (2) one-sided data-transfer cost adjustment applied only to Bromcom's bid, and (3) permitting Arbor's rebate linked to a separate contract.",
+    "contract_value_gbp": 2000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "trial",
+    "governing_legislation": null,
+    "contracting_authority_name": "United Learning Trust and United Church Schools Trust",
+    "bidder_name": "Bromcom Computers plc",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Continuity of Service / Delivery: timely MIS delivery for 57 schools to avoid disruption",
+      "Protection of Public Funds: \u00a32,000,000 contract value at risk due to potential delay or re-run"
+    ],
+    "goals": [
+      "defend the procurement decision",
+      "resolve the dispute through negotiation"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We have carefully evaluated Bromcom's challenge and stand by our original scoring decisions, which were made in accordance with the Procurement Act 2023.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Regulation 32(1) of the Public Contracts Regulations 2015"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a32,000,000 contract value at stake",
+      "Fairness & Transparency: perceived unfairness in scoring methodology and evaluation process",
+      "Protection of Reputation: maintain credibility with parent companies, shareholders, or partners"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "Pursue an award of damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "Request that UL re-evaluate the submitted bids using a moderated scoring methodology",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "EU Procurement Directives"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge Bromcom's challenge to our procurement decision and appreciate their concerns regarding the evaluation process. However, I must clarify that the averaging of individual scores was in line with the published evaluation criteria, which stated that 'scores will be averaged where multiple evaluators have assessed the same criterion'. Can you provide more context on how this methodology was allegedly unlawful? Furthermore, I'd like to offer additional transparency by providing a detailed breakdown of our scoring process and the moderation steps taken. Would this information be helpful in addressing Bromcom's concerns?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "Thank you for acknowledging our challenge and offering additional transparency on the scoring process. I'd like to clarify whether the averaging of individual scores was indeed consistent across all criteria, or if there were any exceptions. Could you provide specific examples of where this methodology was applied, as stated in the published evaluation criteria?",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is numeric. The published evaluation criteria stated that 'scores will be averaged where multiple evaluators have assessed the same criterion'. However, I must verify this claim by performing the calculation myself. Unfortunately, the scenario does not provide specific input values for the individual scores or the number of evaluators assessing each criterion. Therefore, I cannot perform Step 2A and conclude whether a manifest error occurred based on an objective computation. However, I can still assess compliance qualitatively using Step 2B.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiated outcome is more favorable than our BATNA (defending in TCC court), which would have cost \u00a350k+ and taken 6-12 months. We were able to resolve the dispute through re-evaluation, avoiding costly litigation.",
+    "win_statement": "We successfully defended our procurement decision and maintained the integrity of our evaluation process. Although we did not fully prevail on all grounds, we achieved a satisfactory outcome that upholds the principles of transparency and fairness in public procurement.",
+    "what_was_achieved": [
+      "Provided additional transparency on the scoring process and moderation steps taken",
+      "Clarified the methodology for averaging individual scores"
+    ],
+    "what_was_conceded": [
+      "Re-evaluation of Bromcom's bid, rather than defending our original decision in court",
+      "Some concessions on data-transfer cost adjustment and permitting Arbor's rebate linked to a separate contract"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is somewhat disappointing relative to my BATNA. While we were able to secure a re-evaluation, which is better than pursuing damages or formal TCC proceedings, the contracting authority's stance on the averaging of individual scores and one-sided data-transfer cost adjustment remains unchanged.",
+    "win_statement": "We successfully pushed for a re-evaluation, which has given us some additional insight into the evaluation process. However, we were unable to secure any concessions on the key issues that led to our challenge.",
+    "what_was_achieved": [
+      "Re-evaluation of the procurement decision",
+      "Additional transparency provided by the contracting authority on the scoring process"
+    ],
+    "what_was_conceded": [
+      "No concessions made on the averaging of individual scores or one-sided data-transfer cost adjustment"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "averaging of individual scores",
+      "published evaluation criteria"
+    ],
+    "concessions_summary": "The Contracting Authority offered additional transparency on the scoring process, but did not concede any points regarding the methodology used.",
+    "court_reasoning_summary": "The Court assessed that a manifest error might have occurred due to the averaging of individual scores, but was unable to verify this claim quantitatively. The Court recommended re-evaluation as a next step.",
+    "likely_next_steps": "Re-evaluation will be conducted by the Contracting Authority, and Bromcom Computers plc will likely participate in the process to ensure their concerns are addressed.",
+    "plain_english_summary": "The dispute centered around how scores were averaged during the evaluation process. The Court suspected a possible error but couldn't confirm it due to lack of specific input values. As a result, the Contracting Authority was ordered to re-evaluate the bids."
+  }
+}

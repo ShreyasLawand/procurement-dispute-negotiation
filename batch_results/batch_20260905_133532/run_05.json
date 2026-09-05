@@ -1,0 +1,222 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-ABBVIE-2019",
+    "title": "AbbVie v NHS England",
+    "description": "NHS England ran a competitive-dialogue procurement to award up to three contracts for the supply of Hepatitis C (HCV) medication across England, with an aggregate value of approximately \u00a31 billion over five years. AbbVie Ltd, one of only three suppliers of HCV medication in the UK market, submitted a bid but was unsuccessful; the contract was awarded instead to MSD. The evaluation formula used a mechanism the parties call the Dummy Price Mechanism (DPM): because not every bidder supplied medication for every HCV genotype or treatment category being procured, the formula imputed a notional \"credited\" price to a bidder for any category it did not itself supply, set at the lowest price offered by any other bidder for that category. AbbVie challenged the DPM as inherently meaningless or incomprehensible as a basis for comparing bids, arguing its practical effect was to favour certain bidders' product portfolios over others in breach of the equal treatment principle. Both parties produced competing calculations modelling how AbbVie's score would have changed under alternative pricing choices within the DPM's rules.",
+    "contract_value_gbp": 1000000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "trial",
+    "governing_legislation": null,
+    "contracting_authority_name": "NHS England",
+    "bidder_name": "AbbVie Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 5,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: \u00a31,000,000,000 contract value at stake",
+      "Continuity of Service / Delivery: Critical HCV medication supply to patients across England",
+      "Reputation & Public Accountability: Maintain public confidence in NHS procurement processes"
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Maintain integrity and transparency"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "The Dummy Price Mechanism was used lawfully and in accordance with the Procurement Act 2023, s.15(2)(a) and Schedule 2, Part 1",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Regulation (EU) 2015/24"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a31 billion contract value at stake",
+      "Fairness & Transparency: DPM's practical effect favoured certain bidders' product portfolios over others",
+      "Protection of Reputation: Our credibility with parent companies, shareholders and partners is at risk"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids or an award of damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We believe the DPM was inherently meaningless and incomprehensible as a basis for comparing bids, leading to an unfair evaluation process",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Equal Treatment Principle"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I appreciate AbbVie's opening position and understand their concerns regarding the Dummy Price Mechanism (DPM). To clarify, can you please specify which aspects of the DPM you believe are inherently meaningless or incomprehensible as a basis for comparing bids? Additionally, I would like to request that we focus on the evaluation criteria and process rather than the outcome. In this spirit, I am willing to provide additional information regarding our evaluation methodology and any relevant documentation. Would AbbVie be interested in receiving this information?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate NHS England's willingness to provide additional information regarding their evaluation methodology and relevant documentation. However, before accepting any further transparency, I would like to request clarification on how the Dummy Price Mechanism (DPM) was applied in our bid. Specifically, could you please explain why the lowest price offered by other bidders for a particular category was used as the notional 'credited' price for each bidder, rather than an average or median price? Furthermore, I would like to request that NHS England shares their calculations and models used to determine our score under alternative pricing choices within the DPM's rules.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge AbbVie's request for clarification on how the Dummy Price Mechanism (DPM) was applied in their bid. To address this, I am willing to provide a detailed breakdown of our calculations and models used to determine AbbVie's score under alternative pricing choices within the DPM's rules. Specifically, we will share the lowest price offered by other bidders for each category and how it was used as the notional 'credited' price for each bidder. We believe this additional transparency will help clarify any concerns AbbVie may have regarding the evaluation process.",
+      "proposal": null,
+      "concession_made": "We will provide a detailed breakdown of our calculations and models used to determine AbbVie's score under alternative pricing choices within the DPM's rules."
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate NHS England's willingness to provide a detailed breakdown of their calculations and models used to determine our score under alternative pricing choices within the DPM's rules. However, I would like to request that we also discuss the potential impact on AbbVie's overall score if the notional 'credited' price was based on an average or median price instead of the lowest price offered by other bidders. This is crucial in understanding how the DPM affected our bid and whether it was a fair comparison with the other suppliers. Furthermore, I would like to propose that we consider revising the evaluation methodology to use a more robust pricing mechanism that takes into account the complexity and variability of the medication being procured.",
+      "proposal": "Revising the evaluation methodology to use a more robust pricing mechanism",
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "I understand AbbVie's request to discuss the potential impact on their overall score if the notional 'credited' price was based on an average or median price instead of the lowest price offered by other bidders. I am willing to engage in this discussion and provide further analysis on how this alternative pricing mechanism would have affected AbbVie's score. Additionally, I would like to propose that we consider revising the evaluation methodology to use a more robust pricing mechanism that takes into account the complexity and variability of the medication being procured. This could involve using a weighted average price or incorporating additional factors such as product efficacy and patient outcomes.",
+      "proposal": "Revising the evaluation methodology to use a more robust pricing mechanism",
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate NHS England's willingness to engage in a discussion on alternative pricing mechanisms and revise the evaluation methodology. However, I would like to propose that we consider using a more nuanced approach to evaluating bids, taking into account not only price but also product efficacy and patient outcomes. This could involve incorporating additional factors such as quality-adjusted life years (QALYs) or other relevant metrics. Furthermore, I believe it is essential to provide transparency on how the Dummy Price Mechanism was applied in our bid, including sharing the calculations and models used to determine our score under alternative pricing choices within the DPM's rules.",
+      "proposal": "Revising the evaluation methodology to use a more robust pricing mechanism that takes into account product efficacy and patient outcomes",
+      "concession_made": null
+    },
+    {
+      "round_number": 4,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge AbbVie's proposal to consider using a more nuanced approach to evaluating bids, taking into account not only price but also product efficacy and patient outcomes. I am willing to engage in this discussion and explore ways to incorporate additional factors such as quality-adjusted life years (QALYs) or other relevant metrics into our evaluation methodology. Additionally, I would like to propose that we consider providing transparency on how the Dummy Price Mechanism was applied in AbbVie's bid, including sharing the calculations and models used to determine their score under alternative pricing choices within the DPM's rules.",
+      "proposal": "Revising the evaluation methodology to incorporate additional factors such as QALYs or other relevant metrics",
+      "concession_made": "Providing transparency on how the Dummy Price Mechanism was applied in AbbVie's bid"
+    },
+    {
+      "round_number": 4,
+      "sender_role": "aggrieved_bidder",
+      "message": "I would like to request that we revisit the scoring methodology and consider using a weighted average price for each category, rather than the lowest price offered by other bidders. This would provide a more accurate representation of our bid's value and reduce the potential for bias towards certain product portfolios. I also propose that we provide transparency on how this revised methodology would have affected AbbVie's overall score.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 5,
+      "sender_role": "contracting_authority",
+      "message": "I am willing to revise the evaluation methodology to use a weighted average price for each category, rather than the lowest price offered by other bidders. This would provide a more accurate representation of our bid's value and reduce the potential for bias towards certain product portfolios. I also propose that we provide transparency on how this revised methodology would have affected AbbVie's overall score.",
+      "proposal": "Revised evaluation methodology using weighted average price",
+      "concession_made": null
+    },
+    {
+      "round_number": 5,
+      "sender_role": "aggrieved_bidder",
+      "message": "I believe that we have made significant progress in this negotiation and I am willing to accept a revised evaluation methodology that uses a weighted average price for each category, rather than the lowest price offered by other bidders. This would provide a more accurate representation of our bid's value and reduce the potential for bias towards certain product portfolios. In light of this concession, I propose that we consider revising the scoring methodology to use a weighted average price for each category, with the weights determined by NHS England's evaluation team.",
+      "proposal": "Revised Scoring Methodology using Weighted Average Price",
+      "concession_made": "Acceptance of Revised Evaluation Methodology"
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is numeric. The Dummy Price Mechanism (DPM) formula imputes a notional 'credited' price to a bidder for any category it does not itself supply, set at the lowest price offered by any other bidder for that category. To verify this calculation, I will assume the following inputs are present in the scenario: (1) the lowest price offered by other bidders for each category, and (2) AbbVie's actual sub-scores for each category. However, upon closer inspection, I realize that the scenario does not provide explicit values for these inputs. Therefore, I must treat this as Step 2B, qualitative rational-basis check, rather than Step 2A, independent computation. In this case, I will assess whether the published criteria language was applied in a way that is rationally defensible.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 of the Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is numeric. The Dummy Price Mechanism (DPM) formula imputes a notional 'credited' price to a bidder for any category it does not itself supply, set at the lowest price offered by any other bidder for that category. To perform the calculation, I need the specific input values: the lowest prices offered by other bidders for each category and how they were used as the notional 'credited' price for each bidder. However, these numbers are not provided in the scenario description or in either party's statements this round. Therefore, I cannot perform Step 2A (compute) independently.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 3,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is numeric. The Dummy Price Mechanism (DPM) formula imputes a notional 'credited' price to a bidder for any category it does not itself supply, set at the lowest price offered by any other bidder for that category. To verify compliance, I will calculate AbbVie's score using the DPM with alternative pricing choices within the rules. However, I must note that the scenario description does not provide specific input values (e.g., actual sub-scores) to run this calculation. Therefore, I cannot perform Step 2A and instead proceed with qualitative reasoning under Step 2B.\n\nAssuming the DPM was applied correctly, AbbVie's score would have changed based on alternative pricing choices within the rules. However, without explicit input values or a clear description of how the scores were calculated, I must rely on the parties' statements and the scenario description to assess compliance. NHS England's willingness to engage in discussion and provide further analysis suggests that they are attempting to address AbbVie's concerns and ensure transparency.\n\nBased on this qualitative assessment, I conclude that NHS England has made efforts to comply with the Procurement Act 2023, particularly s12 (value for money, public benefit, transparency, integrity).",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 4,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is numeric. The Dummy Price Mechanism (DPM) formula imputes a notional 'credited' price to a bidder for any category it does not itself supply, set at the lowest price offered by any other bidder for that category. However, I do not have enough information to perform the exact calculation myself using only the numbers given in the scenario. The parties mention competing calculations modelling how AbbVie's score would have changed under alternative pricing choices within the DPM's rules, but these are not explicitly stated. Therefore, I will treat this as a qualitative assessment (Step 2B).",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 5,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is numeric. The evaluation formula used the Dummy Price Mechanism (DPM), which imputed a notional 'credited' price to a bidder for any category it did not itself supply, set at the lowest price offered by any other bidder for that category. To verify this calculation, I will use the following inputs: let's assume there are 3 categories and 2 bidders (AbbVie and MSD). If AbbVie does not supply medication for Category A, its credited price would be \u00a3100 (the lowest price offered by MSD for Category A). However, since we do not have specific input values for the prices or the number of categories, I cannot perform a precise calculation. Nevertheless, based on the description, it appears that the DPM could lead to biased results, favoring certain bidders' product portfolios over others in breach of the equal treatment principle.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiated outcome is more favorable than our BATNA (defending in TCC court, which would cost \u00a350k+ and take 6-12 months) because we were able to revise the evaluation methodology without having to resort to litigation.",
+    "win_statement": "We successfully revised the evaluation methodology to use a weighted average price for each category, reducing the potential for bias towards certain product portfolios. This outcome is a win for both parties as it provides greater transparency and fairness in the procurement process.",
+    "what_was_achieved": [
+      "Revised evaluation methodology using weighted average price",
+      "Increased transparency on how Dummy Price Mechanism was applied"
+    ],
+    "what_was_conceded": [
+      "Revision of scoring methodology to use weighted average price with weights determined by NHS England's evaluation team",
+      "Additional transparency on calculations and models used to determine AbbVie's score under alternative pricing choices within the DPM's rules"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is more favorable than our BATNA (pursuing damages or formal TCC proceedings), which would have been costly, slow, and uncertain. We were able to negotiate a revised evaluation methodology that uses a weighted average price for each category, rather than the lowest price offered by other bidders.",
+    "win_statement": "We successfully negotiated a more accurate representation of our bid's value, reducing the potential for bias towards certain product portfolios. This outcome is a significant improvement over our initial concerns regarding the Dummy Price Mechanism (DPM).",
+    "what_was_achieved": [
+      "Revised evaluation methodology using weighted average price for each category",
+      "Transparency on how the revised methodology would have affected AbbVie's overall score"
+    ],
+    "what_was_conceded": [
+      "Acceptance of NHS England's proposal to use a weighted average price for each category, with the weights determined by NHS England's evaluation team"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Dummy Price Mechanism (DPM) application",
+      "Alternative pricing mechanisms",
+      "Transparency on evaluation methodology"
+    ],
+    "concessions_summary": "Both parties made concessions throughout the negotiation. NHS England provided additional information regarding their evaluation methodology and calculations used to determine AbbVie's score under alternative pricing choices within the DPM's rules. AbbVie accepted a revised evaluation methodology that uses a weighted average price for each category, rather than the lowest price offered by other bidders.",
+    "court_reasoning_summary": "The Court assessed each round of negotiation and concluded that NHS England made efforts to comply with the Procurement Act 2023, particularly s12 (value for money, public benefit, transparency, integrity). However, in Round 5, the Court found a manifest error in the evaluation formula used by NHS England, which led to biased results favoring certain bidders' product portfolios.",
+    "likely_next_steps": "Given the Court's conclusion that there was a manifest error in the evaluation formula used by NHS England, it is likely that the contract will be re-evaluated using a revised methodology. This may involve re-scoring AbbVie's bid and potentially awarding the contract to another bidder.",
+    "plain_english_summary": "The negotiation between AbbVie and NHS England centered around concerns regarding the application of the Dummy Price Mechanism (DPM) in evaluating bids. Despite efforts by both parties to address these concerns, a manifest error was found in the evaluation formula used by NHS England, leading to biased results. As a result, it is likely that the contract will be re-evaluated using a revised methodology."
+  }
+}

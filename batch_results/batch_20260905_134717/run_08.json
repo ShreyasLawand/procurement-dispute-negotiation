@@ -1,0 +1,149 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-BECHTEL-2021",
+    "title": "Bechtel Ltd v High Speed Two (HS2) Ltd",
+    "description": "Bechtel Ltd challenged the award of a construction contract for Old Oak Common station to Balfour Beatty Vinci Systra (BBVS), alleging manifest error in HS2's evaluation and selection, unequal treatment, and lack of transparency. Manifest error under the applicable standard requires 'something akin to irrationality', not merely a disagreement with the evaluators' judgment.",
+    "contract_value_gbp": 0.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "trial",
+    "governing_legislation": null,
+    "contracting_authority_name": "High Speed Two (HS2) Ltd",
+    "bidder_name": "Bechtel Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 2,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Act lawfully and within powers under the Procurement Act 2023",
+      "Protection of Public Funds: Avoid significant delay costs due to automatic suspension or litigation",
+      "Continuity of Service / Delivery: Deliver a critical transportation infrastructure project on time, ensuring public benefit and value for money",
+      "Reputation & Public Accountability: Maintain public confidence in HS2's procurement processes and avoid adverse media scrutiny"
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Resolve the dispute through negotiation"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our evaluation process, which was conducted fairly and transparently. We are willing to provide additional feedback and clarification on specific points, but we cannot re-score bids or discuss other bidders' scores in detail.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Regulation 32(1) of the Public Contracts Regulations 2015"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: a significant investment of time and resource",
+      "Fairness & Transparency: perceived unequal treatment and lack of transparency in the evaluation process",
+      "Protection of Reputation: our credibility as a bidder is at stake, given the public nature of this dispute"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "An award of damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We believe there was manifest error in HS2's evaluation and selection process, which warrants a re-evaluation of all bids.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "manifest error under applicable standard"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "Bechtel Ltd has raised concerns about manifest error in our evaluation and selection process. I'd like to clarify what specific aspects of the evaluation they believe were irrational or unjustified, as this will help us focus on the key issues at hand.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to clarify our concerns. To focus on key issues, we need more information about the evaluation process. Specifically, can you provide details on how the scoring methodology was applied to our bid and that of Balfour Beatty Vinci Systra (BBVS)? We would like to understand how the evaluators justified their scores for each criterion.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Bechtel's request for more information on our evaluation process and scoring methodology. To address this concern, we are willing to provide a detailed breakdown of how our evaluators applied the scoring criteria to both Bechtel's and BBVS' bids. Specifically, we will share the individual scores awarded for each criterion, as well as any relevant supporting documentation or evidence used by the evaluators. This information will be provided in a transparent and structured format, allowing Bechtel to understand our evaluation process more clearly.",
+      "proposal": null,
+      "concession_made": "We will provide additional feedback and transparency regarding our evaluation process"
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to provide a detailed breakdown of how your evaluators applied the scoring criteria to both our bid and BBVS' bids. However, we would like to request that you also provide information on the evaluation team's deliberations and any discussions or disagreements that may have occurred during the evaluation process. This will help us understand whether the outcome was indeed a result of 'something akin to irrationality', as required by the applicable standard.",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, as it does not contain an explicit formula or numeric scoring system. The parties' statements request clarification on the evaluation process and scoring methodology, but no specific numbers or calculations are provided. Therefore, I will assess compliance qualitatively.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 of the Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative. The parties are discussing the evaluation process and scoring methodology, but no explicit formula or sub-scores are mentioned. Therefore, I will assess compliance qualitatively instead of performing a numerical calculation. The Contracting Authority has agreed to provide a detailed breakdown of their evaluation process, which includes individual scores awarded for each criterion and supporting documentation. This level of transparency is in line with the principles outlined in s12 of the Procurement Act 2023. I see no indication that the Contracting Authority's actions are 'something akin to irrationality' or that they have failed to uphold the objectives of value for money, public benefit, transparency, and integrity.",
+      "recommended_action": "no remedy - decision stands",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "no remedy - decision stands",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome is more favorable than our BATNA (defending in TCC court, which would cost \u00a350k+ and take 6-12 months) since we were able to resolve the dispute through negotiation without incurring significant costs or time.",
+    "win_statement": "We successfully defended our evaluation process against Bechtel's allegations of manifest error, unequal treatment, and lack of transparency. By providing a detailed breakdown of our scoring methodology and supporting documentation, we demonstrated the rationality of our evaluators' decisions and maintained the integrity of our procurement process.",
+    "what_was_achieved": [
+      "Provided a detailed breakdown of our evaluation process and scoring methodology to address Bechtel's concerns",
+      "Shared individual scores awarded for each criterion, as well as relevant supporting documentation or evidence used by the evaluators"
+    ],
+    "what_was_conceded": [
+      "Agreed to provide additional information on the evaluation team's deliberations and discussions, although this was not explicitly requested in our initial response"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is largely unfavorable, as we were unable to secure any remedy and the decision of the contracting authority stands. This outcome is less favorable than our BATNA (pursuing damages or formal TCC proceedings), which would have been costly, slow, and uncertain.",
+    "win_statement": "We were able to gain some transparency into the evaluation process through the provision of detailed breakdowns of how the scoring criteria were applied to both bids. However, we did not achieve our primary goal of having the decision overturned or obtaining a remedy.",
+    "what_was_achieved": [
+      "Transparency into the evaluation process",
+      "Detailed breakdown of scoring methodology"
+    ],
+    "what_was_conceded": [
+      "No remedy was secured",
+      "Decision of contracting authority stands"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Manifest error in evaluation process",
+      "Lack of transparency in scoring methodology",
+      "Request for information on evaluation team's deliberations"
+    ],
+    "concessions_summary": "The Contracting Authority agreed to provide a detailed breakdown of their evaluation process, including individual scores and supporting documentation. However, they did not concede on the underlying concerns about manifest error or irrationality.",
+    "court_reasoning_summary": "The Court assessed compliance qualitatively due to the absence of explicit formulas or numeric scoring systems. It found that the Contracting Authority's actions were in line with the principles outlined in s12 of the Procurement Act 2023, and there was no indication of 'something akin to irrationality' or failure to uphold procurement objectives.",
+    "likely_next_steps": "The decision stands, and Bechtel Ltd has no remedy. The parties may choose to settle or re-evaluate their positions, but based on the transcript, it appears that the Contracting Authority's concessions were insufficient to address Bechtel's concerns.",
+    "plain_english_summary": "Bechtel Ltd raised concerns about errors in the evaluation process and lack of transparency. The Contracting Authority agreed to provide more information, but ultimately, the Court found no evidence of wrongdoing or irrationality. As a result, the decision stands, and Bechtel has no remedy."
+  }
+}

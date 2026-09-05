@@ -1,0 +1,123 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-OPTIMA-2024",
+    "title": "Optima Health v Secretary of State for Work and Pensions",
+    "description": "Optima alleges that DWP excluded its bid over minor clerical errors in its pricing schedule \u2014 a small number of line items that exceeded the relevant framework ceiling prices \u2014 without first seeking clarification about the apparent errors. DWP disputes that clarification was required, maintaining that the tender documentation made clear that bids exceeding the framework ceiling would or might be excluded. Optima's bid scored highest of all tenderers on quality.",
+    "contract_value_gbp": 0.0,
+    "dispute_type": "process_avoidance",
+    "procedural_stage": "appeal",
+    "governing_legislation": null,
+    "contracting_authority_name": "Department for Work and Pensions",
+    "bidder_name": "Working on Wellbeing Ltd (t/a Optima Health)",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Ensure that the procurement process is lawful and within our powers under the Procurement Act 2023.",
+      "Protection of Public Funds: Avoid significant delay costs associated with re-running the procurement or defending a challenge in court.",
+      "Continuity of Service / Delivery: Deliver critical health services to vulnerable individuals, which may be disrupted by automatic suspension or prolonged litigation.",
+      "Reputation & Public Accountability: Maintain public confidence and protect our reputation as a competent, fair, and professional buyer."
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Resolve the dispute through negotiation"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our evaluation process, which was fair and transparent. We did not require clarification from Optima Health regarding minor clerical errors in its pricing schedule, as this was clearly outlined in the tender documentation.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Fusion21 framework terms"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: A significant investment of time and resource to bid on this contract, which did not materialize due to minor clerical errors.",
+      "Fairness & Transparency: The perceived unfairness of excluding our bid without seeking clarification about the apparent errors.",
+      "Protection of Reputation: Maintaining credibility with parent companies, shareholders or partners, as well as defending the bid team's performance."
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids, giving us a chance to be awarded the contract ourselves",
+      "An award of damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We believe that DWP's decision to exclude our bid was premature and unfair, and we request a re-evaluation of our submission.",
+    "legal_basis": [
+      "Procurement Act 2023"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Optima's concerns regarding the exclusion of their bid due to minor clerical errors in the pricing schedule. However, we would like to clarify whether you believe that these errors were material and impacted the overall quality of your submission, as evidenced by your high score on quality. Additionally, could you provide more context about what specific line items exceeded the framework ceiling prices and how this affected your bid?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your acknowledgement of our concerns and would like to clarify that we believe these errors were not minor, but rather a misunderstanding of the framework ceiling prices. Our bid scored highest on quality, which suggests that the substance of our proposal was strong. We are concerned that excluding us due to clerical errors undermines the fairness of the process. Can you provide more information about how your evaluation team determined that these errors justified exclusion, and what specific steps were taken to ensure that all bidders understood the implications of exceeding framework ceiling prices?",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a judgment about the materiality of minor clerical errors in the pricing schedule. I will assess compliance qualitatively instead of computing a score. The Contracting Authority's position implies that they relied on the tender documentation to exclude bids exceeding framework ceiling prices. However, this approach may be inconsistent with the principle of transparency and fairness in procurement. A rational basis for exclusion would require clear guidance to bidders about the implications of exceeding framework ceiling prices. In this case, it appears that Optima's bid was excluded without clarification or warning, which undermines the process.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The negotiated re-evaluation outcome is more favorable than our BATNA, which would have involved a lengthy and costly court battle (estimated \u00a350k+ and 6-12 months). The negotiation allowed us to maintain the integrity of the procurement process while also avoiding significant financial and reputational risks.",
+    "win_statement": "We successfully defended the exclusion of Optima's bid due to minor clerical errors in their pricing schedule, upholding the principles of fair competition and compliance with the Procurement Act 2023. Although we did not achieve a full win on all aspects, the negotiated outcome is acceptable given the risks and costs associated with pursuing the matter further.",
+    "what_was_achieved": [
+      "Maintained the integrity of the procurement process",
+      "Avoided significant financial costs associated with a lengthy court battle"
+    ],
+    "what_was_conceded": [
+      "Re-evaluation of bids, which may have implications for the overall evaluation process and fairness",
+      "Some flexibility in interpretation of tender documentation regarding framework ceiling prices"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is more favourable than pursuing damages or formal TCC proceedings, which would have been costly, slow, and uncertain. However, the contracting authority's decision to re-evaluate our bid rather than uphold its initial exclusion is a partial victory.",
+    "win_statement": "We successfully secured a re-evaluation of our bid, which suggests that the contracting authority may have overstepped in excluding us due to minor clerical errors.",
+    "what_was_achieved": [
+      "Secured a re-evaluation of our bid",
+      "Contracting authority acknowledged concerns regarding exclusion"
+    ],
+    "what_was_conceded": [
+      "No formal apology or acknowledgement of wrongdoing by the contracting authority",
+      "Re-evaluation does not guarantee a positive outcome for our bid"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Exclusion of Optima Health's bid due to minor clerical errors in pricing schedule",
+      "Materiality of these errors and their impact on overall quality of submission"
+    ],
+    "concessions_summary": "Neither party made significant concessions during the negotiation. The Contracting Authority acknowledged Optima's concerns, but did not provide clear justification for excluding their bid. Optima Health emphasized the strength of their proposal and questioned the fairness of the process.",
+    "court_reasoning_summary": "The Court assessed the situation qualitatively due to its qualitative nature. It found that the Contracting Authority's approach may be inconsistent with procurement principles, particularly transparency and fairness. The Court concluded that a rational basis for exclusion required clear guidance to bidders about exceeding framework ceiling prices, which was lacking in this case.",
+    "likely_next_steps": "The Court recommended re-evaluation of Optima Health's bid due to the manifest error identified. This means that the Contracting Authority will need to reassess their evaluation process and provide a revised decision on Optima Health's eligibility for the contract.",
+    "plain_english_summary": "In essence, the dispute centered around whether minor clerical errors in pricing should disqualify Optima Health from the contract. The Court found that the Contracting Authority's approach was flawed and did not provide sufficient guidance to bidders about exceeding framework ceiling prices. As a result, the Court recommended re-evaluation of Optima Health's bid."
+  }
+}

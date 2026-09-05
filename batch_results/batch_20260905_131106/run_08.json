@@ -1,0 +1,223 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-FARADAY-2018",
+    "title": "Faraday Development Ltd v West Berkshire Council",
+    "description": "West Berkshire Council entered into a development agreement with St Modwen Developments Ltd for approximately \u00a3125 million, structured as a conditional land agreement. Faraday Development Ltd challenged the arrangement, alleging that it was in substance a public works contract that should have been competitively procured under the Public Contracts Regulations.",
+    "contract_value_gbp": 125000000.0,
+    "dispute_type": "process_avoidance",
+    "procedural_stage": "appeal",
+    "governing_legislation": null,
+    "contracting_authority_name": "West Berkshire Council",
+    "bidder_name": "Faraday Development Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 5,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Ensure the procurement process is lawful and within our powers under the Procurement Act 2023",
+      "Protection of Public Funds: Avoid significant delay costs associated with re-running the procurement or defending a challenge in court",
+      "Continuity of Service / Delivery: Deliver a major development project worth \u00a3125,000,000 that will bring economic growth and regeneration to West Berkshire"
+    ],
+    "goals": [
+      "Defend our original decision to award the contract to St Modwen Developments Ltd without re-running the procurement process"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our original evaluation and award, which was made in good faith and in accordance with the Procurement Act 2023",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Public Contracts Regulations"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a3125,000,000 contract value at stake",
+      "Fairness & Transparency: alleged unfair treatment and potential for corrupt decision-making",
+      "Strategic Leverage: desire to obtain detailed feedback and trigger additional disclosure from West Berkshire Council"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "Obtain corrective action \u2014 rerun the evaluation, re-evaluate scores"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "Request a thorough review of the development agreement to ensure compliance with Public Contracts Regulations",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Public Contracts Regulations"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Faraday Development Ltd's concerns regarding the development agreement with St Modwen Developments Ltd. To clarify, can you specify which aspects of the arrangement you believe constitute a public works contract that should have been competitively procured under the Public Contracts Regulations?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your clarification on our concerns regarding the development agreement with St Modwen Developments Ltd. However, we would like to know more about the specific aspects of the arrangement that you believe are not in compliance with the Public Contracts Regulations. Could you provide us with a detailed breakdown of how you arrived at this conclusion and what specific provisions or clauses in the agreement you believe constitute a public works contract?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "We understand your request for a detailed breakdown of our assessment. Our evaluation was based on the fact that the development agreement with St Modwen Developments Ltd involves the provision of infrastructure and services to support the development, which we believe falls outside the scope of the Public Contracts Regulations. Specifically, the agreement includes provisions for the design, construction, and maintenance of roads, utilities, and other essential infrastructure. We can provide you with a more detailed explanation of our evaluation criteria and how they were applied in this case.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your detailed explanation of how you arrived at this conclusion. However, we still have concerns about the definition of a public works contract and its applicability to this development agreement. Specifically, we would like to know more about the infrastructure and services that are being provided by St Modwen Developments Ltd and how they relate to the Public Contracts Regulations. We also request clarification on whether any of these services were competitively procured or if there was a prior framework agreement in place.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "We appreciate your persistence in seeking clarification on this matter. To address your concerns directly, we can confirm that approximately 30% of the \u00a3125 million development agreement with St Modwen Developments Ltd relates to the provision of infrastructure and services that could be considered as a public works contract. However, we believe that these aspects are ancillary to the primary purpose of the agreement, which is to facilitate the development itself. We are willing to provide additional information on how we applied the evaluation criteria in this case, specifically with regards to the proportion of the agreement that falls under the Public Contracts Regulations.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "We acknowledge that approximately 30% of the \u00a3125 million development agreement with St Modwen Developments Ltd relates to the provision of infrastructure and services that could be considered as a public works contract. However, we still have concerns about whether this proportion is sufficient to render the entire agreement subject to the Public Contracts Regulations. We would like to request clarification on how you applied the evaluation criteria in this case, specifically with regards to the proportion of the agreement that falls under the Public Contracts Regulations. Furthermore, we would appreciate it if you could provide us with a clear explanation of why you believe that these ancillary aspects are not sufficient to trigger the application of the Regulations.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 4,
+      "sender_role": "contracting_authority",
+      "message": "We understand that you have concerns about the proportion of the agreement that falls under the Public Contracts Regulations. To address this, we propose to provide a detailed breakdown of the specific infrastructure and services included in the development agreement with St Modwen Developments Ltd. This breakdown will include a clear identification of which aspects are ancillary to the primary purpose of the agreement and which aspects could be considered as a public works contract. We believe that this additional information will help clarify our evaluation criteria and how they were applied in this case.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 4,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to provide a detailed breakdown of the specific infrastructure and services included in the development agreement with St Modwen Developments Ltd. However, we still have concerns about how you applied the evaluation criteria in this case, specifically with regards to the proportion of the agreement that falls under the Public Contracts Regulations. To address these concerns, we propose that you provide a clear explanation of why you believe that the ancillary aspects are not sufficient to trigger the application of the Regulations, and also provide a detailed breakdown of how you applied the evaluation criteria in this case. Furthermore, we would like to request clarification on whether any of the services included in the development agreement were competitively procured or if there was a prior framework agreement in place.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 5,
+      "sender_role": "contracting_authority",
+      "message": "We are willing to provide additional information on how we applied the evaluation criteria in this case, specifically with regards to the proportion of the agreement that falls under the Public Contracts Regulations. We also acknowledge that approximately 30% of the \u00a3125 million development agreement relates to the provision of infrastructure and services that could be considered as a public works contract. However, we believe that these aspects are ancillary to the primary purpose of the agreement, which is to facilitate the development itself.",
+      "proposal": "A voluntary standstill extension for an additional two weeks to allow for further engagement and clarification on the evaluation criteria",
+      "concession_made": "We will provide a detailed breakdown of the specific infrastructure and services included in the development agreement with St Modwen Developments Ltd, including a clear identification of which aspects are ancillary to the primary purpose of the agreement"
+    },
+    {
+      "round_number": 5,
+      "sender_role": "aggrieved_bidder",
+      "message": "After careful consideration and reviewing our previous statements, we propose a compromise to resolve this dispute. We suggest that West Berkshire Council provide a detailed breakdown of how they applied the evaluation criteria in this case, specifically with regards to the proportion of the agreement that falls under the Public Contracts Regulations. Additionally, we request clarification on whether any of the services included in the development agreement were competitively procured or if there was a prior framework agreement in place. If these conditions are met, we are willing to withdraw our challenge and accept the original award decision.",
+      "proposal": "A detailed breakdown of how West Berkshire Council applied the evaluation criteria",
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a dispute over the classification of a development agreement under the Public Contracts Regulations. There are no explicit formulas or sub-scores mentioned in the description. The Contracting Authority's position this round does not provide any numerical information that could be used to perform a calculation. Therefore, I will assess compliance qualitatively.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves the interpretation of the Public Contracts Regulations and the definition of a public works contract. The Contracting Authority's position is that the development agreement with St Modwen Developments Ltd falls outside the scope of the Public Contracts Regulations because it includes provisions for infrastructure and services. However, the Aggrieved Bidder has raised concerns about the applicability of this definition to this specific case. I will assess compliance qualitatively, considering whether the Contracting Authority's interpretation is rationally defensible.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 3,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 of the Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative in nature as it involves a discussion about the proportion of the agreement that falls under the Public Contracts Regulations. The Contracting Authority's position is that approximately 30% of the \u00a3125 million development agreement relates to the provision of infrastructure and services that could be considered as a public works contract, but these aspects are ancillary to the primary purpose of the agreement. I will assess compliance qualitatively instead of performing an arithmetic calculation.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 4,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 of the Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative. The parties' positions and the Contracting Authority's proposal do not contain any explicit formula or numbers that require calculation. However, I will assess the process compliance qualitatively based on the information provided. The Contracting Authority has proposed to provide a detailed breakdown of the specific infrastructure and services included in the development agreement with St Modwen Developments Ltd, which may help clarify their evaluation criteria and how they were applied. This proposal appears to be a reasonable step towards addressing the Aggrieved Bidder's concerns.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 5,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves the application of evaluation criteria and the classification of a development agreement. The Contracting Authority's position acknowledges that approximately 30% of the agreement relates to public works contracts, but believes these aspects are ancillary to the primary purpose. I do not find any manifest error in this reasoning, as it is based on a qualitative assessment of the agreement's scope and purpose.",
+      "recommended_action": "no remedy - decision stands",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "no remedy - decision stands",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome of no remedy - decision stands is a compromise that avoids the costs and risks associated with defending in TCC court, which would have cost \u00a350k+ and taken 6-12 months.",
+    "win_statement": "We were able to negotiate a resolution that maintained the original award decision without having to incur significant legal costs or risk a lengthy court battle.",
+    "what_was_achieved": [
+      "Provided additional information on how we applied the evaluation criteria in this case",
+      "Clarified the proportion of the agreement that falls under the Public Contracts Regulations"
+    ],
+    "what_was_conceded": [
+      "Acknowledged that approximately 30% of the \u00a3125 million development agreement relates to the provision of infrastructure and services that could be considered as a public works contract",
+      "Agreed to provide a detailed breakdown of how we applied the evaluation criteria in this case"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is unfavorable compared to my BATNA (pursuing damages or formal TCC proceedings), which would have been costly, slow, and uncertain. However, we were able to negotiate a compromise that provides some clarity on the contracting authority's evaluation criteria.",
+    "win_statement": "We secured a compromise that allows us to understand how the contracting authority applied the evaluation criteria in this case, although it does not address our primary concerns about the applicability of the Public Contracts Regulations.",
+    "what_was_achieved": [
+      "A detailed breakdown of the specific infrastructure and services included in the development agreement with St Modwen Developments Ltd",
+      "Additional information on how the contracting authority applied the evaluation criteria in this case"
+    ],
+    "what_was_conceded": [
+      "Our challenge to the original award decision, which we are willing to withdraw if our conditions are met",
+      "A clear explanation of why the ancillary aspects are not sufficient to trigger the application of the Regulations"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Definition of public works contract under Public Contracts Regulations",
+      "Proportion of development agreement that falls under Public Contracts Regulations",
+      "Competitive procurement or prior framework agreements for services"
+    ],
+    "concessions_summary": "The Contracting Authority made a concession in Round 5 by agreeing to provide a detailed breakdown of the specific infrastructure and services included in the development agreement with St Modwen Developments Ltd.",
+    "court_reasoning_summary": "The Court assessed each round qualitatively, considering whether the Contracting Authority's interpretation was rationally defensible. In Round 5, the Court found no manifest error in the Contracting Authority's reasoning and recommended that the decision stand.",
+    "likely_next_steps": "Given the Court's recommendation, it is likely that the dispute will be settled with no remedy for the Aggrieved Bidder, and the original award decision will remain unchanged.",
+    "plain_english_summary": "The negotiation centered around a development agreement between West Berkshire Council and St Modwen Developments Ltd. The Aggrieved Bidder challenged the Contracting Authority's classification of the agreement under Public Contracts Regulations. After several rounds of discussion, the Contracting Authority agreed to provide additional information, but ultimately, the Court found no manifest error in their reasoning, and the dispute was settled with no remedy for the Aggrieved Bidder."
+  }
+}

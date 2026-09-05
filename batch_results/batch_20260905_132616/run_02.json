@@ -1,0 +1,127 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-BROMCOM-2022",
+    "title": "Bromcom Computers plc v United Learning Trust",
+    "description": "UL's procurement for a cloud-based MIS used across 57 schools was challenged by Bromcom on three grounds: (1) unlawful averaging of individual scores without moderation, (2) one-sided data-transfer cost adjustment applied only to Bromcom's bid, and (3) permitting Arbor's rebate linked to a separate contract.",
+    "contract_value_gbp": 2000000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "trial",
+    "governing_legislation": null,
+    "contracting_authority_name": "United Learning Trust and United Church Schools Trust",
+    "bidder_name": "Bromcom Computers plc",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Ensure lawful evaluation process to withstand challenge.",
+      "Protection of Public Funds: Avoid significant delay costs due to re-run procurement.",
+      "Continuity of Service / Delivery: Maintain uninterrupted MIS services for 57 schools.",
+      "Reputation & Public Accountability: Protect our reputation as a competent buyer.",
+      "Minimising Litigation Risk: Provide transparency without undermining evaluation integrity.",
+      "Maintaining Market Relationships: Avoid alienating suppliers, including Bromcom."
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Resolve dispute through negotiation"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our evaluation process, which was conducted fairly and transparently.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Regulation 32(1) \u2014 Standstill Period"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a32,000,000 contract value at stake",
+      "Fairness & Transparency: perceived unfair treatment in scoring and evaluation process",
+      "Protection of Reputation: maintain credibility with parent companies, shareholders, and partners"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "Award damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "Request a detailed explanation of the evaluation process, including scoring methodology and evaluator comments",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Dispute details as per REAL-BROMCOM-2022"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge Bromcom's challenge to our procurement decision and appreciate their concerns regarding the averaging of individual scores without moderation, one-sided data-transfer cost adjustment, and permitting Arbor's rebate linked to a separate contract. I would like to clarify that we did indeed use a moderation process for scoring, as outlined in our evaluation criteria, which included a review by multiple evaluators to ensure consistency. Can you please provide more information on how you believe the moderation process was flawed?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your clarification on the moderation process, but I would like to clarify further - can you provide specific examples of how this moderation was applied in our bid evaluation? For instance, which evaluators were involved and what specific scores or criteria did they review?",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "s.12(2) Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is numeric as it involves a calculation of scores and ranking. However, upon reviewing the information provided by both parties, I notice that there are discrepancies in the moderation process used by UL. Specifically, Bromcom's challenge suggests that the averaging of individual scores without moderation was unlawful. To verify this claim, I will calculate the average score using the formula: Average Score = (Score 1 + Score 2 + ... + Score n) / n. However, since the specific input values for each score are not provided in the scenario, I cannot perform a precise calculation. Nevertheless, I can assess the process qualitatively. The fact that Bromcom's challenge suggests an unlawful averaging of individual scores without moderation raises concerns about the rationality and transparency of UL's evaluation process.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome is more favorable than our BATNA of defending in TCC court, which would have cost \u00a350k+ and taken 6-12 months. This re-evaluation process has allowed us to address the concerns raised by Bromcom without incurring significant legal costs.",
+    "win_statement": "We successfully defended our procurement decision through a thorough re-evaluation process, addressing the concerns raised by Bromcom while maintaining the integrity of our evaluation criteria and moderation process.",
+    "what_was_achieved": [
+      "Clarified the moderation process used for scoring, demonstrating its consistency and fairness",
+      "Provided specific examples of how the moderation was applied in the bid evaluation"
+    ],
+    "what_was_conceded": [
+      "Acknowledged that our initial response may have been unclear on the moderation process",
+      "Made concessions to re-evaluate certain aspects of the procurement decision"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is a re-evaluation of our bid, which is better than pursuing damages or formal TCC proceedings, but not significantly improved. We still face uncertainty and potential costs associated with the re-evaluation process.",
+    "win_statement": "We were able to secure a re-evaluation of our bid, which may lead to a more favorable outcome for Bromcom Computers plc.",
+    "what_was_achieved": [
+      "A re-evaluation of our bid will be conducted",
+      "The contracting authority has acknowledged some of the concerns raised by Bromcom"
+    ],
+    "what_was_conceded": [
+      "We had to accept a re-evaluation process, which may lead to further costs and uncertainty for our organisation",
+      "Some aspects of our challenge were not fully addressed or conceded by the contracting authority"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Averaging of individual scores without moderation",
+      "One-sided data-transfer cost adjustment",
+      "Permitting Arbor's rebate linked to a separate contract"
+    ],
+    "concessions_summary": "Neither party made significant concessions during the negotiation. The Contracting Authority clarified their moderation process, but the Aggrieved Bidder pressed for specific examples and details.",
+    "court_reasoning_summary": "The Court assessed each round and concluded that there was a 'manifest error' in the procurement decision due to discrepancies in the moderation process used by the Contracting Authority (UL). The Court recommended re-evaluation of the bid, citing concerns about the rationality and transparency of UL's evaluation process.",
+    "likely_next_steps": "The Contracting Authority will likely re-evaluate the Aggrieved Bidder's bid, taking into account the issues raised during the negotiation. This may involve recalculating scores or re-assessing the moderation process to ensure compliance with procurement regulations.",
+    "plain_english_summary": "The dispute centered on concerns about how the Contracting Authority evaluated bids and calculated scores. The Court agreed that there were problems with this process, so they recommended that the Contracting Authority go back and do it again, following proper procedures."
+  }
+}

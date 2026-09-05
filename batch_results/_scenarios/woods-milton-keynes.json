@@ -1,7 +1,7 @@
 {
   "dispute_id": "REAL-WOODS-MKC-2015",
   "title": "Woods Building Services v Milton Keynes Council",
-  "description": "The contracting authority's decision to award a \u00a38 million asbestos removal and reinstatement services contract was challenged by Woods Building Services, the incumbent provider. The challenger alleged manifest error in the scoring of individual quality criteria and breach of transparency and equal treatment obligations. The court found that the tender evaluation process was fundamentally flawed across multiple scoring items, requiring a reduction of 40 marks for EAS's bid and an increase of 6 marks for Woods' bid. Applying the published 60% price / 40% quality formula, the court concluded that Woods' bid became the most economically advantageous tender.",
+  "description": "The contracting authority's decision to award a \u00a38 million asbestos removal and reinstatement services contract was challenged by Woods Building Services, the incumbent provider. The challenger alleged manifest error in the scoring of individual quality criteria and breach of transparency and equal treatment obligations, disputing several individual scores awarded to both bidders across the 24 published criteria. Woods' case is that, applying the council's own published methodology to the disputed criteria, EAS's marks require a downward correction of 40 marks in total while Woods' marks require an upward correction of 6 marks. The published evaluation formula weights price at 60% and quality at 40%.",
   "contract_value_gbp": 8000000.0,
   "dispute_type": "scoring_challenge",
   "procedural_stage": "trial",

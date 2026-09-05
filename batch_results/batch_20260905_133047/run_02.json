@@ -1,0 +1,122 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-OPTIMA-2024",
+    "title": "Optima Health v Secretary of State for Work and Pensions",
+    "description": "Optima alleges that DWP excluded its bid over minor clerical errors in its pricing schedule \u2014 a small number of line items that exceeded the relevant framework ceiling prices \u2014 without first seeking clarification about the apparent errors. DWP disputes that clarification was required, maintaining that the tender documentation made clear that bids exceeding the framework ceiling would or might be excluded. Optima's bid scored highest of all tenderers on quality.",
+    "contract_value_gbp": 0.0,
+    "dispute_type": "process_avoidance",
+    "procedural_stage": "appeal",
+    "governing_legislation": null,
+    "contracting_authority_name": "Department for Work and Pensions",
+    "bidder_name": "Working on Wellbeing Ltd (t/a Optima Health)",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Compliance & Legality: Act lawfully and within powers under the Procurement Act 2023",
+      "Reputation & Public Accountability: Maintain public confidence in a fair procurement process",
+      "Protection of Public Funds: Avoid significant delay costs associated with re-running the procurement"
+    ],
+    "goals": [
+      "Defend the decision to exclude Optima's bid on grounds of minor clerical errors",
+      "Maintain transparency and fairness throughout the procurement process"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our evaluation, which was conducted fairly and transparently. The tender documentation made clear that bids exceeding the framework ceiling would or might be excluded.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Framework agreement terms and conditions"
+    ],
+    "confidence_score": 0.5
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: We stand to lose the contract value of \u00a30, which would have been a significant investment of time and resource.",
+      "Fairness & Transparency: The DWP's decision-making process appears opaque, with unclear expectations around framework ceiling prices.",
+      "Protection of Reputation: A loss due to minor clerical errors could damage our credibility in future bids and undermine our win-rate targets."
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "An award of damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "DWP should have sought clarification about the apparent errors before excluding our bid.",
+    "legal_basis": [
+      "Procurement Act 2023"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge Optima's concerns regarding the exclusion of their bid due to minor clerical errors in the pricing schedule. However, I would like to clarify whether Optima had previously been made aware of the framework ceiling prices and whether they had any opportunity to rectify the errors before submitting their bid.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "While I appreciate your acknowledgement of our concerns, I would like to clarify whether you had previously informed us about the framework ceiling prices and if so, what specific guidance was provided. Our bid team relied on the tender documentation and assumed that minor errors could be rectified through clarification or negotiation. We are concerned that excluding our bid without seeking clarification may have been premature.",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative. The dispute revolves around the interpretation of the tender documentation and whether Optima's bid was properly excluded due to minor clerical errors in its pricing schedule. I do not see any explicit formula or sub-scores mentioned in the scenario. Therefore, I will assess compliance qualitatively instead. According to s12 of the Procurement Act 2023, contracting authorities must act with transparency and integrity. Excluding a bid without seeking clarification about minor clerical errors may be seen as premature and lacking transparency. The tender documentation should have been clear enough for bidders to understand what constitutes an exclusion criterion. In this case, it appears that DWP's actions may not meet the requirements of s12.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome is a re-evaluation, which means Optima's bid will be reassessed. While this isn't a full win for us, it avoids the risk of a lengthy and costly court battle (our BATNA) that could have taken 6-12 months and cost over \u00a350k.",
+    "win_statement": "We successfully defended our decision to exclude Optima's bid due to minor clerical errors in their pricing schedule, without having to resort to expensive litigation.",
+    "what_was_achieved": [
+      "Avoided costly court battle",
+      "Maintained integrity of procurement process"
+    ],
+    "what_was_conceded": [
+      "Re-evaluation of Optima's bid",
+      "Potential for revised outcome"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome is slightly more favourable than pursuing damages or formal TCC proceedings, which would have been costly, slow, and uncertain. However, it falls short of a complete victory.",
+    "win_statement": "We managed to secure a re-evaluation of our bid, which acknowledges the minor clerical errors in our pricing schedule were not properly addressed by DWP before exclusion.",
+    "what_was_achieved": [
+      "A re-evaluation of our bid",
+      "Acknowledgement from DWP that clarification was warranted"
+    ],
+    "what_was_conceded": [
+      "DWP's stance on excluding bids exceeding framework ceiling prices remains unchanged",
+      "No formal apology or admission of error by DWP"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Exclusion of Optima's bid due to minor clerical errors in pricing schedule",
+      "Lack of transparency and clarity in tender documentation regarding exclusion criteria"
+    ],
+    "concessions_summary": "Neither side made significant concessions. The Contracting Authority acknowledged Optima's concerns, but the Aggrieved Bidder did not accept this as sufficient.",
+    "court_reasoning_summary": "The Court assessed compliance qualitatively due to the lack of explicit formulas or sub-scores in the tender documentation. It found that excluding Optima's bid without seeking clarification may have been premature and lacking transparency, potentially violating s12 of the Procurement Act 2023.",
+    "likely_next_steps": "Re-evaluation of bids is recommended by the Court, indicating that the Contracting Authority will need to re-assess all bids in light of the Court's findings. This may involve clarifying exclusion criteria or re-scoring bids.",
+    "plain_english_summary": "The dispute centered on whether Optima's bid was unfairly excluded due to minor errors. The Court found that the tender documentation was unclear and that excluding the bid without seeking clarification was potentially unfair. As a result, the Contracting Authority will need to review all bids again."
+  }
+}

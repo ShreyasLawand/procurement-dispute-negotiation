@@ -1,0 +1,275 @@
+{
+  "scenario_id": "REAL-BECHTEL-2021",
+  "scenario_title": "Bechtel Ltd v High Speed Two (HS2) Ltd",
+  "contracting_authority": "High Speed Two (HS2) Ltd",
+  "bidder": "Bechtel Ltd",
+  "complete": true,
+  "n_runs_requested": 8,
+  "n_runs_completed_so_far": 8,
+  "n_runs_successful": 0,
+  "n_runs_failed": 8,
+  "max_rounds": 5,
+  "timestamp": "20260905_134344",
+  "court_prompt_version": "V4",
+  "include_court": true,
+  "ca_profile": null,
+  "bidder_profile": null,
+  "metrics": {
+    "resolution_rate": null,
+    "deadlock_rate": null,
+    "manifest_error_detection_rate": null,
+    "average_rounds_to_conclusion": 0,
+    "average_duration_seconds": 0,
+    "outcome_distribution": {}
+  },
+  "compliance": {
+    "structural_compliance_rate": null,
+    "by_site": {}
+  },
+  "individual_runs": [
+    {
+      "run_number": 1,
+      "resolved": null,
+      "outcome": null,
+      "rounds_taken": null,
+      "manifest_error_found_any_round": null,
+      "manifest_error_rounds": [],
+      "process_not_followed_any_round": null,
+      "duration_seconds": 73.9,
+      "compliance": {
+        "structured_responses": 9,
+        "clean_responses": 9,
+        "structural_compliance_rate": 1.0,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {
+            "ContractingAuthorityAgent.pre_negotiation": 1,
+            "AggrievedBidderAgent.pre_negotiation": 1,
+            "ContractingAuthorityAgent.round_response": 3,
+            "AggrievedBidderAgent.round_response": 2,
+            "CourtAgent.assess_round": 2
+          },
+          "clean_responses": {
+            "ContractingAuthorityAgent.pre_negotiation": 1,
+            "AggrievedBidderAgent.pre_negotiation": 1,
+            "ContractingAuthorityAgent.round_response": 3,
+            "AggrievedBidderAgent.round_response": 2,
+            "CourtAgent.assess_round": 2
+          },
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": "[WinError 10061] No connection could be made because the target machine actively refused it"
+    },
+    {
+      "run_number": 2,
+      "resolved": null,
+      "outcome": null,
+      "rounds_taken": null,
+      "manifest_error_found_any_round": null,
+      "manifest_error_rounds": [],
+      "process_not_followed_any_round": null,
+      "duration_seconds": 2.0,
+      "compliance": {
+        "structured_responses": 0,
+        "clean_responses": 0,
+        "structural_compliance_rate": null,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {},
+          "clean_responses": {},
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": "[WinError 10061] No connection could be made because the target machine actively refused it"
+    },
+    {
+      "run_number": 3,
+      "resolved": null,
+      "outcome": null,
+      "rounds_taken": null,
+      "manifest_error_found_any_round": null,
+      "manifest_error_rounds": [],
+      "process_not_followed_any_round": null,
+      "duration_seconds": 2.0,
+      "compliance": {
+        "structured_responses": 0,
+        "clean_responses": 0,
+        "structural_compliance_rate": null,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {},
+          "clean_responses": {},
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": "[WinError 10061] No connection could be made because the target machine actively refused it"
+    },
+    {
+      "run_number": 4,
+      "resolved": null,
+      "outcome": null,
+      "rounds_taken": null,
+      "manifest_error_found_any_round": null,
+      "manifest_error_rounds": [],
+      "process_not_followed_any_round": null,
+      "duration_seconds": 2.0,
+      "compliance": {
+        "structured_responses": 0,
+        "clean_responses": 0,
+        "structural_compliance_rate": null,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {},
+          "clean_responses": {},
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": "[WinError 10061] No connection could be made because the target machine actively refused it"
+    },
+    {
+      "run_number": 5,
+      "resolved": null,
+      "outcome": null,
+      "rounds_taken": null,
+      "manifest_error_found_any_round": null,
+      "manifest_error_rounds": [],
+      "process_not_followed_any_round": null,
+      "duration_seconds": 2.0,
+      "compliance": {
+        "structured_responses": 0,
+        "clean_responses": 0,
+        "structural_compliance_rate": null,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {},
+          "clean_responses": {},
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": "[WinError 10061] No connection could be made because the target machine actively refused it"
+    },
+    {
+      "run_number": 6,
+      "resolved": null,
+      "outcome": null,
+      "rounds_taken": null,
+      "manifest_error_found_any_round": null,
+      "manifest_error_rounds": [],
+      "process_not_followed_any_round": null,
+      "duration_seconds": 2.0,
+      "compliance": {
+        "structured_responses": 0,
+        "clean_responses": 0,
+        "structural_compliance_rate": null,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {},
+          "clean_responses": {},
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": "[WinError 10061] No connection could be made because the target machine actively refused it"
+    },
+    {
+      "run_number": 7,
+      "resolved": null,
+      "outcome": null,
+      "rounds_taken": null,
+      "manifest_error_found_any_round": null,
+      "manifest_error_rounds": [],
+      "process_not_followed_any_round": null,
+      "duration_seconds": 2.0,
+      "compliance": {
+        "structured_responses": 0,
+        "clean_responses": 0,
+        "structural_compliance_rate": null,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {},
+          "clean_responses": {},
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": "[WinError 10061] No connection could be made because the target machine actively refused it"
+    },
+    {
+      "run_number": 8,
+      "resolved": null,
+      "outcome": null,
+      "rounds_taken": null,
+      "manifest_error_found_any_round": null,
+      "manifest_error_rounds": [],
+      "process_not_followed_any_round": null,
+      "duration_seconds": 2.0,
+      "compliance": {
+        "structured_responses": 0,
+        "clean_responses": 0,
+        "structural_compliance_rate": null,
+        "json_fallbacks": 0,
+        "field_coercions": 0,
+        "parse_failures": 0,
+        "repetition_retries": 0,
+        "structural_compliance_rate_note": "clean_responses / structured_responses \u2014 the share of structured LLM responses needing no brace-extraction fallback and no field coercion. A true proportion in [0,1]; one response may contribute several field_coercions, which is why those are counted separately.",
+        "by_site": {
+          "responses": {},
+          "clean_responses": {},
+          "json_fallbacks": {},
+          "field_coercions": {},
+          "parse_failures": {},
+          "repetition_retries": {}
+        }
+      },
+      "error": "[WinError 10061] No connection could be made because the target machine actively refused it"
+    }
+  ]
+}

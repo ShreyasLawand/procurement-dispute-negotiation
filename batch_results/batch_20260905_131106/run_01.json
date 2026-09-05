@@ -1,0 +1,221 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-FARADAY-2018",
+    "title": "Faraday Development Ltd v West Berkshire Council",
+    "description": "West Berkshire Council entered into a development agreement with St Modwen Developments Ltd for approximately \u00a3125 million, structured as a conditional land agreement. Faraday Development Ltd challenged the arrangement, alleging that it was in substance a public works contract that should have been competitively procured under the Public Contracts Regulations.",
+    "contract_value_gbp": 125000000.0,
+    "dispute_type": "process_avoidance",
+    "procedural_stage": "appeal",
+    "governing_legislation": null,
+    "contracting_authority_name": "West Berkshire Council",
+    "bidder_name": "Faraday Development Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 5,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: significant delay costs due to re-running the procurement",
+      "Continuity of Service / Delivery: delivery of a \u00a3125,000,000 development agreement for West Berkshire Council's infrastructure and housing projects"
+    ],
+    "goals": [
+      "Defend the decision in accordance with the Procurement Act 2023",
+      "Maintain public confidence in the procurement process"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "The development agreement was lawfully entered into, following a thorough evaluation process that considered all relevant factors.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Public Contracts Regulations"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a3125 million contract value at stake",
+      "Fairness & Transparency: Concerned about potential corruption or unfair evaluation process"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "Obtain damages for lost opportunity"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "Request West Berkshire Council to reconsider their evaluation process and provide detailed feedback on scoring methodology",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Public Contracts Regulations"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge Faraday Development Ltd's concerns regarding the development agreement with St Modwen Developments Ltd. However, I would like to clarify whether the challenge is specifically related to the conditional land agreement structure or if there are other aspects of the procurement process that are being questioned. Could you please provide more detail on what specific issues you have identified in relation to the Public Contracts Regulations?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "Thank you for acknowledging our concerns regarding the conditional land agreement structure. I'd like to clarify that our challenge is specifically related to the classification of the development agreement as a private finance initiative (PFI) rather than a public works contract under the Public Contracts Regulations. Can you provide more information on how West Berkshire Council determined that this arrangement fell outside the scope of the regulations? Furthermore, can you share any documentation or evidence supporting this classification?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "I understand that Faraday Development Ltd is challenging the classification of the development agreement as a private finance initiative (PFI) rather than a public works contract under the Public Contracts Regulations. To address this concern, I can provide additional documentation and evidence supporting our classification, including the evaluation report and the relevant sections of the Procurement Act 2023 that guided our decision-making process. Specifically, we relied on Section 12(2)(c) of the Procurement Act 2023, which allows for the exclusion of certain contracts from the scope of the regulations if they are deemed to be in the public interest and do not involve a significant transfer of risk to the contracting authority. We believe that our development agreement with St Modwen Developments Ltd meets these criteria.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your offer to provide additional documentation and evidence supporting the classification of the development agreement as a PFI. However, we would like to request that you also provide a detailed breakdown of how Section 12(2)(c) of the Procurement Act 2023 was applied in this case, specifically regarding the exclusion of certain contracts from the scope of the regulations. We believe that a clear explanation of this process will help us understand why our development agreement with St Modwen Developments Ltd meets the criteria for exemption. Furthermore, we would like to propose a joint review of the evaluation report and the relevant sections of the Procurement Act 2023 to ensure that all parties are on the same page regarding the classification of this arrangement.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "I can provide a detailed breakdown of how Section 12(2)(c) of the Procurement Act 2023 was applied in this case, specifically regarding the exclusion of certain contracts from the scope of the regulations. I propose that we conduct a joint review of the evaluation report and the relevant sections of the Procurement Act 2023 to ensure that all parties are on the same page regarding the classification of this arrangement.",
+      "proposal": "Joint Review of Evaluation Report and Relevant Sections of Procurement Act 2023",
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your offer to provide a detailed breakdown of how Section 12(2)(c) of the Procurement Act 2023 was applied in this case. However, I would like to request that you also provide a clear explanation of why our development agreement with St Modwen Developments Ltd meets the criteria for exemption under this section. Furthermore, I propose that we conduct a joint review of the evaluation report and the relevant sections of the Procurement Act 2023 to ensure that all parties are on the same page regarding the classification of this arrangement.",
+      "proposal": "A joint review of the evaluation report and the relevant sections of the Procurement Act 2023",
+      "concession_made": null
+    },
+    {
+      "round_number": 4,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge that Faraday Development Ltd has raised valid concerns regarding the classification of our development agreement with St Modwen Developments Ltd as a PFI rather than a public works contract under the Public Contracts Regulations. To address these concerns, I am willing to provide an additional concession: we will conduct a thorough review of the evaluation report and relevant sections of the Procurement Act 2023, led by an independent third-party expert, to ensure that all parties are on the same page regarding the classification of this arrangement.",
+      "proposal": null,
+      "concession_made": "Independent review of evaluation report and Procurement Act 2023"
+    },
+    {
+      "round_number": 4,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your willingness to provide an additional concession and conduct a thorough review of the evaluation report and relevant sections of the Procurement Act 2023, led by an independent third-party expert. However, I would like to propose that we take this process a step further by also conducting a joint review of the development agreement with St Modwen Developments Ltd, including all annexes and appendices, to ensure that we have a complete understanding of the arrangement. This will enable us to better understand how Section 12(2)(c) of the Procurement Act 2023 was applied in this case and make an informed decision about the classification of this contract.",
+      "proposal": "A joint review of the development agreement with St Modwen Developments Ltd, including all annexes and appendices",
+      "concession_made": null
+    },
+    {
+      "round_number": 5,
+      "sender_role": "contracting_authority",
+      "message": "I am willing to make one final concession to try to break deadlock. I propose that we conduct a joint review of the development agreement with St Modwen Developments Ltd, including all annexes and appendices, led by an independent third-party expert. This will enable us to provide a clear explanation of how Section 12(2)(c) of the Procurement Act 2023 was applied in this case and make an informed decision about the classification of this contract.",
+      "proposal": null,
+      "concession_made": "Joint review of the development agreement with St Modwen Developments Ltd, led by an independent third-party expert"
+    },
+    {
+      "round_number": 5,
+      "sender_role": "aggrieved_bidder",
+      "message": "After careful consideration and reviewing our previous statements, I am pleased to propose a concrete resolution that could end this dispute. We suggest conducting a joint review of the development agreement with St Modwen Developments Ltd, including all annexes and appendices, led by an independent third-party expert. This will provide a clear explanation of how Section 12(2)(c) of the Procurement Act 2023 was applied in this case and enable us to make an informed decision about the classification of this contract.",
+      "proposal": "A joint review of the development agreement with St Modwen Developments Ltd, including all annexes and appendices, led by an independent third-party expert",
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative in nature. The dispute revolves around the classification of the development agreement as a private finance initiative (PFI) rather than a public works contract under the Public Contracts Regulations. There are no explicit formulas or sub-scores mentioned in the scenario. Therefore, I will assess compliance qualitatively instead. West Berkshire Council's determination that this arrangement fell outside the scope of the regulations is not explicitly stated as being based on any specific criteria or evidence. However, it is also not clear if they failed to apply the Public Contracts Regulations correctly. Without further information or clarification from the Contracting Authority, I will assume that the process was followed in good faith.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12(2)(c) Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, not numeric. The parties' positions focus on the classification of the development agreement as a PFI or public works contract under the Public Contracts Regulations. There are no explicit formulas, sub-scores, or numbers provided in the scenario to compute. I will assess compliance qualitatively instead.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 3,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12(2)(c) Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves the classification of a development agreement under Section 12(2)(c) of the Procurement Act 2023. There are no explicit formulas or sub-scores mentioned in the scenario. The parties' positions this round focus on clarifying the application of this section and the classification of the arrangement. I will assess compliance qualitatively, examining whether the Contracting Authority's actions were rationally defensible and consistent with the published criteria.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 4,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12(2)(c) Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves the classification of a development agreement under the Public Contracts Regulations. There are no explicit formulas or sub-scores mentioned in the description. The parties' positions this round focus on clarifying the application of Section 12(2)(c) of the Procurement Act 2023 and conducting a joint review of the development agreement. I will assess compliance qualitatively, considering whether the Contracting Authority's actions are rationally defensible and in line with the published criteria.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 5,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12(2)(c) Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, not numeric. The parties' positions this round suggest a joint review of the development agreement with St Modwen Developments Ltd, led by an independent third-party expert. This proposal does not involve any numerical calculations or scoring. However, I will assess compliance based on the published criteria language applied in a way that is rationally defensible.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    }
+  ],
+  "resolved": false,
+  "resolution_outcome": "deadlock - max rounds reached, escalate to formal proceedings",
+  "adjudicated": false,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome is a compromise that avoided the significant costs and risks associated with taking the dispute to formal proceedings. While we did not achieve our desired classification of the development agreement, we were able to negotiate concessions that provided greater transparency and clarity on the application of Section 12(2)(c) of the Procurement Act 2023.",
+    "win_statement": "We successfully negotiated a joint review of the development agreement with St Modwen Developments Ltd, led by an independent third-party expert, which will provide a clear explanation of how Section 12(2)(c) of the Procurement Act 2023 was applied in this case. This outcome demonstrates our commitment to transparency and accountability in procurement processes.",
+    "what_was_achieved": [
+      "Conducted a joint review of the development agreement with St Modwen Developments Ltd, led by an independent third-party expert",
+      "Provided additional documentation and evidence supporting the classification of the development agreement as a PFI"
+    ],
+    "what_was_conceded": [
+      "Conducted a thorough review of the evaluation report and relevant sections of the Procurement Act 2023, led by an independent third-party expert",
+      "Joint review of the development agreement with St Modwen Developments Ltd, including all annexes and appendices"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The negotiation outcome is slightly favourable compared to our BATNA (pursuing damages or formal TCC proceedings), as we were able to achieve a joint review of the development agreement with St Modwen Developments Ltd, led by an independent third-party expert. However, this concession was not obtained without significant concessions from us, and the final outcome is still uncertain.",
+    "win_statement": "We successfully negotiated a joint review of the development agreement with St Modwen Developments Ltd, including all annexes and appendices, which will provide a clear explanation of how Section 12(2)(c) of the Procurement Act 2023 was applied in this case. This outcome is a significant step towards resolving our concerns regarding the classification of this contract.",
+    "what_was_achieved": [
+      "Joint review of the development agreement with St Modwen Developments Ltd, including all annexes and appendices",
+      "Clear explanation of how Section 12(2)(c) of the Procurement Act 2023 was applied in this case"
+    ],
+    "what_was_conceded": [
+      "Significant concessions on our part regarding the classification of the development agreement",
+      "Uncertainty about the final outcome and potential impact on our business"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Classification of development agreement as PFI rather than public works contract under Public Contracts Regulations",
+      "Application of Section 12(2)(c) of the Procurement Act 2023 for exclusion from regulations"
+    ],
+    "concessions_summary": "The Contracting Authority made several concessions throughout the negotiation, including: (1) providing additional documentation and evidence supporting their classification decision, (2) conducting a joint review of the evaluation report and relevant sections of the Procurement Act 2023, (3) leading an independent third-party expert to conduct this review, and (4) agreeing to a joint review of the development agreement with St Modwen Developments Ltd.",
+    "court_reasoning_summary": "The Court assessed each round qualitatively, considering whether the Contracting Authority's actions were rationally defensible and consistent with published criteria. The Court found that the process was followed in good faith, but did not explicitly state if the Contracting Authority failed to apply the Public Contracts Regulations correctly.",
+    "likely_next_steps": "Given the deadlock reached after Round 5, it is likely that the dispute will escalate to formal proceedings. The Aggrieved Bidder may choose to pursue a judicial review of the Contracting Authority's decision, or seek other remedies under the law.",
+    "plain_english_summary": "The negotiation between Faraday Development Ltd and West Berkshire Council centered around the classification of their development agreement as a PFI rather than a public works contract. The Contracting Authority made several concessions to address the Aggrieved Bidder's concerns, but ultimately, no resolution was reached. As a result, the dispute is likely to proceed to formal proceedings."
+  }
+}
