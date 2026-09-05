@@ -1,0 +1,122 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-ALSTOM-2017",
+    "title": "Alstom Transport UK Ltd v London Underground Ltd",
+    "description": "London Underground awarded contract to Bombardier for \u00a3112.1 million worth of AC traction motors and control equipment. Alstom challenged the award alleging a manifest error in applying a mandatory technical threshold requirement, which should have excluded Bombardier's bid. The challenge was brought during the standstill period, triggering an automatic suspension. London Underground applied to lift the suspension under the American Cyanamid framework, arguing that damages would be adequate remedy for Alstom if it succeeded at trial and that the balance of convenience favoured proceeding with the contract.",
+    "contract_value_gbp": 112100000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "standstill",
+    "governing_legislation": null,
+    "contracting_authority_name": "London Underground Ltd",
+    "bidder_name": "Alstom Transport UK Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 1,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: \u00a3112.1 million contract value at stake",
+      "Continuity of Service / Delivery: Critical infrastructure delivery for London's transport network",
+      "Reputation & Public Accountability: Maintain public confidence in procurement process"
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Resolve the dispute through negotiation"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our evaluation process, which was conducted fairly and transparently",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Regulation 32(1) Standstill Period"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a3112.1 million contract value at stake",
+      "Fairness & Transparency: perceived unfair application of technical threshold requirement"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids, giving us a chance to be awarded the contract ourselves"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We believe there was a manifest error in applying the technical threshold requirement, which should have excluded Bombardier's bid. We request an immediate re-evaluation of all bids to ensure fairness and transparency.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "American Cyanamid framework"
+    ],
+    "confidence_score": 0.7
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "I acknowledge Alstom's challenge and understand their concerns regarding the mandatory technical threshold requirement. However, I would like to clarify whether Alstom is alleging that this error was a result of an incorrect application of the evaluation criteria or a misunderstanding of the requirements themselves.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate your clarification on our concerns regarding the technical threshold requirement. However, I would like to ask for more specific information about how London Underground applied this requirement in evaluating Bombardier's bid. Can you provide us with a detailed breakdown of how the scores were allocated and what led to the conclusion that Bombardier's bid met the threshold?",
+      "proposal": null,
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "s12 of the Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative as it involves a technical threshold requirement and its application. There is no explicit formula or sub-scores mentioned in the scenario. However, Alstom's challenge suggests that London Underground may have misapplied the evaluation criteria or misunderstood the requirements themselves. To assess compliance, I will examine whether the Contracting Authority can provide a rational justification for their decision. Unfortunately, without further information on how the scores were allocated and what led to the conclusion that Bombardier's bid met the threshold, it is difficult to determine if there was a manifest error. However, based on Alstom's challenge, I will proceed with caution.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome is more favourable than our BATNA of defending in TCC court, which would have cost \u00a350k+ and taken 6-12 months. We were able to negotiate a re-evaluation rather than proceeding with the original contract award.",
+    "win_statement": "We successfully negotiated a re-evaluation of the contract award, avoiding potential costly and time-consuming litigation.",
+    "what_was_achieved": [
+      "Negotiated a re-evaluation of the contract award",
+      "Avoided potential costly and time-consuming litigation"
+    ],
+    "what_was_conceded": [
+      "Agreed to re-evaluate the technical threshold requirement",
+      "Provided additional information on how the scores were allocated"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome, re-evaluation of the contract award, is a compromise between our BATNA (pursuing damages or formal TCC proceedings) and our desired outcome. While it's not a complete victory, it's better than our worst-case scenario.",
+    "win_statement": "We were able to secure a re-evaluation of the contract award, which will give us another opportunity to challenge the technical threshold requirement. Although we didn't get the immediate suspension of the contract that we sought, this outcome is still more favourable than pursuing costly and uncertain legal action.",
+    "what_was_achieved": [
+      "A re-evaluation of the contract award",
+      "The opportunity for further review and potential correction of the technical threshold requirement"
+    ],
+    "what_was_conceded": [
+      "Immediate suspension of the contract during the standstill period",
+      "Our desire for a more definitive resolution to the dispute at this stage"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Technical threshold requirement",
+      "Application of evaluation criteria",
+      "Misunderstanding of requirements"
+    ],
+    "concessions_summary": "Neither side made any concessions during the negotiation. The Contracting Authority clarified their understanding of Alstom's concerns, but did not provide additional information to address them.",
+    "court_reasoning_summary": "The Court assessed each round and concluded that there was a manifest error due to the lack of transparency in how London Underground applied the technical threshold requirement. Without further information on score allocation and justification for Bombardier's bid meeting the threshold, the Court recommended re-evaluation.",
+    "likely_next_steps": "Re-evaluation will be conducted by London Underground to reassess Alstom's bid against the technical threshold requirement. This may involve providing a detailed breakdown of how scores were allocated and justifying their decision.",
+    "plain_english_summary": "The dispute centered on whether London Underground correctly applied the technical requirements for Bombardier's bid. The Court agreed that there was an issue, but needed more information to make a final decision. As a result, the Contracting Authority will re-evaluate Alstom's bid against these requirements."
+  }
+}

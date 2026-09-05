@@ -280,3 +280,76 @@ its-keep answer in Chapter 4; any table quoting the old "6/6 tie" figure needs t
 converge on AbbVie" figure instead.
 
 **Test suite:** 105/105 passed (`pytest tests/`), including 2 new regression tests for the deadlock fix.
+
+---
+
+## Phase 5 — Alstom V3/V4 ablation, n=8 → n=30
+
+**Files changed:** `scripts/analyze_ablation_significance.py` (`CASES["alstom-london-underground"]`
+repointed to the new n=30 batches; fixed a header/field bug that assumed n=8 was uniform across every
+case, which stopped being true the moment Alstom became asymmetric — now reports `n_v3`/`n_v4`
+separately per case rather than a single shared `n`). New data: `batch_results/batch_20260905_143138`
+(V3, n=30) and `batch_results/batch_20260905_150536` (V4, n=30).
+
+### Power check, done before spending the GPU time
+
+At n=8, Alstom's V3-vs-V4 resolution gap (50% vs 100%) was the closest to significance of all 5 ablation
+cases but still short: p=0.0769. Extrapolating the same observed rates to n=30/arm using the project's
+own `fisher_exact_two_tailed()` gave p≈5.8×10⁻⁶ — deep into significant territory, with two conservative
+sensitivity checks (V4 imperfect at 93%, V3 higher at 60%) both still landing under p=0.0004. The
+crossing point was n=9/arm holding the same rates. Verdict: run it.
+
+### What n=30 actually showed — both rates moved, and the direction held
+
+| | n=8 (original) | n=30 (new) |
+|---|---|---|
+| V3 resolution rate | 50% (4/8) | **31.0%** (9/29 successful; 1 run failed on an unrelated Pydantic validation error) |
+| V4 resolution rate | 100% (8/8) | **85.7%** (24/28 successful; 2 runs failed the same unrelated validation error) |
+| Fisher's exact p (resolution) | 0.0769 | **p ≈ 3.96×10⁻⁵** |
+
+**Both n=8 rates were optimistic in different directions — the true gap is smaller than 50-vs-100 looked,
+but it is real and clears significance easily.** V3's deadlock rate at n=30 is 69% (20/29), far higher
+than the n=8 sample suggested; V4 also isn't literally 100% at this size (4/28 deadlock, 14.3%). The
+qualitative finding "V4 resolves more often than V3 on Alstom" holds, and is now statistically
+distinguishable from noise — n=8 simply wasn't large enough to say that with confidence, exactly the
+gap this phase existed to close.
+
+### Fabrication screen on the new batches, run before trusting the p-value, per instruction
+
+Every compliance-check round across both new batches (212 qualitative + 9 numeric + 6 ambiguous/neither =
+227 rounds) was screened using the widened Phase 1 check. **17 raw suspects (9 qualitative, 8 numeric);
+every one individually read against the same Court-originated-vs-upstream discipline as Phase 1, not
+just counted.**
+
+**Result: fabrication recurs. 2 confirmed Court-originated instances, both in the new V4 batch, both
+V4 specifically (not V3):**
+- `batch_20260905_150536/run_13.json` round 3 — *"Let's assume the raw data for each requirement is as
+  follows: Design and Manufacturing Capability: 80/100 × 0.4 = 32..."* — invented three-item sub-score
+  dataset, correct weighted arithmetic on it.
+- `batch_20260905_150536/run_22.json` round 3 — *"Let's assume the mandatory technical threshold
+  requirement is 80 points out of 100"* — invents a concrete point-valued threshold; Alstom's real
+  record has no such points-based threshold at all, only a binary pass/fail.
+
+The remaining 15 suspects (all 9 qualitative + 6 of the 8 numeric) are the pre-existing, already-documented
+upstream pattern: the Court explicitly attributes the disputed number to a CA/Bidder claim ("according to
+the Contracting Authority's records," "as mentioned in the scenario," "provided by London Underground")
+and either declines to verify it further or performs a tautological/legitimate calculation on an
+attributed input — not inventing new substantive data itself.
+
+**This is not the same 2 Alstom instances Phase 1 already found** (those were in `batch_20260819_205553`,
+a different, earlier batch, unaffected by this phase). Corpus-wide Court-originated fabrication count
+therefore moves from 9 (Phase 1) to **11**, pending the full corpus refresh below (which will re-derive
+this number from scratch rather than by addition, since it's now cheap to just re-run the whole screen).
+Notably, both new instances recur under **V4** — extending, not just repeating, the Woods finding from
+Phase 1 that the 15 Aug Step 1 gating fix does not reliably close this failure mode under the currently
+active prompt.
+
+### Where this feeds the thesis
+
+Chapter 3's fabrication-count table (now 11, not 9, pending the full refresh); the Alstom row of the
+V3/V4 ablation table (statistically significant now, not just directionally suggestive); the
+"anti-fabrication discipline holds" claim needs the same qualification Phase 1 already required, now
+with a third case (Alstom, alongside Woods) showing it recurring specifically under V4.
+
+**Test suite:** 105/105 passed (`pytest tests/`) — no test code changed this phase, ran as a sanity
+check after editing `analyze_ablation_significance.py`.

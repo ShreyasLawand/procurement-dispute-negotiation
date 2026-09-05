@@ -1,0 +1,223 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-ALSTOM-2017",
+    "title": "Alstom Transport UK Ltd v London Underground Ltd",
+    "description": "London Underground awarded contract to Bombardier for \u00a3112.1 million worth of AC traction motors and control equipment. Alstom challenged the award alleging a manifest error in applying a mandatory technical threshold requirement, which should have excluded Bombardier's bid. The challenge was brought during the standstill period, triggering an automatic suspension. London Underground applied to lift the suspension under the American Cyanamid framework, arguing that damages would be adequate remedy for Alstom if it succeeded at trial and that the balance of convenience favoured proceeding with the contract.",
+    "contract_value_gbp": 112100000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "standstill",
+    "governing_legislation": null,
+    "contracting_authority_name": "London Underground Ltd",
+    "bidder_name": "Alstom Transport UK Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 5,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Protection of Public Funds: significant delay costs",
+      "Continuity of Service / Delivery: timely delivery of \u00a3112,100,000 worth of AC traction motors and control equipment is critical to maintaining London Underground's services"
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Reach a negotiated resolution"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We have carefully evaluated Alstom's challenge and believe that our original scoring was correct. We are willing to provide additional transparency and feedback, but we cannot simply re-score bids or discuss other bidders' scores in detail.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "Regulation 32(1) of the Public Contracts Regulations 2015"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: We stand to lose \u00a3112.1 million if we do not succeed in this challenge.",
+      "Fairness & Transparency: The manifest error in applying the technical threshold requirement undermines our confidence in the evaluation process.",
+      "Protection of Reputation: A loss here would damage our credibility and ability to bid competitively in future procurements, particularly given our internal messaging about a win."
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "Award damages"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We request an immediate re-evaluation of the bids, with full disclosure of the evaluation process and scoring methodology to ensure fairness and transparency.",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "American Cyanamid framework"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "Alstom Transport UK Ltd has challenged the award alleging a manifest error in applying a mandatory technical threshold requirement, which should have excluded Bombardier's bid. Can you clarify what specific technical requirements were not met by Bombardier's bid and how this relates to the evaluation criteria?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "Can you provide more information about how London Underground applied the mandatory technical threshold requirement and what specific technical requirements were not met by Bombardier's bid? Additionally, can you clarify the exact scoring methodology used for this evaluation criterion?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Alstom's concerns regarding the mandatory technical threshold requirement and the evaluation process. To clarify, the specific technical requirements not met by Bombardier's bid relate to the 'Design for Manufacture' criterion, which accounted for 10% of the overall score. We can provide additional information on how this was applied, including the exact scoring methodology used for this evaluation criterion. Specifically, we used a weighted average of three sub-criteria: design complexity, manufacturing efficiency, and quality control measures. The scores were as follows: Design Complexity (3/5), Manufacturing Efficiency (4/5), and Quality Control Measures (4.5/5). We can provide more details on how these scores were calculated if required.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate the additional information provided by London Underground regarding the 'Design for Manufacture' criterion and its sub-criteria. However, I would like to request more clarity on how the scores were weighted and combined to arrive at the overall score for this criterion. Specifically, can you provide a breakdown of how the 3/5, 4/5, and 4.5/5 scores for design complexity, manufacturing efficiency, and quality control measures respectively were combined using the weighted average method? Additionally, I would like to propose that we conduct an independent review of the evaluation process to ensure that all bidders were treated fairly and consistently.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "We appreciate Alstom's request for further clarification on the 'Design for Manufacture' criterion and its sub-criteria. To address this, we are willing to provide a detailed breakdown of how the weighted average was calculated, including the exact weights assigned to each sub-criterion. We will also consider an independent review of the evaluation process to ensure that all bidders were treated fairly and consistently.",
+      "proposal": "An independent review of the evaluation process by a third-party expert",
+      "concession_made": "A voluntary standstill extension for engagement"
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate London Underground's willingness to provide a detailed breakdown of how the weighted average was calculated for the 'Design for Manufacture' criterion. However, I would like to request that this breakdown be provided in a format that allows us to easily verify its accuracy and consistency with the evaluation criteria. Additionally, I would like to propose that we conduct an independent review of the evaluation process as previously suggested, which could provide further clarity on any discrepancies or inconsistencies in the scoring methodology.",
+      "proposal": "A formal, independent review of the evaluation process",
+      "concession_made": null
+    },
+    {
+      "round_number": 4,
+      "sender_role": "contracting_authority",
+      "message": "We are willing to provide a detailed breakdown of how the weighted average was calculated for the 'Design for Manufacture' criterion, including the exact weights assigned to each sub-criterion. We will also conduct an independent review of the evaluation process to ensure that all bidders were treated fairly and consistently. Furthermore, we propose that this review be led by a neutral third-party expert with experience in procurement evaluation methodologies.",
+      "proposal": "Independent Review of Evaluation Process",
+      "concession_made": null
+    },
+    {
+      "round_number": 4,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate London Underground's willingness to conduct an independent review of the evaluation process, led by a neutral third-party expert with experience in procurement evaluation methodologies. However, I would like to propose that this review also include a detailed examination of the scoring methodology used for the 'Design for Manufacture' criterion, including the exact weights assigned to each sub-criterion and how they were combined using the weighted average method. Furthermore, I suggest that we agree on a clear timeline and scope for this review, as well as the terms of reference for the neutral expert.",
+      "proposal": "Independent review of evaluation process with detailed examination of scoring methodology",
+      "concession_made": null
+    },
+    {
+      "round_number": 5,
+      "sender_role": "contracting_authority",
+      "message": "We are willing to conduct an independent review of the evaluation process, led by a neutral third-party expert with experience in procurement evaluation methodologies. The scope of this review will include a detailed examination of the scoring methodology used for the 'Design for Manufacture' criterion, including the exact weights assigned to each sub-criterion and how they were combined using the weighted average method. We propose that this review be completed within 6 weeks and that its findings be binding on both parties.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 5,
+      "sender_role": "aggrieved_bidder",
+      "message": "I appreciate London Underground's willingness to conduct an independent review of the evaluation process, led by a neutral third-party expert with experience in procurement evaluation methodologies. However, I would like to propose that this review be binding on both parties and that its findings be used to determine the outcome of this dispute. Furthermore, I suggest that we agree on a clear timeline and scope for this review, as well as the terms of reference for the neutral expert.",
+      "proposal": "A binding independent review of the evaluation process, with its findings determining the outcome of this dispute",
+      "concession_made": null
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 of the Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a technical threshold requirement and evaluation criteria. I will assess compliance qualitatively instead of performing a numeric calculation. The scenario does not provide specific details on the technical requirements or scoring methodology used by London Underground. However, based on the information provided, it appears that Alstom Transport UK Ltd has challenged the award alleging a manifest error in applying a mandatory technical threshold requirement. To assess compliance, I will examine whether the published evaluation criteria were applied in a way that is rationally defensible.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "The scenario states that the 'Design for Manufacture' criterion accounted for 10% of the overall score. It also provides specific sub-criteria scores: Design Complexity (3/5), Manufacturing Efficiency (4/5), and Quality Control Measures (4.5/5). To calculate the weighted average, I will use the following formula: (0.1 x 3) + (0.1 x 4) + (0.1 x 4.5) = 0.3 + 0.4 + 0.45 = 1.15. This is the score for the 'Design for Manufacture' criterion. Since this calculation does not match any stated outcome, I will proceed with a qualitative assessment.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 3,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a technical threshold requirement and the evaluation of bidders' designs. There is no explicit formula or numeric calculation provided in the scenario. London Underground's willingness to provide a detailed breakdown of how the weighted average was calculated for the 'Design for Manufacture' criterion does not change the fact that this is a qualitative assessment. I will assess compliance qualitatively instead, checking whether the published criteria language was applied in a way that is rationally defensible.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 4,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative. There are no explicit formulas or sub-scores provided in the scenario description. The parties' positions this round discuss a weighted average calculation and an independent review of the evaluation process. However, these details do not change the fact that the scenario does not contain any objective, computable facts. Therefore, I will assess compliance qualitatively instead.\n\nThe Contracting Authority's position this round shows willingness to provide transparency and conduct an independent review, which is a positive step towards ensuring fairness and consistency in the evaluation process. The Aggrieved Bidder's proposal for a detailed examination of the scoring methodology also demonstrates a commitment to understanding the evaluation process.\n\nBased on my qualitative assessment, I conclude that the Contracting Authority has taken steps to address the concerns raised by the Aggrieved Bidder and is working towards ensuring compliance with procurement regulations.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 5,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative. The parties are discussing an independent review of the evaluation process, but no specific numbers or formulae are mentioned. However, I note that Alstom challenged the award alleging a manifest error in applying a mandatory technical threshold requirement, which suggests that there may be an issue with the scoring methodology used for the 'Design for Manufacture' criterion. London Underground's willingness to conduct an independent review is a positive step, but it does not address the underlying issue of whether the process was lawful and compliant with procurement regulations. I conclude that the Contracting Authority has not followed a lawful and procedurally correct process.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome is more favorable than our initial BATNA (defending in TCC court, which would cost \u00a350k+ and take 6-12 months) because we were able to negotiate a re-evaluation of the contract award without having to go to trial. This avoided significant legal costs and uncertainty.",
+    "win_statement": "We successfully negotiated an independent review of the evaluation process, led by a neutral third-party expert with experience in procurement evaluation methodologies. This review will provide clarity on any discrepancies or inconsistencies in the scoring methodology used for the 'Design for Manufacture' criterion.",
+    "what_was_achieved": [
+      "Conducted an independent review of the evaluation process",
+      "Provided detailed breakdown of weighted average calculation for 'Design for Manufacture' criterion"
+    ],
+    "what_was_conceded": [
+      "Agreed to binding findings from the neutral expert's review",
+      "Allowed Alstom to propose terms of reference and scope for the review"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The outcome is favourable compared to pursuing damages or formal TCC proceedings. An independent review of the evaluation process will be conducted, which could provide further clarity on any discrepancies or inconsistencies in the scoring methodology.",
+    "win_statement": "We have secured an agreement for a re-evaluation of the 'Design for Manufacture' criterion, including a detailed examination of the scoring methodology used and the exact weights assigned to each sub-criterion. This is a significant concession from London Underground, which acknowledges our concerns regarding the evaluation process.",
+    "what_was_achieved": [
+      "A re-evaluation of the 'Design for Manufacture' criterion will be conducted",
+      "An independent review of the evaluation process will be led by a neutral third-party expert"
+    ],
+    "what_was_conceded": [
+      "London Underground will provide a detailed breakdown of how the weighted average was calculated for the 'Design for Manufacture' criterion",
+      "The independent review will include a binding determination on the outcome of this dispute"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Application of mandatory technical threshold requirement",
+      "Evaluation criteria for 'Design for Manufacture' criterion",
+      "Scoring methodology used for the 'Design for Manufacture' criterion"
+    ],
+    "concessions_summary": "The Contracting Authority (London Underground) made several concessions throughout the negotiation, including: providing additional information on the evaluation process, offering to conduct an independent review of the evaluation process, and agreeing to provide a detailed breakdown of how the weighted average was calculated for the 'Design for Manufacture' criterion.",
+    "court_reasoning_summary": "The Court concluded that there was a manifest error in applying the mandatory technical threshold requirement, which led to a re-evaluation being recommended. The Court's reasoning was based on its qualitative assessment of the scenario, taking into account the parties' positions and proposals throughout the negotiation.",
+    "likely_next_steps": "Given the Court's recommendation for re-evaluation, it is likely that the Contracting Authority will conduct a new evaluation process to determine the outcome of the dispute. This may involve revisiting the scoring methodology used for the 'Design for Manufacture' criterion and ensuring compliance with procurement regulations.",
+    "plain_english_summary": "The negotiation between Alstom Transport UK Ltd (the Aggrieved Bidder) and London Underground (the Contracting Authority) centered around concerns regarding the application of a mandatory technical threshold requirement and the evaluation criteria used for the 'Design for Manufacture' criterion. The parties made concessions throughout the negotiation, but ultimately, the Court concluded that there was a manifest error in applying the technical threshold requirement, leading to a recommendation for re-evaluation."
+  }
+}

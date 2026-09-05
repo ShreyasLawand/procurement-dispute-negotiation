@@ -1,0 +1,200 @@
+{
+  "scenario": {
+    "dispute_id": "REAL-ALSTOM-2017",
+    "title": "Alstom Transport UK Ltd v London Underground Ltd",
+    "description": "London Underground awarded contract to Bombardier for \u00a3112.1 million worth of AC traction motors and control equipment. Alstom challenged the award alleging a manifest error in applying a mandatory technical threshold requirement, which should have excluded Bombardier's bid. The challenge was brought during the standstill period, triggering an automatic suspension. London Underground applied to lift the suspension under the American Cyanamid framework, arguing that damages would be adequate remedy for Alstom if it succeeded at trial and that the balance of convenience favoured proceeding with the contract.",
+    "contract_value_gbp": 112100000.0,
+    "dispute_type": "scoring_challenge",
+    "procedural_stage": "standstill",
+    "governing_legislation": null,
+    "contracting_authority_name": "London Underground Ltd",
+    "bidder_name": "Alstom Transport UK Ltd",
+    "ca_profile": null,
+    "bidder_profile": null
+  },
+  "round_number": 4,
+  "max_rounds": 5,
+  "ca_pre_negotiation": {
+    "role": "contracting_authority",
+    "interests": [
+      "Continuity of Service / Delivery: \u00a3112.1 million worth of AC traction motors and control equipment for the London Underground is at risk of delay or cancellation.",
+      "Protection of Public Funds: Significant delay costs are likely if the contract award is challenged further, given the substantial value of the contract.",
+      "Reputation & Public Accountability: The reputation of London Underground as a competent and fair buyer is at stake in this dispute."
+    ],
+    "goals": [
+      "Defend the procurement decision",
+      "Resolve the dispute through negotiation"
+    ],
+    "batna": "Defend the decision in the TCC \u2014 costly (\u00a350k+) and slow (6-12 months), with a real risk of automatic suspension.",
+    "opening_position": "We stand by our evaluation process and believe that no manifest error was made in applying the technical threshold requirement.",
+    "legal_basis": [
+      "Procurement Act 2023, s12(1)(a) - Value for money",
+      "Procurement Act 2023, s12(1)(b) - Maximising public benefit"
+    ],
+    "confidence_score": 0.8
+  },
+  "bidder_pre_negotiation": {
+    "role": "aggrieved_bidder",
+    "interests": [
+      "Commercial Loss & Recovery: \u00a3112.1 million contract value at stake",
+      "Fairness & Transparency: perceived unfair treatment in applying technical threshold requirement",
+      "Protection of Reputation: potential damage to Alstom's credibility and win-rate targets"
+    ],
+    "goals": [
+      "Force a re-evaluation of submitted bids",
+      "Award the contract to Alstom"
+    ],
+    "batna": "Pursue a damages claim in the TCC \u2014 costly (\u00a350k-\u00a3100k in legal fees) for a business our size, slow, and the outcome is uncertain.",
+    "opening_position": "We believe there was a manifest error in applying the technical threshold requirement, which warrants a re-evaluation of all bids",
+    "legal_basis": [
+      "Procurement Act 2023",
+      "standstill period"
+    ],
+    "confidence_score": 0.8
+  },
+  "messages": [
+    {
+      "round_number": 1,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Alstom's challenge and appreciate their diligence in bringing this matter to our attention. However, we must clarify that the technical threshold requirement was applied consistently with the evaluation criteria published in the tender documentation. Can you provide specific details on how you believe Bombardier's bid failed to meet this requirement?",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 1,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your clarification on the technical threshold requirement. However, we still believe that the evaluation was inconsistent in its application. Can you provide a detailed breakdown of how Bombardier's bid met this requirement, specifically addressing the scoring discrepancy noted in our initial challenge? Furthermore, we would like to request access to the evaluator comments and scoring sheets for further review.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 2,
+      "sender_role": "contracting_authority",
+      "message": "We acknowledge Alstom's request for access to evaluator comments and scoring sheets. However, we must balance their need for transparency with the requirement to protect commercially sensitive information. We propose providing a redacted version of the evaluation documents, excluding any specific scores or comments that could compromise the integrity of the evaluation process. This will allow Alstom to review the evaluation criteria and methodology while maintaining confidentiality around individual bidder scores.",
+      "proposal": null,
+      "concession_made": "Providing a redacted version of the evaluation documents"
+    },
+    {
+      "round_number": 2,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to provide redacted evaluation documents. However, we still believe that a full review of the scoring methodology and evaluator comments is necessary to understand the manifest error in applying the technical threshold requirement. Can you confirm whether the redacted version will include any information on how the mandatory technical threshold was applied in relation to Bombardier's bid? Furthermore, we would like to request clarification on what specific scores or comments will be excluded from the evaluation documents and why.",
+      "proposal": null,
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "contracting_authority",
+      "message": "We understand Alstom's concerns regarding the technical threshold requirement and its application to Bombardier's bid. To address their request for a detailed breakdown, we can provide a revised scoring sheet that highlights the specific evaluation criteria applied to each bidder, including Bombardier's bid. This will allow Alstom to review the evaluation process and methodology in more detail. However, we must reiterate that our initial assessment of the technical threshold requirement was consistent with the published evaluation criteria.",
+      "proposal": "A revised scoring sheet highlighting the specific evaluation criteria applied to each bidder",
+      "concession_made": null
+    },
+    {
+      "round_number": 3,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to provide a revised scoring sheet that highlights the specific evaluation criteria applied to each bidder, including Bombardier's bid. However, we still believe that this does not address our concerns regarding the manifest error in applying the technical threshold requirement. We would like to request a detailed explanation of how the mandatory technical threshold was applied to Bombardier's bid, specifically addressing the scoring discrepancy noted in our initial challenge. Furthermore, we would like to propose a compromise: if you provide a full review of the scoring methodology and evaluator comments, including any specific scores or comments that may have contributed to the manifest error, we will consider withdrawing our challenge.",
+      "proposal": "A full review of the scoring methodology and evaluator comments",
+      "concession_made": null
+    },
+    {
+      "round_number": 4,
+      "sender_role": "contracting_authority",
+      "message": "We are willing to provide a full review of the scoring methodology and evaluator comments, including any specific scores or comments that may have contributed to the manifest error. This will allow Alstom to review the evaluation process and methodology in more detail. In exchange, we request that Alstom consider withdrawing their challenge.",
+      "proposal": null,
+      "concession_made": "A full review of the scoring methodology and evaluator comments"
+    },
+    {
+      "round_number": 4,
+      "sender_role": "aggrieved_bidder",
+      "message": "We appreciate your willingness to provide a full review of the scoring methodology and evaluator comments. This is a significant concession on your part, and we are willing to consider withdrawing our challenge if this review confirms that there was indeed a manifest error in applying the technical threshold requirement. However, we would like to propose a condition for withdrawal: if the review reveals that the evaluation process was flawed, we request that London Underground take immediate action to rectify the situation, including potentially re-evaluating Bombardier's bid and awarding the contract to Alstom if necessary.",
+      "proposal": null,
+      "concession_made": "London Underground providing a full review of the scoring methodology and evaluator comments"
+    }
+  ],
+  "compliance_checks": [
+    {
+      "round_number": 1,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 of the Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a technical threshold requirement and evaluation criteria published in the tender documentation. There are no explicit formulas or sub-scores provided to compute. I will assess compliance qualitatively instead. The Contracting Authority claims that the technical threshold requirement was applied consistently with the evaluation criteria. However, the Aggrieved Bidder believes that the evaluation was inconsistent in its application. Without further information on the specific details of the evaluation and scoring discrepancy, it is difficult to determine whether a manifest error occurred. I will proceed under the assumption that the Contracting Authority's process was compliant.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 2,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative. The parties are discussing the evaluation methodology and evaluator comments, but no specific formula or sub-scores are mentioned. London Underground proposes providing a redacted version of the evaluation documents to balance Alstom's need for transparency with the requirement to protect commercially sensitive information. This approach appears to be in line with s12 Procurement Act 2023, which emphasizes transparency and integrity. I do not see any manifest error in applying the technical threshold requirement based on the provided information.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 3,
+      "process_followed": true,
+      "manifest_error_found": false,
+      "applicable_provisions": [
+        "s12 of the Procurement Act 2023 (value for money, public benefit, transparency, integrity)"
+      ],
+      "reasoning": "This scenario is qualitative. The technical threshold requirement and its application to Bombardier's bid are not explicitly stated in a formula or with specific numeric input values. Therefore, I will assess compliance qualitatively instead of performing an arithmetic calculation. London Underground provided a revised scoring sheet that highlights the specific evaluation criteria applied to each bidder, including Bombardier's bid. This suggests that they followed the published evaluation methodology and provided transparency. However, Alstom still believes that there was a manifest error in applying the technical threshold requirement. I will examine this claim further.",
+      "recommended_action": "continue negotiation",
+      "deadlock": false
+    },
+    {
+      "round_number": 4,
+      "process_followed": false,
+      "manifest_error_found": true,
+      "applicable_provisions": [
+        "Regulation 86(3) Procurement Act 2023"
+      ],
+      "reasoning": "This scenario is qualitative, as it involves a technical threshold requirement and the application of mandatory criteria. I will assess compliance qualitatively instead of performing a numerical calculation. The Contracting Authority's position this round indicates that they are willing to provide a full review of the scoring methodology, which suggests that there may have been an error in applying the technical threshold requirement. However, the Aggrieved Bidder's condition for withdrawal requires immediate action from London Underground, including potentially re-evaluating Bombardier's bid and awarding the contract to Alstom if necessary. This implies that the evaluation process was flawed, which is a clear indication of manifest error.",
+      "recommended_action": "re-evaluation",
+      "deadlock": false
+    }
+  ],
+  "resolved": true,
+  "resolution_outcome": "re-evaluation",
+  "adjudicated": true,
+  "ca_win_statement": {
+    "role": "contracting_authority",
+    "outcome_relative_to_batna": "The final outcome of a re-evaluation is more favourable than our initial BATNA, which was defending in TCC court. This would have cost \u00a350k+ and taken 6-12 months.",
+    "win_statement": "We successfully negotiated a re-evaluation of the contract award, avoiding the need for costly litigation and preserving the integrity of the evaluation process.",
+    "what_was_achieved": [
+      "Provided a redacted version of the evaluation documents to address Alstom's concerns",
+      "Offered a revised scoring sheet highlighting specific evaluation criteria applied to each bidder",
+      "Conducted a full review of the scoring methodology and evaluator comments"
+    ],
+    "what_was_conceded": [
+      "Providing access to evaluator comments and scoring sheets, albeit redacted",
+      "Allowing Alstom to request a detailed explanation of how the mandatory technical threshold was applied to Bombardier's bid"
+    ]
+  },
+  "bidder_win_statement": {
+    "role": "aggrieved_bidder",
+    "outcome_relative_to_batna": "The final outcome of a re-evaluation, which is more favorable than pursuing damages or formal TCC proceedings. While the contract was not awarded to us, the re-evaluation process has provided some transparency and accountability in the evaluation process.",
+    "win_statement": "We successfully negotiated a re-evaluation of the scoring methodology and evaluator comments, which will provide a full review of the evaluation process and potentially rectify any flaws. This outcome is more favorable than pursuing costly and uncertain TCC proceedings or damages claims.",
+    "what_was_achieved": [
+      "A full review of the scoring methodology and evaluator comments was agreed upon by London Underground",
+      "The re-evaluation process has provided some transparency and accountability in the evaluation process"
+    ],
+    "what_was_conceded": [
+      "We were unable to secure a guarantee that the contract would be awarded to us if the re-evaluation revealed flaws in the evaluation process",
+      "London Underground was able to maintain control over what information is disclosed, with some redactions and exclusions"
+    ]
+  },
+  "summary": {
+    "key_sticking_points": [
+      "Application of technical threshold requirement",
+      "Evaluation methodology and evaluator comments",
+      "Manifest error in applying technical threshold requirement"
+    ],
+    "concessions_summary": "The Contracting Authority made two significant concessions: (1) providing a redacted version of the evaluation documents, and (2) agreeing to a full review of the scoring methodology and evaluator comments. The Aggrieved Bidder also made concessions by considering withdrawal of their challenge in exchange for these concessions.",
+    "court_reasoning_summary": "The Court assessed each round qualitatively due to the technical nature of the dispute. Initially, the Court found no manifest error, but as the negotiation progressed, it became clear that there was a flaw in the evaluation process. The Court ultimately concluded that there was a manifest error and recommended re-evaluation.",
+    "likely_next_steps": "The Contracting Authority will likely proceed with re-evaluating Bombardier's bid and awarding the contract to Alstom if necessary, as per the Aggrieved Bidder's condition for withdrawal. This may involve revisiting the evaluation process and potentially adjusting the scoring methodology.",
+    "plain_english_summary": "The negotiation centered around a technical dispute regarding the application of a threshold requirement in evaluating bids. The Contracting Authority made concessions to provide more transparency, but ultimately agreed to re-evaluate the bid due to a manifest error in the original evaluation process."
+  }
+}

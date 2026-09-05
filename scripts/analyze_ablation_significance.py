@@ -39,7 +39,11 @@ CASES = {
     # and mislabelled dispute_type — see evaluation-bailii-expansion.md's "Parkingeye re-extraction"
     # section for the full comparison and reasoning. Re-run against the corrected scenario cache.
     "parkingeye-velindre": ("batch_20260816_172323", "batch_20260816_172843"),
-    "alstom-london-underground": ("batch_20260815_192629", "batch_20260815_193406"),
+    # Bumped n=8 -> n=30 5 Sep 2026 (Phase 5, RESULTS-FOR-THESIS.md): a power check showed the n=8
+    # gap (V3 50% vs V4 100%, p=0.077) would very likely cross p<0.05 at n=30, and it did. Screened
+    # for fabrication before trusting the p-value - 2 new confirmed Court-originated instances
+    # surfaced, both under V4 - see RESULTS-FOR-THESIS.md's Phase 5 section.
+    "alstom-london-underground": ("batch_20260905_143138", "batch_20260905_150536"),
     "woods-milton-keynes": ("batch_20260815_200902", "batch_20260815_201219"),
 }
 
@@ -124,7 +128,8 @@ def analyze() -> dict:
             },
             "fisher_exact_p_resolution": round(p_resolution, 4),
             "fisher_exact_p_manifest_error": round(p_manifest, 4),
-            "n": v3_n,  # both arms are n=8 throughout this ablation
+            "n_v3": v3_n,
+            "n_v4": v4_n,
         }
     return results
 
@@ -137,10 +142,12 @@ if __name__ == "__main__":
     results = analyze()
 
     print(f"\n{'='*78}")
-    print("  V3 vs V4 SIGNIFICANCE — Fisher's exact test, 95% bootstrap CIs (n=8 per arm)")
+    print("  V3 vs V4 SIGNIFICANCE — Fisher's exact test, 95% bootstrap CIs")
+    print("  (n=8 per arm, except alstom-london-underground: bumped to n=30 5 Sep 2026 — see")
+    print("   RESULTS-FOR-THESIS.md Phase 5 for why and the fabrication screen run on it)")
     print(f"{'='*78}\n")
     for case, r in results.items():
-        print(f"{case}")
+        print(f"{case}  (n: V3={r['n_v3']}, V4={r['n_v4']})")
         print(f"  resolution rate   V3 {r['v3']['resolution_rate']:.2f}  95% CI {r['v3']['resolution_ci95']}"
               f"   |   V4 {r['v4']['resolution_rate']:.2f}  95% CI {r['v4']['resolution_ci95']}")
         print(f"  Fisher's exact p (resolution):      {r['fisher_exact_p_resolution']}"
