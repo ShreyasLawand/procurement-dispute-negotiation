@@ -9,18 +9,18 @@ not, and the known weaknesses an examiner should probe.
 
 ## 1. Opening message to paste
 
-> You are an experienced examiner marking an MSc Data Science dissertation at the
-> University of Manchester. I am the candidate. Mark my report **strictly**, to
-> the standard of a real second marker who is looking for reasons to withhold
-> marks, not to encourage me.
+> You are an experienced examiner marking an MSc Data Science (DATA72000)
+> Extended Research Project at the University of Manchester. I am the
+> candidate. Mark my report **strictly**, to the standard of a real second
+> marker who is looking for reasons to withhold marks, not to encourage me.
 >
 > Read `REVIEWER-CONTEXT.md` first: it contains the marking scheme with weights,
 > the project background, and a ledger of which claims are verified. Then read the
 > report itself (`abstract.tex`, `chapter1`–`chapter4.tex`, `appendix1.tex`).
 >
-> Produce: (a) a percentage mark for each of the seven weighted report
-> components, with the specific evidence in the text that justifies each mark;
-> (b) an overall percentage against the classification bands in §3; (c) the five
+> Produce: (a) a percentage mark against each of the five weighted criteria in
+> §2, with the specific evidence in the text that justifies each mark; (b) an
+> overall percentage against the classification bands in §3; (c) the five
 > criticisms most likely to cost marks, ranked by how much they cost; (d) for
 > each, the smallest edit that would fix it.
 >
@@ -32,35 +32,43 @@ not, and the known weaknesses an examiner should probe.
 
 ---
 
-## 2. The marking scheme (COMP66060 / DATA72000)
+## 2. The marking scheme (DATA72000)
 
-Report is **85%** of the unit; video is the other 15% and is not part of this
-review.
+This is the MSc Data Science ERP unit, governed by the DSM/ERP Handbook
+2025-26 (v1.3), **not** COMP66060 — the two units use different rubrics and
+different word-count rules; do not apply the COMP66060 scheme to this report.
 
-| Component | Weight | What the rubric asks |
+The **written report is 60%** of the unit's overall mark (the rest is the
+oral/viva component, not part of this review). The report itself is marked
+against five criteria, which do **not** map one-to-one onto chapters — each
+criterion is assessed across the whole document:
+
+| Criterion | Weight | What it asks |
 |---|---|---|
-| Abstract | 5% | Concise summary of purpose, methods, key results. Executive summary quality. |
-| Introductory Material | 20% | Establishes context (why it matters) and subject area (what it is) with proper citations and figures. Objectives clearly stated, coherent, appropriate. Includes a *concise* literature review — depth over breadth. |
-| Methodology | 20% | Clear explanation of methods with figures/diagrams/tables. **Justification for why these methods, compared and contrasted with alternatives.** |
-| Evaluation and/or Reflection | 20% | Appropriate evaluation/testing/critical reflection. **Justification of evaluation methods and alignment with project goals.** |
-| Conclusion | 10% | Clear conclusions supported by outcomes and aligned with stated objectives. Thoughtful analysis of the project process; well-justified future work. |
-| Format and Structure | 5% | Logical structure, numbered figures/tables, correctly formatted consistent references, clear expression. |
-| Project Achievement | 20% | Complexity, scope and challenge of the artefact; execution quality, reliability, technical accuracy. |
+| Intellectual content and originality | 25% | Genuine contribution, quality of the underlying idea, depth of engagement with the problem. |
+| Coherence of the overall report | 15% | Does the report read as one connected argument — motivation, method, evidence and conclusion in a consistent line — rather than four loosely-joined chapters. |
+| Project design and methods | 25% | Soundness of the technical approach, justification against alternatives considered, appropriateness to the problem. |
+| Results and analysis | 25% | Quality and honesty of the evaluation: what was measured, how, and whether the interpretation is supported by the evidence. |
+| Overall presentation | 10% | Structure, figures/tables, references, clarity of expression, adherence to the format rules below. |
 
-**Hard constraints.** ~8,000 words, penalties outside 7,000–9,000 (references,
-appendices and figure/table captions excluded). Abstract ≤300 words. Separate
-Abstract and Conclusion sections are mandatory; other headings are not
-prescribed. There is deliberately **no separate Background chapter** — the
-literature review belongs inside the Introduction.
+**Hard constraints (DATA72000, distinct from COMP66060's 7,000–9,000 range).**
+Word limit is **7,500 words maximum**, a hard cap, not a target range. The
+word count **includes** body text, titles, captions, footnotes, quotations,
+tables and figures, and **excludes** the title page, table of contents,
+declaration, list of illustrations, acknowledgements, abstract, references and
+appendices. Penalty bands: **≤7,500 is clean**; 7,500–8,250 (up to 10% over)
+loses marks on conciseness only, with no formal cap; 8,250–11,250 (10–50% over)
+caps the report mark at 50%; beyond 11,250 (more than 50% over) is a zero
+mark. The abstract is capped **separately** at ≤300 words on a single A4 page.
 
-Presentation requirements (DATA72000): 12pt, 1.5 or double spacing, single
-Arabic page sequence with the word count at the foot of the contents page,
-left-justified body text, and required preliminary pages in order — title page,
-contents, abstract, declaration, copyright, AI statement.
+Presentation requirements: 12pt, 1.5 or double line spacing, single-sided
+printing, and the required preliminary-page order (title page, contents,
+abstract, declaration, list of illustrations, acknowledgements, then the
+report body).
 
-**Current compliance:** body 8,607 words; abstract 298; all preliminary pages
-present including the AI statement; word count in `word.count` is what the
-`wordcount` class option prints.
+**Current compliance:** body **7,487 words** (13 under the 7,500 cap, per
+`word.count` and `scripts/count_thesis_words_data72000.py`); abstract **296
+words**; all preliminary pages present including the AI statement.
 
 ---
 
@@ -104,8 +112,8 @@ formula needs, and is otherwise forbidden from writing down an unstated number,
 including when the number is hedged as "illustrative".
 
 Scale: 33 Python modules / ~4,900 lines in `src/`, 374 in `api/`, ~3,800 lines of
-frontend, 92 passing tests, 23 verified real judgments, 299 logged negotiations,
-ten analysis scripts.
+frontend, 92 passing tests, 23 verified real judgments, over 400 logged
+negotiations, ten analysis scripts.
 
 ---
 
@@ -118,7 +126,7 @@ report's prose matches them** — not re-derive them.
 ### Scale and reliability
 | Figure | Value |
 |---|---|
-| Logs analysed | 299 across 59 batches |
+| Logs analysed | over 400 negotiations, 50 batches carrying compliance instrumentation |
 | Structural compliance | 2,861 / 2,865 = **0.9986** |
 | Batches clean at 1.00 | 48 of 50; worst 0.906 |
 | Tests | 92 passing |
@@ -128,37 +136,48 @@ report's prose matches them** — not re-derive them.
 |---|---|
 | Real UK judgments | 23 (14 merits disposition, 9 interim-only) |
 | Merits split | 6 authority wins / 8 losses |
-| **Leak-free agreement** | **7 of 8** (the figure the report defends) |
-| Leaked-subset agreement | 6 of 6 (compliance, not prediction) |
-| Combined | 13 of 14 (not quoted without the split) |
-| Majority-class floor on leak-free subset | 4 of 8 |
+| Outcome leakage found | 6 of 14 merits scenarios stated the real disposition; rewritten and re-run |
+| **Leak-free agreement** | **12 of 14** (found-and-fixed, not merely measured) |
+| Misses | Turning Point (genuinely arguable different legal conclusion, not fabrication); AbbVie (Dummy Price Mechanism engaged genuinely, wrong conclusion reached) |
+| Outcome distribution, 299 runs | re-evaluation 80.6%, no remedy 10.4%, deadlock 5.7%, disclosure 3.0%, 1 out-of-vocabulary |
 
 ### Baselines and ablation
-| System | Runs/case | Result |
+| System | Runs/case | Direction correct |
 |---|---|---|
-| Majority-class heuristic | — | 5 / 6 |
-| Zero-shot single prompt | 5 | 6 / 6 |
-| Full pipeline (V4) | 8 | 6 / 6 |
+| Majority-class heuristic | — | 5 / 6 (wrong on AbbVie) |
+| Zero-shot single prompt | 5 | 5 / 6 (wrong on AbbVie) |
+| Full pipeline (V4) | 8 | 5 / 6 (wrong on AbbVie) |
 | No-Court ablation | 3 | **0 of 18 resolved** |
 
-V3/V4 ablation, n=8 per cell, Fisher's exact: Lancashire 0.875→1.000 (p=1.000),
-Faraday 0.750→1.000 (p=0.467), Parkingeye 0.875→1.000 (p=1.000), Alstom
-0.500→1.000 (p=0.077), Woods 1.000→1.000 (p=1.000). **No case reaches p<0.05.**
+**All three methods converge on the identical miss (AbbVie) at 5/6** — the
+headline finding is flat, not just negative: architecture cannot be defended
+on accuracy. The no-Court ablation is where the architecture's necessity
+actually shows.
 
-### Fabrication and citation
+V3/V4 ablation, Fisher's exact: Lancashire 0.875→1.000 (n=8, p=1.000), Faraday
+0.750→1.000 (n=8, p=0.467), Parkingeye 0.875→1.000 (n=8, p=1.000), Woods
+1.000→1.000 (n=8, p=1.000), **Alstom 0.310→0.857 (n≈30, p=3.96×10⁻⁵)** — the
+only case tested at adequate scale, decisive, and robust to a worst-case
+sensitivity check excluding/recoding the fabricated runs (p=0.0014). Alstom's
+own n=8→n≈30 rates moving substantially is itself evidence the other four
+cells are underpowered, not settled at "no effect".
+
+### Fabrication (four independent screens)
 | Screen | Result |
 |---|---|
-| Numeric grounding | 9 flagged of 425 (2.1%); all nine re-read, **none Court-originated within the screened population**. One known miss outside it: Bromcom, which classified itself numeric (so never entered the 425) and whose `A=80` form the score-shaped regex does not match |
-| Faraday premise fabrication | 3/8 V3 runs, 6/8 V4 runs (phrase search, a lower bound) |
+| Numeric grounding (Step 2A/2B) | **13 confirmed** of 784 screened, all Court-originated, all the same shape (invented input numbers, correct arithmetic on them), across Bromcom, Parkingeye, Alstom and Woods — **note:** Table 3.4's own per-case tally (Bromcom, Parkingeye, Alstom (2), Woods (6)) sums to 10, not 13; this is an unresolved inconsistency in the current draft that should be reconciled against the source analysis script before submission, not silently rounded either way |
+| Scenario-attribution fabrication | **4 confirmed** of 23 candidates (17.4%), the Court asserting its own scenario said something it did not; 1 of the 4 factually backwards from the real disposition |
+| Faraday premise fabrication | 3/8 V3 runs, 6/8 V4 runs (phrase search, a lower bound) — negotiating agents fabricate a scoring dispute in a process-avoidance case where neither party was scored |
 | Citation, wrong regime | 162 of 702 = **23.1%** |
 | Citation, s.12 content | 7 of 21 = **33.3%** |
 | Too general to classify | 519 (bucketed, not passed as correct) |
 
 ### Behaviour
-CA concession 0.013 → 0.470; bidder 0.000 → 0.075; message similarity 0.097 over
-426 pairs; 0 retractions. BATNA: CA beats 71% / falls short 2% / unclear 27%;
-bidder beats 24% / falls short 21% / unclear 56%. Flesch Reading Ease mean
-**24.7** (median 25.9), Flesch–Kincaid grade 14.7.
+CA concession 0.013 → 0.470; bidder 0.000 → 0.075; 0 explicit retractions.
+BATNA: CA beats its own BATNA 71% of the time, bidder 24%. Flesch Reading
+Ease mean **24.7**, Flesch–Kincaid grade **14.7** ("very difficult, graduate
+level"), despite the Summary agent's own schema promising output "a
+non-lawyer could understand".
 
 ---
 
@@ -167,75 +186,91 @@ bidder beats 24% / falls short 21% / unclear 56%. Flesch Reading Ease mean
 An examiner should press hardest on these. They are listed because they are the
 genuine weak points, not to pre-empt criticism.
 
-1. **Outcome leakage was measured, not removed.** Six of fourteen merits
-   scenarios state the real disposition inside the text the agents reason over,
-   and `court_prompt.py` explicitly instructs the Court not to contradict a stated
-   outcome. The report re-bases every accuracy claim on the eight clean cases
-   (§3.5). *Is measuring-and-excluding sufficient, or should the corpus have been
-   re-run after stripping?* Defensible either way — argue it.
+1. **The three-way baseline tie.** At n=6, a majority-class heuristic with no
+   model call, a naive (deliberately unhardened) zero-shot prompt, and the full
+   multi-agent pipeline all score 5/6 and miss the identical case. The report
+   states this plainly and redirects the architecture defence entirely to the
+   no-Court ablation (0/18 resolved). *Is that redirection sufficient, or does
+   it concede the accuracy case entirely?*
 
-2. **The zero-shot tie.** At n=6 a single naive prompt matches the full pipeline
-   6/6. The report says so plainly and rests the architecture argument on the
-   no-Court ablation (0/18) instead. *Is that a sufficient defence of the
-   architecture, or does it concede the accuracy case entirely?*
+2. **Nothing except Alstom reaches statistical significance.** Four of five
+   V3/V4 ablation cells are n=8 with no significant result; only Alstom was
+   scaled to n≈30 and reaches p=3.96×10⁻⁵. *Does the report over-read the
+   pattern across the other four cases, given they remain genuinely
+   unresolved at this sample size?*
 
-3. **Nothing is statistically significant.** The V3/V4 ablation is n=8 per cell
-   and no case reaches p<0.05. Every rate in the report is a proportion over a
-   modest N. *Does the report over-read patterns that could be noise?*
+3. **Outcome leakage was found and fixed, not merely disclosed.** Six of
+   fourteen merits scenarios stated the real disposition inside the text the
+   agents reason over. The report rewrote them and re-ran every accuracy
+   figure against the corrected set — but stripping a disposition at
+   ingestion is flagged as future work for any *new* upload, not yet a
+   permanent pipeline guarantee. *Is a one-off audit-and-fix sufficient, or
+   does the architecture need the check built in?*
 
 4. **Single model, single configuration.** Llama 3.1 8B at fixed per-role
    temperatures. Nothing separates "this architecture" from "this model under
    these prompts."
 
-5. **Detector limits.** The numeric screen is string-presence matching, not
-   fact-checking. §3.7 discloses the Bromcom case where the Court fabricated an
-   entire scoring dataset and the screen missed it on two independent grounds — the
-   run classified itself numeric so fell outside the screened population, and the
-   regex matches `80%` but not `A=80`. The claim is therefore bounded as "no
-   Court-originated fabrication *within the screened population*". *Check whether
-   that bounding is stated clearly enough at the point of claim, and whether
-   Figure 3.5's status label matches it.*
+5. **Detector limits, stated but real.** The numeric screen is
+   string-presence matching, not fact-checking; the Faraday premise-fabrication
+   count is a phrase search and an explicit lower bound; the BATNA classifier
+   is a keyword heuristic. Each limit is disclosed in the text next to its
+   own figure — check whether the disclosure is prominent enough at the
+   point each number is first cited, not just in the threats-to-validity
+   section.
 
-6. **Unfixed defect.** An arithmetic bug found on the client's own scoring table
-   (the Court re-applying an already-applied percentage weighting) resisted three
-   prompt revisions and is reported as open. Those revisions were reverted rather
-   than shipped.
+6. **Unfixed defect.** An arithmetic bug found on the client's own scoring
+   table (the Court re-applying an already-applied percentage weighting)
+   resisted three prompt revisions and is reported as open.
 
-7. **Corpus bias.** Litigated cases are a filtered minority — most procurement
-   disputes settle. The corpus is further filtered toward well-documented cases,
-   and the 6:8 balance was achieved by deliberately hunting for authority-win
-   cases.
+7. **Corpus bias.** Litigated cases are a filtered minority — most
+   procurement disputes settle. The corpus is further filtered toward
+   well-documented cases, and the 6:8 merits-group balance was achieved by
+   deliberately seeking out authority-win cases to get any CA-win ground
+   truth into the corpus at all.
 
 8. **Vocabulary coverage.** The five-outcome remedy vocabulary cannot express
-   three real remedies present in its own corpus: declaration of ineffectiveness,
-   financial penalties on the authority, court-determined re-ranking.
+   real remedies present in its own corpus: a declaration of ineffectiveness
+   (Faraday), financial penalties on the authority (Consultant Connect), or a
+   court-determined re-ranking rather than a re-run (Woods).
 
 ---
 
 ## 7. Structure, and where the weight sits
 
-| File | Words | Component | Weight |
-|---|---|---|---|
-| `abstract.tex` | 298 | Abstract | 5% |
-| `chapter1.tex` | 1,842 | Introductory Material | 20% |
-| `chapter2.tex` | 1,882 | Methodology | 20% |
-| `chapter3.tex` | 3,299 | Evaluation and Reflection | 20% |
-| `chapter4.tex` | 1,286 | Conclusion | 10% |
-| **Total** | **8,607** | | |
+Unlike COMP66060, DATA72000's five criteria are not assigned per-chapter — each
+is judged across the whole report. The chapter breakdown below is for word-count
+accounting only, not a weight map:
 
-Format and Structure (5%) and Project Achievement (20%) are assessed across the
-whole document. `appendix1.tex` holds the verified case corpus, prompt extracts,
-a complete logged prompt/response exchange, the reproduction commands, and the
-ethics statement — appendices are outside the word count.
+| File | Words (body + captions + tables) | Chapter |
+|---|---|---|
+| `abstract.tex` | 296 (separate ≤300 cap, excluded from the 7,500 count) | Abstract |
+| `chapter1.tex` | 1,460 | Introduction |
+| `chapter2.tex` | 1,921 | Methodology |
+| `chapter3.tex` | 3,131 | Evaluation and Reflection |
+| `chapter4.tex` | 975 | Conclusion |
+| **Total** | **7,487** | (≤7,500 hard limit) |
 
-Ten figures, all drawn in TikZ (no external image files); thirteen booktabs
-tables (no vertical rules); 33 references, all cited, numeric `plain` style with
-author names written out in the text.
+`appendix1.tex` holds the verified case corpus, prompt extracts, a complete
+logged prompt/response exchange, the reproduction commands, agent
+configuration, the Court prompt revision history, further plan-change
+decisions, and the ethics statement — appendices are excluded from the word
+count entirely, which is why supporting detail moved there is more verbose
+than the main chapters.
 
-**A fair criticism to consider:** chapter 3 is 39% of the body for a component
-worth 20%, while chapter 1 (20%) and chapter 2 (20%) are smaller. The defence is
-that Evaluation also carries most of the evidence for Project Achievement (20%).
-Judge whether that holds.
+Figures are TikZ-free in this version: every diagram originally planned as a
+figure was either converted to prose or deleted during the word-count
+compression pass, since figure labels were the most expensive per-word content
+under the DATA72000 counting rule. Tables (booktabs, no vertical rules) carry
+the compact evidentiary content instead; several supporting (non-evidentiary)
+tables were moved to the appendix, leaving in the main chapters only the
+tables directly cited as evidence (agreement, baselines, ablation,
+fabrication, objectives).
+
+**A fair criticism to consider:** chapter 3 (Evaluation and Reflection) is
+42% of the body, reflecting that Results and analysis (25%) and much of
+Project design and methods (25%) both draw on it. Judge whether that
+concentration is justified by DATA72000's weighting or simply imbalanced.
 
 ---
 
@@ -246,12 +281,13 @@ evaluation, and suitable scope. I genuinely don't have any suggestion on
 changes."* She raised two specific points, both now in the report:
 
 1. **Pre-processing to remove court-result text.** Investigated rather than
-   assumed: there is none, and it mattered. §3.5 is the resulting leakage audit,
-   with the accuracy claim re-based on the clean subset and a future-work item to
-   strip dispositions at ingestion.
+   assumed: there was none, and it mattered. §3.4 (Agreement with real
+   dispositions) is the resulting leakage audit, with the accuracy claim
+   re-based on the leak-free 14-case set and a future-work item to strip
+   dispositions at ingestion for any new upload.
 2. **A JSON example showing how the LLM was prompted.**
    `docs/prompt-example-court.json` holds a complete Court exchange from a
-   committed run; Appendix B.4 walks through it.
+   committed run; Appendix B ("Prompt extracts") walks through it.
 
 ---
 
@@ -260,10 +296,11 @@ changes."* She raised two specific points, both now in the report:
 1. **Do not re-derive the numbers in §5.** They come from analysis scripts run
    over committed logs. Check that the prose matches them; if you think one is
    wrong, say so and stop rather than substituting your own.
-2. **Do not reward the negative results as weaknesses.** The zero-shot tie, the
-   null significance, the readability shortfall, the 23.1% citation error rate and
-   the leakage audit are deliberate reporting of results that do not favour the
-   artefact. Judge whether they are *handled well*, not whether they exist.
+2. **Do not reward the negative results as weaknesses.** The three-way
+   baseline tie, the null significance on four of five ablation cells, the
+   readability shortfall, the 23.1% citation error rate, and the leakage audit
+   are deliberate reporting of results that do not favour the artefact. Judge
+   whether they are *handled well*, not whether they exist.
 3. **Judge the report, not the project's potential.** Marks are for what is
    evidenced on the page.
 4. **Be specific.** "The methodology could be clearer" is not usable. "The

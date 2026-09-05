@@ -196,6 +196,61 @@ service by pointing \texttt{OLLAMA\_HOST} at the forwarded port. On Windows,
 run, because the case texts contain characters the default console codepage
 cannot encode.
 
+\section{Agent configuration}
+\label{app:agent-config}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{3.3cm}>{\raggedright\arraybackslash}p{3.1cm}cX@{}}
+\toprule
+\textbf{Agent} & \textbf{Interest source} & \textbf{Temp.} & \textbf{Structured output} \\
+\midrule
+Contracting Authority & Doc 1, 7 CA categories & 0.3 &
+ \texttt{PreNegotiationStatement}, \texttt{RoundResponse}, \texttt{WinStatement} \\
+Aggrieved Bidder & Doc 1, 6 supplier categories & 0.4 &
+ \texttt{PreNegotiationStatement}, \texttt{RoundResponse}, \texttt{WinStatement} \\
+Court / Judge & Doc 1, 6 judiciary categories & 0.2 &
+ \texttt{ComplianceAssessment} \\
+Summary (non-negotiating) & --- & 0.2 &
+ \texttt{NegotiationSummary} \\
+Extraction & --- & 0.2 &
+ \texttt{DisputeScenario} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Court prompt revision history}
+\label{app:court-versions}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.25}
+\caption[Court prompt revisions]{Four revisions of the Court agent's prompt. Each
+row's failure mode is what motivated the next row.}
+\label{tab:court-versions}
+\begin{tabularx}{\textwidth}{@{}p{1.3cm}>{\raggedright\arraybackslash}p{3.9cm}X@{}}
+\toprule
+\textbf{Version} & \textbf{Instruction} & \textbf{Observed behaviour} \\
+\midrule
+V1 & Judgement-based, no explicit check &
+ Manifest-error findings tracked whether the CA conceded in dialogue, not the
+ facts \\
+V2 & Always verify any calculation &
+ Fixed the numeric cases, but invented point systems on qualitative disputes
+ that had none \\
+V3 & Conditional: compute if a real formula exists, otherwise qualitative
+ review &
+ Restored non-fabricating judgement while keeping numeric accuracy \\
+V4 & V3 with the judiciary interest block replaced by Doc 1's six categories &
+ Never deadlocks on any case; see \S\ref{sec:ablation} for whether that is
+ good news \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
 \section{Commands behind each reported figure}
 
 \begin{table}[htbp]
@@ -221,13 +276,13 @@ Citation validity, \S\ref{sec:citation} &
   \texttt{python scripts/analyze\_citation\_validity.py} \\
 Concessions, \S\ref{sec:dynamics} &
   \texttt{python scripts/analyze\_negotiation\_dynamics.py} \\
-BATNA, Table~\ref{tab:batna} &
+BATNA, \S\ref{sec:dynamics} &
   \texttt{python scripts/analyze\_batna\_outcomes.py} \\
-Readability, \S\ref{sec:readability} &
+Readability, \S\ref{sec:dynamics} &
   \texttt{python scripts/analyze\_summary\_readability.py} \\
 Risk screen, \S\ref{sec:risk-eval} &
   \texttt{python scripts/assess\_challenge\_risk.py} \\
-Outcome leakage, Table~\ref{tab:leakage} &
+Outcome leakage, \S\ref{sec:agreement} &
   \texttt{python scripts/analyze\_outcome\_leakage.py} \\
 Prompt example, \S\ref{app:json} &
   \texttt{python scripts/dump\_prompt\_example.py} \\
@@ -247,6 +302,46 @@ Batch summaries are rewritten after every run and carry a \texttt{complete} flag
 A batch marked incomplete is a crash-recovery artefact, not a result, and the
 analytics interface renders a prominent warning over any such batch so that a
 half-finished run cannot be read as a finished one.
+
+\section{Further plan-change decisions}
+\label{app:further-decisions}
+
+Three further decisions diverged from the original project plan. None bears
+on the negotiation methodology itself, which is why they are recorded here
+rather than in Table~\ref{tab:alternatives}.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{3.0cm}>{\raggedright\arraybackslash}p{2.4cm}X@{}}
+\toprule
+\textbf{Decision} & \textbf{Alternative} & \textbf{Reasoning} \\
+\midrule
+React/TypeScript frontend \emph{(plan change)} & Streamlit &
+ A client board demonstration needed to stream a negotiation live while it
+ was still in progress, and needed a case browser, analytics view and risk
+ screen alongside it. Streamlit's reactive rerun model does not fit a
+ server-sent-event stream well; a small dedicated React client, talking to
+ the same FastAPI backend the batch scripts use, does. \\
+Structured JSON logs per run \emph{(plan change)} & PostgreSQL &
+ Every analysis in Chapter~\ref{ch:evaluation} is a batch read over
+ completed runs, never an update to one already written, and there is no
+ concurrent-write requirement anywhere in the pipeline. A relational database
+ would have added schema migrations and connection management for a workload
+ that a flat, git-diffable JSON file per run already serves, with the
+ provenance and compliance counters carried alongside each log rather than
+ in a separate table. \\
+Real judgments only \emph{(plan change)} & Synthetic scenarios &
+ The two synthetic scenarios in the original project plan were AI-authored
+ and were deleted, along with seven batch directories of evaluation output
+ derived from them, once a real 23-case corpus existed. A scenario generated
+ by a language model and then assessed by a language model tells you
+ nothing independent about whether either one is right, so a synthetic
+ dispute cannot falsify a model-based system --- discussed further in
+ Section~\ref{sec:alternatives}. \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
 \chapter{Ethics}
 \label{app:ethics}

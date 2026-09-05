@@ -1,30 +1,33 @@
 {
-UK public procurement moves roughly \pounds300 billion a year, and when a losing
-bidder challenges an award the resulting dispute is slow, expensive, and on the
-evidence of the case law itself, usually settled long before a judge sees it.
-This project asks whether interacting large language model agents can usefully
-simulate such a dispute, and how their output should be evaluated when ground
-truth is scarce and the model is capable of inventing evidence.
+UK public procurement moves roughly \pounds300 billion a year, and a losing
+bidder's challenge to an award is slow, expensive, and usually settled
+long before a judge sees it. This project asks whether interacting large
+language model agents can usefully simulate such a dispute, and how their
+output should be evaluated when ground truth is scarce and the model can
+invent evidence.
 
-Three negotiating agents (a Contracting Authority, an Aggrieved Bidder, and a
-Court modelled on the Technology and Construction Court), together with a
-non-negotiating summariser, were built on LangGraph over a locally hosted Llama
-3.1. Behaviour is specified through prompt engineering and structured context
-injection rather than fine-tuning. The Court agent runs a conditional
-verification protocol: it recomputes a scoring calculation exactly when the case
-supplies both a formula and every input that formula needs, and otherwise
-conducts a qualitative review in which writing down an unstated number is
-prohibited. An extraction stage turns real judgments into structured scenarios,
-and a rule-based pre-award risk screen addresses the industrial partner's actual
-request, which was prevention rather than replay.
+Three negotiating agents (a Contracting Authority, an Aggrieved Bidder, and
+a Court modelled on the Technology and Construction Court), plus a
+non-negotiating summariser, run on LangGraph over a locally hosted Llama
+3.1, specified through prompt engineering and context injection, not
+fine-tuning. The Court agent runs a conditional verification
+protocol: it recomputes a scoring calculation exactly when the case
+supplies a formula and every input it needs, and otherwise conducts a
+qualitative review where writing down an unstated number is prohibited.
+An extraction stage turns real judgments into structured scenarios, and a
+rule-based pre-award risk screen addresses the industrial partner's actual
+request: prevention, not replay.
 
-Evaluation covers 23 verified UK procurement judgments and 299 logged
-negotiations. An audit for outcome leakage finds six merits scenarios that state
-what the real court decided; on the eight that do not, the system matches the real
-disposition in seven, against a majority-class floor of four. It needed structural
-repair on 4 of 2,865 structured responses. Two findings matter more than that
-headline. A single zero-shot prompt ties the full pipeline on directional accuracy
-across the six cases where both were compared, so the architecture cannot be
-defended on accuracy alone; and removing the Court agent deadlocks all 18 runs,
-which is where it can be.
+Evaluation covers 23 verified UK judgments and over 400 logged
+negotiations. Six merits scenarios were found stating the real court's
+decision; once rewritten, the system matches it in 12 of the resulting
+leak-free 14, missing a case decided on a different legal argument and one
+reasoning correctly about a real mechanism but reaching the wrong
+conclusion. Structural repair was needed on 4 of 2,865 responses, and a
+widened screen confirms 13 Court-originated numeric fabrications across
+four cases, each an invented input computed correctly. Two findings matter
+more than any headline: a majority-class heuristic, a naive zero-shot
+prompt, and the full pipeline all converge on the same 5-of-6 leak-free
+accuracy, so the architecture cannot be defended on accuracy; and removing
+the Court agent deadlocks all 18 runs, where it can be.
 }
