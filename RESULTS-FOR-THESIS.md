@@ -461,28 +461,87 @@ even slightly" was the bar, not "moved unexpectedly."
 
 ---
 
+## Post-refresh closeout (5 Sep 2026) — two follow-ups from the verify-before-submitting checklist
+
+Both requested directly, both re-analysis only (no GPU, no new negotiations). Full method and raw
+per-hit table for the first is in `evaluation-scenario-attribution-audit.md` (repo root) — this section
+is the summary.
+
+### 1. Is the "fabricated scenario-attribution" pattern (checklist item 1) a single anomaly or a real pattern?
+
+Searched all 406 logs' `compliance_checks[].reasoning` for self-referential claims about the scenario's
+own content ("the scenario states...", "as stated in the scenario...", and 4 further variants — see the
+audit file for the exact pattern), then checked every hit against that run's own embedded
+`scenario.description`.
+
+**23 hits. 4 confirmed false (17.4%). Only 1 of the 4 is factually backwards from the real disposition
+specifically** (the Woods instance already reported) — the other 3 fabricate subsidiary evidentiary
+details (a "without prior notice" detail on Parkingeye; a "92%" score on Alstom V3 that the Court
+partially self-corrects; a full 3-item invented sub-score dataset with real arithmetic on Alstom V4).
+
+**Not confined to one case, one era, or one prompt version**: the 4 false instances span Parkingeye (old,
+pre-Phase-3 batch), Woods (new leak-free re-run), and Alstom under both V3 and V4. This argues for "a
+real, low-frequency pattern" over "a single anomaly," but 4 instances is still too few to characterise
+its cause (parametric-knowledge leakage remains a plausible but unconfirmed hypothesis, not established
+by this count alone).
+
+**Bonus finding: this search caught a genuine numeric fabrication the existing screen missed.** The
+Alstom V4 false instance (`batch_20260905_150536/run_17.json` round 2) invents three concrete
+sub-criteria scores ("Design Complexity (3/5)," etc.) in a `Label (N/5)` parenthetical-fraction shape
+that neither `_SCORE_NUMBER` nor `_LABEL_NUMBER` covers — the same category of gap already documented for
+the Alstom-round-3 `14/15` case in Phase 1. **Corpus-wide confirmed Court-originated fabrication count
+moves from 12 to 13** as a direct result of this check, not a separate re-screen.
+
+### 2. Does the Alstom p-value survive excluding the fabricated V4 runs?
+
+The request named 2 known-fabricated V4 runs; task 1 above found a 3rd in the same batch
+(`run_17`). Ran both the literally-requested 2-run variant and the corrected 3-run variant, both as
+exclusion and as recode-to-deadlock, against the unaffected V3 arm (9 resolved / 20 deadlock, n=29):
+
+| Variant | V4 resolved/n | p-value | Still < 0.05? |
+|---|---|---|---|
+| Original (as reported in Phase 5) | 24/28 | 3.96×10⁻⁵ | — |
+| Exclude 2 (run_13, run_22 — as literally requested) | 22/26 | 9.85×10⁻⁵ | Yes |
+| Recode 2 as not-resolved | 22/28 | 4.79×10⁻⁴ | Yes |
+| **Exclude 3 (run_13, run_17, run_22 — corrected)** | 21/25 | 1.14×10⁻⁴ | Yes |
+| **Recode 3 as not-resolved** | 21/28 | 1.36×10⁻³ | Yes |
+
+**Holds regardless.** The largest p-value across every variant (0.00136, the most conservative
+treatment: 3 exclusions, recoded as failures rather than dropped) is still ~37× smaller than the 0.05
+threshold. The significant-vs-not-significant conclusion from Phase 5 is not sensitive to how the known
+fabricated runs are treated.
+
+**Test suite: 108/108 passed, unchanged** (no source files modified this pass — pure re-analysis over
+existing logs, as scoped).
+
+---
+
 ## Verify before submitting
 
 Specific, honest items — not a reassurance list. A human should personally check each of these before
 any number in this document goes into the thesis:
 
-1. **The Woods "fabricated scenario-attribution" finding is a single instance, found by reading one
-   transcript, not a systematic corpus-wide screen.** No existing script checks for a Court claim about
-   what its own input contains being false. Before citing this as evidence of parametric-knowledge
-   leakage (the model "knowing" a real case's outcome independent of the prompt), someone should
-   deliberately search the corpus for the pattern *"the scenario states/describes what happened..."* or
-   similar self-referential claims across all 406 logs — this session did not do that, and the true
-   prevalence of this failure mode is unknown, not "rare" or "common."
+1. ~~The Woods "fabricated scenario-attribution" finding is a single instance, found by reading one
+   transcript, not a systematic corpus-wide screen.~~ **RESOLVED 5 Sep 2026 (post-refresh closeout,
+   above).** Systematically searched all 406 logs: 23 candidate hits, 4 confirmed false (17.4%), only 1
+   of 4 disposition-backwards, spanning multiple cases/eras/prompt versions — a real, low-frequency
+   pattern, not a single anomaly, though still too few instances (4) to confirm the parametric-knowledge-
+   leakage hypothesis specifically rather than just describe the count. Full table in
+   `evaluation-scenario-attribution-audit.md`. This check also raised the confirmed fabrication count
+   from 12 to 13 (a genuine miss by the number-screen, caught as a side effect).
 2. **The AbbVie flip (correct → wrong, across all three baselines) rests on one n=8 batch per method.**
    The Alstom ablation in this same session showed both n=8 rates (50%/100%) were meaningfully off from
    the n=30 truth (31%/86%) once the sample grew. There is no equivalent n=30 check for AbbVie — treat
    "AbbVie predicts wrong" as suggestive at current sample size, not as settled, unless it's worth the
-   GPU time to verify the same way Alstom was.
-3. **The Alstom V4 p-value (3.96×10⁻⁵) is computed from data that includes 2 confirmed fabricated
-   reasoning instances, both in the V4 arm.** This session did not re-compute the resolution-rate
-   statistics with those 2 runs excluded or re-coded. It is not obvious the direction of the finding
-   would change (fabrication ≠ wrong outcome, and 2/28 is a small fraction), but the exact p-value has
-   not been checked for sensitivity to this, and should be before it's presented as clean.
+   GPU time to verify the same way Alstom was. **STATUS 5 Sep 2026: user explicitly decided NOT to run
+   AbbVie at n=30 given remaining time before deadline — this is a deliberate, informed scope decision,
+   not an oversight. Cite as an acknowledged limitation, not a pending task.**
+3. ~~The Alstom V4 p-value (3.96×10⁻⁵) is computed from data that includes 2 confirmed fabricated
+   reasoning instances, both in the V4 arm.~~ **RESOLVED 5 Sep 2026 (post-refresh closeout, above), and
+   the fabricated-run count itself was corrected in the process (2 → 3, per item 1's finding).**
+   Recomputed with both exclusion and recode-as-failed treatments, for both 2 and 3 excluded runs: every
+   variant stays under p=0.0014, ~37× the significance threshold at its most conservative. The
+   significant/not-significant conclusion is not sensitive to this.
 4. **`_number_grounded()`'s exact-substring matching has at least one confirmed false-positive mode**
    (decimal-vs-percentage formatting, found this pass) that was documented but not fixed. The 45-suspect,
    12-confirmed count in this document is the product of human reading correcting for this on every
