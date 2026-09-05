@@ -353,3 +353,32 @@ with a third case (Alstom, alongside Woods) showing it recurring specifically un
 
 **Test suite:** 105/105 passed (`pytest tests/`) — no test code changed this phase, ran as a sanity
 check after editing `analyze_ablation_significance.py`.
+
+---
+
+## Post-Phase-5 fix — `analyze_outcome_leakage.py`'s vote-pooling gap, closed
+
+Flagged, not fixed, in Phase 3: the script's vote-counting globbed every `run_*.json` ever logged for a
+scenario's `dispute_id` and pooled them into one modal vote regardless of which version of the scenario
+description generated each run — for the 6 cases Phase 3 stripped leakage from, that silently mixed old
+leaked-era votes with new leak-free ones.
+
+**Fix:** every run log already stores `scenario.description` verbatim (it has to — it's inserted into
+every agent's prompt). New `collect_votes()` compares each run's own embedded description against the
+*current* cached scenario file, byte-for-byte, and only counts the vote if they match exactly. No new
+field, no reliance on file timestamps (which are approximate — copies and git operations disturb mtime;
+description text embedded in the log itself cannot lie about what was actually run). Runs generated
+against a superseded description are now excluded and counted (**113 historical runs excluded
+corpus-wide**), not silently pooled in.
+
+**Regression test** (`tests/test_outcome_leakage.py`, 3 tests) uses the real committed corpus, not a
+synthetic fixture, per instruction: confirms exactly 8 leak-free abbvie votes (5 lost/3 won) and 7
+leak-free faraday votes (5 lost/2 won) survive the filter, confirms lancashire-care's 31 historical votes
+are untouched (never leaked, never rewritten), and confirms the fixed script reproduces Phase 3's
+hand-verified **12/14** leak-free agreement figure end-to-end, with no manual per-case isolation needed.
+
+Re-running `analyze_outcome_leakage.py` (no `--verbose`) now: **12/14, exact match to Phase 3's
+hand-computed number**, and every individual case's vote count (faraday 5/7, woods 5/7, bromcom 8/8,
+optima 8/8, abbvie 5/8, bechtel 3/5) matches the hand isolation exactly.
+
+**Test suite:** 108/108 passed (`pytest tests/`), including the 3 new tests.
