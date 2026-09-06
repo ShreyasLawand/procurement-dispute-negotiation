@@ -66,7 +66,7 @@ printing, and the required preliminary-page order (title page, contents,
 abstract, declaration, list of illustrations, acknowledgements, then the
 report body).
 
-**Current compliance:** body **7,487 words** (13 under the 7,500 cap, per
+**Current compliance:** body **7,496 words** (4 under the 7,500 cap, per
 `word.count` and `scripts/count_thesis_words_data72000.py`); abstract **296
 words**; all preliminary pages present including the AI statement.
 
@@ -245,11 +245,11 @@ accounting only, not a weight map:
 | File | Words (body + captions + tables) | Chapter |
 |---|---|---|
 | `abstract.tex` | 296 (separate ≤300 cap, excluded from the 7,500 count) | Abstract |
-| `chapter1.tex` | 1,460 | Introduction |
-| `chapter2.tex` | 1,921 | Methodology |
-| `chapter3.tex` | 3,131 | Evaluation and Reflection |
+| `chapter1.tex` | 1,420 | Introduction |
+| `chapter2.tex` | 1,968 | Methodology |
+| `chapter3.tex` | 3,133 | Evaluation and Reflection |
 | `chapter4.tex` | 975 | Conclusion |
-| **Total** | **7,487** | (≤7,500 hard limit) |
+| **Total** | **7,496** | (≤7,500 hard limit) |
 
 `appendix1.tex` holds the verified case corpus, prompt extracts, a complete
 logged prompt/response exchange, the reproduction commands, agent
@@ -258,14 +258,20 @@ decisions, and the ethics statement — appendices are excluded from the word
 count entirely, which is why supporting detail moved there is more verbose
 than the main chapters.
 
-Figures are TikZ-free in this version: every diagram originally planned as a
-figure was either converted to prose or deleted during the word-count
-compression pass, since figure labels were the most expensive per-word content
-under the DATA72000 counting rule. Tables (booktabs, no vertical rules) carry
-the compact evidentiary content instead; several supporting (non-evidentiary)
-tables were moved to the appendix, leaving in the main chapters only the
-tables directly cited as evidence (agreement, baselines, ablation,
-fabrication, objectives).
+One diagram survives in the main chapters: `fig:architecture` (the
+five-layer system stack, in `chapter2.tex`), restored after a check found
+the equivalent prose passage was not self-explanatory to a reader without
+the original figure — the diagram numbers the layers (L1, L2.5, L2, L3,
+L4, L5) in a way a single run-on sentence could not without becoming
+harder to follow, not easier. Every other diagram originally planned as a
+figure (including the Court agent's Step 1/2A/2B decision procedure, which
+a cold read confirmed reads clearly as prose) was converted to prose or
+deleted during the word-count compression pass, since figure labels were
+the most expensive per-word content under the DATA72000 counting rule.
+Tables (booktabs, no vertical rules) carry the compact evidentiary content;
+several supporting (non-evidentiary) tables were moved to the appendix,
+leaving in the main chapters only the tables directly cited as evidence
+(agreement, baselines, ablation, fabrication, objectives).
 
 **A fair criticism to consider:** chapter 3 (Evaluation and Reflection) is
 42% of the body, reflecting that Results and analysis (25%) and much of

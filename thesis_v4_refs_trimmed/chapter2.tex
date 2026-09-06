@@ -4,19 +4,68 @@
 \section{System overview}
 \label{sec:overview}
 
-The system is a five-layer stack around one governing idea: every claim an
-agent makes must trace back to something it was given. A React/TypeScript
-layer (upload, live negotiation, case browser, analytics, risk screen) talks
-to FastAPI (extraction, SSE negotiation stream, risk assessment, GPU-tunnel
-status), which drives a LangGraph \texttt{StateGraph} (deterministic turn
-order, conditional routing, per-super-step streaming) over five agents ---
-Contracting Authority, Aggrieved Bidder, Court, Summary, Extraction, all
-Llama 3.1 8B via Ollama, local CPU or tunnelled A10G GPU --- and writes
-structured JSON logs with provenance and compliance counters for later
-analysis. A fifth layer, vector retrieval over legislation and case law, is
-reported because it was scoped out (\S\ref{sec:alternatives}), not because
-it exists. The Python backend runs to 33 modules and roughly 4,900 lines
+The system is a five-layer stack (Figure~\ref{fig:architecture}) around one
+governing idea: every claim an agent makes must trace back to something it
+was given. The Python backend runs to 33 modules and roughly 4,900 lines
 with a 92-case test suite; the API and frontend add 374 and 3,800 lines.
+
+\begin{figure}[htbp]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[font=\footnotesize,
+ badge/.style={circle,draw=f21ink,fill=white,text=f21ink,
+ font=\bfseries\footnotesize,minimum size=9mm,inner sep=0pt},
+ layer/.style={draw=f21ink,line width=0.7pt,rounded corners=3pt,
+ text width=10.8cm,minimum height=1.15cm,align=left,
+ fill=f21mist,inner sep=7pt},
+ gaplayer/.style={draw=f21grey,dashed,line width=0.7pt,rounded corners=3pt,
+ text width=10.8cm,minimum height=0.95cm,align=left,
+ fill=white,inner sep=7pt},
+ layertag/.style={f21grey,font=\scriptsize\itshape}]
+
+ \node[badge] (b1) at (0,0) {L1};
+ \node[layer,right=6mm of b1,anchor=west] (l1)
+ {\textbf{Presentation} --- React/TypeScript client: upload, live streamed\\
+ negotiation, case browser, analytics, risk screen \hfill{\scriptsize\itshape\color{f21grey}browser}};
+
+ \node[badge,below=8mm of b1] (b2) {L2.5};
+ \node[layer,right=6mm of b2,anchor=west] (l2)
+ {\textbf{API} --- FastAPI: extraction endpoint, server-sent-event\\
+ negotiation stream, risk assessment, GPU-tunnel status and reconnect};
+
+ \node[badge,below=8mm of b2] (b3) {L2};
+ \node[layer,right=6mm of b3,anchor=west] (l3)
+ {\textbf{Orchestration} --- LangGraph \texttt{StateGraph}: deterministic\\
+ turn order, conditional routing, per-super-step streaming \hfill{\scriptsize\itshape\color{f21grey}process}};
+
+ \node[badge,below=8mm of b3] (b4) {L3};
+ \node[layer,right=6mm of b4,anchor=west] (l4)
+ {\textbf{Agents} --- Contracting Authority, Aggrieved Bidder, Court,\\
+ Summary, Extraction (Llama 3.1 8B via Ollama; local CPU or\\
+ tunnelled A10G GPU) \hfill{\scriptsize\itshape\color{f21grey}model}};
+
+ \node[badge,below=8mm of b4] (b5) {L4};
+ \node[gaplayer,right=6mm of b5,anchor=west] (l5)
+ {\textbf{Knowledge / RAG} --- vector retrieval over legislation and\\
+ case law \emph{--- deliberately not built; see \S\ref{sec:alternatives}}};
+
+ \node[badge,below=8mm of b5] (b6) {L5};
+ \node[layer,right=6mm of b6,anchor=west] (l6)
+ {\textbf{Persistence} --- structured JSON logs per run; batch summaries\\
+ with provenance and compliance counters};
+
+ \draw[->,f21ink] (b1) -- (b2);
+ \draw[->,f21ink] (b2) -- (b3);
+ \draw[->,f21ink] (b3) -- (b4);
+ \draw[->,f21grey,dashed] (b4) -- (b5);
+ \draw[->,f21ink] (b5) -- (b6);
+\end{tikzpicture}}
+\caption[System architecture]{The five-layer architecture, read top to bottom as
+the path a request takes. The dashed layer is reported because it was scoped
+out, not because it exists: the extraction agent is a single-pass synthesis
+step and must not be mistaken for retrieval.}
+\label{fig:architecture}
+\end{figure}
 
 \section{Grounding the agents in the client's own material}
 \label{sec:grounding}
