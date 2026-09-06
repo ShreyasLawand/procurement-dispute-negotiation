@@ -1,0 +1,584 @@
+<title>Dispute Simulator Video Script</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+  :root {
+    --paper:      #F7F5EE;
+    --card:       #FFFFFE;
+    --ink:        #1C231D;
+    --ink-2:      #4B564C;
+    --ink-3:      #7A857B;
+    --brand:      #0B6B3A;
+    --brand-soft: #E4EEE4;
+    --live:       #A6461B;
+    --live-soft:  #F7E9DE;
+    --rule:       #E1DED2;
+    --rule-hard:  #C7C3B2;
+    --slate:      #10201A;
+    --slate-ink:  #E9F0EA;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:      #12161A;
+      --card:       #191F23;
+      --ink:        #E9EDE7;
+      --ink-2:      #ABB6AE;
+      --ink-3:      #7B857E;
+      --brand:      #4CAF7C;
+      --brand-soft: #16261D;
+      --live:       #E08A54;
+      --live-soft:  #2E1F13;
+      --rule:       #2A3129;
+      --rule-hard:  #3C453C;
+      --slate:      #0B1310;
+      --slate-ink:  #E9F0EA;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:      #12161A;
+    --card:       #191F23;
+    --ink:        #E9EDE7;
+    --ink-2:      #ABB6AE;
+    --ink-3:      #7B857E;
+    --brand:      #4CAF7C;
+    --brand-soft: #16261D;
+    --live:       #E08A54;
+    --live-soft:  #2E1F13;
+    --rule:       #2A3129;
+    --rule-hard:  #3C453C;
+    --slate:      #0B1310;
+    --slate-ink:  #E9F0EA;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 24px 100px; }
+
+  /* ---- slate header --------------------------------------------------- */
+  .slate {
+    background: var(--slate);
+    color: var(--slate-ink);
+    margin: 0 0 42px;
+    padding: 42px 24px 32px;
+    border-bottom: 3px solid var(--brand);
+  }
+  .slate-inner { max-width: 980px; margin: 0 auto; }
+  .slate .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.76rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #8FB39E;
+    margin: 0 0 14px;
+  }
+  .slate h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 700;
+    font-optical-sizing: auto;
+    font-size: clamp(2.1rem, 5.2vw, 3.1rem);
+    line-height: 1.06;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    margin: 0 0 22px;
+  }
+  .slate-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1px;
+    background: rgba(255,255,255,0.13);
+    border: 1px solid rgba(255,255,255,0.13);
+  }
+  .slate-cell { background: var(--slate); padding: 12px 14px; }
+  .slate-cell .k {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.63rem; letter-spacing: 0.11em; text-transform: uppercase;
+    color: #7FA48F; display: block; margin-bottom: 4px;
+  }
+  .slate-cell .v {
+    font-family: "Fraunces", serif;
+    font-size: 1.45rem; font-weight: 600; line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ---- shared ----------------------------------------------------------- */
+  h2 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.56rem;
+    margin: 54px 0 4px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--ink);
+    text-wrap: balance;
+  }
+  h2 + .lede { color: var(--ink-2); margin: 10px 0 22px; max-width: 66ch; }
+
+  p { max-width: 68ch; }
+  a { color: var(--brand); }
+
+  code, .mono {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.85em;
+  }
+  code {
+    background: var(--brand-soft);
+    color: var(--ink);
+    padding: 1px 5px;
+    border-radius: 2px;
+  }
+
+  /* ---- pre-flight --------------------------------------------------- */
+  .checks { list-style: none; padding: 0; margin: 0; display: grid; gap: 2px; }
+  .checks li {
+    display: grid;
+    grid-template-columns: 26px 1fr;
+    gap: 12px;
+    align-items: start;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    padding: 12px 14px;
+  }
+  .checks li::before {
+    content: "";
+    width: 15px; height: 15px; margin-top: 5px;
+    border: 2px solid var(--rule-hard);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .checks b { font-weight: 600; }
+  .checks .why {
+    display: block; color: var(--ink-2); font-size: 0.9rem; margin-top: 3px;
+  }
+
+  pre {
+    background: var(--slate);
+    color: #D7E6DC;
+    padding: 13px 15px;
+    overflow-x: auto;
+    border-radius: 3px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.82rem;
+    line-height: 1.55;
+    margin: 10px 0;
+  }
+
+  /* ---- run-down segments ---------------------------------------------- */
+  .seg {
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--brand);
+    background: var(--card);
+    margin: 0 0 18px;
+  }
+  .seg.accent-live { border-left-color: var(--live); }
+  .seg-head {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 16px;
+    padding: 13px 18px;
+    border-bottom: 1px solid var(--rule);
+    background: var(--brand-soft);
+  }
+  .seg.accent-live .seg-head { background: var(--live-soft); }
+  .tc {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600; font-size: 0.95rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--brand);
+  }
+  .seg.accent-live .tc { color: var(--live); }
+  .seg-head h3 {
+    font-family: "Fraunces", serif;
+    font-size: 1.2rem; font-weight: 700; margin: 0; flex: 1 1 240px;
+  }
+  .badge {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.63rem; letter-spacing: 0.09em; text-transform: uppercase;
+    color: var(--live);
+    border: 1px solid var(--live);
+    border-radius: 2px;
+    padding: 2px 6px;
+  }
+  .dur {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem; letter-spacing: 0.05em;
+    color: var(--ink-3); text-transform: uppercase;
+  }
+
+  .lanes { display: grid; grid-template-columns: 1fr; }
+  @media (min-width: 860px) {
+    .lanes { grid-template-columns: minmax(0,0.86fr) minmax(0,1.14fr); }
+    .lane-screen { border-right: 1px solid var(--rule); }
+  }
+  .lane { padding: 16px 18px 18px; }
+  .lane-label {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.63rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 0 0 9px;
+  }
+  .lane-screen ul { margin: 0; padding-left: 17px; }
+  .lane-screen li {
+    margin-bottom: 7px; font-size: 0.93rem; line-height: 1.5; color: var(--ink-2);
+  }
+  .lane-screen li b { color: var(--ink); font-weight: 600; }
+
+  .say { font-size: 1.05rem; line-height: 1.62; margin: 0; }
+  .say + .say { margin-top: 12px; }
+  .beat {
+    display: block;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--live); margin: 13px 0 4px;
+  }
+
+  .note {
+    border-top: 1px dashed var(--rule-hard);
+    padding: 11px 18px 14px;
+    font-size: 0.9rem;
+    color: var(--ink-2);
+  }
+  .note b { color: var(--ink); font-weight: 600; }
+
+  table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+  .scroll { overflow-x: auto; margin: 14px 0; }
+  th, td {
+    border: 1px solid var(--rule); padding: 9px 11px; text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--brand-soft);
+    font-family: "Fraunces", serif;
+    font-size: 0.92rem; font-weight: 700;
+  }
+  td.num { font-family: "IBM Plex Mono", monospace; font-variant-numeric: tabular-nums; }
+
+  .callout {
+    background: var(--live-soft);
+    border: 1px solid var(--live);
+    border-left-width: 4px;
+    padding: 14px 17px;
+    margin: 20px 0;
+  }
+  .callout p { margin: 0; max-width: none; }
+  .callout p + p { margin-top: 9px; }
+  .callout .tag {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.67rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--live); display: block; margin-bottom: 5px;
+  }
+
+  .quote {
+    font-style: italic;
+    border-left: 3px solid var(--rule-hard);
+    padding-left: 15px;
+    margin: 12px 0;
+    color: var(--ink-2);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+  :focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+</style>
+
+<div class="slate">
+  <div class="slate-inner">
+    <p class="eyebrow">MSc Data Science &middot; DATA72000 &middot; Video, 10% of the ERP mark</p>
+    <h1>Modelling Procurement Dispute Resolution &mdash; video script</h1>
+    <div class="slate-grid">
+      <div class="slate-cell"><span class="k">Target length</span><span class="v">4:15</span></div>
+      <div class="slate-cell"><span class="k">Hard limit</span><span class="v">&lt; 5:00</span></div>
+      <div class="slate-cell"><span class="k">Segments</span><span class="v">6</span></div>
+      <div class="slate-cell"><span class="k">Narration</span><span class="v">541 w</span></div>
+      <div class="slate-cell"><span class="k">Live capture</span><span class="v">3 of 6</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<h2>What this video has to do</h2>
+<p class="lede">This replaces an earlier draft written against the wrong rubric. DATA72000's actual video component is shorter, weighted differently, and asks for something plainer than "reveal what the report can't": Appendix 5 of the handbook describes the audience as non-cognate &mdash; a client, a user, a management board &mdash; and the job as communicating clearly what the project was and what it achieved.</p>
+
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>Criterion</th><th class="num">Weight</th><th>What it actually asks</th><th>How this script answers it</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Communication</td><td class="num">50%</td>
+      <td>Does it clearly explain what the project was about, in an engaging way, without overemphasising detail?</td>
+      <td>One real anecdote to open, one sentence per agent, then the system doing the explaining by running.</td>
+    </tr>
+    <tr>
+      <td>Delivery</td><td class="num">30%</td>
+      <td>Pace, narration quality, and timed within the stated limit (under 5 minutes).</td>
+      <td>Scripted to ~4:15 at a spoken 145 words/minute, with named silences where the system, not the narrator, should hold attention.</td>
+    </tr>
+    <tr>
+      <td>AV quality</td><td class="num">20%</td>
+      <td>Sound and visuals complement the content and are appropriate to it.</td>
+      <td>Screencast for anything the audience should watch happen; talking head for anything the audience should hear you say.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout">
+  <p><span class="tag">Format chosen: screencast + talking head</span></p>
+  <p>The handbook names three likely formats &mdash; screencast, video poster, or slides with a talking head &mdash; and recommends screencast specifically when the goal is to demonstrate software. This project's clearest evidence is the system running, so segments 3&ndash;5 are live capture; segments 1, 2 and 6 are you, on camera, doing the explaining a demo can't.</p>
+</div>
+
+<h2>Pre-flight</h2>
+<p class="lede">Work top to bottom. The GPU check is not optional: this project's own chapter on the corpus states local CPU inference runs roughly seventeen minutes per negotiation, against a GPU tunnel that cuts that by roughly thirty-fold.</p>
+
+<ul class="checks">
+  <li><span><b>Start the GPU tunnel and the whole stack.</b>
+    <span class="why">One command. It opens the SSH tunnel, sends a throwaway call to absorb the cold model load, then starts the API without <code>--reload</code> and the frontend.</span>
+    <pre>.\scripts\start_demo.ps1</pre></span></li>
+
+  <li><span><b>Confirm the banner is green before you record.</b>
+    <span class="why">The Negotiate page shows a green &ldquo;GPU connected&rdquo; pill and the live <code>ollama_host</code>. Amber means you are on local CPU and the live demo will not fit inside five minutes.</span></span></li>
+
+  <li><span><b>Have the Woods judgment PDF on the desktop.</b>
+    <span class="why">You will drag it into the uploader on camera. It carries a real, published 60/40 price-quality formula, which is what makes the court's exact-arithmetic branch visible rather than asserted.</span></span></li>
+
+  <li><span><b>Open the Bromcom log and find the passage.</b>
+    <span class="why">Segment 5 depends on it. Have it already scrolled to the right place, font size raised.</span>
+    <pre>batch_results/batch_20260816_165719/run_03.json</pre></span></li>
+
+  <li><span><b>Have the no-Court ablation output ready.</b>
+    <span class="why">Either run it live or have a finished terminal capture on a second monitor to cut to.</span>
+    <pre>python tests/run_batch_evaluation.py --case woods-milton-keynes --no-court --runs 3 --rounds 3</pre></span></li>
+
+  <li><span><b>Close every unrelated tab, notification and chat app.</b>
+    <span class="why">Set display scaling to 125% so the negotiation transcript and compliance cards are legible at 1080p.</span></span></li>
+
+  <li><span><b>Do one silent dry run of segment 3 end to end.</b>
+    <span class="why">The only segment that can fail live. If extraction stalls, you want to find that out now, not on the take.</span></span></li>
+</ul>
+
+<h2>The script</h2>
+<p class="lede">Left lane is what the viewer sees. Right lane is what you say, written to be read aloud at roughly 145 words a minute &mdash; a touch slower than conversational, since a non-cognate audience is the one the handbook names. <span class="mono">BEAT</span> marks a deliberate pause: let the system be watched, don't talk over it.</p>
+
+<!-- 1 -->
+<div class="seg">
+  <div class="seg-head">
+    <span class="tc">00:00</span>
+    <h3>1 &middot; The cold open</h3>
+    <span class="dur">~26 sec &middot; talking head</span>
+  </div>
+  <div class="lanes">
+    <div class="lane lane-screen">
+      <p class="lane-label">On screen</p>
+      <ul>
+        <li>Open on <b>you, full frame</b>. No title card yet.</li>
+        <li>At &ldquo;award letter and scoring table&rdquo;, cut briefly to a <b>still of the two documents</b> side by side.</li>
+        <li>Back to you for the last two sentences. Title card lands on the final word.</li>
+      </ul>
+    </div>
+    <div class="lane">
+      <p class="lane-label">Narration</p>
+      <p class="say">At a board demonstration for Fusion21, a staff member handed me an award letter and a scoring table from a live procurement and asked what my system made of them.</p>
+      <p class="say">Ninety seconds later it reported a manifest error, with its working shown. I checked the table by hand. Every row summed exactly. My system was confidently wrong. This project is about that gap.</p>
+    </div>
+  </div>
+  <div class="note"><b>Why open here.</b> It is true, it is unrehearsed, and it states the whole thesis &mdash; a fluent system can be confidently wrong &mdash; in under thirty seconds, without a slide.</div>
+</div>
+
+<!-- 2 -->
+<div class="seg">
+  <div class="seg-head">
+    <span class="tc">00:26</span>
+    <h3>2 &middot; Who, and what</h3>
+    <span class="dur">~39 sec &middot; talking head, then the app</span>
+  </div>
+  <div class="lanes">
+    <div class="lane lane-screen">
+      <p class="lane-label">On screen</p>
+      <ul>
+        <li>You, full frame, through most of this.</li>
+        <li>Naming the four agents: a small on-screen label appears next to each as you say it &mdash; CA, Bidder, Court, Summary.</li>
+        <li>Cut to the <b>live app's home page</b> on the final sentence.</li>
+      </ul>
+    </div>
+    <div class="lane">
+      <p class="lane-label">Narration</p>
+      <p class="say">I'm Shreyas Lawand. This is an MSc Data Science project with Fusion21, a social enterprise running procurement frameworks for housing providers, councils and NHS bodies.</p>
+      <p class="say">When a losing bidder challenges a contract award, the dispute is slow and expensive. I built a system where three language-model agents negotiate one: a contracting authority, an aggrieved bidder, and a court modelled on the Technology and Construction Court, plus a fourth agent that summarises the outcome. They run on a local Llama 3.1, orchestrated as an explicit decision graph.</p>
+      <p class="say">Here's that system, live, on a real judgment.</p>
+    </div>
+  </div>
+  <div class="note"><b>Keep this to one breath per sentence.</b> The Communication criterion rewards clarity over coverage &mdash; four agents, one sentence, then get out of the way.</div>
+</div>
+
+<!-- 3 -->
+<div class="seg accent-live">
+  <div class="seg-head">
+    <span class="tc">01:05</span>
+    <h3>3 &middot; Live &mdash; a real judgment, end to end</h3>
+    <span class="badge">Screen capture</span>
+    <span class="dur">~65 sec</span>
+  </div>
+  <div class="lanes">
+    <div class="lane lane-screen">
+      <p class="lane-label">On screen</p>
+      <ul>
+        <li>Navigate to <b>Negotiate</b>. Let the <b>green GPU pill</b> sit in frame for a beat.</li>
+        <li><b>Drag the Woods PDF</b> into the uploader.</li>
+        <li>Extraction runs. The <b>scenario card</b> appears &mdash; hover the description so the 60/40 formula is readable.</li>
+        <li>Click <b>Start negotiation</b>; let statements and rounds <b>stream in on their own</b>.</li>
+        <li>Scroll to the <b>Court compliance card</b> and highlight the working.</li>
+      </ul>
+    </div>
+    <div class="lane">
+      <p class="lane-label">Narration</p>
+      <p class="say">This is the system live. I'm uploading a real judgment &mdash; Woods Building Services against Milton Keynes Council: an eight million pound asbestos contract with a published sixty-forty price-quality split.</p>
+      <span class="beat">Beat &mdash; 5 sec, let extraction finish</span>
+      <p class="say">Extraction turns the document into a structured scenario, keeping that formula exact rather than summarising it away. Now the negotiation. Both parties state their interests and their fallback position before anyone bargains, and every message arrives live, as the model produces it.</p>
+      <span class="beat">Beat &mdash; 10 sec, say nothing, let it stream</span>
+      <p class="say">Here's the court's finding. Because the scenario states both the formula and the values it needs, the court recomputes the score itself, rather than judging qualitatively. On a laptop CPU, this negotiation takes roughly seventeen minutes. On a university GPU over a tunnel &mdash; under a minute.</p>
+    </div>
+  </div>
+  <div class="note"><b>Do not cut this segment.</b> One unbroken take is the point &mdash; it proves the system runs. <b>Fallback:</b> if extraction stalls on the night, cut to a pre-recorded take of the same sequence and say nothing about it; keep a clean spare rendered before you start.</div>
+</div>
+
+<!-- 4 -->
+<div class="seg accent-live">
+  <div class="seg-head">
+    <span class="tc">02:10</span>
+    <h3>4 &middot; Live &mdash; what the client actually asked for</h3>
+    <span class="badge">Screen capture</span>
+    <span class="dur">~31 sec</span>
+  </div>
+  <div class="lanes">
+    <div class="lane lane-screen">
+      <p class="lane-label">On screen</p>
+      <ul>
+        <li>Open the <b>risk screen panel</b> on the Negotiate page.</li>
+        <li>Set three dropdowns on camera: <b>documentation quality &rarr; weak</b>, <b>score margin &rarr; narrow</b>, <b>feedback quality &rarr; minimal</b>.</li>
+        <li>Flags appear. <b>Expand one</b> so the rationale and mitigation are both readable.</li>
+      </ul>
+    </div>
+    <div class="lane">
+      <p class="lane-label">Narration</p>
+      <p class="say">But the simulator only runs after a dispute exists. What Fusion21 actually asked for was to help stop disputes starting.</p>
+      <p class="say">So this is the pre-award risk screen: sixteen rules, no model call at all, each traced to a sentence in Fusion21's own internal guidance. I'm setting three fields an authority genuinely knows before it sends its standstill letter. Each flag names what triggered it, how confident the system can be, and a concrete mitigation.</p>
+    </div>
+  </div>
+  <div class="note"><b>The line to land.</b> &ldquo;No model call at all.&rdquo; It reframes the project from an LLM demo into something a procurement team could run on a Tuesday.</div>
+</div>
+
+<!-- 5 -->
+<div class="seg accent-live">
+  <div class="seg-head">
+    <span class="tc">02:41</span>
+    <h3>5 &middot; What the results actually show</h3>
+    <span class="badge">Screen capture</span>
+    <span class="dur">~67 sec</span>
+  </div>
+  <div class="lanes">
+    <div class="lane lane-screen">
+      <p class="lane-label">On screen</p>
+      <ul>
+        <li>Terminal with the <b>no-Court ablation</b> running or its finished output. Let &ldquo;deadlock&rdquo; scroll past repeatedly.</li>
+        <li>Cut to <code>run_03.json</code> in your editor, large font.</li>
+        <li><b>Highlight progressively</b> as you read: &ldquo;let's say the scores are as follows&rdquo; &rarr; the invented <code>A=80, B=70, C=90</code> block.</li>
+      </ul>
+    </div>
+    <div class="lane">
+      <p class="lane-label">Narration</p>
+      <p class="say">Two findings matter more than any accuracy figure. First: on the cases with a real, verified disposition, a majority-class guess, a naive single prompt, and the full pipeline all land on five out of six, missing the identical case. Accuracy alone cannot justify this architecture.</p>
+      <p class="say">What can is this: remove the court agent, and every run deadlocks &mdash; eighteen out of eighteen &mdash; because nothing else in the system can decide the parties have converged.</p>
+      <span class="beat">Beat &mdash; 3 sec, cut to the log</span>
+      <p class="say">Second, on fabrication. This is a real, committed log from the Bromcom case. Watch what the court agent does: it writes &ldquo;let's say the scores are as follows &mdash; Bidder 1, A equals 80, B equals 70, C equals 90&rdquo;, and computes correctly on numbers that appear nowhere in the case. A widened screen now catches thirteen confirmed instances of exactly this shape. Correct arithmetic on invented facts is the failure mode this project exists to catch.</p>
+    </div>
+  </div>
+  <div class="note"><b>Say the negative result out loud.</b> An examiner who has read the baselines chapter and hears you skip it in the video will read that as spin. Naming it plainly, in your own voice, is what the Communication criterion is actually rewarding here.</div>
+</div>
+
+<!-- 6 -->
+<div class="seg">
+  <div class="seg-head">
+    <span class="tc">03:48</span>
+    <h3>6 &middot; Close</h3>
+    <span class="dur">~22 sec &middot; talking head</span>
+  </div>
+  <div class="lanes">
+    <div class="lane lane-screen">
+      <p class="lane-label">On screen</p>
+      <ul>
+        <li>Return to <b>you, full frame</b>, for the whole close.</li>
+        <li>End card on the last word: title, name, student ID, supervisor, Fusion21.</li>
+      </ul>
+    </div>
+    <div class="lane">
+      <p class="lane-label">Narration</p>
+      <p class="say">The system can conduct a procurement dispute coherently, and it can be stopped from inventing the arithmetic it reasons from. What it can't yet do is reason better than one well-posed prompt.</p>
+      <p class="say">Finding that out, honestly, turned out to be most of this project.</p>
+    </div>
+  </div>
+</div>
+
+<h2>Recording notes</h2>
+
+<div class="scroll">
+<table>
+  <thead><tr><th>Setting</th><th>Use</th><th>Why</th></tr></thead>
+  <tbody>
+    <tr><td>Resolution</td><td class="num">1920&times;1080, 30fps</td><td>Text in the app stays legible after upload compression.</td></tr>
+    <tr><td>Display scaling</td><td class="num">125%</td><td>The transcript and compliance cards are too small at 100% once framed into a video.</td></tr>
+    <tr><td>Talking head</td><td>Bottom-right, ~18% width, rounded</td><td>Named in the handbook's own guidance on the talking-head format; keep it on for segments 1, 2 and 6.</td></tr>
+    <tr><td>Audio</td><td>Headset or USB mic, not laptop</td><td>Delivery (30%) marks narration quality directly &mdash; audio is the cheapest lever on that score.</td></tr>
+    <tr><td>Capture</td><td>OBS Studio, or the University's Teams/PowerPoint recorder</td><td>OBS lets you switch scenes between browser, editor and terminal without stopping the take; Teams recording is the path the handbook itself walks through if you'd rather not install anything.</td></tr>
+    <tr><td>Cursor</td><td>Enable click highlighting</td><td>In segment 4 the viewer needs to see which dropdown changed.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>If something goes wrong</h2>
+<div class="scroll">
+<table>
+  <thead><tr><th>Symptom</th><th>Cause</th><th>Fix, in order</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Banner amber, extraction crawling</td>
+      <td>SSH tunnel dropped &mdash; it dies on sleep, network change, or closing its terminal.</td>
+      <td>Click <b>Connect to GPU</b> in the banner. If that fails, re-run <code>start_demo.ps1</code>. Reconnect takes about a second.</td>
+    </tr>
+    <tr>
+      <td>&ldquo;Could not reach the API server&rdquo;</td>
+      <td>The API is not running, or is on another port.</td>
+      <td>Restart it <em>without</em> <code>--reload</code>; a reload wipes the in-memory session store mid-negotiation.</td>
+    </tr>
+    <tr>
+      <td>&ldquo;Could not extract a scenario&rdquo;</td>
+      <td>Scanned PDF with no text layer &mdash; the guard fires below 200 characters.</td>
+      <td>Use a text-layer PDF. This guard exists because an empty document once produced an entirely fictional dispute.</td>
+    </tr>
+    <tr>
+      <td>Negotiation lost on tab switch</td>
+      <td>Should not happen &mdash; session state was lifted to a context provider for this reason.</td>
+      <td>If it does anyway, don't switch tabs mid-take. Use separate OBS scenes instead.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout">
+  <p><span class="tag">Before you upload</span></p>
+  <p>Watch it once at full length with a stopwatch. Check three things: it lands under 5:00 with a little room to spare; the talking head is present in segments 1, 2 and 6, not only at the very start; and someone who has never read the report can say back what the project does and what it found. If the last one fails, cut narration from segment 2 and give the time back to segment 3.</p>
+</div>
+
+</div>

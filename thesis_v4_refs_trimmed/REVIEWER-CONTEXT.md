@@ -165,7 +165,7 @@ cells are underpowered, not settled at "no effect".
 ### Fabrication (four independent screens)
 | Screen | Result |
 |---|---|
-| Numeric grounding (Step 2A/2B) | **13 confirmed** of 784 screened, all Court-originated, all the same shape (invented input numbers, correct arithmetic on them), across Bromcom, Parkingeye, Alstom and Woods — **note:** Table 3.4's own per-case tally (Bromcom, Parkingeye, Alstom (2), Woods (6)) sums to 10, not 13; this is an unresolved inconsistency in the current draft that should be reconciled against the source analysis script before submission, not silently rounded either way |
+| Numeric grounding (Step 2A/2B) | **13 confirmed** of 784 screened, all Court-originated, all the same shape (invented input numbers, correct arithmetic on them): 1 Bromcom, 1 Parkingeye, **5 Alstom**, 6 Woods (1+1+5+6=13). *(Previously flagged as an unresolved inconsistency against a stale "Alstom (2)" table entry — reconciled against `RESULTS-FOR-THESIS.md`'s per-instance ledger: the count moved 9→12→13 across three verification passes, most recently a scenario-attribution audit that caught a 13th, Alstom-specific instance in a `Label(N/5)` numeric shape the original detector regex didn't cover. Table 3.4 now reflects the correct count.)* |
 | Scenario-attribution fabrication | **4 confirmed** of 23 candidates (17.4%), the Court asserting its own scenario said something it did not; 1 of the 4 factually backwards from the real disposition |
 | Faraday premise fabrication | 3/8 V3 runs, 6/8 V4 runs (phrase search, a lower bound) — negotiating agents fabricate a scoring dispute in a process-avoidance case where neither party was scored |
 | Citation, wrong regime | 162 of 702 = **23.1%** |
