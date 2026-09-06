@@ -126,9 +126,9 @@ report's prose matches them** — not re-derive them.
 ### Scale and reliability
 | Figure | Value |
 |---|---|
-| Logs analysed | over 400 negotiations, 50 batches carrying compliance instrumentation |
-| Structural compliance | 2,861 / 2,865 = **0.9986** |
-| Batches clean at 1.00 | 48 of 50; worst 0.906 |
+| Logs analysed | over 400 negotiations, 61 batches carrying compliance instrumentation |
+| Structural compliance | 4,510 / 4,515 = **0.9989** |
+| Batches clean at 1.00 | 56 of 61; worst 0.906 |
 | Tests | 92 passing |
 
 ### Corpus and agreement
@@ -141,6 +141,12 @@ report's prose matches them** — not re-derive them.
 | Misses | Turning Point (genuinely arguable different legal conclusion, not fabrication); AbbVie (Dummy Price Mechanism engaged genuinely, wrong conclusion reached) |
 | Outcome distribution, 299 runs | re-evaluation 80.6%, no remedy 10.4%, deadlock 5.7%, disclosure 3.0%, 1 out-of-vocabulary |
 
+**Caveat on the row above:** unlike every other figure in this ledger, this one was **not** re-verified
+against the current 406-log corpus before this pass — there is no dedicated project script for this
+specific breakdown, and a quick ad-hoc recount against the raw logs gave a materially different picture
+(390 runs, ~75% re-evaluation, no matching bucket for "disclosure ordered") without enough confidence to
+either trust it or use it to correct the thesis. Reconcile this properly (a small dedicated script,
+mirroring `analyze_batna_outcomes.py`'s structure) before citing it as current.
 ### Baselines and ablation
 | System | Runs/case | Direction correct |
 |---|---|---|
@@ -168,14 +174,14 @@ cells are underpowered, not settled at "no effect".
 | Numeric grounding (Step 2A/2B) | **13 confirmed** of 784 screened, all Court-originated, all the same shape (invented input numbers, correct arithmetic on them): 1 Bromcom, 1 Parkingeye, **5 Alstom**, 6 Woods (1+1+5+6=13). *(Previously flagged as an unresolved inconsistency against a stale "Alstom (2)" table entry — reconciled against `RESULTS-FOR-THESIS.md`'s per-instance ledger: the count moved 9→12→13 across three verification passes, most recently a scenario-attribution audit that caught a 13th, Alstom-specific instance in a `Label(N/5)` numeric shape the original detector regex didn't cover. Table 3.4 now reflects the correct count.)* |
 | Scenario-attribution fabrication | **4 confirmed** of 23 candidates (17.4%), the Court asserting its own scenario said something it did not; 1 of the 4 factually backwards from the real disposition |
 | Faraday premise fabrication | 3/8 V3 runs, 6/8 V4 runs (phrase search, a lower bound) — negotiating agents fabricate a scoring dispute in a process-avoidance case where neither party was scored |
-| Citation, wrong regime | 162 of 702 = **23.1%** |
-| Citation, s.12 content | 7 of 21 = **33.3%** |
-| Too general to classify | 519 (bucketed, not passed as correct) |
+| Citation, wrong regime | 168 of 1070 = **15.7%** |
+| Citation, s.12 content | 10 of 33 = **30.3%** |
+| Too general to classify | 869 (bucketed, not passed as correct) |
 
 ### Behaviour
 CA concession 0.013 → 0.470; bidder 0.000 → 0.075; 0 explicit retractions.
-BATNA: CA beats its own BATNA 71% of the time, bidder 24%. Flesch Reading
-Ease mean **24.7**, Flesch–Kincaid grade **14.7** ("very difficult, graduate
+BATNA: CA beats its own BATNA 65% of the time, bidder 22%. Flesch Reading
+Ease mean **23.2**, Flesch–Kincaid grade **14.9** ("very difficult, graduate
 level"), despite the Summary agent's own schema promising output "a
 non-lawyer could understand".
 
@@ -304,7 +310,7 @@ changes."* She raised two specific points, both now in the report:
    wrong, say so and stop rather than substituting your own.
 2. **Do not reward the negative results as weaknesses.** The three-way
    baseline tie, the null significance on four of five ablation cells, the
-   readability shortfall, the 23.1% citation error rate, and the leakage audit
+   readability shortfall, the 15.7% citation error rate, and the leakage audit
    are deliberate reporting of results that do not favour the artefact. Judge
    whether they are *handled well*, not whether they exist.
 3. **Judge the report, not the project's potential.** Marks are for what is
