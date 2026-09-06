@@ -119,6 +119,19 @@ const BatchMetricsSchema = z.preprocess(
   }),
 );
 
+// Matches the `BatchCompliance` interface. `by_site` is present on disk but
+// unread by any component, so it's left out here rather than schematized —
+// zod drops it on parse, same as any other field neither side declares.
+const BatchComplianceSchema = z.object({
+  structured_responses: z.number(),
+  clean_responses: z.number(),
+  structural_compliance_rate: z.number().nullable(),
+  json_fallbacks: z.number(),
+  field_coercions: z.number(),
+  parse_failures: z.number(),
+  repetition_retries: z.number(),
+});
+
 export const BatchSummarySchema = z.object({
   scenario_id: z.string(),
   scenario_title: z.string(),
@@ -129,6 +142,20 @@ export const BatchSummarySchema = z.object({
   timestamp: z.string(),
   metrics: BatchMetricsSchema,
   individual_runs: z.array(BatchIndividualRunSchema),
+
+  // Added Aug 2026 (see BatchSummary in types/negotiation.ts) — all optional
+  // since batches on disk before this date have none of them. Without these
+  // declared here, zod's default key-stripping silently dropped every one of
+  // them from the parsed object even though sync-data.mjs and the raw
+  // batch_summary.json files on disk both carry them correctly, which is why
+  // the Analytics page's "Court V3/V4" chip and Structural compliance tile
+  // rendered "—" for every batch regardless of the underlying data.
+  complete: z.boolean().optional(),
+  n_runs_completed_so_far: z.number().int().optional(),
+  court_prompt_version: z.string().optional(),
+  contracting_authority: z.string().optional(),
+  bidder: z.string().optional(),
+  compliance: BatchComplianceSchema.optional(),
 });
 
 // Compile-time drift guard: if types/negotiation.ts and these schemas
