@@ -50,8 +50,12 @@ PROBE_TIMEOUT_SECONDS = 2.0
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 PEM_PATH = REPO_ROOT / "shreyas-negotiation.pem"
-RONIN_SSH_HOST = "shreyas-negotiation.ronin.manchester.ac.uk"
-RONIN_SSH_USER = "ubuntu"
+# Set RONIN_SSH_HOST / RONIN_SSH_USER as real environment variables (this project doesn't
+# call load_dotenv() outside test_connection.py, so a .env entry alone won't be picked up
+# here) to point at your own instance — the placeholder default below is not a real,
+# reachable host.
+RONIN_SSH_HOST = os.getenv("RONIN_SSH_HOST", "<your-ronin-instance>.ronin.manchester.ac.uk")
+RONIN_SSH_USER = os.getenv("RONIN_SSH_USER", "ubuntu")
 TUNNEL_LOCAL_PORT = 11500
 CONNECT_TIMEOUT_SECONDS = 20.0
 

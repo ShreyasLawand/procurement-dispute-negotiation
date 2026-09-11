@@ -22,7 +22,10 @@
 #>
 
 param(
-    [string]$RoninHost = "shreyas-negotiation.ronin.manchester.ac.uk",
+    # Placeholder default — not a real, reachable host. Pass your own instance with
+    # -RoninHost (and -RoninUser if different) each time, e.g.:
+    #   .\scripts\start_demo.ps1 -RoninHost your-instance.ronin.manchester.ac.uk
+    [string]$RoninHost = "<your-ronin-instance>.ronin.manchester.ac.uk",
     [string]$RoninUser = "ubuntu",
     [int]$LocalOllamaPort = 11500,
     [int]$ApiPort = 8000,
