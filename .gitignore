@@ -21,11 +21,15 @@ __pycache__/
 # not ours to redistribute.
 thesis-guidance/
 
-# Fusion21 client documents used for live testing. Commercially sensitive, and the
-# report's AI statement explicitly says they are not reproduced. Keep them locally,
-# never commit them.
+# Fusion21 client documents. Commercially sensitive, and the report's AI statement
+# explicitly says they are not reproduced. Keep them locally, never commit them.
+# "Documents by F21/" was committed and pushed to the public repo on 2026-08-15 by
+# mistake; history was rewritten with git-filter-repo on 2026-09-11 to remove it
+# retroactively (backup bundle: ../repo-backup-pre-rewrite/). This entry is what
+# stops it happening again.
 award letter.docx
 pretend data.pdf
+Documents by F21/
 
 # Build artefacts regenerable from the .tex sources
 thesis*/*.zip
