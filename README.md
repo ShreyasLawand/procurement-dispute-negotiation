@@ -30,6 +30,17 @@ redirected run — `graph_orchestrator.py`'s console output uses Unicode
 box-drawing characters that crash the default `cp1252` console codepage
 otherwise.
 
+**A note on timing if running without GPU access.** Every LLM call in this
+project is measured to run in a couple of seconds against a tunnelled GPU (see
+the report's Appendix C.1), but on CPU-only Ollama a single call took **631
+seconds (~10.5 minutes)** in a clean-machine test of the extraction agent
+against a real uploaded PDF. A full 3-round negotiation makes roughly 12–15
+such calls (pre-negotiation statements, 3 rounds of CA/Bidder/Court, win
+statements, the summary), so budget well over an hour for one CPU-only run —
+this is expected, not a hang. `python tests/test_langgraph_negotiation.py`
+prints each agent's output as it completes, so progress is visible throughout
+rather than silent until the end.
+
 ## Running it
 
 ```bash
