@@ -34,3 +34,27 @@ Documents by F21/
 # Build artefacts regenerable from the .tex sources
 thesis*/*.zip
 thesis*/thesis-v4-final.zip
+thesis_v4_refs_trimmed/
+thesis-overleaf-upload*.zip
+thesis-writing-context.md
+
+# Submitted separately (Turnitin report / video-poster submission) — not code,
+# don't belong in the reproducibility repo.
+1*_DATA72000*.pdf
+presentation/
+
+# Not this project's own work / not reproducibility material — university's own
+# copyrighted handbook, client-facing decks, stray screenshots, working notes
+# superseded by the report's own Appendix C.
+DSM+ERP+Handbook*.pdf
+fusion21-board-presentation*.pptx
+image.png
+video-script.html
+HANDOFF-CODE-CONTEXT.md
+RESULTS-FOR-THESIS.md
+
+# PDFium export from a subscription legal database (Casemine), not one of the
+# 23 verified-corpus cases (Appendix A) — a rejected candidate, and redistributing
+# a paywalled platform's export raises its own copyright question separate from
+# the underlying judgment being public.
+docs/Casemine*.pdf
