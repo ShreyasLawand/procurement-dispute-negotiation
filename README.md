@@ -14,6 +14,17 @@ the report without needing anything not included here (bar an Ollama install to
 re-run the LLM itself). The report is submitted separately via Turnitin and is
 not reproduced in this repo.
 
+**Submission commit.** The reported figures and reproduction commands correspond
+to commit `5e163b35877b14a17c1610370e3bb7d73c6888a9`, tagged
+[`erp-final-2026`](https://github.com/ShreyasLawand/procurement-dispute-negotiation/releases/tag/erp-final-2026).
+`main` may move past this point after submission; check out the tag for the
+exact state the report was written against:
+```bash
+git clone https://github.com/ShreyasLawand/procurement-dispute-negotiation.git
+cd procurement-dispute-negotiation
+git checkout erp-final-2026
+```
+
 ## Setup
 
 ```bash
