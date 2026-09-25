@@ -1,11 +1,10 @@
 .venv/
 __pycache__/
 *.pyc
+.pytest_cache/
 .env
 chroma_db/
 *.log
-__pycache__/
-*.pyc
 
 # SSH private keys — never commit these (e.g. Ronin instance keys)
 *.pem
@@ -58,3 +57,8 @@ RESULTS-FOR-THESIS.md
 # a paywalled platform's export raises its own copyright question separate from
 # the underlying judgment being public.
 docs/Casemine*.pdf
+
+# The Canvas Additional Materials submission itself. It links to this repo; it
+# doesn't belong inside it, and its filename encodes a student number.
+CSDI-*-am.docx
+Additional-Materials-*.docx

@@ -25,6 +25,16 @@ cd procurement-dispute-negotiation
 git checkout erp-final-2026
 ```
 
+## Contents
+
+- [Setup](#setup)
+- [Running it](#running-it)
+- [Repository structure](#repository-structure)
+- [Data](#data)
+- [Reproducing the report's figures](#reproducing-the-reports-figures)
+- [Testing](#testing)
+- [Further documentation](#further-documentation)
+
 ## Setup
 
 ```bash
@@ -168,3 +178,20 @@ python -m pytest
 92 test cases, including a regression test for the outcome-leakage measurement
 gap and one for a baseline-comparison bug, both caught and fixed during
 evaluation (see `tests/test_outcome_leakage.py`, `tests/test_compare_baselines.py`).
+
+## Further documentation
+
+This README covers the reproduction path. The root-level files below are the
+durable write-ups behind specific findings cited in the report — each is
+self-contained and readable on its own.
+
+| File | What it covers |
+|---|---|
+| `CLAUDE.md` | Full engineering log: per-agent design rationale against Fusion21's source documents, the Court prompt's four-revision history (V1 to V4), every evaluation script's caught-and-fixed bugs, and what is and isn't built |
+| `deliverable-risk-screen.md` | The pre-award challenge risk screen — the project's practical deliverable to Fusion21, independent of the negotiation simulator |
+| `evaluation-five-cases.md` | The original 5-case Court-prompt (V3 vs V4) ablation |
+| `evaluation-baselines.md` | Whether the multi-agent design earns its complexity, against a majority-class heuristic, a naive zero-shot LLM call, and a no-Court ablation |
+| `evaluation-bailii-expansion.md` | Growing the case corpus from 5 to 8 real judgments, plus the GPU inference path |
+| `evaluation-bailii-expansion-round2.md` | Growing the corpus further, from 8 to the final 23 |
+| `evaluation-scenario-attribution-audit.md` | Checking agent reasoning for fabricated claims about a scenario's own stated facts |
+| `evaluation-counterfactual-regret.md` | What this project's data can and can't honestly support about counterfactual settlement value |
