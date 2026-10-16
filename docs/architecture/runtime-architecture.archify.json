@@ -1,0 +1,536 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Procurement Dispute Negotiation — Runtime Architecture",
+    "output": ".archify/architecture-runtime-20260930-003000/runtime-architecture-v2.html",
+    "quality_profile": "showcase",
+    "locale": "en",
+    "repository": {
+      "url": "https://github.com/ShreyasLawand/procurement-dispute-negotiation.git",
+      "provider": "github",
+      "link_mode": "web",
+      "revision": "8357c1e68bc6bb13321b5613e0f574d0f358bc41"
+    }
+  },
+  "components": [
+    {
+      "id": "user",
+      "type": "external",
+      "label": "Procurement user",
+      "sublabel": "uploads case documents",
+      "pos": [
+        0,
+        240
+      ],
+      "size": [
+        150,
+        64
+      ]
+    },
+    {
+      "id": "spa",
+      "type": "frontend",
+      "label": "React SPA",
+      "sublabel": "Vite · Negotiate page",
+      "pos": [
+        265,
+        240
+      ],
+      "size": [
+        150,
+        64
+      ],
+      "sources": [
+        {
+          "path": "frontend/src/lib/negotiation-draft-context.tsx",
+          "line": 56,
+          "end_line": 76,
+          "label": "POST extract / negotiations"
+        },
+        {
+          "path": "frontend/src/lib/useLiveNegotiation.ts",
+          "line": 77,
+          "end_line": 152,
+          "label": "EventSource consumer"
+        },
+        {
+          "path": "frontend/src/lib/api-config.ts",
+          "line": 1,
+          "label": "API_BASE :8000"
+        }
+      ]
+    },
+    {
+      "id": "api",
+      "type": "backend",
+      "label": "FastAPI server",
+      "sublabel": "uvicorn :8000",
+      "pos": [
+        530,
+        240
+      ],
+      "size": [
+        150,
+        64
+      ],
+      "sources": [
+        {
+          "path": "api/main.py",
+          "line": 30,
+          "end_line": 43,
+          "label": "startup + CORS"
+        },
+        {
+          "path": "api/main.py",
+          "line": 65,
+          "end_line": 128,
+          "label": "extract + start routes"
+        }
+      ]
+    },
+    {
+      "id": "session",
+      "type": "backend",
+      "label": "Session runner",
+      "sublabel": "thread → asyncio.Queue",
+      "pos": [
+        795,
+        240
+      ],
+      "size": [
+        150,
+        64
+      ],
+      "sources": [
+        {
+          "path": "api/sessions.py",
+          "line": 73,
+          "end_line": 107,
+          "label": "start_session thread"
+        },
+        {
+          "path": "api/main.py",
+          "line": 131,
+          "end_line": 162,
+          "label": "SSE stream route"
+        }
+      ]
+    },
+    {
+      "id": "graph",
+      "type": "backend",
+      "label": "LangGraph orchestrator",
+      "sublabel": "StateGraph round loop",
+      "pos": [
+        1060,
+        240
+      ],
+      "size": [
+        160,
+        64
+      ],
+      "sources": [
+        {
+          "path": "src/graph_orchestrator.py",
+          "line": 300,
+          "end_line": 345,
+          "label": "graph wiring"
+        },
+        {
+          "path": "src/graph_orchestrator.py",
+          "line": 408,
+          "end_line": 417,
+          "label": "stream(updates)"
+        }
+      ]
+    },
+    {
+      "id": "court",
+      "type": "security",
+      "label": "Court agent",
+      "sublabel": "compliance · resolves",
+      "pos": [
+        1335,
+        240
+      ],
+      "size": [
+        150,
+        64
+      ],
+      "sources": [
+        {
+          "path": "src/graph_orchestrator.py",
+          "line": 159,
+          "end_line": 187,
+          "label": "court_check_node"
+        },
+        {
+          "path": "src/graph_orchestrator.py",
+          "line": 250,
+          "end_line": 257,
+          "label": "route_after_court"
+        }
+      ]
+    },
+    {
+      "id": "extract",
+      "type": "backend",
+      "label": "Extraction agent",
+      "sublabel": "docs → DisputeScenario",
+      "pos": [
+        795,
+        420
+      ],
+      "size": [
+        150,
+        64
+      ],
+      "sources": [
+        {
+          "path": "src/agents/extraction_agent.py",
+          "line": 15,
+          "end_line": 51,
+          "label": "200-char guard + LLM call"
+        },
+        {
+          "path": "src/utils/document_extraction.py",
+          "line": 17,
+          "end_line": 34,
+          "label": "pypdf / docx parsing"
+        }
+      ]
+    },
+    {
+      "id": "risk",
+      "type": "backend",
+      "label": "Risk screen",
+      "sublabel": "16 rules · no LLM",
+      "pos": [
+        530,
+        420
+      ],
+      "size": [
+        150,
+        64
+      ],
+      "sources": [
+        {
+          "path": "api/main.py",
+          "line": 177,
+          "end_line": 182,
+          "label": "/api/risk-assessment"
+        },
+        {
+          "path": "src/risk/challenge_risk.py",
+          "line": 279,
+          "label": "assess_challenge_risk"
+        }
+      ]
+    },
+    {
+      "id": "logs",
+      "type": "database",
+      "label": "JSON logs",
+      "sublabel": "negotiation_log_*.json",
+      "pos": [
+        795,
+        60
+      ],
+      "size": [
+        150,
+        64
+      ],
+      "sources": [
+        {
+          "path": "api/sessions.py",
+          "line": 94,
+          "end_line": 97,
+          "label": "save on done"
+        },
+        {
+          "path": "src/graph_orchestrator.py",
+          "line": 437,
+          "end_line": 438,
+          "label": "json.dump"
+        }
+      ]
+    },
+    {
+      "id": "agents",
+      "type": "backend",
+      "label": "Party agents",
+      "sublabel": "CA · Bidder · Summary",
+      "pos": [
+        1065,
+        420
+      ],
+      "size": [
+        150,
+        64
+      ],
+      "sources": [
+        {
+          "path": "src/graph_orchestrator.py",
+          "line": 36,
+          "end_line": 54,
+          "label": "build_agents per scenario"
+        },
+        {
+          "path": "src/graph_orchestrator.py",
+          "line": 84,
+          "end_line": 156,
+          "label": "CA / Bidder round nodes"
+        }
+      ]
+    },
+    {
+      "id": "llm",
+      "type": "external",
+      "label": "Ollama endpoint",
+      "sublabel": "llama3.1 · OLLAMA_HOST",
+      "pos": [
+        1335,
+        420
+      ],
+      "size": [
+        150,
+        64
+      ],
+      "sources": [
+        {
+          "path": "src/agents/extraction_agent.py",
+          "line": 29,
+          "label": "ChatOllama"
+        },
+        {
+          "path": "src/utils/ollama_connection.py",
+          "line": 47,
+          "end_line": 48,
+          "label": ":11500 tunnel / :11434 local"
+        },
+        {
+          "path": "src/utils/ollama_connection.py",
+          "line": 160,
+          "end_line": 165,
+          "label": "startup host resolution"
+        }
+      ]
+    },
+    {
+      "id": "ronin",
+      "type": "cloud",
+      "label": "Ronin GPU",
+      "sublabel": "A10G · remote Ollama",
+      "pos": [
+        1335,
+        620
+      ],
+      "size": [
+        150,
+        64
+      ],
+      "sources": [
+        {
+          "path": "src/utils/ollama_connection.py",
+          "line": 101,
+          "end_line": 126,
+          "label": "ssh -L 11500 spawn"
+        }
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "security-group",
+      "label": "Browser · localhost origin",
+      "wraps": [
+        "spa"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "Local host (developer laptop)",
+      "wraps": [
+        "api",
+        "session",
+        "graph",
+        "court",
+        "extract",
+        "risk",
+        "logs",
+        "agents",
+        "llm"
+      ]
+    },
+    {
+      "kind": "security-group",
+      "label": "API process · ollama_lock",
+      "wraps": [
+        "api",
+        "session",
+        "graph",
+        "court",
+        "extract",
+        "risk",
+        "agents"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "UoM Ronin cloud",
+      "wraps": [
+        "ronin"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "user-spa",
+      "from": "user",
+      "to": "spa",
+      "label": "PDF / DOCX",
+      "variant": "emphasis"
+    },
+    {
+      "id": "spa-api",
+      "from": "spa",
+      "to": "api",
+      "label": "untrusted docs",
+      "variant": "security"
+    },
+    {
+      "id": "api-session",
+      "from": "api",
+      "to": "session",
+      "label": "start session",
+      "variant": "emphasis"
+    },
+    {
+      "id": "session-graph",
+      "from": "session",
+      "to": "graph",
+      "label": "stream()",
+      "variant": "emphasis"
+    },
+    {
+      "id": "graph-court",
+      "from": "graph",
+      "to": "court",
+      "label": "court_check",
+      "variant": "emphasis"
+    },
+    {
+      "id": "court-loop",
+      "from": "court",
+      "to": "graph",
+      "label": "continue ↺",
+      "variant": "dashed",
+      "fromSide": "top",
+      "toSide": "top"
+    },
+    {
+      "id": "session-sse",
+      "from": "session",
+      "to": "spa",
+      "label": "SSE events",
+      "variant": "emphasis",
+      "fromSide": "top",
+      "toSide": "top"
+    },
+    {
+      "id": "api-extract",
+      "from": "api",
+      "to": "extract",
+      "label": "combine_documents",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "api-risk",
+      "from": "api",
+      "to": "risk",
+      "label": "profiles",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "graph-agents",
+      "from": "graph",
+      "to": "agents",
+      "label": "rounds",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "session-logs",
+      "from": "session",
+      "to": "logs",
+      "label": "save_log",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "agents-llm",
+      "from": "agents",
+      "to": "llm",
+      "label": "ChatOllama"
+    },
+    {
+      "id": "court-llm",
+      "from": "court",
+      "to": "llm",
+      "label": "JSON mode",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "extract-llm",
+      "from": "extract",
+      "to": "llm",
+      "label": "extraction prompt",
+      "variant": "dashed",
+      "fromSide": "bottom",
+      "toSide": "bottom"
+    },
+    {
+      "id": "llm-ronin",
+      "from": "llm",
+      "to": "ronin",
+      "label": "SSH tunnel",
+      "variant": "security",
+      "fromSide": "bottom",
+      "toSide": "top"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "emerald",
+      "title": "Primary path",
+      "items": [
+        "Upload → /api/extract → DisputeScenario (LLM)",
+        "POST /api/negotiations spawns a background thread",
+        "LangGraph: opening positions → CA → Bidder → Court, looping until resolved or max rounds",
+        "Each node update is pushed to the browser as SSE; final state saved as JSON"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Trust boundaries",
+      "items": [
+        "Uploaded documents are untrusted text placed into LLM prompts; <200 usable chars is rejected",
+        "No auth: CORS admits only localhost / 127.0.0.1 origins",
+        "Ronin tunnel needs the gitignored *.pem key (BatchMode, accept-new host key)",
+        "ollama_lock serialises all LLM work; the rule-based risk screen skips it"
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "Off the live path",
+      "items": [
+        "Cases / Analytics pages read static /data/manifest.json built by sync-data.mjs",
+        "Batch scripts call orchestrator.run() and write batch_results/"
+      ]
+    }
+  ]
+}

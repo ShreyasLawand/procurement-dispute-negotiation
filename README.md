@@ -8,6 +8,20 @@ Authority, an Aggrieved Bidder, and a Court modelled on the Technology and
 Construction Court — negotiating under the Procurement Act 2023, plus a
 non-negotiating Summary agent and a rule-based pre-award challenge risk screen.
 
+## Architecture
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/architecture/runtime-architecture-dark.png">
+  <img alt="Runtime architecture: the browser SPA calls the FastAPI server, which extracts uploaded documents and starts a session thread that streams a LangGraph round loop (CA, Bidder, Court) back to the browser over SSE; agents call Ollama locally or on the University of Manchester Ronin GPU over an SSH tunnel." src="docs/architecture/runtime-architecture-light.png">
+</picture>
+
+**[Open the interactive diagram](https://htmlpreview.github.io/?https://github.com/ShreyasLawand/procurement-dispute-negotiation/blob/main/docs/architecture/index.html)**
+(or download [`docs/architecture/index.html`](docs/architecture/index.html) and open it in a
+browser): zoom and pan, light/dark themes, and every component links to the exact source lines
+it was drawn from. Generated with [Archify](https://github.com/tt-a1i/archify) from
+[`runtime-architecture.archify.json`](docs/architecture/runtime-architecture.archify.json),
+pinned to commit `8357c1e`.
+
 **This repository is the Additional Materials submission accompanying the ERP
 report.** It exists to let a reader reproduce every figure, table, and claim in
 the report without needing anything not included here (bar an Ollama install to
@@ -27,6 +41,7 @@ git checkout erp-final-2026
 
 ## Contents
 
+- [Architecture](#architecture)
 - [Setup](#setup)
 - [Running it](#running-it)
 - [Repository structure](#repository-structure)
@@ -95,7 +110,8 @@ api/            FastAPI backend — extraction endpoint, streaming (SSE) negotia
 frontend/       React/TypeScript client (Vite + Tailwind) — Home, Negotiate, Cases,
                 Analytics, the risk screen
 docs/           One real case document used for the live-demo upload flow (see note
-                below) and a batch-evaluation findings note
+                below), a batch-evaluation findings note, and architecture/ (the
+                runtime architecture diagram: interactive HTML, PNGs, Archify source)
 batch_results/  The full evaluation corpus: every batch of negotiation runs behind
                 every corpus-wide statistic in Chapter 3
 baseline_results/
